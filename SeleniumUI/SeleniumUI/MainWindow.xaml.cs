@@ -23,6 +23,45 @@ namespace SeleniumUI
         public MainWindow()
         {
             InitializeComponent();
+            buttonClose.IsEnabled = false;
+            buttonStart.IsEnabled = false;
+
+        }
+
+        /// <summary>
+        /// Happens when the start button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonStart_Click(object sender, RoutedEventArgs e)
+        {
+            buttonStart.IsEnabled = false;
+            buttonClose.IsEnabled = true;
+            dropDownBrowsers.IsEnabled = false;
+        }
+
+        /// <summary>
+        /// Happens when the close button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonClose_Click(object sender, RoutedEventArgs e)
+        {
+            buttonStart.IsEnabled = true;
+            buttonClose.IsEnabled = false;
+            dropDownBrowsers.IsEnabled = true;
+        }
+
+        private void dropDownBrowsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dropDownBrowsers.SelectedIndex > 0)
+            {
+                buttonStart.IsEnabled = true;
+            }// for some reason, the button start does not exist yet. Probably because it loads later
+            else if (buttonStart != null)
+            {
+                buttonStart.IsEnabled = false;
+            }
         }
     }
 }

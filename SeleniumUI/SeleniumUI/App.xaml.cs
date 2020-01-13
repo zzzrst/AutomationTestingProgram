@@ -13,5 +13,14 @@ namespace SeleniumUI
     /// </summary>
     public partial class App : Application
     {
+
+        public void OpenBrowser(string browser)
+        {
+            switch (browser)
+            {
+                default: 
+                    break;
+            }
+        }
     }
 }

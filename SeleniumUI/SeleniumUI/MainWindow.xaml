@@ -5,8 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeleniumUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Automation" Height="450" Width="800">
     <Grid>
+        <Grid>
+            <ComboBox x:Name="dropDownBrowsers" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="155" BorderBrush="CornflowerBlue" Height="25" SelectedIndex="0" FontFamily="Global User Interface" FontSize="14" SelectionChanged="dropDownBrowsers_SelectionChanged">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+                <ComboBoxItem Content="Browser Option"/>
+                <ComboBoxItem Content="Internet Explorer"/>
+                <ComboBoxItem Content="Chrome"/>
+                <ComboBoxItem Content="Chromium"/>
+                <ComboBoxItem Content="Firefox"/>
+            </ComboBox>
+        </Grid>
+
+        <Button x:Name="buttonStart" Content="Start" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Click="buttonStart_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="1"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="White" />
+                            <Setter Property="BorderThickness" Value="2" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button x:Name="buttonClose" Content="Close" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Margin="100,0,0,0" HorizontalAlignment="Left" Width="100" Height="50                 " VerticalAlignment="Top" Click="buttonClose_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="1"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+        </Button>
 
     </Grid>
 </Window>
