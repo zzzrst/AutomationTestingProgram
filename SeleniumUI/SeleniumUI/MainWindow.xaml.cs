@@ -1,4 +1,8 @@
-﻿namespace SeleniumUI
+﻿// <copyright file="MainWindow.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace SeleniumUI
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +20,7 @@
     using System.Windows.Shapes;
 
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml.
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -39,8 +43,8 @@
         /// <summary>
         /// Happens when the start button is clicked.
         /// </summary>
-        /// <param name="sender"></param>
-        ///// <param name="e"></param>
+        /// <param name="sender">sender.</param>
+        /// <param name="e">.</param>
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
             this.buttonStart.IsEnabled = false;
@@ -52,8 +56,8 @@
         /// <summary>
         /// Happens when the close button is clicked.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">sender.</param>
+        /// <param name="e">.</param>
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             this.buttonStart.IsEnabled = true;

@@ -1,4 +1,8 @@
-﻿namespace SeleniumUI
+﻿// <copyright file="App.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace SeleniumUI
 {
     using System;
     using System.Collections.Generic;

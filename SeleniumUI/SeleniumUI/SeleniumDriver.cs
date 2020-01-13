@@ -1,15 +1,19 @@
-﻿namespace SeleniumUI
+﻿// <copyright file="SeleniumDriver.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace SeleniumUI
 {
-    using OpenQA.Selenium;
-    using OpenQA.Selenium.Chrome;
-    using OpenQA.Selenium.Firefox;
-    using OpenQA.Selenium.IE;
     using System;
     using System.Collections.Generic;
     using System.Configuration;
     using System.IO;
     using System.Reflection;
     using System.Text;
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+    using OpenQA.Selenium.Firefox;
+    using OpenQA.Selenium.IE;
 
     /// <summary>
     /// The driver for Selenium web Driver.
@@ -20,7 +24,6 @@
         /// Location of the Selenium drivers on the current machine.
         /// </summary>
         private readonly string seleniumDriverLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
 
         /// <summary>
         /// Driver variable.
@@ -33,7 +36,6 @@
         public SeleniumDriver()
         {
         }
-
 
         /// <summary>
         /// Opens a new browser based on what browser is set.
@@ -68,7 +70,7 @@
                         IntroduceInstabilityByIgnoringProtectedModeSettings = true,
                         IgnoreZoomLevel = true,
                         EnsureCleanSession = true,
-                        EnableNativeEvents = true,//not sure if this is true or false
+                        EnableNativeEvents = true, // not sure if this is true or false
                         UnhandledPromptBehavior = UnhandledPromptBehavior.Accept,
                         RequireWindowFocus = true,
                     };
@@ -101,6 +103,5 @@
             this.webDriver.Quit();
             this.webDriver.Dispose();
         }
-
     }
 }
