@@ -8,7 +8,7 @@
         Title="Automation" Height="450" Width="800">
     <Grid>
         <Grid>
-            <ComboBox x:Name="dropDownBrowsers" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="155" BorderBrush="CornflowerBlue" Height="25" SelectedIndex="0" FontFamily="Global User Interface" FontSize="14" SelectionChanged="dropDownBrowsers_SelectionChanged">
+            <ComboBox x:Name="dropDownBrowsers" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="155" BorderBrush="CornflowerBlue" Height="25" SelectedIndex="0" FontFamily="Global User Interface" FontSize="14" SelectionChanged="DropDownBrowsers_SelectionChanged">
                 <ComboBox.Background>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="White"/>
@@ -23,7 +23,7 @@
             </ComboBox>
         </Grid>
 
-        <Button x:Name="buttonStart" Content="Start" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Click="buttonStart_Click">
+        <Button x:Name="buttonStart" Content="Start" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Click="ButtonStart_Click">
             <Button.Background>
                 <SolidColorBrush Color="White" Opacity="1"/>
             </Button.Background>
@@ -45,7 +45,7 @@
             </Button.Style>
         </Button>
 
-        <Button x:Name="buttonClose" Content="Close" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Margin="100,0,0,0" HorizontalAlignment="Left" Width="100" Height="50                 " VerticalAlignment="Top" Click="buttonClose_Click">
+        <Button x:Name="buttonClose" Content="Close" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Margin="100,0,0,0" HorizontalAlignment="Left" Width="100" Height="50" VerticalAlignment="Top" Click="ButtonClose_Click">
             <Button.Background>
                 <SolidColorBrush Color="White" Opacity="1"/>
             </Button.Background>
