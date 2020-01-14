@@ -81,12 +81,31 @@ namespace SeleniumUI
                     break;
                 case "Chromium": // TODO: need to add
 
-                    this.webDriver = new ChromeDriver(this.seleniumDriverLocation);
+                    ChromeOptions chromiumOptions = new ChromeOptions
+                    {
+                        UnhandledPromptBehavior = UnhandledPromptBehavior.Accept,
+                    };
+
+                    chromiumOptions.AddArgument("no-sandbox");
+                    chromiumOptions.AddArgument("--log-level=3");
+                    chromiumOptions.AddArgument("--silent");
+                    chromiumOptions.BinaryLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\chromium\\chrome.exe";
+
+                    ChromeDriverService chromeService = ChromeDriverService.CreateDefaultService(this.seleniumDriverLocation);
+                    chromeService.SuppressInitialDiagnosticInformation = true;
+
+                    this.webDriver = new ChromeDriver(this.seleniumDriverLocation, chromiumOptions);
+
 
                     break;
                 case "Firefox":
 
-                    this.webDriver = new FirefoxDriver(this.seleniumDriverLocation, null);
+                    FirefoxOptions fireFoxOption = new FirefoxOptions
+                    {
+                        UnhandledPromptBehavior = UnhandledPromptBehavior.Accept,
+                    };
+                    fireFoxOption.BrowserExecutableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\firefox\\firefox.exe";
+                    this.webDriver = new FirefoxDriver(this.seleniumDriverLocation,fireFoxOption);
 
                     break;
                 default:
