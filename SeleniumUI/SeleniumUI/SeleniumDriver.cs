@@ -145,9 +145,21 @@ namespace SeleniumUI
         /// </summary>
         public void CloseBrowser()
         {
-            this.WebDriver.Close();
-            this.WebDriver.Quit();
-            this.WebDriver.Dispose();
+            try
+            {
+                this.WebDriver.Close();
+            }
+            catch (Exception e)
+            {
+            }
+
+            if (this.WebDriver != null)
+            {
+                this.WebDriver.Quit();
+                this.WebDriver.Dispose();
+            }
+
+            // this.SetIsValid();
         }
 
         /// <summary>
@@ -155,7 +167,7 @@ namespace SeleniumUI
         /// </summary>
         private void SetIsValid()
         {
-            throw new NotImplementedException();
+            this.IsValid = (this.WebDriver == null) || (this.WebDriver.WindowHandles.Count > 0);
         }
     }
 }
