@@ -18,16 +18,14 @@ namespace SeleniumUI
     using System.Windows.Media.Imaging;
     using System.Windows.Navigation;
     using System.Windows.Shapes;
+    using System.Windows.Threading;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
     /// </summary>
     public partial class MainWindow : Window
     {
-        /// <summary>
-        /// Creates a new Selenium driver.
-        /// </summary>
-        private SeleniumDriver driver;
+        private ViewModel viewModel;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
@@ -35,9 +33,8 @@ namespace SeleniumUI
         public MainWindow()
         {
             this.InitializeComponent();
-            this.buttonClose.IsEnabled = false;
-            this.buttonStart.IsEnabled = false;
-            this.driver = new SeleniumDriver();
+            this.viewModel = new ViewModel();
+            this.DataContext = this.viewModel;
         }
 
         /// <summary>
@@ -47,10 +44,7 @@ namespace SeleniumUI
         /// <param name="e">.</param>
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
-            this.buttonStart.IsEnabled = false;
-            this.buttonClose.IsEnabled = true;
-            this.dropDownBrowsers.IsEnabled = false;
-            this.driver.OpenBrowser(this.dropDownBrowsers.Text);
+            this.buttonStart.Command = this.viewModel.ClickStart(this.dropDownBrowsers.Text);
         }
 
         /// <summary>
@@ -60,10 +54,7 @@ namespace SeleniumUI
         /// <param name="e">.</param>
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
-            this.buttonStart.IsEnabled = true;
-            this.buttonClose.IsEnabled = false;
-            this.dropDownBrowsers.IsEnabled = true;
-            this.driver.CloseBrowser();
+            this.buttonClose.Command = this.viewModel.ClickClose;
         }
 
         private void DropDownBrowsers_SelectionChanged(object sender, SelectionChangedEventArgs e)

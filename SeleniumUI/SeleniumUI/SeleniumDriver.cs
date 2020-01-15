@@ -5,36 +5,64 @@
 namespace SeleniumUI
 {
     using System;
+    using System.Threading;
     using System.Collections.Generic;
     using System.Configuration;
     using System.IO;
     using System.Reflection;
     using System.Text;
+    using System.Threading.Tasks;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;
     using OpenQA.Selenium.IE;
+    using System.ComponentModel;
 
     /// <summary>
     /// The driver for Selenium web Driver.
     /// </summary>
-    public class SeleniumDriver
+    public class SeleniumDriver : INotifyPropertyChanged
     {
+        private bool isValid;
+
         /// <summary>
         /// Location of the Selenium drivers on the current machine.
         /// </summary>
         private readonly string seleniumDriverLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
         /// <summary>
-        /// Driver variable.
-        /// </summary>
-        private IWebDriver webDriver;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="SeleniumDriver"/> class.
         /// </summary>
         public SeleniumDriver()
         {
+        }
+
+        /// <inheritdoc/>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Gets or sets driver variable.
+        /// </summary>
+        public IWebDriver WebDriver { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the model is in a valid state or not.
+        /// </summary>
+        public bool IsValid
+        {
+            get
+            {
+                return this.isValid;
+            }
+
+            set
+            {
+                if (this.isValid != value)
+                {
+                    this.isValid = value;
+                    // this.OnPropertyChange("IsValid");
+                }
+            }
         }
 
         /// <summary>
@@ -60,7 +88,7 @@ namespace SeleniumUI
                     ChromeDriverService service = ChromeDriverService.CreateDefaultService(this.seleniumDriverLocation);
                     service.SuppressInitialDiagnosticInformation = true;
 
-                    this.webDriver = new ChromeDriver(this.seleniumDriverLocation, chromeOptions);
+                    this.WebDriver = new ChromeDriver(this.seleniumDriverLocation, chromeOptions);
 
                     break;
                 case "Internet Explorer":
@@ -76,10 +104,10 @@ namespace SeleniumUI
                     };
                     InternetExplorerDriverService ieService = InternetExplorerDriverService.CreateDefaultService(this.seleniumDriverLocation);
                     ieService.SuppressInitialDiagnosticInformation = true;
-                    this.webDriver = new InternetExplorerDriver(ieService, ieOptions);
+                    this.WebDriver = new InternetExplorerDriver(ieService, ieOptions);
 
                     break;
-                case "Chromium": // TODO: need to add
+                case "Chromium":
 
                     ChromeOptions chromiumOptions = new ChromeOptions
                     {
@@ -94,8 +122,7 @@ namespace SeleniumUI
                     ChromeDriverService chromeService = ChromeDriverService.CreateDefaultService(this.seleniumDriverLocation);
                     chromeService.SuppressInitialDiagnosticInformation = true;
 
-                    this.webDriver = new ChromeDriver(this.seleniumDriverLocation, chromiumOptions);
-
+                    this.WebDriver = new ChromeDriver(this.seleniumDriverLocation, chromiumOptions);
 
                     break;
                 case "Firefox":
@@ -104,8 +131,8 @@ namespace SeleniumUI
                     {
                         UnhandledPromptBehavior = UnhandledPromptBehavior.Accept,
                     };
-                    fireFoxOption.BrowserExecutableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\firefox\\firefox.exe";
-                    this.webDriver = new FirefoxDriver(this.seleniumDriverLocation,fireFoxOption);
+                    fireFoxOption.BrowserExecutableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\firefox\\firefox_.exe";
+                    this.WebDriver = new FirefoxDriver(this.seleniumDriverLocation, fireFoxOption);
 
                     break;
                 default:
@@ -118,9 +145,17 @@ namespace SeleniumUI
         /// </summary>
         public void CloseBrowser()
         {
-            this.webDriver.Close();
-            this.webDriver.Quit();
-            this.webDriver.Dispose();
+            this.WebDriver.Close();
+            this.WebDriver.Quit();
+            this.WebDriver.Dispose();
+        }
+
+        /// <summary>
+        /// Sets the value of isValid.
+        /// </summary>
+        private void SetIsValid()
+        {
+            throw new NotImplementedException();
         }
     }
 }
