@@ -57,6 +57,26 @@ namespace SeleniumUI
             this.buttonClose.Command = this.viewModel.ClickClose;
         }
 
+        /// <summary>
+        /// Happens when the rec button is clicked.
+        /// </summary>
+        /// <param name="sender">sender.</param>
+        /// <param name="e">.</param>
+        private void ButtonRec_Click(object sender, RoutedEventArgs e)
+        {
+            this.buttonRec.Command = this.viewModel.ClickRec;
+        }
+
+        /// <summary>
+        /// Happens when the play stop recording is clicked.
+        /// </summary>
+        /// <param name="sender">sender.</param>
+        /// <param name="e">.</param>
+        private void ButtonStop_Click(object sender, RoutedEventArgs e)
+        {
+            this.buttonStop.Command = this.viewModel.ClickStop;
+        }
+
         private void DropDownBrowsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (this.dropDownBrowsers.SelectedIndex > 0)

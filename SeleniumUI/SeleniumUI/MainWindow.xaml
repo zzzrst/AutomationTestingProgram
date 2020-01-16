@@ -55,6 +55,46 @@
                 </LinearGradientBrush>
             </Button.OpacityMask>
         </Button>
+        <Button x:Name="buttonRec" Content="Rec" Foreground="#FF040404" BorderBrush="#FFED6464" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" Click="ButtonRec_Click" IsEnabled="{Binding Button.IsRecEnabled, Mode=TwoWay}" Margin="0,0,50,0" HorizontalAlignment="Right" Width="50">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="1"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Reflect">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderThickness" Value="2" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="buttonStop" Content="Stop" Foreground="#FF040404" BorderBrush="#FFED6464" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" Click="ButtonStop_Click" IsEnabled="{Binding Button.IsStopEnabled, Mode=TwoWay}" HorizontalAlignment="Right" Width="50">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="1"/>
+            </Button.Background>
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Reflect">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderThickness" Value="2" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
     </Grid>
 </Window>

@@ -12,7 +12,10 @@
     {
         private bool startEnabled;
         private bool closeEnabled;
+        private bool stopEnabled;
         private bool browserSelectEnable;
+        private bool recEnabled;
+        private bool playEnabled;
         private bool isValid;
 
         /// <inheritdoc/>
@@ -87,6 +90,48 @@
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether stop button is enabled.
+        /// </summary>
+        public bool IsStopEnabled
+        {
+            get
+            {
+                return this.stopEnabled;
+            }
+
+            set
+            {
+                if (this.stopEnabled != value)
+                {
+                    this.stopEnabled = value;
+                    this.OnPropertyChange(value.ToString());
+                    this.SetIsValid();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether record button is enabled.
+        /// </summary>
+        public bool IsRecEnabled
+        {
+            get
+            {
+                return this.recEnabled;
+            }
+
+            set
+            {
+                if (this.recEnabled != value)
+                {
+                    this.recEnabled = value;
+                    this.OnPropertyChange(value.ToString());
+                    this.SetIsValid();
+                }
+            }
+        }
+
+        /// <summary>
         /// Gets or sets a value indicating whether the model is in a valid state or not.
         /// </summary>
         public bool IsValid
@@ -115,6 +160,7 @@
             this.IsStartEnabled = false;
             this.IsCloseEnabled = true;
             this.IsBrowserSelectEnabled = false;
+            this.IsRecEnabled = true;
             this.Driver.OpenBrowser(browser);
         }
 
@@ -126,7 +172,28 @@
             this.IsStartEnabled = true;
             this.IsCloseEnabled = false;
             this.IsBrowserSelectEnabled = true;
+            this.IsRecEnabled = false;
+            this.IsStopEnabled = false;
             this.Driver.CloseBrowser();
+        }
+
+        /// <summary>
+        /// Called action when rec button is clicked.
+        /// </summary>
+        /// <param name="browser">browser to open.</param>
+        public void ClickRec()
+        {
+            this.IsRecEnabled = false;
+            this.IsStopEnabled = true;
+        }
+
+        /// <summary>
+        /// Called action when stop button is clicked.
+        /// </summary>
+        public void ClickStop()
+        {
+            this.IsRecEnabled = true;
+            this.IsStopEnabled = false;
         }
 
         /// <summary>
@@ -134,7 +201,7 @@
         /// </summary>
         private void SetIsValid()
         {
-            this.IsValid = !this.IsStartEnabled || !this.IsCloseEnabled;
+            this.IsValid = (!this.IsStartEnabled || !this.IsCloseEnabled) && (!this.IsRecEnabled || !this.IsStopEnabled);
         }
 
         /// <summary>

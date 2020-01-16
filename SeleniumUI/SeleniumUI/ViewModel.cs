@@ -28,6 +28,8 @@ namespace SeleniumUI
                 IsStartEnabled = false,
                 IsCloseEnabled = false,
                 IsBrowserSelectEnabled = true,
+                IsStopEnabled = false,
+                IsRecEnabled = false,
                 Driver = new SeleniumDriver(),
             };
             this.ApplyChangesCommand = new RelayCommand(
@@ -35,6 +37,12 @@ namespace SeleniumUI
                 o => this.Button.IsValid);
             this.ClickClose = new RelayCommand(
                 o => this.Button.ClickClose(),
+                o => this.Button.IsValid);
+            this.ClickRec = new RelayCommand(
+                o => this.Button.ClickRec(),
+                o => this.Button.IsValid);
+            this.ClickStop = new RelayCommand(
+                o => this.Button.ClickStop(),
                 o => this.Button.IsValid);
         }
 
@@ -64,9 +72,19 @@ namespace SeleniumUI
         }
 
         /// <summary>
-        /// Closes the browser.
+        /// Gets closes the browser.
         /// </summary>
         public ICommand ClickClose { get; private set; }
+
+        /// <summary>
+        /// Gets closes the browser.
+        /// </summary>
+        public ICommand ClickRec { get; private set; }
+
+        /// <summary>
+        /// Gets closes the browser.
+        /// </summary>
+        public ICommand ClickStop { get; private set; }
 
         /// <summary>
         /// Executes the 'apply changes' command.
