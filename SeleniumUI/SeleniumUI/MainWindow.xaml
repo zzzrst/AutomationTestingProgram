@@ -8,7 +8,9 @@
         Title="Automation" Height="450" Width="800">
     <Grid>
         <Grid>
-            <ComboBox x:Name="dropDownBrowsers" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="155" BorderBrush="CornflowerBlue" Height="25" SelectedIndex="0" FontFamily="Global User Interface" FontSize="14" SelectionChanged="DropDownBrowsers_SelectionChanged" IsEnabled="{Binding Button.IsBrowserSelectEnabled}">
+            <ComboBox x:Name="dropDownBrowsers" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="155" BorderBrush="CornflowerBlue" 
+                      Height="25" SelectedIndex="0" FontFamily="Global User Interface" FontSize="14" SelectionChanged="DropDownBrowsers_SelectionChanged" 
+                      IsEnabled="{Binding Model.IsBrowserSelectEnabled}">
                 <ComboBox.Background>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="White"/>
@@ -23,7 +25,9 @@
             </ComboBox>
         </Grid>
 
-        <Button x:Name="buttonStart" Content="Start" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Click="ButtonStart_Click" IsEnabled="{Binding Button.IsStartEnabled, Mode=TwoWay}">
+        <Button x:Name="buttonStart" Content="Start" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" 
+                FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" 
+                Click="ButtonStart_Click" IsEnabled="{Binding Model.StartButton.IsObjectEnabled, Mode=TwoWay}">
             <Button.Background>
                 <SolidColorBrush Color="White" Opacity="1"/>
             </Button.Background>
@@ -44,7 +48,9 @@
             </Button.Style>
         </Button>
 
-        <Button x:Name="buttonClose" Content="Close" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Margin="100,0,0,0" HorizontalAlignment="Left" Width="100" Height="50" VerticalAlignment="Top" Click="ButtonClose_Click" IsEnabled="{Binding Button.IsCloseEnabled, Mode=TwoWay}">
+        <Button x:Name="buttonClose" Content="Close" Foreground="Black" BorderBrush="CornflowerBlue" FontWeight="Normal" FontSize="20" 
+                FontFamily="Global User Interface" Margin="100,0,0,0" HorizontalAlignment="Left" Width="100" Height="50" VerticalAlignment="Top" 
+                Click="ButtonClose_Click" IsEnabled="{Binding Model.IsCloseEnabled, Mode=TwoWay}">
             <Button.Background>
                 <SolidColorBrush Color="White" Opacity="1"/>
             </Button.Background>
@@ -55,7 +61,8 @@
                 </LinearGradientBrush>
             </Button.OpacityMask>
         </Button>
-        <Button x:Name="buttonRec" Content="Rec" Foreground="#FF040404" BorderBrush="#FFED6464" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" Click="ButtonRec_Click" IsEnabled="{Binding Button.IsRecEnabled, Mode=TwoWay}" Margin="0,0,50,0" HorizontalAlignment="Right" Width="50">
+        <Button x:Name="buttonRec" Content="Rec" Foreground="#FF040404" BorderBrush="#FFED6464" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" 
+                Height="50" VerticalAlignment="Top" Click="ButtonRec_Click" IsEnabled="{Binding Model.IsRecEnabled, Mode=TwoWay}" Margin="0,0,50,0" HorizontalAlignment="Right" Width="50">
             <Button.Background>
                 <SolidColorBrush Color="White" Opacity="1"/>
             </Button.Background>
@@ -75,7 +82,8 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="buttonStop" Content="Stop" Foreground="#FF040404" BorderBrush="#FFED6464" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" Height="50" VerticalAlignment="Top" Click="ButtonStop_Click" IsEnabled="{Binding Button.IsStopEnabled, Mode=TwoWay}" HorizontalAlignment="Right" Width="50">
+        <Button x:Name="buttonStop" Content="Stop" Foreground="#FF040404" BorderBrush="#FFED6464" FontWeight="Normal" FontSize="20" FontFamily="Global User Interface" 
+                Height="50" VerticalAlignment="Top" Click="ButtonStop_Click" IsEnabled="{Binding Model.IsStopEnabled, Mode=TwoWay}" HorizontalAlignment="Right" Width="50">
             <Button.Background>
                 <SolidColorBrush Color="White" Opacity="1"/>
             </Button.Background>

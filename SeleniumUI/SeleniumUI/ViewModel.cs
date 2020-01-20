@@ -15,7 +15,7 @@ namespace SeleniumUI
     /// <summary>
     /// The ViewModel Class.
     /// </summary>
-    public class ViewModel : INotifyPropertyChanged
+    public class ViewModel
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewModel"/> class.
@@ -23,8 +23,9 @@ namespace SeleniumUI
         /// </summary>
         public ViewModel()
         {
-            this.Button = new ButtonObject
+            this.Model = new ModelControler
             {
+                StartButton = new ButtonObject() { IsObjectEnabled = false, },
                 IsStartEnabled = false,
                 IsCloseEnabled = false,
                 IsBrowserSelectEnabled = true,
@@ -34,42 +35,27 @@ namespace SeleniumUI
             };
             this.ApplyChangesCommand = new RelayCommand(
                 o => this.ExecuteApplyChangesCommand(),
-                o => this.Button.IsValid);
+                o => this.Model.IsValid);
             this.ClickClose = new RelayCommand(
-                o => this.Button.ClickClose(),
-                o => this.Button.IsValid);
+                o => this.Model.ClickClose(),
+                o => this.Model.IsValid);
             this.ClickRec = new RelayCommand(
-                o => this.Button.ClickRec(),
-                o => this.Button.IsValid);
+                o => this.Model.ClickRec(),
+                o => this.Model.IsValid);
             this.ClickStop = new RelayCommand(
-                o => this.Button.ClickStop(),
-                o => this.Button.IsValid);
+                o => this.Model.ClickStop(),
+                o => this.Model.IsValid);
         }
-
-        /// <inheritdoc/>
-        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Gets or sets the buttons to edit.
         /// </summary>
-        public ButtonObject Button { get; set; }
+        public ModelControler Model { get; set; }
 
         /// <summary>
         /// Gets the "apply changes" command.
         /// </summary>
         public ICommand ApplyChangesCommand { get; private set; }
-
-        /// <summary>
-        /// Start button command.
-        /// </summary>
-        /// <param name="browser">the browser to open.</param>
-        /// <returns>returns the command.</returns>
-        public ICommand ClickStart(string browser)
-        {
-            return new RelayCommand(
-                o => this.Button.ClickStart(browser),
-                o => this.Button.IsValid);
-        }
 
         /// <summary>
         /// Gets closes the browser.
@@ -85,6 +71,18 @@ namespace SeleniumUI
         /// Gets closes the browser.
         /// </summary>
         public ICommand ClickStop { get; private set; }
+
+        /// <summary>
+        /// Start button command.
+        /// </summary>
+        /// <param name="browser">the browser to open.</param>
+        /// <returns>returns the command.</returns>
+        public ICommand ClickStart(string browser)
+        {
+            return new RelayCommand(
+                o => this.Model.ClickStart(browser),
+                o => this.Model.IsValid);
+        }
 
         /// <summary>
         /// Executes the 'apply changes' command.

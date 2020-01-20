@@ -149,14 +149,17 @@ namespace SeleniumUI
             {
                 this.WebDriver.Close();
             }
-            catch (Exception e)
+            catch
             {
+                //do something
             }
-
-            if (this.WebDriver != null)
+            finally
             {
-                this.WebDriver.Quit();
-                this.WebDriver.Dispose();
+                if (this.WebDriver != null)
+                {
+                    this.WebDriver.Quit();
+                    this.WebDriver.Dispose();
+                }
             }
 
             // this.SetIsValid();
