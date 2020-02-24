@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     using AutomationTestSetFramework;
-    using SeleniumPerfXML.Implementations.Loggers_and_Reporters;
+    using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using System;
     using System.Xml;
     using static AutomationTestSetFramework.IMethodBoundaryAspect;
@@ -13,7 +13,7 @@ namespace SeleniumPerfXML.Implementations
     /// <summary>
     /// An Implementation of the ITestStep class.
     /// </summary>
-    public class TestStepXml : ITestStep
+    public class TestStep : ITestStep
     {
         /// <inheritdoc/>
         public virtual string Name { get; set; } = "Test Step";
@@ -60,7 +60,6 @@ namespace SeleniumPerfXML.Implementations
         /// <summary>
         /// Gets or sets the test step logger.
         /// </summary>
-        public ITestStepLogger TestLogger { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether test step should be logged.

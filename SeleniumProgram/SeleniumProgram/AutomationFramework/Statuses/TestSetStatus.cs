@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
-    using AutomationTestSetFramework;
     using System;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// An Implementation of the testSetStatus class.

@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     using AutomationTestSetFramework;
     using SeleniumPerfXML.Implementations.Loggers_and_Reporters;
@@ -13,7 +13,7 @@ namespace SeleniumPerfXML.Implementations
     /// <summary>
     /// Implementation of the testCase class.
     /// </summary>
-    public class TestCaseXml : ITestCase
+    public class TestCase : ITestCase
     {
         private readonly Stack<XmlNode> testStack = new Stack<XmlNode>();
 

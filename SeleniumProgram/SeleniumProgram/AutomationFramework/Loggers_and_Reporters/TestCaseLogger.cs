@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations.Loggers_and_Reporters
+namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
 {
     using AutomationTestSetFramework;
     using System.Collections.Generic;

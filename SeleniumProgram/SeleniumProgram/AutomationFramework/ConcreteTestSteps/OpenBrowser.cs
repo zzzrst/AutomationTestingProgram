@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
     /// This class executes the action of opening the browser to the specified site.
