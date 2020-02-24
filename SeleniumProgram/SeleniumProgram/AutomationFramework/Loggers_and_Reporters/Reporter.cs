@@ -4,10 +4,10 @@
 
 namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
 {
-    using AutomationTestSetFramework;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// The implementation of the reporter class.

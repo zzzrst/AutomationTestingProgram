@@ -7,7 +7,7 @@ namespace AutomationTestingProgram.AutomationFramework
     /// <summary>
     /// This class executes the action of closing the browser.
     /// </summary>
-    public class CloseBrowser : TestStepXml
+    public class CloseBrowser : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "CloseBrowser";
@@ -16,7 +16,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            this.Driver.CloseBrowser();
+            InformationObject.TestingDriver.CloseBrowser();
         }
     }
 }

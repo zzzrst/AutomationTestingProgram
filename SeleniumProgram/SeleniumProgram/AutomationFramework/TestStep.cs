@@ -1,13 +1,13 @@
-﻿// <copyright file="TestStepXml.cs" company="PlaceholderCompany">
+﻿// <copyright file="TestStep.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace AutomationTestingProgram.AutomationFramework
 {
-    using AutomationTestSetFramework;
-    using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using System;
     using System.Xml;
+    using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
+    using AutomationTestSetFramework;
     using static AutomationTestSetFramework.IMethodBoundaryAspect;
 
     /// <summary>
@@ -33,16 +33,6 @@ namespace AutomationTestingProgram.AutomationFramework
         public FlowBehavior OnExceptionFlowBehavior { get; set; } = FlowBehavior.Return;
 
         /// <summary>
-        /// Gets or sets the information for the test step.
-        /// </summary>
-        public XmlNode TestStepInfo { get; set; }
-
-        /// <summary>
-        /// Gets or sets the seleniumDriver to use.
-        /// </summary>
-        public SeleniumDriver Driver { get; set; }
-
-        /// <summary>
         /// Gets or sets a value indicating whether to run AODA.
         /// </summary>
         public bool RunAODA { get; set; } = false;
@@ -51,15 +41,6 @@ namespace AutomationTestingProgram.AutomationFramework
         /// Gets or sets the AODA page name.
         /// </summary>
         public string RunAODAPageName { get; set; } = string.Empty;
-
-        /// <summary>
-        /// Gets or sets the reporter.
-        /// </summary>
-        public IReporter Reporter { get; set; }
-
-        /// <summary>
-        /// Gets or sets the test step logger.
-        /// </summary>
 
         /// <summary>
         /// Gets or sets a value indicating whether test step should be logged.
@@ -81,11 +62,11 @@ namespace AutomationTestingProgram.AutomationFramework
 
             if (this.ShouldLog)
             {
-                XMLInformation.CSVLogger.AddResults($"\"{this.Name}\",\"F\"");
+                InformationObject.CSVLogger.AddResults($"\"{this.Name}\",\"F\"");
             }
 
-            this.Driver.CheckErrorContainer();
-            this.Driver.TakeScreenShot();
+            InformationObject.TestingDriver.CheckErrorContainer();
+            InformationObject.TestingDriver.TakeScreenShot();
         }
 
         /// <inheritdoc/>
@@ -103,7 +84,7 @@ namespace AutomationTestingProgram.AutomationFramework
             if (!this.ShouldExecuteVariable)
             {
                 this.TestStepStatus.Actual = "N/A";
-                XMLInformation.CSVLogger.AddResults($"\"{this.Name}\",\"N/A\"");
+                InformationObject.CSVLogger.AddResults($"\"{this.Name}\",\"N/A\"");
             }
         }
 
@@ -119,7 +100,7 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.EndTime = DateTime.UtcNow;
             if (this.RunAODA)
             {
-                this.Driver.RunAODA(this.RunAODAPageName);
+                InformationObject.TestingDriver.RunAODA(this.RunAODAPageName);
             }
 
             double totalTime = this.GetTotalElapsedTime();
@@ -128,7 +109,7 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 ITestStepLogger log = new TestStepLogger();
                 log.Log(this);
-                XMLInformation.CSVLogger.AddResults($"\"{this.Name}\",\"{totalTime.ToString()}\"");
+                InformationObject.CSVLogger.AddResults($"\"{this.Name}\",\"{totalTime.ToString()}\"");
             }
         }
 

@@ -7,7 +7,7 @@ namespace AutomationTestingProgram.AutomationFramework
     /// <summary>
     /// This class executes the action of opening the browser to the specified site.
     /// </summary>
-    public class OpenBrowser : TestStepXml
+    public class OpenBrowser : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "OpenBrowser";
@@ -17,7 +17,7 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
             string url = this.TestStepInfo.Attributes["url"] == null ? string.Empty : this.TestStepInfo.Attributes["url"].Value;
-            this.Driver.NavigateToURL(url);
+            InformationObject.TestingDriver.NavigateToURL(url);
         }
     }
 }

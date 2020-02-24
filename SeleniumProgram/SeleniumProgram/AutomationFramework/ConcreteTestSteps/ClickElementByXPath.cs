@@ -7,7 +7,7 @@ namespace AutomationTestingProgram.AutomationFramework
     /// <summary>
     /// This class executes the action of opening the browser to the specified site.
     /// </summary>
-    public class ClickElementByXPath : TestStepXml
+    public class ClickElementByXPath : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "ClickElementByXPath";
@@ -23,8 +23,8 @@ namespace AutomationTestingProgram.AutomationFramework
                 useJS = bool.Parse(this.TestStepInfo.Attributes["useJS"].Value);
             }
 
-            this.Driver.ClickElement(xPath, useJS);
-            this.Driver.WaitForLoadingSpinner();
+            InformationObject.TestingDriver.ClickElement(xPath, useJS);
+            InformationObject.TestingDriver.WaitForLoadingSpinner();
         }
     }
 }

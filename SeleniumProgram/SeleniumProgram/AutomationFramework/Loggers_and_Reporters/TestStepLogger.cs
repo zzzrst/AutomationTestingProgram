@@ -4,9 +4,9 @@
 
 namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
 {
-    using AutomationTestSetFramework;
     using System.Collections.Generic;
     using System.Linq;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// The Implemntation of the TestSetLogger.
@@ -16,7 +16,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         /// <summary>
         /// Gets or sets the location to save the log to.
         /// </summary>
-        public string SaveFileLocation { get; set; } = XMLInformation.LogSaveFileLocation + "\\Log.txt";
+        public string SaveFileLocation { get; set; } = InformationObject.LogSaveFileLocation + "\\Log.txt";
 
         /// <inheritdoc/>
         public void Log(ITestStep testStep)
