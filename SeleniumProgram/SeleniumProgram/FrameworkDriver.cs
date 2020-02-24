@@ -11,7 +11,6 @@ namespace AutomationTestingProgram
     /// </summary>
     internal class FrameworkDriver
     {
-        public static InformationObject InfoObject;
         private static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");

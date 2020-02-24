@@ -1,14 +1,14 @@
-﻿// <copyright file="TestSetXml.cs" company="PlaceholderCompany">
+﻿// <copyright file="TestSet.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace AutomationTestingProgram.AutomationFramework
 {
-    using AutomationTestSetFramework;
-    using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using System;
     using System.Collections.Generic;
     using System.Xml;
+    using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// Implementation of the ITestSet Class.
