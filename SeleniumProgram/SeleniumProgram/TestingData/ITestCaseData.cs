@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AutomationTestingProgram.TestingData
+﻿namespace AutomationTestingProgram.TestingData
 {
-    public interface ITestSetData
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    /// <summary>
+    /// The interface to get the test case data.
+    /// </summary>
+    public interface ITestCaseData
     {
     }
 }

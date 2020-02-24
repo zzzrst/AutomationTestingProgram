@@ -48,7 +48,7 @@ namespace AutomationTestingProgram
         /// <summary>
         /// Gets or sets the object to get the test step data from.
         /// </summary>
-        public static ITestSetData TestStepData { get; set; }
+        public static ITestStepData TestStepData { get; set; }
 
         /// <summary>
         /// Gets or sets the testing driver to run the testing program on.

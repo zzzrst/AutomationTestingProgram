@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AutomationTestingProgram.TestingDriver
+﻿namespace AutomationTestingProgram.TestingDriver
 {
-    interface ITestingDriver
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    /// <summary>
+    /// The Interface for the Testing Driver software.
+    /// </summary>
+    public interface ITestingDriver
     {
     }
 }
