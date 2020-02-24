@@ -1,4 +1,4 @@
-﻿namespace SeleniumProgram
+﻿namespace AutomationTestingProgram
 {
     using System;
 
