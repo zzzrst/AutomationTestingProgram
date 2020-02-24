@@ -7,6 +7,8 @@ namespace AutomationTestingProgram
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using AutomationTestingProgram.TestingData;
+    using AutomationTestingProgram.TestingDriver;
 
     /// <summary>
     /// An information class that contains information needed by other objects/methods.
@@ -46,7 +48,7 @@ namespace AutomationTestingProgram
         /// <summary>
         /// Gets or sets the object to get the test step data from.
         /// </summary>
-        public static ITestStepData TestStepData { get; set; }
+        public static ITestSetData TestStepData { get; set; }
 
         /// <summary>
         /// Gets or sets the testing driver to run the testing program on.
