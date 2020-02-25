@@ -7,7 +7,7 @@
     /// <summary>
     /// The Interface for the Testing Driver software.
     /// </summary>
-    public interface ITestingDriver
+    public abstract class AbstractTestingDriver
     {
         /// <summary>
         /// Different browsers that are supported.
@@ -63,9 +63,9 @@
 
 
         /// <summary>
-        /// Gets the url of the page the webdriver is focued on.
+        /// Gets or sets the url of the page the webdriver is focued on.
         /// </summary>
-        public string CurrentURL => this.webDriver.Url;
+        public string CurrentURL { get; set; }
 
         /// <summary>
         /// Gets or sets the loadiong spinner that appears on the website.
@@ -76,5 +76,17 @@
         /// Gets or sets the error container to check if any errors are shown on the UI.
         /// </summary>
         public string ErrorContainer { get; set; } = string.Empty;
+
+
+        /// <summary>
+        /// Checks for an element state.
+        /// </summary>
+        /// <returns>True if the element is in that state. false otherwise.</returns>
+        public abstract bool CheckForElementState();
+
+        /// <summary>
+        /// Performs the actions of clicking the specified element.
+        /// </summary>
+        public abstract void ClickElement();
     }
 }
