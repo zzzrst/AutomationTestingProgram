@@ -7,8 +7,8 @@ namespace AutomationTestingProgram.AutomationFramework
     using System;
     using System.Collections.Generic;
     using System.Xml;
-    using AutomationTestSetFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// Implementation of the testCase class.
