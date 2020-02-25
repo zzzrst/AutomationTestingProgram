@@ -5,9 +5,11 @@
 namespace AutomationTestingProgram
 {
     using System;
+    using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.Builders;
     using AutomationTestingProgram.TestingDriver;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// Main program.
@@ -32,14 +34,14 @@ namespace AutomationTestingProgram
             string logSaveFileLocation = string.Empty;
             string screenshotSaveLocation = string.Empty;
             string testingDataDriver = string.Empty;
-            string testSetData = string.Empty;
-            string testCaseData = string.Empty;
-            string testStepData = string.Empty;
+            string testSetDataType = string.Empty;
+            string testCaseDataType = string.Empty;
+            string testStepDataType = string.Empty;
             string testSetDataLocation = string.Empty;
             string testCaseDataLocation = string.Empty;
             string testStepDataLocation = string.Empty;
 
-            InformationObjectBuilder builder = new InformationObjectBuilder()
+            TestSetBuilder builder = new TestSetBuilder()
             {
                 Browser = browser,
                 Environment = environment,
@@ -53,14 +55,29 @@ namespace AutomationTestingProgram
                 ScreenshotSaveLocation = screenshotSaveLocation,
                 ReportSaveFileLocation = csvSaveFileLocation,
                 TestingDataDriver = testingDataDriver,
-                TestSetData = testSetData,
-                TestCaseData = testCaseData,
-                TestStepData = testStepData,
+                TestSetDataType = testSetDataType,
+                TestCaseDataType = testCaseDataType,
+                TestStepDataType = testStepDataType,
                 TestSetDataLocation = testSetDataLocation,
                 TestCaseDataLocation = testCaseDataLocation,
                 TestStepDataLocation = testStepDataLocation,
             };
-            builder.Build();
+            TestSet testSet = builder.Build();
+
+            DateTime start = DateTime.UtcNow;
+
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
+
+            // builder.RunAODA();
+
+            DateTime end = DateTime.UtcNow;
+
+            InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
+            InformationObject.CSVLogger.WriteOutResults();
+
+            string resultString = testSet.TestSetStatus.RunSuccessful ? "successfull" : "not successful";
+            Logger.Info($"SeleniumPerfXML has finished. It was {resultString}");
         }
     }
 }
