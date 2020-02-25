@@ -9,5 +9,10 @@
     /// </summary>
     public interface ITestStepData
     {
+        /// <summary>
+        /// Gets the arguments for the current test Step.
+        /// </summary>
+        /// <returns>The arguments for the current test step.</returns>
+        public Dictionary<string, string> GetArguments();
     }
 }
