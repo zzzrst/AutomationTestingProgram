@@ -10,6 +10,7 @@
     /// </summary>
     public class TextDriver : ITestCaseData, ITestSetData, ITestStepData
     {
+
         static TextDriver()
         {
         }
@@ -22,6 +23,11 @@
         /// Gets the driver for the text driver.
         /// </summary>
         public static TextDriver Driver { get; } = new TextDriver();
+
+        /// <summary>
+        /// Gets or sets the location of the text file.
+        /// </summary>
+        public string TxtFileLocation { get; set; }
 
         /// <inheritdoc/>
         public Dictionary<string, string> GetArguments()
