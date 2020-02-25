@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML
+namespace AutomationTestingProgram.TestingDriver
 {
     using System;
     using System.Configuration;
@@ -16,11 +16,12 @@ namespace SeleniumPerfXML
     using OpenQA.Selenium.IE;
     using OpenQA.Selenium.Support.Extensions;
     using OpenQA.Selenium.Support.UI;
+    using static AutomationTestingProgram.TestingDriver.ITestingDriver;
 
     /// <summary>
     /// Driver class for Selenium WebDriver.
     /// </summary>
-    public class SeleniumDriver
+    public class SeleniumDriver : ITestingDriver
     {
         /// <summary>
         /// Location of the Selenium drivers on the current machine.
@@ -58,72 +59,14 @@ namespace SeleniumPerfXML
             this.actualTimeOut = TimeSpan.FromMinutes(int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]));
         }
 
-        /// <summary>
-        /// Different browsers that are supported.
-        /// </summary>
-        public enum Browser
-        {
-            /// <summary>
-            /// Represents the Chrome browser.
-            /// </summary>
-            Chrome,
+        /// <inheritdoc/>
+        public string CurrentURL { get; set; }
 
-            /// <summary>
-            /// Represents the Microsoft Edge Browser.
-            /// </summary>
-            Edge,
+        /// <inheritdoc/>
+        public string LoadingSpinner { get; set; }
 
-            /// <summary>
-            /// Represents the Firefox Browser.
-            /// </summary>
-            Firefox,
-
-            /// <summary>
-            /// Represents the Internet Explorer browser.
-            /// </summary>
-            IE,
-
-            /// <summary>
-            /// Represents the Safari Browser.
-            /// </summary>
-            Safari,
-        }
-
-        /// <summary>
-        /// Different states of the element.
-        /// </summary>
-        public enum ElementState
-        {
-            /// <summary>
-            /// Element cannot be found / seen.
-            /// </summary>
-            Invisible,
-
-            /// <summary>
-            /// Element can be seen.
-            /// </summary>
-            Visible,
-
-            /// <summary>
-            /// Element can be clicked.
-            /// </summary>
-            Clickable,
-        }
-
-        /// <summary>
-        /// Gets the url of the page the webdriver is focued on.
-        /// </summary>
-        public string CurrentURL => this.webDriver.Url;
-
-        /// <summary>
-        /// Gets or sets the loadiong spinner that appears on the website.
-        /// </summary>
-        public string LoadingSpinner { get; set; } = string.Empty;
-
-        /// <summary>
-        /// Gets or sets the error container to check if any errors are shown on the UI.
-        /// </summary>
-        public string ErrorContainer { get; set; } = string.Empty;
+        /// <inheritdoc/>
+        public string ErrorContainer { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the web driver is in an IFrame or not.
@@ -198,7 +141,7 @@ namespace SeleniumPerfXML
         }
 
         /// <summary>
-        /// Closes the current window. It will quite the browser if it is the last window opened.
+        /// Closes the current window. It will quit the browser if it is the last window opened.
         /// </summary>
         public void CloseBrowser()
         {
