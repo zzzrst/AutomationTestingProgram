@@ -1,6 +1,8 @@
 ﻿namespace AutomationTestingProgram.Builders
 {
+    using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
+    using AutomationTestingProgram.TestingData.DataDrivers;
     using AutomationTestingProgram.TestingDriver;
     using System;
     using System.Collections.Generic;
@@ -9,7 +11,7 @@
     /// <summary>
     /// Creates a new Information Object and returns it.
     /// </summary>
-    public class InformationObjectBuilder
+    public class TestSetBuilder
     {
         /// <summary>
         /// The usable testing applications.
@@ -111,17 +113,17 @@
         /// <summary>
         /// Gets or sets where to get the test set data.
         /// </summary>
-        public string TestSetData { get; set; }
+        public string TestSetDataType { get; set; }
 
         /// <summary>
         /// Gets or sets where to get the test case data.
         /// </summary>
-        public string TestCaseData { get; set; }
+        public string TestCaseDataType { get; set; }
 
         /// <summary>
         /// Gets or sets where to get the test step.
         /// </summary>
-        public string TestStepData { get; set; }
+        public string TestStepDataType { get; set; }
 
         /// <summary>
         /// Gets or sets the location of the test set data.
@@ -155,8 +157,11 @@
         /// <summary>
         /// Sets the values for the informaton object.
         /// </summary>
-        public void Build()
+        /// <returns>The test Set to run.</returns>
+        public TestSet Build()
         {
+            TestSet testSet;
+
             this.InsantiateTestingDriver();
             this.InsantiateTestSetData();
             this.InsantiateTestCaseData();
@@ -170,21 +175,52 @@
             };
             InformationObject.RespectRepeatFor = this.RespectRepeatFor;
             InformationObject.RespectRunAODAFlag = this.RespectRunAODAFlag;
+
+            testSet = new TestSet();
+
+            return testSet;
         }
 
         private void InsantiateTestStepData()
         {
-            throw new NotImplementedException();
+            switch (this.TestStepDataType.ToLower())
+            {
+                case "txt":
+                    InformationObject.TestStepData = TextDriver.Driver;
+                    TextDriver.Driver.TxtFileLocation = this.TestStepDataLocation;
+                    break;
+                default:
+                    Console.WriteLine($"Sorry we do not currently support reading test steps from: {this.TestStepDataType}");
+                    break;
+            }
         }
 
         private void InsantiateTestCaseData()
         {
-            throw new NotImplementedException();
+            switch (this.TestCaseDataType.ToLower())
+            {
+                case "txt":
+                    InformationObject.TestCaseData = TextDriver.Driver;
+                    TextDriver.Driver.TxtFileLocation = this.TestCaseDataLocation;
+                    break;
+                default:
+                    Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestCaseDataType}");
+                    break;
+            }
         }
 
         private void InsantiateTestSetData()
         {
-            throw new NotImplementedException();
+            switch (this.TestSetDataType.ToLower())
+            {
+                case "txt":
+                    InformationObject.TestSetData = TextDriver.Driver;
+                    TextDriver.Driver.TxtFileLocation = this.TestSetDataLocation;
+                    break;
+                default:
+                    Console.WriteLine($"Sorry we do not currently support reading test sets from: {this.TestSetDataType}");
+                    break;
+            }
         }
 
         private void InsantiateTestingDriver()
@@ -226,7 +262,7 @@
                     InformationObject.TestingDriver = builder.BuildSeleniumDriver();
                     break;
                 default:
-                    Console.WriteLine($"Sorry we do not currently support {this.TestingDataDriver}");
+                    Console.WriteLine($"Sorry we do not currently support the testing application: {this.TestingDataDriver}");
                     break;
             }
         }
