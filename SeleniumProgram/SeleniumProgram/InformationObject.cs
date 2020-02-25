@@ -19,12 +19,12 @@ namespace AutomationTestingProgram
         /// <summary>
         /// Gets or sets a value indicating whether to respect the repeat for value.
         /// </summary>
-        public static bool RespectRepeatFor { get; set; }
+        public static bool RespectRepeatFor { get; set; } = false;
 
         /// <summary>
         /// Gets or sets a value indicating whether to run AODA.
         /// </summary>
-        public static bool RespectRunAODAFlag { get; set; }
+        public static bool RespectRunAODAFlag { get; set; } = false;
 
         /// <summary>
         /// Gets or sets the location to save the log.
