@@ -11,6 +11,16 @@
     public interface ITestSetData
     {
         /// <summary>
+        /// Gets or sets the location to get the information from.
+        /// </summary>
+        public string InformationLocation { get; set; }
+
+        /// <summary>
+        /// Gets the name to be found by the reflective getter.
+        /// </summary>
+        public string Name { get; }
+
+        /// <summary>
         /// Gets The next test case.
         /// </summary>
         /// <returns>The next test case to run.</returns>

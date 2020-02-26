@@ -14,18 +14,11 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
     /// </summary>
     public class XMLDriver : ITestSetData, ITestCaseData, ITestStepData
     {
-        static XMLDriver()
-        {
-        }
+        /// <inheritdoc/>
+        public string InformationLocation { get; set; }
 
-        private XMLDriver()
-        {
-        }
-
-        /// <summary>
-        /// Gets the driver for the text driver.
-        /// </summary>
-        public static XMLDriver Driver { get; } = new XMLDriver();
+        /// <inheritdoc/>
+        public string Name { get; } = "XML";
 
         /// <inheritdoc/>
         public bool ExistNextTestCase()

@@ -2,6 +2,7 @@
 {
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
+    using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestingData.DataDrivers;
     using AutomationTestingProgram.TestingDriver;
     using System;
@@ -43,11 +44,6 @@
             /// From an XML File.
             /// </summary>
             XML,
-
-            /// <summary>
-            /// From a txt file.
-            /// </summary>
-            TextFile,
         }
 
         /// <summary>
@@ -181,45 +177,71 @@
             return testSet;
         }
 
+        /// <summary>
+        /// Uses the ReflectiveGetter method to set the provided test StepData based on the name given.
+        /// Name has to match the name variable in the driver.
+        /// </summary>
         private void InsantiateTestStepData()
         {
-            switch (this.TestStepDataType.ToLower())
+            ITestStepData testStepData = null;
+            testStepData = ReflectiveGetter.GetEnumerableOfType<ITestStepData>()
+                .Find(x => x.Name.Equals(this.TestStepDataType));
+
+            if (testStepData == null)
             {
-                case "txt":
-                    InformationObject.TestStepData = TextDriver.Driver;
-                    TextDriver.Driver.TxtFileLocation = this.TestStepDataLocation;
-                    break;
-                default:
-                    Console.WriteLine($"Sorry we do not currently support reading test steps from: {this.TestStepDataType}");
-                    break;
+                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestStepDataType}");
+                throw new Exception($"Cannot Find test case data type {this.TestStepDataType}");
+            }
+            else
+            {
+                testStepData.InformationLocation = this.TestStepDataLocation;
+                InformationObject.TestStepData = testStepData;
             }
         }
 
+        /// <summary>
+        /// Uses the ReflectiveGetter method to set the provided test CaseData based on the name given.
+        /// Name has to match the name variable in the driver.
+        /// </summary>
         private void InsantiateTestCaseData()
         {
-            switch (this.TestCaseDataType.ToLower())
+            ITestCaseData testCaseData = null;
+
+            testCaseData = ReflectiveGetter.GetEnumerableOfType<ITestCaseData>()
+                .Find(x => x.Name.Equals(this.TestCaseDataType));
+
+            if (testCaseData == null)
             {
-                case "txt":
-                    InformationObject.TestCaseData = TextDriver.Driver;
-                    TextDriver.Driver.TxtFileLocation = this.TestCaseDataLocation;
-                    break;
-                default:
-                    Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestCaseDataType}");
-                    break;
+                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestCaseDataType}");
+                throw new Exception($"Cannot Find test case data type {this.TestCaseDataType}");
+            }
+            else
+            {
+                testCaseData.InformationLocation = this.TestCaseDataLocation;
+                InformationObject.TestCaseData = testCaseData;
             }
         }
 
+        /// <summary>
+        /// Uses the ReflectiveGetter method to set the provided test SetData based on the name given.
+        /// Name has to match the name variable in the driver.
+        /// </summary>
         private void InsantiateTestSetData()
         {
-            switch (this.TestSetDataType.ToLower())
+            ITestCaseData testCaseData = null;
+
+            testCaseData = ReflectiveGetter.GetEnumerableOfType<ITestCaseData>()
+                .Find(x => x.Name.Equals(this.TestCaseDataType));
+
+            if (testCaseData == null)
             {
-                case "txt":
-                    InformationObject.TestSetData = TextDriver.Driver;
-                    TextDriver.Driver.TxtFileLocation = this.TestSetDataLocation;
-                    break;
-                default:
-                    Console.WriteLine($"Sorry we do not currently support reading test sets from: {this.TestSetDataType}");
-                    break;
+                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestCaseDataType}");
+                throw new Exception($"Cannot Find test case data type {this.TestCaseDataType}");
+            }
+            else
+            {
+                testCaseData.InformationLocation = this.TestCaseDataLocation;
+                InformationObject.TestCaseData = testCaseData;
             }
         }
 
