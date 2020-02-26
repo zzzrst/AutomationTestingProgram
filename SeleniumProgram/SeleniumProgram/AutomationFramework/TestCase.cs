@@ -30,8 +30,8 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public int TotalTestSteps
         {
-            get => this.TestCaseInfo.ChildNodes.Count;
-            set => this.TotalTestSteps = this.TestCaseInfo.ChildNodes.Count;
+            get; // => this.TestCaseInfo.ChildNodes.Count;
+            set; // => this.TotalTestSteps = this.TestCaseInfo.ChildNodes.Count;
         }
 
         /// <inheritdoc/>
@@ -56,7 +56,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public bool ExistNextTestStep()
         {
-            return this.testStack.Count > 0 || this.ShouldExecuteAmountOfTimes > this.ExecuteCount + 1;
+            return this.ShouldExecuteAmountOfTimes > this.ExecuteCount + 1 || InformationObject.TestCaseData.ExistNextTestStep();
         }
 
         /// <inheritdoc/>
@@ -65,13 +65,12 @@ namespace AutomationTestingProgram.AutomationFramework
             ITestStep testStep = null;
 
             // reached end of loop, check if should loop again.
-            if (this.testStack.Count == 0 && this.ShouldExecuteAmountOfTimes > this.ExecuteCount)
+            if (!this.ExistNextTestStep() && this.ShouldExecuteAmountOfTimes > this.ExecuteCount)
             {
-                this.AddNodesToStack(this.TestCaseInfo);
                 this.ExecuteCount += 1;
             }
 
-            testStep = this.IfRunTestStepLayer();
+            testStep = InformationObject.TestCaseData.GetNextTestStep();
 
             return testStep;
         }

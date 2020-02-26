@@ -5,6 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
+    using System.Collections.Generic;
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestSetFramework;
@@ -17,6 +18,11 @@ namespace AutomationTestingProgram.AutomationFramework
     {
         /// <inheritdoc/>
         public virtual string Name { get; set; } = "Test Step";
+
+        /// <summary>
+        /// Gets or sets arguments used for the test Step.
+        /// </summary>
+        public Dictionary<string, string> Arguments { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether you should execute this step or skip it.

@@ -16,11 +16,11 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.TestStepInfo.Attributes["xPath"].Value;
+            string xPath = this.Arguments["xPath"];
             bool useJS = false;
-            if (this.TestStepInfo.Attributes["useJS"] != null)
+            if (this.Arguments["useJS"] != null)
             {
-                useJS = bool.Parse(this.TestStepInfo.Attributes["useJS"].Value);
+                useJS = bool.Parse(this.Arguments["useJS"]);
             }
 
             InformationObject.TestingDriver.ClickElement(xPath, useJS);

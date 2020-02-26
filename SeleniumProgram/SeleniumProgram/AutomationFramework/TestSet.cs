@@ -26,8 +26,8 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public int TotalTestCases
         {
-            get => this.TestCaseFlow.ChildNodes.Count;
-            set => this.TotalTestCases = this.TestCaseFlow.ChildNodes.Count;
+            get; // => this.TestCaseFlow.ChildNodes.Count;
+            set; // => this.TotalTestCases = this.TestCaseFlow.ChildNodes.Count;
         }
 
         /// <inheritdoc/>
@@ -42,15 +42,15 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public bool ExistNextTestCase()
         {
-            return this.testStack.Count > 0;
+            return InformationObject.TestSetData.ExistNextTestCase();
         }
 
         /// <inheritdoc/>
         public ITestCase GetNextTestCase()
         {
-            TestCase testCase = null;
+            ITestCase testCase = null;
 
-            testCase = this.IfRunTestCaseLayer();
+            testCase = InformationObject.TestSetData.GetNextTestCase();
 
             if (testCase == null)
             {
@@ -92,7 +92,7 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             this.TestSetStatus.EndTime = DateTime.UtcNow;
 
-            this.Reporter.AddTestSetStatus(this.TestSetStatus);
+            InformationObject.Reporter.AddTestSetStatus(this.TestSetStatus);
 
             ITestSetLogger log = new TestSetLogger();
             log.Log(this);
@@ -106,7 +106,7 @@ namespace AutomationTestingProgram.AutomationFramework
                 this.TestSetStatus.RunSuccessful = false;
             }
 
-            this.Reporter.AddTestCaseStatus(testCaseStatus);
+            InformationObject.Reporter.AddTestCaseStatus(testCaseStatus);
         }
     }
 }
