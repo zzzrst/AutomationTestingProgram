@@ -1,4 +1,8 @@
-﻿namespace AutomationTestingProgram.TestingData.DataDrivers
+﻿// <copyright file="XMLDriver.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.TestingData.DataDrivers
 {
     using System;
     using System.Collections.Generic;
@@ -6,28 +10,34 @@
     using AutomationTestSetFramework;
 
     /// <summary>
-    /// A singelton of a textDriver.
+    /// The XML Driver to get data from an xml.
     /// </summary>
-    public class TextDriver : ITestCaseData, ITestSetData, ITestStepData
+    public class XMLDriver : ITestSetData, ITestCaseData, ITestStepData
     {
-
-        static TextDriver()
+        static XMLDriver()
         {
         }
 
-        private TextDriver()
+        private XMLDriver()
         {
         }
 
         /// <summary>
         /// Gets the driver for the text driver.
         /// </summary>
-        public static TextDriver Driver { get; } = new TextDriver();
+        public static XMLDriver Driver { get; } = new XMLDriver();
 
-        /// <summary>
-        /// Gets or sets the location of the text file.
-        /// </summary>
-        public string TxtFileLocation { get; set; }
+        /// <inheritdoc/>
+        public bool ExistNextTestCase()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <inheritdoc/>
+        public bool ExistNextTestStep()
+        {
+            throw new NotImplementedException();
+        }
 
         /// <inheritdoc/>
         public Dictionary<string, string> GetArguments()
