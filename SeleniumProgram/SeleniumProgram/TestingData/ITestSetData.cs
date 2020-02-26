@@ -1,4 +1,8 @@
-﻿namespace AutomationTestingProgram.TestingData
+﻿// <copyright file="ITestSetData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.TestingData
 {
     using System;
     using System.Collections.Generic;
@@ -8,18 +12,8 @@
     /// <summary>
     /// The interface to get the test set data.
     /// </summary>
-    public interface ITestSetData
+    public interface ITestSetData : ITestData
     {
-        /// <summary>
-        /// Gets or sets the location to get the information from.
-        /// </summary>
-        public string InformationLocation { get; set; }
-
-        /// <summary>
-        /// Gets the name to be found by the reflective getter.
-        /// </summary>
-        public string Name { get; }
-
         /// <summary>
         /// Gets The next test case.
         /// </summary>

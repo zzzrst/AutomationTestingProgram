@@ -15,7 +15,6 @@ namespace AutomationTestingProgram.AutomationFramework
     /// </summary>
     public class TestCase : ITestCase
     {
-
         /// <summary>
         /// Gets or sets a value indicating whether you should execute this step or skip it.
         /// </summary>

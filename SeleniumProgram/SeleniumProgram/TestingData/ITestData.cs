@@ -1,4 +1,8 @@
-﻿namespace AutomationTestingProgram.TestingData
+﻿// <copyright file="ITestData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.TestingData
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,8 @@
-﻿namespace AutomationTestingProgram.TestingDriver
+﻿// <copyright file="ITestingDriver.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.TestingDriver
 {
     using System;
     using System.Collections.Generic;
@@ -60,7 +64,6 @@
             /// </summary>
             Clickable,
         }
-
 
         /// <summary>
         /// Gets or sets the url of the page the webdriver is focued on.

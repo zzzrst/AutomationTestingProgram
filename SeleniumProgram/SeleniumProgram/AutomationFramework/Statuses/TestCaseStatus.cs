@@ -4,8 +4,8 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
-    using AutomationTestSetFramework;
     using System;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// An Implementation of the TestCaseStatus Class.

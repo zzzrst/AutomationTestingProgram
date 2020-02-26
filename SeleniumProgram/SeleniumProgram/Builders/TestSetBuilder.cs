@@ -1,13 +1,17 @@
-﻿namespace AutomationTestingProgram.Builders
+﻿// <copyright file="TestSetBuilder.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.Builders
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestingData.DataDrivers;
     using AutomationTestingProgram.TestingDriver;
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// Creates a new Information Object and returns it.
@@ -228,20 +232,20 @@
         /// </summary>
         private void InsantiateTestSetData()
         {
-            ITestCaseData testCaseData = null;
+            ITestSetData testSetData = null;
 
-            testCaseData = ReflectiveGetter.GetEnumerableOfType<ITestCaseData>()
-                .Find(x => x.Name.Equals(this.TestCaseDataType));
+            testSetData = ReflectiveGetter.GetEnumerableOfType<ITestSetData>()
+                .Find(x => x.Name.Equals(this.TestSetDataType));
 
-            if (testCaseData == null)
+            if (testSetData == null)
             {
-                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestCaseDataType}");
-                throw new Exception($"Cannot Find test case data type {this.TestCaseDataType}");
+                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestSetDataType}");
+                throw new Exception($"Cannot Find test case data type {this.TestSetDataType}");
             }
             else
             {
-                testCaseData.InformationLocation = this.TestCaseDataLocation;
-                InformationObject.TestCaseData = testCaseData;
+                testSetData.InformationLocation = this.TestSetDataLocation;
+                InformationObject.TestSetData = testSetData;
             }
         }
 
