@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.AutomationFramework
+namespace AutomationTestingProgram
 {
     using System;
     using System.Collections.Generic;
