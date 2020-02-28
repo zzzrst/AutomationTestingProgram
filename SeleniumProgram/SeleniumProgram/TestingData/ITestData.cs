@@ -23,5 +23,10 @@ namespace AutomationTestingProgram.TestingData
         /// Gets the name to be found by the reflective getter.
         /// </summary>
         public string Name { get; }
+
+        /// <summary>
+        /// Runs before running the main testing loop.
+        /// </summary>
+        public void SetUp();
     }
 }

@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.Builders
+namespace AutomationTestingProgram.Builders.TestingDriverBuilder
 {
     using System;
     using AutomationTestingProgram.TestingDriver;
@@ -11,7 +11,7 @@ namespace AutomationTestingProgram.Builders
     /// <summary>
     /// Builds a new selenium Driver based on the given variables.
     /// </summary>
-    public class SeleniumDriverBuilder
+    public class TestingDriverBuilder
     {
         /// <summary>
         /// Gets or sets the browser to use.

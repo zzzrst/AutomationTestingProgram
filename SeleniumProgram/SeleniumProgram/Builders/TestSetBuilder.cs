@@ -200,6 +200,7 @@ namespace AutomationTestingProgram.Builders
             {
                 testStepData.InformationLocation = this.TestStepDataLocation;
                 InformationObject.TestStepData = testStepData;
+                testStepData.SetUp();
             }
         }
 
@@ -223,6 +224,7 @@ namespace AutomationTestingProgram.Builders
             {
                 testCaseData.InformationLocation = this.TestCaseDataLocation;
                 InformationObject.TestCaseData = testCaseData;
+                testCaseData.SetUp();
             }
         }
 
@@ -232,21 +234,50 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestSetData()
         {
-            ITestSetData testSetData = null;
+            InformationObject.TestSetData = (ITestSetData)this.SetTestData(0, this.TestSetDataType, this.TestSetDataLocation);
+        }
 
-            testSetData = ReflectiveGetter.GetEnumerableOfType<ITestSetData>()
-                .Find(x => x.Name.Equals(this.TestSetDataType));
+        /// <summary>
+        /// The actual method to get the test set/case/step data.
+        /// </summary>
+        /// <param name="testDataType"> 0 = testSetData, 1 = testCaseData, 2 = testStepData. </param>
+        /// <param name="dataTypeName"> Name where to get the data from. </param>
+        /// <param name="dataTypeLocation"> Arguments for the data. </param>
+        /// <returns> The test data.</returns>
+        private ITestData SetTestData(int testDataType, string dataTypeName, string dataTypeLocation)
+        {
+            ITestData testData = null;
 
-            if (testSetData == null)
+            switch (testDataType)
             {
-                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestSetDataType}");
-                throw new Exception($"Cannot Find test case data type {this.TestSetDataType}");
+                case 0:
+                    testData = ReflectiveGetter.GetEnumerableOfType<ITestSetData>()
+                                .Find(x => x.Name.Equals(dataTypeName));
+                    break;
+                case 1:
+                    testData = ReflectiveGetter.GetEnumerableOfType<ITestCaseData>()
+                                .Find(x => x.Name.Equals(dataTypeName));
+                    break;
+                case 2:
+                    testData = ReflectiveGetter.GetEnumerableOfType<ITestStepData>()
+                                .Find(x => x.Name.Equals(dataTypeName));
+                    break;
+                default:
+                    throw new Exception("Not a valid testDataType");
+            }
+
+            if (testData == null)
+            {
+                Console.WriteLine($"Sorry we do not currently support reading test cases from: {dataTypeName}");
+                throw new Exception($"Cannot Find test case data type {dataTypeName}");
             }
             else
             {
-                testSetData.InformationLocation = this.TestSetDataLocation;
-                InformationObject.TestSetData = testSetData;
+                testData.InformationLocation = dataTypeLocation;
+                testData.SetUp();
             }
+
+            return testData;
         }
 
         private void InsantiateTestingDriver()
