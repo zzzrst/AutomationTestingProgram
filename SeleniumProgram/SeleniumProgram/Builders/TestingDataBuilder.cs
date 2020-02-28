@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AutomationTestingProgram.Builders
+﻿namespace AutomationTestingProgram.Builders
 {
-    class Class1
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    public class TestingDataBuilder
     {
     }
 }

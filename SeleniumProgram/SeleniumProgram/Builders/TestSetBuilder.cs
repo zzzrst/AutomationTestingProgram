@@ -9,6 +9,7 @@ namespace AutomationTestingProgram.Builders
     using System.Text;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
+    using AutomationTestingProgram.Builders.TestingDriverBuilder;
     using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestingData.DataDrivers;
     using AutomationTestingProgram.TestingDriver;
@@ -187,21 +188,7 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestStepData()
         {
-            ITestStepData testStepData = null;
-            testStepData = ReflectiveGetter.GetEnumerableOfType<ITestStepData>()
-                .Find(x => x.Name.Equals(this.TestStepDataType));
-
-            if (testStepData == null)
-            {
-                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestStepDataType}");
-                throw new Exception($"Cannot Find test case data type {this.TestStepDataType}");
-            }
-            else
-            {
-                testStepData.InformationLocation = this.TestStepDataLocation;
-                InformationObject.TestStepData = testStepData;
-                testStepData.SetUp();
-            }
+            InformationObject.TestStepData = (ITestStepData)this.GetTestData(2, this.TestStepDataType, this.TestStepDataLocation);
         }
 
         /// <summary>
@@ -210,22 +197,7 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestCaseData()
         {
-            ITestCaseData testCaseData = null;
-
-            testCaseData = ReflectiveGetter.GetEnumerableOfType<ITestCaseData>()
-                .Find(x => x.Name.Equals(this.TestCaseDataType));
-
-            if (testCaseData == null)
-            {
-                Console.WriteLine($"Sorry we do not currently support reading test cases from: {this.TestCaseDataType}");
-                throw new Exception($"Cannot Find test case data type {this.TestCaseDataType}");
-            }
-            else
-            {
-                testCaseData.InformationLocation = this.TestCaseDataLocation;
-                InformationObject.TestCaseData = testCaseData;
-                testCaseData.SetUp();
-            }
+            InformationObject.TestCaseData = (ITestCaseData)this.GetTestData(1, this.TestCaseDataType, this.TestCaseDataLocation);
         }
 
         /// <summary>
@@ -234,7 +206,7 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestSetData()
         {
-            InformationObject.TestSetData = (ITestSetData)this.SetTestData(0, this.TestSetDataType, this.TestSetDataLocation);
+            InformationObject.TestSetData = (ITestSetData)this.GetTestData(0, this.TestSetDataType, this.TestSetDataLocation);
         }
 
         /// <summary>
@@ -244,22 +216,22 @@ namespace AutomationTestingProgram.Builders
         /// <param name="dataTypeName"> Name where to get the data from. </param>
         /// <param name="dataTypeLocation"> Arguments for the data. </param>
         /// <returns> The test data.</returns>
-        private ITestData SetTestData(int testDataType, string dataTypeName, string dataTypeLocation)
+        private ITestData GetTestData(int testDataType, string dataTypeName, string dataTypeLocation)
         {
             ITestData testData = null;
 
             switch (testDataType)
             {
                 case 0:
-                    testData = ReflectiveGetter.GetEnumerableOfType<ITestSetData>()
+                    testData = ReflectiveGetter.GetImplementationOfType<ITestSetData>()
                                 .Find(x => x.Name.Equals(dataTypeName));
                     break;
                 case 1:
-                    testData = ReflectiveGetter.GetEnumerableOfType<ITestCaseData>()
+                    testData = ReflectiveGetter.GetImplementationOfType<ITestCaseData>()
                                 .Find(x => x.Name.Equals(dataTypeName));
                     break;
                 case 2:
-                    testData = ReflectiveGetter.GetEnumerableOfType<ITestStepData>()
+                    testData = ReflectiveGetter.GetImplementationOfType<ITestStepData>()
                                 .Find(x => x.Name.Equals(dataTypeName));
                     break;
                 default:
@@ -268,8 +240,8 @@ namespace AutomationTestingProgram.Builders
 
             if (testData == null)
             {
-                Console.WriteLine($"Sorry we do not currently support reading test cases from: {dataTypeName}");
-                throw new Exception($"Cannot Find test case data type {dataTypeName}");
+                Console.WriteLine($"Sorry we do not currently support reading test from: {dataTypeName}");
+                throw new Exception($"Cannot Find test data type {dataTypeName}");
             }
             else
             {
@@ -285,7 +257,7 @@ namespace AutomationTestingProgram.Builders
             switch (this.TestingDataDriver.ToLower())
             {
                 case "selenium":
-                    SeleniumDriverBuilder builder;
+                    TestingDriverBuilder.TestingDriverBuilder builder;
 
                     ITestingDriver.Browser browser = ITestingDriver.Browser.Chrome;
 
@@ -306,7 +278,7 @@ namespace AutomationTestingProgram.Builders
                         browser = ITestingDriver.Browser.Edge;
                     }
 
-                    builder = new SeleniumDriverBuilder()
+                    builder = new TestingDriverBuilder.TestingDriverBuilder()
                     {
                         Browser = browser,
                         TimeOutThreshold = TimeSpan.FromSeconds(this.TimeOutThreshold),

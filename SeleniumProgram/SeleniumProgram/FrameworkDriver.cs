@@ -23,23 +23,23 @@ namespace AutomationTestingProgram
         public static void Main(string[] args)
         {
             // Parameters to be used for the information object.
-            string browser = string.Empty;
-            string environment = string.Empty;
-            string url = string.Empty;
-            string respectRunAODAFlag = string.Empty;
-            string respectRepeatFor = string.Empty;
-            int timeOutThreshold = 0;
-            int warningThreshold = 0;
-            string csvSaveFileLocation = string.Empty;
-            string logSaveFileLocation = string.Empty;
-            string screenshotSaveLocation = string.Empty;
-            string testingDataDriver = string.Empty;
-            string testSetDataType = string.Empty;
-            string testCaseDataType = string.Empty;
-            string testStepDataType = string.Empty;
-            string testSetDataLocation = string.Empty;
-            string testCaseDataLocation = string.Empty;
-            string testStepDataLocation = string.Empty;
+            string browser = "chrome";
+            string environment = "test";
+            string url = "https://www.google.ca/";
+            string respectRunAODAFlag = "False";
+            string respectRepeatFor = "False";
+            int timeOutThreshold = 5;
+            int warningThreshold = 5;
+            string csvSaveFileLocation = "C:\\SeleniumPerfXML";
+            string logSaveFileLocation = "C:\\SeleniumPerfXML";
+            string screenshotSaveLocation = "C:\\SeleniumPerfXML\\ScreenShots";
+            string testingDataDriver = "Selenium";
+            string testSetDataType = "XML";
+            string testCaseDataType = "XML";
+            string testStepDataType = "XML";
+            string testSetDataLocation = "C:\\SeleniumPerfXML\\SampleXML.xml";
+            string testCaseDataLocation = "C:\\SeleniumPerfXML\\SampleXML.xml";
+            string testStepDataLocation = "C:\\SeleniumPerfXML\\SampleXML.xml";
 
             TestSetBuilder builder = new TestSetBuilder()
             {
@@ -68,8 +68,6 @@ namespace AutomationTestingProgram
 
             AutomationTestSetDriver.RunTestSet(testSet);
             InformationObject.Reporter.Report();
-
-            // builder.RunAODA();
 
             DateTime end = DateTime.UtcNow;
 
