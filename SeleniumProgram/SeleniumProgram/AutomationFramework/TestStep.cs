@@ -6,7 +6,6 @@ namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
     using System.Collections.Generic;
-    using System.Xml;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestSetFramework;
     using static AutomationTestSetFramework.IMethodBoundaryAspect;
@@ -22,7 +21,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Gets or sets arguments used for the test Step.
         /// </summary>
-        public Dictionary<string, string> Arguments { get; set; }
+        public Dictionary<string, string> Arguments { get; set; } = new Dictionary<string, string>();
 
         /// <summary>
         /// Gets or sets a value indicating whether you should execute this step or skip it.
@@ -30,7 +29,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public bool ShouldExecuteVariable { get; set; } = true;
 
         /// <inheritdoc/>
-        public int TestStepNumber { get; set; }
+        public int TestStepNumber { get; set; } = 0;
 
         /// <inheritdoc/>
         public ITestStepStatus TestStepStatus { get; set; }

@@ -30,8 +30,8 @@ namespace AutomationTestingProgram
             string respectRepeatFor = "False";
             int timeOutThreshold = 5;
             int warningThreshold = 5;
-            string csvSaveFileLocation = "C:\\SeleniumPerfXML";
-            string logSaveFileLocation = "C:\\SeleniumPerfXML";
+            string csvSaveFileLocation = "C:\\SeleniumPerfXML\\Logs";
+            string logSaveFileLocation = "C:\\SeleniumPerfXML\\Logs";
             string screenshotSaveLocation = "C:\\SeleniumPerfXML\\ScreenShots";
             string testingDataDriver = "Selenium";
             string testSetDataType = "XML";

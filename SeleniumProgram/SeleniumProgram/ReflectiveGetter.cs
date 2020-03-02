@@ -4,12 +4,12 @@
 
 namespace AutomationTestingProgram
 {
-    using AutomationTestingProgram.TestingData;
-    using AutomationTestSetFramework;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
+    using AutomationTestingProgram.TestingData;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// Class to get test action using reflection.

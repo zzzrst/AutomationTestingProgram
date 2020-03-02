@@ -42,34 +42,25 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public IMethodBoundaryAspect.FlowBehavior OnExceptionFlowBehavior { get; set; }
 
-        /// <summary>
-        /// Gets or sets the ammount of times this should be ran.
-        /// </summary>
-        public int ShouldExecuteAmountOfTimes { get; set; } = 1;
-
-        /// <summary>
-        /// Gets or sets the ammount of times the test case has ran.
-        /// </summary>
-        public int ExecuteCount { get; set; } = 0;
-
         /// <inheritdoc/>
         public bool ExistNextTestStep()
         {
-            return this.ShouldExecuteAmountOfTimes > this.ExecuteCount + 1 || InformationObject.TestCaseData.ExistNextTestStep();
+            return InformationObject.TestCaseData.ExistNextTestStep();
         }
 
         /// <inheritdoc/>
         public ITestStep GetNextTestStep()
         {
-            ITestStep testStep = null;
+            TestStep testStep;
+            testStep = (TestStep)InformationObject.TestCaseData.GetNextTestStep();
 
-            // reached end of loop, check if should loop again.
-            if (!this.ExistNextTestStep() && this.ShouldExecuteAmountOfTimes > this.ExecuteCount)
+            if (testStep != null)
             {
-                this.ExecuteCount += 1;
+                testStep.Name += $" {this.CurrTestStepNumber} ";
+                testStep.TestStepNumber += this.CurrTestStepNumber;
+                testStep.ShouldExecuteVariable = testStep.ShouldExecuteVariable && this.ShouldExecuteVariable;
+                this.CurrTestStepNumber++;
             }
-
-            testStep = InformationObject.TestCaseData.GetNextTestStep();
 
             return testStep;
         }
@@ -77,7 +68,6 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public void HandleException(Exception e)
         {
-            this.ExecuteCount -= 1;
             this.TestCaseStatus.ErrorStack = e.StackTrace;
             this.TestCaseStatus.FriendlyErrorMessage = e.Message;
             this.TestCaseStatus.RunSuccessful = false;

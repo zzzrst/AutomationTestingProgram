@@ -57,6 +57,9 @@ namespace AutomationTestingProgram.AutomationFramework
                 throw new Exception("Missing Test case");
             }
 
+            testCase.TestCaseNumber = this.CurrTestCaseNumber;
+            this.CurrTestCaseNumber += 1;
+
             return testCase;
         }
 

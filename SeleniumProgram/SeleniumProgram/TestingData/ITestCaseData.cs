@@ -25,5 +25,12 @@ namespace AutomationTestingProgram.TestingData
         /// </summary>
         /// <returns>Returns true if there is another test Step.</returns>
         public bool ExistNextTestStep();
+
+        /// <summary>
+        /// Runs when getting a test case from test set.
+        /// </summary>
+        /// <param name="testCaseName">the name of the test case.</param>
+        /// <returns>true if set up successfuly.</returns>
+        public bool SetUp(string testCaseName);
     }
 }

@@ -56,7 +56,7 @@ namespace AutomationTestingProgram.TestingDriver
             this.environment = environment;
             this.url = url;
             this.screenshotSaveLocation = screenshotSaveLocation;
-            this.actualTimeOut = TimeSpan.FromMinutes(60); //int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]));
+            this.actualTimeOut = TimeSpan.FromMinutes(60); // int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]));
         }
 
         /// <summary>
