@@ -4,9 +4,6 @@
 
 namespace AutomationTestingProgram.TestingData
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
     using AutomationTestSetFramework;
 
     /// <summary>
@@ -29,8 +26,9 @@ namespace AutomationTestingProgram.TestingData
         /// <summary>
         /// Runs when getting a test case from test set.
         /// </summary>
-        /// <param name="testCaseName">the name of the test case.</param>
-        /// <returns>true if set up successfuly.</returns>
-        public bool SetUp(string testCaseName);
+        /// <param name="testCaseName">The name of the test case.</param>
+        /// <param name="shouldPerform">Determins if the test case should run.</param>
+        /// <returns>The test Case to run.</returns>
+        public ITestCase SetUpTestCase(string testCaseName, bool shouldPerform);
     }
 }

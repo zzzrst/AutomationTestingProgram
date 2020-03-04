@@ -4,9 +4,6 @@
 
 namespace AutomationTestingProgram.TestingData
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
     using AutomationTestSetFramework;
 
     /// <summary>
@@ -25,5 +22,10 @@ namespace AutomationTestingProgram.TestingData
         /// </summary>
         /// <returns>Returns true if there is another test case.</returns>
         public bool ExistNextTestCase();
+
+        /// <summary>
+        /// Sets up the test set before it runs.
+        /// </summary>
+        public void SetUpTestSet();
     }
 }

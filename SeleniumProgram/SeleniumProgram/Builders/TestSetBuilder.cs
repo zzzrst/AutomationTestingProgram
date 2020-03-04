@@ -207,6 +207,7 @@ namespace AutomationTestingProgram.Builders
         private void InsantiateTestSetData()
         {
             InformationObject.TestSetData = (ITestSetData)this.GetTestData(0, this.TestSetDataType, this.TestSetDataLocation);
+            InformationObject.TestSetData.SetUpTestSet();
         }
 
         /// <summary>

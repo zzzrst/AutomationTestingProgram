@@ -4,11 +4,6 @@
 
 namespace AutomationTestingProgram.TestingData
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-    using AutomationTestSetFramework;
-
     /// <summary>
     /// The interface to get the test case data.
     /// </summary>
@@ -26,6 +21,7 @@ namespace AutomationTestingProgram.TestingData
 
         /// <summary>
         /// Runs before running the main testing loop.
+        /// Used To initilize all the data.
         /// </summary>
         public void SetUp();
     }

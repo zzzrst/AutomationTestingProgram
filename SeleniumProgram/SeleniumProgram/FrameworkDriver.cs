@@ -72,7 +72,7 @@ namespace AutomationTestingProgram
             DateTime end = DateTime.UtcNow;
 
             InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
-            InformationObject.CSVLogger.WriteOutResults();
+            //InformationObject.CSVLogger.WriteOutResults();
 
             string resultString = testSet.TestSetStatus.RunSuccessful ? "successfull" : "not successful";
             Logger.Info($"SeleniumPerfXML has finished. It was {resultString}");

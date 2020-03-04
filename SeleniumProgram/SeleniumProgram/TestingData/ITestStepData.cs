@@ -4,9 +4,8 @@
 
 namespace AutomationTestingProgram.TestingData
 {
-    using System;
     using System.Collections.Generic;
-    using System.Text;
+    using AutomationTestSetFramework;
 
     /// <summary>
     /// The interface to get the test step data.
@@ -14,9 +13,11 @@ namespace AutomationTestingProgram.TestingData
     public interface ITestStepData : ITestData
     {
         /// <summary>
-        /// Gets the arguments for the current test Step.
+        /// Runs when getting the test step from the test case.
         /// </summary>
-        /// <returns>The arguments for the current test step.</returns>
-        public Dictionary<string, string> GetArguments();
+        /// <param name="testStepName">The name of the test Step.</param>
+        /// <param name="shouldPerform">Determins if the test step should run.</param>
+        /// <returns>The Test Step to run.</returns>
+        public ITestStep SetUpTestStep(string testStepName, bool shouldPerform);
     }
 }

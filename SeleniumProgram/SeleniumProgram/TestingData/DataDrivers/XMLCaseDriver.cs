@@ -1,4 +1,4 @@
-﻿// <copyright file="XMLDriver.cs" company="PlaceholderCompany">
+﻿// <copyright file="XMLCaseDriver.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -7,7 +7,6 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Text;
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.TestingDriver;
@@ -16,7 +15,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
     /// <summary>
     /// The XML Driver to get data from an xml.
     /// </summary>
-    public class XMLDriver : ITestSetData, ITestCaseData, ITestStepData
+    public class XMLCaseDriver : ITestCaseData
     {
         /// <summary>
         /// The stack to read/excecute for the test set.
@@ -67,7 +66,6 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                 this.XMLDocObj = new XmlDocument();
                 this.XMLDocObj.Load(this.InformationLocation);
                 this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
-                this.AddNodesToStack(this.TestFlow);
             }
             else
             {
@@ -75,13 +73,11 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             }
         }
 
-        /// <summary>
-        /// Set up when running test case just sets up the node.
-        /// </summary>
-        /// <param name="testCaseName">The name of the test case.</param>
-        /// <returns>true if set up was successful.</returns>
-        public bool SetUp(string testCaseName)
+        /// <inheritdoc/>
+        public ITestCase SetUpTestCase(string testCaseName, bool performAction)
         {
+            ITestCase testCase = null;
+
             // get the list of testcases
             XmlNode testCases = this.XMLDocObj.GetElementsByTagName("TestCases")[0];
 
@@ -91,45 +87,30 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                 if (node.Name == "TestCase" && this.ReplaceIfToken(node.Attributes["id"].Value) == testCaseName)
                 {
                     int repeat = 1;
+                    string name = "TestCase";
 
                     this.TestFlow = node;
-
-                    // TODO: when setting up for the first time, it is initilized as a test set.
-                    this.performStack.Clear();
-                    this.testStack.Clear();
                     this.AddNodesToStack(this.TestFlow);
 
                     if (InformationObject.RespectRepeatFor && node.Attributes["repeatFor"] != null)
                     {
                         repeat = int.Parse(node.Attributes["repeatFor"].Value);
-
-                        // repeat = repeat > 1 ? 1 : -1;
                     }
 
                     this.ShouldExecuteAmountOfTimes = repeat;
-                    return true;
+
+                    if (node.Attributes["name"] != null)
+                    {
+                        name = node.Attributes["name"].Value;
+                    }
+
+                    testCase = new TestCase()
+                    {
+                        Name = name,
+                        ShouldExecuteVariable = performAction,
+                    };
+                    return testCase;
                 }
-            }
-
-            return false;
-        }
-
-        /// <inheritdoc/>
-        public bool ExistNextTestCase()
-        {
-            return this.testStack.Count > 0;
-        }
-
-        /// <inheritdoc/>
-        public ITestCase GetNextTestCase()
-        {
-            ITestCase testCase = null;
-
-            testCase = this.IfRunTestCaseLayer();
-
-            if (testCase == null)
-            {
-                throw new Exception("Missing Test case");
             }
 
             return testCase;
@@ -153,15 +134,9 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                 this.ExecuteCount += 1;
             }
 
-            testStep = this.IfRunTestStepLayer();
+            testStep = this.RunIfTestStepLayer();
 
             return testStep;
-        }
-
-        /// <inheritdoc/>
-        public Dictionary<string, string> GetArguments()
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -178,80 +153,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             }
         }
 
-        /// <summary>
-        /// Reads the layer which contains Ifs and RunTestCase and returns the next test case.
-        /// </summary>
-        /// <param name="performAction">Tells whether or not to perform the action for the test case.</param>
-        /// <returns>The next test case.</returns>
-        private ITestCase IfRunTestCaseLayer(bool performAction = true)
-        {
-            ITestCase testCase = null;
-            XmlNode currentNode;
-
-            while (this.testStack.Count > 0 && testCase == null)
-            {
-                currentNode = this.testStack.Pop();
-                performAction = this.performStack.Pop();
-
-                if (currentNode.Name == "If")
-                {
-                    this.RunIfTestCase(currentNode, performAction);
-                }
-                else if (currentNode.Name == "RunTestCase")
-                {
-                    testCase = this.FindTestCase(this.ReplaceIfToken(currentNode.InnerText), performAction);
-                }
-                else
-                {
-                    Logger.Warn($"We currently do not deal with this: {currentNode.Name}");
-                }
-            }
-
-            return testCase;
-        }
-
-        /// <summary>
-        /// Finds the given test case.
-        /// </summary>
-        /// <param name="testCaseID">ID to find the testcase to run.</param>
-        /// <param name="performAction"> Perfoms the action. </param>
-        /// <returns> 0 if pass. >=1 if fail.</returns>
-        private ITestCase FindTestCase(string testCaseID, bool performAction = true)
-        {
-            ITestCase testCase = null;
-
-            // get the list of testcases
-            XmlNode testCases = this.XMLDocObj.GetElementsByTagName("TestCases")[0];
-
-            InformationObject.TestCaseData.SetUp(testCaseID);
-
-            // Find the appropriate testcase;
-            foreach (XmlNode node in testCases.ChildNodes)
-            {
-                if (node.Name == "TestCase" && this.ReplaceIfToken(node.Attributes["id"].Value) == testCaseID)
-                {
-                    string name = "TestCase";
-
-                    if (node.Attributes["name"] != null)
-                    {
-                        name = node.Attributes["name"].Value;
-                    }
-
-                    testCase = new TestCase()
-                    {
-                        Name = name,
-                        ShouldExecuteVariable = performAction,
-                    };
-
-                    return testCase;
-                }
-            }
-
-            Logger.Warn($"Sorry, we didn't find a test case that matched the provided ID: {testCaseID}");
-            return testCase;
-        }
-
-        private ITestStep IfRunTestStepLayer(bool performAction = true)
+        private ITestStep RunIfTestStepLayer(bool performAction = true)
         {
             ITestStep testStep = null;
             XmlNode currentNode;
@@ -263,7 +165,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
 
                 if (currentNode.Name == "If")
                 {
-                    this.RunIfTestCase(currentNode, performAction);
+                    this.RunThenElseLayer(currentNode, performAction);
                 }
                 else if (currentNode.Name == "RunTestStep")
                 {
@@ -377,7 +279,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
         /// </summary>
         /// <param name="ifXMLNode"> XML Node that has the if block. </param>
         /// <param name="performAction"> Perfoms the action. </param>
-        private void RunIfTestCase(XmlNode ifXMLNode, bool performAction = true)
+        private void RunThenElseLayer(XmlNode ifXMLNode, bool performAction = true)
         {
             bool ifCondition = false;
 
@@ -395,40 +297,39 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             // inside the testCaseFlow, you can only have either RunTestCase element or an If element.
             foreach (XmlNode ifSection in ifXMLNode.ChildNodes)
             {
-                if (ifSection.Name == "Then")
+                switch (ifSection.Name)
                 {
-                    // we run this test case only if performAction is true, and the condition for the element has passed.
-                    this.AddNodesToStack(ifSection, performAction && ifCondition);
-                }
-                else if (ifSection.Name == "ElseIf")
-                {
-                    // we check the condition if performAction is true and the previous if condition was false.
-                    // we can only run the test case if performAction is true, previous if condition was false, and the current if condition is true.
-                    bool secondIfCondition = false;
+                    case "Then":
+                        // we run this test case only if performAction is true, and the condition for the element has passed.
+                        this.AddNodesToStack(ifSection, performAction && ifCondition);
+                        break;
+                    case "ElseIf":
+                        // we check the condition if performAction is true and the previous if condition was false.
+                        // we can only run the test case if performAction is true, previous if condition was false, and the current if condition is true.
+                        bool secondIfCondition = false;
 
-                    if (performAction && !ifCondition)
-                    {
-                        string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value);
-                        string condition = ifSection.Attributes["condition"].Value;
+                        if (performAction && !ifCondition)
+                        {
+                            string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value);
+                            string condition = ifSection.Attributes["condition"].Value;
 
-                        ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
+                            ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
 
-                        secondIfCondition = InformationObject.TestingDriver.CheckForElementState(elementXPath, state);
-                    }
+                            secondIfCondition = InformationObject.TestingDriver.CheckForElementState(elementXPath, state);
+                        }
 
-                    this.AddNodesToStack(ifSection, performAction && !ifCondition && secondIfCondition);
+                        this.AddNodesToStack(ifSection, performAction && !ifCondition && secondIfCondition);
 
-                    // update ifCondition to reflect if elseIf was run
-                    ifCondition = !ifCondition && secondIfCondition;
-                }
-                else if (ifSection.Name == "Else")
-                {
-                    // at this point, we only run this action if performAction is true and the previous ifCondition was false.
-                    this.AddNodesToStack(ifSection, performAction && !ifCondition);
-                }
-                else
-                {
-                    Logger.Warn($"We currently do not deal with this. {ifSection.Name}");
+                        // update ifCondition to reflect if elseIf was run
+                        ifCondition = !ifCondition && secondIfCondition;
+                        break;
+                    case "Else":
+                        // at this point, we only run this action if performAction is true and the previous ifCondition was false.
+                        this.AddNodesToStack(ifSection, performAction && !ifCondition);
+                        break;
+                    default:
+                        Logger.Warn($"We currently do not deal with this. {ifSection.Name}");
+                        break;
                 }
             }
         }
