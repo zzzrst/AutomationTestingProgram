@@ -30,16 +30,16 @@ namespace AutomationTestingProgram
             string respectRepeatFor = "False";
             int timeOutThreshold = 5;
             int warningThreshold = 5;
-            string csvSaveFileLocation = "C:\\SeleniumPerfXML\\Logs";
-            string logSaveFileLocation = "C:\\SeleniumPerfXML\\Logs";
-            string screenshotSaveLocation = "C:\\SeleniumPerfXML\\ScreenShots";
+            string csvSaveFileLocation = "C:/SeleniumPerfXML/Logs";
+            string logSaveFileLocation = "C:/SeleniumPerfXML/Logs";
+            string screenshotSaveLocation = "C:/SeleniumPerfXML/ScreenShots";
             string testingDataDriver = "Selenium";
             string testSetDataType = "XML";
-            string testCaseDataType = "XML";
-            string testStepDataType = "XML";
-            string testSetDataLocation = "C:\\SeleniumPerfXML\\SampleXML.xml";
-            string testCaseDataLocation = "C:\\SeleniumPerfXML\\SampleXML.xml";
-            string testStepDataLocation = "C:\\SeleniumPerfXML\\SampleXML.xml";
+            string testCaseDataType = "Txt";
+            string testStepDataType = "Txt";
+            string testSetDataLocation = "C:/SeleniumPerfXML/SampleXML.xml";
+            string testCaseDataLocation = @"C:/SeleniumPerfXML/";
+            string testStepDataLocation = @"C:/SeleniumPerfXML/Test Steps.txt";
 
             TestSetBuilder builder = new TestSetBuilder()
             {

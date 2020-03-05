@@ -16,8 +16,8 @@ namespace AutomationTestingProgram.TestingData
         /// Runs when getting the test step from the test case.
         /// </summary>
         /// <param name="testStepName">The name of the test Step.</param>
-        /// <param name="shouldPerform">Determins if the test step should run.</param>
+        /// <param name="performAction">Determins if the test step should run.</param>
         /// <returns>The Test Step to run.</returns>
-        public ITestStep SetUpTestStep(string testStepName, bool shouldPerform);
+        public ITestStep SetUpTestStep(string testStepName, bool performAction = true);
     }
 }

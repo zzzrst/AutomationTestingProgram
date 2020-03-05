@@ -15,7 +15,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
     /// <summary>
     /// The XML Driver to get data from an xml.
     /// </summary>
-    public class XMLStepDriver : ITestStepData
+    public class XMLStepData : ITestStepData
     {
         /// <inheritdoc/>
         public string InformationLocation { get; set; }
@@ -54,7 +54,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
         }
 
         /// <inheritdoc/>
-        public ITestStep SetUpTestStep(string testStepName, bool performAction)
+        public ITestStep SetUpTestStep(string testStepName, bool performAction = true)
         {
             // get the list of testSteps
             XmlNode testSteps = this.XMLDocObj.GetElementsByTagName("TestSteps")[0];

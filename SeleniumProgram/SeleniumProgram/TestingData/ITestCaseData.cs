@@ -18,7 +18,7 @@ namespace AutomationTestingProgram.TestingData
         public ITestStep GetNextTestStep();
 
         /// <summary>
-        /// Sees if there is a next test step.
+        /// Sees if there is a next test step. Usually needs to call the InformationObject.TestStepData.SetUpTestSet.
         /// </summary>
         /// <returns>Returns true if there is another test Step.</returns>
         public bool ExistNextTestStep();
@@ -27,8 +27,8 @@ namespace AutomationTestingProgram.TestingData
         /// Runs when getting a test case from test set.
         /// </summary>
         /// <param name="testCaseName">The name of the test case.</param>
-        /// <param name="shouldPerform">Determins if the test case should run.</param>
+        /// <param name="performAction">Determins if the test case should run.</param>
         /// <returns>The test Case to run.</returns>
-        public ITestCase SetUpTestCase(string testCaseName, bool shouldPerform);
+        public ITestCase SetUpTestCase(string testCaseName, bool performAction = true);
     }
 }

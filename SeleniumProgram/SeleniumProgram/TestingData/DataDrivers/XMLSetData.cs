@@ -1,4 +1,4 @@
-﻿// <copyright file="XMLCaseDriver.cs" company="PlaceholderCompany">
+﻿// <copyright file="XMLSetDriver.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -15,7 +15,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
     /// <summary>
     /// The XML Driver to get data from an xml.
     /// </summary>
-    public class XMLCaseDriver : ITestCaseData
+    public class XMLSetData : ITestSetData
     {
         /// <summary>
         /// The stack to read/excecute for the test set.
@@ -48,16 +48,6 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
         /// </summary>
         private XmlDocument XMLDocObj { get; set; } = null;
 
-        /// <summary>
-        /// Gets or sets the ammount of times this should be ran.
-        /// </summary>
-        private int ShouldExecuteAmountOfTimes { get; set; } = 1;
-
-        /// <summary>
-        /// Gets or sets the ammount of times the test case has ran.
-        /// </summary>
-        private int ExecuteCount { get; set; } = 0;
-
         /// <inheritdoc/>
         public void SetUp()
         {
@@ -74,69 +64,27 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
         }
 
         /// <inheritdoc/>
-        public ITestCase SetUpTestCase(string testCaseName, bool performAction)
+        public void SetUpTestSet()
         {
-            ITestCase testCase = null;
+            this.AddNodesToStack(this.TestFlow);
+        }
 
-            // get the list of testcases
-            XmlNode testCases = this.XMLDocObj.GetElementsByTagName("TestCases")[0];
+        /// <inheritdoc/>
+        public bool ExistNextTestCase()
+        {
+            return this.testStack.Count > 0;
+        }
 
-            // Find the appropriate testcase;
-            foreach (XmlNode node in testCases.ChildNodes)
+        /// <inheritdoc/>
+        public ITestCase GetNextTestCase()
+        {
+            ITestCase testCase = this.RunIfTestCaseLayer();
+            if (testCase == null)
             {
-                if (node.Name == "TestCase" && this.ReplaceIfToken(node.Attributes["id"].Value) == testCaseName)
-                {
-                    int repeat = 1;
-                    string name = "TestCase";
-
-                    this.TestFlow = node;
-                    this.AddNodesToStack(this.TestFlow);
-
-                    if (InformationObject.RespectRepeatFor && node.Attributes["repeatFor"] != null)
-                    {
-                        repeat = int.Parse(node.Attributes["repeatFor"].Value);
-                    }
-
-                    this.ShouldExecuteAmountOfTimes = repeat;
-
-                    if (node.Attributes["name"] != null)
-                    {
-                        name = node.Attributes["name"].Value;
-                    }
-
-                    testCase = new TestCase()
-                    {
-                        Name = name,
-                        ShouldExecuteVariable = performAction,
-                    };
-                    return testCase;
-                }
+                throw new Exception("Missing Test case");
             }
 
             return testCase;
-        }
-
-        /// <inheritdoc/>
-        public bool ExistNextTestStep()
-        {
-            return this.testStack.Count > 0 || this.ShouldExecuteAmountOfTimes > this.ExecuteCount + 1;
-        }
-
-        /// <inheritdoc/>
-        public ITestStep GetNextTestStep()
-        {
-            ITestStep testStep = null;
-
-            // reached end of loop, check if should loop again.
-            if (this.testStack.Count == 0 && this.ShouldExecuteAmountOfTimes > this.ExecuteCount)
-            {
-                this.AddNodesToStack(this.TestFlow);
-                this.ExecuteCount += 1;
-            }
-
-            testStep = this.RunIfTestStepLayer();
-
-            return testStep;
         }
 
         /// <summary>
@@ -153,12 +101,17 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             }
         }
 
-        private ITestStep RunIfTestStepLayer(bool performAction = true)
+        /// <summary>
+        /// Reads the layer which contains Ifs and RunTestCase and returns the next test case.
+        /// </summary>
+        /// <param name="performAction">Tells whether or not to perform the action for the test case.</param>
+        /// <returns>The next test case.</returns>
+        private ITestCase RunIfTestCaseLayer(bool performAction = true)
         {
-            ITestStep testStep = null;
+            ITestCase testCase = null;
             XmlNode currentNode;
 
-            while (this.testStack.Count > 0 && testStep == null)
+            while (this.testStack.Count > 0 && testCase == null)
             {
                 currentNode = this.testStack.Pop();
                 performAction = this.performStack.Pop();
@@ -167,9 +120,9 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                 {
                     this.RunThenElseLayer(currentNode, performAction);
                 }
-                else if (currentNode.Name == "RunTestStep")
+                else if (currentNode.Name == "RunTestCase")
                 {
-                    testStep = this.FindTestStep(this.ReplaceIfToken(currentNode.InnerText), performAction);
+                    testCase = this.FindTestCase(this.ReplaceIfToken(currentNode.InnerText), performAction);
                 }
                 else
                 {
@@ -177,101 +130,19 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                 }
             }
 
-            return testStep;
+            return testCase;
         }
 
         /// <summary>
-        /// This function will go through the list of steps and run the appropriate test step if found.
+        /// Finds the given test case.
         /// </summary>
-        /// <param name="testStepID"> The ID of the test step to run. </param>
+        /// <param name="testCaseID">ID to find the testcase to run.</param>
         /// <param name="performAction"> Perfoms the action. </param>
-        /// <returns>0 if pass. >=1 if fail.</returns>
-        private ITestStep FindTestStep(string testStepID, bool performAction = true)
+        /// <returns> 0 if pass. >=1 if fail.</returns>
+        private ITestCase FindTestCase(string testCaseID, bool performAction = true)
         {
-            ITestStep testStep = null;
-
-            // get the list of testSteps
-            XmlNode testSteps = this.XMLDocObj.GetElementsByTagName("TestSteps")[0];
-
-            // Find the appropriate test steps
-            foreach (XmlNode innerNode in testSteps.ChildNodes)
-            {
-                if (innerNode.Name != "#comment" && this.ReplaceIfToken(innerNode.Attributes["id"].Value) == testStepID)
-                {
-                    testStep = this.BuildTestStep(innerNode, performAction);
-                    return testStep;
-                }
-            }
-
-            Logger.Warn($"Sorry, we didn't find a test step that matched the provided ID: {testStepID}");
-            return testStep;
-        }
-
-        private ITestStep BuildTestStep(XmlNode testStepNode, bool performAction = true)
-        {
-            TestStep testStep = null;
-            string name = this.ReplaceIfToken(testStepNode.Attributes["name"].Value);
-
-            // initial value is respectRunAODAFlag
-            // if we respect the flag, and it is not found, then default value is false.
-            bool runAODA = InformationObject.RespectRunAODAFlag;
-            if (runAODA)
-            {
-                if (testStepNode.Attributes["runAODA"] != null)
-                {
-                    runAODA = bool.Parse(testStepNode.Attributes["runAODA"].Value);
-                }
-                else
-                {
-                    runAODA = false;
-                }
-            }
-
-            // populate runAODAPageName. Deault is Not provided.
-            string runAODAPageName = "Not provided.";
-            if (runAODA)
-            {
-                if (testStepNode.Attributes["runAODAPageName"] != null)
-                {
-                    runAODAPageName = this.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value);
-                }
-            }
-
-            // log is true by default.
-            bool log = true;
-            if (testStepNode.Attributes["log"] != null)
-            {
-                log = bool.Parse(testStepNode.Attributes["log"].Value);
-            }
-
-            Logger.Debug($"Test step '{name}': runAODA->{runAODA} runAODAPageName->{runAODAPageName} log->{log}");
-
-            testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
-                .Find(x => x.Name.Equals(testStepNode.Name));
-
-            if (testStep == null)
-            {
-                Logger.Error($"Was not able to find the provided test action '{testStepNode}'.");
-            }
-            else
-            {
-                string namePrepender = this.ExecuteCount > 0 ? $"{this.ExecuteCount}" : $"";
-
-                for (int index = 0; index < testStepNode.Attributes.Count; index++)
-                {
-                    testStepNode.Attributes[index].InnerText = this.ReplaceIfToken(testStepNode.Attributes[index].InnerText);
-                    testStep.Arguments.Add(testStepNode.Attributes[index].Name, testStepNode.Attributes[index].InnerText);
-                }
-
-                testStep.Name = name;
-                testStep.ShouldLog = log;
-                testStep.ShouldExecuteVariable = performAction;
-                testStep.RunAODA = runAODA;
-                testStep.RunAODAPageName = runAODAPageName;
-                testStep.TestStepNumber = this.ExecuteCount * this.TestFlow.ChildNodes.Count;
-            }
-
-            return testStep;
+            ITestCase testCase = InformationObject.TestCaseData.SetUpTestCase(testCaseID, performAction);
+            return testCase;
         }
 
         /// <summary>
