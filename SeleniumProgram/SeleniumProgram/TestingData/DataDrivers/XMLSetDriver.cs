@@ -48,11 +48,6 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
         /// </summary>
         private XmlDocument XMLDocObj { get; set; } = null;
 
-        /// <summary>
-        /// Gets or sets the ammount of times this should be ran.
-        /// </summary>
-        private int ShouldExecuteAmountOfTimes { get; set; } = 1;
-
         /// <inheritdoc/>
         public void SetUp()
         {
