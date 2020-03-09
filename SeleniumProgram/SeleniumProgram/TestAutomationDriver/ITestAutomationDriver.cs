@@ -66,6 +66,11 @@ namespace AutomationTestingProgram.TestAutomationDriver
         }
 
         /// <summary>
+        /// Gets the name of the testing driver.
+        /// </summary>
+        public string Name { get; }
+
+        /// <summary>
         /// Gets or sets the url of the page the webdriver is focued on.
         /// </summary>
         public string CurrentURL { get; set; }

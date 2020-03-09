@@ -20,17 +20,6 @@ namespace AutomationTestingProgram.Builders
     public class TestSetBuilder
     {
         /// <summary>
-        /// The usable testing applications.
-        /// </summary>
-        public enum TestingDriverType
-        {
-            /// <summary>
-            /// Selenium program.
-            /// </summary>
-            Selenium,
-        }
-
-        /// <summary>
         /// The usable places to get data.
         /// </summary>
         public enum TestingDataType
@@ -49,6 +38,11 @@ namespace AutomationTestingProgram.Builders
             /// From an XML File.
             /// </summary>
             XML,
+
+            /// <summary>
+            /// From a txt file.
+            /// </summary>
+            Text,
         }
 
         /// <summary>

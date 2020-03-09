@@ -14,6 +14,17 @@ namespace AutomationTestingProgram.Builders
     public class TestAutomationBuilder
     {
         /// <summary>
+        /// The usable testing applications.
+        /// </summary>
+        public enum TestingDriverType
+        {
+            /// <summary>
+            /// Selenium program.
+            /// </summary>
+            Selenium,
+        }
+
+        /// <summary>
         /// Gets or sets the browser to use.
         /// </summary>
         public Browser Browser { get; set; }
@@ -49,10 +60,27 @@ namespace AutomationTestingProgram.Builders
         public string LoadingSpinner { get; set; }
 
         /// <summary>
+        /// Builds a new test automation driver.
+        /// </summary>
+        public void Build()
+        {
+            string testingDriver = System.Environment.GetEnvironmentVariable("testingDataDriver");
+            ITestAutomationDriver automationDriver = ReflectiveGetter.GetImplementationOfType<ITestAutomationDriver>()
+                                .Find(x => x.Name.Equals(testingDriver));
+            if (automationDriver == null)
+            {
+                Logger.Error($"Sorry we do not currently support the testing application: {testingDriver}");
+            }
+            else {
+                automationDriver.ErrorContainer = Environment.
+                    }
+        }
+
+        /// <summary>
         /// Returns the seleniumDriver based on the given paramenters.
         /// </summary>
         /// <returns>A new SeleniumDriver.</returns>
-        public SeleniumDriver BuildSeleniumDriver()
+        private SeleniumDriver BuildSeleniumDriver()
         {
             SeleniumDriver driver;
             driver = new SeleniumDriver(this.Browser, this.TimeOutThreshold, this.Environment, this.URL, this.ScreenshotSaveLocation)

@@ -34,12 +34,17 @@ namespace AutomationTestingProgram
             if (!errorParsing)
             {
                 errorParsing = ParseTestSetParameters();
+                SetSaveFileParameters();
             }
 
             if (!errorParsing)
             {
-                TestSetBuilder builder = new TestSetBuilder();
-                TestSet testSet = builder.Build();
+                TestSetBuilder setBuilder = new TestSetBuilder();
+                TestSet testSet = setBuilder.Build();
+
+                TestAutomationBuilder automationBuilder = new TestAutomationBuilder();
+                automationBuilder.Build();
+
                 DateTime start = DateTime.UtcNow;
 
                 AutomationTestSetDriver.RunTestSet(testSet);
@@ -48,7 +53,7 @@ namespace AutomationTestingProgram
                 DateTime end = DateTime.UtcNow;
 
                 InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
-                //InformationObject.CSVLogger.WriteOutResults();
+                InformationObject.CSVLogger.WriteOutResults();
 
                 string resultString = testSet.TestSetStatus.RunSuccessful ? "successfull" : "not successful";
                 Logger.Info($"SeleniumPerfXML has finished. It was {resultString}");
@@ -62,17 +67,35 @@ namespace AutomationTestingProgram
             return resultCode;
         }
 
+        private static void SetSaveFileParameters()
+        {
+            if (Environment.GetEnvironmentVariable("logSaveFileLocation") == string.Empty)
+            {
+                Environment.SetEnvironmentVariable("logSaveFileLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
+            }
+
+            if (Environment.GetEnvironmentVariable("reportSaveFileLocation") == string.Empty)
+            {
+                Environment.SetEnvironmentVariable("reportSaveFileLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
+            }
+
+            if (Environment.GetEnvironmentVariable("screenshotSaveLocation") == string.Empty)
+            {
+                Environment.SetEnvironmentVariable("screenshotSaveLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
+            }
+        }
+
         private static bool ParseTestSetParameters()
         {
             bool errorParsing = false;
             Dictionary<string, string> parameters;
 
             ITestGeneralData dataInformation = ReflectiveGetter.GetImplementationOfType<ITestGeneralData>()
-                .Find(x => x.Name.Equals(testSetDataType));
+                .Find(x => x.Name.Equals(Environment.GetEnvironmentVariable("testSetDataArgs")));
 
-            if (dataInformation.Verify(testSetDataArgs))
+            if (dataInformation.Verify(Environment.GetEnvironmentVariable("testSetDataArgs")))
             {
-                parameters = dataInformation.ParseParameters(testSetDataArgs, dataFile);
+                parameters = dataInformation.ParseParameters(Environment.GetEnvironmentVariable("testSetDataArgs"), Environment.GetEnvironmentVariable("dataFile"));
                 foreach (string paramName in parameters.Keys)
                 {
                     // If it's not filled in already, fill it in.
@@ -110,11 +133,11 @@ namespace AutomationTestingProgram
                    Environment.SetEnvironmentVariable("screenshotSaveLocation", o.ScreenShotSaveLocation ?? string.Empty);
                    Environment.SetEnvironmentVariable("testingDataDriver", o.AutomationProgram ?? "selenium");
                    Environment.SetEnvironmentVariable("testSetDataType", o.TestSetDataType);
-                   Environment.SetEnvironmentVariable("testCaseDataType", o.TestCaseDataType ?? testStepDataType);
-                   Environment.SetEnvironmentVariable("testStepDataType", o.TestStepDataType ?? testCaseDataType);
+                   Environment.SetEnvironmentVariable("testCaseDataType", o.TestCaseDataType ?? Environment.GetEnvironmentVariable("testSetDataType"));
+                   Environment.SetEnvironmentVariable("testStepDataType", o.TestStepDataType ?? Environment.GetEnvironmentVariable("testCaseDataType"));
                    Environment.SetEnvironmentVariable("testSetDataArgs", o.TestSetDataArgs);
-                   Environment.SetEnvironmentVariable("testCaseDataArgs", o.TestCaseDataArgs ?? testSetDataArgs);
-                   Environment.SetEnvironmentVariable("testStepDataArgs", o.TestStepDataArgs ?? testCaseDataArgs);
+                   Environment.SetEnvironmentVariable("testCaseDataArgs", o.TestCaseDataArgs ?? Environment.GetEnvironmentVariable("testSetDataArgs"));
+                   Environment.SetEnvironmentVariable("testStepDataArgs", o.TestStepDataArgs ?? Environment.GetEnvironmentVariable("testCaseDataArgs"));
                })
                .WithNotParsed(errs =>
                {

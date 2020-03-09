@@ -59,10 +59,8 @@ namespace AutomationTestingProgram.TestAutomationDriver
             this.actualTimeOut = TimeSpan.FromMinutes(60); // int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]));
         }
 
-        /// <summary>
-        /// Gets the name of the testing driver.
-        /// </summary>
-        public string Name { get; } = "Selenium";
+        /// <inheritdoc/>
+        public string Name { get; } = "selenium";
 
         /// <inheritdoc/>
         public string CurrentURL { get; set; }
