@@ -41,24 +41,6 @@ namespace AutomationTestingProgram.TestAutomationDriver
         private TimeSpan timeOutThreshold;
         private TimeSpan actualTimeOut;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SeleniumDriver"/> class.
-        /// </summary>
-        /// <param name="browserType">The browser to use for this driver. </param>
-        /// <param name="timeOutThreshold"> The timeout threshold in seconds.</param>
-        /// <param name="environment"> The environment set. </param>
-        /// <param name="url"> The url set. </param>
-        /// <param name="screenshotSaveLocation"> Location to save screenshots when it fails.</param>
-        public SeleniumDriver(Browser browserType, TimeSpan timeOutThreshold, string environment, string url, string screenshotSaveLocation)
-        {
-            this.browserType = browserType;
-            this.timeOutThreshold = timeOutThreshold;
-            this.environment = environment;
-            this.url = url;
-            this.screenshotSaveLocation = screenshotSaveLocation;
-            this.actualTimeOut = TimeSpan.FromMinutes(60); // int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]));
-        }
-
         /// <inheritdoc/>
         public string Name { get; } = "selenium";
 
@@ -79,6 +61,17 @@ namespace AutomationTestingProgram.TestAutomationDriver
         private string IFrameXPath { get; set; } = string.Empty;
 
         private int CurrentWindow { get; set; } = -1;
+
+        /// <inheritdoc/>
+        public void SetUp()
+        {
+            this.browserType = this.GetBrowserType(Environment.GetEnvironmentVariable("browser"));
+            this.timeOutThreshold = TimeSpan.FromSeconds(int.Parse(Environment.GetEnvironmentVariable("timeOutThreshold")));
+            this.environment = Environment.GetEnvironmentVariable("environment");
+            this.url = Environment.GetEnvironmentVariable("url");
+            this.screenshotSaveLocation = InformationObject.ScreenshotSaveLocation;
+            this.actualTimeOut = TimeSpan.FromMinutes(60); // int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]));
+        }
 
         /// <summary>
         /// Checks for an element state.
@@ -374,6 +367,34 @@ namespace AutomationTestingProgram.TestAutomationDriver
                     // we do nothing if we don't find it.
                 }
             }
+        }
+
+        private Browser GetBrowserType(string browserName)
+        {
+            Browser browser;
+            if (browserName.ToLower().Contains("chrome"))
+            {
+                browser = ITestAutomationDriver.Browser.Chrome;
+            }
+            else if (browserName.ToLower().Contains("ie"))
+            {
+                browser = ITestAutomationDriver.Browser.IE;
+            }
+            else if (browserName.ToLower().Contains("firefox"))
+            {
+                browser = ITestAutomationDriver.Browser.Firefox;
+            }
+            else if (browserName.ToLower().Contains("edge"))
+            {
+                browser = ITestAutomationDriver.Browser.Edge;
+            }
+            else
+            {
+                Logger.Error($"Sorry we do not currently support the browser: {browserName}");
+                throw new Exception("Unsupported Browser.");
+            }
+
+            return browser;
         }
 
         /// <summary>

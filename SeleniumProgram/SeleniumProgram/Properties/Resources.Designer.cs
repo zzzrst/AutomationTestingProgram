@@ -59,5 +59,59 @@ namespace AutomationTestingProgram.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to browser.
+        /// </summary>
+        internal static string Browser {
+            get {
+                return ResourceManager.GetString("Browser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to environment.
+        /// </summary>
+        internal static string Environment {
+            get {
+                return ResourceManager.GetString("Environment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to respectRepeatFor.
+        /// </summary>
+        internal static string RespectRepeatFor {
+            get {
+                return ResourceManager.GetString("RespectRepeatFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to respectRunAODAFlag.
+        /// </summary>
+        internal static string RespectRunAODAFlag {
+            get {
+                return ResourceManager.GetString("RespectRunAODAFlag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to timeOutThreshold.
+        /// </summary>
+        internal static string TimeOutThreshold {
+            get {
+                return ResourceManager.GetString("TimeOutThreshold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to url.
+        /// </summary>
+        internal static string URL {
+            get {
+                return ResourceManager.GetString("URL", resourceCulture);
+            }
+        }
     }
 }

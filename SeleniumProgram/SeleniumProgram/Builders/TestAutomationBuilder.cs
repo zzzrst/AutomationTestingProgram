@@ -35,60 +35,23 @@ namespace AutomationTestingProgram.Builders
         public TimeSpan TimeOutThreshold { get; set; }
 
         /// <summary>
-        /// Gets or sets the Enviornment to use.
-        /// </summary>
-        public string Environment { get; set; }
-
-        /// <summary>
-        /// Gets or sets the url to go to.
-        /// </summary>
-        public string URL { get; set; }
-
-        /// <summary>
-        /// Gets or sets the location of the Screenshot.
-        /// </summary>
-        public string ScreenshotSaveLocation { get; set; }
-
-        /// <summary>
-        /// Gets or sets the error container location.
-        /// </summary>
-        public string ErrorContainer { get; set; }
-
-        /// <summary>
-        /// Gets or sets the loading spinner location.
-        /// </summary>
-        public string LoadingSpinner { get; set; }
-
-        /// <summary>
         /// Builds a new test automation driver.
         /// </summary>
         public void Build()
         {
-            string testingDriver = System.Environment.GetEnvironmentVariable("testingDataDriver");
+            string testingDriver = Environment.GetEnvironmentVariable("testAutomationDriver");
             ITestAutomationDriver automationDriver = ReflectiveGetter.GetImplementationOfType<ITestAutomationDriver>()
                                 .Find(x => x.Name.Equals(testingDriver));
             if (automationDriver == null)
             {
                 Logger.Error($"Sorry we do not currently support the testing application: {testingDriver}");
             }
-            else {
-                automationDriver.ErrorContainer = Environment.
-                    }
-        }
-
-        /// <summary>
-        /// Returns the seleniumDriver based on the given paramenters.
-        /// </summary>
-        /// <returns>A new SeleniumDriver.</returns>
-        private SeleniumDriver BuildSeleniumDriver()
-        {
-            SeleniumDriver driver;
-            driver = new SeleniumDriver(this.Browser, this.TimeOutThreshold, this.Environment, this.URL, this.ScreenshotSaveLocation)
+            else
             {
-                ErrorContainer = this.ErrorContainer,
-                LoadingSpinner = this.LoadingSpinner,
-            };
-            return driver;
+                automationDriver.SetUp();
+            }
+
+            InformationObject.TestAutomationDriver = automationDriver;
         }
     }
 }

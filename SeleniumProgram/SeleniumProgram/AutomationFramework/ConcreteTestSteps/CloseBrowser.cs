@@ -16,7 +16,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            InformationObject.TestingDriver.CloseBrowser();
+            InformationObject.TestAutomationDriver.CloseBrowser();
         }
     }
 }

@@ -23,8 +23,8 @@ namespace AutomationTestingProgram.AutomationFramework
                 useJS = bool.Parse(this.Arguments["useJS"]);
             }
 
-            InformationObject.TestingDriver.ClickElement(xPath, useJS);
-            InformationObject.TestingDriver.WaitForLoadingSpinner();
+            InformationObject.TestAutomationDriver.ClickElement(xPath, useJS);
+            InformationObject.TestAutomationDriver.WaitForLoadingSpinner();
         }
     }
 }

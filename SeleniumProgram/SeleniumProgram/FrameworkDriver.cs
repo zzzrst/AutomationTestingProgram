@@ -34,17 +34,21 @@ namespace AutomationTestingProgram
             if (!errorParsing)
             {
                 errorParsing = ParseTestSetParameters();
-                SetSaveFileParameters();
+                SetDefaultParameters();
             }
 
             if (!errorParsing)
             {
+                // Set up all the parts.
+                InformationObject.SetUp();
+
                 TestSetBuilder setBuilder = new TestSetBuilder();
                 TestSet testSet = setBuilder.Build();
 
                 TestAutomationBuilder automationBuilder = new TestAutomationBuilder();
                 automationBuilder.Build();
 
+                // Run main program.
                 DateTime start = DateTime.UtcNow;
 
                 AutomationTestSetDriver.RunTestSet(testSet);
@@ -53,7 +57,7 @@ namespace AutomationTestingProgram
                 DateTime end = DateTime.UtcNow;
 
                 InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
-                InformationObject.CSVLogger.WriteOutResults();
+                //InformationObject.CSVLogger.WriteOutResults();
 
                 string resultString = testSet.TestSetStatus.RunSuccessful ? "successfull" : "not successful";
                 Logger.Info($"SeleniumPerfXML has finished. It was {resultString}");
@@ -67,21 +71,31 @@ namespace AutomationTestingProgram
             return resultCode;
         }
 
-        private static void SetSaveFileParameters()
+        private static void SetDefaultParameters()
         {
-            if (Environment.GetEnvironmentVariable("logSaveFileLocation") == string.Empty)
+            if (Environment.GetEnvironmentVariable("logSaveFileLocation") == null)
             {
                 Environment.SetEnvironmentVariable("logSaveFileLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
             }
 
-            if (Environment.GetEnvironmentVariable("reportSaveFileLocation") == string.Empty)
+            if (Environment.GetEnvironmentVariable("reportSaveFileLocation") == null)
             {
                 Environment.SetEnvironmentVariable("reportSaveFileLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
             }
 
-            if (Environment.GetEnvironmentVariable("screenshotSaveLocation") == string.Empty)
+            if (Environment.GetEnvironmentVariable("screenshotSaveLocation") == null)
             {
                 Environment.SetEnvironmentVariable("screenshotSaveLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
+            }
+
+            if (Environment.GetEnvironmentVariable("respectRepeatFor") == null)
+            {
+                Environment.SetEnvironmentVariable("respectRepeatFor", "false");
+            }
+
+            if (Environment.GetEnvironmentVariable("respectRunAODAFlag") == null)
+            {
+                Environment.SetEnvironmentVariable("respectRunAODAFlag", "false");
             }
         }
 
@@ -90,8 +104,11 @@ namespace AutomationTestingProgram
             bool errorParsing = false;
             Dictionary<string, string> parameters;
 
+            Environment.SetEnvironmentVariable("loadingSpinner", string.Empty);
+            Environment.SetEnvironmentVariable("errorContainer", string.Empty);
+
             ITestGeneralData dataInformation = ReflectiveGetter.GetImplementationOfType<ITestGeneralData>()
-                .Find(x => x.Name.Equals(Environment.GetEnvironmentVariable("testSetDataArgs")));
+                .Find(x => x.Name.Equals(Environment.GetEnvironmentVariable("testSetDataType")));
 
             if (dataInformation.Verify(Environment.GetEnvironmentVariable("testSetDataArgs")))
             {
@@ -99,7 +116,7 @@ namespace AutomationTestingProgram
                 foreach (string paramName in parameters.Keys)
                 {
                     // If it's not filled in already, fill it in.
-                    if (Environment.GetEnvironmentVariable(paramName) == string.Empty)
+                    if (Environment.GetEnvironmentVariable(paramName) == null || Environment.GetEnvironmentVariable(paramName) == string.Empty)
                     {
                         Environment.SetEnvironmentVariable(paramName, parameters[paramName]);
                     }
@@ -107,6 +124,7 @@ namespace AutomationTestingProgram
             }
             else
             {
+                Logger.Error("Error verifying test set data.");
                 errorParsing = true;
             }
 
@@ -131,7 +149,7 @@ namespace AutomationTestingProgram
                    Environment.SetEnvironmentVariable("logSaveFileLocation", o.LogSaveLocation ?? string.Empty);
                    Environment.SetEnvironmentVariable("reportSaveFileLocation", o.ReportSaveLocation ?? string.Empty);
                    Environment.SetEnvironmentVariable("screenshotSaveLocation", o.ScreenShotSaveLocation ?? string.Empty);
-                   Environment.SetEnvironmentVariable("testingDataDriver", o.AutomationProgram ?? "selenium");
+                   Environment.SetEnvironmentVariable("testAutomationDriver", o.AutomationProgram ?? "selenium");
                    Environment.SetEnvironmentVariable("testSetDataType", o.TestSetDataType);
                    Environment.SetEnvironmentVariable("testCaseDataType", o.TestCaseDataType ?? Environment.GetEnvironmentVariable("testSetDataType"));
                    Environment.SetEnvironmentVariable("testStepDataType", o.TestStepDataType ?? Environment.GetEnvironmentVariable("testCaseDataType"));
@@ -147,7 +165,6 @@ namespace AutomationTestingProgram
                        errorParsing = true;
                    }
                });
-
             return errorParsing;
         }
     }

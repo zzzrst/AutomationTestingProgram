@@ -17,7 +17,7 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
             string url = this.Arguments.ContainsKey("url") ? this.Arguments["url"] : string.Empty;
-            InformationObject.TestingDriver.NavigateToURL(url);
+            InformationObject.TestAutomationDriver.NavigateToURL(url);
         }
     }
 }

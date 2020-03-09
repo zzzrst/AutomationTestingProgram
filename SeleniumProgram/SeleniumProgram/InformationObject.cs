@@ -6,10 +6,11 @@ namespace AutomationTestingProgram
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
-    using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestAutomationDriver;
+    using AutomationTestingProgram.TestingData;
 
     /// <summary>
     /// An information class that contains information needed by other objects/methods.
@@ -30,6 +31,11 @@ namespace AutomationTestingProgram
         /// Gets or sets the location to save the log.
         /// </summary>
         public static string LogSaveFileLocation { get; set; }
+
+        /// <summary>
+        /// Gets or sets the location to save the screenshot.
+        /// </summary>
+        public static string ScreenshotSaveLocation { get; set; }
 
         /// <summary>
         /// Gets or sets the location to save the CSV file.
@@ -60,5 +66,33 @@ namespace AutomationTestingProgram
         /// Gets or sets the reporter object.
         /// </summary>
         public static Reporter Reporter { get; set; }
+
+        /// <summary>
+        /// Sets up all the variables and paths.
+        /// </summary>
+        public static void SetUp()
+        {
+            string csvSaveLocation = Environment.GetEnvironmentVariable("csvSaveFileLocation");
+            string logSaveLocation = Environment.GetEnvironmentVariable("logSaveFileLocation");
+            string reportSaveLocation = Environment.GetEnvironmentVariable("reportSaveFileLocation");
+            string screenshotSaveLocation = Environment.GetEnvironmentVariable("screenshotSaveLocation");
+
+            CSVLogger = new CSVLogger(csvSaveLocation);
+            LogSaveFileLocation = logSaveLocation;
+            ScreenshotSaveLocation = screenshotSaveLocation;
+
+            Reporter = new Reporter()
+            {
+                SaveFileLocation = reportSaveLocation + "\\Report.txt",
+            };
+
+            RespectRepeatFor = bool.Parse(Environment.GetEnvironmentVariable("respectRepeatFor"));
+            RespectRunAODAFlag = bool.Parse(Environment.GetEnvironmentVariable("respectRunAODAFlag"));
+
+            Directory.CreateDirectory(csvSaveLocation);
+            Directory.CreateDirectory(logSaveLocation);
+            Directory.CreateDirectory(reportSaveLocation);
+            Directory.CreateDirectory(screenshotSaveLocation);
+        }
     }
 }

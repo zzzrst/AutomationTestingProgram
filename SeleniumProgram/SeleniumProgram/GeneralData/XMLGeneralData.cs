@@ -4,7 +4,6 @@
 
 namespace AutomationTestingProgram.GeneralData
 {
-    using AutomationTestingProgram.Helper;
     using System;
     using System.Collections.Generic;
     using System.Configuration;
@@ -13,6 +12,7 @@ namespace AutomationTestingProgram.GeneralData
     using System.Text;
     using System.Xml;
     using System.Xml.Schema;
+    using AutomationTestingProgram.Helper;
 
     /// <summary>
     /// The implementation of the general data for XML.
@@ -69,44 +69,52 @@ namespace AutomationTestingProgram.GeneralData
             }
 
             parameters.Add("browser", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Browser")[0].InnerText, xmlDataFile));
-            parameters.Add("respectRepeatFor", xmlDocObj.GetElementsByTagName("RespectRepeatFor")[0].InnerText);
-            parameters.Add("respectRunAODAFlag", xmlDocObj.GetElementsByTagName("RespectRunAODAFlag")[0].InnerText);
+            if (xmlDocObj.GetElementsByTagName("RespectRepeatFor").Count > 0)
+            {
+                parameters.Add("respectRepeatFor", xmlDocObj.GetElementsByTagName("RespectRepeatFor")[0].InnerText);
+            }
+
+            if (xmlDocObj.GetElementsByTagName("RespectRunAODAFlag").Count > 0)
+            {
+                parameters.Add("respectRunAODAFlag", xmlDocObj.GetElementsByTagName("RespectRunAODAFlag")[0].InnerText);
+            }
+
             parameters.Add("timeOutThreshold", xmlDocObj.GetElementsByTagName("TimeOutThreshold")[0].InnerText);
             parameters.Add("warningThreshold", xmlDocObj.GetElementsByTagName("WarningThreshold")[0].InnerText);
             parameters.Add("csvSaveFileLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("CSVSaveLocation")[0].InnerText, xmlDataFile));
 
             if (xmlDocObj.GetElementsByTagName("LogSaveLocation").Count > 0)
             {
-                parameters.Add("LogSaveFileLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
+                parameters.Add("logSaveFileLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
             }
 
-            if (xmlDocObj.GetElementsByTagName("ReportSaveFileLocation").Count > 0)
+            if (xmlDocObj.GetElementsByTagName("reportSaveFileLocation").Count > 0)
             {
-                parameters.Add("ReportSaveFileLocatio", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
+                parameters.Add("reportSaveFileLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
             }
 
-            if (xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation").Count > 0)
+            if (xmlDocObj.GetElementsByTagName("screenshotSaveLocation").Count > 0)
             {
-                parameters.Add("ScreenshotSaveLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
+                parameters.Add("screenshotSaveLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
             }
 
             // Special Elements
-            if (xmlDocObj.GetElementsByTagName("LoadingSpinner").Count > 0)
+            if (xmlDocObj.GetElementsByTagName("loadingSpinner").Count > 0)
             {
-                parameters.Add("LoadingSpinner", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
+                parameters.Add("loadingSpinner", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
             }
             else
             {
-                parameters.Add("LoadingSpinner", ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
+                parameters.Add("loadingSpinner", ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
             }
 
-            if (xmlDocObj.GetElementsByTagName("ErrorContainer").Count > 0)
+            if (xmlDocObj.GetElementsByTagName("errorContainer").Count > 0)
             {
-                parameters.Add("ErrorContainer", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
+                parameters.Add("errorContainer", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
             }
             else
             {
-                parameters.Add("ErrorContainer", ConfigurationManager.AppSettings["ErrorContainer"].ToString());
+                parameters.Add("errorContainer", ConfigurationManager.AppSettings["ErrorContainer"].ToString());
             }
 
             return parameters;
@@ -118,7 +126,7 @@ namespace AutomationTestingProgram.GeneralData
             try
             {
                 XmlReaderSettings settings = new XmlReaderSettings();
-                settings.Schemas.Add("http://qa/SeleniumPerf", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "GeneralData\\DataVerifier\\SeleniumPerf.xsd");
+                settings.Schemas.Add("http://qa/SeleniumPerf", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\GeneralData\\DataVerifier\\SeleniumPerf.xsd");
                 settings.ValidationType = ValidationType.Schema;
 
                 XmlReader reader = XmlReader.Create(xmlFile, settings);
@@ -130,8 +138,9 @@ namespace AutomationTestingProgram.GeneralData
                 // the following call to Validate succeeds.
                 document.Validate(eventHandler);
             }
-            catch (XmlSchemaValidationException)
+            catch (XmlSchemaValidationException e)
             {
+                Logger.Error(e.Message);
                 return false;
             }
 

@@ -1,4 +1,4 @@
-﻿// <copyright file="ITestingDriver.cs" company="PlaceholderCompany">
+﻿// <copyright file="ITestAutomationDriver.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -187,5 +187,10 @@ namespace AutomationTestingProgram.TestAutomationDriver
         /// Checks if there are any errors in the error container.
         /// </summary>
         public void CheckErrorContainer();
+
+        /// <summary>
+        /// Runs when created.
+        /// </summary>
+        public void SetUp();
     }
 }
