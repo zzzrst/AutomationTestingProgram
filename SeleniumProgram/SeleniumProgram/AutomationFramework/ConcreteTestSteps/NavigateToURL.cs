@@ -2,12 +2,12 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
     /// This class executes the action of opening the browser to the specified site.
     /// </summary>
-    public class NavigateToURL : TestStepXml
+    public class NavigateToURL : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "NavigateToURL";
@@ -16,8 +16,8 @@ namespace SeleniumPerfXML.Implementations
         public override void Execute()
         {
             base.Execute();
-            string url = this.TestStepInfo.Attributes["url"].Value;
-            this.Driver.NavigateToURL(url, false);
+            string url = this.Arguments["url"];
+            InformationObject.TestAutomationDriver.NavigateToURL(url, false);
         }
     }
 }

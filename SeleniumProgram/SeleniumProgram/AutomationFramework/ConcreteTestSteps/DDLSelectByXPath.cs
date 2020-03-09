@@ -2,12 +2,12 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
     /// This class executes the action of selecting a value from the specified dropdownlist.
     /// </summary>
-    public class DDLSelectByXPath : TestStepXml
+    public class DDLSelectByXPath : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "DDLSelectByXPath";
@@ -16,10 +16,10 @@ namespace SeleniumPerfXML.Implementations
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.TestStepInfo.Attributes["xPath"].Value;
-            string selection = this.TestStepInfo.Attributes["selection"].Value;
-            this.Driver.SelectValueInElement(xPath, selection);
-            this.Driver.WaitForLoadingSpinner();
+            string xPath = this.Arguments["xPath"];
+            string selection = this.Arguments["selection"];
+            InformationObject.TestAutomationDriver.SelectValueInElement(xPath, selection);
+            InformationObject.TestAutomationDriver.WaitForLoadingSpinner();
         }
     }
 }

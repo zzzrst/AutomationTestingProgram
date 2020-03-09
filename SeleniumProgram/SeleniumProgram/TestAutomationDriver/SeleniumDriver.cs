@@ -71,6 +71,8 @@ namespace AutomationTestingProgram.TestAutomationDriver
             this.url = Environment.GetEnvironmentVariable("url");
             this.screenshotSaveLocation = InformationObject.ScreenshotSaveLocation;
             this.actualTimeOut = TimeSpan.FromMinutes(60); // int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]));
+            this.LoadingSpinner = Environment.GetEnvironmentVariable("loadingSpinner");
+            this.ErrorContainer = Environment.GetEnvironmentVariable("errorContainer");
         }
 
         /// <summary>

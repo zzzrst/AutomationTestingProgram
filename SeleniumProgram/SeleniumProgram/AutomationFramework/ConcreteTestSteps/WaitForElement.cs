@@ -2,12 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
+    using AutomationTestingProgram.TestAutomationDriver;
+
     /// <summary>
     /// This class executes the action of waiting for an elment's status.
     /// </summary>
-    public class WaitForElement : TestStepXml
+    public class WaitForElement : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "WaitForElement";
@@ -16,12 +18,12 @@ namespace SeleniumPerfXML.Implementations
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.TestStepInfo.Attributes["xPath"].Value;
-            bool invisible = bool.Parse(this.TestStepInfo.Attributes["invisible"].Value);
+            string xPath = this.Arguments["xPath"];
+            bool invisible = bool.Parse(this.Arguments["invisible"]);
 
-            SeleniumDriver.ElementState state = invisible ? SeleniumDriver.ElementState.Invisible : SeleniumDriver.ElementState.Visible;
+            ITestAutomationDriver.ElementState state = invisible ? ITestAutomationDriver.ElementState.Invisible : ITestAutomationDriver.ElementState.Visible;
 
-            this.Driver.WaitForElementState(xPath, state);
+            InformationObject.TestAutomationDriver.WaitForElementState(xPath, state);
         }
     }
 }

@@ -2,12 +2,12 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
     /// This class executes the action of switching context into IFrame.
     /// </summary>
-    public class SwitchIntoIFrame : TestStepXml
+    public class SwitchIntoIFrame : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "SwitchIntoIFrame";
@@ -16,8 +16,8 @@ namespace SeleniumPerfXML.Implementations
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.TestStepInfo.Attributes["xPath"].Value;
-            this.Driver.SwitchToIFrame(xPath);
+            string xPath = this.Arguments["xPath"];
+            InformationObject.TestAutomationDriver.SwitchToIFrame(xPath);
         }
     }
 }

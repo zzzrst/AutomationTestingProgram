@@ -2,14 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
 
     /// <summary>
     /// This class executes the action of closing the current tab.
     /// </summary>
-    public class CloseTab : TestStepXml
+    public class CloseTab : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "CloseTab";
@@ -18,9 +18,9 @@ namespace SeleniumPerfXML.Implementations
         public override void Execute()
         {
             base.Execute();
-            int tabIndex = Convert.ToInt32(this.TestStepInfo.Attributes["tabIndex"].Value);
-            this.Driver.SwitchToTab(tabIndex);
-            this.Driver.CloseBrowser();
+            int tabIndex = Convert.ToInt32(this.Arguments["tabIndex"]);
+            InformationObject.TestAutomationDriver.SwitchToTab(tabIndex);
+            InformationObject.TestAutomationDriver.CloseBrowser();
         }
     }
 }

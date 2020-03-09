@@ -7,7 +7,7 @@ namespace AutomationTestingProgram.AutomationFramework
     /// <summary>
     /// This class executes the action of signing in.
     /// </summary>
-    public class SignIn : TestStepXml
+    public class SignIn : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "SignIn";
@@ -17,18 +17,18 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
             string usernameXPath = "//input[@id='username']";
-            string username = this.TestStepInfo.Attributes["username"].Value;
+            string username = this.Arguments["username"];
 
             string passwordXPath = "//input[@id='password']";
-            string password = this.TestStepInfo.Attributes["password"].Value;
+            string password = this.Arguments["password"];
 
             string signInButtonXPath = "//input[@id='signin']";
 
-            this.Driver.NavigateToURL();
-            this.Driver.PopulateElement(usernameXPath, username);
-            this.Driver.PopulateElement(passwordXPath, password);
-            this.Driver.ClickElement(signInButtonXPath);
-            this.Driver.WaitForLoadingSpinner();
+            InformationObject.TestAutomationDriver.NavigateToURL();
+            InformationObject.TestAutomationDriver.PopulateElement(usernameXPath, username);
+            InformationObject.TestAutomationDriver.PopulateElement(passwordXPath, password);
+            InformationObject.TestAutomationDriver.ClickElement(signInButtonXPath);
+            InformationObject.TestAutomationDriver.WaitForLoadingSpinner();
         }
     }
 }

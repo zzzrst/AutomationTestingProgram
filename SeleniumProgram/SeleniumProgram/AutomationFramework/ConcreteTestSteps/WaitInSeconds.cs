@@ -18,7 +18,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            int seconds = int.Parse(this.TestStepInfo.Attributes["seconds"].Value);
+            int seconds = int.Parse(this.Arguments["seconds"]);
             Thread.Sleep(seconds);
         }
     }

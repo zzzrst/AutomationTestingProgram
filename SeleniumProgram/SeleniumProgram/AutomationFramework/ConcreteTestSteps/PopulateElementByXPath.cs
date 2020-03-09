@@ -7,7 +7,7 @@ namespace AutomationTestingProgram.AutomationFramework
     /// <summary>
     /// This class executes the action of populating the element identified by the xpath.
     /// </summary>
-    public class PopulateElementByXPath : TestStepXml
+    public class PopulateElementByXPath : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "PopulateElementByXPath";
@@ -16,10 +16,10 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.TestStepInfo.Attributes["xPath"].Value;
-            string text = this.TestStepInfo.Attributes["text"].Value;
-            this.Driver.PopulateElement(xPath, text);
-            this.Driver.WaitForLoadingSpinner();
+            string xPath = this.Arguments["xPath"];
+            string text = this.Arguments["text"];
+            InformationObject.TestAutomationDriver.PopulateElement(xPath, text);
+            InformationObject.TestAutomationDriver.WaitForLoadingSpinner();
         }
     }
 }

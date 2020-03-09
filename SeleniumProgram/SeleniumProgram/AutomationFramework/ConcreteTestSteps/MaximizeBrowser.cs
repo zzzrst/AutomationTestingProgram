@@ -2,12 +2,12 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXML.Implementations
+namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
     /// This class executes the action of closing the current tab.
     /// </summary>
-    public class MaximizeBrowser : TestStepXml
+    public class MaximizeBrowser : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "MaximizeBrowser";
@@ -16,7 +16,7 @@ namespace SeleniumPerfXML.Implementations
         public override void Execute()
         {
             base.Execute();
-            this.Driver.Maximize();
+            InformationObject.TestAutomationDriver.Maximize();
         }
     }
 }

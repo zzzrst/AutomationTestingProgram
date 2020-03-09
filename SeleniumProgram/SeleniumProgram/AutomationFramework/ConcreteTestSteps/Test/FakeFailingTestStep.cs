@@ -2,15 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace SeleniumPerfXMLNUnitTest
+namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
-    using SeleniumPerfXML.Implementations;
 
     /// <summary>
     /// This test step will always fail.
     /// </summary>
-    public class FakeFailingTestStep : TestStepXml
+    public class FakeFailingTestStep : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "FakeFailingTestStep";

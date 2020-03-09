@@ -18,7 +18,7 @@ namespace AutomationTestingProgram.AutomationFramework
             base.Execute();
             string xPath = this.Arguments["xPath"];
             bool useJS = false;
-            if (this.Arguments["useJS"] != null)
+            if (this.Arguments.ContainsKey("useJS"))
             {
                 useJS = bool.Parse(this.Arguments["useJS"]);
             }
