@@ -9,10 +9,10 @@ namespace AutomationTestingProgram.Builders
     using System.Text;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
-    using AutomationTestingProgram.Builders.TestingDriverBuilder;
+    using AutomationTestingProgram.Builders;
+    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestingProgram.TestingData;
-    using AutomationTestingProgram.TestingData.DataDrivers;
-    using AutomationTestingProgram.TestingDriver;
+    using AutomationTestingProgram.TestingData.TestDrivers;
 
     /// <summary>
     /// Creates a new Information Object and returns it.
@@ -127,19 +127,19 @@ namespace AutomationTestingProgram.Builders
         public string TestStepDataType { get; set; }
 
         /// <summary>
-        /// Gets or sets the location of the test set data.
+        /// Gets or sets the args of the test set data. Most often the location.
         /// </summary>
-        public string TestSetDataLocation { get; set; }
+        public string TestSetDataArgs { get; set; }
 
         /// <summary>
-        /// Gets or sets the location of the test case data.
+        /// Gets or sets the args of the test case data. Most often the location.
         /// </summary>
-        public string TestCaseDataLocation { get; set; }
+        public string TestCaseDataArgs { get; set; }
 
         /// <summary>
-        /// Gets or sets the location of the test step.
+        /// Gets or sets the args of the test step. Most often the location.
         /// </summary>
-        public string TestStepDataLocation { get; set; }
+        public string TestStepDataArgs { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to respectRunAODAFlag or not.
@@ -188,7 +188,7 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestStepData()
         {
-            InformationObject.TestStepData = (ITestStepData)this.GetTestData(2, this.TestStepDataType, this.TestStepDataLocation);
+            InformationObject.TestStepData = (ITestStepData)this.GetTestData(2, this.TestStepDataType, this.TestStepDataArgs);
         }
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestCaseData()
         {
-            InformationObject.TestCaseData = (ITestCaseData)this.GetTestData(1, this.TestCaseDataType, this.TestCaseDataLocation);
+            InformationObject.TestCaseData = (ITestCaseData)this.GetTestData(1, this.TestCaseDataType, this.TestCaseDataArgs);
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestSetData()
         {
-            InformationObject.TestSetData = (ITestSetData)this.GetTestData(0, this.TestSetDataType, this.TestSetDataLocation);
+            InformationObject.TestSetData = (ITestSetData)this.GetTestData(0, this.TestSetDataType, this.TestSetDataArgs);
             InformationObject.TestSetData.SetUpTestSet();
         }
 
@@ -241,7 +241,7 @@ namespace AutomationTestingProgram.Builders
 
             if (testData == null)
             {
-                Console.WriteLine($"Sorry we do not currently support reading test from: {dataTypeName}");
+                Console.WriteLine($"Sorry we do not currently support reading tests from: {dataTypeName}");
                 throw new Exception($"Cannot Find test data type {dataTypeName}");
             }
             else
@@ -258,28 +258,33 @@ namespace AutomationTestingProgram.Builders
             switch (this.TestingDataDriver.ToLower())
             {
                 case "selenium":
-                    TestingDriverBuilder.TestingDriverBuilder builder;
+                    TestAutomationBuilder builder;
 
-                    ITestingDriver.Browser browser = ITestingDriver.Browser.Chrome;
+                    ITestAutomationDriver.Browser browser = ITestAutomationDriver.Browser.Chrome;
 
                     if (this.Browser.ToLower().Contains("chrome"))
                     {
-                        browser = ITestingDriver.Browser.Chrome;
+                        browser = ITestAutomationDriver.Browser.Chrome;
                     }
                     else if (this.Browser.ToLower().Contains("ie"))
                     {
-                        browser = ITestingDriver.Browser.IE;
+                        browser = ITestAutomationDriver.Browser.IE;
                     }
                     else if (this.Browser.ToLower().Contains("firefox"))
                     {
-                        browser = ITestingDriver.Browser.Firefox;
+                        browser = ITestAutomationDriver.Browser.Firefox;
                     }
                     else if (this.Browser.ToLower().Contains("edge"))
                     {
-                        browser = ITestingDriver.Browser.Edge;
+                        browser = ITestAutomationDriver.Browser.Edge;
+                    }
+                    else
+                    {
+                        Logger.Error($"Sorry we do not currently support the browser: {this.Browser}");
+                        throw new Exception("Unsupported Browser.");
                     }
 
-                    builder = new TestingDriverBuilder.TestingDriverBuilder()
+                    builder = new TestAutomationBuilder()
                     {
                         Browser = browser,
                         TimeOutThreshold = TimeSpan.FromSeconds(this.TimeOutThreshold),
@@ -289,11 +294,11 @@ namespace AutomationTestingProgram.Builders
                         ErrorContainer = this.ErrorContainer,
                         LoadingSpinner = this.LoadingSpinner,
                     };
-                    InformationObject.TestingDriver = builder.BuildSeleniumDriver();
+                    InformationObject.TestAutomationDriver = builder.BuildSeleniumDriver();
                     break;
                 default:
-                    Console.WriteLine($"Sorry we do not currently support the testing application: {this.TestingDataDriver}");
-                    break;
+                    Logger.Error($"Sorry we do not currently support the testing application: {this.TestingDataDriver}");
+                    throw new Exception("Unsupported testing application");
             }
         }
     }

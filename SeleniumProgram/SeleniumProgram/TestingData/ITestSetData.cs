@@ -24,7 +24,7 @@ namespace AutomationTestingProgram.TestingData
         public bool ExistNextTestCase();
 
         /// <summary>
-        /// Sets up the test set before it runs.
+        /// Sets up the test set and returns a new test step before it runs.
         /// </summary>
         public void SetUpTestSet();
     }

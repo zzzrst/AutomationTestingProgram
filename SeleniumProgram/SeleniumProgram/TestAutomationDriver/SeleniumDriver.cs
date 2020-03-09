@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.TestingDriver
+namespace AutomationTestingProgram.TestAutomationDriver
 {
     using System;
     using System.Configuration;
@@ -16,12 +16,12 @@ namespace AutomationTestingProgram.TestingDriver
     using OpenQA.Selenium.IE;
     using OpenQA.Selenium.Support.Extensions;
     using OpenQA.Selenium.Support.UI;
-    using static AutomationTestingProgram.TestingDriver.ITestingDriver;
+    using static AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver;
 
     /// <summary>
     /// Driver class for Selenium WebDriver.
     /// </summary>
-    public class SeleniumDriver : ITestingDriver
+    public class SeleniumDriver : ITestAutomationDriver
     {
         /// <summary>
         /// Location of the Selenium drivers on the current machine.

@@ -9,7 +9,7 @@ namespace AutomationTestingProgram
     using System.Text;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.TestingData;
-    using AutomationTestingProgram.TestingDriver;
+    using AutomationTestingProgram.TestAutomationDriver;
 
     /// <summary>
     /// An information class that contains information needed by other objects/methods.
@@ -54,7 +54,7 @@ namespace AutomationTestingProgram
         /// <summary>
         /// Gets or sets the testing driver to run the testing program on.
         /// </summary>
-        public static ITestingDriver TestingDriver { get; set; }
+        public static ITestAutomationDriver TestAutomationDriver { get; set; }
 
         /// <summary>
         /// Gets or sets the reporter object.

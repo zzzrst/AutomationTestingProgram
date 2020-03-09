@@ -1,4 +1,8 @@
-﻿namespace AutomationTestingProgram.TestingData.DataDrivers
+﻿// <copyright file="TextCaseData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;

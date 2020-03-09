@@ -1,15 +1,16 @@
-﻿// <copyright file="XMLStepDriver.cs" company="PlaceholderCompany">
+﻿// <copyright file="XMLStepData.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.TestingData.DataDrivers
+namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework;
-    using AutomationTestingProgram.TestingDriver;
+    using AutomationTestingProgram.Helper;
+    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestSetFramework;
 
     /// <summary>
@@ -62,7 +63,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             // Find the appropriate test steps
             foreach (XmlNode innerNode in testSteps.ChildNodes)
             {
-                if (innerNode.Name != "#comment" && this.ReplaceIfToken(innerNode.Attributes["id"].Value) == testStepName)
+                if (innerNode.Name != "#comment" && XMLHelper.ReplaceIfToken(innerNode.Attributes["id"].Value, this.XMLDataFile) == testStepName)
                 {
                     ITestStep testStep = this.BuildTestStep(innerNode, performAction);
                     return testStep;
@@ -77,7 +78,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
         private ITestStep BuildTestStep(XmlNode testStepNode, bool performAction = true)
         {
             TestStep testStep = null;
-            string name = this.ReplaceIfToken(testStepNode.Attributes["name"].Value);
+            string name = XMLHelper.ReplaceIfToken(testStepNode.Attributes["name"].Value, this.XMLDataFile);
 
             // initial value is respectRunAODAFlag
             // if we respect the flag, and it is not found, then default value is false.
@@ -100,7 +101,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             {
                 if (testStepNode.Attributes["runAODAPageName"] != null)
                 {
-                    runAODAPageName = this.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value);
+                    runAODAPageName = XMLHelper.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
                 }
             }
 
@@ -124,7 +125,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             {
                 for (int index = 0; index < testStepNode.Attributes.Count; index++)
                 {
-                    testStepNode.Attributes[index].InnerText = this.ReplaceIfToken(testStepNode.Attributes[index].InnerText);
+                    testStepNode.Attributes[index].InnerText = XMLHelper.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
                     testStep.Arguments.Add(testStepNode.Attributes[index].Name, testStepNode.Attributes[index].InnerText);
                 }
 
@@ -136,32 +137,6 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             }
 
             return testStep;
-        }
-
-        /// <summary>
-        /// Replaces a string if it is a token and shown.
-        /// </summary>
-        /// <param name="possibleToken">A string that may be a token.</param>
-        /// <returns>The provided string or value of the token.</returns>
-        private string ReplaceIfToken(string possibleToken)
-        {
-            if (possibleToken.Contains("${{") && possibleToken.Contains("}}") && this.XMLDataFile != null)
-            {
-                XmlNode tokens = this.XMLDataFile.GetElementsByTagName("Tokens")[0];
-                string tokenKey = possibleToken.Substring(possibleToken.IndexOf("${{") + 3);
-                tokenKey = tokenKey.Substring(0, tokenKey.IndexOf("}}"));
-
-                // Find the appropriate token
-                foreach (XmlNode token in tokens.ChildNodes)
-                {
-                    if (token.Attributes["key"] != null && token.Attributes["key"].InnerText == tokenKey && token.Attributes["value"] != null)
-                    {
-                        return possibleToken.Replace("${{" + $"{tokenKey}" + "}}", token.Attributes["value"].InnerText);
-                    }
-                }
-            }
-
-            return possibleToken;
         }
     }
 }

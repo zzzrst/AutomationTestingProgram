@@ -1,21 +1,22 @@
-﻿// <copyright file="XMLCaseDriver.cs" company="PlaceholderCompany">
+﻿// <copyright file="XMLCaseData.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.TestingData.DataDrivers
+namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework;
-    using AutomationTestingProgram.TestingDriver;
+    using AutomationTestingProgram.Helper;
+    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestSetFramework;
 
     /// <summary>
     /// The XML Driver to get data from an xml.
     /// </summary>
-    public class XMLCaseDatacs : ITestCaseData
+    public class XMLCaseData : ITestCaseData
     {
         /// <summary>
         /// The stack to read/excecute for the test set.
@@ -84,7 +85,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             // Find the appropriate testcase;
             foreach (XmlNode node in testCases.ChildNodes)
             {
-                if (node.Name == "TestCase" && this.ReplaceIfToken(node.Attributes["id"].Value) == testCaseName)
+                if (node.Name == "TestCase" && XMLHelper.ReplaceIfToken(node.Attributes["id"].Value, this.XMLDataFile) == testCaseName)
                 {
                     int repeat = 1;
                     string name = "TestCase";
@@ -169,7 +170,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                 }
                 else if (currentNode.Name == "RunTestStep")
                 {
-                    testStep = this.FindTestStep(this.ReplaceIfToken(currentNode.InnerText), performAction);
+                    testStep = this.FindTestStep(XMLHelper.ReplaceIfToken(currentNode.InnerText, this.XMLDataFile), performAction);
                 }
                 else
                 {
@@ -196,7 +197,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             // Find the appropriate test steps
             foreach (XmlNode innerNode in testSteps.ChildNodes)
             {
-                if (innerNode.Name != "#comment" && this.ReplaceIfToken(innerNode.Attributes["id"].Value) == testStepID)
+                if (innerNode.Name != "#comment" && XMLHelper.ReplaceIfToken(innerNode.Attributes["id"].Value, this.XMLDataFile) == testStepID)
                 {
                     testStep = this.BuildTestStep(innerNode, performAction);
                     return testStep;
@@ -210,7 +211,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
         private ITestStep BuildTestStep(XmlNode testStepNode, bool performAction = true)
         {
             TestStep testStep = null;
-            string name = this.ReplaceIfToken(testStepNode.Attributes["name"].Value);
+            string name = XMLHelper.ReplaceIfToken(testStepNode.Attributes["name"].Value, this.XMLDataFile);
 
             // initial value is respectRunAODAFlag
             // if we respect the flag, and it is not found, then default value is false.
@@ -233,7 +234,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             {
                 if (testStepNode.Attributes["runAODAPageName"] != null)
                 {
-                    runAODAPageName = this.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value);
+                    runAODAPageName = XMLHelper.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
                 }
             }
 
@@ -259,7 +260,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
 
                 for (int index = 0; index < testStepNode.Attributes.Count; index++)
                 {
-                    testStepNode.Attributes[index].InnerText = this.ReplaceIfToken(testStepNode.Attributes[index].InnerText);
+                    testStepNode.Attributes[index].InnerText = XMLHelper.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
                     testStep.Arguments.Add(testStepNode.Attributes[index].Name, testStepNode.Attributes[index].InnerText);
                 }
 
@@ -286,12 +287,12 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             // we check condition if we have to perfom this action.
             if (performAction)
             {
-                string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value);
+                string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                 string condition = ifXMLNode.Attributes["condition"].Value;
 
-                ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
+                ITestAutomationDriver.ElementState state = condition == "EXIST" ? ITestAutomationDriver.ElementState.Visible : ITestAutomationDriver.ElementState.Invisible;
 
-                ifCondition = InformationObject.TestingDriver.CheckForElementState(elementXPath, state);
+                ifCondition = InformationObject.TestAutomationDriver.CheckForElementState(elementXPath, state);
             }
 
             // inside the testCaseFlow, you can only have either RunTestCase element or an If element.
@@ -310,12 +311,12 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
 
                         if (performAction && !ifCondition)
                         {
-                            string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value);
+                            string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                             string condition = ifSection.Attributes["condition"].Value;
 
-                            ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
+                            ITestAutomationDriver.ElementState state = condition == "EXIST" ? ITestAutomationDriver.ElementState.Visible : ITestAutomationDriver.ElementState.Invisible;
 
-                            secondIfCondition = InformationObject.TestingDriver.CheckForElementState(elementXPath, state);
+                            secondIfCondition = InformationObject.TestAutomationDriver.CheckForElementState(elementXPath, state);
                         }
 
                         this.AddNodesToStack(ifSection, performAction && !ifCondition && secondIfCondition);
@@ -332,32 +333,6 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                         break;
                 }
             }
-        }
-
-        /// <summary>
-        /// Replaces a string if it is a token and shown.
-        /// </summary>
-        /// <param name="possibleToken">A string that may be a token.</param>
-        /// <returns>The provided string or value of the token.</returns>
-        private string ReplaceIfToken(string possibleToken)
-        {
-            if (possibleToken.Contains("${{") && possibleToken.Contains("}}") && this.XMLDataFile != null)
-            {
-                XmlNode tokens = this.XMLDataFile.GetElementsByTagName("Tokens")[0];
-                string tokenKey = possibleToken.Substring(possibleToken.IndexOf("${{") + 3);
-                tokenKey = tokenKey.Substring(0, tokenKey.IndexOf("}}"));
-
-                // Find the appropriate token
-                foreach (XmlNode token in tokens.ChildNodes)
-                {
-                    if (token.Attributes["key"] != null && token.Attributes["key"].InnerText == tokenKey && token.Attributes["value"] != null)
-                    {
-                        return possibleToken.Replace("${{" + $"{tokenKey}" + "}}", token.Attributes["value"].InnerText);
-                    }
-                }
-            }
-
-            return possibleToken;
         }
     }
 }

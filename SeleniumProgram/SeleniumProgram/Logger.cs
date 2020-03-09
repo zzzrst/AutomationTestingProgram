@@ -9,6 +9,9 @@ namespace AutomationTestingProgram
     using System.Reflection;
     using System.Xml;
     using log4net;
+    using log4net.Core;
+    using log4net.Repository.Hierarchy;
+    using Microsoft.Extensions.Logging;
 
     /// <summary>
     /// Logger class to be used. \n
@@ -20,6 +23,7 @@ namespace AutomationTestingProgram
         private static readonly string LOGCONFIGFILE = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\log4net.config";
 
         private static readonly ILog Log = GetLogger(typeof(Logger));
+        private static Microsoft.Extensions.Logging.ILogger iLogger;
 
         /// <summary>
         /// Allows the user to log a debug message.
@@ -64,6 +68,22 @@ namespace AutomationTestingProgram
         public static void Warn(object message)
         {
             Log.Warn(message);
+        }
+
+        /// <summary>
+        /// Get Log4Net Logger.
+        /// </summary>
+        /// <returns>An ILogger.</returns>
+        public static Microsoft.Extensions.Logging.ILogger GetLog4NetLogger()
+        {
+            if (iLogger != null)
+            {
+                Microsoft.Extensions.Logging.ILoggerFactory loggerFactory = new LoggerFactory();
+                loggerFactory.AddLog4Net();
+                iLogger = loggerFactory.CreateLogger(string.Empty);
+            }
+
+            return iLogger;
         }
 
         /// <summary>

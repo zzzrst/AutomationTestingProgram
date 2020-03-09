@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.TestingDriver
+namespace AutomationTestingProgram.TestAutomationDriver
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace AutomationTestingProgram.TestingDriver
     /// <summary>
     /// The Interface for the Testing Driver software.
     /// </summary>
-    public interface ITestingDriver
+    public interface ITestAutomationDriver
     {
         /// <summary>
         /// Different browsers that are supported.

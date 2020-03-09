@@ -1,17 +1,17 @@
-﻿// <copyright file="TestingDriverBuilder.cs" company="PlaceholderCompany">
+﻿// <copyright file="TestAutomationBuilder.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.Builders.TestingDriverBuilder
+namespace AutomationTestingProgram.Builders
 {
     using System;
-    using AutomationTestingProgram.TestingDriver;
-    using static AutomationTestingProgram.TestingDriver.ITestingDriver;
+    using AutomationTestingProgram.TestAutomationDriver;
+    using static AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver;
 
     /// <summary>
     /// Builds a new selenium Driver based on the given variables.
     /// </summary>
-    public class TestingDriverBuilder
+    public class TestAutomationBuilder
     {
         /// <summary>
         /// Gets or sets the browser to use.

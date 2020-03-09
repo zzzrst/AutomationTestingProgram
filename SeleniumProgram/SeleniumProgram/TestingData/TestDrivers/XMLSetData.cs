@@ -1,15 +1,16 @@
-﻿// <copyright file="XMLSetDriver.cs" company="PlaceholderCompany">
+﻿// <copyright file="XMLSetData.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationTestingProgram.TestingData.DataDrivers
+namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework;
-    using AutomationTestingProgram.TestingDriver;
+    using AutomationTestingProgram.Helper;
+    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestSetFramework;
 
     /// <summary>
@@ -122,7 +123,7 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                 }
                 else if (currentNode.Name == "RunTestCase")
                 {
-                    testCase = this.FindTestCase(this.ReplaceIfToken(currentNode.InnerText), performAction);
+                    testCase = this.FindTestCase(XMLHelper.ReplaceIfToken(currentNode.InnerText, this.XMLDataFile), performAction);
                 }
                 else
                 {
@@ -157,12 +158,12 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
             // we check condition if we have to perfom this action.
             if (performAction)
             {
-                string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value);
+                string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                 string condition = ifXMLNode.Attributes["condition"].Value;
 
-                ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
+                ITestAutomationDriver.ElementState state = condition == "EXIST" ? ITestAutomationDriver.ElementState.Visible : ITestAutomationDriver.ElementState.Invisible;
 
-                ifCondition = InformationObject.TestingDriver.CheckForElementState(elementXPath, state);
+                ifCondition = InformationObject.TestAutomationDriver.CheckForElementState(elementXPath, state);
             }
 
             // inside the testCaseFlow, you can only have either RunTestCase element or an If element.
@@ -181,12 +182,12 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
 
                         if (performAction && !ifCondition)
                         {
-                            string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value);
+                            string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                             string condition = ifSection.Attributes["condition"].Value;
 
-                            ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
+                            ITestAutomationDriver.ElementState state = condition == "EXIST" ? ITestAutomationDriver.ElementState.Visible : ITestAutomationDriver.ElementState.Invisible;
 
-                            secondIfCondition = InformationObject.TestingDriver.CheckForElementState(elementXPath, state);
+                            secondIfCondition = InformationObject.TestAutomationDriver.CheckForElementState(elementXPath, state);
                         }
 
                         this.AddNodesToStack(ifSection, performAction && !ifCondition && secondIfCondition);
@@ -203,32 +204,6 @@ namespace AutomationTestingProgram.TestingData.DataDrivers
                         break;
                 }
             }
-        }
-
-        /// <summary>
-        /// Replaces a string if it is a token and shown.
-        /// </summary>
-        /// <param name="possibleToken">A string that may be a token.</param>
-        /// <returns>The provided string or value of the token.</returns>
-        private string ReplaceIfToken(string possibleToken)
-        {
-            if (possibleToken.Contains("${{") && possibleToken.Contains("}}") && this.XMLDataFile != null)
-            {
-                XmlNode tokens = this.XMLDataFile.GetElementsByTagName("Tokens")[0];
-                string tokenKey = possibleToken.Substring(possibleToken.IndexOf("${{") + 3);
-                tokenKey = tokenKey.Substring(0, tokenKey.IndexOf("}}"));
-
-                // Find the appropriate token
-                foreach (XmlNode token in tokens.ChildNodes)
-                {
-                    if (token.Attributes["key"] != null && token.Attributes["key"].InnerText == tokenKey && token.Attributes["value"] != null)
-                    {
-                        return possibleToken.Replace("${{" + $"{tokenKey}" + "}}", token.Attributes["value"].InnerText);
-                    }
-                }
-            }
-
-            return possibleToken;
         }
     }
 }

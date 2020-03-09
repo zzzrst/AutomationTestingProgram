@@ -24,7 +24,7 @@ namespace AutomationTestingProgram.TestingData
         public bool ExistNextTestStep();
 
         /// <summary>
-        /// Runs when getting a test case from test set.
+        /// Set up and returns the new test case.
         /// </summary>
         /// <param name="testCaseName">The name of the test case.</param>
         /// <param name="performAction">Determins if the test case should run.</param>

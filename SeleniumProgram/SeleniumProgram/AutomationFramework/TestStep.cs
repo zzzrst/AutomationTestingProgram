@@ -70,8 +70,8 @@ namespace AutomationTestingProgram.AutomationFramework
                 InformationObject.CSVLogger.AddResults($"\"{this.Name}\",\"F\"");
             }
 
-            InformationObject.TestingDriver.CheckErrorContainer();
-            InformationObject.TestingDriver.TakeScreenShot();
+            InformationObject.TestAutomationDriver.CheckErrorContainer();
+            InformationObject.TestAutomationDriver.TakeScreenShot();
         }
 
         /// <inheritdoc/>
@@ -105,7 +105,7 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.EndTime = DateTime.UtcNow;
             if (this.RunAODA)
             {
-                InformationObject.TestingDriver.RunAODA(this.RunAODAPageName);
+                InformationObject.TestAutomationDriver.RunAODA(this.RunAODAPageName);
             }
 
             double totalTime = this.GetTotalElapsedTime();

@@ -1,4 +1,8 @@
-﻿namespace AutomationTestingProgram.TestingData.DataDrivers
+﻿// <copyright file="TextStepData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;
@@ -63,7 +67,7 @@
             foreach (string arg in testStepValue[2].Split(','))
             {
                 string[] value = arg.Split('=');
-                args.Add(value[0],value[1]);
+                args.Add(value[0], value[1]);
             }
 
             TestStep testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
