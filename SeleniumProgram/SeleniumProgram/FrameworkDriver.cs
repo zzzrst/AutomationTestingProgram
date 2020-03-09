@@ -19,31 +19,6 @@ namespace AutomationTestingProgram
     /// </summary>
     public class FrameworkDriver
     {
-        // Parameters to be used for the to build the test.
-        private static Dictionary<string, string> Parameters = new Dictionary<string, string>()
-        {
-        browser = string.Empty;
-        environment = string.Empty;
-        private static string url = string.Empty;
-        private static string respectRunAODAFlag = string.Empty;
-        private static string respectRepeatFor = string.Empty;
-        private static int timeOutThreshold = 0;
-        private static int warningThreshold = 0;
-        private static string dataFile = string.Empty;
-        private static string csvSaveFileLocation = string.Empty;
-        private static string logSaveFileLocation = string.Empty;
-        private static string reportSaveFileLocation = string.Empty;
-        private static string screenshotSaveLocation = string.Empty;
-        private static string testingDataDriver = string.Empty;
-        private static string testSetDataType = string.Empty;
-        private static string testCaseDataType = string.Empty;
-        private static string testStepDataType = string.Empty;
-        private static string testSetDataArgs = string.Empty;
-        private static string testCaseDataArgs = string.Empty;
-        private static string testStepDataArgs = string.Empty;
-    };
-
-
         /// <summary>
         /// The Main functionality.
         /// </summary>
@@ -63,29 +38,8 @@ namespace AutomationTestingProgram
 
             if (!errorParsing)
             {
-                TestSetBuilder builder = new TestSetBuilder()
-                {
-                    Browser = browser,
-                    Environment = environment,
-                    URL = url,
-                    PassedInRespectRepeatFor = respectRepeatFor,
-                    PassedInRespectRunAODAFlag = respectRunAODAFlag,
-                    TimeOutThreshold = timeOutThreshold,
-                    WarningThreshold = warningThreshold,
-                    CsvSaveFileLocation = csvSaveFileLocation,
-                    LogSaveFileLocation = logSaveFileLocation,
-                    ScreenshotSaveLocation = screenshotSaveLocation,
-                    ReportSaveFileLocation = csvSaveFileLocation,
-                    TestingDataDriver = testingDataDriver,
-                    TestSetDataType = testSetDataType,
-                    TestCaseDataType = testCaseDataType,
-                    TestStepDataType = testStepDataType,
-                    TestSetDataArgs = testSetDataArgs,
-                    TestCaseDataArgs = testCaseDataArgs,
-                    TestStepDataArgs = testStepDataArgs,
-                };
+                TestSetBuilder builder = new TestSetBuilder();
                 TestSet testSet = builder.Build();
-            Environment.GetEnvironmentVariables
                 DateTime start = DateTime.UtcNow;
 
                 AutomationTestSetDriver.RunTestSet(testSet);
@@ -119,9 +73,13 @@ namespace AutomationTestingProgram
             if (dataInformation.Verify(testSetDataArgs))
             {
                 parameters = dataInformation.ParseParameters(testSetDataArgs, dataFile);
-                foreach (string value in parameters.Keys)
+                foreach (string paramName in parameters.Keys)
                 {
-                    nameof
+                    // If it's not filled in already, fill it in.
+                    if (Environment.GetEnvironmentVariable(paramName) == string.Empty)
+                    {
+                        Environment.SetEnvironmentVariable(paramName, parameters[paramName]);
+                    }
                 }
             }
             else
@@ -136,29 +94,29 @@ namespace AutomationTestingProgram
         {
             bool errorParsing = false;
             Parser.Default.ParseArguments<FrameworkOptions>(args)
-               .WithParsed<FrameworkOptions>(o =>
+               .WithParsed(o =>
                {
-                   browser = o.Browser ?? string.Empty;
-                   environment = o.Environment ?? string.Empty;
-                   url = o.URL ?? string.Empty;
-                   respectRepeatFor = o.RespectRepeatFor ?? string.Empty;
-                   respectRunAODAFlag = o.RespectRunAodaFlag ?? string.Empty;
-                   timeOutThreshold = o.TimeOutThreshold;
-                   warningThreshold = o.WarningThreshold;
-                   dataFile = o.DataFile ?? string.Empty;
-                   csvSaveFileLocation = o.CSVSaveFileLocation ?? string.Empty;
-                   logSaveFileLocation = o.LogSaveLocation ?? string.Empty;
-                   reportSaveFileLocation = o.ReportSaveLocation ?? string.Empty;
-                   screenshotSaveLocation = o.ScreenShotSaveLocation ?? string.Empty;
-                   testingDataDriver = o.AutomationProgram ?? "selenium";
-                   testSetDataType = o.TestSetDataType;
-                   testCaseDataType = o.TestCaseDataType ?? testStepDataType;
-                   testStepDataType = o.TestStepDataType ?? testCaseDataType;
-                   testSetDataArgs = o.TestSetDataArgs;
-                   testCaseDataArgs = o.TestCaseDataArgs ?? testSetDataArgs;
-                   testStepDataArgs = o.TestStepDataArgs ?? testCaseDataArgs;
+                   Environment.SetEnvironmentVariable("browser", o.Browser ?? string.Empty);
+                   Environment.SetEnvironmentVariable("environment", o.Environment ?? string.Empty);
+                   Environment.SetEnvironmentVariable("url", o.URL ?? string.Empty);
+                   Environment.SetEnvironmentVariable("respectRepeatFor", o.RespectRepeatFor ?? string.Empty);
+                   Environment.SetEnvironmentVariable("respectRunAODAFlag", o.RespectRunAodaFlag ?? string.Empty);
+                   Environment.SetEnvironmentVariable("timeOutThreshold", o.TimeOutThreshold.ToString());
+                   Environment.SetEnvironmentVariable("warningThreshold", o.WarningThreshold.ToString());
+                   Environment.SetEnvironmentVariable("dataFile", o.DataFile ?? string.Empty);
+                   Environment.SetEnvironmentVariable("csvSaveFileLocation", o.CSVSaveFileLocation ?? string.Empty);
+                   Environment.SetEnvironmentVariable("logSaveFileLocation", o.LogSaveLocation ?? string.Empty);
+                   Environment.SetEnvironmentVariable("reportSaveFileLocation", o.ReportSaveLocation ?? string.Empty);
+                   Environment.SetEnvironmentVariable("screenshotSaveLocation", o.ScreenShotSaveLocation ?? string.Empty);
+                   Environment.SetEnvironmentVariable("testingDataDriver", o.AutomationProgram ?? "selenium");
+                   Environment.SetEnvironmentVariable("testSetDataType", o.TestSetDataType);
+                   Environment.SetEnvironmentVariable("testCaseDataType", o.TestCaseDataType ?? testStepDataType);
+                   Environment.SetEnvironmentVariable("testStepDataType", o.TestStepDataType ?? testCaseDataType);
+                   Environment.SetEnvironmentVariable("testSetDataArgs", o.TestSetDataArgs);
+                   Environment.SetEnvironmentVariable("testCaseDataArgs", o.TestCaseDataArgs ?? testSetDataArgs);
+                   Environment.SetEnvironmentVariable("testStepDataArgs", o.TestStepDataArgs ?? testCaseDataArgs);
                })
-               .WithNotParsed<FrameworkOptions>(errs =>
+               .WithNotParsed(errs =>
                {
                    Logger.Error(errs);
                    if (errs != null)
