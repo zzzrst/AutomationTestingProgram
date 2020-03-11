@@ -10,9 +10,9 @@ namespace AutomationTestingProgram.TestingData
     public interface ITestData
     {
         /// <summary>
-        /// Gets or sets the location to get the information from.
+        /// Gets or sets the arguments for the test data. Often the file location.
         /// </summary>
-        public string InformationLocation { get; set; }
+        public string TestArgs { get; set; }
 
         /// <summary>
         /// Gets the name to be found by the reflective getter.

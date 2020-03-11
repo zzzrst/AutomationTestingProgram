@@ -1378,9 +1378,9 @@
             The interface to get the test case data.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.ITestData.InformationLocation">
+        <member name="P:AutomationTestingProgram.TestingData.ITestData.TestArgs">
             <summary>
-            Gets or sets the location to get the information from.
+            Gets or sets the arguments for the test data. Often the file location.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.ITestData.Name">
@@ -1435,7 +1435,7 @@
             Only used for proof of concept.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.InformationLocation">
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.TestArgs">
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.Name">
@@ -1459,7 +1459,7 @@
             Used mainly for proof of concept.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.InformationLocation">
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TestArgs">
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.Name">
@@ -1486,7 +1486,7 @@
             Determines if the current stack layer for test set should execute.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.InformationLocation">
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.TestArgs">
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.Name">
@@ -1566,7 +1566,7 @@
             Determines if the current stack layer for test set should execute.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.InformationLocation">
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.TestArgs">
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.Name">
@@ -1633,7 +1633,7 @@
             The XML Driver to get data from an xml.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.InformationLocation">
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestArgs">
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.Name">

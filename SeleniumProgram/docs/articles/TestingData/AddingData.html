@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Adding More Test Data </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Adding More Test Data ">
     <meta name="generator" content="docfx 2.50.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -67,7 +67,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="adding-more-test-data">Adding More Test Data</h1>
 
+<p>When adding your own data to the existing program, please keep in mind the following. Also refer to the ITestData page for what each method and class should do.</p>
+<ol>
+<li>Make sure the name of the data does not already exist in the program. There is currently no way of keeping track of what names has been used. Usualy the name is the same as the data type.</li>
+<li>When making a <code>testSetData</code>, also make a <code>GeneralData</code> class with the same name as the <code>testSetData</code>.</li>
+<li>It is possible for an implemntation of a test driver to implement all 3 testData interface. Keep in mind the program does create a new instance for each of the test case, so don't assume the <code>testSetData</code> object is the same as the <code>testCaseData</code> object.</li>
+</ol>
 </article>
           </div>
           

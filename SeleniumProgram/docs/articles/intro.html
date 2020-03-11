@@ -81,8 +81,16 @@ Please refer to the <a href="">UML Diagram</a> for a better visualization of the
 <p>You need to pass in arguments when running this through command line. Below are arguments that you can use.</p>
 <p>Mandatory</p>
 <ul>
-<li>--setType</li>
-<li>--setArgs</li>
+<li>--setType
+<ul>
+<li>The type of data to use. ie &quot;XML&quot; or &quot;txt&quot;</li>
+</ul>
+</li>
+<li>--setArgs
+<ul>
+<li>The arguments to be passed in. Often the location of the file.</li>
+</ul>
+</li>
 </ul>
 <p>Optional</p>
 <ul>
@@ -95,17 +103,147 @@ Please refer to the <a href="">UML Diagram</a> for a better visualization of the
 <li>--warningThreshold</li>
 <li>--dataFile</li>
 <li>--csvSaveFileLocation</li>
-<li>--logSaveLocation</li>
-<li>--reportSaveLocation</li>
-<li>--screenShotSaveLocation</li>
-<li>--automationProgram</li>
-<li>--caseType</li>
-<li>--stepType</li>
-<li>--caseArgs</li>
-<li>--stepArgs</li>
+<li>--logSaveLocation
+<ul>
+<li>Defaults to the csvSaveFileLocation</li>
 </ul>
+</li>
+<li>--reportSaveLocation
+<ul>
+<li>Defaults to the csvSaveFileLocation</li>
+</ul>
+</li>
+<li>--screenShotSaveLocation
+<ul>
+<li>Defaults to the csvSaveFileLocation</li>
+</ul>
+</li>
+<li>--automationProgram
+<ul>
+<li>The type of testing program to use. ie &quot;selenium&quot;</li>
+</ul>
+</li>
+<li>--caseType
+<ul>
+<li>Defaults to setType</li>
+</ul>
+</li>
+<li>--stepType
+<ul>
+<li>Defaults to caseType</li>
+</ul>
+</li>
+<li>--caseArgs
+<ul>
+<li>Defaults to setArgs</li>
+</ul>
+</li>
+<li>--stepArgs
+<ul>
+<li>Defaults to caseArgs</li>
+</ul>
+</li>
+</ul>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>Most of these variables are the parameters passed in as well as some additional parameters from test sets.</p>
+<ul>
+<li>browser</li>
+<li>environment</li>
+<li>url</li>
+<li>respectRepeatFor</li>
+<li>resepctRunAODAFlag</li>
+<li>timeOutThreshold</li>
+<li>warinigThreshold</li>
+<li>dataFile</li>
+<li>csvSaveFileLocation</li>
+<li>logSaveFileLocation</li>
+<li>reportSaveFileLocation</li>
+<li>screenshotSaveLocation</li>
+<li>testAutomationDriver</li>
+<li>testSetDataType</li>
+<li>testCaseDataType</li>
+<li>testStepDataType</li>
+<li>testSetDataArgs</li>
+<li>testCaseDataArgs</li>
+<li>testStepDataArgs</li>
+<li>loadingSpinner</li>
+<li>errorContainer</li>
+</ul>
+<h2 id="information-object">Information Object</h2>
+<p>There is a static class called InformationObject. It contains static variables that any class can access. They are as follows:</p>
+<pre><code class="lang-c#">bool RespectReapetFor;
+bool RespectRunAODAFlag;
+string LogSaveFileLocation;
+string ScreenshotSaveLocation;
+CSVLogger CsvLogger;
+ITestSetData TestSetData;
+ITestCaseData TestCaseData;
+ITestStepData TestStepData;
+ITestAutomationDriver TestAutomationDriver;
+Reporter Reporter;
+</code></pre>
 <h2 id="test-flow">Test Flow</h2>
-<p>To be added...</p>
+<p>The order of execution is as follow. Note that Some methods appear both in AutomationFrameWork and TestData. Automation Framework is the skeleton of how the program is ran. So For example, <code>GetNextTestCase()</code> Will first be ran in the automation Framework's TestSet class which will then call the TestSetData from the information object to run it's own <code>GetNextTestCase()</code>. The only exception is <code>SetUp()</code>. The automation framework's <code>SetUp()</code> is ran when that instance is created.</p>
+<ul>
+<li>START</li>
+<li>Parse Command Line Arguments. <em>The test Set type and args must be provided.</em></li>
+<li>Parse test set parameters.
+<ul>
+<li>Gets the <code>TestGeneralData</code> that corresponds to the TestSetType and runs <code>Verify()</code> and <code>ParseParameters</code></li>
+</ul>
+</li>
+<li>If parsing the parameters was successful, run the following</li>
+<li>Set up the Information Object and set its variables to the correct value.</li>
+<li>SetUp the Testing Datas
+<ul>
+<li>Create a new <code>TestSetData</code> based off of the <code>setType</code> parameter and pass in the <code>setArgs</code>.
+<ul>
+<li>Run <code>SetUp()</code> for test set.</li>
+</ul>
+</li>
+<li>Run <code>SetUpTestSet()</code></li>
+<li>Create a new <code>TestCaseData</code> based off of the <code>caseType</code>
+parameter and pass in the <code>caseArgs</code>.
+<ul>
+<li>Run <code>SetUp()</code> for test case.</li>
+</ul>
+</li>
+<li>Create a new <code>TestStepData</code> based off of the <code>stepType</code> parameter and pass in the <code>stepArgs</code>.
+<ul>
+<li>Run <code>SetUp()</code> for test step.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Setup and create the automationDriver based off of the <code>automationProgram</code> parameter</li>
+<li>Run The test Set
+<ul>
+<li>Run <code>ExistNextTestCase()</code></li>
+<li>If <code>True</code> Run <code>GetNextTestCase()</code>
+<ul>
+<li><code>GetNextTestCase()</code> will call <code>SetUpTestCase()</code> <em>(This is based off how you should implement it but it can change)</em></li>
+<li>Run the Test Case
+<ul>
+<li>Run `ExistNextTestStep()</li>
+<li>If <code>True</code> Run <code>GetNextTestStep()</code>
+<ul>
+<li><code>GetNextTestStep()</code> will call <code>SetUpTestStep()</code> <em>(This is based off how you should implement it but it can change)</em></li>
+<li>Run <code>ShouldExcecute()</code></li>
+<li>If <code>True</code> Run <code>Execute()</code></li>
+<li>Also Run from TestAutomationDriver, <code>RunAODA</code> if enabled.</li>
+</ul>
+</li>
+<li>Report the Test Step to the Reporter</li>
+</ul>
+</li>
+<li>Report the Test Case to the Reporter</li>
+</ul>
+</li>
+<li>Report the Test Step to the Reporter</li>
+</ul>
+</li>
+<li>END</li>
+</ul>
 </article>
           </div>
           

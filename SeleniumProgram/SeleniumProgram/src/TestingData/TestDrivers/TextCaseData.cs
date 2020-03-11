@@ -19,7 +19,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     public class TextCaseData : ITestCaseData
     {
         /// <inheritdoc/>
-        public string InformationLocation { get; set; }
+        public string TestArgs { get; set; }
 
         /// <inheritdoc/>
         public string Name { get; } = "Txt";
@@ -51,7 +51,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public ITestCase SetUpTestCase(string testCaseName, bool performAction = true)
         {
-            TextInteractor interactor = new TextInteractor(Path.ChangeExtension(Path.Combine(this.InformationLocation, testCaseName), ".txt"));
+            TextInteractor interactor = new TextInteractor(Path.ChangeExtension(Path.Combine(this.TestArgs, testCaseName), ".txt"));
             interactor.Open();
             while (!interactor.FinishedReading())
             {

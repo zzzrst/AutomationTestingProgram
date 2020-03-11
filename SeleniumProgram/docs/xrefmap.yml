@@ -3207,19 +3207,6 @@ references:
   commentId: T:AutomationTestingProgram.TestingData.ITestData
   fullName: AutomationTestingProgram.TestingData.ITestData
   nameWithType: ITestData
-- uid: AutomationTestingProgram.TestingData.ITestData.InformationLocation
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.ITestData.html#AutomationTestingProgram_TestingData_ITestData_InformationLocation
-  commentId: P:AutomationTestingProgram.TestingData.ITestData.InformationLocation
-  fullName: AutomationTestingProgram.TestingData.ITestData.InformationLocation
-  nameWithType: ITestData.InformationLocation
-- uid: AutomationTestingProgram.TestingData.ITestData.InformationLocation*
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.ITestData.html#AutomationTestingProgram_TestingData_ITestData_InformationLocation_
-  commentId: Overload:AutomationTestingProgram.TestingData.ITestData.InformationLocation
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.ITestData.InformationLocation
-  nameWithType: ITestData.InformationLocation
 - uid: AutomationTestingProgram.TestingData.ITestData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.ITestData.html#AutomationTestingProgram_TestingData_ITestData_Name
@@ -3246,6 +3233,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
   nameWithType: ITestData.SetUp
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.ITestData.html#AutomationTestingProgram_TestingData_ITestData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  nameWithType: ITestData.TestArgs
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.ITestData.html#AutomationTestingProgram_TestingData_ITestData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  nameWithType: ITestData.TestArgs
 - uid: AutomationTestingProgram.TestingData.ITestSetData
   name: ITestSetData
   href: api/AutomationTestingProgram.TestingData.ITestSetData.html
@@ -3348,19 +3348,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.GetNextTestStep
   nameWithType: TextCaseData.GetNextTestStep
-- uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.InformationLocation
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_TextCaseData_InformationLocation
-  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.InformationLocation
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.InformationLocation
-  nameWithType: TextCaseData.InformationLocation
-- uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.InformationLocation*
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_TextCaseData_InformationLocation_
-  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.InformationLocation
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.InformationLocation
-  nameWithType: TextCaseData.InformationLocation
 - uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_TextCaseData_Name
@@ -3400,25 +3387,25 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.SetUpTestCase
   nameWithType: TextCaseData.SetUpTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_TextCaseData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.TestArgs
+  nameWithType: TextCaseData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_TextCaseData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.TestArgs
+  nameWithType: TextCaseData.TestArgs
 - uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData
   name: TextStepData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html
   commentId: T:AutomationTestingProgram.TestingData.TestDrivers.TextStepData
   fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData
   nameWithType: TextStepData
-- uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.InformationLocation
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_InformationLocation
-  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.InformationLocation
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.InformationLocation
-  nameWithType: TextStepData.InformationLocation
-- uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.InformationLocation*
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_InformationLocation_
-  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.InformationLocation
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.InformationLocation
-  nameWithType: TextStepData.InformationLocation
 - uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_Name
@@ -3458,6 +3445,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.SetUpTestStep
   nameWithType: TextStepData.SetUpTestStep
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TestArgs
+  nameWithType: TextStepData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TestArgs
+  nameWithType: TextStepData.TestArgs
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData
   name: XMLCaseData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html
@@ -3490,19 +3490,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.GetNextTestStep
   nameWithType: XMLCaseData.GetNextTestStep
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.InformationLocation
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLCaseData_InformationLocation
-  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.InformationLocation
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.InformationLocation
-  nameWithType: XMLCaseData.InformationLocation
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.InformationLocation*
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLCaseData_InformationLocation_
-  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.InformationLocation
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.InformationLocation
-  nameWithType: XMLCaseData.InformationLocation
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLCaseData_Name
@@ -3542,6 +3529,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.SetUpTestCase
   nameWithType: XMLCaseData.SetUpTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLCaseData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.TestArgs
+  nameWithType: XMLCaseData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLCaseData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.TestArgs
+  nameWithType: XMLCaseData.TestArgs
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData
   name: XMLSetData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html
@@ -3574,19 +3574,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.GetNextTestCase
   nameWithType: XMLSetData.GetNextTestCase
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.InformationLocation
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_InformationLocation
-  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.InformationLocation
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.InformationLocation
-  nameWithType: XMLSetData.InformationLocation
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.InformationLocation*
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_InformationLocation_
-  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.InformationLocation
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.InformationLocation
-  nameWithType: XMLSetData.InformationLocation
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_Name
@@ -3626,25 +3613,25 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.SetUpTestSet
   nameWithType: XMLSetData.SetUpTestSet
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.TestArgs
+  nameWithType: XMLSetData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.TestArgs
+  nameWithType: XMLSetData.TestArgs
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData
   name: XMLStepData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html
   commentId: T:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData
   nameWithType: XMLStepData
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.InformationLocation
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_InformationLocation
-  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.InformationLocation
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.InformationLocation
-  nameWithType: XMLStepData.InformationLocation
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.InformationLocation*
-  name: InformationLocation
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_InformationLocation_
-  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.InformationLocation
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.InformationLocation
-  nameWithType: XMLStepData.InformationLocation
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_Name
@@ -3684,3 +3671,16 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.SetUpTestStep
   nameWithType: XMLStepData.SetUpTestStep
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestArgs
+  nameWithType: XMLStepData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestArgs
+  nameWithType: XMLStepData.TestArgs

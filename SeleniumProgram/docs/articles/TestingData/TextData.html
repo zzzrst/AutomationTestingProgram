@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>TextData </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="TextData ">
     <meta name="generator" content="docfx 2.50.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -67,7 +67,46 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="textdata">TextData</h1>
 
+<p>Text Data takes test cases/steps from .txt files and excecutes them. This class should NOT be relied on as an actual test case and step as it was made to test the ability for different types of test case/steps. In this case it was testing the compatibility of the XML test set and txt test case/steps. The name of the data is <strong>&quot;Txt&quot;</strong></p>
+<h2 id="testcasedata">TestCaseData</h2>
+<ul>
+<li><code>TestArgs</code> Should be the location of the txt file whos name is the name of the testCase and the test steps are in the test case.</li>
+<li>Example</li>
+</ul>
+<p>OpenClose.txt</p>
+<pre><code>Opening Browser
+Closing Browser
+</code></pre>
+<ul>
+<li>The text data will run through all the test steps in the order they are presented.</li>
+</ul>
+<h2 id="teststepdata">TestStepData</h2>
+<ul>
+<li><code>TestArgs</code> Should be the location of the txt file that contains <em>All</em> the test steps that will be ran. This is not specific to any test case.</li>
+<li>Example</li>
+</ul>
+<p>TestStep.txt</p>
+<pre><code>Opening Browser;OpenBrowser;name=Hello World - Opening Browser
+Closing Browser;CloseBrowser;name=Hello World - Closing Browser
+</code></pre>
+<ul>
+<li>Each test step should be in the format</li>
+</ul>
+<pre><code>Name;NameOfTestStepObject;Arguments
+</code></pre>
+<ul>
+<li>Arguments are in the format</li>
+</ul>
+<pre><code>argName=value
+</code></pre>
+<p>or</p>
+<pre><code>arg1Name=value1,arg2Name=value2
+</code></pre>
+<ul>
+<li>There are no spaces between the &quot;;&quot;,&quot;=&quot;, and &quot;,&quot;.</li>
+</ul>
 </article>
           </div>
           

@@ -19,7 +19,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     public class TextStepData : ITestStepData
     {
         /// <inheritdoc/>
-        public string InformationLocation { get; set; }
+        public string TestArgs { get; set; }
 
         /// <inheritdoc/>
         public string Name { get; } = "Txt";
@@ -29,7 +29,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public void SetUp()
         {
-            TextInteractor interactor = new TextInteractor(this.InformationLocation);
+            TextInteractor interactor = new TextInteractor(this.TestArgs);
             interactor.Open();
             while (!interactor.FinishedReading())
             {

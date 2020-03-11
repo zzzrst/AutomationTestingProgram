@@ -132,7 +132,7 @@ namespace AutomationTestingProgram.Builders
             }
             else
             {
-                testData.InformationLocation = dataTypeLocation;
+                testData.TestArgs = dataTypeLocation;
                 testData.SetUp();
             }
 

@@ -19,7 +19,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     public class XMLStepData : ITestStepData
     {
         /// <inheritdoc/>
-        public string InformationLocation { get; set; }
+        public string TestArgs { get; set; }
 
         /// <inheritdoc/>
         public string Name { get; } = "XML";
@@ -42,10 +42,10 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public void SetUp()
         {
-            if (File.Exists(this.InformationLocation))
+            if (File.Exists(this.TestArgs))
             {
                 this.XMLDocObj = new XmlDocument();
-                this.XMLDocObj.Load(this.InformationLocation);
+                this.XMLDocObj.Load(this.TestArgs);
                 this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
             }
             else
