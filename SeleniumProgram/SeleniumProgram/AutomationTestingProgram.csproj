@@ -5,6 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\DUONGCH\Projects\SeleniumFramework\SeleniumProgram\SeleniumProgram\AutomationTestingProgram.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="src\GeneralData\DataVerifier\SeleniumPerf.xsd" />
   </ItemGroup>
