@@ -6,6 +6,8 @@ namespace AutomationTestingProgram
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
+    using System.IO.Compression;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.Builders;
@@ -54,11 +56,13 @@ namespace AutomationTestingProgram
                 AutomationTestSetDriver.RunTestSet(testSet);
                 InformationObject.Reporter.Report();
 
+                RunAODA();
+
                 DateTime end = DateTime.UtcNow;
 
                 InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
+                InformationObject.CSVLogger.WriteOutResults();
 
-                // InformationObject.CSVLogger.WriteOutResults();
                 string resultString = testSet.TestSetStatus.RunSuccessful ? "successfull" : "not successful";
                 Logger.Info($"SeleniumPerfXML has finished. It was {resultString}");
             }
@@ -69,6 +73,34 @@ namespace AutomationTestingProgram
 
             Environment.Exit(resultCode);
             return resultCode;
+        }
+
+        private static void RunAODA()
+        {
+            if (InformationObject.RespectRunAODAFlag)
+            {
+                string tempFolder = $"{InformationObject.LogSaveFileLocation}\\temp\\";
+
+                // Delete temp folder if exist and recreate
+                if (Directory.Exists(tempFolder))
+                {
+                    Directory.Delete(tempFolder, true);
+                }
+
+                Directory.CreateDirectory(tempFolder);
+
+                // Generate AODA Results
+                InformationObject.TestAutomationDriver.GenerateAODAResults(tempFolder);
+
+                // Zip all the contents up & Timestamp it
+                string zipFileName = $"AODA_Results_{DateTime.Now:MM_dd_yyyy_hh_mm_ss_tt}.zip";
+                ZipFile.CreateFromDirectory(tempFolder, $"{InformationObject.LogSaveFileLocation}\\{zipFileName}");
+
+                // Remove all remaining contents.
+                Directory.Delete(tempFolder, true);
+            }
+
+            InformationObject.TestAutomationDriver.Quit();
         }
 
         private static void SetDefaultParameters()

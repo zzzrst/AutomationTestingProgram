@@ -945,6 +945,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestCaseStatus.FriendlyErrorMessage
   nameWithType: TestCaseStatus.FriendlyErrorMessage
+- uid: AutomationTestingProgram.AutomationFramework.TestCaseStatus.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.TestCaseStatus.html#AutomationTestingProgram_AutomationFramework_TestCaseStatus_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestCaseStatus.Name
+  fullName: AutomationTestingProgram.AutomationFramework.TestCaseStatus.Name
+  nameWithType: TestCaseStatus.Name
+- uid: AutomationTestingProgram.AutomationFramework.TestCaseStatus.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.TestCaseStatus.html#AutomationTestingProgram_AutomationFramework_TestCaseStatus_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestCaseStatus.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.TestCaseStatus.Name
+  nameWithType: TestCaseStatus.Name
 - uid: AutomationTestingProgram.AutomationFramework.TestCaseStatus.RunSuccessful
   name: RunSuccessful
   href: api/AutomationTestingProgram.AutomationFramework.TestCaseStatus.html#AutomationTestingProgram_AutomationFramework_TestCaseStatus_RunSuccessful
@@ -1243,6 +1256,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestSetStatus.FriendlyErrorMessage
   nameWithType: TestSetStatus.FriendlyErrorMessage
+- uid: AutomationTestingProgram.AutomationFramework.TestSetStatus.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.TestSetStatus.html#AutomationTestingProgram_AutomationFramework_TestSetStatus_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestSetStatus.Name
+  fullName: AutomationTestingProgram.AutomationFramework.TestSetStatus.Name
+  nameWithType: TestSetStatus.Name
+- uid: AutomationTestingProgram.AutomationFramework.TestSetStatus.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.TestSetStatus.html#AutomationTestingProgram_AutomationFramework_TestSetStatus_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestSetStatus.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.TestSetStatus.Name
+  nameWithType: TestSetStatus.Name
 - uid: AutomationTestingProgram.AutomationFramework.TestSetStatus.RunSuccessful
   name: RunSuccessful
   href: api/AutomationTestingProgram.AutomationFramework.TestSetStatus.html#AutomationTestingProgram_AutomationFramework_TestSetStatus_RunSuccessful
@@ -1541,6 +1567,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage
   nameWithType: TestStepStatus.FriendlyErrorMessage
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html#AutomationTestingProgram_AutomationFramework_TestStepStatus_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  nameWithType: TestStepStatus.Name
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html#AutomationTestingProgram_AutomationFramework_TestStepStatus_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  nameWithType: TestStepStatus.Name
 - uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
   name: RunSuccessful
   href: api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html#AutomationTestingProgram_AutomationFramework_TestStepStatus_RunSuccessful

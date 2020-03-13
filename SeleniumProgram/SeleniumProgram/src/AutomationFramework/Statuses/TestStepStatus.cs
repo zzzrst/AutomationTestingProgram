@@ -13,6 +13,9 @@ namespace AutomationTestingProgram.AutomationFramework
     public class TestStepStatus : ITestStepStatus
     {
         /// <inheritdoc/>
+        public string Name { get; set; } = "test step";
+
+        /// <inheritdoc/>
         public int TestStepNumber { get; set; } = -1;
 
         /// <inheritdoc/>

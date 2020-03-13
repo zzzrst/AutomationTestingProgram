@@ -80,6 +80,7 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.TestCaseStatus = new TestCaseStatus()
                 {
+                    Name = this.Name,
                     StartTime = DateTime.UtcNow,
                     TestCaseNumber = this.TestCaseNumber,
                 };
@@ -112,6 +113,7 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.TestCaseStatus.RunSuccessful = false;
                 this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a test step";
+                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{testStepStatus.Actual}\"");
             }
 
             InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);

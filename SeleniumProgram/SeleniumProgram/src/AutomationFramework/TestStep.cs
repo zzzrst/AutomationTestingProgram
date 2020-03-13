@@ -64,12 +64,7 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.ErrorStack = e.StackTrace;
             this.TestStepStatus.FriendlyErrorMessage = e.Message;
             this.TestStepStatus.RunSuccessful = false;
-
-            if (this.ShouldLog)
-            {
-                InformationObject.CSVLogger.AddResults($"\"{this.Name}\",\"F\"");
-            }
-
+            this.TestStepStatus.Actual = "F";
             InformationObject.TestAutomationDriver.CheckErrorContainer();
             InformationObject.TestAutomationDriver.TakeScreenShot();
         }
@@ -81,6 +76,7 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.TestStepStatus = new TestStepStatus()
                 {
+                    Name = this.Name,
                     StartTime = DateTime.UtcNow,
                     TestStepNumber = this.TestStepNumber,
                 };

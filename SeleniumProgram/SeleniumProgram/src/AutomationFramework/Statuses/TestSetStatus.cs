@@ -13,6 +13,9 @@ namespace AutomationTestingProgram.AutomationFramework
     public class TestSetStatus : ITestSetStatus
     {
         /// <inheritdoc/>
+        public string Name { get; set; } = "test set";
+
+        /// <inheritdoc/>
         public bool RunSuccessful { get; set; } = true;
 
         /// <inheritdoc/>

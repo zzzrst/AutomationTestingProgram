@@ -59,6 +59,9 @@
     <Content Update="C:\Users\DUONGCH\.nuget\packages\axeaccessibilitydriver\1.1.7370.27825\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="C:\Users\DUONGCH\.nuget\packages\axeaccessibilitydriver\1.1.7373.32491\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

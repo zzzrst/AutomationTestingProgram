@@ -2,7 +2,7 @@
   "profiles": {
     "AutomationTestingProgram": {
       "commandName": "Project",
-      "commandLineArgs": "--setType \"XML\" --setArgs \"K:\\AODA\\SFIS AODA v2.xml\""
+      "commandLineArgs": "--setType \"XML\" --setArgs \"C:\\SeleniumPerfXML\\Testing\\TestTestStep\\TestAODA.xml\""
     }
   }
 }

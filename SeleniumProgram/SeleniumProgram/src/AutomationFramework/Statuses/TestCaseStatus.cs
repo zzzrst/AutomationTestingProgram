@@ -13,6 +13,9 @@ namespace AutomationTestingProgram.AutomationFramework
     public class TestCaseStatus : ITestCaseStatus
     {
         /// <inheritdoc/>
+        public string Name { get; set; } = "test case";
+
+        /// <inheritdoc/>
         public int TestCaseNumber { get; set; } = -1;
 
         /// <inheritdoc/>

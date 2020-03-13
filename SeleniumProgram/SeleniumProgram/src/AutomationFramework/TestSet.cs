@@ -79,6 +79,7 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.TestSetStatus = new TestSetStatus()
                 {
+                    Name = this.Name,
                     StartTime = DateTime.UtcNow,
                 };
             }

@@ -126,7 +126,7 @@ namespace AutomationTestingProgram.GeneralData
             try
             {
                 XmlReaderSettings settings = new XmlReaderSettings();
-                settings.Schemas.Add("http://qa/SeleniumPerf", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\GeneralData\\DataVerifier\\SeleniumPerf.xsd");
+                settings.Schemas.Add("http://qa/SeleniumPerf", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\src\\GeneralData\\DataVerifier\\SeleniumPerf.xsd");
                 settings.ValidationType = ValidationType.Schema;
 
                 XmlReader reader = XmlReader.Create(xmlFile, settings);

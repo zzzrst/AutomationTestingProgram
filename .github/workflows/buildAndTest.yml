@@ -42,6 +42,6 @@ jobs:
         run: echo "${{github.actor}}"
       - name: automerge
         uses: "pascalgn/automerge-action@ccae530ae13b6af67a7a2009c266fe925844e658"
-        if: github.actor == 'dependabot-preview'
+        if: github.actor == 'dependabot-preview[bot]'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

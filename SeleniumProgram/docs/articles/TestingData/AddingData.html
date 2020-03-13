@@ -71,6 +71,7 @@
 
 <p>When adding your own data to the existing program, please keep in mind the following. Also refer to the ITestData page for what each method and class should do.</p>
 <ol>
+<li>Add a new Class to &quot;src/TestingData/TestDrivers&quot;.</li>
 <li>Make sure the name of the data does not already exist in the program. There is currently no way of keeping track of what names has been used. Usualy the name is the same as the data type.</li>
 <li>When making a <code>testSetData</code>, also make a <code>GeneralData</code> class with the same name as the <code>testSetData</code>.</li>
 <li>It is possible for an implemntation of a test driver to implement all 3 testData interface. Keep in mind the program does create a new instance for each of the test case, so don't assume the <code>testSetData</code> object is the same as the <code>testCaseData</code> object.</li>

@@ -73,6 +73,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
             List<string> str = new List<string>();
             foreach (ITestSetStatus testSetStatus in this.TestSetStatuses)
             {
+                str.Add("Name: " + testSetStatus.Name);
                 str.Add("RunSuccessful:" + testSetStatus.RunSuccessful.ToString());
                 str.Add("StartTime:" + testSetStatus.StartTime.ToString());
                 str.Add("EndTime:" + testSetStatus.EndTime.ToString());
@@ -92,6 +93,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
 
             foreach (ITestCaseStatus testCaseStatus in this.TestCaseStatuses)
             {
+                str.Add(this.Tab(1) + "Name:" + testCaseStatus.Name);
                 str.Add(this.Tab(1) + "TestCaseNumber:" + testCaseStatus.TestCaseNumber.ToString());
                 str.Add(this.Tab(1) + "RunSuccessful:" + testCaseStatus.RunSuccessful.ToString());
                 str.Add(this.Tab(1) + "StartTime:" + testCaseStatus.StartTime.ToString());
@@ -114,6 +116,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
                     // log the test steps.
                     foreach (ITestStepStatus testStepStatus in this.TestCaseToTestSteps[testCaseStatus])
                     {
+                        str.Add(this.Tab(2) + "Name:" + testStepStatus.Name);
                         str.Add(this.Tab(2) + "TestStepNumber:" + testStepStatus.TestStepNumber.ToString());
                         str.Add(this.Tab(2) + "RunSuccessful:" + testStepStatus.RunSuccessful.ToString());
                         str.Add(this.Tab(2) + "StartTime:" + testStepStatus.StartTime.ToString());
