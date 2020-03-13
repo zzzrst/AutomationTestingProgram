@@ -113,8 +113,9 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.TestCaseStatus.RunSuccessful = false;
                 this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a test step";
-                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{testStepStatus.Actual}\"");
             }
+
+            InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{testStepStatus.Actual}\"");
 
             InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);
         }

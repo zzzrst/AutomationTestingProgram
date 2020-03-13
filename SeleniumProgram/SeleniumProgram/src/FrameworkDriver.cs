@@ -6,8 +6,10 @@ namespace AutomationTestingProgram
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.IO;
     using System.IO.Compression;
+    using System.Reflection;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.Builders;
@@ -49,6 +51,8 @@ namespace AutomationTestingProgram
 
                 TestAutomationBuilder automationBuilder = new TestAutomationBuilder();
                 automationBuilder.Build();
+
+                Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
 
                 // Run main program.
                 DateTime start = DateTime.UtcNow;

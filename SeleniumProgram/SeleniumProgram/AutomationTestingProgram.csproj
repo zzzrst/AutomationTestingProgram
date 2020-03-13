@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutomationTestSetFramework" Version="1.0.1" />
-    <PackageReference Include="AxeAccessibilityDriver" Version="1.1.7373.32491" />
+    <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
+    <PackageReference Include="AxeAccessibilityDriver" Version="2.0.7377.26508" />
     <PackageReference Include="CommandLineParser" Version="2.7.82" />
     <PackageReference Include="ComparePDF" Version="2.0.7369.36638" />
     <PackageReference Include="docfx.console" Version="2.50.0">
@@ -44,6 +45,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="System.Management" Version="4.7.0" />
     <PackageReference Include="TextInteractor" Version="1.2.7369.34863" />
   </ItemGroup>
 
@@ -60,6 +63,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="C:\Users\DUONGCH\.nuget\packages\axeaccessibilitydriver\1.1.7373.32491\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="C:\Users\DUONGCH\.nuget\packages\axeaccessibilitydriver\2.0.7377.26508\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

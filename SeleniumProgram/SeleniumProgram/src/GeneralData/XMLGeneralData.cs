@@ -140,7 +140,7 @@ namespace AutomationTestingProgram.GeneralData
             }
             catch (XmlSchemaValidationException e)
             {
-                Logger.Error(e.Message);
+                Logger.Error($"Line: {e.LineNumber} Message: {e.Message}");
                 return false;
             }
 

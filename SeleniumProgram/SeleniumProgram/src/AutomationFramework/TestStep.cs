@@ -85,7 +85,6 @@ namespace AutomationTestingProgram.AutomationFramework
             if (!this.ShouldExecuteVariable)
             {
                 this.TestStepStatus.Actual = "N/A";
-                InformationObject.CSVLogger.AddResults($"\"{this.Name}\",\"N/A\"");
             }
         }
 
@@ -110,7 +109,11 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 ITestStepLogger log = new TestStepLogger();
                 log.Log(this);
-                InformationObject.CSVLogger.AddResults($"\"{this.Name}\",\"{totalTime.ToString()}\"");
+
+                if (this.ShouldExecuteVariable)
+                {
+                    this.TestStepStatus.Actual = totalTime.ToString();
+                }
             }
         }
 

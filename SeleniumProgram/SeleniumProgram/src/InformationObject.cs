@@ -83,7 +83,7 @@ namespace AutomationTestingProgram
 
             Reporter = new Reporter()
             {
-                SaveFileLocation = reportSaveLocation + "\\Report.txt",
+                SaveFileLocation = Path.Combine(reportSaveLocation, "Report.txt"),
             };
 
             RespectRepeatFor = bool.Parse(Environment.GetEnvironmentVariable("respectRepeatFor"));

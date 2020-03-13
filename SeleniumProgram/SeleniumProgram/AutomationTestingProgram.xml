@@ -309,6 +309,9 @@
             An Implementation of the TestCaseStatus Class.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestCaseStatus.Name">
+            <inheritdoc/>
+        </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.TestCaseStatus.TestCaseNumber">
             <inheritdoc/>
         </member>
@@ -341,6 +344,9 @@
             An Implementation of the testSetStatus class.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestSetStatus.Name">
+            <inheritdoc/>
+        </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.TestSetStatus.RunSuccessful">
             <inheritdoc/>
         </member>
@@ -369,6 +375,9 @@
             <summary>
             Implementation of ITestStepStatus class.
             </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Name">
+            <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber">
             <inheritdoc/>

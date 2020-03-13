@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSet xmlns="http://qa/SeleniumPerf">
+	<Parameters>
+		<Browser>chrome</Browser>
+		<Environment>TestEnviornment</Environment>
+		
+		<WarningThreshold>60</WarningThreshold>
+		<TimeOutThreshold>120</TimeOutThreshold>
+
+		<CSVSaveLocation>C:\SeleniumPerfXML\CSV\</CSVSaveLocation>
+	</Parameters>
+	
+	<SpecialElements/>
+	
+	<TestCaseFlow>
+	</TestCaseFlow>
+	
+	<TestCases>
+	</TestCases>
+	
+	<TestSteps>
+	</TestSteps>
+
+</TestSet>
