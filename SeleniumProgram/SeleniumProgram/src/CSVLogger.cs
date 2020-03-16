@@ -37,7 +37,8 @@ namespace AutomationTestingProgram
         public void AddResults(string result)
         {
             this.Results.Add(result);
-            Logger.Info(result);
+
+            // Logger.Info(result);
         }
 
         /// <summary>
