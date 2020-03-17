@@ -6,5 +6,6 @@ namespace NUnitAutomationTestingProgram.TestTestingData
 {
     class TestTxtData
     {
+        ///Currently not being used.
     }
 }

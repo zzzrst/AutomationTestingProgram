@@ -25,16 +25,6 @@ namespace AutomationTestingProgram.Builders
         }
 
         /// <summary>
-        /// Gets or sets the browser to use.
-        /// </summary>
-        public Browser Browser { get; set; }
-
-        /// <summary>
-        /// Gets or sets the time out Threshold.
-        /// </summary>
-        public TimeSpan TimeOutThreshold { get; set; }
-
-        /// <summary>
         /// Builds a new test automation driver.
         /// </summary>
         public void Build()

@@ -9,6 +9,7 @@ namespace AutomationTestingProgram.AutomationFramework
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestSetFramework;
+    using static AutomationTestSetFramework.IMethodBoundaryAspect;
 
     /// <summary>
     /// Implementation of the testCase class.
@@ -40,7 +41,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public int CurrTestStepNumber { get; set; } = 0;
 
         /// <inheritdoc/>
-        public IMethodBoundaryAspect.FlowBehavior OnExceptionFlowBehavior { get; set; }
+        public FlowBehavior OnExceptionFlowBehavior { get; set; }// = FlowBehavior.Return;
 
         /// <inheritdoc/>
         public bool ExistNextTestStep()

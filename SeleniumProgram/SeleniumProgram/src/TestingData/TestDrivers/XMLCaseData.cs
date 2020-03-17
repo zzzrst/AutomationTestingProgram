@@ -91,7 +91,12 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                     string name = "TestCase";
 
                     this.TestFlow = node;
-                    this.AddNodesToStack(this.TestFlow);
+
+                    // since this will not be running, there is no need to add to stack.
+                    if (performAction)
+                    {
+                        this.AddNodesToStack(this.TestFlow);
+                    }
 
                     if (InformationObject.RespectRepeatFor && node.Attributes["repeatFor"] != null)
                     {

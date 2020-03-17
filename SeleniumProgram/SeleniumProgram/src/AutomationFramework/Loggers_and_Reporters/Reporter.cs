@@ -5,8 +5,10 @@
 namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
 {
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
     using AutomationTestSetFramework;
 
     /// <summary>
@@ -17,8 +19,10 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         /// <summary>
         /// Initializes a new instance of the <see cref="Reporter"/> class.
         /// </summary>
-        public Reporter()
+        /// <param name="saveLocation">The location to save the file to.</param>
+        public Reporter(string saveLocation)
         {
+            this.SaveFileLocation = saveLocation;
             this.TestSetStatuses = new List<ITestSetStatus>();
             this.TestCaseStatuses = new List<ITestCaseStatus>();
             this.TestCaseToTestSteps = new Dictionary<ITestCaseStatus, List<ITestStepStatus>>();
@@ -71,6 +75,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         public void Report()
         {
             List<string> str = new List<string>();
+            str.Add($"Running SeleniumPerfXML Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
             foreach (ITestSetStatus testSetStatus in this.TestSetStatuses)
             {
                 str.Add("Name: " + testSetStatus.Name);

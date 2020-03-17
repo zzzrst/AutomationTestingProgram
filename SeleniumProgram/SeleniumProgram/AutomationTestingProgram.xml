@@ -228,10 +228,11 @@
             The implementation of the reporter class.
             </summary>
         </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor">
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor(System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter"/> class.
             </summary>
+            <param name="saveLocation">The location to save the file to.</param>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveFileLocation">
             <summary>
@@ -573,16 +574,6 @@
             Selenium program.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.Builders.TestAutomationBuilder.Browser">
-            <summary>
-            Gets or sets the browser to use.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.Builders.TestAutomationBuilder.TimeOutThreshold">
-            <summary>
-            Gets or sets the time out Threshold.
-            </summary>
-        </member>
         <member name="M:AutomationTestingProgram.Builders.TestAutomationBuilder.Build">
             <summary>
             Builds a new test automation driver.
@@ -696,6 +687,11 @@
             </summary>
             <param name="args">Arguments to be passed in.</param>
             <returns> 0 if no errors were met. </returns>
+        </member>
+        <member name="M:AutomationTestingProgram.FrameworkDriver.RunAODA">
+            <summary>
+            Saves the AODA result to the file location.
+            </summary>
         </member>
         <member name="T:AutomationTestingProgram.FrameworkOptions">
             <summary>

@@ -19,7 +19,7 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
             int seconds = int.Parse(this.Arguments["seconds"]);
-            Thread.Sleep(seconds);
+            Thread.Sleep(seconds * 1000);
         }
     }
 }

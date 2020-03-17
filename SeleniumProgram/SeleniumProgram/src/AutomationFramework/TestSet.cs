@@ -34,7 +34,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public ITestSetStatus TestSetStatus { get; set; }
 
         /// <inheritdoc/>
-        public int CurrTestCaseNumber { get; set; } = -1;
+        public int CurrTestCaseNumber { get; set; } = 0;
 
         /// <inheritdoc/>
         public IMethodBoundaryAspect.FlowBehavior OnExceptionFlowBehavior { get; set; }

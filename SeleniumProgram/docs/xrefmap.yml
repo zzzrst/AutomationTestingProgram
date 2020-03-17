@@ -236,12 +236,12 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
   nameWithType: Reporter
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor
-  name: Reporter()
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter__ctor
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Reporter()
-  nameWithType: Reporter.Reporter()
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor(System.String)
+  name: Reporter(String)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter__ctor_System_String_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor(System.String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Reporter(System.String)
+  nameWithType: Reporter.Reporter(String)
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor*
   name: Reporter
   href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter__ctor_
@@ -1695,19 +1695,6 @@ references:
   commentId: T:AutomationTestingProgram.Builders.TestAutomationBuilder
   fullName: AutomationTestingProgram.Builders.TestAutomationBuilder
   nameWithType: TestAutomationBuilder
-- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.Browser
-  name: Browser
-  href: api/AutomationTestingProgram.Builders.TestAutomationBuilder.html#AutomationTestingProgram_Builders_TestAutomationBuilder_Browser
-  commentId: P:AutomationTestingProgram.Builders.TestAutomationBuilder.Browser
-  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.Browser
-  nameWithType: TestAutomationBuilder.Browser
-- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.Browser*
-  name: Browser
-  href: api/AutomationTestingProgram.Builders.TestAutomationBuilder.html#AutomationTestingProgram_Builders_TestAutomationBuilder_Browser_
-  commentId: Overload:AutomationTestingProgram.Builders.TestAutomationBuilder.Browser
-  isSpec: "True"
-  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.Browser
-  nameWithType: TestAutomationBuilder.Browser
 - uid: AutomationTestingProgram.Builders.TestAutomationBuilder.Build
   name: Build()
   href: api/AutomationTestingProgram.Builders.TestAutomationBuilder.html#AutomationTestingProgram_Builders_TestAutomationBuilder_Build
@@ -1733,19 +1720,6 @@ references:
   commentId: F:AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.Selenium
   fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.Selenium
   nameWithType: TestAutomationBuilder.TestingDriverType.Selenium
-- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.TimeOutThreshold
-  name: TimeOutThreshold
-  href: api/AutomationTestingProgram.Builders.TestAutomationBuilder.html#AutomationTestingProgram_Builders_TestAutomationBuilder_TimeOutThreshold
-  commentId: P:AutomationTestingProgram.Builders.TestAutomationBuilder.TimeOutThreshold
-  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.TimeOutThreshold
-  nameWithType: TestAutomationBuilder.TimeOutThreshold
-- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.TimeOutThreshold*
-  name: TimeOutThreshold
-  href: api/AutomationTestingProgram.Builders.TestAutomationBuilder.html#AutomationTestingProgram_Builders_TestAutomationBuilder_TimeOutThreshold_
-  commentId: Overload:AutomationTestingProgram.Builders.TestAutomationBuilder.TimeOutThreshold
-  isSpec: "True"
-  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.TimeOutThreshold
-  nameWithType: TestAutomationBuilder.TimeOutThreshold
 - uid: AutomationTestingProgram.Builders.TestSetBuilder
   name: TestSetBuilder
   href: api/AutomationTestingProgram.Builders.TestSetBuilder.html
@@ -1862,6 +1836,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.FrameworkDriver.Main
   nameWithType: FrameworkDriver.Main
+- uid: AutomationTestingProgram.FrameworkDriver.RunAODA
+  name: RunAODA()
+  href: api/AutomationTestingProgram.FrameworkDriver.html#AutomationTestingProgram_FrameworkDriver_RunAODA
+  commentId: M:AutomationTestingProgram.FrameworkDriver.RunAODA
+  fullName: AutomationTestingProgram.FrameworkDriver.RunAODA()
+  nameWithType: FrameworkDriver.RunAODA()
+- uid: AutomationTestingProgram.FrameworkDriver.RunAODA*
+  name: RunAODA
+  href: api/AutomationTestingProgram.FrameworkDriver.html#AutomationTestingProgram_FrameworkDriver_RunAODA_
+  commentId: Overload:AutomationTestingProgram.FrameworkDriver.RunAODA
+  isSpec: "True"
+  fullName: AutomationTestingProgram.FrameworkDriver.RunAODA
+  nameWithType: FrameworkDriver.RunAODA
 - uid: AutomationTestingProgram.FrameworkOptions
   name: FrameworkOptions
   href: api/AutomationTestingProgram.FrameworkOptions.html

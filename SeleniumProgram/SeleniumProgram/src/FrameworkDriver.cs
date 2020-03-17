@@ -79,7 +79,10 @@ namespace AutomationTestingProgram
             return resultCode;
         }
 
-        private static void RunAODA()
+        /// <summary>
+        /// Saves the AODA result to the file location.
+        /// </summary>
+        public static void RunAODA()
         {
             if (InformationObject.RespectRunAODAFlag)
             {

@@ -84,10 +84,7 @@ namespace AutomationTestingProgram
             LogSaveFileLocation = logSaveLocation;
             ScreenshotSaveLocation = screenshotSaveLocation;
 
-            Reporter = new Reporter()
-            {
-                SaveFileLocation = Path.Combine(reportSaveLocation, "Report.txt"),
-            };
+            Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
 
             RespectRepeatFor = bool.Parse(Environment.GetEnvironmentVariable("respectRepeatFor"));
             RespectRunAODAFlag = bool.Parse(Environment.GetEnvironmentVariable("respectRunAODAFlag"));
