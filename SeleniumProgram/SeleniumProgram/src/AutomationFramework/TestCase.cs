@@ -116,7 +116,10 @@ namespace AutomationTestingProgram.AutomationFramework
                 this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a test step";
             }
 
-            InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{testStepStatus.Actual}\"");
+            if (testStepStatus.Actual != "No Log")
+            {
+                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{testStepStatus.Actual}\"");
+            }
 
             InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);
         }

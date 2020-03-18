@@ -115,6 +115,10 @@ namespace AutomationTestingProgram.AutomationFramework
                     this.TestStepStatus.Actual = totalTime.ToString();
                 }
             }
+            else
+            {
+                this.TestStepStatus.Actual = "No Log";
+            }
         }
 
         private double GetTotalElapsedTime()
