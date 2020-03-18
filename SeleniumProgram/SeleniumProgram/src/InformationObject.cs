@@ -77,10 +77,14 @@ namespace AutomationTestingProgram
             string reportSaveLocation = Environment.GetEnvironmentVariable("reportSaveFileLocation");
             string screenshotSaveLocation = Environment.GetEnvironmentVariable("screenshotSaveLocation");
 
-            string xmlFile = Environment.GetEnvironmentVariable("testSetDataArgs");
-            string xmlFileName = xmlFile.Substring(xmlFile.LastIndexOf("\\") + 1);
+            string testSetFile = Environment.GetEnvironmentVariable("testSetDataArgs");
+            string csvFileName = testSetFile.Substring(testSetFile.LastIndexOf("\\") + 1);
+            csvFileName = csvFileName.Substring(0, csvFileName.Length - 4);
 
-            CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{xmlFileName}.csv");
+            CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{csvFileName}.csv");
+            //CSVLogger.AddResults($"Transaction, {DateTime.Now.ToString("G")}");
+            //CSVLogger.AddResults($"Environment URL, {this.URL}");
+
             LogSaveFileLocation = logSaveLocation;
             ScreenshotSaveLocation = screenshotSaveLocation;
 
