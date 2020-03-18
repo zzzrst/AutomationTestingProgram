@@ -110,7 +110,7 @@ namespace AutomationTestingProgram.AutomationFramework
                 ITestStepLogger log = new TestStepLogger();
                 log.Log(this);
 
-                if (this.ShouldExecuteVariable)
+                if (this.TestStepStatus.Actual == string.Empty)
                 {
                     this.TestStepStatus.Actual = totalTime.ToString();
                 }
