@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SeleniumPerf"
+		targetNamespace="http://qa/SeleniumPerf"
+		elementFormDefault="qualified"
+		xmlns="http://qa/SeleniumPerf"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- root element -->
+	<xs:element name="TestSet">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Parameters" type="parameterType" />
+				<xs:element name="SpecialElements" type="specialElementType" />
+				<xs:element name="TestCaseFlow" type="testCaseFlowType"/>
+				<xs:element name="TestCases" type="testCasesType"/>
+				<xs:element name="TestSteps" type="testStepsType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!--   __________________Second Level Types________________________ -->
+	<!-- Parameter Type-->
+	<xs:complexType name="parameterType">
+		<xs:sequence>
+			<xs:element name="Browser" type="supportedBrowserType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Environment" type="supportedEnvironmentType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="URL" type="nonEmptyString" minOccurs="0" maxOccurs="1"/>
+
+			<xs:element name="RespectRepeatFor" type="boolString" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="RespectRunAODAFlag" type="boolString" minOccurs="0" maxOccurs="1"/>
+
+			<xs:element name="WarningThreshold" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="TimeOutThreshold" type="positiveInteger" minOccurs="1" maxOccurs="1"/>
+
+			<xs:element name="DataFile" type="nonEmptyString" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="CSVSaveLocation" type="nonEmptyString" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="LogSaveLocation" type="nonEmptyString" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ScreenshotSaveLocation" type="nonEmptyString" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Special Element Type-->
+	<xs:complexType name="specialElementType">
+		<xs:sequence>
+			<xs:element name="LoadingSpinner" type="nonEmptyString" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="ErrorContainer" type="nonEmptyString" minOccurs="0" maxOccurs="1">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Test Case Flow Type-->
+	<xs:complexType name="testCaseFlowType">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="If" type="ifTypeforTestCaseFlow"/>
+			<xs:element name="RunTestCase" type="nonEmptyString" />
+		</xs:choice>
+	</xs:complexType>
+
+	<!-- Test Cases Type-->
+	<xs:complexType name="testCasesType">
+		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="TestCase" type="testCaseType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Test Steps Type-->
+	<xs:complexType name="testStepsType">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="ChooseCollection" type="chooseCollectionType"/>
+			<xs:element name="ClickElementByXPath" type="clickElementByXPathType"/>
+			<xs:element name="CloseBrowser" type="closeBrowserType"/>
+			<xs:element name="CloseTab" type="closeTabType" />
+			<xs:element name="DDLSelectByXPath" type="dDLSelectByXPathType" />
+      <xs:element name="MaximizeBrowser" type="maximizeBrowserType" />
+      <xs:element name="NavigateToURL" type="navigateToURLType"/>
+			<xs:element name="OpenBrowser" type="openBrowserType" />
+			<xs:element name="PopulateElementByXPath" type="populateElementByXPathType" />
+			<xs:element name="SignIn" type="signInType"/>
+			<xs:element name="SwitchIntoIFrame" type="switchIntoIFrameType"/>
+			<xs:element name="SwitchToTab" type="switchToTabType"/>
+			<xs:element name="WaitForElement" type="waitForElementType" />
+			<xs:element name="WaitInSeconds" type="waitInSecondsType" />
+		</xs:choice>
+	</xs:complexType>
+	<!--   __________________Second Level Types________________________ -->
+
+
+	<!--   __________________Third Level Types________________________ -->
+	<!-- Browser Types -->
+	<xs:simpleType name="supportedBrowserType">
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="ie" />
+			<xs:enumeration value="chrome" />
+			<xs:enumeration value="firefox" />
+			<xs:enumeration value="edge" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Environment Types -->
+	<xs:simpleType name="supportedEnvironmentType">
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="EDCS-1" />
+			<xs:enumeration value="EDCS-2" />
+			<xs:enumeration value="EDCS-3" />
+			<xs:enumeration value="EDCS-4" />
+			<xs:enumeration value="EDCS-5" />
+			<xs:enumeration value="EDCS-6" />
+			<xs:enumeration value="EDCS-7" />
+			<xs:enumeration value="EDCS-8" />
+			<xs:enumeration value="EDCS-9" />
+			<xs:enumeration value="EDCS-10" />
+			<xs:enumeration value="EDCS-QA" />
+			<xs:enumeration value="EDCS-INT" />
+			<xs:enumeration value="EDCS-UAT" />
+			<xs:enumeration value="OnSIS_Ops-Int" />
+			<xs:enumeration value="OnSIS_Proj-Int" />
+			<xs:enumeration value="OnSIS_1" />
+			<xs:enumeration value="OnSIS_2" />
+			<xs:enumeration value="OpenSims" />
+			<xs:enumeration value="OpenSims_UAT" />
+			<xs:enumeration value="PAA" />
+			<xs:enumeration value="PPE-2" />
+			<xs:enumeration value="PROD" />
+      <xs:enumeration value="SFIS-QA" />
+      <xs:enumeration value="Test" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- If Type for Test Case Flow -->
+	<xs:complexType name="ifTypeforTestCaseFlow">
+		<xs:sequence>
+			<xs:element name="Then" type="bodyTypeforTestCaseFlow" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ElseIf" type="bodyIfTypeforTestCaseFlow" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Else" type="bodyTypeforTestCaseFlow" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="elementXPath" type="nonEmptyString" use="required"/>
+		<xs:attribute name="condition" type="conditionType" use="required"/>
+	</xs:complexType>
+
+	<!-- Body Type for Test Case Flow -->
+	<xs:complexType name="bodyTypeforTestCaseFlow">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="RunTestCase" type="nonEmptyString" />
+			<xs:element name="If" type="ifTypeforTestCaseFlow"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<!-- Body If Type for Test Case Flow -->
+	<xs:complexType name="bodyIfTypeforTestCaseFlow">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="RunTestCase" type="nonEmptyString" />
+			<xs:element name="If" type="ifTypeforTestCaseFlow"/>
+		</xs:choice>
+		<xs:attribute name="elementXPath" type="nonEmptyString" use="required"/>
+		<xs:attribute name="condition" type="conditionType" use="required"/>
+	</xs:complexType>
+
+	<!-- Test Case Type -->
+	<xs:complexType name="testCaseType">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="If" type="ifTypeforTestCases"/>
+			<xs:element name="RunTestStep" type="nonEmptyString"/>
+		</xs:choice>
+		<xs:attribute name="name" type="nonEmptyString" use="required"/>
+		<xs:attribute name="id" type="nonEmptyString" use="required"/>
+		<xs:attribute name="repeatFor" type="positiveInteger"/>
+	</xs:complexType>
+
+	<!-- If Type for Test Cases-->
+	<xs:complexType name="ifTypeforTestCases">
+		<xs:sequence>
+			<xs:element name="Then" type="bodyTypeforTestCases" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ElseIf" type="bodyIfTypeforTestCases" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Else" type="bodyTypeforTestCases" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="elementXPath" type="nonEmptyString" use="required"/>
+		<xs:attribute name="condition" type="conditionType" use="required"/>
+	</xs:complexType>
+
+	<!-- Body Type for Test Cases -->
+	<xs:complexType name="bodyTypeforTestCases">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="RunTestStep" type="nonEmptyString" />
+			<xs:element name="If" type="ifTypeforTestCases"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<!-- Body If Type for Test Cases -->
+	<xs:complexType name="bodyIfTypeforTestCases">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="RunTestStep" type="nonEmptyString" />
+			<xs:element name="If" type="ifTypeforTestCases"/>
+		</xs:choice>
+		<xs:attribute name="elementXPath" type="nonEmptyString" use="required"/>
+		<xs:attribute name="condition" type="conditionType" use="required"/>
+	</xs:complexType>
+	
+	<!-- Condition Type -->
+	<xs:simpleType name="conditionType">
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="EXIST" />
+			<xs:enumeration value="DNE" />
+		</xs:restriction>
+	</xs:simpleType>
+	<!--   __________________Third Level Types________________________ -->
+
+
+	<!-- Test Action Types -->
+	<xs:complexType name="baseTestStepType">
+		<xs:attribute name="name" type="nonEmptyString" use="required"/>
+		<xs:attribute name="id" type="nonEmptyString" use="required"/>
+		<xs:attribute name="runAODA" type="xs:boolean"/>
+		<xs:attribute name="runAODAPageName" type="nonEmptyString"/>
+		<xs:attribute name="log" type="xs:boolean"/>
+	</xs:complexType>
+	
+	
+	<!-- ChooseCollection-->
+	<xs:complexType name="chooseCollectionType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="collectionSearchField" type="nonEmptyString" use="required"/>
+				<xs:attribute name="collectionName" type="nonEmptyString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- clickElementByXPathType-->
+	<xs:complexType name="clickElementByXPathType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="xPath" type="nonEmptyString" use="required"/>
+		<xs:attribute name="useJS" type="nonEmptyString" use="optional">
+			<xs:annotation>
+				<xs:documentation>Give value of true if you want this to be executed by Javascript. Else, do not use this attribute.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- CloseBrowserType-->
+	<xs:complexType name="closeBrowserType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- CloseTabType-->
+	<xs:complexType name="closeTabType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="tabIndex" type="positiveInteger" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- DDLSelectByXPathType-->
+	<xs:complexType name="dDLSelectByXPathType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="xPath" type="nonEmptyString" use="required"/>
+				<xs:attribute name="selection" type="nonEmptyString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+  <!-- MaximizeBrowser-->
+  <xs:complexType name="maximizeBrowserType">
+    <xs:complexContent>
+      <xs:extension base="baseTestStepType">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- OpenBrowserType-->
+  <xs:complexType name="openBrowserType">
+    <xs:complexContent>
+      <xs:extension base="baseTestStepType">
+        <xs:attribute name="url" type="nonEmptyString" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- NavigateToURLType-->
+	<xs:complexType name="navigateToURLType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+        <xs:attribute name="url" type="nonEmptyString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- PopulateObjectByXPathType-->
+	<xs:complexType name="populateElementByXPathType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="xPath" type="nonEmptyString" use="required"/>
+				<xs:attribute name="text" type="nonEmptyString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- SignIn -->
+	<xs:complexType name="signInType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="username" type="nonEmptyString" use="required"/>
+				<xs:attribute name="password" type="nonEmptyString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- switchIntoIFrameType -->
+	<xs:complexType name="switchIntoIFrameType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="xPath" type="nonEmptyString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- SwitchToTabType-->
+	<xs:complexType name="switchToTabType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="tabIndex" type="positiveInteger" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- WaitForElementType-->
+	<xs:complexType name="waitForElementType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="invisible" type="xs:boolean" use="required"/>
+				<xs:attribute name="xPath" type="nonEmptyString" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- WaitInSecondsTypee-->
+	<xs:complexType name="waitInSecondsType">
+		<xs:complexContent>
+			<xs:extension base="baseTestStepType">
+				<xs:attribute name="seconds" type="positiveInteger" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- ______________________________________________________________________ -->
+
+	<!-- Logical General Types-->
+	<xs:simpleType name="boolString">
+		<xs:annotation>
+			<xs:documentation>Please specify a boolean string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="true"/>
+			<xs:enumeration value="false"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="nonEmptyString">
+		<xs:annotation>
+			<xs:documentation>Please specify a non-empty string.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="positiveInteger">
+		<xs:restriction base="xs:double">
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+</xs:schema>
