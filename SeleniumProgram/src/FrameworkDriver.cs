@@ -155,7 +155,8 @@ namespace AutomationTestingProgram
                 foreach (string paramName in parameters.Keys)
                 {
                     // If it's not filled in already, fill it in.
-                    if (Environment.GetEnvironmentVariable(paramName) == null || Environment.GetEnvironmentVariable(paramName) == string.Empty)
+                    if (Environment.GetEnvironmentVariable(paramName) == null || Environment.GetEnvironmentVariable(paramName) == string.Empty
+                        || Environment.GetEnvironmentVariable(paramName) == "0")
                     {
                         Environment.SetEnvironmentVariable(paramName, parameters[paramName]);
                     }
