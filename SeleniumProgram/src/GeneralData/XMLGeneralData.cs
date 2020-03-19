@@ -123,7 +123,6 @@ namespace AutomationTestingProgram.GeneralData
         /// <inheritdoc/>
         public bool Verify(string xmlFile)
         {
-            return true;
             try
             {
                 XmlReaderSettings settings = new XmlReaderSettings();

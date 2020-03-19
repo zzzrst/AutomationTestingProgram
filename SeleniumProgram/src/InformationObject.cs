@@ -82,8 +82,8 @@ namespace AutomationTestingProgram
             csvFileName = csvFileName.Substring(0, csvFileName.Length - 4);
 
             CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{csvFileName}.csv");
-            //CSVLogger.AddResults($"Transaction, {DateTime.Now.ToString("G")}");
-            //CSVLogger.AddResults($"Environment URL, {this.URL}");
+            CSVLogger.AddResults($"Transaction, {DateTime.Now.ToString("G")}");
+            CSVLogger.AddResults($"Environment URL, {Environment.GetEnvironmentVariable("url")}");
 
             LogSaveFileLocation = logSaveLocation;
             ScreenshotSaveLocation = screenshotSaveLocation;
