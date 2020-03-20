@@ -24,7 +24,7 @@
 	</TestCaseFlow>
 	
 	<TestCases>
-		<TestCase name='ase 1C' id='Fake Test Case ID 1'>
+		<TestCase name='Case 1' id='Fake Test Case ID 1'>
 			<RunTestStep>Test Step</RunTestStep>
 		</TestCase>
 	</TestCases>

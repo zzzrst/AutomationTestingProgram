@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "AutomationTestingProgram": {
-      "commandName": "Project",
-      "commandLineArgs": "--setType \"XML\" --setArgs \"C:\\Users\\DuongCh\\Projects\\SeleniumPerfXML\\SeleniumPerfXMLNUnitTest\\Testing\\TestTestStep\\TestAllConcreteSteps.xml\""
-    }
-  }
-}

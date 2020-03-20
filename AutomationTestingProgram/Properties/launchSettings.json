@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AutomationTestingProgram": {
+      "commandName": "Project",
+      "commandLineArgs": "--setType \"XML\" --setArgs \"C:\\SeleniumPerfXML\\Test.xml\""
+    }
+  }
+}

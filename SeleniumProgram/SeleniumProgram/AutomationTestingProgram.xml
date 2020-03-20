@@ -816,7 +816,7 @@
         </member>
         <member name="T:AutomationTestingProgram.GeneralData.ITestGeneralData">
             <summary>
-            General data regarding the test data type.
+            General data regarding the test data type. This should be ran once at the beginning and never used again.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.GeneralData.ITestGeneralData.Name">
