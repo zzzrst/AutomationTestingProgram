@@ -9,7 +9,11 @@ namespace AutomationTestingProgram
     using System.Diagnostics;
     using System.IO;
     using System.IO.Compression;
+    using System.Linq;
+    using System.Net;
     using System.Reflection;
+    using System.Text.RegularExpressions;
+    using System.Threading;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.Builders;
@@ -30,6 +34,33 @@ namespace AutomationTestingProgram
         /// <returns> 0 if no errors were met. </returns>
         public static int Main(string[] args)
         {
+            Logger.Info("Checking for updates...");
+            if (CheckForUpdates(Assembly.GetExecutingAssembly().Location))
+            {
+                string newArgs = string.Join(" ", args.Select(x => string.Format("\"{0}\"", x)).ToList());
+                Process p = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    UseShellExecute = false,
+                    RedirectStandardOutput = false,
+                    RedirectStandardError = false,
+                    FileName = "AutoUpdater.exe",
+                    Arguments = newArgs,
+                };
+
+                p.StartInfo = startInfo;
+                p.Start();
+
+                Thread.Sleep(5000);
+
+                // Closes the current process
+                Environment.Exit(0);
+            }
+            else
+            {
+                Logger.Info("Program is up to date");
+            }
+
             bool errorParsing;
             int resultCode = 0;
 
@@ -80,6 +111,29 @@ namespace AutomationTestingProgram
         }
 
         /// <summary>
+        /// Checks to see if there is any update avalible.
+        /// </summary>
+        /// <param name="program">Name of the program to check.</param>.
+        /// <returns>true if there are updates.</returns>
+        public static bool CheckForUpdates(string program)
+        {
+            Version currentReleaseVersion = new Version(FileVersionInfo.GetVersionInfo(program).ProductVersion);
+
+            // get the release version
+            Version latestReleaseVersion = new Version(GetLatestReleaseVersion("https://github.com/zzzrst/AutomationTestingProgram/releases/latest"));
+
+            Logger.Info($"Current Version: {currentReleaseVersion}");
+
+            if (latestReleaseVersion.CompareTo(currentReleaseVersion) > 0)
+            {
+                Logger.Info($"Program is out of date! Version {latestReleaseVersion} is avaliable.");
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Saves the AODA result to the file location.
         /// </summary>
         public static void RunAODA()
@@ -108,6 +162,14 @@ namespace AutomationTestingProgram
             }
 
             InformationObject.TestAutomationDriver.Quit();
+        }
+
+        private static string GetLatestReleaseVersion(string url)
+        {
+            WebClient wc = new WebClient();
+            string result = wc.DownloadString(url);
+            Regex rx = new Regex("v[0-9]*[.][0-9]*[.][0-9]*");
+            return rx.Match(result).Value.Substring(1);
         }
 
         private static void SetDefaultParameters()

@@ -688,6 +688,13 @@
             <param name="args">Arguments to be passed in.</param>
             <returns> 0 if no errors were met. </returns>
         </member>
+        <member name="M:AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)">
+            <summary>
+            Checks to see if there is any update avalible.
+            </summary>
+            <param name="program">Name of the program to check.</param>.
+            <returns>true if there are updates.</returns>
+        </member>
         <member name="M:AutomationTestingProgram.FrameworkDriver.RunAODA">
             <summary>
             Saves the AODA result to the file location.

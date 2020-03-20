@@ -1820,6 +1820,19 @@ references:
   commentId: T:AutomationTestingProgram.FrameworkDriver
   fullName: AutomationTestingProgram.FrameworkDriver
   nameWithType: FrameworkDriver
+- uid: AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)
+  name: CheckForUpdates(String)
+  href: api/AutomationTestingProgram.FrameworkDriver.html#AutomationTestingProgram_FrameworkDriver_CheckForUpdates_System_String_
+  commentId: M:AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)
+  fullName: AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)
+  nameWithType: FrameworkDriver.CheckForUpdates(String)
+- uid: AutomationTestingProgram.FrameworkDriver.CheckForUpdates*
+  name: CheckForUpdates
+  href: api/AutomationTestingProgram.FrameworkDriver.html#AutomationTestingProgram_FrameworkDriver_CheckForUpdates_
+  commentId: Overload:AutomationTestingProgram.FrameworkDriver.CheckForUpdates
+  isSpec: "True"
+  fullName: AutomationTestingProgram.FrameworkDriver.CheckForUpdates
+  nameWithType: FrameworkDriver.CheckForUpdates
 - uid: AutomationTestingProgram.FrameworkDriver.Main(System.String[])
   name: Main(String[])
   href: api/AutomationTestingProgram.FrameworkDriver.html#AutomationTestingProgram_FrameworkDriver_Main_System_String___
