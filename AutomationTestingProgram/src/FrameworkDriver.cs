@@ -35,7 +35,7 @@ namespace AutomationTestingProgram
         public static int Main(string[] args)
         {
             Logger.Info("Checking for updates...");
-            if (CheckForUpdates(Assembly.GetExecutingAssembly().Location))
+            if (false && CheckForUpdates(Assembly.GetExecutingAssembly().Location))
             {
                 string newArgs = string.Join(" ", args.Select(x => string.Format("\"{0}\"", x)).ToList());
                 Process p = new Process();
