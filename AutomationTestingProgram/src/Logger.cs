@@ -20,7 +20,7 @@ namespace AutomationTestingProgram
     /// </summary>
     public static class Logger
     {
-        private static readonly string LOGCONFIGFILE = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\log4net.config";
+        private static readonly string LOGCONFIGFILE = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/log4net.config";
 
         private static readonly ILog Log = GetLogger(typeof(Logger));
         private static Microsoft.Extensions.Logging.ILogger iLogger;
