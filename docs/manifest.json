@@ -1,0 +1,1038 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/DuongCh/Projects/SeleniumFramework/AutomationTestingProgram",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.ChooseCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.ChooseCollection.html",
+          "hash": "b5WJeaHLouPQ9A74zxry8A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.ClickElementByXPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.ClickElementByXPath.html",
+          "hash": "V/a6mk13qf4vUxCsiOch6A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.CloseBrowser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.CloseBrowser.html",
+          "hash": "YkkyA/kFtgi4CR1BulueVg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.CloseTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.CloseTab.html",
+          "hash": "W/ZqwsfuakBczEq1zZwgVA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.DDLSelectByXPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.DDLSelectByXPath.html",
+          "hash": "uRa2cK/RTAxBKaaD0MCDZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.html",
+          "hash": "5kM1VQ4fpMo8fGd85IqDfg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.FakeTestStep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.FakeTestStep.html",
+          "hash": "4NFvYJJN7BqJWjVmp4LuzA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html",
+          "hash": "cyjSG1JDVdEnCtM2zV3qTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.html",
+          "hash": "tD5ty9yFsFFRNZPrk5HKig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.html",
+          "hash": "98ok4p3on80+rfz8LNaoMw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.html",
+          "hash": "sR9gsyx6PJgm/2kPAl5qog=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.html",
+          "hash": "tzPHnAP+/AdO8oImPOi0hw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.MaximizeBrowser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.MaximizeBrowser.html",
+          "hash": "vHqR3XVbP5ElJFTa3nHdDA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.NavigateToURL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.NavigateToURL.html",
+          "hash": "iVOFNPx+kZKpNV1Hohd5Aw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.OpenBrowser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.OpenBrowser.html",
+          "hash": "psveqHDhnHdi1IfHTk/qzA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.PopulateElementByXPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.PopulateElementByXPath.html",
+          "hash": "rktNKm5B97ZNMXJh/SmgYw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.SignIn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.SignIn.html",
+          "hash": "eN0UsbKD5vpGZL0ZXgKwPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.SwitchIntoIFrame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.SwitchIntoIFrame.html",
+          "hash": "qgKsi1FuEr7lqHEltE2mcQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.SwitchToTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.SwitchToTab.html",
+          "hash": "frQ33ZEIFpJje5iAlfr0rQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.TestCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestCase.html",
+          "hash": "NkAh3hBPFKg+m0XhQv1FBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.TestCaseStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestCaseStatus.html",
+          "hash": "iOaVKCuOY7oNstR/jBk9+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.TestSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestSet.html",
+          "hash": "+E1KlgEUIwyGhjcnCYIvUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.TestSetStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestSetStatus.html",
+          "hash": "dJ2Q9fXycuPbs1V0XVIzwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.TestStep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestStep.html",
+          "hash": "ZARpq2pO4PLYmLDsdLyU5w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.TestStepStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html",
+          "hash": "3/M6lzL6Ojsyrb6tmqjsCA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.WaitForElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.WaitForElement.html",
+          "hash": "twgaKrTx90Jn61zkIgR7/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.WaitInSeconds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.WaitInSeconds.html",
+          "hash": "kJTinqrSq2iZZ0jxSuOoPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.AutomationFramework.html",
+          "hash": "VcfOWXjiUWlYHQbp0NfIOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.html",
+          "hash": "Yk/nzv8aBRIY7iEV80DXdA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.html",
+          "hash": "ghzHJsG6Ug5LTuWLNcyMMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.html",
+          "hash": "VypuuS4ytvaiMmBbcozvrg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Builders.TestSetBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Builders.TestSetBuilder.html",
+          "hash": "utx0FsQEAxIgv1zxhd2hgA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Builders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Builders.html",
+          "hash": "p57FiK80/xLydp15o7un9w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.CSVLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.CSVLogger.html",
+          "hash": "UMiJcM3uw8o495Ye8qIm3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.FrameworkDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.FrameworkDriver.html",
+          "hash": "8k1B5eoIXBP/ofX0PPmpmA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.FrameworkOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.FrameworkOptions.html",
+          "hash": "d5Vi9XjjPY1Tt+seADQ5pg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.GeneralData.ITestGeneralData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.GeneralData.ITestGeneralData.html",
+          "hash": "r4ZqkXts43sWTgElrX0vuw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.GeneralData.XMLGeneralData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.GeneralData.XMLGeneralData.html",
+          "hash": "CaGPere6Sr/WG17h3ZsmCg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.GeneralData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.GeneralData.html",
+          "hash": "CkQVvQEpge81gpZiyVD2/A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Helper.Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Helper.Resource.html",
+          "hash": "8LHB5V9HpsPMhgBcJq11GQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Helper.XMLHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Helper.XMLHelper.html",
+          "hash": "N+bTRPIxZaDLaWXMRfe1KA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Helper.html",
+          "hash": "vyhCuX5asfWQneghY+EeCg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.InformationObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.InformationObject.html",
+          "hash": "pWcPG6rNKRT5V4cij5p7mA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.Logger.html",
+          "hash": "8coDdmglYoNW2O+CxzD6UA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.ReflectiveGetter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.ReflectiveGetter.html",
+          "hash": "8/e2SAnG6A9UuubUResNrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.Browser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.Browser.html",
+          "hash": "AhD3781aHV50McMZ9ZQ71g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.ElementState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.ElementState.html",
+          "hash": "ZQfG2P4puen2MFfPZrfORQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.html",
+          "hash": "hfWwVbSUcFYwA+ckrt97ZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.SeleniumDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.SeleniumDriver.html",
+          "hash": "Gkq1AH2mvzSlyM3w2mJBPg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.html",
+          "hash": "ENtBFxlBaqLoJIV0JnJFYg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.ITestCaseData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.ITestCaseData.html",
+          "hash": "RUk9mIa8IuJdBMpAirOUHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.ITestData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.ITestData.html",
+          "hash": "2paPHiWxZyW2kKp6FisIpw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.ITestSetData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.ITestSetData.html",
+          "hash": "BYYZdg/4uDsYfGlxOdVS+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.ITestStepData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.ITestStepData.html",
+          "hash": "81x/t2jIsfax+70u7zTvJA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html",
+          "hash": "PZlMu+2jWdUr4Wiz7OiH7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html",
+          "hash": "joFVmP7eNT/nXbD+pIsGpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html",
+          "hash": "2jQ1kKLV6L2zFvFzcG+W/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html",
+          "hash": "r4GTBaZrdxx7bFCq+X263Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html",
+          "hash": "I6XbYPI7e5jvxRww/zXCUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.html",
+          "hash": "NYe9onbsscsILI/56YN1KA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.html",
+          "hash": "PsauYGN9ETZg8XgavohjYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.html",
+          "hash": "AxKG5mE5ltUwrL6GwMdZmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "ED7Nz/I+3f8SSSqk6YgVyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "iAPZoQOMp8T23zVa/dulBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework.html",
+          "hash": "iEt3S/qpw0217IHR6UgPiQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework/ConcreteSteps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework/ConcreteSteps.html",
+          "hash": "u1il3kCsOs7ssJH7wOyQQg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework/ReporterLogger.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework/ReporterLogger.html",
+          "hash": "evIfugMRA4FNIK5i0W6Mxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework/TestObjects.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework/TestObjects.html",
+          "hash": "9EkJaKlt6CIImEPFu11tag=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver.html",
+          "hash": "kNIOie3+BjTuQvCmGpMj0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver/AddingMore.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver/AddingMore.html",
+          "hash": "AamwWww48zv7J4MIiy1xDA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver/ITestAutomation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver/ITestAutomation.html",
+          "hash": "hkOAmlhIYzW2vwpccVO+0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver/SeleniumDriver.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver/SeleniumDriver.html",
+          "hash": "UBOx9cih1GrOSmJX0dE7Jg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData.html",
+          "hash": "UR4hvSYBREMdPYGVT0dS0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/AddingData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/AddingData.html",
+          "hash": "PIyrxys7HY+jHvpjl5Z93g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/ITestData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/ITestData.html",
+          "hash": "ckYRCw9pVGStjEPQoYiGbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/ITestGeneralData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/ITestGeneralData.html",
+          "hash": "AqwaCs34c6Ge0nwTgXO4lg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/TextData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/TextData.html",
+          "hash": "2RoTgy0l9KgGQ5B9SUOimw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/XMLData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/XMLData.html",
+          "hash": "T6rp3ljJOBwaK0gVvGtcyA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "8jSF0PIVsfsZWFTxaNkmyw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "//yxJ46RK5WnPUTJJD+WJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "kM1AWrDF76eCdN8H3ULN3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 17,
+          "skipped_file_count": 17
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 62,
+          "skipped_file_count": 62
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

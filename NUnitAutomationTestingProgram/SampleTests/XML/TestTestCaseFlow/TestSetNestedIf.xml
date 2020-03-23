@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSet xmlns="http://qa/SeleniumPerf">
+	<Parameters>
+		<Browser>chrome</Browser>
+		<Environment>Test</Environment>
+		<URL>testUrl</URL>
+				
+		<WarningThreshold>60</WarningThreshold>
+		<TimeOutThreshold>120</TimeOutThreshold>
+		
+		<CSVSaveLocation>C:\SeleniumPerfXML</CSVSaveLocation>
+	</Parameters>
+	
+	<SpecialElements/>
+	
+	<TestCaseFlow>
+		<If elementXPath='//div' condition='DNE'>
+			<Then>
+				<If elementXPath='//div' condition='DNE'>
+					<Then>
+						<RunTestCase>Fake Test Case ID 1</RunTestCase>
+					</Then>
+				</If>
+				<RunTestCase>Fake Test Case ID 1</RunTestCase>
+			</Then>
+		</If>
+	</TestCaseFlow>
+	
+	<TestCases>
+		<TestCase name='Case 1' id='Fake Test Case ID 1'>
+			<RunTestStep>Test Step</RunTestStep>
+		</TestCase>
+	</TestCases>
+	
+	<TestSteps>
+		<FakeTestStep id='Test Step' name='Testing'/>
+	</TestSteps>
+
+</TestSet>

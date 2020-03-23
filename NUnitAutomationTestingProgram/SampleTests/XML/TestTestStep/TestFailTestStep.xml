@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSet xmlns="http://qa/SeleniumPerf">
+	<Parameters>
+		<Browser>chrome</Browser>
+		<Environment>Test</Environment>
+		<URL>testUrl</URL>
+				
+		<WarningThreshold>60</WarningThreshold>
+		<TimeOutThreshold>120</TimeOutThreshold>
+		
+		<CSVSaveLocation>C:\SeleniumPerfXML</CSVSaveLocation>
+	</Parameters>
+	
+	<SpecialElements/>
+	
+	<TestCaseFlow>
+		<RunTestCase>RunFailTestCase</RunTestCase>
+	</TestCaseFlow>
+	
+	<TestCases>
+		<TestCase name='Running Fail Test Case' id='RunFailTestCase'>
+			<RunTestStep>Fail Test Step</RunTestStep>
+		</TestCase>
+	</TestCases>
+	
+	<TestSteps>
+		<FakeFailingTestStep id='Fail Test Step' name='Throwing Exception'/>
+	</TestSteps>
+
+</TestSet>
