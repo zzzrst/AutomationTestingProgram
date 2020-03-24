@@ -6,7 +6,7 @@ namespace AutomationTestingProgram.Builders
 {
     using System;
     using AutomationTestingProgram.TestAutomationDriver;
-    using static AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver;
+    using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
     /// Builds a new selenium Driver based on the given variables.
@@ -29,7 +29,7 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         public void Build()
         {
-            string testingDriver = Environment.GetEnvironmentVariable("testAutomationDriver");
+            string testingDriver = GetEnvironmentVariable(EnvVar.TestAutomationDriver);
             ITestAutomationDriver automationDriver = ReflectiveGetter.GetImplementationOfType<ITestAutomationDriver>()
                                 .Find(x => x.Name.Equals(testingDriver));
             if (automationDriver == null)

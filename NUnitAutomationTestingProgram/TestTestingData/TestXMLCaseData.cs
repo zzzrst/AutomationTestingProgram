@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using static AutomationTestingProgram.InformationObject;
 
 namespace NUnitAutomationTestingProgram.TestTestingData
 {
@@ -201,25 +202,25 @@ namespace NUnitAutomationTestingProgram.TestTestingData
 
         private TestSet buildTestSet(string testFileName, string url = "testUrl")
         {
-            Environment.SetEnvironmentVariable("browser", "chrome");
-            Environment.SetEnvironmentVariable("environment", "");
-            Environment.SetEnvironmentVariable("timeOutThreshold", "0");
-            Environment.SetEnvironmentVariable("warningThreshold", "0");
-            Environment.SetEnvironmentVariable("url", url);
-            Environment.SetEnvironmentVariable("dataFile", $"{readFileLocation}{testFileName}");
-            Environment.SetEnvironmentVariable("csvSaveFileLocation", saveFileLocation);
-            Environment.SetEnvironmentVariable("logSaveFileLocation", saveFileLocation);
-            Environment.SetEnvironmentVariable("reportSaveFileLocation", saveFileLocation);
-            Environment.SetEnvironmentVariable("screenshotSaveLocation", saveFileLocation);
-            Environment.SetEnvironmentVariable("testAutomationDriver", "selenium");
-            Environment.SetEnvironmentVariable("testSetDataType", "XML");
-            Environment.SetEnvironmentVariable("testSetDataArgs", $"{readFileLocation}{testFileName}");
-            Environment.SetEnvironmentVariable("testCaseDataType", Environment.GetEnvironmentVariable("testSetDataType"));
-            Environment.SetEnvironmentVariable("testStepDataType", Environment.GetEnvironmentVariable("testCaseDataType"));
-            Environment.SetEnvironmentVariable("testCaseDataArgs", Environment.GetEnvironmentVariable("testSetDataArgs"));
-            Environment.SetEnvironmentVariable("testStepDataArgs", Environment.GetEnvironmentVariable("testCaseDataArgs"));
-            Environment.SetEnvironmentVariable("respectRepeatFor", "true");
-            Environment.SetEnvironmentVariable("respectRunAODAFlag", "true");
+            SetEnvironmentVariable(EnvVar.Browser, "chrome");
+            SetEnvironmentVariable(EnvVar.Environment, "");
+            SetEnvironmentVariable(EnvVar.TimeOutThreshold, "50");
+            SetEnvironmentVariable(EnvVar.WarningThreshold, "50");
+            SetEnvironmentVariable(EnvVar.URL, url);
+            SetEnvironmentVariable(EnvVar.DataFile, $"{readFileLocation}{testFileName}");
+            SetEnvironmentVariable(EnvVar.CsvSaveFileLocation, saveFileLocation);
+            SetEnvironmentVariable(EnvVar.LogSaveFileLocation, saveFileLocation);
+            SetEnvironmentVariable(EnvVar.ReportSaveFileLocation, saveFileLocation);
+            SetEnvironmentVariable(EnvVar.ScreenshotSaveLocation, saveFileLocation);
+            SetEnvironmentVariable(EnvVar.TestAutomationDriver, "selenium");
+            SetEnvironmentVariable(EnvVar.TestSetDataType, "XML");
+            SetEnvironmentVariable(EnvVar.TestSetDataArgs, $"{readFileLocation}{testFileName}");
+            SetEnvironmentVariable(EnvVar.TestCaseDataType, GetEnvironmentVariable(EnvVar.TestSetDataType));
+            SetEnvironmentVariable(EnvVar.TestStepDataType, GetEnvironmentVariable(EnvVar.TestCaseDataType));
+            SetEnvironmentVariable(EnvVar.TestCaseDataArgs, GetEnvironmentVariable(EnvVar.TestSetDataArgs));
+            SetEnvironmentVariable(EnvVar.TestStepDataArgs, GetEnvironmentVariable(EnvVar.TestCaseDataArgs));
+            SetEnvironmentVariable(EnvVar.RespectRepeatFor, "true");
+            SetEnvironmentVariable(EnvVar.RespectRunAODAFlag, "true");
 
             InformationObject.SetUp();
             TestSetBuilder builder = new TestSetBuilder();

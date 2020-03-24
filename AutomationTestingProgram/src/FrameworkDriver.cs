@@ -21,6 +21,7 @@ namespace AutomationTestingProgram
     using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestSetFramework;
     using CommandLine;
+    using static InformationObject;
 
     /// <summary>
     /// Main program.
@@ -174,53 +175,53 @@ namespace AutomationTestingProgram
 
         private static void SetDefaultParameters()
         {
-            if (Environment.GetEnvironmentVariable("logSaveFileLocation") == null)
+            if (GetEnvironmentVariable(EnvVar.LogSaveFileLocation) == null)
             {
-                Environment.SetEnvironmentVariable("logSaveFileLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
+                SetEnvironmentVariable(EnvVar.LogSaveFileLocation, GetEnvironmentVariable(EnvVar.CsvSaveFileLocation));
             }
 
-            if (Environment.GetEnvironmentVariable("reportSaveFileLocation") == null)
+            if (GetEnvironmentVariable(EnvVar.ReportSaveFileLocation) == null)
             {
-                Environment.SetEnvironmentVariable("reportSaveFileLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
+                SetEnvironmentVariable(EnvVar.ReportSaveFileLocation, GetEnvironmentVariable(EnvVar.CsvSaveFileLocation));
             }
 
-            if (Environment.GetEnvironmentVariable("screenshotSaveLocation") == null)
+            if (GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation) == null)
             {
-                Environment.SetEnvironmentVariable("screenshotSaveLocation", Environment.GetEnvironmentVariable("csvSaveFileLocation"));
+                SetEnvironmentVariable(EnvVar.ScreenshotSaveLocation, GetEnvironmentVariable(EnvVar.CsvSaveFileLocation));
             }
 
-            if (Environment.GetEnvironmentVariable("respectRepeatFor") == null)
+            if (GetEnvironmentVariable(EnvVar.RespectRepeatFor) == null)
             {
-                Environment.SetEnvironmentVariable("respectRepeatFor", "false");
+                SetEnvironmentVariable(EnvVar.RespectRepeatFor, "false");
             }
 
-            if (Environment.GetEnvironmentVariable("respectRunAODAFlag") == null)
+            if (GetEnvironmentVariable(EnvVar.RespectRunAODAFlag) == null)
             {
-                Environment.SetEnvironmentVariable("respectRunAODAFlag", "false");
+                SetEnvironmentVariable(EnvVar.RespectRunAODAFlag, "false");
             }
         }
 
         private static bool ParseTestSetParameters()
         {
             bool errorParsing = false;
-            Dictionary<string, string> parameters;
+            Dictionary<EnvVar, string> parameters;
 
-            Environment.SetEnvironmentVariable("loadingSpinner", string.Empty);
-            Environment.SetEnvironmentVariable("errorContainer", string.Empty);
+            SetEnvironmentVariable(EnvVar.LoadingSpinner, string.Empty);
+            SetEnvironmentVariable(EnvVar.ErrorContainer, string.Empty);
 
             ITestGeneralData dataInformation = ReflectiveGetter.GetImplementationOfType<ITestGeneralData>()
-                .Find(x => x.Name.Equals(Environment.GetEnvironmentVariable("testSetDataType")));
+                .Find(x => x.Name.Equals(GetEnvironmentVariable(EnvVar.TestSetDataType)));
 
-            if (dataInformation.Verify(Environment.GetEnvironmentVariable("testSetDataArgs")))
+            if (dataInformation.Verify(GetEnvironmentVariable(EnvVar.TestSetDataArgs)))
             {
-                parameters = dataInformation.ParseParameters(Environment.GetEnvironmentVariable("testSetDataArgs"), Environment.GetEnvironmentVariable("dataFile"));
-                foreach (string paramName in parameters.Keys)
+                parameters = dataInformation.ParseParameters(GetEnvironmentVariable(EnvVar.TestSetDataArgs), GetEnvironmentVariable(EnvVar.DataFile));
+                foreach (EnvVar paramName in parameters.Keys)
                 {
                     // If it's not filled in already, fill it in.
-                    if (Environment.GetEnvironmentVariable(paramName) == null || Environment.GetEnvironmentVariable(paramName) == string.Empty
-                        || Environment.GetEnvironmentVariable(paramName) == "0")
+                    if (GetEnvironmentVariable(paramName) == null || GetEnvironmentVariable(paramName) == string.Empty
+                        || GetEnvironmentVariable(paramName) == "0")
                     {
-                        Environment.SetEnvironmentVariable(paramName, parameters[paramName]);
+                        SetEnvironmentVariable(paramName, parameters[paramName]);
                     }
                 }
             }
@@ -239,25 +240,25 @@ namespace AutomationTestingProgram
             Parser.Default.ParseArguments<FrameworkOptions>(args)
                .WithParsed(o =>
                {
-                   Environment.SetEnvironmentVariable("browser", o.Browser ?? string.Empty);
-                   Environment.SetEnvironmentVariable("environment", o.Environment ?? string.Empty);
-                   Environment.SetEnvironmentVariable("url", o.URL ?? string.Empty);
-                   Environment.SetEnvironmentVariable("respectRepeatFor", o.RespectRepeatFor ?? string.Empty);
-                   Environment.SetEnvironmentVariable("respectRunAODAFlag", o.RespectRunAodaFlag ?? string.Empty);
-                   Environment.SetEnvironmentVariable("timeOutThreshold", o.TimeOutThreshold.ToString());
-                   Environment.SetEnvironmentVariable("warningThreshold", o.WarningThreshold.ToString());
-                   Environment.SetEnvironmentVariable("dataFile", o.DataFile ?? string.Empty);
-                   Environment.SetEnvironmentVariable("csvSaveFileLocation", o.CSVSaveFileLocation ?? string.Empty);
-                   Environment.SetEnvironmentVariable("logSaveFileLocation", o.LogSaveLocation ?? string.Empty);
-                   Environment.SetEnvironmentVariable("reportSaveFileLocation", o.ReportSaveLocation ?? string.Empty);
-                   Environment.SetEnvironmentVariable("screenshotSaveLocation", o.ScreenShotSaveLocation ?? string.Empty);
-                   Environment.SetEnvironmentVariable("testAutomationDriver", o.AutomationProgram ?? "selenium");
-                   Environment.SetEnvironmentVariable("testSetDataType", o.TestSetDataType);
-                   Environment.SetEnvironmentVariable("testCaseDataType", o.TestCaseDataType ?? Environment.GetEnvironmentVariable("testSetDataType"));
-                   Environment.SetEnvironmentVariable("testStepDataType", o.TestStepDataType ?? Environment.GetEnvironmentVariable("testCaseDataType"));
-                   Environment.SetEnvironmentVariable("testSetDataArgs", o.TestSetDataArgs);
-                   Environment.SetEnvironmentVariable("testCaseDataArgs", o.TestCaseDataArgs ?? Environment.GetEnvironmentVariable("testSetDataArgs"));
-                   Environment.SetEnvironmentVariable("testStepDataArgs", o.TestStepDataArgs ?? Environment.GetEnvironmentVariable("testCaseDataArgs"));
+                   SetEnvironmentVariable(EnvVar.Browser, o.Browser ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.Environment, o.Environment ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.URL, o.URL ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.RespectRepeatFor, o.RespectRepeatFor ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.RespectRunAODAFlag, o.RespectRunAodaFlag ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.TimeOutThreshold, o.TimeOutThreshold.ToString());
+                   SetEnvironmentVariable(EnvVar.WarningThreshold, o.WarningThreshold.ToString());
+                   SetEnvironmentVariable(EnvVar.DataFile, o.DataFile ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.CsvSaveFileLocation, o.CSVSaveFileLocation ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.LogSaveFileLocation, o.LogSaveLocation ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.ReportSaveFileLocation, o.ReportSaveLocation ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.ScreenshotSaveLocation, o.ScreenShotSaveLocation ?? string.Empty);
+                   SetEnvironmentVariable(EnvVar.TestAutomationDriver, o.AutomationProgram ?? "selenium");
+                   SetEnvironmentVariable(EnvVar.TestSetDataType, o.TestSetDataType);
+                   SetEnvironmentVariable(EnvVar.TestCaseDataType, o.TestCaseDataType ?? GetEnvironmentVariable(EnvVar.TestSetDataType));
+                   SetEnvironmentVariable(EnvVar.TestStepDataType, o.TestStepDataType ?? GetEnvironmentVariable(EnvVar.TestCaseDataType));
+                   SetEnvironmentVariable(EnvVar.TestSetDataArgs, o.TestSetDataArgs);
+                   SetEnvironmentVariable(EnvVar.TestCaseDataArgs, o.TestCaseDataArgs ?? GetEnvironmentVariable(EnvVar.TestSetDataArgs));
+                   SetEnvironmentVariable(EnvVar.TestStepDataArgs, o.TestStepDataArgs ?? GetEnvironmentVariable(EnvVar.TestCaseDataArgs));
                })
                .WithNotParsed(errs =>
                {
