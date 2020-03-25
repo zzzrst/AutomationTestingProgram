@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using TestingDriver;
 using static AutomationTestingProgram.InformationObject;
 
 namespace NUnitAutomationTestingProgram.TestTestingData
@@ -224,13 +225,30 @@ namespace NUnitAutomationTestingProgram.TestTestingData
 
             InformationObject.SetUp();
             TestSetBuilder builder = new TestSetBuilder();
-            TestAutomationBuilder automationBuilder = new TestAutomationBuilder();
-
-            automationBuilder.Build();
+            BuildAutomationDriver();
 
             return builder.Build();
         }
+        /// <summary>
+        /// The original one uses config files which nunit cant read.
+        /// </summary>
+        private void BuildAutomationDriver()
+        {
+            string testingDriver = GetEnvironmentVariable(EnvVar.TestAutomationDriver);
+            SeleniumDriver driver = new SeleniumDriver();
+            ITestingDriver automationDriver = new SeleniumDriver(
+                GetEnvironmentVariable(EnvVar.Browser),
+                int.Parse(GetEnvironmentVariable(EnvVar.TimeOutThreshold)),
+                GetEnvironmentVariable(EnvVar.Environment),
+                GetEnvironmentVariable(EnvVar.URL),
+                GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation),
+                int.Parse("5"),
+                GetEnvironmentVariable(EnvVar.LoadingSpinner),
+                GetEnvironmentVariable(EnvVar.ErrorContainer),
+                string.Empty);
 
+            TestAutomationDriver = automationDriver;
+        }
         private int countNotRanTestSteps(Reporter reporter)
         {
             int count = 0;

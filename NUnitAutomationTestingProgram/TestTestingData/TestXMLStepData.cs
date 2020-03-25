@@ -229,7 +229,7 @@ namespace NUnitAutomationTestingProgram.TestTestingData
         /// <summary>
         /// The original one uses config files which nunit cant read.
         /// </summary>
-        public void BuildAutomationDriver()
+        private void BuildAutomationDriver()
         {
             string testingDriver = GetEnvironmentVariable(EnvVar.TestAutomationDriver);
             SeleniumDriver driver = new SeleniumDriver();
