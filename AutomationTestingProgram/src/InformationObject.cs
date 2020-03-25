@@ -9,8 +9,8 @@ namespace AutomationTestingProgram
     using System.IO;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
-    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestingProgram.TestingData;
+    using TestingDriver;
 
     /// <summary>
     /// An information class that contains information needed by other objects/methods.
@@ -184,7 +184,7 @@ namespace AutomationTestingProgram
         /// <summary>
         /// Gets or sets the testing driver to run the testing program on.
         /// </summary>
-        public static ITestAutomationDriver TestAutomationDriver { get; set; }
+        public static ITestingDriver TestAutomationDriver { get; set; }
 
         /// <summary>
         /// Gets or sets the reporter object.
@@ -240,7 +240,13 @@ namespace AutomationTestingProgram
         /// <returns>The value of the variable.</returns>
         public static string GetEnvironmentVariable(EnvVar variable)
         {
-            return Environment.GetEnvironmentVariable(variable.ToString());
+            string value = Environment.GetEnvironmentVariable(variable.ToString());
+            if (value == null)
+            {
+                value = string.Empty;
+            }
+
+            return value;
         }
     }
 }

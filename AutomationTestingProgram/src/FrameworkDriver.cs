@@ -18,9 +18,9 @@ namespace AutomationTestingProgram
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.Builders;
     using AutomationTestingProgram.GeneralData;
-    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestSetFramework;
     using CommandLine;
+    using TestingDriver;
     using static InformationObject;
 
     /// <summary>
@@ -175,27 +175,27 @@ namespace AutomationTestingProgram
 
         private static void SetDefaultParameters()
         {
-            if (GetEnvironmentVariable(EnvVar.LogSaveFileLocation) == null)
+            if (GetEnvironmentVariable(EnvVar.LogSaveFileLocation) == string.Empty)
             {
                 SetEnvironmentVariable(EnvVar.LogSaveFileLocation, GetEnvironmentVariable(EnvVar.CsvSaveFileLocation));
             }
 
-            if (GetEnvironmentVariable(EnvVar.ReportSaveFileLocation) == null)
+            if (GetEnvironmentVariable(EnvVar.ReportSaveFileLocation) == string.Empty)
             {
                 SetEnvironmentVariable(EnvVar.ReportSaveFileLocation, GetEnvironmentVariable(EnvVar.CsvSaveFileLocation));
             }
 
-            if (GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation) == null)
+            if (GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation) == string.Empty)
             {
                 SetEnvironmentVariable(EnvVar.ScreenshotSaveLocation, GetEnvironmentVariable(EnvVar.CsvSaveFileLocation));
             }
 
-            if (GetEnvironmentVariable(EnvVar.RespectRepeatFor) == null)
+            if (GetEnvironmentVariable(EnvVar.RespectRepeatFor) == string.Empty)
             {
                 SetEnvironmentVariable(EnvVar.RespectRepeatFor, "false");
             }
 
-            if (GetEnvironmentVariable(EnvVar.RespectRunAODAFlag) == null)
+            if (GetEnvironmentVariable(EnvVar.RespectRunAODAFlag) == string.Empty)
             {
                 SetEnvironmentVariable(EnvVar.RespectRunAODAFlag, "false");
             }
@@ -218,7 +218,7 @@ namespace AutomationTestingProgram
                 foreach (EnvVar paramName in parameters.Keys)
                 {
                     // If it's not filled in already, fill it in.
-                    if (GetEnvironmentVariable(paramName) == null || GetEnvironmentVariable(paramName) == string.Empty
+                    if (GetEnvironmentVariable(paramName) == string.Empty
                         || GetEnvironmentVariable(paramName) == "0")
                     {
                         SetEnvironmentVariable(paramName, parameters[paramName]);

@@ -6,9 +6,11 @@ using AutomationTestSetFramework;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using TestingDriver;
 using static AutomationTestingProgram.InformationObject;
 
 namespace NUnitAutomationTestingProgram.TestTestingData
@@ -179,6 +181,8 @@ namespace NUnitAutomationTestingProgram.TestTestingData
         [Test]
         public void TestAllConcreteTestSteps()
         {
+            var s = Assembly.GetExecutingAssembly().CodeBase;
+            var k = ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = "NUnitAutomationTestingProgram.dll.config" }, ConfigurationUserLevel.None);
             TestSet testSet;
 
             testSet = buildTestSet("/TestAllConcreteSteps.xml");
@@ -216,11 +220,31 @@ namespace NUnitAutomationTestingProgram.TestTestingData
 
             InformationObject.SetUp();
             TestSetBuilder builder = new TestSetBuilder();
-            TestAutomationBuilder automationBuilder = new TestAutomationBuilder();
 
-            automationBuilder.Build();
+            BuildAutomationDriver();
 
             return builder.Build();
+        }
+
+        /// <summary>
+        /// The original one uses config files which nunit cant read.
+        /// </summary>
+        public void BuildAutomationDriver()
+        {
+            string testingDriver = GetEnvironmentVariable(EnvVar.TestAutomationDriver);
+            SeleniumDriver driver = new SeleniumDriver();
+            ITestingDriver automationDriver = new SeleniumDriver(
+                GetEnvironmentVariable(EnvVar.Browser),
+                int.Parse(GetEnvironmentVariable(EnvVar.TimeOutThreshold)),
+                GetEnvironmentVariable(EnvVar.Environment),
+                GetEnvironmentVariable(EnvVar.URL),
+                GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation),
+                int.Parse("5"),
+                GetEnvironmentVariable(EnvVar.LoadingSpinner),
+                GetEnvironmentVariable(EnvVar.ErrorContainer),
+                string.Empty);
+
+            TestAutomationDriver = automationDriver;
         }
     }
 }

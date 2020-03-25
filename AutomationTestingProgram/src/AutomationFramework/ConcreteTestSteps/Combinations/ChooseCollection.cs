@@ -4,7 +4,7 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
-    using AutomationTestingProgram.TestAutomationDriver;
+    using TestingDriver;
 
     /// <summary>
     /// This class executes the action of getting to an organization.
@@ -27,7 +27,7 @@ namespace AutomationTestingProgram.AutomationFramework
 
             InformationObject.TestAutomationDriver.RefreshWebPage();
 
-            if (!InformationObject.TestAutomationDriver.CheckForElementState(collectionElementXpath, ITestAutomationDriver.ElementState.Visible))
+            if (!InformationObject.TestAutomationDriver.CheckForElementState(collectionElementXpath, ITestingDriver.ElementState.Visible))
             {
                 InformationObject.TestAutomationDriver.ClickElement(collectionDropDown);
                 InformationObject.TestAutomationDriver.PopulateElement(collectionSearchBarXPath, collectionSearchField);

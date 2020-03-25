@@ -5,7 +5,8 @@
 namespace AutomationTestingProgram.Builders
 {
     using System;
-    using AutomationTestingProgram.TestAutomationDriver;
+    using System.Configuration;
+    using TestingDriver;
     using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
@@ -30,18 +31,23 @@ namespace AutomationTestingProgram.Builders
         public void Build()
         {
             string testingDriver = GetEnvironmentVariable(EnvVar.TestAutomationDriver);
-            ITestAutomationDriver automationDriver = ReflectiveGetter.GetImplementationOfType<ITestAutomationDriver>()
-                                .Find(x => x.Name.Equals(testingDriver));
+            SeleniumDriver driver = new SeleniumDriver();
+            ITestingDriver automationDriver = new SeleniumDriver(
+                GetEnvironmentVariable(EnvVar.Browser),
+                int.Parse(GetEnvironmentVariable(EnvVar.TimeOutThreshold)),
+                GetEnvironmentVariable(EnvVar.Environment),
+                GetEnvironmentVariable(EnvVar.URL),
+                GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation),
+                int.Parse(ConfigurationManager.AppSettings["ActualTimeOut"]),
+                GetEnvironmentVariable(EnvVar.LoadingSpinner),
+                GetEnvironmentVariable(EnvVar.ErrorContainer),
+                string.Empty);
             if (automationDriver == null)
             {
                 Logger.Error($"Sorry we do not currently support the testing application: {testingDriver}");
             }
-            else
-            {
-                automationDriver.SetUp();
-            }
 
-            InformationObject.TestAutomationDriver = automationDriver;
+            TestAutomationDriver = automationDriver;
         }
     }
 }

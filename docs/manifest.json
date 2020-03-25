@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.html",
-          "hash": "CDZoSKoV0ufctEA85dBFkA=="
+          "hash": "KIu3rVwFd2RqjhutRktWJQ=="
         }
       },
       "is_incremental": true,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.html",
-          "hash": "heQQJtVDz6JZgcasghyWUA=="
+          "hash": "7dM4fTa5hotalpEzjmvPPA=="
         }
       },
       "is_incremental": true,
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.InformationObject.html",
-          "hash": "25evX6MbrmOlIc6SbbBAJQ=="
+          "hash": "VkMI5Jy8FPXcJbc16akvNg=="
         }
       },
       "is_incremental": true,
@@ -550,66 +550,6 @@
         ".html": {
           "relative_path": "api/AutomationTestingProgram.ReflectiveGetter.html",
           "hash": "eqXXK5dulaFOlR2yrUV4DA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.Browser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.Browser.html",
-          "hash": "gDBRL5An3/3D9fRLRu3fww=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.ElementState.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.ElementState.html",
-          "hash": "xh3Q4avNfA+14T7WvWitzg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.ITestAutomationDriver.html",
-          "hash": "GQoFZtbYgU0qZ9G6uO5HZg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.SeleniumDriver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.SeleniumDriver.html",
-          "hash": "FQ8b9BgItS15RAaQduPy4Q=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AutomationTestingProgram.TestAutomationDriver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AutomationTestingProgram.TestAutomationDriver.html",
-          "hash": "CqSKG8c/724qw8E2Y2ewSA=="
         }
       },
       "is_incremental": true,
@@ -777,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Ut1rmJ3funNQxkrfTrw+UA=="
+          "hash": "TutfYj7SByW9yELd6NeG3Q=="
         }
       },
       "is_incremental": false,
@@ -1018,8 +958,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 63,
-          "skipped_file_count": 63
+          "total_file_count": 58,
+          "skipped_file_count": 58
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
