@@ -124,6 +124,7 @@
 			<xs:enumeration value="PROD" />
       <xs:enumeration value="SFIS-QA" />
       <xs:enumeration value="Test" />
+      <xs:enumeration value="TestEnvironment" />
 		</xs:restriction>
 	</xs:simpleType>
 

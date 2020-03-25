@@ -7,6 +7,7 @@ namespace AutomationTestingProgram.GeneralData
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using static InformationObject;
 
     /// <summary>
     /// General data regarding the test data type. This should be ran once at the beginning and never used again.
@@ -34,6 +35,6 @@ namespace AutomationTestingProgram.GeneralData
         /// <param name="testArgs">Test Arguments.</param>
         /// <param name="dataFile">The location of the datafile if any.</param>
         /// <returns>The parsed parameters.</returns>
-        public Dictionary<string, string> ParseParameters(string testArgs, string dataFile);
+        public Dictionary<EnvVar, string> ParseParameters(string testArgs, string dataFile);
     }
 }

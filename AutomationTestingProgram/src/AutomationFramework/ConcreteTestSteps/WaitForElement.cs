@@ -4,7 +4,7 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
-    using AutomationTestingProgram.TestAutomationDriver;
+    using TestingDriver;
 
     /// <summary>
     /// This class executes the action of waiting for an elment's status.
@@ -21,7 +21,7 @@ namespace AutomationTestingProgram.AutomationFramework
             string xPath = this.Arguments["xPath"];
             bool invisible = bool.Parse(this.Arguments["invisible"]);
 
-            ITestAutomationDriver.ElementState state = invisible ? ITestAutomationDriver.ElementState.Invisible : ITestAutomationDriver.ElementState.Visible;
+            ITestingDriver.ElementState state = invisible ? ITestingDriver.ElementState.Invisible : ITestingDriver.ElementState.Visible;
 
             InformationObject.TestAutomationDriver.WaitForElementState(xPath, state);
         }

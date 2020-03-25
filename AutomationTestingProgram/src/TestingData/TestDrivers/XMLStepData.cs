@@ -10,8 +10,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.Helper;
-    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestSetFramework;
+    using TestingDriver;
 
     /// <summary>
     /// The XML Driver to get data from an xml.

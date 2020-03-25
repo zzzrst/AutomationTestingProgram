@@ -1,0 +1,1 @@
+Put Zipfiles you want to hash here. Run the exe and the file containing the hash will be generated. Its called contents.

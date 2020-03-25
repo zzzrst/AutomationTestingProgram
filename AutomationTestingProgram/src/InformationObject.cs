@@ -9,14 +9,138 @@ namespace AutomationTestingProgram
     using System.IO;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
-    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestingProgram.TestingData;
+    using TestingDriver;
 
     /// <summary>
     /// An information class that contains information needed by other objects/methods.
+    /// Also contains the information about enviornemnt variables created by the program.
     /// </summary>
     public static class InformationObject
     {
+        /// <summary>
+        /// Enviornement variables used by the program.
+        /// </summary>
+        public enum EnvVar
+        {
+            /// <summary>
+            /// The Browser To use.
+            /// browser type.
+            /// </summary>
+            Browser,
+
+            /// <summary>
+            /// The Environment you are running the test in.
+            /// string.
+            /// </summary>
+            Environment,
+
+            /// <summary>
+            /// URL For the test website.
+            /// string.
+            /// </summary>
+            URL,
+
+            /// <summary>
+            /// Whether or not the program should respect repeat for flags.
+            /// bool.
+            /// </summary>
+            RespectRepeatFor,
+
+            /// <summary>
+            /// Wether or not the program should respect AODA flags.
+            /// bool.
+            /// </summary>
+            RespectRunAODAFlag,
+
+            /// <summary>
+            /// Time out threshold.
+            /// int.
+            /// </summary>
+            TimeOutThreshold,
+
+            /// <summary>
+            /// Warning Threshold.
+            /// int.
+            /// </summary>
+            WarningThreshold,
+
+            /// <summary>
+            /// Location of the data file.
+            /// string.
+            /// </summary>
+            DataFile,
+
+            /// <summary>
+            /// Location to save the csv file.
+            /// string.
+            /// </summary>
+            CsvSaveFileLocation,
+
+            /// <summary>
+            /// Location to save the log.
+            /// string,
+            /// </summary>
+            LogSaveFileLocation,
+
+            /// <summary>
+            /// Location to save the report.
+            /// string.
+            /// </summary>
+            ReportSaveFileLocation,
+
+            /// <summary>
+            /// Location to save the screenshot.
+            /// string.
+            /// </summary>
+            ScreenshotSaveLocation,
+
+            /// <summary>
+            /// What type of automation driver to use.
+            /// </summary>
+            TestAutomationDriver,
+
+            /// <summary>
+            /// The test set data file type.
+            /// </summary>
+            TestSetDataType,
+
+            /// <summary>
+            /// The test case data file type.
+            /// </summary>
+            TestCaseDataType,
+
+            /// <summary>
+            /// The test step data file type.
+            /// </summary>
+            TestStepDataType,
+
+            /// <summary>
+            /// Test Set args, usualy the location of the data file.
+            /// </summary>
+            TestSetDataArgs,
+
+            /// <summary>
+            /// Test Case args, usualy the location of the data file.
+            /// </summary>
+            TestCaseDataArgs,
+
+            /// <summary>
+            /// Test Step args, usualy the location of the data file.
+            /// </summary>
+            TestStepDataArgs,
+
+            /// <summary>
+            /// Loading spinner.
+            /// </summary>
+            LoadingSpinner,
+
+            /// <summary>
+            /// Error Container.
+            /// </summary>
+            ErrorContainer,
+        }
+
         /// <summary>
         /// Gets or sets a value indicating whether to respect the repeat for value.
         /// </summary>
@@ -60,7 +184,7 @@ namespace AutomationTestingProgram
         /// <summary>
         /// Gets or sets the testing driver to run the testing program on.
         /// </summary>
-        public static ITestAutomationDriver TestAutomationDriver { get; set; }
+        public static ITestingDriver TestAutomationDriver { get; set; }
 
         /// <summary>
         /// Gets or sets the reporter object.
@@ -72,31 +196,57 @@ namespace AutomationTestingProgram
         /// </summary>
         public static void SetUp()
         {
-            string csvSaveLocation = Environment.GetEnvironmentVariable("csvSaveFileLocation");
-            string logSaveLocation = Environment.GetEnvironmentVariable("logSaveFileLocation");
-            string reportSaveLocation = Environment.GetEnvironmentVariable("reportSaveFileLocation");
-            string screenshotSaveLocation = Environment.GetEnvironmentVariable("screenshotSaveLocation");
+            string csvSaveLocation = GetEnvironmentVariable(EnvVar.CsvSaveFileLocation);
+            string logSaveLocation = GetEnvironmentVariable(EnvVar.LogSaveFileLocation);
+            string reportSaveLocation = GetEnvironmentVariable(EnvVar.ReportSaveFileLocation);
+            string screenshotSaveLocation = GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation);
 
-            string testSetFile = Environment.GetEnvironmentVariable("testSetDataArgs");
+            string testSetFile = GetEnvironmentVariable(EnvVar.TestSetDataArgs);
             string csvFileName = testSetFile.Substring(testSetFile.LastIndexOf("\\") + 1);
             csvFileName = csvFileName.Substring(0, csvFileName.Length - 4);
 
             CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{csvFileName}.csv");
             CSVLogger.AddResults($"Transaction, {DateTime.Now.ToString("G")}");
-            CSVLogger.AddResults($"Environment URL, {Environment.GetEnvironmentVariable("url")}");
+            CSVLogger.AddResults($"Environment URL, {GetEnvironmentVariable(EnvVar.URL)}");
 
             LogSaveFileLocation = logSaveLocation;
             ScreenshotSaveLocation = screenshotSaveLocation;
 
             Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
 
-            RespectRepeatFor = bool.Parse(Environment.GetEnvironmentVariable("respectRepeatFor"));
-            RespectRunAODAFlag = bool.Parse(Environment.GetEnvironmentVariable("respectRunAODAFlag"));
+            RespectRepeatFor = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRepeatFor));
+            RespectRunAODAFlag = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRunAODAFlag));
 
             Directory.CreateDirectory(csvSaveLocation);
             Directory.CreateDirectory(logSaveLocation);
             Directory.CreateDirectory(reportSaveLocation);
             Directory.CreateDirectory(screenshotSaveLocation);
+        }
+
+        /// <summary>
+        /// Sets the given enviornemnt variable with the given value.
+        /// </summary>
+        /// <param name="variable">The Environment Variable to set.</param>
+        /// <param name="value">What Value to set it.</param>
+        public static void SetEnvironmentVariable(EnvVar variable, string value)
+        {
+            Environment.SetEnvironmentVariable(variable.ToString(), value);
+        }
+
+        /// <summary>
+        /// Gets the given envirnment variable.
+        /// </summary>
+        /// <param name="variable">Variable to return.</param>
+        /// <returns>The value of the variable.</returns>
+        public static string GetEnvironmentVariable(EnvVar variable)
+        {
+            string value = Environment.GetEnvironmentVariable(variable.ToString());
+            if (value == null)
+            {
+                value = string.Empty;
+            }
+
+            return value;
         }
     }
 }

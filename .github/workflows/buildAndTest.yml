@@ -31,7 +31,7 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: Run Unit Tests
-      run: dotnet test --verbosity normal
+      run: dotnet test --verbosity normal --configuration Release
       
   automerge:
     needs: [build,test]
@@ -45,3 +45,4 @@ jobs:
         if: github.actor == 'dependabot-preview[bot]'
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: ""

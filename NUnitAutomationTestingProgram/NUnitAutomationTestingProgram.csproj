@@ -9,12 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\AutomationTestingProgram\log4net.config" Link="log4net.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AxeAccessibilityDriver" Version="2.0.7381.26109" />
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
@@ -24,6 +18,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="79.0.3945.3600" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="TestingDriver" Version="1.0.7388.20323" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="SampleTests\Files\Log.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

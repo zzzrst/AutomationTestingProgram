@@ -10,9 +10,10 @@ namespace AutomationTestingProgram.Builders
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.Builders;
-    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestingData.TestDrivers;
+    using TestingDriver;
+    using static InformationObject;
 
     /// <summary>
     /// Creates a new Information Object and returns it.
@@ -68,8 +69,8 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestStepData()
         {
-            string testStepDataType = Environment.GetEnvironmentVariable("testStepDataType");
-            string testStepDataArgs = Environment.GetEnvironmentVariable("testStepDataArgs");
+            string testStepDataType = GetEnvironmentVariable(EnvVar.TestStepDataType);
+            string testStepDataArgs = GetEnvironmentVariable(EnvVar.TestStepDataArgs);
             InformationObject.TestStepData = (ITestStepData)this.GetTestData(2, testStepDataType, testStepDataArgs);
         }
 
@@ -79,8 +80,8 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestCaseData()
         {
-            string testCaseDataType = Environment.GetEnvironmentVariable("testCaseDataType");
-            string testCaseDataArgs = Environment.GetEnvironmentVariable("testCaseDataArgs");
+            string testCaseDataType = GetEnvironmentVariable(EnvVar.TestCaseDataType);
+            string testCaseDataArgs = GetEnvironmentVariable(EnvVar.TestCaseDataArgs);
             InformationObject.TestCaseData = (ITestCaseData)this.GetTestData(1, testCaseDataType, testCaseDataArgs);
         }
 
@@ -90,8 +91,8 @@ namespace AutomationTestingProgram.Builders
         /// </summary>
         private void InsantiateTestSetData()
         {
-            string testSetDataType = Environment.GetEnvironmentVariable("testSetDataType");
-            string testSetDataArgs = Environment.GetEnvironmentVariable("testSetDataArgs");
+            string testSetDataType = GetEnvironmentVariable(EnvVar.TestSetDataType);
+            string testSetDataArgs = GetEnvironmentVariable(EnvVar.TestSetDataArgs);
             InformationObject.TestSetData = (ITestSetData)this.GetTestData(0, testSetDataType, testSetDataArgs);
             InformationObject.TestSetData.SetUpTestSet();
         }

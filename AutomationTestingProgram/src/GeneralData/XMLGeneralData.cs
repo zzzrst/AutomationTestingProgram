@@ -13,6 +13,7 @@ namespace AutomationTestingProgram.GeneralData
     using System.Xml;
     using System.Xml.Schema;
     using AutomationTestingProgram.Helper;
+    using static InformationObject;
 
     /// <summary>
     /// The implementation of the general data for XML.
@@ -23,9 +24,9 @@ namespace AutomationTestingProgram.GeneralData
         public string Name { get; } = "XML";
 
         /// <inheritdoc/>
-        public Dictionary<string, string> ParseParameters(string xmlFile, string dataFile)
+        public Dictionary<EnvVar, string> ParseParameters(string xmlFile, string dataFile)
         {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            Dictionary<EnvVar, string> parameters = new Dictionary<EnvVar, string>();
             XmlDocument xmlDocObj = new XmlDocument();
             XmlDocument xmlDataFile = new XmlDocument();
 
@@ -59,62 +60,62 @@ namespace AutomationTestingProgram.GeneralData
             // Passed in parameters overide what is in the XML.
             if (xmlDocObj.GetElementsByTagName("URL").Count > 0)
             {
-                parameters.Add("url", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("URL")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.URL, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("URL")[0].InnerText, xmlDataFile));
             }
             else
             {
                 string enviornment = XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Environment")[0].InnerText, xmlDataFile);
-                parameters.Add("enviornment", enviornment);
-                parameters.Add("url", ConfigurationManager.AppSettings[enviornment].ToString());
+                parameters.Add(EnvVar.Environment, enviornment);
+                parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());
             }
 
-            parameters.Add("browser", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Browser")[0].InnerText, xmlDataFile));
+            parameters.Add(EnvVar.Browser, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Browser")[0].InnerText, xmlDataFile));
             if (xmlDocObj.GetElementsByTagName("RespectRepeatFor").Count > 0)
             {
-                parameters.Add("respectRepeatFor", xmlDocObj.GetElementsByTagName("RespectRepeatFor")[0].InnerText);
+                parameters.Add(EnvVar.RespectRepeatFor, xmlDocObj.GetElementsByTagName("RespectRepeatFor")[0].InnerText);
             }
 
             if (xmlDocObj.GetElementsByTagName("RespectRunAODAFlag").Count > 0)
             {
-                parameters.Add("respectRunAODAFlag", xmlDocObj.GetElementsByTagName("RespectRunAODAFlag")[0].InnerText);
+                parameters.Add(EnvVar.RespectRunAODAFlag, xmlDocObj.GetElementsByTagName("RespectRunAODAFlag")[0].InnerText);
             }
 
-            parameters.Add("timeOutThreshold", xmlDocObj.GetElementsByTagName("TimeOutThreshold")[0].InnerText);
-            parameters.Add("warningThreshold", xmlDocObj.GetElementsByTagName("WarningThreshold")[0].InnerText);
-            parameters.Add("csvSaveFileLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("CSVSaveLocation")[0].InnerText, xmlDataFile));
+            parameters.Add(EnvVar.TimeOutThreshold, xmlDocObj.GetElementsByTagName("TimeOutThreshold")[0].InnerText);
+            parameters.Add(EnvVar.WarningThreshold, xmlDocObj.GetElementsByTagName("WarningThreshold")[0].InnerText);
+            parameters.Add(EnvVar.CsvSaveFileLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("CSVSaveLocation")[0].InnerText, xmlDataFile));
 
             if (xmlDocObj.GetElementsByTagName("LogSaveLocation").Count > 0)
             {
-                parameters.Add("logSaveFileLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.LogSaveFileLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
             }
 
             if (xmlDocObj.GetElementsByTagName("reportSaveFileLocation").Count > 0)
             {
-                parameters.Add("reportSaveFileLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.ReportSaveFileLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
             }
 
             if (xmlDocObj.GetElementsByTagName("screenshotSaveLocation").Count > 0)
             {
-                parameters.Add("screenshotSaveLocation", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.ScreenshotSaveLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
             }
 
             // Special Elements
             if (xmlDocObj.GetElementsByTagName("loadingSpinner").Count > 0)
             {
-                parameters.Add("loadingSpinner", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.LoadingSpinner, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
             }
             else
             {
-                parameters.Add("loadingSpinner", ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
+                parameters.Add(EnvVar.LoadingSpinner, ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
             }
 
             if (xmlDocObj.GetElementsByTagName("errorContainer").Count > 0)
             {
-                parameters.Add("errorContainer", XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.ErrorContainer, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
             }
             else
             {
-                parameters.Add("errorContainer", ConfigurationManager.AppSettings["ErrorContainer"].ToString());
+                parameters.Add(EnvVar.ErrorContainer, ConfigurationManager.AppSettings["ErrorContainer"].ToString());
             }
 
             return parameters;

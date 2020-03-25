@@ -10,8 +10,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.Helper;
-    using AutomationTestingProgram.TestAutomationDriver;
     using AutomationTestSetFramework;
+    using TestingDriver;
 
     /// <summary>
     /// The XML Driver to get data from an xml.
@@ -179,7 +179,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                 string condition = ifXMLNode.Attributes["condition"].Value;
 
-                ITestAutomationDriver.ElementState state = condition == "EXIST" ? ITestAutomationDriver.ElementState.Visible : ITestAutomationDriver.ElementState.Invisible;
+                ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
 
                 ifCondition = InformationObject.TestAutomationDriver.CheckForElementState(elementXPath, state);
             }
@@ -203,7 +203,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                             string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                             string condition = ifSection.Attributes["condition"].Value;
 
-                            ITestAutomationDriver.ElementState state = condition == "EXIST" ? ITestAutomationDriver.ElementState.Visible : ITestAutomationDriver.ElementState.Invisible;
+                            ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
 
                             secondIfCondition = InformationObject.TestAutomationDriver.CheckForElementState(elementXPath, state);
                         }

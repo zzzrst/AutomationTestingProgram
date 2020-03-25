@@ -30,7 +30,7 @@
     <PackageReference Include="AxeAccessibilityDriver" Version="2.0.7381.26109" />
     <PackageReference Include="CommandLineParser" Version="2.7.82" />
     <PackageReference Include="ComparePDF" Version="2.0.7369.36638" />
-    <PackageReference Include="docfx.console" Version="2.50.0">
+    <PackageReference Include="docfx.console" Version="2.51.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -48,6 +48,7 @@
     </PackageReference>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
+    <PackageReference Include="TestingDriver" Version="1.0.7388.20323" />
     <PackageReference Include="TextInteractor" Version="1.2.7369.34863" />
   </ItemGroup>
 
