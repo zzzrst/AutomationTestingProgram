@@ -29,7 +29,7 @@
     <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
     <PackageReference Include="AxeAccessibilityDriver" Version="2.0.7389.34279" />
     <PackageReference Include="CommandLineParser" Version="2.7.82" />
-    <PackageReference Include="ComparePDF" Version="2.0.7369.36638" />
+    <PackageReference Include="ComparePDF" Version="2.0.7389.34931" />
     <PackageReference Include="docfx.console" Version="2.51.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
