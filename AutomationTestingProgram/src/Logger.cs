@@ -9,8 +9,6 @@ namespace AutomationTestingProgram
     using System.Reflection;
     using System.Xml;
     using log4net;
-    using log4net.Core;
-    using log4net.Repository.Hierarchy;
     using Microsoft.Extensions.Logging;
 
     /// <summary>
@@ -74,11 +72,11 @@ namespace AutomationTestingProgram
         /// Get Log4Net Logger.
         /// </summary>
         /// <returns>An ILogger.</returns>
-        public static Microsoft.Extensions.Logging.ILogger GetLog4NetLogger()
+        public static ILogger GetLog4NetLogger()
         {
             if (iLogger != null)
             {
-                Microsoft.Extensions.Logging.ILoggerFactory loggerFactory = new LoggerFactory();
+                ILoggerFactory loggerFactory = new LoggerFactory();
                 loggerFactory.AddLog4Net();
                 iLogger = loggerFactory.CreateLogger(string.Empty);
             }

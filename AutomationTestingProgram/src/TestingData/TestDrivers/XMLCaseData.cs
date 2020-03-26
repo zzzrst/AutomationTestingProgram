@@ -28,6 +28,45 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         private readonly Stack<bool> performStack = new Stack<bool>();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="XMLCaseData"/> class.
+        /// An implementation of the TestCaseData for xml.
+        /// </summary>
+        /// <param name="xmlLocation">File Location of the XML.</param>
+        public XMLCaseData(string xmlLocation)
+        {
+            this.TestArgs = xmlLocation;
+
+            if (File.Exists(this.TestArgs))
+            {
+                this.XMLDocObj = new XmlDocument();
+                this.XMLDocObj.Load(this.TestArgs);
+                this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
+
+                string dataFile = Environment.GetEnvironmentVariable("dataFile");
+                if (dataFile == string.Empty || dataFile == null)
+                {
+                    if (this.XMLDocObj.GetElementsByTagName("DataFile").Count > 0)
+                    {
+                        dataFile = this.XMLDocObj.GetElementsByTagName("DataFile")[0].InnerText;
+                        if (File.Exists(dataFile))
+                        {
+                            this.XMLDataFile = new XmlDocument();
+                            this.XMLDataFile.Load(dataFile);
+                        }
+                        else
+                        {
+                            Logger.Error("XML File could not be found!");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Logger.Error("XML File could not be found!");
+            }
+        }
+
         /// <inheritdoc/>
         public string TestArgs { get; set; }
 
@@ -58,39 +97,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// Gets or sets the ammount of times the test case has ran.
         /// </summary>
         private int ExecuteCount { get; set; } = 0;
-
-        /// <inheritdoc/>
-        public void SetUp()
-        {
-            if (File.Exists(this.TestArgs))
-            {
-                this.XMLDocObj = new XmlDocument();
-                this.XMLDocObj.Load(this.TestArgs);
-                this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
-
-                string dataFile = Environment.GetEnvironmentVariable("dataFile");
-                if (dataFile == string.Empty || dataFile == null)
-                {
-                    if (this.XMLDocObj.GetElementsByTagName("DataFile").Count > 0)
-                    {
-                        dataFile = this.XMLDocObj.GetElementsByTagName("DataFile")[0].InnerText;
-                        if (File.Exists(dataFile))
-                        {
-                            this.XMLDataFile = new XmlDocument();
-                            this.XMLDataFile.Load(dataFile);
-                        }
-                        else
-                        {
-                            Logger.Error("XML File could not be found!");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Logger.Error("XML File could not be found!");
-            }
-        }
 
         /// <inheritdoc/>
         public ITestCase SetUpTestCase(string testCaseName, bool performAction = true)

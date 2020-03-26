@@ -18,17 +18,14 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// </summary>
     public class TextStepData : ITestStepData
     {
-        /// <inheritdoc/>
-        public string TestArgs { get; set; }
-
-        /// <inheritdoc/>
-        public string Name { get; } = "Txt";
-
-        private List<string> FileData { get; set; } = new List<string>();
-
-        /// <inheritdoc/>
-        public void SetUp()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextStepData"/> class.
+        /// The Implementation of TestStepData for text file.
+        /// </summary>
+        /// <param name="textLocation">the location of the text file.</param>
+        public TextStepData(string textLocation)
         {
+            this.TestArgs = textLocation;
             TextInteractor interactor = new TextInteractor(this.TestArgs);
             interactor.Open();
             while (!interactor.FinishedReading())
@@ -38,6 +35,14 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             interactor.Close();
         }
+
+        /// <inheritdoc/>
+        public string TestArgs { get; set; }
+
+        /// <inheritdoc/>
+        public string Name { get; } = "Txt";
+
+        private List<string> FileData { get; set; } = new List<string>();
 
         /// <inheritdoc/>
         public ITestStep SetUpTestStep(string testStepName, bool performAction = true)

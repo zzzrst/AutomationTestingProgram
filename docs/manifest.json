@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.ChooseCollection.html",
-          "hash": "mauWzFcRRQwugaRQjapNjg=="
+          "hash": "EYU8oEuVMU8HYA5jR82N9Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.ClickElementByXPath.html",
-          "hash": "HezupSDO5l0ASJeEmpkBpA=="
+          "hash": "pwynF4NWGU+RpQvcEu4frw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.CloseBrowser.html",
-          "hash": "7Qcd1xH5p9wUma8abuhcBg=="
+          "hash": "5hg1a13SWgaswT7Pbvb0ug=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.CloseTab.html",
-          "hash": "lAdViyWSFBMr9ijeiZkVKg=="
+          "hash": "O7Ku7ABsFK0dRnysu7l5JQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.DDLSelectByXPath.html",
-          "hash": "e5Eulucro82gLKzd9fWLWw=="
+          "hash": "8+UczFrDebnZUGXjCmgFLw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.html",
-          "hash": "JwoyJeWcBnVqwGVCKJaTIQ=="
+          "hash": "XFm22MLWIKaH1l9Kv91YJg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.FakeTestStep.html",
-          "hash": "g4u9SRlYkBZ/31znGeBrmQ=="
+          "hash": "BBoJj1e45dahr8Ntkcszfg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html",
-          "hash": "NzjszJ/lpE2iO/+C+4UmQw=="
+          "hash": "Hdk2B5axbupHf9/r+8m6Sw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.html",
-          "hash": "NJsfmOaonFjhxWUSs4H+lg=="
+          "hash": "hvI9hyHiiilebXONiLgwdw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.html",
-          "hash": "GfGw7pxNIhRpmfO/W9DPog=="
+          "hash": "36KDcjLOXAcYjGqgA0+XWw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.html",
-          "hash": "yZnrKL9qpENi27uCktLzkg=="
+          "hash": "nC1U33+lLxpkQLb9xHBGiA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -144,7 +144,7 @@
           "hash": "pmEyOhfE0dC/qAd055xcUw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.MaximizeBrowser.html",
-          "hash": "WRvBGRRDgw8kO77hQNke6w=="
+          "hash": "zTUeUC3SYYaakZ1w00JGHA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.NavigateToURL.html",
-          "hash": "ljKUYM/6HEtcYAKwcoer6A=="
+          "hash": "3gjY96hX3r7piXgx6l9aLQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.OpenBrowser.html",
-          "hash": "DuDrR7Dda5FzMSyuFeNkFg=="
+          "hash": "loRFymdc1uGMO+TULr4Gfw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.PopulateElementByXPath.html",
-          "hash": "APv5ma8cx7qO/yD23a0DzA=="
+          "hash": "cxZDJrTdaO5+Ykesc5UAcA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.SignIn.html",
-          "hash": "Lqi57HQ1s/vFsrwC4Da0TA=="
+          "hash": "idiCP9LwmPmZ8MGxtXMj8g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.SwitchIntoIFrame.html",
-          "hash": "wIG6bOV/ATfW1ObDcE5E5w=="
+          "hash": "o3YSqCmQlUHdwaimM6QEMg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.SwitchToTab.html",
-          "hash": "w428WBo02pLZqqoeXyr7qQ=="
+          "hash": "hW1hxsYnZ2pGnwWMt5mchw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestCase.html",
-          "hash": "hzu+Plr8cZs+JOO1jFNFJw=="
+          "hash": "WRFKxxCx4jukNWYtixIvlg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestCaseStatus.html",
-          "hash": "2p+ba2HGORY5ne41o5r1fw=="
+          "hash": "tviCHGCByKXiDwTGCQIQLQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestSet.html",
-          "hash": "Q1RlH4MJs9dx+qyNdg/VQQ=="
+          "hash": "K+5+prKLj6i78CayB8kdvQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestSetStatus.html",
-          "hash": "aySzoZ7OKUc1bXUpR+Kp9w=="
+          "hash": "V1Av0MBZwSs73C0wZoph8A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestStep.html",
-          "hash": "j2cB2YMISk93Erei7XNauQ=="
+          "hash": "BGWxYNW9LVGXwlrhA75iUQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html",
-          "hash": "rjt+CeYW9mhVCUWvbRZ8eQ=="
+          "hash": "dbCK2p8SZKa3P3tY6hxREg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.WaitForElement.html",
-          "hash": "YDhXL1NnwmpPJBU5bPf+Jw=="
+          "hash": "G7Oz1t2MJnGjFs+UePAwZg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.WaitInSeconds.html",
-          "hash": "IMPfesNfJs1nqco79I2cDA=="
+          "hash": "oTnrrlkxXpR9H891RQrqmw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -336,7 +336,7 @@
           "hash": "9h55GVEAv1OuW7YcVq5Ksw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.html",
-          "hash": "KIu3rVwFd2RqjhutRktWJQ=="
+          "hash": "eXt9B20Lg5jH3SAcssBMfA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Builders.TestAutomationBuilder.html",
-          "hash": "7dM4fTa5hotalpEzjmvPPA=="
+          "hash": "UcJcj974YY/w6auXiuX9pA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.html",
-          "hash": "+sRg1XrCuhpW0Z55MAidZA=="
+          "hash": "Mc/zSy8zoqe5jwsQM8J3PA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +381,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Builders.TestSetBuilder.html",
-          "hash": "n68rpEDbX6SX1y6Uy/pT4g=="
+          "hash": "1W50MEOzxOzyrOiSDeXizA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -396,7 +396,7 @@
           "hash": "kGG5GSl6ziwfvV+ETPNH6g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -405,10 +405,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.CSVLogger.html",
-          "hash": "HHh1tsdDET9lgmTCVFQNEw=="
+          "hash": "9g0VhgSNFLED1zkMB9ix3w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -417,10 +417,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.FrameworkDriver.html",
-          "hash": "d2At44g71Gz3+7vOx5sJCw=="
+          "hash": "zRNkF8/E9Lo7AvdNroeSdw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -429,10 +429,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.FrameworkOptions.html",
-          "hash": "GYl6FtMMo9N0OFYqSHQhFg=="
+          "hash": "elaPoQJ701A+U4rYGpyY+w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -441,10 +441,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.GeneralData.ITestGeneralData.html",
-          "hash": "KYkfZYFOQnzDQx6Mp+K2PQ=="
+          "hash": "Sv7rjvKYecX1LvVa8BJQCQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -453,10 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.GeneralData.XMLGeneralData.html",
-          "hash": "vy5sKlJT7sssM1dgj6jmPg=="
+          "hash": "N58vtNr0G33dldF2fTL4dg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -468,7 +468,7 @@
           "hash": "QnkjXs7d2mp5Jol0h/Sj0A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -477,10 +477,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Helper.Resource.html",
-          "hash": "4jrA5kVK6S9W9QATVgvS2w=="
+          "hash": "9CFcJ1E1+YwGWGmxYdlqKg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -489,10 +489,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Helper.XMLHelper.html",
-          "hash": "qGuj/v9+li3XjQFxB5S++g=="
+          "hash": "QS2bbCgQWekTfjm0bjPsYw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -504,7 +504,7 @@
           "hash": "esw38YsvQVM2ZAKxNcxkEg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -513,10 +513,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.InformationObject.EnvVar.html",
-          "hash": "8rU+Q2ub+d9Af9qyTpccKg=="
+          "hash": "tB5Zp5wVNij6Ssr1CeY0AA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -525,10 +525,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.InformationObject.html",
-          "hash": "VkMI5Jy8FPXcJbc16akvNg=="
+          "hash": "UPles6JZ9KFpT/SDv2xnPQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -537,10 +537,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.Logger.html",
-          "hash": "LYgmzC7RLtTGCTw9OskbzA=="
+          "hash": "PVpeAQnCfDgmi4SralrPtg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -549,10 +549,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.ReflectiveGetter.html",
-          "hash": "eqXXK5dulaFOlR2yrUV4DA=="
+          "hash": "hRoXO1BzHszRZQS7hfgWnw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -561,10 +561,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.ITestCaseData.html",
-          "hash": "PJdKkE/Ezm8v7ugJMGGi1w=="
+          "hash": "l75LXiBhwKw+4m3yHe7pjw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -573,10 +573,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.ITestData.html",
-          "hash": "lNLc3UYx/8jsAK/qWhx+Uw=="
+          "hash": "IJtIEl5uRGQSthqVc2Gj7w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -585,10 +585,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.ITestSetData.html",
-          "hash": "APuIoiknT6ZLJVyLL8EbbA=="
+          "hash": "9wsSbFAfkghPRTwTd/xcRg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -597,10 +597,22 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.ITestStepData.html",
-          "hash": "7FMUdGQB4QQugdJTPp3CWA=="
+          "hash": "9WzyCdlY2qLk7dWm77Rysw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html",
+          "hash": "08CwTTyGNlC0Ypdb0weJpA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -609,10 +621,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html",
-          "hash": "n6rbqzIBtMI3rITDiVR5Rg=="
+          "hash": "noqo7hUdKydszmwbAyLCpQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -621,10 +633,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html",
-          "hash": "vgOafl/5mE67tsO8Dss6fw=="
+          "hash": "pmTg0yZ5mUhPwZGB9J+32Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -633,10 +645,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.html",
-          "hash": "MgZwwdYozs8hlbg+59qejQ=="
+          "hash": "ONGTP/dITFjZQAl5ZpowMA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -645,10 +657,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html",
-          "hash": "NueE7EPBeMvVD7rSM+IYOw=="
+          "hash": "tSWY069LDh+MHY7bV5p84A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -657,10 +669,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html",
-          "hash": "Q9x1DIZQ7SjtAAtOg+WP9A=="
+          "hash": "QGlEhAvVnWKALoyztLZzhQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -669,10 +681,10 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.html",
-          "hash": "LvQcJvoOnCWG1Xy4SyrgVg=="
+          "hash": "lCWtpH2N/P3g31t5yaURDQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -684,7 +696,7 @@
           "hash": "O/vAP+v8Lo+s+BDup/KDrw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -696,7 +708,7 @@
           "hash": "wlRS2JMxUoTvVyPKrp7dJw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -708,7 +720,7 @@
           "hash": "VNqNtoKYmt1a2laAJCZSfg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -717,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "TutfYj7SByW9yELd6NeG3Q=="
+          "hash": "eT1C4AM0zEvnN5E3zmHXcQ=="
         }
       },
       "is_incremental": false,
@@ -849,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/TestingData/ITestData.html",
-          "hash": "r7LWQk5DG/4Z2omzgQcjGg=="
+          "hash": "ObQoJRYKYjMuMD9JUQSJTg=="
         }
       },
       "is_incremental": true,
@@ -958,8 +970,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 58,
-          "skipped_file_count": 58
+          "total_file_count": 59,
+          "skipped_file_count": 51
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

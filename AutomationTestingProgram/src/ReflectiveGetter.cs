@@ -48,7 +48,7 @@ namespace AutomationTestingProgram
             List<T> objects = new List<T>();
             foreach (Type type in
                 Assembly.GetExecutingAssembly().GetTypes()
-                .Where(myType => myType.GetInterfaces().Contains(typeof(T)) && myType.GetConstructor(Type.EmptyTypes) != null && myType.IsClass && !myType.IsAbstract))
+                .Where(myType => myType.GetInterfaces().Contains(typeof(T)) && myType.IsClass && !myType.IsAbstract))
             {
                 objects.Add((T)Activator.CreateInstance(type, constructorArgs));
             }
