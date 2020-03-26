@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
-    <PackageReference Include="AxeAccessibilityDriver" Version="2.0.7381.26109" />
+    <PackageReference Include="AxeAccessibilityDriver" Version="2.0.7389.34279" />
     <PackageReference Include="CommandLineParser" Version="2.7.82" />
     <PackageReference Include="ComparePDF" Version="2.0.7389.34931" />
     <PackageReference Include="docfx.console" Version="2.51.0">
@@ -49,7 +49,7 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
     <PackageReference Include="TestingDriver" Version="1.0.7388.20323" />
-    <PackageReference Include="TextInteractor" Version="1.2.7369.34863" />
+    <PackageReference Include="TextInteractor" Version="1.2.7389.34135" />
   </ItemGroup>
 
   <ItemGroup>
