@@ -18,7 +18,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            int tabIndex = Convert.ToInt32(this.Arguments["tabIndex"]);
+            int tabIndex = Convert.ToInt32(this.Arguments["value"]);
             InformationObject.TestAutomationDriver.SwitchToTab(tabIndex);
             InformationObject.TestAutomationDriver.CloseBrowser();
         }

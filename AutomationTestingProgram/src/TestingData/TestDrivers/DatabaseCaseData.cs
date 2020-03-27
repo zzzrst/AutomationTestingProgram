@@ -10,8 +10,10 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.Text;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.Exceptions;
+    using AutomationTestingProgram.Helper;
     using AutomationTestSetFramework;
     using DatabaseConnector;
+    using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
     /// A concrete implementation of the ITestCaseData for databases.
@@ -77,6 +79,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The test case.</returns>
         private ITestCase CreateTestCase(string testCaseName)
         {
+            string collection = "0";
+            string release = "0";
             try
             {
                 this.TestSteps = new List<ITestStep>();
@@ -118,9 +122,9 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // // ignore TESTCASE
             string testStepDesc = row[1]?.ToString() ?? string.Empty;   // TESTCASEDESCRIPTION
             string action = row[3]?.ToString() ?? string.Empty;         // ACTIONONOBJECT (test action)
-            string attribValue = row[4]?.ToString() ?? string.Empty;    // OBJECT
+            string obj = row[4]?.ToString() ?? string.Empty;    // OBJECT
             string value = row[5]?.ToString() ?? string.Empty;          // VALUE (of the control/field)
-            string attribute = row[6]?.ToString() ?? string.Empty;      // COMMENTS (selected attribute)
+            string comment = row[6]?.ToString() ?? string.Empty;      // COMMENTS (selected attribute)
 
             string stLocAttempts = row[8]?.ToString() ?? "0"; // LOCAL_ATTEMPTS
             string stLocTimeout = row[9]?.ToString() ?? "0";  // LOCAL_TIMEOUT
@@ -132,13 +136,13 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             int localAttempts = int.Parse(string.IsNullOrEmpty(stLocAttempts) ? "0" : stLocAttempts);
             if (localAttempts == 0)
             {
-                localAttempts = alm.AlmGlobalAttempts;
+                localAttempts = 1; // alm.AlmGlobalAttempts;
             }
 
             int localTimeout = int.Parse(string.IsNullOrEmpty(stLocTimeout) ? "0" : stLocTimeout);
             if (localTimeout == 0)
             {
-                localTimeout = alm.AlmGlobalTimeOut;
+                localTimeout = int.Parse(GetEnvironmentVariable(EnvVar.TimeOutThreshold)); // alm.AlmGlobalTimeOut;
             }
 
             int testStepTypeId = int.Parse(string.IsNullOrEmpty(testStepType) ? "0" : testStepType);
@@ -151,11 +155,13 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 .Find(x => x.Name.Equals(action));
 
             testStep.TestStepStatus.Description = testStepDesc;
-            testStep.Arguments = attribValue;
+            testStep.Arguments.Add("object", GeneralHelper.Cleanse(obj));
+            testStep.Arguments.Add("value", GeneralHelper.Cleanse(value));
+            testStep.Arguments.Add("comment", GeneralHelper.Cleanse(comment));
             testStep.Attempts = localAttempts;
             testStep.ShouldExecuteVariable = control == this.SKIP;
 
-            return testStep.
+            return testStep;
         }
 
         /// <summary>
@@ -202,7 +208,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                     database.Connect();
                     if (database.IsConnected())
                     {
-                        Logger.Info("Connected to database: RVDEV1");
+                        Logger.Info($"Connected to database: {serviceName}");
                         break;
                     }
 

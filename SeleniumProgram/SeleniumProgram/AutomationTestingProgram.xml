@@ -30,6 +30,11 @@
               Looks up a localized string similar to environment.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.invisible">
+            <summary>
+              Looks up a localized string similar to value.
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.Properties.Resources.RespectRepeatFor">
             <summary>
               Looks up a localized string similar to respectRepeatFor.
@@ -40,14 +45,44 @@
               Looks up a localized string similar to respectRunAODAFlag.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.seconds">
+            <summary>
+              Looks up a localized string similar to value.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.selection">
+            <summary>
+              Looks up a localized string similar to value.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.tabIndex">
+            <summary>
+              Looks up a localized string similar to value.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.text">
+            <summary>
+              Looks up a localized string similar to value.
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.Properties.Resources.TimeOutThreshold">
             <summary>
               Looks up a localized string similar to timeOutThreshold.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.Properties.Resources.URL">
+        <member name="P:AutomationTestingProgram.Properties.Resources.url">
             <summary>
-              Looks up a localized string similar to url.
+              Looks up a localized string similar to value.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.useJS">
+            <summary>
+              Looks up a localized string similar to comment.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.xPath">
+            <summary>
+              Looks up a localized string similar to object.
             </summary>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.ClickElementByXPath">
@@ -544,6 +579,11 @@
             Gets or sets a value indicating whether test step should be logged.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.Attempts">
+            <summary>
+            Gets or sets number of attempts before a fail is thrown.
+            </summary>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.TestStep.Execute">
             <inheritdoc/>
         </member>
@@ -675,6 +715,90 @@
             </summary>
             <param name="filename">The name of the file to write to.</param>
             <returns><code>true</code> if the file is ready. </returns>
+        </member>
+        <member name="T:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.Exceptions.FileNotFound">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.Exceptions.FileNotFound" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.Exceptions.FileNotFound.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.FileNotFound.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.FileNotFound"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.FileNotFound.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.FileNotFound"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.Exceptions.TestActionNotFound">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.Exceptions.TestActionNotFound" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.Exceptions.TestActionNotFound.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.TestActionNotFound"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.TestActionNotFound"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.Exceptions.TestCaseCreationFailed">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.Exceptions.TestCaseCreationFailed" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.Exceptions.TestCaseCreationFailed.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.TestCaseCreationFailed"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.Exceptions.TestCaseCreationFailed"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
         </member>
         <member name="T:AutomationTestingProgram.FrameworkDriver">
             <summary>
@@ -862,6 +986,34 @@
         </member>
         <member name="M:AutomationTestingProgram.GeneralData.XMLGeneralData.Verify(System.String)">
             <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.Helper.GeneralHelper">
+            <summary>
+            Defines the <see cref="N:AutomationTestingProgram.Helper" />.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Helper.GeneralHelper.Cleanse(System.String)">
+            <summary>
+            The Cleanse.
+            </summary>
+            <param name="text">The text<see cref="T:System.String"/>.</param>
+            <returns>The <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.Helper.GeneralHelper.EncryptString(System.String,System.String)">
+            <summary>
+            Encrypt a string given a password.
+            </summary>
+            <param name="text">String to be encrypted.</param>
+            <param name="password">Password to encrypt the string with.</param>
+            <returns>Base64 encoded string.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.Helper.GeneralHelper.DecryptString(System.String,System.String)">
+            <summary>
+            Decrypts a string given the password.
+            </summary>
+            <param name="text">The encyrpted string to be decrypted.</param>
+            <param name="password">Password to decrypt string.</param>
+            <returns>Decrypted string.</returns>
         </member>
         <member name="T:AutomationTestingProgram.Helper.Resource">
             <summary>
@@ -1265,6 +1417,16 @@
             Gets or sets connection established to environment database.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.TestSteps">
+            <summary>
+            Gets or sets list of test steps to run.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SKIP">
+            <summary>
+            Gets the SKIP.
+            </summary>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.ExistNextTestStep">
             <inheritdoc/>
         </member>
@@ -1273,6 +1435,20 @@
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.Boolean)">
             <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CreateTestCase(System.String)">
+            <summary>
+            Creates a new test step.
+            </summary>
+            <param name="testCaseName">The name of the test step.</param>
+            <returns>The test case.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CreateTestStep(System.Collections.Generic.List{System.Object})">
+            <summary>
+            The A Test Step.
+            </summary>
+            <param name="row">The row<see cref="T:List{object}"/>.</param>
+            <returns>The <see cref="T:AutomationTestSetFramework.ITestStep"/>.</returns>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.QueryTestCase(System.String,System.String,System.String)">
             <summary>

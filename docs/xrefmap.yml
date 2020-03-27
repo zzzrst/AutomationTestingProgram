@@ -1314,6 +1314,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestStep.Arguments
   nameWithType: TestStep.Arguments
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Attempts
+  name: Attempts
+  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_Attempts
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.Attempts
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Attempts
+  nameWithType: TestStep.Attempts
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Attempts*
+  name: Attempts
+  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_Attempts_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStep.Attempts
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Attempts
+  nameWithType: TestStep.Attempts
 - uid: AutomationTestingProgram.AutomationFramework.TestStep.Execute
   name: Execute()
   href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_Execute
@@ -1814,6 +1827,136 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.CSVLogger.WriteOutResults
   nameWithType: CSVLogger.WriteOutResults
+- uid: AutomationTestingProgram.Exceptions
+  name: AutomationTestingProgram.Exceptions
+  href: api/AutomationTestingProgram.Exceptions.html
+  commentId: N:AutomationTestingProgram.Exceptions
+  fullName: AutomationTestingProgram.Exceptions
+  nameWithType: AutomationTestingProgram.Exceptions
+- uid: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+  name: DatabaseTestCaseNotFound
+  href: api/AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.html
+  commentId: T:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+  fullName: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+  nameWithType: DatabaseTestCaseNotFound
+- uid: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor
+  name: DatabaseTestCaseNotFound()
+  href: api/AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.html#AutomationTestingProgram_Exceptions_DatabaseTestCaseNotFound__ctor
+  commentId: M:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor
+  fullName: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.DatabaseTestCaseNotFound()
+  nameWithType: DatabaseTestCaseNotFound.DatabaseTestCaseNotFound()
+- uid: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor(System.String)
+  name: DatabaseTestCaseNotFound(String)
+  href: api/AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.html#AutomationTestingProgram_Exceptions_DatabaseTestCaseNotFound__ctor_System_String_
+  commentId: M:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor(System.String)
+  fullName: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.DatabaseTestCaseNotFound(System.String)
+  nameWithType: DatabaseTestCaseNotFound.DatabaseTestCaseNotFound(String)
+- uid: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor*
+  name: DatabaseTestCaseNotFound
+  href: api/AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.html#AutomationTestingProgram_Exceptions_DatabaseTestCaseNotFound__ctor_
+  commentId: Overload:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.DatabaseTestCaseNotFound
+  nameWithType: DatabaseTestCaseNotFound.DatabaseTestCaseNotFound
+- uid: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.ErrorMsg
+  name: ErrorMsg
+  href: api/AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.html#AutomationTestingProgram_Exceptions_DatabaseTestCaseNotFound_ErrorMsg
+  commentId: F:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.ErrorMsg
+  fullName: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound.ErrorMsg
+  nameWithType: DatabaseTestCaseNotFound.ErrorMsg
+- uid: AutomationTestingProgram.Exceptions.FileNotFound
+  name: FileNotFound
+  href: api/AutomationTestingProgram.Exceptions.FileNotFound.html
+  commentId: T:AutomationTestingProgram.Exceptions.FileNotFound
+  fullName: AutomationTestingProgram.Exceptions.FileNotFound
+  nameWithType: FileNotFound
+- uid: AutomationTestingProgram.Exceptions.FileNotFound.#ctor
+  name: FileNotFound()
+  href: api/AutomationTestingProgram.Exceptions.FileNotFound.html#AutomationTestingProgram_Exceptions_FileNotFound__ctor
+  commentId: M:AutomationTestingProgram.Exceptions.FileNotFound.#ctor
+  fullName: AutomationTestingProgram.Exceptions.FileNotFound.FileNotFound()
+  nameWithType: FileNotFound.FileNotFound()
+- uid: AutomationTestingProgram.Exceptions.FileNotFound.#ctor(System.String)
+  name: FileNotFound(String)
+  href: api/AutomationTestingProgram.Exceptions.FileNotFound.html#AutomationTestingProgram_Exceptions_FileNotFound__ctor_System_String_
+  commentId: M:AutomationTestingProgram.Exceptions.FileNotFound.#ctor(System.String)
+  fullName: AutomationTestingProgram.Exceptions.FileNotFound.FileNotFound(System.String)
+  nameWithType: FileNotFound.FileNotFound(String)
+- uid: AutomationTestingProgram.Exceptions.FileNotFound.#ctor*
+  name: FileNotFound
+  href: api/AutomationTestingProgram.Exceptions.FileNotFound.html#AutomationTestingProgram_Exceptions_FileNotFound__ctor_
+  commentId: Overload:AutomationTestingProgram.Exceptions.FileNotFound.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Exceptions.FileNotFound.FileNotFound
+  nameWithType: FileNotFound.FileNotFound
+- uid: AutomationTestingProgram.Exceptions.FileNotFound.ErrorMsg
+  name: ErrorMsg
+  href: api/AutomationTestingProgram.Exceptions.FileNotFound.html#AutomationTestingProgram_Exceptions_FileNotFound_ErrorMsg
+  commentId: F:AutomationTestingProgram.Exceptions.FileNotFound.ErrorMsg
+  fullName: AutomationTestingProgram.Exceptions.FileNotFound.ErrorMsg
+  nameWithType: FileNotFound.ErrorMsg
+- uid: AutomationTestingProgram.Exceptions.TestActionNotFound
+  name: TestActionNotFound
+  href: api/AutomationTestingProgram.Exceptions.TestActionNotFound.html
+  commentId: T:AutomationTestingProgram.Exceptions.TestActionNotFound
+  fullName: AutomationTestingProgram.Exceptions.TestActionNotFound
+  nameWithType: TestActionNotFound
+- uid: AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor
+  name: TestActionNotFound()
+  href: api/AutomationTestingProgram.Exceptions.TestActionNotFound.html#AutomationTestingProgram_Exceptions_TestActionNotFound__ctor
+  commentId: M:AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor
+  fullName: AutomationTestingProgram.Exceptions.TestActionNotFound.TestActionNotFound()
+  nameWithType: TestActionNotFound.TestActionNotFound()
+- uid: AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor(System.String)
+  name: TestActionNotFound(String)
+  href: api/AutomationTestingProgram.Exceptions.TestActionNotFound.html#AutomationTestingProgram_Exceptions_TestActionNotFound__ctor_System_String_
+  commentId: M:AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor(System.String)
+  fullName: AutomationTestingProgram.Exceptions.TestActionNotFound.TestActionNotFound(System.String)
+  nameWithType: TestActionNotFound.TestActionNotFound(String)
+- uid: AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor*
+  name: TestActionNotFound
+  href: api/AutomationTestingProgram.Exceptions.TestActionNotFound.html#AutomationTestingProgram_Exceptions_TestActionNotFound__ctor_
+  commentId: Overload:AutomationTestingProgram.Exceptions.TestActionNotFound.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Exceptions.TestActionNotFound.TestActionNotFound
+  nameWithType: TestActionNotFound.TestActionNotFound
+- uid: AutomationTestingProgram.Exceptions.TestActionNotFound.ErrorMsg
+  name: ErrorMsg
+  href: api/AutomationTestingProgram.Exceptions.TestActionNotFound.html#AutomationTestingProgram_Exceptions_TestActionNotFound_ErrorMsg
+  commentId: F:AutomationTestingProgram.Exceptions.TestActionNotFound.ErrorMsg
+  fullName: AutomationTestingProgram.Exceptions.TestActionNotFound.ErrorMsg
+  nameWithType: TestActionNotFound.ErrorMsg
+- uid: AutomationTestingProgram.Exceptions.TestCaseCreationFailed
+  name: TestCaseCreationFailed
+  href: api/AutomationTestingProgram.Exceptions.TestCaseCreationFailed.html
+  commentId: T:AutomationTestingProgram.Exceptions.TestCaseCreationFailed
+  fullName: AutomationTestingProgram.Exceptions.TestCaseCreationFailed
+  nameWithType: TestCaseCreationFailed
+- uid: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor
+  name: TestCaseCreationFailed()
+  href: api/AutomationTestingProgram.Exceptions.TestCaseCreationFailed.html#AutomationTestingProgram_Exceptions_TestCaseCreationFailed__ctor
+  commentId: M:AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor
+  fullName: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.TestCaseCreationFailed()
+  nameWithType: TestCaseCreationFailed.TestCaseCreationFailed()
+- uid: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor(System.String)
+  name: TestCaseCreationFailed(String)
+  href: api/AutomationTestingProgram.Exceptions.TestCaseCreationFailed.html#AutomationTestingProgram_Exceptions_TestCaseCreationFailed__ctor_System_String_
+  commentId: M:AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor(System.String)
+  fullName: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.TestCaseCreationFailed(System.String)
+  nameWithType: TestCaseCreationFailed.TestCaseCreationFailed(String)
+- uid: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor*
+  name: TestCaseCreationFailed
+  href: api/AutomationTestingProgram.Exceptions.TestCaseCreationFailed.html#AutomationTestingProgram_Exceptions_TestCaseCreationFailed__ctor_
+  commentId: Overload:AutomationTestingProgram.Exceptions.TestCaseCreationFailed.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.TestCaseCreationFailed
+  nameWithType: TestCaseCreationFailed.TestCaseCreationFailed
+- uid: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.ErrorMsg
+  name: ErrorMsg
+  href: api/AutomationTestingProgram.Exceptions.TestCaseCreationFailed.html#AutomationTestingProgram_Exceptions_TestCaseCreationFailed_ErrorMsg
+  commentId: F:AutomationTestingProgram.Exceptions.TestCaseCreationFailed.ErrorMsg
+  fullName: AutomationTestingProgram.Exceptions.TestCaseCreationFailed.ErrorMsg
+  nameWithType: TestCaseCreationFailed.ErrorMsg
 - uid: AutomationTestingProgram.FrameworkDriver
   name: FrameworkDriver
   href: api/AutomationTestingProgram.FrameworkDriver.html
@@ -2230,6 +2373,51 @@ references:
   commentId: N:AutomationTestingProgram.Helper
   fullName: AutomationTestingProgram.Helper
   nameWithType: AutomationTestingProgram.Helper
+- uid: AutomationTestingProgram.Helper.GeneralHelper
+  name: GeneralHelper
+  href: api/AutomationTestingProgram.Helper.GeneralHelper.html
+  commentId: T:AutomationTestingProgram.Helper.GeneralHelper
+  fullName: AutomationTestingProgram.Helper.GeneralHelper
+  nameWithType: GeneralHelper
+- uid: AutomationTestingProgram.Helper.GeneralHelper.Cleanse(System.String)
+  name: Cleanse(String)
+  href: api/AutomationTestingProgram.Helper.GeneralHelper.html#AutomationTestingProgram_Helper_GeneralHelper_Cleanse_System_String_
+  commentId: M:AutomationTestingProgram.Helper.GeneralHelper.Cleanse(System.String)
+  fullName: AutomationTestingProgram.Helper.GeneralHelper.Cleanse(System.String)
+  nameWithType: GeneralHelper.Cleanse(String)
+- uid: AutomationTestingProgram.Helper.GeneralHelper.Cleanse*
+  name: Cleanse
+  href: api/AutomationTestingProgram.Helper.GeneralHelper.html#AutomationTestingProgram_Helper_GeneralHelper_Cleanse_
+  commentId: Overload:AutomationTestingProgram.Helper.GeneralHelper.Cleanse
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Helper.GeneralHelper.Cleanse
+  nameWithType: GeneralHelper.Cleanse
+- uid: AutomationTestingProgram.Helper.GeneralHelper.DecryptString(System.String,System.String)
+  name: DecryptString(String, String)
+  href: api/AutomationTestingProgram.Helper.GeneralHelper.html#AutomationTestingProgram_Helper_GeneralHelper_DecryptString_System_String_System_String_
+  commentId: M:AutomationTestingProgram.Helper.GeneralHelper.DecryptString(System.String,System.String)
+  fullName: AutomationTestingProgram.Helper.GeneralHelper.DecryptString(System.String, System.String)
+  nameWithType: GeneralHelper.DecryptString(String, String)
+- uid: AutomationTestingProgram.Helper.GeneralHelper.DecryptString*
+  name: DecryptString
+  href: api/AutomationTestingProgram.Helper.GeneralHelper.html#AutomationTestingProgram_Helper_GeneralHelper_DecryptString_
+  commentId: Overload:AutomationTestingProgram.Helper.GeneralHelper.DecryptString
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Helper.GeneralHelper.DecryptString
+  nameWithType: GeneralHelper.DecryptString
+- uid: AutomationTestingProgram.Helper.GeneralHelper.EncryptString(System.String,System.String)
+  name: EncryptString(String, String)
+  href: api/AutomationTestingProgram.Helper.GeneralHelper.html#AutomationTestingProgram_Helper_GeneralHelper_EncryptString_System_String_System_String_
+  commentId: M:AutomationTestingProgram.Helper.GeneralHelper.EncryptString(System.String,System.String)
+  fullName: AutomationTestingProgram.Helper.GeneralHelper.EncryptString(System.String, System.String)
+  nameWithType: GeneralHelper.EncryptString(String, String)
+- uid: AutomationTestingProgram.Helper.GeneralHelper.EncryptString*
+  name: EncryptString
+  href: api/AutomationTestingProgram.Helper.GeneralHelper.html#AutomationTestingProgram_Helper_GeneralHelper_EncryptString_
+  commentId: Overload:AutomationTestingProgram.Helper.GeneralHelper.EncryptString
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Helper.GeneralHelper.EncryptString
+  nameWithType: GeneralHelper.EncryptString
 - uid: AutomationTestingProgram.Helper.Resource
   name: Resource
   href: api/AutomationTestingProgram.Helper.Resource.html

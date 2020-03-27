@@ -123,16 +123,39 @@
   <data name="Environment" xml:space="preserve">
     <value>environment</value>
   </data>
+  <data name="invisible" xml:space="preserve">
+    <value>value</value>
+  </data>
   <data name="RespectRepeatFor" xml:space="preserve">
     <value>respectRepeatFor</value>
   </data>
   <data name="RespectRunAODAFlag" xml:space="preserve">
     <value>respectRunAODAFlag</value>
   </data>
+  <data name="seconds" xml:space="preserve">
+    <value>value</value>
+  </data>
+  <data name="selection" xml:space="preserve">
+    <value>value</value>
+  </data>
+  <data name="tabIndex" xml:space="preserve">
+    <value>value</value>
+  </data>
+  <data name="text" xml:space="preserve">
+    <value>value</value>
+  </data>
   <data name="TimeOutThreshold" xml:space="preserve">
     <value>timeOutThreshold</value>
   </data>
-  <data name="URL" xml:space="preserve">
-    <value>url</value>
+  <data name="url" xml:space="preserve">
+    <value>value</value>
+  </data>
+  <data name="useJS" xml:space="preserve">
+    <value>comment</value>
+    <comment>Mapping from xml to database</comment>
+  </data>
+  <data name="xPath" xml:space="preserve">
+    <value>object</value>
+    <comment>Mapping from xml to database</comment>
   </data>
 </root>

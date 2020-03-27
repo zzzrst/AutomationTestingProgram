@@ -3,3 +3,17 @@
 * The TestArgs point to the location of the .xml file to run.
 * This is essentially a working copy of the [SeleniumPerfXML](https://github.com/zzzrst/SeleniumPerfXML).
 * Refere to SeleniumPerfXML for writing test set/case/step.
+
+## Mapping from XML attributes to Database column names
+|XML Attribute|Database Column|
+|---|---|
+|xPath|object|
+|useJS|comment|
+|tabIndex|value?|
+|selection|value|
+|url|value|
+|text|value|
+|invisible|value?|
+|seconds|value|
+|collectionSearchField|
+|collectionName|

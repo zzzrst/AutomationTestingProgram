@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AutomationFramework
+namespace AutomationTestingProgram.Exceptions
 {
     using System;
 

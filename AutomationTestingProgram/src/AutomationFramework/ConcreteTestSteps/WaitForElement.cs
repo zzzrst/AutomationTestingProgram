@@ -18,8 +18,8 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.Arguments["xPath"];
-            bool invisible = bool.Parse(this.Arguments["invisible"]);
+            string xPath = this.Arguments["object"];
+            bool invisible = bool.Parse(this.Arguments["value"]);
 
             ITestingDriver.ElementState state = invisible ? ITestingDriver.ElementState.Invisible : ITestingDriver.ElementState.Visible;
 

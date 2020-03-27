@@ -16,7 +16,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.Arguments["xPath"];
+            string xPath = this.Arguments["object"];
             InformationObject.TestAutomationDriver.SwitchToIFrame(xPath);
         }
     }

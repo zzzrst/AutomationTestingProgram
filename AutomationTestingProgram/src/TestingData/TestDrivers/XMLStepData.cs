@@ -11,7 +11,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.Helper;
     using AutomationTestSetFramework;
-    using TestingDriver;
 
     /// <summary>
     /// The XML Driver to get data from an xml.
@@ -150,7 +149,13 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 for (int index = 0; index < testStepNode.Attributes.Count; index++)
                 {
                     testStepNode.Attributes[index].InnerText = XMLHelper.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
-                    testStep.Arguments.Add(testStepNode.Attributes[index].Name, testStepNode.Attributes[index].InnerText);
+                    string key = Resource.Get(testStepNode.Attributes[index].Name);
+                    if (key == null)
+                    {
+                        key = testStepNode.Attributes[index].Name;
+                    }
+
+                    testStep.Arguments.Add(key, testStepNode.Attributes[index].InnerText);
                 }
 
                 testStep.Name = name;

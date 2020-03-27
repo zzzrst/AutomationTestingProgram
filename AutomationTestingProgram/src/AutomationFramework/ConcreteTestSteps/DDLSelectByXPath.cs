@@ -16,8 +16,8 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string xPath = this.Arguments["xPath"];
-            string selection = this.Arguments["selection"];
+            string xPath = this.Arguments["object"];
+            string selection = this.Arguments["value"];
             InformationObject.TestAutomationDriver.SelectValueInElement(xPath, selection);
             InformationObject.TestAutomationDriver.WaitForLoadingSpinner();
         }

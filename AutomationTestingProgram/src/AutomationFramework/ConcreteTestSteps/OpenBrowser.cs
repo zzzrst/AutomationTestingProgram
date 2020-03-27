@@ -16,7 +16,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string url = this.Arguments.ContainsKey("url") ? this.Arguments["url"] : string.Empty;
+            string url = this.Arguments.ContainsKey("value") ? this.Arguments["value"] : string.Empty;
             InformationObject.TestAutomationDriver.NavigateToURL(url);
         }
     }
