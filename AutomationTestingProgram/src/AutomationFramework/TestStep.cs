@@ -52,6 +52,11 @@ namespace AutomationTestingProgram.AutomationFramework
         /// </summary>
         public bool ShouldLog { get; set; } = true;
 
+        /// <summary>
+        /// Gets or sets number of attempts before a fail is thrown.
+        /// </summary>
+        public int Attempts { get; set; }
+
         /// <inheritdoc/>
         public virtual void Execute()
         {

@@ -8,6 +8,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.Collections.Generic;
     using System.Configuration;
     using System.Text;
+    using AutomationTestingProgram.AutomationFramework;
+    using AutomationTestingProgram.Exceptions;
     using AutomationTestSetFramework;
     using DatabaseConnector;
 
@@ -16,6 +18,14 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// </summary>
     public class DatabaseCaseData : ITestCaseData
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DatabaseCaseData"/> class.
+        /// </summary>
+        /// <param name="args">Args passe in.</param>
+        public DatabaseCaseData(string args)
+        {
+        }
+
         /// <inheritdoc/>
         public string TestArgs { get; set; }
 
@@ -32,6 +42,16 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         private OracleDatabase EnvDB { get; set; }
 
+        /// <summary>
+        /// Gets or sets list of test steps to run.
+        /// </summary>
+        private List<ITestStep> TestSteps { get; set; }
+
+        /// <summary>
+        /// Gets the SKIP.
+        /// </summary>
+        private string SKIP { get; } = "#";
+
         /// <inheritdoc/>
         public bool ExistNextTestStep()
         {
@@ -47,7 +67,95 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public ITestCase SetUpTestCase(string testCaseName, bool performAction = true)
         {
-            throw new NotImplementedException();
+            return this.CreateTestCase(testCaseName);
+        }
+
+        /// <summary>
+        /// Creates a new test step.
+        /// </summary>
+        /// <param name="testCaseName">The name of the test step.</param>
+        /// <returns>The test case.</returns>
+        private ITestCase CreateTestCase(string testCaseName)
+        {
+            try
+            {
+                this.TestSteps = new List<ITestStep>();
+                List<List<object>> table = this.QueryTestCase(testCaseName, collection, release);
+
+                foreach (List<object> row in table)
+                {
+                    ITestStep testStep = this.CreateTestStep(row);
+                    this.TestSteps.Add(testStep);
+                }
+
+                // create and return test case
+                ITestCase testCase = new TestCase()
+                {
+                    Name = testCaseName,
+                };
+
+                return testCase;
+            }
+            catch (TestActionNotFound tanf)
+            {
+                throw tanf;
+            }
+            catch (Exception e)
+            {
+                throw new TestCaseCreationFailed(e.ToString());
+            }
+        }
+
+        /// <summary>
+        /// The A Test Step.
+        /// </summary>
+        /// <param name="row">The row<see cref="T:List{object}"/>.</param>
+        /// <returns>The <see cref="ITestStep"/>.</returns>
+        private ITestStep CreateTestStep(List<object> row)
+        {
+            TestStep testStep;
+
+            // // ignore TESTCASE
+            string testStepDesc = row[1]?.ToString() ?? string.Empty;   // TESTCASEDESCRIPTION
+            string action = row[3]?.ToString() ?? string.Empty;         // ACTIONONOBJECT (test action)
+            string attribValue = row[4]?.ToString() ?? string.Empty;    // OBJECT
+            string value = row[5]?.ToString() ?? string.Empty;          // VALUE (of the control/field)
+            string attribute = row[6]?.ToString() ?? string.Empty;      // COMMENTS (selected attribute)
+
+            string stLocAttempts = row[8]?.ToString() ?? "0"; // LOCAL_ATTEMPTS
+            string stLocTimeout = row[9]?.ToString() ?? "0";  // LOCAL_TIMEOUT
+            string control = row[10]?.ToString() ?? string.Empty;       // CONTROL
+
+            string testStepType = row[12]?.ToString() ?? "0"; // TESTSTEPTYPE (formerly SEVERITY)
+            string goToStep = row[13]?.ToString() ?? string.Empty;      // GOTOSTEP
+
+            int localAttempts = int.Parse(string.IsNullOrEmpty(stLocAttempts) ? "0" : stLocAttempts);
+            if (localAttempts == 0)
+            {
+                localAttempts = alm.AlmGlobalAttempts;
+            }
+
+            int localTimeout = int.Parse(string.IsNullOrEmpty(stLocTimeout) ? "0" : stLocTimeout);
+            if (localTimeout == 0)
+            {
+                localTimeout = alm.AlmGlobalTimeOut;
+            }
+
+            int testStepTypeId = int.Parse(string.IsNullOrEmpty(testStepType) ? "0" : testStepType);
+            if (testStepTypeId == 0)
+            {
+                testStepTypeId = 1;
+            }
+
+            testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
+                .Find(x => x.Name.Equals(action));
+
+            testStep.TestStepStatus.Description = testStepDesc;
+            testStep.Arguments = attribValue;
+            testStep.Attempts = localAttempts;
+            testStep.ShouldExecuteVariable = control == this.SKIP;
+
+            return testStep.
         }
 
         /// <summary>
@@ -67,7 +175,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             Logger.Info("Closed connection to database.\n");
             if (result == null || result.Count == 0)
             {
-                throw new Exception("Database Test Case Not Found");
+                throw new DatabaseTestCaseNotFound("Database Test Case Not Found");
             }
 
             return result;

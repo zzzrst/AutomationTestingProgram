@@ -12,7 +12,6 @@ namespace AutomationTestingProgram.Builders
     using AutomationTestingProgram.Builders;
     using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestingData.TestDrivers;
-    using TestingDriver;
     using static InformationObject;
 
     /// <summary>

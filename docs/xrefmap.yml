@@ -2856,6 +2856,19 @@ references:
   commentId: T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData
   fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData
   nameWithType: DatabaseCaseData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.#ctor(System.String)
+  name: DatabaseCaseData(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseCaseData__ctor_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.#ctor(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.DatabaseCaseData(System.String)
+  nameWithType: DatabaseCaseData.DatabaseCaseData(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.#ctor*
+  name: DatabaseCaseData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseCaseData__ctor_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.DatabaseCaseData
+  nameWithType: DatabaseCaseData.DatabaseCaseData
 - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.ExistNextTestStep
   name: ExistNextTestStep()
   href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseCaseData_ExistNextTestStep
