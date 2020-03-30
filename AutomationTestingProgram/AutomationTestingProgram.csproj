@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
-    <PackageReference Include="AxeAccessibilityDriver" Version="2.1.7390.31685" />
+    <PackageReference Include="AxeAccessibilityDriver" Version="2.1.7394.14983" />
     <PackageReference Include="CommandLineParser" Version="2.7.82" />
     <PackageReference Include="ComparePDF" Version="2.0.7389.34931" />
     <PackageReference Include="docfx.console" Version="2.51.0">
