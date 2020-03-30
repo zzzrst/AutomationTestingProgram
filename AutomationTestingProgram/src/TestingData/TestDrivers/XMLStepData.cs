@@ -27,16 +27,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.TestArgs = xmlLocation;
         }
 
-        /// <summary>
-        /// Gets or sets the xml file containing the XML Data.
-        /// </summary>
-        private XmlDocument XMLDataFile { get; set; } = null;
-
-        /// <summary>
-        /// Gets or sets the xml file containing the test set/case/steps.
-        /// </summary>
-        private XmlDocument XMLDocObj { get; set; } = null;
-
         /// <inheritdoc/>
         public void SetArguments(TestStep testStep)
         {
@@ -51,7 +41,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // Find the appropriate test steps
             foreach (XmlNode innerNode in testSteps.ChildNodes)
             {
-                if (innerNode.Name != "#comment" && XMLHelper.ReplaceIfToken(innerNode.Attributes["id"].Value, this.XMLDataFile) == testStepName)
+                if (innerNode.Name != "#comment" && this.ReplaceIfToken(innerNode.Attributes["id"].Value, this.XMLDataFile) == testStepName)
                 {
                     ITestStep testStep = this.BuildTestStep(innerNode, performAction);
                     return testStep;
@@ -66,7 +56,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private ITestStep BuildTestStep(XmlNode testStepNode, bool performAction = true)
         {
             TestStep testStep = null;
-            string name = XMLHelper.ReplaceIfToken(testStepNode.Attributes["name"].Value, this.XMLDataFile);
+            string name = this.ReplaceIfToken(testStepNode.Attributes["name"].Value, this.XMLDataFile);
 
             // initial value is respectRunAODAFlag
             // if we respect the flag, and it is not found, then default value is false.
@@ -89,7 +79,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             {
                 if (testStepNode.Attributes["runAODAPageName"] != null)
                 {
-                    runAODAPageName = XMLHelper.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
+                    runAODAPageName = this.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
                 }
             }
 
@@ -113,7 +103,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             {
                 for (int index = 0; index < testStepNode.Attributes.Count; index++)
                 {
-                    testStepNode.Attributes[index].InnerText = XMLHelper.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
+                    testStepNode.Attributes[index].InnerText = this.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
                     string key = Resource.Get(testStepNode.Attributes[index].Name);
                     if (key == null)
                     {

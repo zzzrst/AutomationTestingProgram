@@ -38,54 +38,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.TestArgs = xmlLocation;
         }
 
-        /// <summary>
-        /// Gets or sets the information for the test set.
-        /// </summary>
-        private XmlNode TestFlow { get; set; }
-
-        /// <summary>
-        /// Gets or sets the xml file containing the XML Data.
-        /// </summary>
-        private XmlDocument XMLDataFile { get; set; } = null;
-
-        /// <summary>
-        /// Gets or sets the xml file containing the test set/case/steps.
-        /// </summary>
-        private XmlDocument XMLDocObj { get; set; } = null;
-
-        /// <inheritdoc/>
-        public void SetUp()
-        {
-            if (File.Exists(this.TestArgs))
-            {
-                this.XMLDocObj = new XmlDocument();
-                this.XMLDocObj.Load(this.TestArgs);
-                this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
-
-                string dataFile = Environment.GetEnvironmentVariable("dataFile");
-                if (dataFile == string.Empty || dataFile == null)
-                {
-                    if (this.XMLDocObj.GetElementsByTagName("DataFile").Count > 0)
-                    {
-                        dataFile = this.XMLDocObj.GetElementsByTagName("DataFile")[0].InnerText;
-                        if (File.Exists(dataFile))
-                        {
-                            this.XMLDataFile = new XmlDocument();
-                            this.XMLDataFile.Load(dataFile);
-                        }
-                        else
-                        {
-                            Logger.Error("XML File could not be found!");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Logger.Error("XML File could not be found!");
-            }
-        }
-
         /// <inheritdoc/>
         public void SetUpTestSet()
         {
@@ -145,7 +97,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 }
                 else if (currentNode.Name == "RunTestCase")
                 {
-                    testCase = this.FindTestCase(XMLHelper.ReplaceIfToken(currentNode.InnerText, this.XMLDataFile), performAction);
+                    testCase = this.FindTestCase(this.ReplaceIfToken(currentNode.InnerText, this.XMLDataFile), performAction);
                 }
                 else
                 {
@@ -180,7 +132,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // we check condition if we have to perfom this action.
             if (performAction)
             {
-                string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
+                string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                 string condition = ifXMLNode.Attributes["condition"].Value;
 
                 ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
@@ -204,7 +156,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
                         if (performAction && !ifCondition)
                         {
-                            string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
+                            string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                             string condition = ifSection.Attributes["condition"].Value;
 
                             ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
