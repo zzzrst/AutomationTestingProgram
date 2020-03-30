@@ -55,7 +55,14 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Gets or sets number of attempts before a fail is thrown.
         /// </summary>
-        public int Attempts { get; set; }
+        public int MaxAttempts { get; set; }
+
+        /// <summary>
+        /// Gets or sets the description of the test step.
+        /// </summary>
+        public string Description { get; set; }
+
+        private int Attempts { get; set; }
 
         /// <inheritdoc/>
         public virtual void Execute()
@@ -84,8 +91,11 @@ namespace AutomationTestingProgram.AutomationFramework
                     Name = this.Name,
                     StartTime = DateTime.UtcNow,
                     TestStepNumber = this.TestStepNumber,
+                    Description = this.Description,
                 };
             }
+
+            InformationObject.TestStepData.SetArguments(this);
 
             if (!this.ShouldExecuteVariable)
             {

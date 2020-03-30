@@ -15,7 +15,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// <summary>
     /// The XML Driver to get data from an xml.
     /// </summary>
-    public class XMLStepData : ITestStepData
+    public class XMLStepData : XMLData, ITestStepData
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="XMLStepData"/> class.
@@ -25,47 +25,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public XMLStepData(string xmlLocation)
         {
             this.TestArgs = xmlLocation;
-
-            if (File.Exists(this.TestArgs))
-            {
-                this.XMLDocObj = new XmlDocument();
-                this.XMLDocObj.Load(this.TestArgs);
-                this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
-
-                string dataFile = Environment.GetEnvironmentVariable("dataFile");
-                if (dataFile == string.Empty || dataFile == null)
-                {
-                    if (this.XMLDocObj.GetElementsByTagName("DataFile").Count > 0)
-                    {
-                        dataFile = this.XMLDocObj.GetElementsByTagName("DataFile")[0].InnerText;
-                        if (File.Exists(dataFile))
-                        {
-                            this.XMLDataFile = new XmlDocument();
-                            this.XMLDataFile.Load(dataFile);
-                        }
-                        else
-                        {
-                            Logger.Error("XML File could not be found!");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Logger.Error("XML File could not be found!");
-            }
         }
-
-        /// <inheritdoc/>
-        public string TestArgs { get; set; }
-
-        /// <inheritdoc/>
-        public string Name { get; } = "XML";
-
-        /// <summary>
-        /// Gets or sets the information for the test set.
-        /// </summary>
-        private XmlNode TestFlow { get; set; }
 
         /// <summary>
         /// Gets or sets the xml file containing the XML Data.
@@ -76,6 +36,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// Gets or sets the xml file containing the test set/case/steps.
         /// </summary>
         private XmlDocument XMLDocObj { get; set; } = null;
+
+        /// <inheritdoc/>
+        public void SetArguments(TestStep testStep)
+        {
+        }
 
         /// <inheritdoc/>
         public ITestStep SetUpTestStep(string testStepName, bool performAction = true)

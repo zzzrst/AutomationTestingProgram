@@ -26,14 +26,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public TextStepData(string textLocation)
         {
             this.TestArgs = textLocation;
-            TextInteractor interactor = new TextInteractor(this.TestArgs);
-            interactor.Open();
-            while (!interactor.FinishedReading())
-            {
-                this.FileData.Add(interactor.ReadLine());
-            }
-
-            interactor.Close();
         }
 
         /// <inheritdoc/>
@@ -43,6 +35,25 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public string Name { get; } = "Txt";
 
         private List<string> FileData { get; set; } = new List<string>();
+
+        /// <inheritdoc/>
+        public void SetArguments(TestStep testStep)
+        {
+            return testStep.Arguments;
+        }
+
+        /// <inheritdoc/>
+        public void SetUp()
+        {
+            TextInteractor interactor = new TextInteractor(this.TestArgs);
+            interactor.Open();
+            while (!interactor.FinishedReading())
+            {
+                this.FileData.Add(interactor.ReadLine());
+            }
+
+            interactor.Close();
+        }
 
         /// <inheritdoc/>
         public ITestStep SetUpTestStep(string testStepName, bool performAction = true)

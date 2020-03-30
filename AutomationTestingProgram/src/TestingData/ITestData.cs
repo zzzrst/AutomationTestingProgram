@@ -20,5 +20,13 @@ namespace AutomationTestingProgram.TestingData
         /// Gets the name to be found by the reflective getter.
         /// </summary>
         public string Name { get; }
+
+        /// <summary>
+        /// Since The constructor is called through reflective getter,
+        /// any errors during the constructor caused by wrong arguments,
+        /// will cause the program to crash. run here instead,
+        /// guarantees that it is the right type.
+        /// </summary>
+        public void SetUp();
     }
 }

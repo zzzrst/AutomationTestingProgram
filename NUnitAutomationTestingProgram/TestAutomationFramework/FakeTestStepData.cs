@@ -12,6 +12,11 @@ namespace NUnitAutomationTestingProgram.SampleTests
         public string TestArgs { get; set; }
         public string Name { get; } = "FakeTestStepData";
 
+        public void SetArguments(TestStep testStep)
+        {
+            return testStep.Arguments;
+        }
+
         public void SetUp()
         {
         }

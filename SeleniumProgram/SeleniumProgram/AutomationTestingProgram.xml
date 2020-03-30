@@ -579,9 +579,14 @@
             Gets or sets a value indicating whether test step should be logged.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.Attempts">
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.MaxAttempts">
             <summary>
             Gets or sets number of attempts before a fail is thrown.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.Description">
+            <summary>
+            Gets or sets the description of the test step.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.TestStep.Execute">
@@ -1355,6 +1360,14 @@
             Gets the name to be found by the reflective getter.
             </summary>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.ITestData.SetUp">
+            <summary>
+            Since The constructor is called through reflective getter,
+            any errors during the constructor caused by wrong arguments,
+            will cause the program to crash. run here instead,
+            guarantees that it is the right type.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.ITestSetData">
             <summary>
             The interface to get the test set data.
@@ -1390,6 +1403,13 @@
             <param name="performAction">Determins if the test step should run.</param>
             <returns>The Test Step to run.</returns>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.ITestStepData.GetArguments(AutomationTestingProgram.AutomationFramework.TestStep)">
+            <summary>
+            Gets any arguments at runtime.
+            </summary>
+            <param name="testStep">Test steps to get the arguments for.</param>
+            <returns>Arguments.</returns>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData">
             <summary>
             A concrete implementation of the ITestCaseData for databases.
@@ -1417,6 +1437,21 @@
             Gets or sets connection established to environment database.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.Environment">
+            <summary>
+            Gets or sets name of the environment.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.EnvDBName">
+            <summary>
+            Gets or sets the name of the enviornment database.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.TestDBName">
+            <summary>
+            Gets or sets the name of the test case db.
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.TestSteps">
             <summary>
             Gets or sets list of test steps to run.
@@ -1427,6 +1462,15 @@
             Gets the SKIP.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SpecialCharFlag">
+            <summary>
+            Gets or sets a value indicating whether flag for querying special characters.
+            MAy REmove.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUp">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.ExistNextTestStep">
             <inheritdoc/>
         </member>
@@ -1435,6 +1479,13 @@
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.Boolean)">
             <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.QueryObjectAndArguments(AutomationTestingProgram.AutomationFramework.TestStep)">
+            <summary>
+            If object identifier or arguments begin with special characters in ['!', '@', '##', '$$'], then
+            they are replaced by their respective value in the database.
+            </summary>
+            <param name="testStep">The Test step to query arguments.</param>.
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CreateTestCase(System.String)">
             <summary>
@@ -1464,6 +1515,49 @@
             connects the given database and returns it.
             </summary>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CreateEnvironmentConnectionString(System.String)">
+            <summary>
+            Creates the connection string to connect to the environment database.
+            </summary>
+            <param name="environment">Name of environment to connect to.</param>
+            <returns>The connection string to connect to the environment database.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.QueryEnvironmentConnectionInformation(System.String)">
+            <summary>
+            Queries the information needed to build the connection string.
+            </summary>
+            <param name="environment">Name of environment to connect to.</param>
+            <returns>The information needed to build the connection string.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.QuerySpecialChars(System.String,System.String)">
+            <summary>
+            If the original string begins with special characters in ['!', '@', '##', '$$'], then
+            it is replaced by the respective value in the database.
+            </summary>
+            <param name="environment">Environment database to query from (if applicable).</param>
+            <param name="original">Original string.</param>
+            <returns>The respective value in the database, or the original string itself.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.GetEnvironmentURL(System.String)">
+            <summary>
+            Returns the URL to access the environment.
+            </summary>
+            <param name="environment">The enviornment we want to connect to.</param>
+            <returns>The URL to access the environment.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.ProcessEnvironmentQuery(System.String,System.String)">
+            <summary>
+            Executes the given query in an environment database.
+            </summary>
+            <param name="environment">Name of environment to execute in.</param>
+            <param name="query">Query to execute.</param>
+            <returns>The data queried from the database.</returns>
+        </member>
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.DatabasePasswordState">
+            <summary>
+            State of the database password.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData">
             <summary>
             A dummy class that isn't used.
@@ -1482,8 +1576,19 @@
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.Name">
             <inheritdoc/>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetArguments(AutomationTestingProgram.AutomationFramework.TestStep)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUp">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep(System.String,System.Boolean)">
             <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.ExcelDriver">
+            <summary>
+            Driver class to interact with and query from Excel files.
+            </summary>
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData">
             <summary>
@@ -1502,6 +1607,9 @@
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.SetUp">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.ExistNextTestStep">
@@ -1530,6 +1638,12 @@
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.GetArguments(AutomationTestingProgram.AutomationFramework.TestStep)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.SetUp">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.SetUpTestStep(System.String,System.Boolean)">
@@ -1588,6 +1702,9 @@
             Gets or sets the ammount of times the test case has ran.
             </summary>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.SetUp">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.SetUpTestCase(System.String,System.Boolean)">
             <inheritdoc/>
         </member>
@@ -1603,14 +1720,6 @@
             </summary>
             <param name="currentNode">the layer to add.</param>
             <param name="performAction">Whether or not the nodes should execute their test cases.</param>
-        </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.FindTestStep(System.String,System.Boolean)">
-            <summary>
-            This function will go through the list of steps and run the appropriate test step if found.
-            </summary>
-            <param name="testStepID"> The ID of the test step to run. </param>
-            <param name="performAction"> Perfoms the action. </param>
-            <returns>0 if pass. >=1 if fail.</returns>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData.RunThenElseLayer(System.Xml.XmlNode,System.Boolean)">
             <summary>
@@ -1661,6 +1770,9 @@
             <summary>
             Gets or sets the xml file containing the test set/case/steps.
             </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.SetUp">
+            <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.SetUpTestSet">
             <inheritdoc/>
@@ -1718,11 +1830,6 @@
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.Name">
             <inheritdoc/>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.TestFlow">
-            <summary>
-            Gets or sets the information for the test set.
-            </summary>
-        </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.XMLDataFile">
             <summary>
             Gets or sets the xml file containing the XML Data.
@@ -1732,6 +1839,12 @@
             <summary>
             Gets or sets the xml file containing the test set/case/steps.
             </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.GetArguments(AutomationTestingProgram.AutomationFramework.TestStep)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.SetUp">
+            <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.SetUpTestStep(System.String,System.Boolean)">
             <inheritdoc/>

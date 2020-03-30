@@ -131,6 +131,8 @@ namespace AutomationTestingProgram.Builders
                 throw new Exception($"Cannot Find test data type {dataTypeName}");
             }
 
+            testData.SetUp();
+
             return testData;
         }
     }

@@ -39,6 +39,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private int FileIndex { get; set; } = 0;
 
         /// <inheritdoc/>
+        public void SetUp()
+        {
+        }
+
+        /// <inheritdoc/>
         public bool ExistNextTestStep()
         {
             return this.FileIndex < this.FileData.Count;

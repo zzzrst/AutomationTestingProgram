@@ -45,25 +45,49 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private OracleDatabase EnvDB { get; set; }
 
         /// <summary>
+        /// Gets or sets name of the environment.
+        /// </summary>
+        private string Environment { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the enviornment database.
+        /// </summary>
+        private string EnvDBName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the test case db.
+        /// </summary>
+        private string TestDBName { get; set; }
+
+        /// <summary>
         /// Gets or sets list of test steps to run.
         /// </summary>
-        private List<ITestStep> TestSteps { get; set; }
+        private Queue<TestStep> TestSteps { get; set; }
 
         /// <summary>
         /// Gets the SKIP.
         /// </summary>
         private string SKIP { get; } = "#";
 
+        private string EnviroDBName { get; set; }
+
+        /// <inheritdoc/>
+        public void SetUp()
+        {
+            this.EnvDBName = ConfigurationManager.AppSettings["DBEnvDatabase"].ToString();
+            this.TestDBName = ConfigurationManager.AppSettings["DBTestCaseDatabase"].ToString();
+        }
+
         /// <inheritdoc/>
         public bool ExistNextTestStep()
         {
-            throw new NotImplementedException();
+            return this.TestSteps.Count > 0;
         }
 
         /// <inheritdoc/>
         public ITestStep GetNextTestStep()
         {
-            throw new NotImplementedException();
+            return this.TestSteps.Dequeue();
         }
 
         /// <inheritdoc/>
@@ -83,13 +107,13 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             string release = "0";
             try
             {
-                this.TestSteps = new List<ITestStep>();
+                this.TestSteps = new Queue<TestStep>();
                 List<List<object>> table = this.QueryTestCase(testCaseName, collection, release);
 
                 foreach (List<object> row in table)
                 {
-                    ITestStep testStep = this.CreateTestStep(row);
-                    this.TestSteps.Add(testStep);
+                    TestStep testStep = this.CreateTestStep(row);
+                    this.TestSteps.Enqueue(testStep);
                 }
 
                 // create and return test case
@@ -115,7 +139,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         /// <param name="row">The row<see cref="T:List{object}"/>.</param>
         /// <returns>The <see cref="ITestStep"/>.</returns>
-        private ITestStep CreateTestStep(List<object> row)
+        private TestStep CreateTestStep(List<object> row)
         {
             TestStep testStep;
 
@@ -154,11 +178,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
                 .Find(x => x.Name.Equals(action));
 
-            testStep.TestStepStatus.Description = testStepDesc;
-            testStep.Arguments.Add("object", GeneralHelper.Cleanse(obj));
-            testStep.Arguments.Add("value", GeneralHelper.Cleanse(value));
-            testStep.Arguments.Add("comment", GeneralHelper.Cleanse(comment));
-            testStep.Attempts = localAttempts;
+            testStep.Description = testStepDesc;
+            testStep.Arguments.Add("object", Helper.Cleanse(obj));
+            testStep.Arguments.Add("value", Helper.Cleanse(value));
+            testStep.Arguments.Add("comment", Helper.Cleanse(comment));
+            testStep.MaxAttempts = localAttempts;
             testStep.ShouldExecuteVariable = control == this.SKIP;
 
             return testStep;
@@ -174,7 +198,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private List<List<object>> QueryTestCase(string testcase, string collection, string release)
         {
             this.TestDB = this.ConnectToDatabase(this.TestDB);
-            string query = "SELECT T.TESTCASE, T.TESTSTEPDESCRIPTION, T.STEPNUM, T.ACTIONONOBJECT, T.OBJECT, T.VALUE, T.COMMENTS, T.RELEASE, T.LOCAL_ATTEMPTS, T.LOCAL_TIMEOUT, T.CONTROL, T.COLLECTION, T.TEST_STEP_TYPE_ID, T.GOTOSTEP FROM QA_AUTOMATION.TESTCASE T WHERE T.TESTCASE = '" + testcase + "' AND T.COLLECTION = '" + collection + "' AND T.RELEASE = '" + release + "' ORDER BY T.STEPNUM";
+            string query = $"SELECT T.TESTCASE, T.TESTSTEPDESCRIPTION, T.STEPNUM, T.ACTIONONOBJECT, T.OBJECT, T.VALUE, T.COMMENTS, T.RELEASE, T.LOCAL_ATTEMPTS, T.LOCAL_TIMEOUT, T.CONTROL, T.COLLECTION, T.TEST_STEP_TYPE_ID, T.GOTOSTEP FROM {this.TestDBName} T WHERE T.TESTCASE = '{testcase}' AND T.COLLECTION = '{collection}' AND T.RELEASE = '{release}' ORDER BY T.STEPNUM";
             Logger.Info("Querying the following: [" + query + "]");
             var result = this.TestDB.ExecuteQuery(query);
             this.TestDB.Disconnect();
@@ -217,6 +241,107 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
 
             return database;
+        }
+
+        private void ConnectToDatabase(OracleDatabase envDB, string environment)
+        {
+            if (this.EnvDB == null || !this.EnvDB.IsConnected() || (this.Environment != string.Empty && this.Environment != environment))
+            {
+                int count = 0;
+                while (count < 3)
+                {
+                    this.EnvDB = new OracleDatabase(this.CreateEnvironmentConnectionString(environment), Logger.GetLog4NetLogger());
+                    this.EnvDB.Connect();
+                    this.Environment = environment;
+                    if (this.EnvDB.IsConnected())
+                    {
+                        Logger.Info("Connected to database: " + this.EnviroDBName);
+                        break;
+                    }
+
+                    count++;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Creates the connection string to connect to the environment database.
+        /// </summary>
+        /// <param name="environment">Name of environment to connect to.</param>
+        /// <returns>The connection string to connect to the environment database.</returns>
+        private string CreateEnvironmentConnectionString(string environment)
+        {
+            List<object> connectionInfo = this.QueryEnvironmentConnectionInformation(environment);
+            this.EnviroDBName = connectionInfo[2].ToString();
+
+            string t_host = connectionInfo[0].ToString();
+            string t_port = connectionInfo[1].ToString();
+            string t_db_name = connectionInfo[2].ToString();
+            string t_username = connectionInfo[3].ToString();
+            string t_password = connectionInfo[4].ToString();
+
+            return OracleDatabase.CreateConnectionString(
+                t_host,
+                t_port,
+                t_db_name,
+                t_username,
+                t_password);
+        }
+
+        /// <summary>
+        /// Queries the information needed to build the connection string.
+        /// </summary>
+        /// <param name="environment">Name of environment to connect to.</param>
+        /// <returns>The information needed to build the connection string.</returns>
+        private List<object> QueryEnvironmentConnectionInformation(string environment)
+        {
+            this.ConnectToDatabase(this.TestDB);
+
+            // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
+            string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {this.EnvDBName} t where t.environment = '{environment}'";
+
+            // decrypt password if needed.
+            List<List<object>> result = this.TestDB.ExecuteQuery(query);
+
+            if (result.Count == 0)
+            {
+                throw new Exception($"Environment provided '{environment}' is not in table!");
+            }
+
+            List<object> connectionInfo = result[0];
+            string t_host = connectionInfo[0].ToString();
+            string t_port = connectionInfo[1].ToString();
+            string t_db_name = connectionInfo[2].ToString();
+            string t_username = connectionInfo[3].ToString();
+            string t_password = connectionInfo[4].ToString();
+            int t_isPasswordEncrypted = int.Parse(connectionInfo[5].ToString());
+
+            switch (t_isPasswordEncrypted)
+            {
+                case DatabasePasswordState.IsProtected:
+                    connectionInfo[4] = Helper.DecryptString(t_password, t_db_name + t_username);
+                    break;
+
+                case DatabasePasswordState.IsNotProtected:
+                    // do nothing;
+                    break;
+
+                default:
+                    // something went wrong! We have constraint so that the value must be 0 or 1.
+                    break;
+            }
+
+            return connectionInfo;
+        }
+
+        /// <summary>
+        /// State of the database password.
+        /// </summary>
+        private static class DatabasePasswordState
+        {
+            internal const int IsProtected = 1;
+
+            internal const int IsNotProtected = 0;
         }
     }
 }
