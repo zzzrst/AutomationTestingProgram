@@ -18,7 +18,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// <summary>
     /// A concrete implementation of the ITestCaseData for databases.
     /// </summary>
-    public class DatabaseCaseData : ITestCaseData
+    public class DatabaseCaseData : DatabaseData, ITestCaseData
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DatabaseCaseData"/> class.
@@ -27,37 +27,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public DatabaseCaseData(string args)
         {
         }
-
-        /// <inheritdoc/>
-        public string TestArgs { get; set; }
-
-        /// <inheritdoc/>
-        public string Name { get; } = "Database";
-
-        /// <summary>
-        /// Gets or sets connection established to test database.
-        /// </summary>
-        private OracleDatabase TestDB { get; set; }
-
-        /// <summary>
-        /// Gets or sets connection established to environment database.
-        /// </summary>
-        private OracleDatabase EnvDB { get; set; }
-
-        /// <summary>
-        /// Gets or sets name of the environment.
-        /// </summary>
-        private string Environment { get; set; }
-
-        /// <summary>
-        /// Gets or sets the name of the enviornment database.
-        /// </summary>
-        private string EnvDBName { get; set; }
-
-        /// <summary>
-        /// Gets or sets the name of the test case db.
-        /// </summary>
-        private string TestDBName { get; set; }
 
         /// <summary>
         /// Gets or sets list of test steps to run.
@@ -70,13 +39,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private string SKIP { get; } = "#";
 
         private string EnviroDBName { get; set; }
-
-        /// <inheritdoc/>
-        public void SetUp()
-        {
-            this.EnvDBName = ConfigurationManager.AppSettings["DBEnvDatabase"].ToString();
-            this.TestDBName = ConfigurationManager.AppSettings["DBTestCaseDatabase"].ToString();
-        }
 
         /// <inheritdoc/>
         public bool ExistNextTestStep()
@@ -209,139 +171,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
 
             return result;
-        }
-
-        /// <summary>
-        /// connects the given database and returns it.
-        /// </summary>
-        private OracleDatabase ConnectToDatabase(OracleDatabase database)
-        {
-            if (database == null || !database.IsConnected())
-            {
-                int count = 0;
-
-                // trys 3 times
-                while (count < 3)
-                {
-                    string host = ConfigurationManager.AppSettings["DBHost"].ToString();
-                    string port = ConfigurationManager.AppSettings["DBPort"].ToString();
-                    string serviceName = ConfigurationManager.AppSettings["DBServiceName"].ToString();
-                    string userID = ConfigurationManager.AppSettings["DBUserId"].ToString();
-                    string password = ConfigurationManager.AppSettings["DBPassword"].ToString();
-                    database = new OracleDatabase(host, port, serviceName, userID, password);
-                    database.Connect();
-                    if (database.IsConnected())
-                    {
-                        Logger.Info($"Connected to database: {serviceName}");
-                        break;
-                    }
-
-                    count++;
-                }
-            }
-
-            return database;
-        }
-
-        private void ConnectToDatabase(OracleDatabase envDB, string environment)
-        {
-            if (this.EnvDB == null || !this.EnvDB.IsConnected() || (this.Environment != string.Empty && this.Environment != environment))
-            {
-                int count = 0;
-                while (count < 3)
-                {
-                    this.EnvDB = new OracleDatabase(this.CreateEnvironmentConnectionString(environment), Logger.GetLog4NetLogger());
-                    this.EnvDB.Connect();
-                    this.Environment = environment;
-                    if (this.EnvDB.IsConnected())
-                    {
-                        Logger.Info("Connected to database: " + this.EnviroDBName);
-                        break;
-                    }
-
-                    count++;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Creates the connection string to connect to the environment database.
-        /// </summary>
-        /// <param name="environment">Name of environment to connect to.</param>
-        /// <returns>The connection string to connect to the environment database.</returns>
-        private string CreateEnvironmentConnectionString(string environment)
-        {
-            List<object> connectionInfo = this.QueryEnvironmentConnectionInformation(environment);
-            this.EnviroDBName = connectionInfo[2].ToString();
-
-            string t_host = connectionInfo[0].ToString();
-            string t_port = connectionInfo[1].ToString();
-            string t_db_name = connectionInfo[2].ToString();
-            string t_username = connectionInfo[3].ToString();
-            string t_password = connectionInfo[4].ToString();
-
-            return OracleDatabase.CreateConnectionString(
-                t_host,
-                t_port,
-                t_db_name,
-                t_username,
-                t_password);
-        }
-
-        /// <summary>
-        /// Queries the information needed to build the connection string.
-        /// </summary>
-        /// <param name="environment">Name of environment to connect to.</param>
-        /// <returns>The information needed to build the connection string.</returns>
-        private List<object> QueryEnvironmentConnectionInformation(string environment)
-        {
-            this.ConnectToDatabase(this.TestDB);
-
-            // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
-            string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {this.EnvDBName} t where t.environment = '{environment}'";
-
-            // decrypt password if needed.
-            List<List<object>> result = this.TestDB.ExecuteQuery(query);
-
-            if (result.Count == 0)
-            {
-                throw new Exception($"Environment provided '{environment}' is not in table!");
-            }
-
-            List<object> connectionInfo = result[0];
-            string t_host = connectionInfo[0].ToString();
-            string t_port = connectionInfo[1].ToString();
-            string t_db_name = connectionInfo[2].ToString();
-            string t_username = connectionInfo[3].ToString();
-            string t_password = connectionInfo[4].ToString();
-            int t_isPasswordEncrypted = int.Parse(connectionInfo[5].ToString());
-
-            switch (t_isPasswordEncrypted)
-            {
-                case DatabasePasswordState.IsProtected:
-                    connectionInfo[4] = Helper.DecryptString(t_password, t_db_name + t_username);
-                    break;
-
-                case DatabasePasswordState.IsNotProtected:
-                    // do nothing;
-                    break;
-
-                default:
-                    // something went wrong! We have constraint so that the value must be 0 or 1.
-                    break;
-            }
-
-            return connectionInfo;
-        }
-
-        /// <summary>
-        /// State of the database password.
-        /// </summary>
-        private static class DatabasePasswordState
-        {
-            internal const int IsProtected = 1;
-
-            internal const int IsNotProtected = 0;
         }
     }
 }

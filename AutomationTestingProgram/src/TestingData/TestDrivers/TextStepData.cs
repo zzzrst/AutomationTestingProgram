@@ -39,7 +39,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public void SetArguments(TestStep testStep)
         {
-            return testStep.Arguments;
         }
 
         /// <inheritdoc/>

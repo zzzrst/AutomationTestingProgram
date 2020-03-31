@@ -73,10 +73,21 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public virtual void HandleException(Exception e)
         {
+            this.TestStepStatus.Name = "Attempt 1/" + this.MaxAttempts;
+            this.TestStepStatus.Description = "Error while trying to query the database.";
+            this.TestStepStatus.Expected = "Execute " + this.Description + " successfully";
+            this.TestStepStatus.Actual = "Failure in executing " + this.Description + "!\n" + e.ToString();
             this.TestStepStatus.ErrorStack = e.StackTrace;
             this.TestStepStatus.FriendlyErrorMessage = e.Message;
             this.TestStepStatus.RunSuccessful = false;
-            this.TestStepStatus.Actual = "F";
+
+            /*this.Alm.AddTestStep(testStepName, "Failed", testStepDesc, testStepExp, testStepAct);
+passed = false;
+message = testStepDesc;
+attempts = this.LocalAttempts + 1;*/
+
+            Logger.Error(e.Message);
+
             InformationObject.TestAutomationDriver.CheckErrorContainer();
             InformationObject.TestAutomationDriver.TakeScreenShot();
         }

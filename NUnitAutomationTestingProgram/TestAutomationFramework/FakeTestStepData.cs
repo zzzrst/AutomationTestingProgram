@@ -14,7 +14,6 @@ namespace NUnitAutomationTestingProgram.SampleTests
 
         public void SetArguments(TestStep testStep)
         {
-            return testStep.Arguments;
         }
 
         public void SetUp()

@@ -6,15 +6,28 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
+    using System.IO;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework;
+    using AutomationTestingProgram.Helper;
     using AutomationTestSetFramework;
+    using DatabaseConnector;
+    using NPOI.SS.UserModel;
+    using NPOI.SS.Util;
+    using NPOI.XSSF.UserModel;
+    using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
     /// A dummy class that isn't used.
     /// </summary>
-    internal class DatabaseStepData : ITestStepData
+    internal class DatabaseStepData : DatabaseData, ITestStepData
     {
+        /// <summary>
+        /// The path to the keychain account.
+        /// </summary>
+        internal static readonly string KeychainAccountsFilePath = ConfigurationManager.AppSettings["KeychainAccountsFilePath"].ToString();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DatabaseStepData"/> class.
         /// A mandatory constructor that won't do anything.
@@ -23,12 +36,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public DatabaseStepData(string args)
         {
         }
-
-        /// <inheritdoc/>
-        public string TestArgs { get; set; }
-
-        /// <inheritdoc/>
-        public string Name { get; } = "Database";
 
         /// <summary>
         /// Gets or sets a value indicating whether flag for querying special characters.
@@ -41,27 +48,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         {
             // run for at most number of local attempts, until test action passes
             // update object and value by querying special characters
-            try
-            {
-                this.QueryObjectAndArguments(testStep);
-            }
-            catch (Exception e)
-            {
-                Logger.Error(e.Message);
-                string testStepName = "Attempt 1/" + testStep.MaxAttempts;
-                string testStepDesc = "Error while trying to query the database.";
-                string testStepExp = "Execute " + testStep.Description + " successfully";
-                string testStepAct = "Failure in executing " + testStep.Description + "!\n" + e.ToString();
-                /*this.Alm.AddTestStep(testStepName, "Failed", testStepDesc, testStepExp, testStepAct);
-                passed = false;
-                message = testStepDesc;
-                attempts = this.LocalAttempts + 1;*/
-            }
-        }
-
-        /// <inheritdoc/>
-        public void SetUp()
-        {
+            this.QueryObjectAndArguments(testStep);
         }
 
         /// <inheritdoc/>
@@ -77,7 +64,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <param name="testStep">The Test step to query arguments.</param>.
         public void QueryObjectAndArguments(TestStep testStep)
         {
-            string environment = "";/*this.Alm.AlmEnvironment;
+            string environment = GetEnvironmentVariable(EnvVar.Environment);
+            /*
 
             // query to update each of the test object's attribute value
             foreach (string attribute in this.TestObject.GetAttributes())
@@ -96,6 +84,97 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
 
             this.SpecialCharFlag = false;
+        }
+
+        private void ConnectToDatabase(OracleDatabase envDB, string environment)
+        {
+            if (this.EnvDB == null || !this.EnvDB.IsConnected() || (this.Environment != string.Empty && this.Environment != environment))
+            {
+                int count = 0;
+                while (count < 3)
+                {
+                    this.EnvDB = new OracleDatabase(this.CreateEnvironmentConnectionString(environment), Logger.GetLog4NetLogger());
+                    this.EnvDB.Connect();
+                    this.Environment = environment;
+                    if (this.EnvDB.IsConnected())
+                    {
+                        Logger.Info("Connected to database: " + this.EnvDBName);
+                        break;
+                    }
+
+                    count++;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Creates the connection string to connect to the environment database.
+        /// </summary>
+        /// <param name="environment">Name of environment to connect to.</param>
+        /// <returns>The connection string to connect to the environment database.</returns>
+        private string CreateEnvironmentConnectionString(string environment)
+        {
+            List<object> connectionInfo = this.QueryEnvironmentConnectionInformation(environment);
+            this.EnvDBName = connectionInfo[2].ToString();
+
+            string t_host = connectionInfo[0].ToString();
+            string t_port = connectionInfo[1].ToString();
+            string t_db_name = connectionInfo[2].ToString();
+            string t_username = connectionInfo[3].ToString();
+            string t_password = connectionInfo[4].ToString();
+
+            return OracleDatabase.CreateConnectionString(
+                t_host,
+                t_port,
+                t_db_name,
+                t_username,
+                t_password);
+        }
+
+        /// <summary>
+        /// Queries the information needed to build the connection string.
+        /// </summary>
+        /// <param name="environment">Name of environment to connect to.</param>
+        /// <returns>The information needed to build the connection string.</returns>
+        private List<object> QueryEnvironmentConnectionInformation(string environment)
+        {
+            this.ConnectToDatabase(this.TestDB);
+
+            // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
+            string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {this.EnvDBName} t where t.environment = '{environment}'";
+
+            // decrypt password if needed.
+            List<List<object>> result = this.TestDB.ExecuteQuery(query);
+
+            if (result.Count == 0)
+            {
+                throw new Exception($"Environment provided '{environment}' is not in table!");
+            }
+
+            List<object> connectionInfo = result[0];
+            string t_host = connectionInfo[0].ToString();
+            string t_port = connectionInfo[1].ToString();
+            string t_db_name = connectionInfo[2].ToString();
+            string t_username = connectionInfo[3].ToString();
+            string t_password = connectionInfo[4].ToString();
+            int t_isPasswordEncrypted = int.Parse(connectionInfo[5].ToString());
+
+            switch (t_isPasswordEncrypted)
+            {
+                case DatabasePasswordState.IsProtected:
+                    connectionInfo[4] = Helper.DecryptString(t_password, t_db_name + t_username);
+                    break;
+
+                case DatabasePasswordState.IsNotProtected:
+                    // do nothing;
+                    break;
+
+                default:
+                    // something went wrong! We have constraint so that the value must be 0 or 1.
+                    break;
+            }
+
+            return connectionInfo;
         }
 
         /// <summary>
@@ -141,7 +220,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             {
                 // query password from Keychain accounts spreadsheet
                 string username = original.Substring(2);
-                //result = ExcelDriver.QueryKeychainAccountPassword(username);
+                result = this.QueryKeychainAccountPassword(username);
                 msg += $"Query of {original} replaced password with: {result}.";
             }
             else if (original.Length >= 2 && original.Substring(0, 2) == "$$")
@@ -150,7 +229,9 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 int split = original.IndexOf(';');
                 string filepath = original.Substring(2, split);
                 string query = original.Substring(split + 1);
-                //result = ExcelDriver.QueryExcelFile(filepath, query);
+                Logger.Error($"Sorry, {original} is not implemented yet. or does not work on the current program.");
+
+                // result = ExcelDriver.QueryExcelFile(filepath, query);
             }
 
             // display console log
@@ -160,6 +241,40 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Queries password of a given username from the Keychain accounts spreadsheet.
+        /// </summary>
+        /// <param name="username">Username to find password of.</param>
+        /// <returns>Password of the Keychain account.</returns>
+        private string QueryKeychainAccountPassword(string username)
+        {
+            string password = string.Empty;
+
+            using (FileStream fileStream = new FileStream(KeychainAccountsFilePath, FileMode.Open, FileAccess.Read))
+            {
+                // open both XLS and XLSX
+                IWorkbook excel = WorkbookFactory.Create(fileStream);
+                ISheet sheet = excel.GetSheetAt(0);
+                for (int col = 0; col < sheet.GetRow(0).LastCellNum; col++)
+                {
+                    // Find the username column
+                    if (sheet.GetRow(0).GetCell(col).StringCellValue == "Email_Account")
+                    {
+                        for (int row = 0; row < sheet.LastRowNum; row++)
+                        {
+                            if (sheet.GetRow(row).GetCell(col).StringCellValue == username)
+                            {
+                                password = sheet.GetRow(row + 1).GetCell(col).StringCellValue;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return password;
         }
 
         /// <summary>
@@ -190,6 +305,16 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         {
             this.ConnectToDatabase(this.EnvDB, environment);
             return this.EnvDB.ExecuteQuery(query)[0][0].ToString();
+        }
+
+        /// <summary>
+        /// State of the database password.
+        /// </summary>
+        private static class DatabasePasswordState
+        {
+            internal const int IsProtected = 1;
+
+            internal const int IsNotProtected = 0;
         }
     }
 }

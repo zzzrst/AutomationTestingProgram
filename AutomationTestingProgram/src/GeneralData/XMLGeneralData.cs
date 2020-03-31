@@ -60,16 +60,16 @@ namespace AutomationTestingProgram.GeneralData
             // Passed in parameters overide what is in the XML.
             if (xmlDocObj.GetElementsByTagName("URL").Count > 0)
             {
-                parameters.Add(EnvVar.URL, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("URL")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.URL, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("URL")[0].InnerText, xmlDataFile));
             }
             else
             {
-                string enviornment = XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Environment")[0].InnerText, xmlDataFile);
+                string enviornment = this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Environment")[0].InnerText, xmlDataFile);
                 parameters.Add(EnvVar.Environment, enviornment);
                 parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());
             }
 
-            parameters.Add(EnvVar.Browser, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Browser")[0].InnerText, xmlDataFile));
+            parameters.Add(EnvVar.Browser, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Browser")[0].InnerText, xmlDataFile));
             if (xmlDocObj.GetElementsByTagName("RespectRepeatFor").Count > 0)
             {
                 parameters.Add(EnvVar.RespectRepeatFor, xmlDocObj.GetElementsByTagName("RespectRepeatFor")[0].InnerText);
@@ -82,27 +82,27 @@ namespace AutomationTestingProgram.GeneralData
 
             parameters.Add(EnvVar.TimeOutThreshold, xmlDocObj.GetElementsByTagName("TimeOutThreshold")[0].InnerText);
             parameters.Add(EnvVar.WarningThreshold, xmlDocObj.GetElementsByTagName("WarningThreshold")[0].InnerText);
-            parameters.Add(EnvVar.CsvSaveFileLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("CSVSaveLocation")[0].InnerText, xmlDataFile));
+            parameters.Add(EnvVar.CsvSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("CSVSaveLocation")[0].InnerText, xmlDataFile));
 
             if (xmlDocObj.GetElementsByTagName("LogSaveLocation").Count > 0)
             {
-                parameters.Add(EnvVar.LogSaveFileLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.LogSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
             }
 
             if (xmlDocObj.GetElementsByTagName("reportSaveFileLocation").Count > 0)
             {
-                parameters.Add(EnvVar.ReportSaveFileLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.ReportSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
             }
 
             if (xmlDocObj.GetElementsByTagName("screenshotSaveLocation").Count > 0)
             {
-                parameters.Add(EnvVar.ScreenshotSaveLocation, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.ScreenshotSaveLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
             }
 
             // Special Elements
             if (xmlDocObj.GetElementsByTagName("loadingSpinner").Count > 0)
             {
-                parameters.Add(EnvVar.LoadingSpinner, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.LoadingSpinner, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
             }
             else
             {
@@ -111,7 +111,7 @@ namespace AutomationTestingProgram.GeneralData
 
             if (xmlDocObj.GetElementsByTagName("errorContainer").Count > 0)
             {
-                parameters.Add(EnvVar.ErrorContainer, XMLHelper.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.ErrorContainer, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
             }
             else
             {
@@ -159,6 +159,33 @@ namespace AutomationTestingProgram.GeneralData
                     Logger.Warn($"XML validation warning: {e.Message} on Line: {e.Exception.LineNumber}");
                     break;
             }
+        }
+
+        /// <summary>
+        /// Replaces a string if it is a token and shown.
+        /// </summary>
+        /// <param name="possibleToken">A string that may be a token.</param>
+        /// <param name="xMLDataFile"> The data file containing the value.</param>
+        /// <returns>The provided string or value of the token.</returns>
+        private string ReplaceIfToken(string possibleToken, XmlDocument xMLDataFile)
+        {
+            if (possibleToken.Contains("${{") && possibleToken.Contains("}}") && xMLDataFile != null)
+            {
+                XmlNode tokens = xMLDataFile.GetElementsByTagName("Tokens")[0];
+                string tokenKey = possibleToken.Substring(possibleToken.IndexOf("${{") + 3);
+                tokenKey = tokenKey.Substring(0, tokenKey.IndexOf("}}"));
+
+                // Find the appropriate token
+                foreach (XmlNode token in tokens.ChildNodes)
+                {
+                    if (token.Attributes["key"] != null && token.Attributes["key"].InnerText == tokenKey && token.Attributes["value"] != null)
+                    {
+                        return possibleToken.Replace("${{" + $"{tokenKey}" + "}}", token.Attributes["value"].InnerText);
+                    }
+                }
+            }
+
+            return possibleToken;
         }
     }
 }

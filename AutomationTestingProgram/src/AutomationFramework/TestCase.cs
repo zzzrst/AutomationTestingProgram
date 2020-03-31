@@ -110,15 +110,17 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public void UpdateTestCaseStatus(ITestStepStatus testStepStatus)
         {
+            string actual = testStepStatus.Actual;
             if (testStepStatus.RunSuccessful == false)
             {
                 this.TestCaseStatus.RunSuccessful = false;
                 this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a test step";
+                actual = "F";
             }
 
             if (testStepStatus.Actual != "No Log")
             {
-                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{testStepStatus.Actual}\"");
+                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{actual}\"");
             }
 
             InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);
