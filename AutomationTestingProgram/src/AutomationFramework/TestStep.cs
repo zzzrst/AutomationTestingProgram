@@ -55,14 +55,14 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Gets or sets number of attempts before a fail is thrown.
         /// </summary>
-        public int MaxAttempts { get; set; }
+        public int MaxAttempts { get; set; } = 1;
 
         /// <summary>
         /// Gets or sets the description of the test step.
         /// </summary>
         public string Description { get; set; }
 
-        private int Attempts { get; set; }
+        private int Attempts { get; set; } = 0;
 
         /// <inheritdoc/>
         public virtual void Execute()
@@ -81,10 +81,7 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.FriendlyErrorMessage = e.Message;
             this.TestStepStatus.RunSuccessful = false;
 
-            /*this.Alm.AddTestStep(testStepName, "Failed", testStepDesc, testStepExp, testStepAct);
-passed = false;
-message = testStepDesc;
-attempts = this.LocalAttempts + 1;*/
+            this.Attempts++;
 
             Logger.Error(e.Message);
 
@@ -117,7 +114,7 @@ attempts = this.LocalAttempts + 1;*/
         /// <inheritdoc/>
         public virtual bool ShouldExecute()
         {
-            return this.ShouldExecuteVariable;
+            return this.ShouldExecuteVariable && this.Attempts < this.MaxAttempts;
         }
 
         /// <inheritdoc/>

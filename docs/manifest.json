@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.TestStep.html",
-          "hash": "eVvLdhk9gO9CjEEop5HiIQ=="
+          "hash": "dpNQ120MokfKHRigc/sFCg=="
         }
       },
       "is_incremental": false,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html",
-          "hash": "z8OAV0TWUnQzyK2TPx3wjg=="
+          "hash": "nDOBk5W7hkQ1FuVttiiGLQ=="
         }
       },
       "is_incremental": false,
@@ -681,19 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.html",
-          "hash": "uMFr/G8B3rDYs2Xe+/B9Tw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.ExcelDriver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.ExcelDriver.html",
-          "hash": "HFWdraPUBLNSMEODA4V9ew=="
+          "hash": "YzzLYa2qjXmwI0R3r8mzOA=="
         }
       },
       "is_incremental": false,
@@ -777,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.html",
-          "hash": "htiBb1IMHiCcFikYxMvyKA=="
+          "hash": "oEsOM0dGW40PnVxzy2Qg4g=="
         }
       },
       "is_incremental": false,
@@ -825,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "pcFfm84lM5DxFc/c1LqaHQ=="
+          "hash": "5dFBTE2Ja3lEenmMzXt98g=="
         }
       },
       "is_incremental": false,
@@ -1066,8 +1054,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 67,
-          "skipped_file_count": 56
+          "total_file_count": 66,
+          "skipped_file_count": 62
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

@@ -38,8 +38,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         private string SKIP { get; } = "#";
 
-        private string EnviroDBName { get; set; }
-
         /// <inheritdoc/>
         public bool ExistNextTestStep()
         {

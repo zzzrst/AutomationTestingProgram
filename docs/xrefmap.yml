@@ -3239,12 +3239,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName
   nameWithType: DatabaseData.TestDBName
-- uid: AutomationTestingProgram.TestingData.TestDrivers.ExcelDriver
-  name: ExcelDriver
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.ExcelDriver.html
-  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.ExcelDriver
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.ExcelDriver
-  nameWithType: ExcelDriver
 - uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData
   name: TextCaseData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html
