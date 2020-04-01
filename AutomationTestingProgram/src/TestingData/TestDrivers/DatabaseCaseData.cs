@@ -144,7 +144,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             testStep.Arguments.Add("value", Helper.Cleanse(value));
             testStep.Arguments.Add("comment", Helper.Cleanse(comment));
             testStep.MaxAttempts = localAttempts;
-            testStep.ShouldExecuteVariable = control == this.SKIP;
+            testStep.ShouldExecuteVariable = control != this.SKIP;
 
             return testStep;
         }

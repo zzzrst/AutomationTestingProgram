@@ -72,16 +72,20 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             if (database == null || !database.IsConnected())
             {
                 int count = 0;
+                int maxTries = 2;
 
-                // trys 3 times
-                while (count < 3)
+                // trys 2 times
+                while (count < maxTries)
                 {
                     string host = ConfigurationManager.AppSettings["DBHost"].ToString();
                     string port = ConfigurationManager.AppSettings["DBPort"].ToString();
                     string serviceName = ConfigurationManager.AppSettings["DBServiceName"].ToString();
                     string userID = ConfigurationManager.AppSettings["DBUserId"].ToString();
                     string password = ConfigurationManager.AppSettings["DBPassword"].ToString();
-                    database = new OracleDatabase(host, port, serviceName, userID, password);
+
+                    Logger.Info($"Attempting to connect to host:{host}, port:{port}, service:{serviceName}, user:{userID}, password:{password}");
+
+                    database = new OracleDatabase(host, port, serviceName, userID, password, Logger.GetLog4NetLogger());
                     database.Connect();
                     if (database.IsConnected())
                     {
@@ -90,6 +94,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                     }
 
                     count++;
+                }
+
+                if (count > maxTries)
+                {
+                Logger.Warn($"Failed to Connected to database");
                 }
             }
 

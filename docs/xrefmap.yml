@@ -224,6 +224,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.FakeTestStep.Name
   nameWithType: FakeTestStep.Name
+- uid: AutomationTestingProgram.AutomationFramework.LaunchBrowser
+  name: LaunchBrowser
+  href: api/AutomationTestingProgram.AutomationFramework.LaunchBrowser.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.LaunchBrowser
+  fullName: AutomationTestingProgram.AutomationFramework.LaunchBrowser
+  nameWithType: LaunchBrowser
+- uid: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.LaunchBrowser.html#AutomationTestingProgram_AutomationFramework_LaunchBrowser_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute()
+  nameWithType: LaunchBrowser.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.LaunchBrowser.html#AutomationTestingProgram_AutomationFramework_LaunchBrowser_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute
+  nameWithType: LaunchBrowser.Execute
+- uid: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.LaunchBrowser.html#AutomationTestingProgram_AutomationFramework_LaunchBrowser_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name
+  fullName: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name
+  nameWithType: LaunchBrowser.Name
+- uid: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.LaunchBrowser.html#AutomationTestingProgram_AutomationFramework_LaunchBrowser_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name
+  nameWithType: LaunchBrowser.Name
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
   name: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
   href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.html
@@ -2335,6 +2367,51 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.GeneralData.ITestGeneralData.Verify
   nameWithType: ITestGeneralData.Verify
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData
+  name: NoGeneralData
+  href: api/AutomationTestingProgram.GeneralData.NoGeneralData.html
+  commentId: T:AutomationTestingProgram.GeneralData.NoGeneralData
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData
+  nameWithType: NoGeneralData
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData.Name
+  name: Name
+  href: api/AutomationTestingProgram.GeneralData.NoGeneralData.html#AutomationTestingProgram_GeneralData_NoGeneralData_Name
+  commentId: P:AutomationTestingProgram.GeneralData.NoGeneralData.Name
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData.Name
+  nameWithType: NoGeneralData.Name
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData.Name*
+  name: Name
+  href: api/AutomationTestingProgram.GeneralData.NoGeneralData.html#AutomationTestingProgram_GeneralData_NoGeneralData_Name_
+  commentId: Overload:AutomationTestingProgram.GeneralData.NoGeneralData.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData.Name
+  nameWithType: NoGeneralData.Name
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData.ParseParameters(System.String,System.String)
+  name: ParseParameters(String, String)
+  href: api/AutomationTestingProgram.GeneralData.NoGeneralData.html#AutomationTestingProgram_GeneralData_NoGeneralData_ParseParameters_System_String_System_String_
+  commentId: M:AutomationTestingProgram.GeneralData.NoGeneralData.ParseParameters(System.String,System.String)
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData.ParseParameters(System.String, System.String)
+  nameWithType: NoGeneralData.ParseParameters(String, String)
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData.ParseParameters*
+  name: ParseParameters
+  href: api/AutomationTestingProgram.GeneralData.NoGeneralData.html#AutomationTestingProgram_GeneralData_NoGeneralData_ParseParameters_
+  commentId: Overload:AutomationTestingProgram.GeneralData.NoGeneralData.ParseParameters
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData.ParseParameters
+  nameWithType: NoGeneralData.ParseParameters
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData.Verify(System.String)
+  name: Verify(String)
+  href: api/AutomationTestingProgram.GeneralData.NoGeneralData.html#AutomationTestingProgram_GeneralData_NoGeneralData_Verify_System_String_
+  commentId: M:AutomationTestingProgram.GeneralData.NoGeneralData.Verify(System.String)
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData.Verify(System.String)
+  nameWithType: NoGeneralData.Verify(String)
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData.Verify*
+  name: Verify
+  href: api/AutomationTestingProgram.GeneralData.NoGeneralData.html#AutomationTestingProgram_GeneralData_NoGeneralData_Verify_
+  commentId: Overload:AutomationTestingProgram.GeneralData.NoGeneralData.Verify
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData.Verify
+  nameWithType: NoGeneralData.Verify
 - uid: AutomationTestingProgram.GeneralData.XMLGeneralData
   name: XMLGeneralData
   href: api/AutomationTestingProgram.GeneralData.XMLGeneralData.html
@@ -3252,6 +3329,103 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName
   nameWithType: DatabaseData.TestDBName
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  name: NoSetData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  nameWithType: NoSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor(System.String)
+  name: NoSetData(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData__ctor_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.NoSetData(System.String)
+  nameWithType: NoSetData.NoSetData(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor*
+  name: NoSetData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData__ctor_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.NoSetData
+  nameWithType: NoSetData.NoSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  name: ExistNextTestCase()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_ExistNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase()
+  nameWithType: NoSetData.ExistNextTestCase()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase*
+  name: ExistNextTestCase
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_ExistNextTestCase_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  nameWithType: NoSetData.ExistNextTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  name: GetNextTestCase()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_GetNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase()
+  nameWithType: NoSetData.GetNextTestCase()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase*
+  name: GetNextTestCase
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_GetNextTestCase_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  nameWithType: NoSetData.GetNextTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  name: Name
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_Name
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  nameWithType: NoSetData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name*
+  name: Name
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_Name_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  nameWithType: NoSetData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  name: SetUp()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_SetUp
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp()
+  nameWithType: NoSetData.SetUp()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp*
+  name: SetUp
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_SetUp_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  nameWithType: NoSetData.SetUp
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  name: SetUpTestSet()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_SetUpTestSet
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet()
+  nameWithType: NoSetData.SetUpTestSet()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet*
+  name: SetUpTestSet
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_SetUpTestSet_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  nameWithType: NoSetData.SetUpTestSet
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  nameWithType: NoSetData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  nameWithType: NoSetData.TestArgs
 - uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData
   name: TextCaseData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.TextCaseData.html

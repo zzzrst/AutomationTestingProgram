@@ -151,6 +151,17 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.DDLSelectByXPath.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.LaunchBrowser">
+            <summary>
+            This class executes the action of opening the browser to the specified site.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.MaximizeBrowser">
             <summary>
             This class executes the action of closing the current tab.
@@ -978,6 +989,20 @@
             <param name="dataFile">The location of the datafile if any.</param>
             <returns>The parsed parameters.</returns>
         </member>
+        <member name="T:AutomationTestingProgram.GeneralData.NoGeneralData">
+            <summary>
+            Implemention of the general data for a no test set.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.GeneralData.NoGeneralData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.GeneralData.NoGeneralData.ParseParameters(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.GeneralData.NoGeneralData.Verify(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.GeneralData.XMLGeneralData">
             <summary>
             The implementation of the general data for XML.
@@ -1595,6 +1620,35 @@
             <summary>
             State of the database password.
             </summary>
+        </member>
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.NoSetData">
+            <summary>
+            Skips the test set and goes staight to the test case.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.TestDrivers.NoSetData"/> class.
+            </summary>
+            <param name="args">args to be passed in.</param>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet">
+            <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData">
             <summary>

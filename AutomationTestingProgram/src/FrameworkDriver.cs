@@ -211,23 +211,31 @@ namespace AutomationTestingProgram
 
             ITestGeneralData dataInformation = ReflectiveGetter.GetImplementationOfType<ITestGeneralData>()
                 .Find(x => x.Name.Equals(GetEnvironmentVariable(EnvVar.TestSetDataType)));
-
-            if (dataInformation.Verify(GetEnvironmentVariable(EnvVar.TestSetDataArgs)))
+            try
             {
-                parameters = dataInformation.ParseParameters(GetEnvironmentVariable(EnvVar.TestSetDataArgs), GetEnvironmentVariable(EnvVar.DataFile));
-                foreach (EnvVar paramName in parameters.Keys)
+                if (dataInformation.Verify(GetEnvironmentVariable(EnvVar.TestSetDataArgs)))
                 {
-                    // If it's not filled in already, fill it in.
-                    if (GetEnvironmentVariable(paramName) == string.Empty
-                        || GetEnvironmentVariable(paramName) == "0")
+                    parameters = dataInformation.ParseParameters(GetEnvironmentVariable(EnvVar.TestSetDataArgs), GetEnvironmentVariable(EnvVar.DataFile));
+                    foreach (EnvVar paramName in parameters.Keys)
                     {
-                        SetEnvironmentVariable(paramName, parameters[paramName]);
+                        // If it's not filled in already, fill it in.
+                        if (GetEnvironmentVariable(paramName) == string.Empty
+                            || GetEnvironmentVariable(paramName) == "0")
+                        {
+                            SetEnvironmentVariable(paramName, parameters[paramName]);
+                        }
                     }
                 }
+                else
+                {
+                    Logger.Error("Error verifying test set data.");
+                    errorParsing = true;
+                }
             }
-            else
+            catch (Exception e)
             {
-                Logger.Error("Error verifying test set data.");
+                Logger.Error($"General data implementation does not exist for {GetEnvironmentVariable(EnvVar.TestSetDataType)}");
+                Logger.Error(e.Message);
                 errorParsing = true;
             }
 

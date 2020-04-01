@@ -84,6 +84,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 arguments.Add(key, this.QuerySpecialChars(environment, testStep.Arguments[key]) as string);
             }
 
+            testStep.Arguments = arguments;
+
             this.SpecialCharFlag = false;
         }
 

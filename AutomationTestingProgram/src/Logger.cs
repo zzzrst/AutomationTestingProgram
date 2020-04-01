@@ -21,7 +21,7 @@ namespace AutomationTestingProgram
         private static readonly string LOGCONFIGFILE = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/log4net.config";
 
         private static readonly ILog Log = GetLogger(typeof(Logger));
-        private static Microsoft.Extensions.Logging.ILogger iLogger;
+        private static ILogger iLogger;
 
         /// <summary>
         /// Allows the user to log a debug message.
@@ -74,7 +74,7 @@ namespace AutomationTestingProgram
         /// <returns>An ILogger.</returns>
         public static ILogger GetLog4NetLogger()
         {
-            if (iLogger != null)
+            if (iLogger == null)
             {
                 ILoggerFactory loggerFactory = new LoggerFactory();
                 loggerFactory.AddLog4Net();

@@ -11,5 +11,11 @@ namespace AutomationTestingProgram.AutomationFramework
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "FakeTestStep";
+
+        /// <inheritdoc/>
+        public override void Execute()
+        {
+            base.Execute();
+        }
     }
 }

@@ -82,18 +82,11 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
                 str.Add("RunSuccessful:" + testSetStatus.RunSuccessful.ToString());
                 str.Add("StartTime:" + testSetStatus.StartTime.ToString());
                 str.Add("EndTime:" + testSetStatus.EndTime.ToString());
-                if (testSetStatus.Description != string.Empty)
-                {
-                    str.Add("Description:" + testSetStatus.Description);
-                }
-
-                if (!testSetStatus.RunSuccessful)
-                {
-                    str.Add("ErrorStack:" + testSetStatus.ErrorStack);
-                    str.Add("FriendlyErrorMessage:" + testSetStatus.FriendlyErrorMessage);
-                    str.Add("Expected:" + testSetStatus.Expected);
-                    str.Add("Actual:" + testSetStatus.Actual);
-                }
+                str.Add("Description:" + testSetStatus.Description);
+                str.Add("ErrorStack:" + testSetStatus.ErrorStack);
+                str.Add("FriendlyErrorMessage:" + testSetStatus.FriendlyErrorMessage);
+                str.Add("Expected:" + testSetStatus.Expected);
+                str.Add("Actual:" + testSetStatus.Actual);
             }
 
             foreach (ITestCaseStatus testCaseStatus in this.TestCaseStatuses)
@@ -103,18 +96,11 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
                 str.Add(this.Tab(1) + "RunSuccessful:" + testCaseStatus.RunSuccessful.ToString());
                 str.Add(this.Tab(1) + "StartTime:" + testCaseStatus.StartTime.ToString());
                 str.Add(this.Tab(1) + "EndTime:" + testCaseStatus.EndTime.ToString());
-                if (testCaseStatus.Description != string.Empty)
-                {
-                    str.Add(this.Tab(1) + "Description:" + testCaseStatus.Description);
-                }
-
-                if (!testCaseStatus.RunSuccessful)
-                {
-                    str.Add(this.Tab(1) + "ErrorStack:" + testCaseStatus.ErrorStack);
-                    str.Add(this.Tab(1) + "FriendlyErrorMessage:" + testCaseStatus.FriendlyErrorMessage);
-                    str.Add(this.Tab(1) + "Expected:" + testCaseStatus.Expected);
-                    str.Add(this.Tab(1) + "Actual:" + testCaseStatus.Actual);
-                }
+                str.Add(this.Tab(1) + "Description:" + testCaseStatus.Description);
+                str.Add(this.Tab(1) + "ErrorStack:" + testCaseStatus.ErrorStack);
+                str.Add(this.Tab(1) + "FriendlyErrorMessage:" + testCaseStatus.FriendlyErrorMessage);
+                str.Add(this.Tab(1) + "Expected:" + testCaseStatus.Expected);
+                str.Add(this.Tab(1) + "Actual:" + testCaseStatus.Actual);
 
                 if (this.TestCaseToTestSteps.ContainsKey(testCaseStatus))
                 {
@@ -126,19 +112,12 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
                         str.Add(this.Tab(2) + "RunSuccessful:" + testStepStatus.RunSuccessful.ToString());
                         str.Add(this.Tab(2) + "StartTime:" + testStepStatus.StartTime.ToString());
                         str.Add(this.Tab(2) + "EndTime:" + testStepStatus.EndTime.ToString());
-                        if (testStepStatus.Description != string.Empty)
-                        {
-                            str.Add(this.Tab(2) + "Description:" + testStepStatus.Description);
-                        }
-
-                        if (!testStepStatus.RunSuccessful)
-                        {
-                            str.Add(this.Tab(2) + "ErrorStack:" + testStepStatus.ErrorStack);
-                            str.Add(this.Tab(2) + "FriendlyErrorMessage:" + testStepStatus.FriendlyErrorMessage);
-                            str.Add(this.Tab(2) + "Expected:" + testStepStatus.Expected);
-                            str.Add(this.Tab(2) + "Actual:" + testStepStatus.Actual);
-                            str.Add(this.Tab(2) + "-----------------------");
-                        }
+                        str.Add(this.Tab(2) + "Description:" + testStepStatus.Description);
+                        str.Add(this.Tab(2) + "ErrorStack:" + testStepStatus.ErrorStack);
+                        str.Add(this.Tab(2) + "FriendlyErrorMessage:" + testStepStatus.FriendlyErrorMessage);
+                        str.Add(this.Tab(2) + "Expected:" + testStepStatus.Expected);
+                        str.Add(this.Tab(2) + "Actual:" + testStepStatus.Actual);
+                        str.Add(this.Tab(2) + "-----------------------");
                     }
                 }
             }

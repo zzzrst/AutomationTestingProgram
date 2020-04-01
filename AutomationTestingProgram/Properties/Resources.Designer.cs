@@ -70,6 +70,24 @@ namespace AutomationTestingProgram.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to value.
+        /// </summary>
+        internal static string collectionName {
+            get {
+                return ResourceManager.GetString("collectionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to object.
+        /// </summary>
+        internal static string collectionSearchField {
+            get {
+                return ResourceManager.GetString("collectionSearchField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to environment.
         /// </summary>
         internal static string Environment {
