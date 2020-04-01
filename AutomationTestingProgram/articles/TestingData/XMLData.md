@@ -3,7 +3,7 @@
 * The TestArgs point to the location of the .xml file to run.
 * This is essentially a working copy of the [SeleniumPerfXML](https://github.com/zzzrst/SeleniumPerfXML).
 * Refere to SeleniumPerfXML for writing test set/case/step.
-
+* There is a generic class called XMLData which implements ITestData which all the XMLset/case/step Data implements. These are all the functions and variables that they have in common
 ## Mapping from XML attributes to Database column names
 |XML Attribute|Database Column|
 |---|---|

@@ -25,6 +25,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         /// <param name="args">Args passe in.</param>
         public DatabaseCaseData(string args)
+            : base(args)
         {
         }
 

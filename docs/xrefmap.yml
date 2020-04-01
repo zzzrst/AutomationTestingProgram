@@ -3122,6 +3122,19 @@ references:
   commentId: T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
   fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
   nameWithType: DatabaseData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.#ctor(System.String)
+  name: DatabaseData(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseData__ctor_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.#ctor(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.DatabaseData(System.String)
+  nameWithType: DatabaseData.DatabaseData(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.#ctor*
+  name: DatabaseData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseData__ctor_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.DatabaseData
+  nameWithType: DatabaseData.DatabaseData
 - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
   name: ConnectToDatabase(OracleDatabase)
   href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseData_ConnectToDatabase_DatabaseConnector_OracleDatabase_
@@ -3484,6 +3497,19 @@ references:
   commentId: T:AutomationTestingProgram.TestingData.TestDrivers.XMLData
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLData
   nameWithType: XMLData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLData.#ctor(System.String)
+  name: XMLData(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLData__ctor_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.XMLData.#ctor(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLData.XMLData(System.String)
+  nameWithType: XMLData.XMLData(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLData.#ctor*
+  name: XMLData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLData__ctor_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLData.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLData.XMLData
+  nameWithType: XMLData.XMLData
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLData_Name

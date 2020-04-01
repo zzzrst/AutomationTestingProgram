@@ -23,8 +23,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         /// <param name="xmlLocation">The location of the xml file.</param>
         public XMLStepData(string xmlLocation)
+            : base(xmlLocation)
         {
-            this.TestArgs = xmlLocation;
         }
 
         /// <inheritdoc/>

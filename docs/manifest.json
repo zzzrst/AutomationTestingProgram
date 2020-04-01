@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html",
-          "hash": "nDOBk5W7hkQ1FuVttiiGLQ=="
+          "hash": "etu0DpNrC8VnOJbLm7LbLw=="
         }
       },
       "is_incremental": false,
@@ -681,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.html",
-          "hash": "YzzLYa2qjXmwI0R3r8mzOA=="
+          "hash": "EJxwApz0eTF2kXu6NCkoOg=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.TestingData.TestDrivers.XMLData.html",
-          "hash": "zDkvCC/zI3UfPZgwEq2/Iw=="
+          "hash": "YQctNo3yL/uGr4NUEsq66A=="
         }
       },
       "is_incremental": false,
@@ -828,7 +828,7 @@
           "hash": "zhVqccCaKTpMYO6ani0khQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -840,7 +840,7 @@
           "hash": "kSQIJI+GRVnZRuxJlWp1Aw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -852,7 +852,7 @@
           "hash": "d4Yf16ba7nZQQJYcFeRRXw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -864,7 +864,7 @@
           "hash": "PiWiMnvWxxJNdqCw02GFFw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -876,7 +876,7 @@
           "hash": "yN/UPY82vF3o+pZhRxd5zQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -888,7 +888,7 @@
           "hash": "mMMIp6EVXtL/bnt78yVGTQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -900,7 +900,7 @@
           "hash": "v6ODkIhTiqq0iS7rLwdbRw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -912,7 +912,7 @@
           "hash": "eGxCZVedvjDt68k8ORtwhw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -921,10 +921,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/TestingData.html",
-          "hash": "CvR/GbMU/jzEhnS6stXTfg=="
+          "hash": "UXVIXcItpfmthNn1Z9W/fg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -933,10 +933,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/TestingData/AddingData.html",
-          "hash": "ZKE8eAL0Qn5QokDiYQco7A=="
+          "hash": "a8DngivG5T/yVXrcckSfAQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/DatabaseData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/DatabaseData.html",
+          "hash": "w79fvX3OcztEDcy51uQZDw=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -948,7 +960,7 @@
           "hash": "ufzWprv9jjs9oZNPz8yimw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -960,7 +972,7 @@
           "hash": "O/tfYGUO8GI2WoVi//G/sg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -972,7 +984,7 @@
           "hash": "PlHiEmHlW8KAvoag0aGMzg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -981,10 +993,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/TestingData/XMLData.html",
-          "hash": "LcptodloMHN75pFYQ8rYoQ=="
+          "hash": "C2OuwJ1wRe2vYi5NM3RP/w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -996,7 +1008,7 @@
           "hash": "q6pKgfpzX0gUkhy4/buL5Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1005,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "//yxJ46RK5WnPUTJJD+WJg=="
+          "hash": "1TbL5kcswlcebn96j5rlXA=="
         }
       },
       "is_incremental": false,
@@ -1020,7 +1032,7 @@
           "hash": "WHyUfOoIXm7yKy4EBMhztw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1039,23 +1051,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 17,
-          "skipped_file_count": 17
+          "total_file_count": 18,
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 66,
-          "skipped_file_count": 62
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -1068,8 +1082,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

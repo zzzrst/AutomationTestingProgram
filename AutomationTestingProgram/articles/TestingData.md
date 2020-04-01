@@ -5,5 +5,6 @@ The 3 testing datas are stored in the static **InformationObject** as static var
 * ITestData
 ## Implementation
 * XML Data
+* Database Data
 * Text Data
 * Adding other data files

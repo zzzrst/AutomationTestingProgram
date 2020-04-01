@@ -15,6 +15,15 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// </summary>
     public class DatabaseData : ITestData
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DatabaseData"/> class.
+        /// Base constructor for the database Data.
+        /// </summary>
+        /// <param name="args">args to be passed in.</param>
+        public DatabaseData(string args)
+        {
+        }
+
         /// <inheritdoc/>
         public string TestArgs { get; set; }
 

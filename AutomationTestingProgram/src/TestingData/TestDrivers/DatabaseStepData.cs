@@ -34,6 +34,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         /// <param name="args">args.</param>
         public DatabaseStepData(string args)
+            : base(args)
         {
         }
 

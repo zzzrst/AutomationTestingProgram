@@ -15,6 +15,15 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// </summary>
     public class XMLData : ITestData
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="XMLData"/> class.
+        /// </summary>
+        /// <param name="xmlLocataion">the location of the xml.</param>
+        public XMLData(string xmlLocataion)
+        {
+            this.TestArgs = xmlLocataion;
+        }
+
         /// <inheritdoc/>
         public string Name { get; set; } = "XML";
 

@@ -34,8 +34,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         /// <param name="xmlLocation">File Location of the XML.</param>
         public XMLCaseData(string xmlLocation)
+            : base(xmlLocation)
         {
-            this.TestArgs = xmlLocation;
         }
 
         /// <summary>
