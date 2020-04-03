@@ -15,5 +15,5 @@
 |text|value|
 |invisible|value?|
 |seconds|value|
-|collectionSearchField|
-|collectionName|
+|collectionSearchField|value|
+|collectionName|object|

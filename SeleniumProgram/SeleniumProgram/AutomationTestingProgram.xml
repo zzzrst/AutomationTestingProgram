@@ -25,6 +25,16 @@
               Looks up a localized string similar to browser.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.collectionName">
+            <summary>
+              Looks up a localized string similar to object.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.Properties.Resources.collectionSearchField">
+            <summary>
+              Looks up a localized string similar to value.
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.Properties.Resources.Environment">
             <summary>
               Looks up a localized string similar to environment.
@@ -151,17 +161,6 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.DDLSelectByXPath.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.LaunchBrowser">
-            <summary>
-            This class executes the action of opening the browser to the specified site.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.MaximizeBrowser">
             <summary>
             This class executes the action of closing the current tab.
@@ -228,25 +227,6 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.SwitchToTab.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.FakeFailingTestStep">
-            <summary>
-            This test step will always fail.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.Execute">
-            <inheritdoc/>
-        </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.FakeTestStep">
-            <summary>
-            This test step is the same as testStepXml.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.FakeTestStep.Name">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.WaitForElement">
             <summary>
             This class executes the action of waiting for an elment's status.
@@ -267,6 +247,306 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.WaitInSeconds.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert">
+            <summary>
+            test step to accept Alerts.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.BrokenLinks">
+            <summary>
+            This test step to print broken links..
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.BrokenLinks.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.BrokenLinks.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.CheckBox">
+            <summary>
+            This test step to click check box.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.CheckBox.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.CheckBox.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld">
+            <summary>
+            This test step is the same as testStepXml.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ClickButton">
+            <summary>
+            This test step to click a button.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickButton.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ClickButton.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ClickImage">
+            <summary>
+            This test step to click an image.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickImage.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ClickImage.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ClickLink">
+            <summary>
+            This test step to Click a link.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickLink.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ClickLink.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ClickTableLink">
+            <summary>
+            .
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickTableLink.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ClickTableLink.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.CloseBrowserOld">
+            <summary>
+            This class executes the action of closing the browser.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.CloseBrowserOld.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.CloseBrowserOld.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Comment">
+            <summary>
+            This test step is a comment.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Comment.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Comment.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ComparePdf">
+            <summary>
+            This test step to compare pdfs.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ComparePdf.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ComparePdf.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.DismissAlert">
+            <summary>
+            This test step to dissmiss alerts.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.DismissAlert.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.DismissAlert.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.GotoPage">
+            <summary>
+            This test step to navigate to a url.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.GotoPage.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.GotoPage.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.LaunchBrowser">
+            <summary>
+            This class executes the action of opening the browser to the specified site.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Login">
+            <summary>
+            This test step to log in.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Login.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Login.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ModifyTxtFile">
+            <summary>
+            This test step to modify txt file.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ModifyTxtFile.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ModifyTxtFile.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.PopulateHTMLEditor">
+            <summary>
+            This test step to populate the html editor.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.PopulateHTMLEditor.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.PopulateHTMLEditor.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.PopulateTextBox">
+            <summary>
+            This test step is the same as testStepXml.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.PopulateTextBox.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.PopulateTextBox.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.PopulateWebElement">
+            <summary>
+            This class executes the action of populating the element identified by the xpath.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.PopulateWebElement.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.PopulateWebElement.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.PressKey">
+            <summary>
+            This test step to press a key.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.PressKey.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.PressKey.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RefreshBrowser">
+            <summary>
+            This test step to refresh browser.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.RefreshBrowser.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.RefreshBrowser.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunJavaScript">
+            <summary>
+            This test step to run a java script.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.RunJavaScript.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.RunJavaScript.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunShellScript">
+            <summary>
+            This test step to run a shell script.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.RunShellScript.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.RunShellScript.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunSQLScript">
+            <summary>
+            This test step to run a sql script. Test Step must be Database.
+            This one of the more complicated test step as it relys on the test step to be a databaseData type object.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.RunSQLScript.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.RunSQLScript.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunTestCase">
+            <summary>
+            Class to represent the database test action 'RunTestCase'.
+            Executes the test action 'RunTestCase' by querying the test database for the test case
+            and executing the test case.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.RunTestCase.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.RunTestCase.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.FakeFailingTestStep">
+            <summary>
+            This test step will always fail.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.FakeTestStep">
+            <summary>
+            This test step is the same as testStepXml.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.FakeTestStep.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.FakeTestStep.Execute">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter">
@@ -1537,7 +1817,7 @@
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData">
             <summary>
-            A dummy class that isn't used.
+            The test step for the database data.
             </summary>
         </member>
         <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.KeychainAccountsFilePath">
@@ -1571,12 +1851,27 @@
             </summary>
             <param name="testStep">The Test step to query arguments.</param>.
         </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.CreateEnvironmentConnectionString(System.String)">
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ExecuteEnvironmentNonQuery(System.String,System.String)">
             <summary>
-            Creates the connection string to connect to the environment database.
+            Executes a query in an environment database that does not return any data.
             </summary>
-            <param name="environment">Name of environment to connect to.</param>
-            <returns>The connection string to connect to the environment database.</returns>
+            <param name="environment">Name of environment to execute in.</param>
+            <param name="sql">Query to execute.</param>
+            <returns><code>true</code> if query was successfully executed.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.CreateSQLPlusCommand(System.String,System.String)">
+            <summary>
+            Creates the SQL*Plus command that can be executed in SQL*Plus command-line.
+            </summary>
+            <param name="environment">Name of environment to execute in.</param>
+            <param name="file">SQL file to execute.</param>
+            <returns>The SQL*Plus command to be executed.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ConnectToEnvDatabase(System.String)">
+            <summary>
+            Have the environment database connect to the given environment.
+            </summary>
+            <param name="environment">the name of the environment.</param>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryEnvironmentConnectionInformation(System.String)">
             <summary>
@@ -1584,6 +1879,13 @@
             </summary>
             <param name="environment">Name of environment to connect to.</param>
             <returns>The information needed to build the connection string.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.CreateEnvironmentConnectionString(System.String)">
+            <summary>
+            Creates the connection string to connect to the environment database.
+            </summary>
+            <param name="environment">Name of environment to connect to.</param>
+            <returns>The connection string to connect to the environment database.</returns>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars(System.String,System.String)">
             <summary>

@@ -1,4 +1,8 @@
-﻿namespace AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+﻿// <copyright file="AcceptAlert.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
 {
     using System;
     using System.Collections.Generic;
@@ -16,8 +20,7 @@
         public override void Execute()
         {
             base.Execute();
-            throw new NotImplementedException();
-            /*this.BrowserDriver.AcceptAlert();*/
+            InformationObject.TestAutomationDriver.AcceptAlert();
         }
     }
 }

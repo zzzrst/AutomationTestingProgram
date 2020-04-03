@@ -121,10 +121,10 @@
     <value>browser</value>
   </data>
   <data name="collectionName" xml:space="preserve">
-    <value>value</value>
+    <value>object</value>
   </data>
   <data name="collectionSearchField" xml:space="preserve">
-    <value>object</value>
+    <value>value</value>
   </data>
   <data name="Environment" xml:space="preserve">
     <value>environment</value>

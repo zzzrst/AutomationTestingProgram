@@ -18,8 +18,8 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string collectionSearchField = this.Arguments["object"];
-            string collectionName = this.Arguments["value"];
+            string collectionSearchField = this.Arguments["value"];
+            string collectionName = this.Arguments["object"];
 
             string collectionDropDown = "//*[@aria-label='Choose a collection activate']";
             string collectionSearchBarXPath = "//*[@aria-label='Choose a collection']";

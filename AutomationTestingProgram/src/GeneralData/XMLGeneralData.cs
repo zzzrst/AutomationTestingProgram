@@ -56,66 +56,74 @@ namespace AutomationTestingProgram.GeneralData
                 }
             }
 
-            // URL has precedence over the environment.
-            // Passed in parameters overide what is in the XML.
-            if (xmlDocObj.GetElementsByTagName("URL").Count > 0)
+            try
             {
-                parameters.Add(EnvVar.URL, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("URL")[0].InnerText, xmlDataFile));
-            }
-            else
-            {
-                string enviornment = this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Environment")[0].InnerText, xmlDataFile);
-                parameters.Add(EnvVar.Environment, enviornment);
-                parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());
-            }
+                // URL has precedence over the environment.
+                // Passed in parameters overide what is in the XML.
+                if (xmlDocObj.GetElementsByTagName("URL").Count > 0)
+                {
+                    parameters.Add(EnvVar.URL, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("URL")[0].InnerText, xmlDataFile));
+                }
+                else
+                {
+                    string enviornment = this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Environment")[0].InnerText, xmlDataFile);
+                    parameters.Add(EnvVar.Environment, enviornment);
+                    parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());
+                }
 
-            parameters.Add(EnvVar.Browser, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Browser")[0].InnerText, xmlDataFile));
-            if (xmlDocObj.GetElementsByTagName("RespectRepeatFor").Count > 0)
-            {
-                parameters.Add(EnvVar.RespectRepeatFor, xmlDocObj.GetElementsByTagName("RespectRepeatFor")[0].InnerText);
-            }
+                parameters.Add(EnvVar.Browser, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("Browser")[0].InnerText, xmlDataFile));
+                if (xmlDocObj.GetElementsByTagName("RespectRepeatFor").Count > 0)
+                {
+                    parameters.Add(EnvVar.RespectRepeatFor, xmlDocObj.GetElementsByTagName("RespectRepeatFor")[0].InnerText);
+                }
 
-            if (xmlDocObj.GetElementsByTagName("RespectRunAODAFlag").Count > 0)
-            {
-                parameters.Add(EnvVar.RespectRunAODAFlag, xmlDocObj.GetElementsByTagName("RespectRunAODAFlag")[0].InnerText);
-            }
+                if (xmlDocObj.GetElementsByTagName("RespectRunAODAFlag").Count > 0)
+                {
+                    parameters.Add(EnvVar.RespectRunAODAFlag, xmlDocObj.GetElementsByTagName("RespectRunAODAFlag")[0].InnerText);
+                }
 
-            parameters.Add(EnvVar.TimeOutThreshold, xmlDocObj.GetElementsByTagName("TimeOutThreshold")[0].InnerText);
-            parameters.Add(EnvVar.WarningThreshold, xmlDocObj.GetElementsByTagName("WarningThreshold")[0].InnerText);
-            parameters.Add(EnvVar.CsvSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("CSVSaveLocation")[0].InnerText, xmlDataFile));
+                parameters.Add(EnvVar.TimeOutThreshold, xmlDocObj.GetElementsByTagName("TimeOutThreshold")[0].InnerText);
+                parameters.Add(EnvVar.WarningThreshold, xmlDocObj.GetElementsByTagName("WarningThreshold")[0].InnerText);
+                parameters.Add(EnvVar.CsvSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("CSVSaveLocation")[0].InnerText, xmlDataFile));
 
-            if (xmlDocObj.GetElementsByTagName("LogSaveLocation").Count > 0)
-            {
-                parameters.Add(EnvVar.LogSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
-            }
+                if (xmlDocObj.GetElementsByTagName("LogSaveLocation").Count > 0)
+                {
+                    parameters.Add(EnvVar.LogSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LogSaveLocation")[0].InnerText, xmlDataFile));
+                }
 
-            if (xmlDocObj.GetElementsByTagName("reportSaveFileLocation").Count > 0)
-            {
-                parameters.Add(EnvVar.ReportSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
-            }
+                if (xmlDocObj.GetElementsByTagName("reportSaveFileLocation").Count > 0)
+                {
+                    parameters.Add(EnvVar.ReportSaveFileLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ReportSaveFileLocation")[0].InnerText, xmlDataFile));
+                }
 
-            if (xmlDocObj.GetElementsByTagName("screenshotSaveLocation").Count > 0)
-            {
-                parameters.Add(EnvVar.ScreenshotSaveLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
-            }
+                if (xmlDocObj.GetElementsByTagName("screenshotSaveLocation").Count > 0)
+                {
+                    parameters.Add(EnvVar.ScreenshotSaveLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
+                }
 
-            // Special Elements
-            if (xmlDocObj.GetElementsByTagName("loadingSpinner").Count > 0)
-            {
-                parameters.Add(EnvVar.LoadingSpinner, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
-            }
-            else
-            {
-                parameters.Add(EnvVar.LoadingSpinner, ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
-            }
+                // Special Elements
+                if (xmlDocObj.GetElementsByTagName("loadingSpinner").Count > 0)
+                {
+                    parameters.Add(EnvVar.LoadingSpinner, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
+                }
+                else
+                {
+                    parameters.Add(EnvVar.LoadingSpinner, ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
+                }
 
-            if (xmlDocObj.GetElementsByTagName("errorContainer").Count > 0)
-            {
-                parameters.Add(EnvVar.ErrorContainer, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
+                if (xmlDocObj.GetElementsByTagName("errorContainer").Count > 0)
+                {
+                    parameters.Add(EnvVar.ErrorContainer, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
+                }
+                else
+                {
+                    parameters.Add(EnvVar.ErrorContainer, ConfigurationManager.AppSettings["ErrorContainer"].ToString());
+                }
             }
-            else
+            catch (Exception e)
             {
-                parameters.Add(EnvVar.ErrorContainer, ConfigurationManager.AppSettings["ErrorContainer"].ToString());
+                Logger.Error(e.Message);
+                Logger.Error("Check that the config file is correct");
             }
 
             return parameters;

@@ -10,6 +10,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.IO;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework;
+    using AutomationTestingProgram.Exceptions;
     using AutomationTestingProgram.Helper;
     using AutomationTestSetFramework;
     using DatabaseConnector;
@@ -19,7 +20,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
-    /// A dummy class that isn't used.
+    /// The test step for the database data.
     /// </summary>
     internal class DatabaseStepData : DatabaseData, ITestStepData
     {
@@ -89,7 +90,48 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.SpecialCharFlag = false;
         }
 
-        private void ConnectToDatabase(OracleDatabase envDB, string environment)
+        /// <summary>
+        /// Executes a query in an environment database that does not return any data.
+        /// </summary>
+        /// <param name="environment">Name of environment to execute in.</param>
+        /// <param name="sql">Query to execute.</param>
+        /// <returns><code>true</code> if query was successfully executed.</returns>
+        internal bool ExecuteEnvironmentNonQuery(string environment, string sql)
+        {
+            this.ConnectToEnvDatabase(environment);
+            string cmd = this.CreateSQLPlusCommand(environment, sql);
+            return this.EnvDB.ExecuteNonQuery(cmd);
+        }
+
+        /// <summary>
+        /// Creates the SQL*Plus command that can be executed in SQL*Plus command-line.
+        /// </summary>
+        /// <param name="environment">Name of environment to execute in.</param>
+        /// <param name="file">SQL file to execute.</param>
+        /// <returns>The SQL*Plus command to be executed.</returns>
+        private string CreateSQLPlusCommand(string environment, string file)
+        {
+            if (!File.Exists(file))
+            {
+                throw new FileNotFound("File doesn't exist");
+            }
+
+            List<object> connectionInfo = this.QueryEnvironmentConnectionInformation(environment);
+            this.EnvDBName = connectionInfo[2].ToString();
+            return OracleDatabase.CreateCommandHelper(
+                connectionInfo[0].ToString(),
+                connectionInfo[1].ToString(),
+                connectionInfo[2].ToString(),
+                connectionInfo[3].ToString(),
+                connectionInfo[4].ToString(),
+                file);
+        }
+
+        /// <summary>
+        /// Have the environment database connect to the given environment.
+        /// </summary>
+        /// <param name="environment">the name of the environment.</param>
+        private void ConnectToEnvDatabase(string environment)
         {
             if (this.EnvDB == null || !this.EnvDB.IsConnected() || (this.Environment != string.Empty && this.Environment != environment))
             {
@@ -108,30 +150,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                     count++;
                 }
             }
-        }
-
-        /// <summary>
-        /// Creates the connection string to connect to the environment database.
-        /// </summary>
-        /// <param name="environment">Name of environment to connect to.</param>
-        /// <returns>The connection string to connect to the environment database.</returns>
-        private string CreateEnvironmentConnectionString(string environment)
-        {
-            List<object> connectionInfo = this.QueryEnvironmentConnectionInformation(environment);
-            this.EnvDBName = connectionInfo[2].ToString();
-
-            string t_host = connectionInfo[0].ToString();
-            string t_port = connectionInfo[1].ToString();
-            string t_db_name = connectionInfo[2].ToString();
-            string t_username = connectionInfo[3].ToString();
-            string t_password = connectionInfo[4].ToString();
-
-            return OracleDatabase.CreateConnectionString(
-                t_host,
-                t_port,
-                t_db_name,
-                t_username,
-                t_password);
         }
 
         /// <summary>
@@ -178,6 +196,30 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
 
             return connectionInfo;
+        }
+
+        /// <summary>
+        /// Creates the connection string to connect to the environment database.
+        /// </summary>
+        /// <param name="environment">Name of environment to connect to.</param>
+        /// <returns>The connection string to connect to the environment database.</returns>
+        private string CreateEnvironmentConnectionString(string environment)
+        {
+            List<object> connectionInfo = this.QueryEnvironmentConnectionInformation(environment);
+            this.EnvDBName = connectionInfo[2].ToString();
+
+            string t_host = connectionInfo[0].ToString();
+            string t_port = connectionInfo[1].ToString();
+            string t_db_name = connectionInfo[2].ToString();
+            string t_username = connectionInfo[3].ToString();
+            string t_password = connectionInfo[4].ToString();
+
+            return OracleDatabase.CreateConnectionString(
+                t_host,
+                t_port,
+                t_db_name,
+                t_username,
+                t_password);
         }
 
         /// <summary>
@@ -306,7 +348,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The data queried from the database.</returns>
         private string ProcessEnvironmentQuery(string environment, string query)
         {
-            this.ConnectToDatabase(this.EnvDB, environment);
+            this.ConnectToEnvDatabase(environment);
             return this.EnvDB.ExecuteQuery(query)[0][0].ToString();
         }
 

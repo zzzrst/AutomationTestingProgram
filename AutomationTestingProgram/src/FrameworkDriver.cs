@@ -85,10 +85,8 @@ namespace AutomationTestingProgram
                 automationBuilder.Build();
 
                 Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
-
                 // Run main program.
                 DateTime start = DateTime.UtcNow;
-
                 AutomationTestSetDriver.RunTestSet(testSet);
                 InformationObject.Reporter.Report();
 
@@ -208,10 +206,10 @@ namespace AutomationTestingProgram
 
             SetEnvironmentVariable(EnvVar.LoadingSpinner, string.Empty);
             SetEnvironmentVariable(EnvVar.ErrorContainer, string.Empty);
-
+            var l = GetEnvironmentVariable(EnvVar.TestSetDataType);
             ITestGeneralData dataInformation = ReflectiveGetter.GetImplementationOfType<ITestGeneralData>()
                 .Find(x => x.Name.Equals(GetEnvironmentVariable(EnvVar.TestSetDataType)));
-            try
+            if (dataInformation != null)
             {
                 if (dataInformation.Verify(GetEnvironmentVariable(EnvVar.TestSetDataArgs)))
                 {
@@ -232,10 +230,9 @@ namespace AutomationTestingProgram
                     errorParsing = true;
                 }
             }
-            catch (Exception e)
+            else
             {
                 Logger.Error($"General data implementation does not exist for {GetEnvironmentVariable(EnvVar.TestSetDataType)}");
-                Logger.Error(e.Message);
                 errorParsing = true;
             }
 

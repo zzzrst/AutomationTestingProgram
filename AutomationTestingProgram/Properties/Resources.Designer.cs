@@ -70,7 +70,7 @@ namespace AutomationTestingProgram.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to value.
+        ///   Looks up a localized string similar to object.
         /// </summary>
         internal static string collectionName {
             get {
@@ -79,7 +79,7 @@ namespace AutomationTestingProgram.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to object.
+        ///   Looks up a localized string similar to value.
         /// </summary>
         internal static string collectionSearchField {
             get {
