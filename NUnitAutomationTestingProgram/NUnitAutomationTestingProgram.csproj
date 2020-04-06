@@ -18,7 +18,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="79.0.3945.3600" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-    <PackageReference Include="TestingDriver" Version="1.0.7388.20323" />
+    <PackageReference Include="TestingDriver" Version="1.1.7398.37736" />
   </ItemGroup>
 
   <ItemGroup>
