@@ -49,7 +49,7 @@
     </PackageReference>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
-    <PackageReference Include="TestingDriver" Version="1.1.7397.33819" />
+    <PackageReference Include="TestingDriver" Version="1.1.7402.31210" />
     <PackageReference Include="TextInteractor" Version="1.2.7389.34135" />
   </ItemGroup>
 
@@ -83,6 +83,12 @@
     <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.1.7397.33819\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.1.7401.15791\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.1.7402.31210\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -93,6 +99,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
     <None Update="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

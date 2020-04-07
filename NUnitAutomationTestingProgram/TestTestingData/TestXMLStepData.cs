@@ -162,7 +162,7 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             TestSet testSet;
             Reporter reporter;
 
-            testSet = buildTestSet("/TestOpenClose.xml", $"{webSiteLocation}/Google.html");
+            testSet = buildTestSet("/TestAODA.xml", $"{webSiteLocation}/Google.html");
             AutomationTestSetDriver.RunTestSet(testSet);
             InformationObject.Reporter.Report();
             FrameworkDriver.RunAODA();

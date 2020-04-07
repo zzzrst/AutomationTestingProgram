@@ -5,7 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
-    /// This class executes the action of selecting a value from the specified dropdownlist.
+    /// This class executes the action of selecting multiple values from the specified dropdownlist.
     /// </summary>
     public class SelectDDLMultiValues : TestStep
     {

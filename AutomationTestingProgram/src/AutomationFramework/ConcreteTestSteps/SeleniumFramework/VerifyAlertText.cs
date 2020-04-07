@@ -5,7 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
-    /// This test step is the same as testStepXml.
+    /// This test step is  to verify the text of an alert.
     /// </summary>
     public class VerifyAlertText : TestStep
     {
