@@ -9,7 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AxeAccessibilityDriver" Version="2.1.7390.31685" />
+    <None Include="..\AutomationTestingProgram\App.config" Link="App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
       <PrivateAssets>all</PrivateAssets>
@@ -18,7 +21,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="79.0.3945.3600" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-    <PackageReference Include="TestingDriver" Version="1.0.7388.20323" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +29,9 @@
 
   <ItemGroup>
     <Content Update="C:\Users\DuongCh\.nuget\packages\axeaccessibilitydriver\2.0.7381.26109\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="C:\Users\DuongCh\.nuget\packages\axeaccessibilitydriver\2.1.7390.31685\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

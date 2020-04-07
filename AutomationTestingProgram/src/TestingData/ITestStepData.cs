@@ -5,6 +5,7 @@
 namespace AutomationTestingProgram.TestingData
 {
     using System.Collections.Generic;
+    using AutomationTestingProgram.AutomationFramework;
     using AutomationTestSetFramework;
 
     /// <summary>
@@ -19,5 +20,11 @@ namespace AutomationTestingProgram.TestingData
         /// <param name="performAction">Determins if the test step should run.</param>
         /// <returns>The Test Step to run.</returns>
         public ITestStep SetUpTestStep(string testStepName, bool performAction = true);
+
+        /// <summary>
+        /// Sets any arguments at runtime.
+        /// </summary>
+        /// <param name="testStep">Test steps to get the arguments for.</param>
+        public void SetArguments(TestStep testStep);
     }
 }

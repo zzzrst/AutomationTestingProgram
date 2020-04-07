@@ -18,6 +18,16 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// </summary>
     public class TextStepData : ITestStepData
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextStepData"/> class.
+        /// The Implementation of TestStepData for text file.
+        /// </summary>
+        /// <param name="textLocation">the location of the text file.</param>
+        public TextStepData(string textLocation)
+        {
+            this.TestArgs = textLocation;
+        }
+
         /// <inheritdoc/>
         public string TestArgs { get; set; }
 
@@ -25,6 +35,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public string Name { get; } = "Txt";
 
         private List<string> FileData { get; set; } = new List<string>();
+
+        /// <inheritdoc/>
+        public void SetArguments(TestStep testStep)
+        {
+        }
 
         /// <inheritdoc/>
         public void SetUp()

@@ -12,7 +12,6 @@ namespace AutomationTestingProgram.Builders
     using AutomationTestingProgram.Builders;
     using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestingData.TestDrivers;
-    using TestingDriver;
     using static InformationObject;
 
     /// <summary>
@@ -111,15 +110,15 @@ namespace AutomationTestingProgram.Builders
             switch (testDataType)
             {
                 case 0:
-                    testData = ReflectiveGetter.GetImplementationOfType<ITestSetData>()
+                    testData = ReflectiveGetter.GetImplementationOfType<ITestSetData>(dataTypeLocation)
                                 .Find(x => x.Name.Equals(dataTypeName));
                     break;
                 case 1:
-                    testData = ReflectiveGetter.GetImplementationOfType<ITestCaseData>()
+                    testData = ReflectiveGetter.GetImplementationOfType<ITestCaseData>(dataTypeLocation)
                                 .Find(x => x.Name.Equals(dataTypeName));
                     break;
                 case 2:
-                    testData = ReflectiveGetter.GetImplementationOfType<ITestStepData>()
+                    testData = ReflectiveGetter.GetImplementationOfType<ITestStepData>(dataTypeLocation)
                                 .Find(x => x.Name.Equals(dataTypeName));
                     break;
                 default:
@@ -131,11 +130,8 @@ namespace AutomationTestingProgram.Builders
                 Console.WriteLine($"Sorry we do not currently support reading tests from: {dataTypeName}");
                 throw new Exception($"Cannot Find test data type {dataTypeName}");
             }
-            else
-            {
-                testData.TestArgs = dataTypeLocation;
-                testData.SetUp();
-            }
+
+            testData.SetUp();
 
             return testData;
         }

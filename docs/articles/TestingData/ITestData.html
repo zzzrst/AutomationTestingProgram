@@ -84,10 +84,10 @@ cmd. ie, if the test set data was called &quot;XML&quot; then when running in cm
 <ul>
 <li>Arguments that are passed in. Often the location of the file.</li>
 </ul>
-<h3 id="methods">Methods</h3>
-<pre><code class="lang-c#">void SetUp()
+<h3 id="constructors">Constructors</h3>
+<pre><code class="lang-c#">public ExampleTestCaseData(string args);
 ``
-* Ran when the test data is initilized. Can be used for loading the test set file into the program.
+* Make sure there is a constructor that accepts a string. This is how it gets any arguments passed in such as the file location.
 ## ITestSetData
 ### Methods
 ```c#
@@ -109,7 +109,7 @@ ITestCase GetNextTestCase()
 <li>You can use it to set up your logic for the test set.</li>
 </ul>
 <h2 id="itestcasedata">ITestCaseData</h2>
-<h3 id="methods-1">Methods</h3>
+<h3 id="methods">Methods</h3>
 <pre><code class="lang-c#">ITestStep GetNextTestStep()
 </code></pre>
 <ul>
@@ -128,7 +128,7 @@ ITestCase GetNextTestCase()
 <li>You can also set up any logic needed in the test case here.</li>
 </ul>
 <h2 id="iteststepdata">ITestStepData</h2>
-<h3 id="methods-2">Methods</h3>
+<h3 id="methods-1">Methods</h3>
 <pre><code class="lang-c#">ITestStep SetUpTestSet(string testStepName, bool performAction = true)
 </code></pre>
 <ul>
@@ -143,7 +143,7 @@ ITestCase GetNextTestCase()
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/zzzrst/SeleniumFramework/blob/RefactorBranch/AutomationTestingProgram/articles/TestingData/ITestData.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/zzzrst/SeleniumFramework/blob/DatabaseBranch/AutomationTestingProgram/articles/TestingData/ITestData.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

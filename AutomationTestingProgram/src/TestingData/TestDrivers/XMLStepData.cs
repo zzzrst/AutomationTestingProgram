@@ -11,65 +11,25 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.Helper;
     using AutomationTestSetFramework;
-    using TestingDriver;
 
     /// <summary>
     /// The XML Driver to get data from an xml.
     /// </summary>
-    public class XMLStepData : ITestStepData
+    public class XMLStepData : XMLData, ITestStepData
     {
-        /// <inheritdoc/>
-        public string TestArgs { get; set; }
-
-        /// <inheritdoc/>
-        public string Name { get; } = "XML";
-
         /// <summary>
-        /// Gets or sets the information for the test set.
+        /// Initializes a new instance of the <see cref="XMLStepData"/> class.
+        /// An implementation of the TestStepData for xml.
         /// </summary>
-        private XmlNode TestFlow { get; set; }
-
-        /// <summary>
-        /// Gets or sets the xml file containing the XML Data.
-        /// </summary>
-        private XmlDocument XMLDataFile { get; set; } = null;
-
-        /// <summary>
-        /// Gets or sets the xml file containing the test set/case/steps.
-        /// </summary>
-        private XmlDocument XMLDocObj { get; set; } = null;
-
-        /// <inheritdoc/>
-        public void SetUp()
+        /// <param name="xmlLocation">The location of the xml file.</param>
+        public XMLStepData(string xmlLocation)
+            : base(xmlLocation)
         {
-            if (File.Exists(this.TestArgs))
-            {
-                this.XMLDocObj = new XmlDocument();
-                this.XMLDocObj.Load(this.TestArgs);
-                this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
+        }
 
-                string dataFile = Environment.GetEnvironmentVariable("dataFile");
-                if (dataFile == string.Empty || dataFile == null)
-                {
-                    if (this.XMLDocObj.GetElementsByTagName("DataFile").Count > 0)
-                    {
-                        dataFile = this.XMLDocObj.GetElementsByTagName("DataFile")[0].InnerText;
-                        if (File.Exists(dataFile))
-                        {
-                            this.XMLDataFile = new XmlDocument();
-                            this.XMLDataFile.Load(dataFile);
-                        }
-                        else
-                        {
-                            Logger.Error("XML File could not be found!");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Logger.Error("XML File could not be found!");
-            }
+        /// <inheritdoc/>
+        public void SetArguments(TestStep testStep)
+        {
         }
 
         /// <inheritdoc/>
@@ -81,7 +41,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // Find the appropriate test steps
             foreach (XmlNode innerNode in testSteps.ChildNodes)
             {
-                if (innerNode.Name != "#comment" && XMLHelper.ReplaceIfToken(innerNode.Attributes["id"].Value, this.XMLDataFile) == testStepName)
+                if (innerNode.Name != "#comment" && this.ReplaceIfToken(innerNode.Attributes["id"].Value, this.XMLDataFile) == testStepName)
                 {
                     ITestStep testStep = this.BuildTestStep(innerNode, performAction);
                     return testStep;
@@ -96,7 +56,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private ITestStep BuildTestStep(XmlNode testStepNode, bool performAction = true)
         {
             TestStep testStep = null;
-            string name = XMLHelper.ReplaceIfToken(testStepNode.Attributes["name"].Value, this.XMLDataFile);
+            string name = this.ReplaceIfToken(testStepNode.Attributes["name"].Value, this.XMLDataFile);
 
             // initial value is respectRunAODAFlag
             // if we respect the flag, and it is not found, then default value is false.
@@ -119,7 +79,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             {
                 if (testStepNode.Attributes["runAODAPageName"] != null)
                 {
-                    runAODAPageName = XMLHelper.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
+                    runAODAPageName = this.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
                 }
             }
 
@@ -143,8 +103,14 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             {
                 for (int index = 0; index < testStepNode.Attributes.Count; index++)
                 {
-                    testStepNode.Attributes[index].InnerText = XMLHelper.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
-                    testStep.Arguments.Add(testStepNode.Attributes[index].Name, testStepNode.Attributes[index].InnerText);
+                    testStepNode.Attributes[index].InnerText = this.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
+                    string key = Resource.Get(testStepNode.Attributes[index].Name);
+                    if (key == null)
+                    {
+                        key = testStepNode.Attributes[index].Name;
+                    }
+
+                    testStep.Arguments.Add(key, testStepNode.Attributes[index].InnerText);
                 }
 
                 testStep.Name = name;

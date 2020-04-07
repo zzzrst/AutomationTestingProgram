@@ -52,6 +52,18 @@ namespace AutomationTestingProgram.AutomationFramework
         /// </summary>
         public bool ShouldLog { get; set; } = true;
 
+        /// <summary>
+        /// Gets or sets number of attempts before a fail is thrown.
+        /// </summary>
+        public int MaxAttempts { get; set; } = 1;
+
+        /// <summary>
+        /// Gets or sets the description of the test step.
+        /// </summary>
+        public string Description { get; set; }
+
+        private int Attempts { get; set; } = 0;
+
         /// <inheritdoc/>
         public virtual void Execute()
         {
@@ -61,10 +73,18 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public virtual void HandleException(Exception e)
         {
+            this.TestStepStatus.Name = "Attempt 1/" + this.MaxAttempts;
+            this.TestStepStatus.Description = "Error while trying to query the database.";
+            this.TestStepStatus.Expected = "Execute " + this.Description + " successfully";
+            this.TestStepStatus.Actual = "Failure in executing " + this.Description + "!\n" + e.ToString();
             this.TestStepStatus.ErrorStack = e.StackTrace;
             this.TestStepStatus.FriendlyErrorMessage = e.Message;
             this.TestStepStatus.RunSuccessful = false;
-            this.TestStepStatus.Actual = "F";
+
+            this.Attempts++;
+
+            Logger.Error(e.Message);
+
             InformationObject.TestAutomationDriver.CheckErrorContainer();
             InformationObject.TestAutomationDriver.TakeScreenShot();
         }
@@ -79,8 +99,11 @@ namespace AutomationTestingProgram.AutomationFramework
                     Name = this.Name,
                     StartTime = DateTime.UtcNow,
                     TestStepNumber = this.TestStepNumber,
+                    Description = this.Description,
                 };
             }
+
+            InformationObject.TestStepData.SetArguments(this);
 
             if (!this.ShouldExecuteVariable)
             {
@@ -91,7 +114,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public virtual bool ShouldExecute()
         {
-            return this.ShouldExecuteVariable;
+            return this.ShouldExecuteVariable && this.Attempts < this.MaxAttempts;
         }
 
         /// <inheritdoc/>

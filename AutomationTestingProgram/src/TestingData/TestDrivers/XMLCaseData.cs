@@ -16,7 +16,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// <summary>
     /// The XML Driver to get data from an xml.
     /// </summary>
-    public class XMLCaseData : ITestCaseData
+    public class XMLCaseData : XMLData, ITestCaseData
     {
         /// <summary>
         /// The stack to read/excecute for the test set.
@@ -28,26 +28,15 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         private readonly Stack<bool> performStack = new Stack<bool>();
 
-        /// <inheritdoc/>
-        public string TestArgs { get; set; }
-
-        /// <inheritdoc/>
-        public string Name { get; } = "XML";
-
         /// <summary>
-        /// Gets or sets the information for the test set.
+        /// Initializes a new instance of the <see cref="XMLCaseData"/> class.
+        /// An implementation of the TestCaseData for xml.
         /// </summary>
-        private XmlNode TestFlow { get; set; }
-
-        /// <summary>
-        /// Gets or sets the xml file containing the XML Data.
-        /// </summary>
-        private XmlDocument XMLDataFile { get; set; } = null;
-
-        /// <summary>
-        /// Gets or sets the xml file containing the test set/case/steps.
-        /// </summary>
-        private XmlDocument XMLDocObj { get; set; } = null;
+        /// <param name="xmlLocation">File Location of the XML.</param>
+        public XMLCaseData(string xmlLocation)
+            : base(xmlLocation)
+        {
+        }
 
         /// <summary>
         /// Gets or sets the ammount of times this should be ran.
@@ -60,39 +49,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private int ExecuteCount { get; set; } = 0;
 
         /// <inheritdoc/>
-        public void SetUp()
-        {
-            if (File.Exists(this.TestArgs))
-            {
-                this.XMLDocObj = new XmlDocument();
-                this.XMLDocObj.Load(this.TestArgs);
-                this.TestFlow = this.XMLDocObj.GetElementsByTagName("TestCaseFlow")[0];
-
-                string dataFile = Environment.GetEnvironmentVariable("dataFile");
-                if (dataFile == string.Empty || dataFile == null)
-                {
-                    if (this.XMLDocObj.GetElementsByTagName("DataFile").Count > 0)
-                    {
-                        dataFile = this.XMLDocObj.GetElementsByTagName("DataFile")[0].InnerText;
-                        if (File.Exists(dataFile))
-                        {
-                            this.XMLDataFile = new XmlDocument();
-                            this.XMLDataFile.Load(dataFile);
-                        }
-                        else
-                        {
-                            Logger.Error("XML File could not be found!");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Logger.Error("XML File could not be found!");
-            }
-        }
-
-        /// <inheritdoc/>
         public ITestCase SetUpTestCase(string testCaseName, bool performAction = true)
         {
             ITestCase testCase = null;
@@ -103,7 +59,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // Find the appropriate testcase;
             foreach (XmlNode node in testCases.ChildNodes)
             {
-                if (node.Name == "TestCase" && XMLHelper.ReplaceIfToken(node.Attributes["id"].Value, this.XMLDataFile) == testCaseName)
+                if (node.Name == "TestCase" && this.ReplaceIfToken(node.Attributes["id"].Value, this.XMLDataFile) == testCaseName)
                 {
                     int repeat = 1;
                     string name = "TestCase";
@@ -193,106 +149,12 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 }
                 else if (currentNode.Name == "RunTestStep")
                 {
-                    testStep = this.FindTestStep(XMLHelper.ReplaceIfToken(currentNode.InnerText, this.XMLDataFile), performAction);
+                    testStep = InformationObject.TestStepData.SetUpTestStep(this.ReplaceIfToken(currentNode.InnerText, this.XMLDataFile), performAction);
                 }
                 else
                 {
                     Logger.Warn($"We currently do not deal with this: {currentNode.Name}");
                 }
-            }
-
-            return testStep;
-        }
-
-        /// <summary>
-        /// This function will go through the list of steps and run the appropriate test step if found.
-        /// </summary>
-        /// <param name="testStepID"> The ID of the test step to run. </param>
-        /// <param name="performAction"> Perfoms the action. </param>
-        /// <returns>0 if pass. >=1 if fail.</returns>
-        private ITestStep FindTestStep(string testStepID, bool performAction = true)
-        {
-            ITestStep testStep = null;
-
-            // get the list of testSteps
-            XmlNode testSteps = this.XMLDocObj.GetElementsByTagName("TestSteps")[0];
-
-            // Find the appropriate test steps
-            foreach (XmlNode innerNode in testSteps.ChildNodes)
-            {
-                if (innerNode.Name != "#comment" && XMLHelper.ReplaceIfToken(innerNode.Attributes["id"].Value, this.XMLDataFile) == testStepID)
-                {
-                    testStep = this.BuildTestStep(innerNode, performAction);
-                    return testStep;
-                }
-            }
-
-            Logger.Warn($"Sorry, we didn't find a test step that matched the provided ID: {testStepID}");
-            return testStep;
-        }
-
-        private ITestStep BuildTestStep(XmlNode testStepNode, bool performAction = true)
-        {
-            TestStep testStep = null;
-            string name = XMLHelper.ReplaceIfToken(testStepNode.Attributes["name"].Value, this.XMLDataFile);
-
-            // initial value is respectRunAODAFlag
-            // if we respect the flag, and it is not found, then default value is false.
-            bool runAODA = InformationObject.RespectRunAODAFlag;
-            if (runAODA)
-            {
-                if (testStepNode.Attributes["runAODA"] != null)
-                {
-                    runAODA = bool.Parse(testStepNode.Attributes["runAODA"].Value);
-                }
-                else
-                {
-                    runAODA = false;
-                }
-            }
-
-            // populate runAODAPageName. Deault is Not provided.
-            string runAODAPageName = "Not provided.";
-            if (runAODA)
-            {
-                if (testStepNode.Attributes["runAODAPageName"] != null)
-                {
-                    runAODAPageName = XMLHelper.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
-                }
-            }
-
-            // log is true by default.
-            bool log = true;
-            if (testStepNode.Attributes["log"] != null)
-            {
-                log = bool.Parse(testStepNode.Attributes["log"].Value);
-            }
-
-            Logger.Debug($"Test step '{name}': runAODA->{runAODA} runAODAPageName->{runAODAPageName} log->{log}");
-
-            testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
-                .Find(x => x.Name.Equals(testStepNode.Name));
-
-            if (testStep == null)
-            {
-                Logger.Error($"Was not able to find the provided test action '{testStepNode}'.");
-            }
-            else
-            {
-                string namePrepender = this.ExecuteCount > 0 ? $"{this.ExecuteCount}" : $"";
-
-                for (int index = 0; index < testStepNode.Attributes.Count; index++)
-                {
-                    testStepNode.Attributes[index].InnerText = XMLHelper.ReplaceIfToken(testStepNode.Attributes[index].InnerText, this.XMLDataFile);
-                    testStep.Arguments.Add(testStepNode.Attributes[index].Name, testStepNode.Attributes[index].InnerText);
-                }
-
-                testStep.Name = name;
-                testStep.ShouldLog = log;
-                testStep.ShouldExecuteVariable = performAction;
-                testStep.RunAODA = runAODA;
-                testStep.RunAODAPageName = runAODAPageName;
-                testStep.TestStepNumber = this.ExecuteCount * this.TestFlow.ChildNodes.Count;
             }
 
             return testStep;
@@ -310,7 +172,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // we check condition if we have to perfom this action.
             if (performAction)
             {
-                string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
+                string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                 string condition = ifXMLNode.Attributes["condition"].Value;
 
                 ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;
@@ -334,7 +196,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
                         if (performAction && !ifCondition)
                         {
-                            string elementXPath = XMLHelper.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
+                            string elementXPath = this.ReplaceIfToken(ifXMLNode.Attributes["elementXPath"].Value, this.XMLDataFile);
                             string condition = ifSection.Attributes["condition"].Value;
 
                             ITestingDriver.ElementState state = condition == "EXIST" ? ITestingDriver.ElementState.Visible : ITestingDriver.ElementState.Invisible;

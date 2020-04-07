@@ -18,6 +18,16 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     /// </summary>
     public class TextCaseData : ITestCaseData
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextCaseData"/> class.
+        /// An implementation of the TestCaseData for txt files.
+        /// </summary>
+        /// <param name="textLocation">The location of the txt file containing all the test cases.</param>
+        public TextCaseData(string textLocation)
+        {
+            this.TestArgs = textLocation;
+        }
+
         /// <inheritdoc/>
         public string TestArgs { get; set; }
 
@@ -27,6 +37,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private List<string> FileData { get; set; } = new List<string>();
 
         private int FileIndex { get; set; } = 0;
+
+        /// <inheritdoc/>
+        public void SetUp()
+        {
+        }
 
         /// <inheritdoc/>
         public bool ExistNextTestStep()
@@ -41,11 +56,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.FileIndex++;
 
             return InformationObject.TestStepData.SetUpTestStep(testStepName);
-        }
-
-        /// <inheritdoc/>
-        public void SetUp()
-        {
         }
 
         /// <inheritdoc/>

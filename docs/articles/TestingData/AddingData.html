@@ -75,7 +75,49 @@
 <li>Make sure the name of the data does not already exist in the program. There is currently no way of keeping track of what names has been used. Usualy the name is the same as the data type.</li>
 <li>When making a <code>testSetData</code>, also make a <code>GeneralData</code> class with the same name as the <code>testSetData</code>.</li>
 <li>It is possible for an implemntation of a test driver to implement all 3 testData interface. Keep in mind the program does create a new instance for each of the test case, so don't assume the <code>testSetData</code> object is the same as the <code>testCaseData</code> object.</li>
+<li>You can also create a class that implements ITestData which your data can implement. This is so that you can have a base class that the test Set/Case/Step can implement. The implementation tree would look like this:</li>
 </ol>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>&lt;-</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ITestData</td>
+<td>&lt;-</td>
+<td>ExampleData</td>
+</tr>
+<tr>
+<td>^</td>
+<td></td>
+<td>^</td>
+</tr>
+<tr>
+<td>ITestSetData</td>
+<td>&lt;-</td>
+<td>ExampleSetData</td>
+</tr>
+<tr>
+<td>ITestCaseData</td>
+<td>&lt;-</td>
+<td>ExampleCaseData</td>
+</tr>
+<tr>
+<td>ITestStepData</td>
+<td>&lt;-</td>
+<td>ExampleStepData</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key</strong></p>
+<ul>
+<li>&lt;- Represents implementation</li>
+<li>^ Represents implementation of the column name</li>
+</ul>
 </article>
           </div>
           
@@ -84,7 +126,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/zzzrst/SeleniumFramework/blob/RefactorBranch/AutomationTestingProgram/articles/TestingData/AddingData.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/zzzrst/SeleniumFramework/blob/DatabaseBranch/AutomationTestingProgram/articles/TestingData/AddingData.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

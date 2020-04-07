@@ -11,6 +11,8 @@ namespace AutomationTestingProgram.TestingData
     {
         /// <summary>
         /// Gets or sets the arguments for the test data. Often the file location.
+        /// You need to create a constructor that passes in a string/
+        /// This is where you get the test args.
         /// </summary>
         public string TestArgs { get; set; }
 
@@ -20,8 +22,10 @@ namespace AutomationTestingProgram.TestingData
         public string Name { get; }
 
         /// <summary>
-        /// Runs before running the main testing loop.
-        /// Used To initilize all the data.
+        /// Since The constructor is called through reflective getter,
+        /// any errors during the constructor caused by wrong arguments,
+        /// will cause the program to crash. run here instead,
+        /// guarantees that it is the right type.
         /// </summary>
         public void SetUp();
     }

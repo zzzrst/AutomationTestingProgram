@@ -70,11 +70,38 @@ namespace AutomationTestingProgram.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to object.
+        /// </summary>
+        internal static string collectionName {
+            get {
+                return ResourceManager.GetString("collectionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to value.
+        /// </summary>
+        internal static string collectionSearchField {
+            get {
+                return ResourceManager.GetString("collectionSearchField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to environment.
         /// </summary>
         internal static string Environment {
             get {
                 return ResourceManager.GetString("Environment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to value.
+        /// </summary>
+        internal static string invisible {
+            get {
+                return ResourceManager.GetString("invisible", resourceCulture);
             }
         }
         
@@ -97,6 +124,42 @@ namespace AutomationTestingProgram.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to value.
+        /// </summary>
+        internal static string seconds {
+            get {
+                return ResourceManager.GetString("seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to value.
+        /// </summary>
+        internal static string selection {
+            get {
+                return ResourceManager.GetString("selection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to value.
+        /// </summary>
+        internal static string tabIndex {
+            get {
+                return ResourceManager.GetString("tabIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to value.
+        /// </summary>
+        internal static string text {
+            get {
+                return ResourceManager.GetString("text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to timeOutThreshold.
         /// </summary>
         internal static string TimeOutThreshold {
@@ -106,11 +169,29 @@ namespace AutomationTestingProgram.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to url.
+        ///   Looks up a localized string similar to value.
         /// </summary>
-        internal static string URL {
+        internal static string url {
             get {
-                return ResourceManager.GetString("URL", resourceCulture);
+                return ResourceManager.GetString("url", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to comment.
+        /// </summary>
+        internal static string useJS {
+            get {
+                return ResourceManager.GetString("useJS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to object.
+        /// </summary>
+        internal static string xPath {
+            get {
+                return ResourceManager.GetString("xPath", resourceCulture);
             }
         }
     }

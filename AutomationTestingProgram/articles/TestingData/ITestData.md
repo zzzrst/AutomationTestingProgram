@@ -12,11 +12,11 @@ cmd. ie, if the test set data was called "XML" then when running in cmd, the tes
 string TestArgs
 ```
 * Arguments that are passed in. Often the location of the file.
-### Methods
+### Constructors
 ```c#
-void SetUp()
+public ExampleTestCaseData(string args);
 ``
-* Ran when the test data is initilized. Can be used for loading the test set file into the program.
+* Make sure there is a constructor that accepts a string. This is how it gets any arguments passed in such as the file location.
 ## ITestSetData
 ### Methods
 ```c#

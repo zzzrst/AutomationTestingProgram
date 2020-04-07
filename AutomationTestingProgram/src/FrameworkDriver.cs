@@ -36,21 +36,23 @@ namespace AutomationTestingProgram
         public static int Main(string[] args)
         {
             Logger.Info("Checking for updates...");
-            if (false && CheckForUpdates(Assembly.GetExecutingAssembly().Location))
+            if (CheckForUpdates(Assembly.GetExecutingAssembly().Location))
             {
                 string newArgs = string.Join(" ", args.Select(x => string.Format("\"{0}\"", x)).ToList());
-                Process p = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo
+                using (Process p = new Process())
                 {
-                    UseShellExecute = false,
-                    RedirectStandardOutput = false,
-                    RedirectStandardError = false,
-                    FileName = "AutoUpdater.exe",
-                    Arguments = newArgs,
-                };
+                    ProcessStartInfo startInfo = new ProcessStartInfo
+                    {
+                        UseShellExecute = false,
+                        RedirectStandardOutput = false,
+                        RedirectStandardError = false,
+                        FileName = "AutoUpdater.exe",
+                        Arguments = newArgs,
+                    };
 
-                p.StartInfo = startInfo;
-                p.Start();
+                    p.StartInfo = startInfo;
+                    p.Start();
+                }
 
                 Thread.Sleep(5000);
 
@@ -85,10 +87,9 @@ namespace AutomationTestingProgram
                 automationBuilder.Build();
 
                 Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
-
+                
                 // Run main program.
                 DateTime start = DateTime.UtcNow;
-
                 AutomationTestSetDriver.RunTestSet(testSet);
                 InformationObject.Reporter.Report();
 
@@ -208,26 +209,33 @@ namespace AutomationTestingProgram
 
             SetEnvironmentVariable(EnvVar.LoadingSpinner, string.Empty);
             SetEnvironmentVariable(EnvVar.ErrorContainer, string.Empty);
-
+            var l = GetEnvironmentVariable(EnvVar.TestSetDataType);
             ITestGeneralData dataInformation = ReflectiveGetter.GetImplementationOfType<ITestGeneralData>()
                 .Find(x => x.Name.Equals(GetEnvironmentVariable(EnvVar.TestSetDataType)));
-
-            if (dataInformation.Verify(GetEnvironmentVariable(EnvVar.TestSetDataArgs)))
+            if (dataInformation != null)
             {
-                parameters = dataInformation.ParseParameters(GetEnvironmentVariable(EnvVar.TestSetDataArgs), GetEnvironmentVariable(EnvVar.DataFile));
-                foreach (EnvVar paramName in parameters.Keys)
+                if (dataInformation.Verify(GetEnvironmentVariable(EnvVar.TestSetDataArgs)))
                 {
-                    // If it's not filled in already, fill it in.
-                    if (GetEnvironmentVariable(paramName) == string.Empty
-                        || GetEnvironmentVariable(paramName) == "0")
+                    parameters = dataInformation.ParseParameters(GetEnvironmentVariable(EnvVar.TestSetDataArgs), GetEnvironmentVariable(EnvVar.DataFile));
+                    foreach (EnvVar paramName in parameters.Keys)
                     {
-                        SetEnvironmentVariable(paramName, parameters[paramName]);
+                        // If it's not filled in already, fill it in.
+                        if (GetEnvironmentVariable(paramName) == string.Empty
+                            || GetEnvironmentVariable(paramName) == "0")
+                        {
+                            SetEnvironmentVariable(paramName, parameters[paramName]);
+                        }
                     }
+                }
+                else
+                {
+                    Logger.Error("Error verifying test set data.");
+                    errorParsing = true;
                 }
             }
             else
             {
-                Logger.Error("Error verifying test set data.");
+                Logger.Error($"General data implementation does not exist for {GetEnvironmentVariable(EnvVar.TestSetDataType)}");
                 errorParsing = true;
             }
 
