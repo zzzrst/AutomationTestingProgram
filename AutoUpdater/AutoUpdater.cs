@@ -124,9 +124,17 @@ namespace AutoUpdater
                 {
                     Logger.Info($"ChromeDriver is out of date! Version {latestChromeVersion} is being used. Chromium will be updated.");
 
-                    DownloadAndUnzip("chromium.zip");
-                    Directory.Move(Path.Combine(Path.GetTempPath(), "chromium"), Path.Combine(TempPathToExe(), "chromium"));
-                }
+                    try
+                    {
+                        DownloadAndUnzip("chromium.zip");
+                        Directory.Move(Path.Combine(Path.GetTempPath(), "chromium"), Path.Combine(TempPathToExe(), "chromium"));
+                    }
+                    catch(Exception e)
+                    {
+                        Logger.Info("Chromium may not be in the release assets.");
+                        Logger.Warn(e.Message);
+                    }
+ }
                 else
                 {
                     Logger.Info("Chromedriver is up to date!");

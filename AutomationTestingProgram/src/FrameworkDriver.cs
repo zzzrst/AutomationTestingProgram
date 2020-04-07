@@ -36,21 +36,23 @@ namespace AutomationTestingProgram
         public static int Main(string[] args)
         {
             Logger.Info("Checking for updates...");
-            if (false && CheckForUpdates(Assembly.GetExecutingAssembly().Location))
+            if (CheckForUpdates(Assembly.GetExecutingAssembly().Location))
             {
                 string newArgs = string.Join(" ", args.Select(x => string.Format("\"{0}\"", x)).ToList());
-                Process p = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo
+                using (Process p = new Process())
                 {
-                    UseShellExecute = false,
-                    RedirectStandardOutput = false,
-                    RedirectStandardError = false,
-                    FileName = "AutoUpdater.exe",
-                    Arguments = newArgs,
-                };
+                    ProcessStartInfo startInfo = new ProcessStartInfo
+                    {
+                        UseShellExecute = false,
+                        RedirectStandardOutput = false,
+                        RedirectStandardError = false,
+                        FileName = "AutoUpdater.exe",
+                        Arguments = newArgs,
+                    };
 
-                p.StartInfo = startInfo;
-                p.Start();
+                    p.StartInfo = startInfo;
+                    p.Start();
+                }
 
                 Thread.Sleep(5000);
 
@@ -85,6 +87,7 @@ namespace AutomationTestingProgram
                 automationBuilder.Build();
 
                 Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
+                
                 // Run main program.
                 DateTime start = DateTime.UtcNow;
                 AutomationTestSetDriver.RunTestSet(testSet);
