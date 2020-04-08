@@ -93,5 +93,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             return testStep;
         }
+
+        /// <inheritdoc/>
+        public void AddAttachment(string attachment)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -83,7 +83,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// Finds the web element of the corresponding test object under the given timeout duration.
         /// </summary>
         /// <returns>The web element of the corresponding test object.</returns>
-        protected IWebElement FindElement()
+        protected virtual IWebElement FindElement()
         {
             IWebElement webElement = null;
             List<string> htmltagwhiteList = new List<string>(ConfigurationManager.AppSettings["WebCheckBox_HTMLTags"].ToString().Split(','));
