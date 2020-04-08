@@ -90,6 +90,78 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.SpecialCharFlag = false;
         }
 
+        /// <inheritdoc/>
+        public void AddAttachment(string attachment)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// If the original string begins with special characters in ['!', '@', '##', '$$'], then
+        /// it is replaced by the respective value in the database.
+        /// </summary>
+        /// <param name="environment">Environment database to query from (if applicable).</param>
+        /// <param name="original">Original string.</param>
+        /// <returns>The respective value in the database, or the original string itself.</returns>
+        public object QuerySpecialChars(string environment, string original)
+        {
+            string msg = string.Empty;
+            string token = "$(environment)";
+            if (original.Contains(token))
+            {
+                original = original.Replace(token, environment);
+                msg = $"String contained token '{token}' which was replaced with {environment}";
+            }
+
+            object result = original;
+
+            if (original.Length >= 7 && original.Substring(0, 7).ToLower() == "!select")
+            {
+                // query from RVDEV1 database
+                this.ConnectToDatabase(this.TestDB);
+                result = this.TestDB.ExecuteQuery(original.Substring(1))[0][0];
+                msg += $"Query replaced with: {result}.";
+            }
+            else if (original.Length >= 7 && original.Substring(0, 7).ToLower() == "@select")
+            {
+                // query from test environment database
+                if (original.Trim() == "@")
+                {
+                    result = this.GetEnvironmentURL(environment);
+                }
+                else
+                {
+                    result = this.ProcessEnvironmentQuery(environment, original.Substring(1));
+                    msg += $"Query replaced with: {result}.";
+                }
+            }
+            else if (original.Length >= 2 && original.Substring(0, 2) == "##")
+            {
+                // query password from Keychain accounts spreadsheet
+                string username = original.Substring(2);
+                result = this.QueryKeychainAccountPassword(username);
+                msg += $"Query of {original} replaced password with: {result}.";
+            }
+            else if (original.Length >= 2 && original.Substring(0, 2) == "$$")
+            {
+                // query from Excel file
+                int split = original.IndexOf(';');
+                string filepath = original.Substring(2, split);
+                string query = original.Substring(split + 1);
+                Logger.Error($"Sorry, {original} is not implemented yet. or does not work on the current program.");
+
+                // result = ExcelDriver.QueryExcelFile(filepath, query);
+            }
+
+            // display console log
+            if (this.SpecialCharFlag = !string.IsNullOrEmpty(msg) || this.SpecialCharFlag)
+            {
+                Logger.Info(msg);
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// Executes a query in an environment database that does not return any data.
         /// </summary>
@@ -220,72 +292,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 t_db_name,
                 t_username,
                 t_password);
-        }
-
-        /// <summary>
-        /// If the original string begins with special characters in ['!', '@', '##', '$$'], then
-        /// it is replaced by the respective value in the database.
-        /// </summary>
-        /// <param name="environment">Environment database to query from (if applicable).</param>
-        /// <param name="original">Original string.</param>
-        /// <returns>The respective value in the database, or the original string itself.</returns>
-        private object QuerySpecialChars(string environment, string original)
-        {
-            string msg = string.Empty;
-            string token = "$(environment)";
-            if (original.Contains(token))
-            {
-                original = original.Replace(token, environment);
-                msg = $"String contained token '{token}' which was replaced with {environment}";
-            }
-
-            object result = original;
-
-            if (original.Length >= 7 && original.Substring(0, 7).ToLower() == "!select")
-            {
-                // query from RVDEV1 database
-                this.ConnectToDatabase(this.TestDB);
-                result = this.TestDB.ExecuteQuery(original.Substring(1))[0][0];
-                msg += $"Query replaced with: {result}.";
-            }
-            else if (original.Length >= 7 && original.Substring(0, 7).ToLower() == "@select")
-            {
-                // query from test environment database
-                if (original.Trim() == "@")
-                {
-                    result = this.GetEnvironmentURL(environment);
-                }
-                else
-                {
-                    result = this.ProcessEnvironmentQuery(environment, original.Substring(1));
-                    msg += $"Query replaced with: {result}.";
-                }
-            }
-            else if (original.Length >= 2 && original.Substring(0, 2) == "##")
-            {
-                // query password from Keychain accounts spreadsheet
-                string username = original.Substring(2);
-                result = this.QueryKeychainAccountPassword(username);
-                msg += $"Query of {original} replaced password with: {result}.";
-            }
-            else if (original.Length >= 2 && original.Substring(0, 2) == "$$")
-            {
-                // query from Excel file
-                int split = original.IndexOf(';');
-                string filepath = original.Substring(2, split);
-                string query = original.Substring(split + 1);
-                Logger.Error($"Sorry, {original} is not implemented yet. or does not work on the current program.");
-
-                // result = ExcelDriver.QueryExcelFile(filepath, query);
-            }
-
-            // display console log
-            if (this.SpecialCharFlag = !string.IsNullOrEmpty(msg) || this.SpecialCharFlag)
-            {
-                Logger.Info(msg);
-            }
-
-            return result;
         }
 
         /// <summary>

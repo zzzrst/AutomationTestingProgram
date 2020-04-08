@@ -6,6 +6,7 @@ namespace AutomationTestingProgram
 {
     using System;
     using System.IO;
+    using System.Linq;
     using System.Reflection;
     using System.Xml;
     using log4net;
@@ -69,6 +70,24 @@ namespace AutomationTestingProgram
         }
 
         /// <summary>
+        /// Logs a line with 4 tabs and Stdout:.
+        /// </summary>
+        public static void LogStdout()
+        {
+            Log.Info($"{Tab(4)}Stdout:");
+        }
+
+        /// <summary>
+        /// Logs the provided 'log' with 5 tabs in front.
+        /// </summary>
+        /// <param name="log">The log<see cref="string"/>.</param>
+        public static void LogWithFiveTabs(string log)
+        {
+            Log.Info($"{Tab(5)}{log}");
+
+        }
+
+        /// <summary>
         /// Get Log4Net Logger.
         /// </summary>
         /// <returns>An ILogger.</returns>
@@ -94,6 +113,16 @@ namespace AutomationTestingProgram
             ILog logger = LogManager.GetLogger(type);
             SetLog4NetConfiguration();
             return logger;
+        }
+
+        /// <summary>
+        /// Returns a sequence of whitespaces of fixed length to represent tabs in the print log.
+        /// </summary>
+        /// <param name="indents">Number of tabs.</param>
+        /// <returns>Sequence of tabs represented as whitespaces.</returns>
+        private static string Tab(int indents = 1)
+        {
+            return string.Concat(Enumerable.Repeat("    ", indents));
         }
 
         /// <summary>

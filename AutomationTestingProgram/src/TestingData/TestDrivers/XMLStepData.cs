@@ -53,6 +53,12 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             return null;
         }
 
+        /// <inheritdoc/>
+        public void AddAttachment(string attachment)
+        {
+            throw new NotImplementedException();
+        }
+
         private ITestStep BuildTestStep(XmlNode testStepNode, bool performAction = true)
         {
             TestStep testStep = null;

@@ -5,7 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
-    /// This test step is the same as testStepXml.
+    /// This test step to verify the content of a drop down list.
     /// </summary>
     public class VerifyDDLContent : TestStep
     {

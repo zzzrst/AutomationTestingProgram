@@ -5,7 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
-    /// This test step is the same as testStepXml.
+    /// This test step to verify the availability of a check box.
     /// </summary>
     public class VerifyCheckBoxAvailability : VerifyObjectAvailability
     {
