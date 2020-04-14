@@ -28,7 +28,7 @@
   <ItemGroup>
     <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
     <PackageReference Include="CommandLineParser" Version="2.7.82" />
-    <PackageReference Include="ComparePDF" Version="2.0.7404.24110" />
+    <PackageReference Include="ComparePDF" Version="2.0.7408.15133" />
     <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7390.35168" />
     <PackageReference Include="docfx.console" Version="2.51.0">
       <PrivateAssets>all</PrivateAssets>
