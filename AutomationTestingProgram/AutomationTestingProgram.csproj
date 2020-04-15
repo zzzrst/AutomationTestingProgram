@@ -49,7 +49,7 @@
     </PackageReference>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
-    <PackageReference Include="TestingDriver" Version="1.1.7403.28616" />
+    <PackageReference Include="TestingDriver" Version="1.2.7409.37454" />
     <PackageReference Include="TextInteractor" Version="1.2.7408.14665" />
   </ItemGroup>
 
