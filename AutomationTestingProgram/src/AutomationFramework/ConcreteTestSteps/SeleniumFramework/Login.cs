@@ -15,7 +15,6 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public override void Execute()
         {
-            throw new System.NotImplementedException();
             base.Execute();
             string usernameXPath = "//input[@id='username']";
             string username = this.Arguments["username"];
@@ -30,7 +29,6 @@ namespace AutomationTestingProgram.AutomationFramework
             InformationObject.TestAutomationDriver.PopulateElement(passwordXPath, password);
             InformationObject.TestAutomationDriver.ClickElement(signInButtonXPath);
             InformationObject.TestAutomationDriver.WaitForLoadingSpinner();
-
         }
     }
 }

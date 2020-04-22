@@ -62,6 +62,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             return testCase;
         }
 
+        /// <inheritdoc/>
+        public void AddAttachment(string attachment)
+        {
+        }
+
         /// <summary>
         /// Adds all the child nodes in the outer most layer to the stack in reverse order.
         /// </summary>

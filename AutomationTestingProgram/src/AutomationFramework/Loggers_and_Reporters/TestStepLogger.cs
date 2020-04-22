@@ -24,6 +24,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
             ITestStepStatus testStepStatus = testStep.TestStepStatus;
             List<string> str = new List<string>();
             str.Add(this.Tab(2) + "Name:" + testStep.Name);
+            str.Add(this.Tab(2) + "Description:" + ((TestStep)testStep).Description);
             str.Add(this.Tab(2) + "RunSuccessful:" + testStepStatus.RunSuccessful.ToString());
             str.Add(this.Tab(2) + "----------------------------");
 

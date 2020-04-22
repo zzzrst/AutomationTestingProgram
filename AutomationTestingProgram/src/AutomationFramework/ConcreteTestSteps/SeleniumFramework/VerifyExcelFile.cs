@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
@@ -53,12 +52,12 @@ namespace AutomationTestingProgram.AutomationFramework
                 resultMsg = passed ? "Both files were the same" : "There were differences!. Please find the result file on the desktop";
 
                 // CR: Attach excel files that were compared. Attach resulting file if there were differences.
-                /*this.Alm.AddTestCaseAttachment(expectedFilePath);
-                this.Alm.AddTestCaseAttachment(actualFilePath);
+                InformationObject.TestSetData.AddAttachment(expectedFilePath);
+                InformationObject.TestSetData.AddAttachment(actualFilePath);
                 if (!passed)
                 {
-                    this.Alm.AddTestCaseAttachment(this.resultFilePath);
-                }*/
+                    InformationObject.TestSetData.AddAttachment(this.resultFilePath);
+                }
             }
             catch (Exception e)
             {
@@ -68,7 +67,6 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.Actual = resultMsg;
             this.TestStepStatus.RunSuccessful = passed;
             Logger.Info(resultMsg);
-
         }
 
         /// <summary> Open an Excel file (xls or xlsx) and convert it into a DataTable.
