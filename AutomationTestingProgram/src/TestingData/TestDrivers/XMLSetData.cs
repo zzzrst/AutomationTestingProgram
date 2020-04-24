@@ -39,6 +39,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         }
 
         /// <inheritdoc/>
+        public void AddAttachment(string attachment)
+        {
+        }
+
+        /// <inheritdoc/>
         public void SetUpTestSet()
         {
             this.AddNodesToStack(this.TestFlow);

@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ALMProjectEntityFieldMapping.xml" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html" />
+    <None Remove="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="TDAPIOLELib.dll">
+      <Guid>f645bd06-e1b4-4e6a-82fb-e97d027fd456</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ALMProjectEntityFieldMapping.xml" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html" />
+    <Content Include="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="System.Management" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

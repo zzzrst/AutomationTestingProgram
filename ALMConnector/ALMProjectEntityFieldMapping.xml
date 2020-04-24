@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProjectEntities>
+  <Run>
+    <SystemFields>
+      <Field key="RN_PINNED_BASELINE" value="Baseline"/>
+      <Field key="RN_COMMENTS" value="Comments"/>
+      <Field key="RN_TEST_CONFIG_ID" value="Configuration ID"/>
+      <Field key="RN_DRAFT" value="Draft Run"/>
+      <Field key="RN_DURATION" value="Duration"/>
+      <Field key="RN_ENVIRONMENT" value="Environment"/>
+      <Field key="RN_EXECUTION_DATE" value="Exec Date"/>
+      <Field key="RN_EXECUTION_TIME" value="Exec Time"/>
+      <Field key="RN_BUILD_REVISION" value="External Build/Revision Number"/>
+      <Field key="RN_RESULTS_FILES_NETWORK_PATH" value="External Results Network Path"/>
+      <Field key="RN_HOST" value="Host"/>
+      <Field key="RN_OS_NAME" value="Operating System"/>
+      <Field key="RN_OS_BUILD" value="OS Build Number"/>
+      <Field key="RN_OS_SP" value="OS Service Pack"/>
+      <Field key="RN_RUN_ID" value="Run ID"/>
+      <Field key="RN_RUN_NAME" value="Run Name"/>
+      <Field key="RN_STATE" value="State"/>
+      <Field key="RN_STATUS" value="Status"/>
+      <Field key="RN_ASSIGN_RCYC" value="Target Cycle"/>
+      <Field key="RN_TEST_DESCRIPTION" value="Test Description"/>
+      <Field key="RN_TESTCYCL_ID" value="Test Instance"/>
+      <Field key="RN_TESTCYCL_NAME" value="Test Instance Name"/>
+      <Field key="RN_TEST_NAME" value="Test Name"/>
+      <Field key="RN_CYCLE_NAME" value="Test Set Name"/>
+      <Field key="RN_TESTER_NAME" value="Tester"/>
+      <Field key="RN_TYPE" value="Type"/>
+    </SystemFields>
+    <UserFields>
+      <Field key="RN_USER_01" value="BrowserVersion"/>
+      <Field key="RN_USER_02" value="Test Environment"/>
+      <Field key="RN_USER_03" value="Build #"/>
+    </UserFields>
+  </Run>
+  <TestInstance>
+    <SystemFields>
+      <Field key="TC_PINNED_BASELINE" value="Baseline"/>
+      <Field key="TC_ENVIRONMENT" value="Environment"/>
+      <Field key="TC_EXEC_DATE" value="Exec Date"/>
+      <Field key="TC_NAME" value="Name"/>
+      <Field key="TC_PLAN_SCHEDULING_DATE" value="Planned Exec Date"/>
+      <Field key="TC_PLAN_SCHEDULING_TIME" value="Planned Exec Time"/>
+      <Field key="TC_HOST_NAME" value="Planned Host Name"/>
+      <Field key="TC_TESTER_NAME" value="Responsible Tester"/>
+      <Field key="TC_STATUS" value="Status"/>
+      <Field key="TC_ASSIGN_RCYC" value="Target Cycle"/>
+      <Field key="TC_ACTUAL_TESTER" value="Tester"/>
+      <Field key="TC_EXEC_TIME" value="Time"/>
+      <Field key="TC_SUBTYPE_ID" value="Type"/>
+    </SystemFields>
+    <UserFields>
+      <Field key="TC_USER_01" value="Priority"/>
+      <Field key="TC_USER_02" value="Comments"/>
+    </UserFields>
+  </TestInstance>
+  <TestSet>
+    <SystemFields>
+      <Field key="CY_PINNED_BASELINE" value="Baseline"/>
+      <Field key="CY_CLOSE_DATE" value="Close Date"/>
+      <Field key="CY_ENVIRONMENT" value="Default Environment"/>
+      <Field key="CY_COMMENT" value="Description"/>
+      <Field key="CY_DYNAMIC_DATA" value="Dynamic Data"/>
+      <Field key="CY_VTS" value="Modified"/>
+      <Field key="CY_CYCLE" value="Name"/>
+      <Field key="CY_OPEN_DATE" value="Open Date"/>
+      <Field key="CY_STATUS" value="Status"/>
+      <Field key="CY_ASSIGN_RCYC" value="Target Cycle"/>
+      <Field key="CY_FOLDER_ID" value="Test Set Folder"/>
+      <Field key="CY_CYCLE_ID" value="Test Set ID"/>
+      <Field key="CY_TREE_PATH" value="Tree Path"/>
+      <Field key="CY_SUBTYPE_ID" value="Type"/>
+    </SystemFields>
+    <UserFields>
+      <Field key="CY_USER_01" value="Test_Environment"/>
+      <Field key="CY_USER_02" value="Global Time-Out (seconds)"/>
+      <Field key="CY_USER_03" value="Global Attempts (tries)"/>
+      <Field key="CY_USER_04" value="Test Case Version"/>
+      <Field key="CY_USER_05" value="Automation Database"/>
+      <Field key="CY_USER_06" value="Automation Library Version"/>
+      <Field key="CY_USER_07" value="Application"/>
+      <Field key="CY_USER_08" value="Application Collection"/>
+      <Field key="CY_USER_09" value="Browser"/>
+      <Field key="CY_USER_10" value="Priority"/>
+    </UserFields>
+  </TestSet>
+  <TestStep>
+    <SystemFields>
+      <Field key="ST_ACTUAL" value="Actual"/>
+      <Field key="ST_DESCRIPTION" value="Description"/>
+      <Field key="ST_EXECUTION_DATE" value="Exec Date"/>
+      <Field key="ST_EXECUTION_TIME" value="Exec Time"/>
+      <Field key="ST_EXPECTED" value="Expected"/>
+      <Field key="ST_TEST_ID" value="Source Test"/>
+      <Field key="ST_STATUS" value="Status"/>
+      <Field key="ST_STEP_NAME" value="Step Name"/>
+    </SystemFields>
+    <UserFields>
+      <Field key="ST_USER_01" value="Step Type"/>
+    </UserFields>
+  </TestStep>
+</ProjectEntities>
+

@@ -87,7 +87,7 @@ namespace AutomationTestingProgram
                 automationBuilder.Build();
 
                 Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
-                
+
                 // Run main program.
                 DateTime start = DateTime.UtcNow;
                 AutomationTestSetDriver.RunTestSet(testSet);
@@ -245,6 +245,7 @@ namespace AutomationTestingProgram
         private static bool ParseCommandLine(string[] args)
         {
             bool errorParsing = false;
+            SetEnvironmentVariable(EnvVar.Attempts, string.Empty);
             Parser.Default.ParseArguments<FrameworkOptions>(args)
                .WithParsed(o =>
                {

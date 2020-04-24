@@ -90,12 +90,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.SpecialCharFlag = false;
         }
 
-        /// <inheritdoc/>
-        public void AddAttachment(string attachment)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// If the original string begins with special characters in ['!', '@', '##', '$$'], then
         /// it is replaced by the respective value in the database.

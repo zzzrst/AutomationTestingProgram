@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;

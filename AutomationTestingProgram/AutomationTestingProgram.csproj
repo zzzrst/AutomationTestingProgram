@@ -16,6 +16,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <COMReference Include="TDAPIOLELib.dll">
+      <Guid>f645bd06-e1b4-4e6a-82fb-e97d027fd456</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>false</Isolated>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="src\GeneralData\DataVerifier\SeleniumPerf.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -51,6 +62,10 @@
     <PackageReference Include="System.Management" Version="4.7.0" />
     <PackageReference Include="TestingDriver" Version="1.2.7412.36454" />
     <PackageReference Include="TextInteractor" Version="1.2.7408.14665" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ALMConnector\ALMConnector.csproj" />
   </ItemGroup>
 
   <ItemGroup>

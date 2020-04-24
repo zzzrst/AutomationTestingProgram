@@ -716,11 +716,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Reporter
   nameWithType: Reporter.Reporter
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(ITestCaseStatus)
   name: AddTestCaseStatus(ITestCaseStatus)
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestCaseStatus_AutomationTestSetFramework_ITestCaseStatus_
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestCaseStatus_ITestCaseStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(ITestCaseStatus)
   nameWithType: Reporter.AddTestCaseStatus(ITestCaseStatus)
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus*
   name: AddTestCaseStatus
@@ -729,11 +729,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus
   nameWithType: Reporter.AddTestCaseStatus
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(ITestSetStatus)
   name: AddTestSetStatus(ITestSetStatus)
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestSetStatus_AutomationTestSetFramework_ITestSetStatus_
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestSetStatus_ITestSetStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(ITestSetStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(ITestSetStatus)
   nameWithType: Reporter.AddTestSetStatus(ITestSetStatus)
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus*
   name: AddTestSetStatus
@@ -742,11 +742,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus
   nameWithType: Reporter.AddTestSetStatus
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(ITestStepStatus,ITestCaseStatus)
   name: AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestStepStatusToTestCase_AutomationTestSetFramework_ITestStepStatus_AutomationTestSetFramework_ITestCaseStatus_
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus, AutomationTestSetFramework.ITestCaseStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestStepStatusToTestCase_ITestStepStatus_ITestCaseStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(ITestStepStatus,ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
   nameWithType: Reporter.AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase*
   name: AddTestStepStatusToTestCase
@@ -826,11 +826,11 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger
   nameWithType: TestCaseLogger
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(AutomationTestSetFramework.ITestCase)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(ITestCase)
   name: Log(ITestCase)
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_TestCaseLogger_Log_AutomationTestSetFramework_ITestCase_
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(AutomationTestSetFramework.ITestCase)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(AutomationTestSetFramework.ITestCase)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_TestCaseLogger_Log_ITestCase_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(ITestCase)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(ITestCase)
   nameWithType: TestCaseLogger.Log(ITestCase)
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log*
   name: Log
@@ -858,11 +858,11 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
   nameWithType: TestSetLogger
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(ITestSet)
   name: Log(ITestSet)
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_TestSetLogger_Log_AutomationTestSetFramework_ITestSet_
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_TestSetLogger_Log_ITestSet_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(ITestSet)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(ITestSet)
   nameWithType: TestSetLogger.Log(ITestSet)
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log*
   name: Log
@@ -890,11 +890,11 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger
   nameWithType: TestStepLogger
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(AutomationTestSetFramework.ITestStep)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(ITestStep)
   name: Log(ITestStep)
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_TestStepLogger_Log_AutomationTestSetFramework_ITestStep_
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(AutomationTestSetFramework.ITestStep)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(AutomationTestSetFramework.ITestStep)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_TestStepLogger_Log_ITestStep_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(ITestStep)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(ITestStep)
   nameWithType: TestStepLogger.Log(ITestStep)
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log*
   name: Log
@@ -1697,11 +1697,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestCase.GetNextTestStep
   nameWithType: TestCase.GetNextTestStep
-- uid: AutomationTestingProgram.AutomationFramework.TestCase.HandleException(System.Exception)
+- uid: AutomationTestingProgram.AutomationFramework.TestCase.HandleException(Exception)
   name: HandleException(Exception)
-  href: api/AutomationTestingProgram.AutomationFramework.TestCase.html#AutomationTestingProgram_AutomationFramework_TestCase_HandleException_System_Exception_
-  commentId: M:AutomationTestingProgram.AutomationFramework.TestCase.HandleException(System.Exception)
-  fullName: AutomationTestingProgram.AutomationFramework.TestCase.HandleException(System.Exception)
+  href: api/AutomationTestingProgram.AutomationFramework.TestCase.html#AutomationTestingProgram_AutomationFramework_TestCase_HandleException_Exception_
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestCase.HandleException(Exception)
+  fullName: AutomationTestingProgram.AutomationFramework.TestCase.HandleException(Exception)
   nameWithType: TestCase.HandleException(Exception)
 - uid: AutomationTestingProgram.AutomationFramework.TestCase.HandleException*
   name: HandleException
@@ -1827,11 +1827,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestCase.TotalTestSteps
   nameWithType: TestCase.TotalTestSteps
-- uid: AutomationTestingProgram.AutomationFramework.TestCase.UpdateTestCaseStatus(AutomationTestSetFramework.ITestStepStatus)
+- uid: AutomationTestingProgram.AutomationFramework.TestCase.UpdateTestCaseStatus(ITestStepStatus)
   name: UpdateTestCaseStatus(ITestStepStatus)
-  href: api/AutomationTestingProgram.AutomationFramework.TestCase.html#AutomationTestingProgram_AutomationFramework_TestCase_UpdateTestCaseStatus_AutomationTestSetFramework_ITestStepStatus_
-  commentId: M:AutomationTestingProgram.AutomationFramework.TestCase.UpdateTestCaseStatus(AutomationTestSetFramework.ITestStepStatus)
-  fullName: AutomationTestingProgram.AutomationFramework.TestCase.UpdateTestCaseStatus(AutomationTestSetFramework.ITestStepStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.TestCase.html#AutomationTestingProgram_AutomationFramework_TestCase_UpdateTestCaseStatus_ITestStepStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestCase.UpdateTestCaseStatus(ITestStepStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.TestCase.UpdateTestCaseStatus(ITestStepStatus)
   nameWithType: TestCase.UpdateTestCaseStatus(ITestStepStatus)
 - uid: AutomationTestingProgram.AutomationFramework.TestCase.UpdateTestCaseStatus*
   name: UpdateTestCaseStatus
@@ -2021,11 +2021,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestSet.GetNextTestCase
   nameWithType: TestSet.GetNextTestCase
-- uid: AutomationTestingProgram.AutomationFramework.TestSet.HandleException(System.Exception)
+- uid: AutomationTestingProgram.AutomationFramework.TestSet.HandleException(Exception)
   name: HandleException(Exception)
-  href: api/AutomationTestingProgram.AutomationFramework.TestSet.html#AutomationTestingProgram_AutomationFramework_TestSet_HandleException_System_Exception_
-  commentId: M:AutomationTestingProgram.AutomationFramework.TestSet.HandleException(System.Exception)
-  fullName: AutomationTestingProgram.AutomationFramework.TestSet.HandleException(System.Exception)
+  href: api/AutomationTestingProgram.AutomationFramework.TestSet.html#AutomationTestingProgram_AutomationFramework_TestSet_HandleException_Exception_
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestSet.HandleException(Exception)
+  fullName: AutomationTestingProgram.AutomationFramework.TestSet.HandleException(Exception)
   nameWithType: TestSet.HandleException(Exception)
 - uid: AutomationTestingProgram.AutomationFramework.TestSet.HandleException*
   name: HandleException
@@ -2138,11 +2138,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestSet.TotalTestCases
   nameWithType: TestSet.TotalTestCases
-- uid: AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(AutomationTestSetFramework.ITestCaseStatus)
+- uid: AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(ITestCaseStatus)
   name: UpdateTestSetStatus(ITestCaseStatus)
-  href: api/AutomationTestingProgram.AutomationFramework.TestSet.html#AutomationTestingProgram_AutomationFramework_TestSet_UpdateTestSetStatus_AutomationTestSetFramework_ITestCaseStatus_
-  commentId: M:AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(AutomationTestSetFramework.ITestCaseStatus)
-  fullName: AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(AutomationTestSetFramework.ITestCaseStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.TestSet.html#AutomationTestingProgram_AutomationFramework_TestSet_UpdateTestSetStatus_ITestCaseStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(ITestCaseStatus)
   nameWithType: TestSet.UpdateTestSetStatus(ITestCaseStatus)
 - uid: AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus*
   name: UpdateTestSetStatus
@@ -2319,11 +2319,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestStep.Execute
   nameWithType: TestStep.Execute
-- uid: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(Exception)
   name: HandleException(Exception)
-  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_HandleException_System_Exception_
-  commentId: M:AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
-  fullName: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_HandleException_Exception_
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestStep.HandleException(Exception)
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(Exception)
   nameWithType: TestStep.HandleException(Exception)
 - uid: AutomationTestingProgram.AutomationFramework.TestStep.HandleException*
   name: HandleException
@@ -3000,13 +3000,13 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Attributes
   nameWithType: VerifyObject.Attributes
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary{System.String,System.String})
+- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary{System.String,System.String})
   name: CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_CreateJSCommandForAttributeValuePairs_System_Collections_Generic_IDictionary_System_String_System_String__
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary{System.String,System.String})
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_CreateJSCommandForAttributeValuePairs_IDictionary_System_String_System_String__
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary{System.String,System.String})
   name.vb: CreateJSCommandForAttributeValuePairs(IDictionary(Of String, String))
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary<System.String, System.String>)
-  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary(Of System.String, System.String))
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary<System.String, System.String>)
+  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary(Of System.String, System.String))
   nameWithType: VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
   nameWithType.vb: VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary(Of String, String))
 - uid: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs*
@@ -3094,13 +3094,13 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Name
   nameWithType: VerifyObject.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(System.Collections.Generic.List{System.String})
+- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List{System.String})
   name: XPathBuilder(List<String>)
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathBuilder_System_Collections_Generic_List_System_String__
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(System.Collections.Generic.List{System.String})
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathBuilder_List_System_String__
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List{System.String})
   name.vb: XPathBuilder(List(Of String))
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(System.Collections.Generic.List<System.String>)
-  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(System.Collections.Generic.List(Of System.String))
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List<System.String>)
+  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List(Of System.String))
   nameWithType: VerifyObject.XPathBuilder(List<String>)
   nameWithType.vb: VerifyObject.XPathBuilder(List(Of String))
 - uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder*
@@ -3110,13 +3110,13 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder
   nameWithType: VerifyObject.XPathBuilder
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(System.Collections.Generic.List{System.String})
+- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List{System.String})
   name: XPathTagHelper(List<String>)
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathTagHelper_System_Collections_Generic_List_System_String__
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(System.Collections.Generic.List{System.String})
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathTagHelper_List_System_String__
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List{System.String})
   name.vb: XPathTagHelper(List(Of String))
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(System.Collections.Generic.List<System.String>)
-  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(System.Collections.Generic.List(Of System.String))
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List<System.String>)
+  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List(Of System.String))
   nameWithType: VerifyObject.XPathTagHelper(List<String>)
   nameWithType.vb: VerifyObject.XPathTagHelper(List(Of String))
 - uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper*
@@ -3905,6 +3905,51 @@ references:
   commentId: N:AutomationTestingProgram.GeneralData
   fullName: AutomationTestingProgram.GeneralData
   nameWithType: AutomationTestingProgram.GeneralData
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData
+  name: ALMGeneralData
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html
+  commentId: T:AutomationTestingProgram.GeneralData.ALMGeneralData
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData
+  nameWithType: ALMGeneralData
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  name: Name
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Name
+  commentId: P:AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  nameWithType: ALMGeneralData.Name
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Name*
+  name: Name
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Name_
+  commentId: Overload:AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  nameWithType: ALMGeneralData.Name
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String,System.String)
+  name: ParseParameters(String, String)
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_ParseParameters_System_String_System_String_
+  commentId: M:AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String,System.String)
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String, System.String)
+  nameWithType: ALMGeneralData.ParseParameters(String, String)
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters*
+  name: ParseParameters
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_ParseParameters_
+  commentId: Overload:AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters
+  nameWithType: ALMGeneralData.ParseParameters
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)
+  name: Verify(String)
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Verify_System_String_
+  commentId: M:AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)
+  nameWithType: ALMGeneralData.Verify(String)
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify*
+  name: Verify
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Verify_
+  commentId: Overload:AutomationTestingProgram.GeneralData.ALMGeneralData.Verify
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify
+  nameWithType: ALMGeneralData.Verify
 - uid: AutomationTestingProgram.GeneralData.ITestGeneralData
   name: ITestGeneralData
   href: api/AutomationTestingProgram.GeneralData.ITestGeneralData.html
@@ -4135,6 +4180,12 @@ references:
   commentId: T:AutomationTestingProgram.InformationObject.EnvVar
   fullName: AutomationTestingProgram.InformationObject.EnvVar
   nameWithType: InformationObject.EnvVar
+- uid: AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  name: Attempts
+  href: api/AutomationTestingProgram.InformationObject.EnvVar.html#AutomationTestingProgram_InformationObject_EnvVar_Attempts
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  nameWithType: InformationObject.EnvVar.Attempts
 - uid: AutomationTestingProgram.InformationObject.EnvVar.Browser
   name: Browser
   href: api/AutomationTestingProgram.InformationObject.EnvVar.html#AutomationTestingProgram_InformationObject_EnvVar_Browser
@@ -4667,6 +4718,19 @@ references:
   commentId: T:AutomationTestingProgram.TestingData.ITestSetData
   fullName: AutomationTestingProgram.TestingData.ITestSetData
   nameWithType: ITestSetData
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  name: AddAttachment(String)
+  href: api/AutomationTestingProgram.TestingData.ITestSetData.html#AutomationTestingProgram_TestingData_ITestSetData_AddAttachment_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  nameWithType: ITestSetData.AddAttachment(String)
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment*
+  name: AddAttachment
+  href: api/AutomationTestingProgram.TestingData.ITestSetData.html#AutomationTestingProgram_TestingData_ITestSetData_AddAttachment_
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestSetData.AddAttachment
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment
+  nameWithType: ITestSetData.AddAttachment
 - uid: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
   name: ExistNextTestCase()
   href: api/AutomationTestingProgram.TestingData.ITestSetData.html#AutomationTestingProgram_TestingData_ITestSetData_ExistNextTestCase
@@ -4712,19 +4776,6 @@ references:
   commentId: T:AutomationTestingProgram.TestingData.ITestStepData
   fullName: AutomationTestingProgram.TestingData.ITestStepData
   nameWithType: ITestStepData
-- uid: AutomationTestingProgram.TestingData.ITestStepData.AddAttachment(System.String)
-  name: AddAttachment(String)
-  href: api/AutomationTestingProgram.TestingData.ITestStepData.html#AutomationTestingProgram_TestingData_ITestStepData_AddAttachment_System_String_
-  commentId: M:AutomationTestingProgram.TestingData.ITestStepData.AddAttachment(System.String)
-  fullName: AutomationTestingProgram.TestingData.ITestStepData.AddAttachment(System.String)
-  nameWithType: ITestStepData.AddAttachment(String)
-- uid: AutomationTestingProgram.TestingData.ITestStepData.AddAttachment*
-  name: AddAttachment
-  href: api/AutomationTestingProgram.TestingData.ITestStepData.html#AutomationTestingProgram_TestingData_ITestStepData_AddAttachment_
-  commentId: Overload:AutomationTestingProgram.TestingData.ITestStepData.AddAttachment
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.ITestStepData.AddAttachment
-  nameWithType: ITestStepData.AddAttachment
 - uid: AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
   name: SetArguments(TestStep)
   href: api/AutomationTestingProgram.TestingData.ITestStepData.html#AutomationTestingProgram_TestingData_ITestStepData_SetArguments_AutomationTestingProgram_AutomationFramework_TestStep_
@@ -4757,6 +4808,103 @@ references:
   commentId: N:AutomationTestingProgram.TestingData.TestDrivers
   fullName: AutomationTestingProgram.TestingData.TestDrivers
   nameWithType: AutomationTestingProgram.TestingData.TestDrivers
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData
+  name: ALMSetData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData
+  nameWithType: ALMSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)
+  name: AddAttachment(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_AddAttachment_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)
+  nameWithType: ALMSetData.AddAttachment(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment*
+  name: AddAttachment
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_AddAttachment_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment
+  nameWithType: ALMSetData.AddAttachment
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  name: ExistNextTestCase()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ExistNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase()
+  nameWithType: ALMSetData.ExistNextTestCase()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase*
+  name: ExistNextTestCase
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ExistNextTestCase_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  nameWithType: ALMSetData.ExistNextTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  name: GetNextTestCase()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_GetNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase()
+  nameWithType: ALMSetData.GetNextTestCase()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase*
+  name: GetNextTestCase
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_GetNextTestCase_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  nameWithType: ALMSetData.GetNextTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  name: Name
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_Name
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  nameWithType: ALMSetData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name*
+  name: Name
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_Name_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  nameWithType: ALMSetData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  name: SetUp()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUp
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp()
+  nameWithType: ALMSetData.SetUp()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp*
+  name: SetUp
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUp_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  nameWithType: ALMSetData.SetUp
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  name: SetUpTestSet()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUpTestSet
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet()
+  nameWithType: ALMSetData.SetUpTestSet()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet*
+  name: SetUpTestSet
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUpTestSet_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  nameWithType: ALMSetData.SetUpTestSet
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  nameWithType: ALMSetData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  nameWithType: ALMSetData.TestArgs
 - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData
   name: DatabaseCaseData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html
@@ -4834,11 +4982,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.DatabaseData
   nameWithType: DatabaseData.DatabaseData
-- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(OracleDatabase)
   name: ConnectToDatabase(OracleDatabase)
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseData_ConnectToDatabase_DatabaseConnector_OracleDatabase_
-  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseData_ConnectToDatabase_OracleDatabase_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(OracleDatabase)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(OracleDatabase)
   nameWithType: DatabaseData.ConnectToDatabase(OracleDatabase)
 - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase*
   name: ConnectToDatabase
@@ -4970,6 +5118,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.NoSetData
   nameWithType: NoSetData.NoSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)
+  name: AddAttachment(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_AddAttachment_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)
+  nameWithType: NoSetData.AddAttachment(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment*
+  name: AddAttachment
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_AddAttachment_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment
+  nameWithType: NoSetData.AddAttachment
 - uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
   name: ExistNextTestCase()
   href: api/AutomationTestingProgram.TestingData.TestDrivers.NoSetData.html#AutomationTestingProgram_TestingData_TestDrivers_NoSetData_ExistNextTestCase
@@ -5164,19 +5325,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.TextStepData
   nameWithType: TextStepData.TextStepData
-- uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.AddAttachment(System.String)
-  name: AddAttachment(String)
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_AddAttachment_System_String_
-  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.AddAttachment(System.String)
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.AddAttachment(System.String)
-  nameWithType: TextStepData.AddAttachment(String)
-- uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.AddAttachment*
-  name: AddAttachment
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_AddAttachment_
-  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.AddAttachment
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.AddAttachment
-  nameWithType: TextStepData.AddAttachment
 - uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData.Name
   name: Name
   href: api/AutomationTestingProgram.TestingData.TestDrivers.TextStepData.html#AutomationTestingProgram_TestingData_TestDrivers_TextStepData_Name
@@ -5332,11 +5480,11 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLData.Name
   nameWithType: XMLData.Name
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLData.ReplaceIfToken(System.String,System.Xml.XmlDocument)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLData.ReplaceIfToken(System.String,XmlDocument)
   name: ReplaceIfToken(String, XmlDocument)
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLData_ReplaceIfToken_System_String_System_Xml_XmlDocument_
-  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.XMLData.ReplaceIfToken(System.String,System.Xml.XmlDocument)
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLData.ReplaceIfToken(System.String, System.Xml.XmlDocument)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLData_ReplaceIfToken_System_String_XmlDocument_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.XMLData.ReplaceIfToken(System.String,XmlDocument)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLData.ReplaceIfToken(System.String, XmlDocument)
   nameWithType: XMLData.ReplaceIfToken(String, XmlDocument)
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLData.ReplaceIfToken*
   name: ReplaceIfToken
@@ -5429,6 +5577,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.XMLSetData
   nameWithType: XMLSetData.XMLSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment(System.String)
+  name: AddAttachment(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_AddAttachment_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment(System.String)
+  nameWithType: XMLSetData.AddAttachment(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment*
+  name: AddAttachment
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_AddAttachment_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment
+  nameWithType: XMLSetData.AddAttachment
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.ExistNextTestCase
   name: ExistNextTestCase()
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLSetData_ExistNextTestCase
@@ -5487,19 +5648,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.XMLStepData
   nameWithType: XMLStepData.XMLStepData
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.AddAttachment(System.String)
-  name: AddAttachment(String)
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_AddAttachment_System_String_
-  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.AddAttachment(System.String)
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.AddAttachment(System.String)
-  nameWithType: XMLStepData.AddAttachment(String)
-- uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.AddAttachment*
-  name: AddAttachment
-  href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_AddAttachment_
-  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.AddAttachment
-  isSpec: "True"
-  fullName: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.AddAttachment
-  nameWithType: XMLStepData.AddAttachment
 - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
   name: SetArguments(TestStep)
   href: api/AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.html#AutomationTestingProgram_TestingData_TestDrivers_XMLStepData_SetArguments_AutomationTestingProgram_AutomationFramework_TestStep_

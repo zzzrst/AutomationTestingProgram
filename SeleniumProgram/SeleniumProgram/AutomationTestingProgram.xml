@@ -403,88 +403,6 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter">
-            <summary>
-            The implementation of the reporter class.
-            </summary>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter"/> class.
-            </summary>
-            <param name="saveLocation">The location to save the file to.</param>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveFileLocation">
-            <summary>
-            Gets or sets the location to save the report to.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestSetStatuses">
-            <summary>
-            Gets or sets the list of test set statuses.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseStatuses">
-            <summary>
-            Gets or sets the list of test case statuses.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseToTestSteps">
-            <summary>
-            Gets or sets the dictonary with key as Test Cases status and value as a list of Test step statuses.
-            </summary>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report">
-            <inheritdoc/>
-        </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger">
-            <summary>
-            The Implemntation of the TestCaseLogger.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.SaveFileLocation">
-            <summary>
-            Gets or sets the location to save the log to.
-            </summary>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(AutomationTestSetFramework.ITestCase)">
-            <inheritdoc/>
-        </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger">
-            <summary>
-            The Implemntation of the TestSetLogger.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation">
-            <summary>
-            Gets or sets the location to save the log to.
-            </summary>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)">
-            <inheritdoc/>
-        </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger">
-            <summary>
-            The Implemntation of the TestSetLogger.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.SaveFileLocation">
-            <summary>
-            Gets or sets the location to save the log to.
-            </summary>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(AutomationTestSetFramework.ITestStep)">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.Login">
             <summary>
             This test step to log in.
@@ -991,6 +909,88 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.FakeTestStep.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter">
+            <summary>
+            The implementation of the reporter class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter"/> class.
+            </summary>
+            <param name="saveLocation">The location to save the file to.</param>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveFileLocation">
+            <summary>
+            Gets or sets the location to save the report to.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestSetStatuses">
+            <summary>
+            Gets or sets the list of test set statuses.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseStatuses">
+            <summary>
+            Gets or sets the list of test case statuses.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseToTestSteps">
+            <summary>
+            Gets or sets the dictonary with key as Test Cases status and value as a list of Test step statuses.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger">
+            <summary>
+            The Implemntation of the TestCaseLogger.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.SaveFileLocation">
+            <summary>
+            Gets or sets the location to save the log to.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger.Log(AutomationTestSetFramework.ITestCase)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger">
+            <summary>
+            The Implemntation of the TestSetLogger.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation">
+            <summary>
+            Gets or sets the location to save the log to.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger">
+            <summary>
+            The Implemntation of the TestSetLogger.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.SaveFileLocation">
+            <summary>
+            Gets or sets the location to save the log to.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger.Log(AutomationTestSetFramework.ITestStep)">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.TestCaseStatus">
@@ -1603,6 +1603,20 @@
             If not set, will use the test case args.
             </summary>
         </member>
+        <member name="T:AutomationTestingProgram.GeneralData.ALMGeneralData">
+            <summary>
+            An implementation of the General Data for ALM.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.GeneralData.ALMGeneralData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.GeneralData.ITestGeneralData">
             <summary>
             General data regarding the test data type. This should be ran once at the beginning and never used again.
@@ -1716,6 +1730,11 @@
         <member name="T:AutomationTestingProgram.InformationObject.EnvVar">
             <summary>
             Enviornement variables used by the program.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.InformationObject.EnvVar.Attempts">
+            <summary>
+            The attempts to try before timing out.
             </summary>
         </member>
         <member name="F:AutomationTestingProgram.InformationObject.EnvVar.Browser">
@@ -2070,6 +2089,12 @@
             Sets up the test set and returns a new test step before it runs.
             </summary>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)">
+            <summary>
+            Adds an attachment to the result.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.ITestStepData">
             <summary>
             The interface to get the test step data.
@@ -2089,11 +2114,31 @@
             </summary>
             <param name="testStep">Test steps to get the arguments for.</param>
         </member>
-        <member name="M:AutomationTestingProgram.TestingData.ITestStepData.AddAttachment(System.String)">
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData">
             <summary>
-            Adds an attachment to the result.
+            An implementation of the test set data using ALM.
             </summary>
-            <param name="attachment">the attachment to attach.</param>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet">
+            <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData">
             <summary>
@@ -2237,9 +2282,6 @@
             </summary>
             <param name="testStep">The Test step to query arguments.</param>.
         </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.AddAttachment(System.String)">
-            <inheritdoc/>
-        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars(System.String,System.String)">
             <summary>
             If the original string begins with special characters in ['!', '@', '##', '$$'], then
@@ -2341,6 +2383,9 @@
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet">
             <inheritdoc/>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData">
             <summary>
             Not a good impentation to read test cases from text file.
@@ -2398,9 +2443,6 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.SetUpTestStep(System.String,System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextStepData.AddAttachment(System.String)">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData">
@@ -2523,6 +2565,9 @@
             </summary>
             <param name="xmlLocation">The location of the Xml file.</param>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.SetUpTestSet">
             <inheritdoc/>
         </member>
@@ -2577,9 +2622,6 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.SetUpTestStep(System.String,System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLStepData.AddAttachment(System.String)">
             <inheritdoc/>
         </member>
     </members>

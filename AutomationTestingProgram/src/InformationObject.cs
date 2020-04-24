@@ -24,6 +24,11 @@ namespace AutomationTestingProgram
         public enum EnvVar
         {
             /// <summary>
+            /// The attempts to try before timing out.
+            /// </summary>
+            Attempts,
+
+            /// <summary>
             /// The Browser To use.
             /// browser type.
             /// </summary>

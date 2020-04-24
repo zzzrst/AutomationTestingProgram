@@ -12,6 +12,10 @@ namespace NUnitAutomationTestingProgram.TestAutomationFramework
         public string TestArgs { get; set; }
         public string Name { get; } = "FakeTestSetData";
 
+        public void AddAttachment(string attachment)
+        {
+        }
+
         public bool ExistNextTestCase()
         {
             return true;

@@ -84,7 +84,6 @@ namespace AutomationTestingProgram
         public static void LogWithFiveTabs(string log)
         {
             Log.Info($"{Tab(5)}{log}");
-
         }
 
         /// <summary>
