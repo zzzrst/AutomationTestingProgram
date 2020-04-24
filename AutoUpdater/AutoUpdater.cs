@@ -156,7 +156,7 @@ namespace AutoUpdater
         private static string GetDependancyVersion(string dependancy)
         {
             string result = string.Empty;
-            using (StreamReader r = new StreamReader("SeleniumPerfXML.deps.json"))
+            using (StreamReader r = new StreamReader("AutomationTestingProgram.deps.json"))
             {
                 string json = r.ReadToEnd();
                 JObject jobj = JObject.Parse(json);
@@ -320,7 +320,7 @@ namespace AutoUpdater
                 client.DownloadProgressChanged += Client_DownloadProgressChanged; // Add new event handler for updating the progress bar
             }
 
-            client.DownloadFileTaskAsync("https://github.com/zzzrst/SeleniumPerfXML/releases/latest/download/" + fileName, path).Wait();
+            client.DownloadFileTaskAsync("https://github.com/zzzrst/AutomationTestingProgram/releases/latest/download/" + fileName, path).Wait();
         }
 
         private static void Client_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e) // This is our new method!

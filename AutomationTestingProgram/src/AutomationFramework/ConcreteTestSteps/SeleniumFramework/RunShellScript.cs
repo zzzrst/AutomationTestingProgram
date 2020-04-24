@@ -40,7 +40,6 @@ namespace AutomationTestingProgram.AutomationFramework
             }
 
             p.WaitForExit();
-            InformationObject.TestAutomationDriver.ExecuteJS(this.Arguments["value"]);
         }
 
         private static string Tab(int indents = 1)

@@ -30,6 +30,12 @@ namespace AutomationTestingProgram
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether to update or not.
+        /// </summary>
+        [Option("update", Required = false, HelpText = "Overrides auto update")]
+        public string Update { get; set; }
+
+        /// <summary>
         /// Gets or sets the browser to use.
         /// </summary>
         [Option('b', "browser", Required = false, HelpText = "Overrides the browser set in the Testing files.")]

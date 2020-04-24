@@ -28,6 +28,8 @@ namespace AutomationTestingProgram
     /// </summary>
     public class FrameworkDriver
     {
+        private static string update = "true";
+
         /// <summary>
         /// The Main functionality.
         /// </summary>
@@ -35,35 +37,6 @@ namespace AutomationTestingProgram
         /// <returns> 0 if no errors were met. </returns>
         public static int Main(string[] args)
         {
-            Logger.Info("Checking for updates...");
-            if (CheckForUpdates(Assembly.GetExecutingAssembly().Location))
-            {
-                string newArgs = string.Join(" ", args.Select(x => string.Format("\"{0}\"", x)).ToList());
-                using (Process p = new Process())
-                {
-                    ProcessStartInfo startInfo = new ProcessStartInfo
-                    {
-                        UseShellExecute = false,
-                        RedirectStandardOutput = false,
-                        RedirectStandardError = false,
-                        FileName = "AutoUpdater.exe",
-                        Arguments = newArgs,
-                    };
-
-                    p.StartInfo = startInfo;
-                    p.Start();
-                }
-
-                Thread.Sleep(5000);
-
-                // Closes the current process
-                Environment.Exit(0);
-            }
-            else
-            {
-                Logger.Info("Program is up to date");
-            }
-
             bool errorParsing;
             int resultCode = 0;
 
@@ -71,6 +44,38 @@ namespace AutomationTestingProgram
 
             if (!errorParsing)
             {
+                if (update.Equals("true"))
+                {
+                    Logger.Info("Checking for updates...");
+                    if (CheckForUpdates(Assembly.GetExecutingAssembly().Location))
+                    {
+                        string newArgs = string.Join(" ", args.Select(x => string.Format("\"{0}\"", x)).ToList());
+                        using (Process p = new Process())
+                        {
+                            ProcessStartInfo startInfo = new ProcessStartInfo
+                            {
+                                UseShellExecute = false,
+                                RedirectStandardOutput = false,
+                                RedirectStandardError = false,
+                                FileName = "AutoUpdater.exe",
+                                Arguments = newArgs,
+                            };
+
+                            p.StartInfo = startInfo;
+                            p.Start();
+                        }
+
+                        Thread.Sleep(5000);
+
+                        // Closes the current process
+                        Environment.Exit(0);
+                    }
+                    else
+                    {
+                        Logger.Info("Program is up to date");
+                    }
+                }
+
                 errorParsing = ParseTestSetParameters();
                 SetDefaultParameters();
             }
@@ -249,6 +254,7 @@ namespace AutomationTestingProgram
             Parser.Default.ParseArguments<FrameworkOptions>(args)
                .WithParsed(o =>
                {
+                   update = o.Update ?? "true";
                    SetEnvironmentVariable(EnvVar.Browser, o.Browser ?? string.Empty);
                    SetEnvironmentVariable(EnvVar.Environment, o.Environment ?? string.Empty);
                    SetEnvironmentVariable(EnvVar.URL, o.URL ?? string.Empty);

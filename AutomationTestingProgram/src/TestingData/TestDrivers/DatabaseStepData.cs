@@ -91,6 +91,61 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         }
 
         /// <summary>
+        /// The GetEnvironmentEmailNotificationFolder.
+        /// </summary>
+        /// <param name="globalVariableName">Name of the global variable.</param>
+        /// <returns>The <see cref="string"/>.</returns>
+        public string GetGlobalVariableValue(string globalVariableName)
+        {
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
+
+            // Get test_environments table.
+            string query = "SELECT T.ROWID, T.GLOBAL_VARIABLE_NAME, T.GLOBAL_VARIABLE_VALUE, T.VARIABLE_VALUE_IS_ENCRYPTED from QA_AUTOMATION.GLOBAL_VARIABLES t " +
+                $"WHERE T.GLOBAL_VARIABLE_NAME = '{globalVariableName}'";
+
+            List<List<object>> globalVariableValueTable = this.TestDB.ExecuteQuery(query);
+
+            if (globalVariableValueTable.Count == 0)
+            {
+                throw new Exception($"Global variable provided '{globalVariableName}' is not in table!");
+            }
+
+            List<object> variable = globalVariableValueTable[0];
+
+            int isVariableValueEncrypted = int.Parse(variable[3].ToString());
+
+            string result = variable[2].ToString();
+
+            if (isVariableValueEncrypted == DatabasePasswordState.IsProtected)
+            {
+                string rowid = variable[0].ToString();
+
+                // Encrypt password by dbName and username.
+                result = Helper.DecryptString(result, globalVariableName + rowid);
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// The GetEnvironmentEmailNotificationFolder.
+        /// </summary>
+        /// <param name="environment">The environment<see cref="string"/>.</param>
+        /// <returns>The <see cref="string"/>.</returns>
+        public string GetEnvironmentEmailNotificationFolder(string environment)
+        {
+            this.ConnectToDatabase(this.TestDB);
+            string query = $"select t.EMAIL_NOTIFICATION_FOLDER from QA_AUTOMATION.test_environments t where t.environment = '{environment}'";
+            List<List<object>> result = this.TestDB.ExecuteQuery(query);
+            if (result.Count == 0)
+            {
+                throw new Exception($"Environment provided '{environment}' is not in table!");
+            }
+
+            return result[0][0].ToString();
+        }
+
+        /// <summary>
         /// If the original string begins with special characters in ['!', '@', '##', '$$'], then
         /// it is replaced by the respective value in the database.
         /// </summary>
@@ -154,6 +209,31 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Executes the given query in the test database.
+        /// </summary>
+        /// <param name="query">Query to execute.</param>
+        /// <returns>The data queried from the database.</returns>
+        public List<List<object>> ProcessQADBSelectQuery(string query)
+        {
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
+            List<List<object>> result = this.TestDB.ExecuteQuery(query);
+            this.TestDB.Disconnect();
+            return result;
+        }
+
+        /// <summary>
+        /// Executes the given query in an environment database.
+        /// </summary>
+        /// <param name="environment">Name of environment to execute in.</param>
+        /// <param name="query">Query to execute.</param>
+        /// <returns>The data queried from the database.</returns>
+        public List<List<object>> ProcessEnvironmentSelectQuery(string environment, string query)
+        {
+            this.ConnectToEnvDatabase(environment);
+            return this.EnvDB.ExecuteQuery(query);
         }
 
         /// <summary>
@@ -307,9 +387,9 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                     // Find the username column
                     if (sheet.GetRow(0).GetCell(col).StringCellValue == "Email_Account")
                     {
-                        for (int row = 0; row < sheet.LastRowNum; row++)
+                        for (int row = 1; row < sheet.LastRowNum; row++)
                         {
-                            if (sheet.GetRow(row).GetCell(col).StringCellValue == username)
+                            if (sheet.GetRow(row).GetCell(col)?.StringCellValue == username)
                             {
                                 password = sheet.GetRow(row + 1).GetCell(col).StringCellValue;
                                 break;

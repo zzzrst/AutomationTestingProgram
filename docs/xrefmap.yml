@@ -13,6 +13,154 @@ references:
   commentId: N:AutomationTestingProgram.AutomationFramework
   fullName: AutomationTestingProgram.AutomationFramework
   nameWithType: AutomationTestingProgram.AutomationFramework
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject
+  name: ActionObject
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.ActionObject
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject
+  nameWithType: ActionObject
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Attributes
+  name: Attributes
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Attributes
+  commentId: P:AutomationTestingProgram.AutomationFramework.ActionObject.Attributes
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Attributes
+  nameWithType: ActionObject.Attributes
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Attributes*
+  name: Attributes
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Attributes_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.Attributes
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Attributes
+  nameWithType: ActionObject.Attributes
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click
+  name: Click()
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.Click
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click()
+  nameWithType: ActionObject.Click()
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
+  name: Click(Boolean)
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click_System_Boolean_
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
+  nameWithType: ActionObject.Click(Boolean)
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click*
+  name: Click
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.Click
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click
+  nameWithType: ActionObject.Click
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary{System.String,System.String})
+  name: CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_CreateJSCommandForAttributeValuePairs_IDictionary_System_String_System_String__
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary{System.String,System.String})
+  name.vb: CreateJSCommandForAttributeValuePairs(IDictionary(Of String, String))
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary<System.String, System.String>)
+  fullName.vb: AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary(Of System.String, System.String))
+  nameWithType: ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
+  nameWithType.vb: ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary(Of String, String))
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs*
+  name: CreateJSCommandForAttributeValuePairs
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_CreateJSCommandForAttributeValuePairs_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs
+  nameWithType: ActionObject.CreateJSCommandForAttributeValuePairs
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Execute()
+  nameWithType: ActionObject.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Execute
+  nameWithType: ActionObject.Execute
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute(System.String)
+  name: FixAttribute(String)
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_FixAttribute_System_String_
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute(System.String)
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute(System.String)
+  nameWithType: ActionObject.FixAttribute(String)
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute*
+  name: FixAttribute
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_FixAttribute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute
+  nameWithType: ActionObject.FixAttribute
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand
+  name: JsCommand
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_JsCommand
+  commentId: P:AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand
+  nameWithType: ActionObject.JsCommand
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand*
+  name: JsCommand
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_JsCommand_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand
+  nameWithType: ActionObject.JsCommand
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.ActionObject.Name
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Name
+  nameWithType: ActionObject.Name
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Name
+  nameWithType: ActionObject.Name
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPath
+  name: XPath
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPath
+  commentId: P:AutomationTestingProgram.AutomationFramework.ActionObject.XPath
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPath
+  nameWithType: ActionObject.XPath
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPath*
+  name: XPath
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPath_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.XPath
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPath
+  nameWithType: ActionObject.XPath
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
+  name: XPathBuilder(Boolean)
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder_System_Boolean_
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
+  nameWithType: ActionObject.XPathBuilder(Boolean)
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder*
+  name: XPathBuilder
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder
+  nameWithType: ActionObject.XPathBuilder
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathTagHelper(List{System.String})
+  name: XPathTagHelper(List<String>)
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathTagHelper_List_System_String__
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathTagHelper(List{System.String})
+  name.vb: XPathTagHelper(List(Of String))
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathTagHelper(List<System.String>)
+  fullName.vb: AutomationTestingProgram.AutomationFramework.ActionObject.XPathTagHelper(List(Of System.String))
+  nameWithType: ActionObject.XPathTagHelper(List<String>)
+  nameWithType.vb: ActionObject.XPathTagHelper(List(Of String))
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathTagHelper*
+  name: XPathTagHelper
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathTagHelper_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.XPathTagHelper
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathTagHelper
+  nameWithType: ActionObject.XPathTagHelper
 - uid: AutomationTestingProgram.AutomationFramework.BrokenLinks
   name: BrokenLinks
   href: api/AutomationTestingProgram.AutomationFramework.BrokenLinks.html
@@ -51,19 +199,6 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.CheckBox
   fullName: AutomationTestingProgram.AutomationFramework.CheckBox
   nameWithType: CheckBox
-- uid: AutomationTestingProgram.AutomationFramework.CheckBox.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.CheckBox.html#AutomationTestingProgram_AutomationFramework_CheckBox_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.CheckBox.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.CheckBox.Execute()
-  nameWithType: CheckBox.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.CheckBox.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.CheckBox.html#AutomationTestingProgram_AutomationFramework_CheckBox_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.CheckBox.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.CheckBox.Execute
-  nameWithType: CheckBox.Execute
 - uid: AutomationTestingProgram.AutomationFramework.CheckBox.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.CheckBox.html#AutomationTestingProgram_AutomationFramework_CheckBox_Name
@@ -109,57 +244,12 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ChooseCollection.Name
   nameWithType: ChooseCollection.Name
-- uid: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld
-  name: ChooseCollectionOld
-  href: api/AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.html
-  commentId: T:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld
-  fullName: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld
-  nameWithType: ChooseCollectionOld
-- uid: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.html#AutomationTestingProgram_AutomationFramework_ChooseCollectionOld_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Execute()
-  nameWithType: ChooseCollectionOld.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.html#AutomationTestingProgram_AutomationFramework_ChooseCollectionOld_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Execute
-  nameWithType: ChooseCollectionOld.Execute
-- uid: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Name
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.html#AutomationTestingProgram_AutomationFramework_ChooseCollectionOld_Name
-  commentId: P:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Name
-  fullName: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Name
-  nameWithType: ChooseCollectionOld.Name
-- uid: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Name*
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.html#AutomationTestingProgram_AutomationFramework_ChooseCollectionOld_Name_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Name
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.ChooseCollectionOld.Name
-  nameWithType: ChooseCollectionOld.Name
 - uid: AutomationTestingProgram.AutomationFramework.ClickButton
   name: ClickButton
   href: api/AutomationTestingProgram.AutomationFramework.ClickButton.html
   commentId: T:AutomationTestingProgram.AutomationFramework.ClickButton
   fullName: AutomationTestingProgram.AutomationFramework.ClickButton
   nameWithType: ClickButton
-- uid: AutomationTestingProgram.AutomationFramework.ClickButton.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.ClickButton.html#AutomationTestingProgram_AutomationFramework_ClickButton_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.ClickButton.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.ClickButton.Execute()
-  nameWithType: ClickButton.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.ClickButton.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.ClickButton.html#AutomationTestingProgram_AutomationFramework_ClickButton_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.ClickButton.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.ClickButton.Execute
-  nameWithType: ClickButton.Execute
 - uid: AutomationTestingProgram.AutomationFramework.ClickButton.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.ClickButton.html#AutomationTestingProgram_AutomationFramework_ClickButton_Name
@@ -211,19 +301,6 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.ClickImage
   fullName: AutomationTestingProgram.AutomationFramework.ClickImage
   nameWithType: ClickImage
-- uid: AutomationTestingProgram.AutomationFramework.ClickImage.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.ClickImage.html#AutomationTestingProgram_AutomationFramework_ClickImage_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.ClickImage.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.ClickImage.Execute()
-  nameWithType: ClickImage.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.ClickImage.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.ClickImage.html#AutomationTestingProgram_AutomationFramework_ClickImage_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.ClickImage.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.ClickImage.Execute
-  nameWithType: ClickImage.Execute
 - uid: AutomationTestingProgram.AutomationFramework.ClickImage.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.ClickImage.html#AutomationTestingProgram_AutomationFramework_ClickImage_Name
@@ -243,19 +320,6 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.ClickLink
   fullName: AutomationTestingProgram.AutomationFramework.ClickLink
   nameWithType: ClickLink
-- uid: AutomationTestingProgram.AutomationFramework.ClickLink.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.ClickLink.html#AutomationTestingProgram_AutomationFramework_ClickLink_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.ClickLink.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.ClickLink.Execute()
-  nameWithType: ClickLink.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.ClickLink.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.ClickLink.html#AutomationTestingProgram_AutomationFramework_ClickLink_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.ClickLink.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.ClickLink.Execute
-  nameWithType: ClickLink.Execute
 - uid: AutomationTestingProgram.AutomationFramework.ClickLink.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.ClickLink.html#AutomationTestingProgram_AutomationFramework_ClickLink_Name
@@ -269,6 +333,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ClickLink.Name
   nameWithType: ClickLink.Name
+- uid: AutomationTestingProgram.AutomationFramework.ClickObject
+  name: ClickObject
+  href: api/AutomationTestingProgram.AutomationFramework.ClickObject.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.ClickObject
+  fullName: AutomationTestingProgram.AutomationFramework.ClickObject
+  nameWithType: ClickObject
+- uid: AutomationTestingProgram.AutomationFramework.ClickObject.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.ClickObject.html#AutomationTestingProgram_AutomationFramework_ClickObject_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.ClickObject.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.ClickObject.Execute()
+  nameWithType: ClickObject.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.ClickObject.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.ClickObject.html#AutomationTestingProgram_AutomationFramework_ClickObject_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ClickObject.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ClickObject.Execute
+  nameWithType: ClickObject.Execute
+- uid: AutomationTestingProgram.AutomationFramework.ClickObject.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ClickObject.html#AutomationTestingProgram_AutomationFramework_ClickObject_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.ClickObject.Name
+  fullName: AutomationTestingProgram.AutomationFramework.ClickObject.Name
+  nameWithType: ClickObject.Name
+- uid: AutomationTestingProgram.AutomationFramework.ClickObject.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ClickObject.html#AutomationTestingProgram_AutomationFramework_ClickObject_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ClickObject.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ClickObject.Name
+  nameWithType: ClickObject.Name
 - uid: AutomationTestingProgram.AutomationFramework.ClickTableLink
   name: ClickTableLink
   href: api/AutomationTestingProgram.AutomationFramework.ClickTableLink.html
@@ -301,6 +397,25 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ClickTableLink.Name
   nameWithType: ClickTableLink.Name
+- uid: AutomationTestingProgram.AutomationFramework.ClickWebElement
+  name: ClickWebElement
+  href: api/AutomationTestingProgram.AutomationFramework.ClickWebElement.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.ClickWebElement
+  fullName: AutomationTestingProgram.AutomationFramework.ClickWebElement
+  nameWithType: ClickWebElement
+- uid: AutomationTestingProgram.AutomationFramework.ClickWebElement.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ClickWebElement.html#AutomationTestingProgram_AutomationFramework_ClickWebElement_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.ClickWebElement.Name
+  fullName: AutomationTestingProgram.AutomationFramework.ClickWebElement.Name
+  nameWithType: ClickWebElement.Name
+- uid: AutomationTestingProgram.AutomationFramework.ClickWebElement.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ClickWebElement.html#AutomationTestingProgram_AutomationFramework_ClickWebElement_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ClickWebElement.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ClickWebElement.Name
+  nameWithType: ClickWebElement.Name
 - uid: AutomationTestingProgram.AutomationFramework.CloseBrowser
   name: CloseBrowser
   href: api/AutomationTestingProgram.AutomationFramework.CloseBrowser.html
@@ -429,6 +544,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.Comment.Name
   nameWithType: Comment.Name
+- uid: AutomationTestingProgram.AutomationFramework.CompareEmail
+  name: CompareEmail
+  href: api/AutomationTestingProgram.AutomationFramework.CompareEmail.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.CompareEmail
+  fullName: AutomationTestingProgram.AutomationFramework.CompareEmail
+  nameWithType: CompareEmail
+- uid: AutomationTestingProgram.AutomationFramework.CompareEmail.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.CompareEmail.html#AutomationTestingProgram_AutomationFramework_CompareEmail_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.CompareEmail.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.CompareEmail.Execute()
+  nameWithType: CompareEmail.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.CompareEmail.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.CompareEmail.html#AutomationTestingProgram_AutomationFramework_CompareEmail_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.CompareEmail.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.CompareEmail.Execute
+  nameWithType: CompareEmail.Execute
+- uid: AutomationTestingProgram.AutomationFramework.CompareEmail.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.CompareEmail.html#AutomationTestingProgram_AutomationFramework_CompareEmail_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.CompareEmail.Name
+  fullName: AutomationTestingProgram.AutomationFramework.CompareEmail.Name
+  nameWithType: CompareEmail.Name
+- uid: AutomationTestingProgram.AutomationFramework.CompareEmail.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.CompareEmail.html#AutomationTestingProgram_AutomationFramework_CompareEmail_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.CompareEmail.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.CompareEmail.Name
+  nameWithType: CompareEmail.Name
 - uid: AutomationTestingProgram.AutomationFramework.ComparePdf
   name: ComparePdf
   href: api/AutomationTestingProgram.AutomationFramework.ComparePdf.html
@@ -499,6 +646,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert.Name
   nameWithType: AcceptAlert.Name
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF
+  name: ConvertPDF
+  href: api/AutomationTestingProgram.AutomationFramework.ConvertPDF.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.ConvertPDF
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF
+  nameWithType: ConvertPDF
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.ConvertPDF.html#AutomationTestingProgram_AutomationFramework_ConvertPDF_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute()
+  nameWithType: ConvertPDF.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.ConvertPDF.html#AutomationTestingProgram_AutomationFramework_ConvertPDF_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  nameWithType: ConvertPDF.Execute
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ConvertPDF.html#AutomationTestingProgram_AutomationFramework_ConvertPDF_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  nameWithType: ConvertPDF.Name
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ConvertPDF.html#AutomationTestingProgram_AutomationFramework_ConvertPDF_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  nameWithType: ConvertPDF.Name
 - uid: AutomationTestingProgram.AutomationFramework.DDLSelectByXPath
   name: DDLSelectByXPath
   href: api/AutomationTestingProgram.AutomationFramework.DDLSelectByXPath.html
@@ -627,6 +806,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.FakeTestStep.Name
   nameWithType: FakeTestStep.Name
+- uid: AutomationTestingProgram.AutomationFramework.GetEmail
+  name: GetEmail
+  href: api/AutomationTestingProgram.AutomationFramework.GetEmail.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.GetEmail
+  fullName: AutomationTestingProgram.AutomationFramework.GetEmail
+  nameWithType: GetEmail
+- uid: AutomationTestingProgram.AutomationFramework.GetEmail.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.GetEmail.html#AutomationTestingProgram_AutomationFramework_GetEmail_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.GetEmail.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.GetEmail.Execute()
+  nameWithType: GetEmail.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.GetEmail.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.GetEmail.html#AutomationTestingProgram_AutomationFramework_GetEmail_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.GetEmail.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.GetEmail.Execute
+  nameWithType: GetEmail.Execute
+- uid: AutomationTestingProgram.AutomationFramework.GetEmail.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.GetEmail.html#AutomationTestingProgram_AutomationFramework_GetEmail_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.GetEmail.Name
+  fullName: AutomationTestingProgram.AutomationFramework.GetEmail.Name
+  nameWithType: GetEmail.Name
+- uid: AutomationTestingProgram.AutomationFramework.GetEmail.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.GetEmail.html#AutomationTestingProgram_AutomationFramework_GetEmail_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.GetEmail.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.GetEmail.Name
+  nameWithType: GetEmail.Name
 - uid: AutomationTestingProgram.AutomationFramework.GotoPage
   name: GotoPage
   href: api/AutomationTestingProgram.AutomationFramework.GotoPage.html
@@ -948,6 +1159,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.Login.Name
   nameWithType: Login.Name
+- uid: AutomationTestingProgram.AutomationFramework.MapEmailFolder
+  name: MapEmailFolder
+  href: api/AutomationTestingProgram.AutomationFramework.MapEmailFolder.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.MapEmailFolder
+  fullName: AutomationTestingProgram.AutomationFramework.MapEmailFolder
+  nameWithType: MapEmailFolder
+- uid: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.MapEmailFolder.html#AutomationTestingProgram_AutomationFramework_MapEmailFolder_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.MapEmailFolder.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Execute()
+  nameWithType: MapEmailFolder.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.MapEmailFolder.html#AutomationTestingProgram_AutomationFramework_MapEmailFolder_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.MapEmailFolder.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Execute
+  nameWithType: MapEmailFolder.Execute
+- uid: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.MapEmailFolder.html#AutomationTestingProgram_AutomationFramework_MapEmailFolder_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.MapEmailFolder.Name
+  fullName: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Name
+  nameWithType: MapEmailFolder.Name
+- uid: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.MapEmailFolder.html#AutomationTestingProgram_AutomationFramework_MapEmailFolder_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.MapEmailFolder.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.MapEmailFolder.Name
+  nameWithType: MapEmailFolder.Name
 - uid: AutomationTestingProgram.AutomationFramework.MaximizeBrowser
   name: MaximizeBrowser
   href: api/AutomationTestingProgram.AutomationFramework.MaximizeBrowser.html
@@ -1172,6 +1415,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.PopulateTextBox.Name
   nameWithType: PopulateTextBox.Name
+- uid: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL
+  name: PopulateTextBoxDDL
+  href: api/AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL
+  fullName: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL
+  nameWithType: PopulateTextBoxDDL
+- uid: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.html#AutomationTestingProgram_AutomationFramework_PopulateTextBoxDDL_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Execute()
+  nameWithType: PopulateTextBoxDDL.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.html#AutomationTestingProgram_AutomationFramework_PopulateTextBoxDDL_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Execute
+  nameWithType: PopulateTextBoxDDL.Execute
+- uid: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.html#AutomationTestingProgram_AutomationFramework_PopulateTextBoxDDL_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Name
+  fullName: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Name
+  nameWithType: PopulateTextBoxDDL.Name
+- uid: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.html#AutomationTestingProgram_AutomationFramework_PopulateTextBoxDDL_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL.Name
+  nameWithType: PopulateTextBoxDDL.Name
 - uid: AutomationTestingProgram.AutomationFramework.PopulateWebElement
   name: PopulateWebElement
   href: api/AutomationTestingProgram.AutomationFramework.PopulateWebElement.html
@@ -1556,6 +1831,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.SignIn.Name
   nameWithType: SignIn.Name
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV
+  name: SQLToCSV
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.SQLToCSV
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV
+  nameWithType: SQLToCSV
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute()
+  nameWithType: SQLToCSV.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute
+  nameWithType: SQLToCSV.Execute
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.SQLToCSV.Name
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.Name
+  nameWithType: SQLToCSV.Name
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.SQLToCSV.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.Name
+  nameWithType: SQLToCSV.Name
 - uid: AutomationTestingProgram.AutomationFramework.SwitchIntoIFrame
   name: SwitchIntoIFrame
   href: api/AutomationTestingProgram.AutomationFramework.SwitchIntoIFrame.html
@@ -2732,6 +3039,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus
   fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus
   nameWithType: VerifyCheckBoxStatus
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute()
+  nameWithType: VerifyCheckBoxStatus.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute
+  nameWithType: VerifyCheckBoxStatus.Execute
 - uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_Name
@@ -2770,6 +3090,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyDDLContent
   fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent
   nameWithType: VerifyDDLContent
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute()
+  nameWithType: VerifyDDLContent.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute
+  nameWithType: VerifyDDLContent.Execute
 - uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_Name
@@ -2866,19 +3199,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Execute
   nameWithType: VerifyHTMLEditorAvailability.Execute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.FindElement
-  name: FindElement()
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_FindElement
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.FindElement
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.FindElement()
-  nameWithType: VerifyHTMLEditorAvailability.FindElement()
-- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.FindElement*
-  name: FindElement
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_FindElement_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.FindElement
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.FindElement
-  nameWithType: VerifyHTMLEditorAvailability.FindElement
 - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_Name
@@ -2892,25 +3212,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Name
   nameWithType: VerifyHTMLEditorAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.VerifyElementState(ITestingDriver.ElementState)
+  name: VerifyElementState(ITestingDriver.ElementState)
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_VerifyElementState_ITestingDriver_ElementState_
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.VerifyElementState(ITestingDriver.ElementState)
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.VerifyElementState(ITestingDriver.ElementState)
+  nameWithType: VerifyHTMLEditorAvailability.VerifyElementState(ITestingDriver.ElementState)
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.VerifyElementState*
+  name: VerifyElementState
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_VerifyElementState_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.VerifyElementState
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.VerifyElementState
+  nameWithType: VerifyHTMLEditorAvailability.VerifyElementState
 - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent
   name: VerifyHTMLEditorContent
   href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent
   fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent
   nameWithType: VerifyHTMLEditorContent
-- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.FindElement
-  name: FindElement()
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_FindElement
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.FindElement
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.FindElement()
-  nameWithType: VerifyHTMLEditorContent.FindElement()
-- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.FindElement*
-  name: FindElement
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_FindElement_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.FindElement
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute()
+  nameWithType: VerifyHTMLEditorContent.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute
   isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.FindElement
-  nameWithType: VerifyHTMLEditorContent.FindElement
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute
+  nameWithType: VerifyHTMLEditorContent.Execute
 - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_Name
@@ -2949,6 +3282,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyImageContent
   fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent
   nameWithType: VerifyImageContent
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute()
+  nameWithType: VerifyImageContent.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute
+  nameWithType: VerifyImageContent.Execute
 - uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_Name
@@ -2981,151 +3327,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name
   nameWithType: VerifyLinkAvailability.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject
-  name: VerifyObject
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html
-  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyObject
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject
-  nameWithType: VerifyObject
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Attributes
-  name: Attributes
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Attributes
-  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyObject.Attributes
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Attributes
-  nameWithType: VerifyObject.Attributes
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Attributes*
-  name: Attributes
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Attributes_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.Attributes
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Attributes
-  nameWithType: VerifyObject.Attributes
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary{System.String,System.String})
-  name: CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_CreateJSCommandForAttributeValuePairs_IDictionary_System_String_System_String__
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary{System.String,System.String})
-  name.vb: CreateJSCommandForAttributeValuePairs(IDictionary(Of String, String))
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary<System.String, System.String>)
-  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary(Of System.String, System.String))
-  nameWithType: VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
-  nameWithType.vb: VerifyObject.CreateJSCommandForAttributeValuePairs(IDictionary(Of String, String))
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs*
-  name: CreateJSCommandForAttributeValuePairs
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_CreateJSCommandForAttributeValuePairs_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.CreateJSCommandForAttributeValuePairs
-  nameWithType: VerifyObject.CreateJSCommandForAttributeValuePairs
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Element
-  name: Element
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Element
-  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyObject.Element
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Element
-  nameWithType: VerifyObject.Element
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Element*
-  name: Element
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Element_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.Element
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Element
-  nameWithType: VerifyObject.Element
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Execute()
-  nameWithType: VerifyObject.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Execute
-  nameWithType: VerifyObject.Execute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.FindElement
-  name: FindElement()
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_FindElement
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.FindElement
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.FindElement()
-  nameWithType: VerifyObject.FindElement()
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.FindElement*
-  name: FindElement
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_FindElement_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.FindElement
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.FindElement
-  nameWithType: VerifyObject.FindElement
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.FixAttribute(System.String)
-  name: FixAttribute(String)
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_FixAttribute_System_String_
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.FixAttribute(System.String)
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.FixAttribute(System.String)
-  nameWithType: VerifyObject.FixAttribute(String)
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.FixAttribute*
-  name: FixAttribute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_FixAttribute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.FixAttribute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.FixAttribute
-  nameWithType: VerifyObject.FixAttribute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.IsFound
-  name: IsFound
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_IsFound
-  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyObject.IsFound
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.IsFound
-  nameWithType: VerifyObject.IsFound
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.IsFound*
-  name: IsFound
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_IsFound_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.IsFound
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.IsFound
-  nameWithType: VerifyObject.IsFound
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Name
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Name
-  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyObject.Name
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Name
-  nameWithType: VerifyObject.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.Name*
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_Name_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.Name
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.Name
-  nameWithType: VerifyObject.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List{System.String})
-  name: XPathBuilder(List<String>)
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathBuilder_List_System_String__
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List{System.String})
-  name.vb: XPathBuilder(List(Of String))
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List<System.String>)
-  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder(List(Of System.String))
-  nameWithType: VerifyObject.XPathBuilder(List<String>)
-  nameWithType.vb: VerifyObject.XPathBuilder(List(Of String))
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder*
-  name: XPathBuilder
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathBuilder_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathBuilder
-  nameWithType: VerifyObject.XPathBuilder
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List{System.String})
-  name: XPathTagHelper(List<String>)
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathTagHelper_List_System_String__
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List{System.String})
-  name.vb: XPathTagHelper(List(Of String))
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List<System.String>)
-  fullName.vb: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper(List(Of System.String))
-  nameWithType: VerifyObject.XPathTagHelper(List<String>)
-  nameWithType.vb: VerifyObject.XPathTagHelper(List(Of String))
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper*
-  name: XPathTagHelper
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObject.html#AutomationTestingProgram_AutomationFramework_VerifyObject_XPathTagHelper_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObject.XPathTagHelper
-  nameWithType: VerifyObject.XPathTagHelper
 - uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
   name: VerifyObjectAttribute
   href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html
@@ -3190,6 +3391,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.Name
   nameWithType: VerifyObjectAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.VerifyElementState(TestingDriver.ITestingDriver.ElementState)
+  name: VerifyElementState(TestingDriver.ITestingDriver.ElementState)
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAvailability_VerifyElementState_TestingDriver_ITestingDriver_ElementState_
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.VerifyElementState(TestingDriver.ITestingDriver.ElementState)
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.VerifyElementState(TestingDriver.ITestingDriver.ElementState)
+  nameWithType: VerifyObjectAvailability.VerifyElementState(TestingDriver.ITestingDriver.ElementState)
+- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.VerifyElementState*
+  name: VerifyElementState
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAvailability_VerifyElementState_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.VerifyElementState
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.VerifyElementState
+  nameWithType: VerifyObjectAvailability.VerifyElementState
 - uid: AutomationTestingProgram.AutomationFramework.VerifySQLQuery
   name: VerifySQLQuery
   href: api/AutomationTestingProgram.AutomationFramework.VerifySQLQuery.html
@@ -3247,6 +3461,32 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent
   fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent
   nameWithType: VerifyTextBoxContent
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute()
+  nameWithType: VerifyTextBoxContent.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute
+  nameWithType: VerifyTextBoxContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException(Exception)
+  name: HandleException(Exception)
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_HandleException_Exception_
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException(Exception)
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException(Exception)
+  nameWithType: VerifyTextBoxContent.HandleException(Exception)
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException*
+  name: HandleException
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_HandleException_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException
+  nameWithType: VerifyTextBoxContent.HandleException
 - uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_Name
@@ -3260,6 +3500,159 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Name
   nameWithType: VerifyTextBoxContent.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTxtFile
+  name: VerifyTxtFile
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTxtFile.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyTxtFile
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTxtFile
+  nameWithType: VerifyTxtFile
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTxtFile.html#AutomationTestingProgram_AutomationFramework_VerifyTxtFile_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Execute()
+  nameWithType: VerifyTxtFile.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTxtFile.html#AutomationTestingProgram_AutomationFramework_VerifyTxtFile_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Execute
+  nameWithType: VerifyTxtFile.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTxtFile.html#AutomationTestingProgram_AutomationFramework_VerifyTxtFile_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Name
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Name
+  nameWithType: VerifyTxtFile.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTxtFile.html#AutomationTestingProgram_AutomationFramework_VerifyTxtFile_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTxtFile.Name
+  nameWithType: VerifyTxtFile.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
+  name: VerifyWebElementAvailability
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
+  nameWithType: VerifyWebElementAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name
+  nameWithType: VerifyWebElementAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name
+  nameWithType: VerifyWebElementAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent
+  name: VerifyWebElementContent
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent
+  nameWithType: VerifyWebElementContent
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute()
+  nameWithType: VerifyWebElementContent.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute
+  nameWithType: VerifyWebElementContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name
+  nameWithType: VerifyWebElementContent.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name
+  nameWithType: VerifyWebElementContent.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
+  name: VerifyWebRadioGroupAvailability
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
+  nameWithType: VerifyWebRadioGroupAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name
+  nameWithType: VerifyWebRadioGroupAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name
+  nameWithType: VerifyWebRadioGroupAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
+  name: VerifyWebTableAvailability
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
+  nameWithType: VerifyWebTableAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name
+  nameWithType: VerifyWebTableAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name
+  nameWithType: VerifyWebTableAvailability.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent
+  name: VerifyWebTableContent
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent
+  nameWithType: VerifyWebTableContent
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute()
+  nameWithType: VerifyWebTableContent.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute
+  nameWithType: VerifyWebTableContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name
+  nameWithType: VerifyWebTableContent.Name
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name
+  nameWithType: VerifyWebTableContent.Name
 - uid: AutomationTestingProgram.AutomationFramework.WaitForElement
   name: WaitForElement
   href: api/AutomationTestingProgram.AutomationFramework.WaitForElement.html
@@ -3873,6 +4266,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.FrameworkOptions.TimeOutThreshold
   nameWithType: FrameworkOptions.TimeOutThreshold
+- uid: AutomationTestingProgram.FrameworkOptions.Update
+  name: Update
+  href: api/AutomationTestingProgram.FrameworkOptions.html#AutomationTestingProgram_FrameworkOptions_Update
+  commentId: P:AutomationTestingProgram.FrameworkOptions.Update
+  fullName: AutomationTestingProgram.FrameworkOptions.Update
+  nameWithType: FrameworkOptions.Update
+- uid: AutomationTestingProgram.FrameworkOptions.Update*
+  name: Update
+  href: api/AutomationTestingProgram.FrameworkOptions.html#AutomationTestingProgram_FrameworkOptions_Update_
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.Update
+  isSpec: "True"
+  fullName: AutomationTestingProgram.FrameworkOptions.Update
+  nameWithType: FrameworkOptions.Update
 - uid: AutomationTestingProgram.FrameworkOptions.URL
   name: URL
   href: api/AutomationTestingProgram.FrameworkOptions.html#AutomationTestingProgram_FrameworkOptions_URL
