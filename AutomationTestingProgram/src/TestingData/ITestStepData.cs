@@ -26,11 +26,5 @@ namespace AutomationTestingProgram.TestingData
         /// </summary>
         /// <param name="testStep">Test steps to get the arguments for.</param>
         public void SetArguments(TestStep testStep);
-
-        /// <summary>
-        /// Adds an attachment to the result.
-        /// </summary>
-        /// <param name="attachment">the attachment to attach.</param>
-        public void AddAttachment(string attachment);
     }
 }

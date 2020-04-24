@@ -4,6 +4,7 @@
 
 namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
 {
+    using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.IO;
@@ -76,6 +77,12 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         {
             List<string> str = new List<string>();
             str.Add($"Running SeleniumPerfXML Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
+            foreach (InformationObject.EnvVar var in Enum.GetValues(typeof(InformationObject.EnvVar)))
+            {
+                str.Add($"{var} = {InformationObject.GetEnvironmentVariable(var)}");
+            }
+
+            str.Add("-----------------------");
             foreach (ITestSetStatus testSetStatus in this.TestSetStatuses)
             {
                 str.Add("Name: " + testSetStatus.Name);
@@ -122,6 +129,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
                 }
             }
 
+            str.Add(string.Empty);
             using (StreamWriter file =
             new StreamWriter($"{this.SaveFileLocation}", true))
             {

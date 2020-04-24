@@ -27,7 +27,17 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public DatabaseCaseData(string args)
             : base(args)
         {
+            if (GetEnvironmentVariable(EnvVar.TestSetDataArgs) != GetEnvironmentVariable(EnvVar.TestCaseDataArgs))
+            {
+                string[] argument = args.Split(",");
+                this.Collection = argument[0];
+                this.Release = argument[1];
+            }
         }
+
+        private string Collection { get; set; } = "0";
+
+        private string Release { get; set; } = "0";
 
         /// <summary>
         /// Gets or sets list of test steps to run.
@@ -64,12 +74,10 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The test case.</returns>
         private ITestCase CreateTestCase(string testCaseName)
         {
-            string collection = "0";
-            string release = "0";
             try
             {
                 this.TestSteps = new Queue<TestStep>();
-                List<List<object>> table = this.QueryTestCase(testCaseName, collection, release);
+                List<List<object>> table = this.QueryTestCase(testCaseName);
 
                 foreach (List<object> row in table)
                 {
@@ -153,13 +161,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// Queries a test case from the test database given the testcase name, collection, and release.
         /// </summary>
         /// <param name="testcase">Name of the testcase.</param>
-        /// <param name="collection">Collection that the testcase is part of.</param>
-        /// <param name="release">Release of the collection.</param>
         /// <returns>A test case from the test database.</returns>
-        private List<List<object>> QueryTestCase(string testcase, string collection, string release)
+        private List<List<object>> QueryTestCase(string testcase)
         {
             this.TestDB = this.ConnectToDatabase(this.TestDB);
-            string query = $"SELECT T.TESTCASE, T.TESTSTEPDESCRIPTION, T.STEPNUM, T.ACTIONONOBJECT, T.OBJECT, T.VALUE, T.COMMENTS, T.RELEASE, T.LOCAL_ATTEMPTS, T.LOCAL_TIMEOUT, T.CONTROL, T.COLLECTION, T.TEST_STEP_TYPE_ID, T.GOTOSTEP FROM {this.TestDBName} T WHERE T.TESTCASE = '{testcase}' AND T.COLLECTION = '{collection}' AND T.RELEASE = '{release}' ORDER BY T.STEPNUM";
+            string query = $"SELECT T.TESTCASE, T.TESTSTEPDESCRIPTION, T.STEPNUM, T.ACTIONONOBJECT, T.OBJECT, T.VALUE, T.COMMENTS, T.RELEASE, T.LOCAL_ATTEMPTS, T.LOCAL_TIMEOUT, T.CONTROL, T.COLLECTION, T.TEST_STEP_TYPE_ID, T.GOTOSTEP FROM {this.TestDBName} T WHERE T.TESTCASE = '{testcase}' AND T.COLLECTION = '{this.Collection}' AND T.RELEASE = '{this.Release}' ORDER BY T.STEPNUM";
             Logger.Info("Querying the following: [" + query + "]");
             var result = this.TestDB.ExecuteQuery(query);
             this.TestDB.Disconnect();

@@ -27,5 +27,11 @@ namespace AutomationTestingProgram.TestingData
         /// Sets up the test set and returns a new test step before it runs.
         /// </summary>
         public void SetUpTestSet();
+
+        /// <summary>
+        /// Adds an attachment to the result.
+        /// </summary>
+        /// <param name="attachment">the attachment to attach.</param>
+        public void AddAttachment(string attachment);
     }
 }

@@ -1,0 +1,28 @@
+converter [pdfFile1]
+
+- converts PDF into .txt file
+
+converter [pdfFile1] [int1]
+
+- converts PDF starting from int1
+
+converter [pdfFile1] [int1] [int2]
+
+- converts PDF from page int1 to page int2
+
+converter [pdffile1] [pdffile2]
+
+- converts both PDF into
+
+converter [pdffile1] [pdffile2] [int1]
+
+- converts both PDF from page int1
+
+converter [pdffile1] [pdffile2] [int1] [int2]
+
+- converts PDF1 from page int1 and PDF2 from page int2
+
+converter [pdffile1] [pdffile2] [int1] [int2] [int3] [int4]
+
+- converts PDF1 from int1 - int2 PDF2 from int3 - int4
+

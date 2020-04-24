@@ -52,5 +52,10 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public void SetUpTestSet()
         {
         }
+
+        /// <inheritdoc/>
+        public void AddAttachment(string attachment)
+        {
+        }
     }
 }

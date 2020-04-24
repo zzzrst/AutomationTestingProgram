@@ -1,11 +1,13 @@
 ﻿// <copyright file="VerifyTxtFile.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
-/*
+
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
+    using AutomationTestingProgram.TestingData.TestDrivers;
     using TextInteractor;
+    using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
     /// This test step is the same as testStepXml.
@@ -49,15 +51,15 @@ namespace AutomationTestingProgram.AutomationFramework
             string fileName = this.Arguments["value"];
             string resultFileName = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + DateTime.Now.ToString("Run_dd-MM-yyyy_HH-mm-ss") + ".log";
             TextInteractor expectedTxtFile = new TextInteractor(fileName, Logger.GetLog4NetLogger());
-            this.TestStatus.Pass = expectedTxtFile.Compare(txtfile, resultFileName, ignoreWhitespace: true, caseInsensitive: true);
+            this.TestStepStatus.RunSuccessful = expectedTxtFile.Compare(txtfile, resultFileName, ignoreWhitespace: true, caseInsensitive: true);
             expectedTxtFile.Close();
 
             // CR: Attach excel files that were compared. Attach resulting file if there were differences.
-            this.Alm.AddTestCaseAttachment(fileName);
-            this.Alm.AddTestCaseAttachment(this.TestObject.Object);
-            if (!this.TestStatus.Pass)
+            InformationObject.TestSetData.AddAttachment(fileName);
+            InformationObject.TestSetData.AddAttachment(this.Arguments["object"]);
+            if (!this.TestStepStatus.RunSuccessful)
             {
-                this.Alm.AddTestCaseAttachment(resultFileName);
+                InformationObject.TestSetData.AddAttachment(resultFileName);
             }
 
             txtfile.Close();
@@ -65,75 +67,82 @@ namespace AutomationTestingProgram.AutomationFramework
 
         private void VerifyAgainstString()
         {
+            string value = this.Arguments["value"];
             TextInteractor txtfile = new TextInteractor(this.Arguments["object"], Logger.GetLog4NetLogger());
-            if (this.Value.Contains(Seperator))
+            if (value.Contains(Seperator))
             {
                 int lineNumber = 0;
                 string expectedString = string.Empty;
 
-                lineNumber = int.Parse(this.Value.Substring(0, this.Value.IndexOf(Seperator)));
-                expectedString = this.Value.Substring(this.Value.IndexOf(Seperator) + 3);
+                lineNumber = int.Parse(value.Substring(0, value.IndexOf(Seperator)));
+                expectedString = value.Substring(value.IndexOf(Seperator) + 3);
 
-                expectedString = this.DbDriver.QuerySpecialChars(this.Alm.AlmEnvironment, expectedString).ToString();
+                if (InformationObject.TestCaseData is DatabaseStepData database)
+                {
+                    expectedString = database.QuerySpecialChars(GetEnvironmentVariable(EnvVar.Environment), expectedString).ToString();
+                }
 
-                this.TestStatus.Pass = txtfile.LineExactMatch(expectedString, lineNumber);
-                this.TestStatus.Message = this.TestStatus.Pass ? $"Successfully found {expectedString} on line {lineNumber}" : $"Could not find {expectedString} on line {lineNumber}";
+                this.TestStepStatus.RunSuccessful = txtfile.LineExactMatch(expectedString, lineNumber);
+                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? $"Successfully found {expectedString} on line {lineNumber}" : $"Could not find {expectedString} on line {lineNumber}";
             }
             else
             {
-                this.TestStatus.Pass = false;
-                this.TestStatus.Message = "Specified to verify against string. However the value that was passed in did not fit the syntax.";
+                this.TestStepStatus.RunSuccessful = false;
+                this.TestStepStatus.Actual = "Specified to verify against string. However the value that was passed in did not fit the syntax.";
             }
+
             txtfile.Close();
         }
 
         private void FindString()
         {
+            string value = this.Arguments["value"];
             TextInteractor txtfile = new TextInteractor(this.Arguments["object"], Logger.GetLog4NetLogger());
-            if (this.Value.Contains(Seperator))
+            if (value.Contains(Seperator))
             {
-                string expectedString = string.Empty;
-
-                expectedString = this.Value.Substring(0, this.Value.IndexOf(Seperator));
-                expectedString = this.DbDriver.QuerySpecialChars(this.Alm.AlmEnvironment, expectedString).ToString();
-
-                var argument = this.Value.Substring(this.Value.IndexOf(Seperator) + 3);
+                string expectedString = value.Substring(0, value.IndexOf(Seperator));
+                string argument = value.Substring(value.IndexOf(Seperator) + 3);
                 int amountOfTimes = -1;
+
+                if (InformationObject.TestCaseData is DatabaseStepData database)
+                {
+                    expectedString = database.QuerySpecialChars(GetEnvironmentVariable(EnvVar.Environment), expectedString).ToString();
+                }
+
                 if (int.TryParse(argument, out amountOfTimes))
                 {
-                    this.TestStatus.Pass = txtfile.FindAndCount(expectedString) == amountOfTimes;
+                    this.TestStepStatus.RunSuccessful = txtfile.FindAndCount(expectedString) == amountOfTimes;
                 }
                 else
                 {
                     if (argument.ToLower() == "exist")
                     {
-                        this.TestStatus.Pass = txtfile.Find(expectedString);
+                        this.TestStepStatus.RunSuccessful = txtfile.Find(expectedString);
                     }
                     else if (argument.ToLower() == "dne")
                     {
-                        this.TestStatus.Pass = !txtfile.Find(expectedString);
+                        this.TestStepStatus.RunSuccessful = !txtfile.Find(expectedString);
                     }
                     else
                     {
-                        this.TestStatus.Pass = false;
-                        this.TestStatus.Message = "For the value argument, did not pass Exist, DNE or a number.";
+                        this.TestStepStatus.RunSuccessful = false;
+                        this.TestStepStatus.Actual = "For the value argument, did not pass Exist, DNE or a number.";
                     }
 
-                    if (this.TestStatus.Message == string.Empty)
+                    if (this.TestStepStatus.Actual == string.Empty)
                     {
-                        this.TestStatus.Message = this.TestStatus.Pass ? $"Successfully found {expectedString}." : $"Could not find {expectedString}.";
+                        this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? $"Successfully found {expectedString}." : $"Could not find {expectedString}.";
                     }
                 }
             }
             else
             {
-                string expectedString = this.Value;
-                this.TestStatus.Pass = txtfile.Find(expectedString);
-                this.TestStatus.Message = this.TestStatus.Pass ? $"Successfully found {expectedString}" : $"Could not find {expectedString}";
+                string expectedString = value;
+                this.TestStepStatus.RunSuccessful = txtfile.Find(expectedString);
+                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? $"Successfully found {expectedString}" : $"Could not find {expectedString}";
             }
 
             txtfile.Close();
         }
     }
 }
-*/

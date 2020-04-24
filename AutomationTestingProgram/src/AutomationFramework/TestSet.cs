@@ -66,8 +66,8 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public void HandleException(Exception e)
         {
-            this.TestSetStatus.ErrorStack = e.StackTrace;
-            this.TestSetStatus.FriendlyErrorMessage = e.Message;
+            this.TestSetStatus.ErrorStack += e.StackTrace;
+            this.TestSetStatus.FriendlyErrorMessage += e.Message;
             this.TestSetStatus.RunSuccessful = false;
             this.ShouldExecuteVariable = false;
         }
