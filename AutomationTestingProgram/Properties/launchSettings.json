@@ -3,7 +3,7 @@
     "AutomationTestingProgram": {
       "commandName": "Project",
       "commandLineArgs": "--setType \"XML\" --setArgs \"C:\\SeleniumPerfXML\\PagesIndividualTesting - AODA.xml\" --update false",
-      "nativeDebugging": true
+      "nativeDebugging": false
     }
   }
 }

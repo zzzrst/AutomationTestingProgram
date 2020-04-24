@@ -65,37 +65,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="C:\Users\DUONGCH\.nuget\packages\axeaccessibilitydriver\1.1.7370.27825\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DUONGCH\.nuget\packages\axeaccessibilitydriver\1.1.7373.32491\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DUONGCH\.nuget\packages\axeaccessibilitydriver\2.0.7377.26508\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\axeaccessibilitydriver\2.0.7381.26109\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\axeaccessibilitydriver\2.1.7390.31685\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\axeaccessibilitydriver\2.1.7394.34101\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.1.7397.33819\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.1.7401.15791\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.1.7402.31210\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.1.7403.28616\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.3.7415.31897\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
+    <Content Update="WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
