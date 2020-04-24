@@ -55,7 +55,7 @@ namespace AutomationTestingProgram.AutomationFramework
                 {
                     // we have to do something else.
                     // get the all the elements that have the same accept, but are not input, with type= file
-                    string acceptPattern = InformationObject.TestAutomationDriver.GetAttribute("accept", this.XPath, this.JsCommand);
+                    string acceptPattern = InformationObject.TestAutomationDriver.GetElementAttribute("accept", this.XPath, this.JsCommand);
 
                     var uploadElements = driver.FindElements(By.XPath($"//*[@accept='{acceptPattern}' and not(@type='file')]"));
 
