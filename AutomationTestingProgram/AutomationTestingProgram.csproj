@@ -5,13 +5,22 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Version>1.0.4</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\Users\DUONGCH\Projects\SeleniumFramework\SeleniumProgram\SeleniumProgram\AutomationTestingProgram.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DocumentationFile>C:\Users\DUONGCH\Projects\SeleniumFramework\SeleniumProgram\SeleniumProgram\AutomationTestingProgram.xml</DocumentationFile>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\DuongCh\Projects\SeleniumFramework\AutomationTestingProgram\AutomationTestingProgram.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <DocumentationFile>C:\Users\DuongCh\Projects\SeleniumFramework\AutomationTestingProgram\AutomationTestingProgram.xml</DocumentationFile>
   </PropertyGroup>
 
@@ -63,7 +72,7 @@
     </PackageReference>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
-    <PackageReference Include="TestingDriver" Version="1.4.7417.14993" />
+    <PackageReference Include="TestingDriver" Version="1.4.7423.32332" />
     <PackageReference Include="TextInteractor" Version="1.2.7417.14581" />
   </ItemGroup>
 
@@ -80,6 +89,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.4.7417.14993\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.4.7423.32332\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

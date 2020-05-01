@@ -80,6 +80,8 @@ namespace AutomationTestingProgram
                 SetDefaultParameters();
             }
 
+            Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
+
             if (!errorParsing)
             {
                 // Set up all the parts.
@@ -91,16 +93,15 @@ namespace AutomationTestingProgram
                 TestAutomationBuilder automationBuilder = new TestAutomationBuilder();
                 automationBuilder.Build();
 
-                Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
-
                 // Run main program.
                 DateTime start = DateTime.UtcNow;
                 AutomationTestSetDriver.RunTestSet(testSet);
-                InformationObject.Reporter.Report();
 
                 RunAODA();
 
                 DateTime end = DateTime.UtcNow;
+
+                InformationObject.Reporter.Report();
 
                 InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
                 InformationObject.CSVLogger.WriteOutResults();

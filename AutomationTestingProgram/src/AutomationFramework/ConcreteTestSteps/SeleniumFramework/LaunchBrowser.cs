@@ -18,7 +18,15 @@ namespace AutomationTestingProgram.AutomationFramework
             Logger.Info($"Launching");
             base.Execute();
             string url = this.Arguments.ContainsKey("value") ? this.Arguments["value"] : string.Empty;
-            InformationObject.TestAutomationDriver.NavigateToURL(url);
+            try
+            {
+                InformationObject.TestAutomationDriver.NavigateToURL(url);
+            }
+            catch (System.NullReferenceException)
+            {
+                Logger.Error("Missing Chromium Folder");
+            }
+
             Logger.Info($"Launch browser to url {url}");
         }
     }

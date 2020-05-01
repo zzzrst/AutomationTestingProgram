@@ -378,7 +378,7 @@ namespace ALMConnector
         /// <returns>The <see cref="int"/>.</returns>
         public int GetCurrentTestCaseConditionType()
         {
-            return this.testCaseFlow[this.currTestCaseID][1];
+            return this.currTestCaseID == this.lastTestCaseID ? EXECFINISHED : this.testCaseFlow[this.currTestCaseID][1];
         }
 
         /// <summary>

@@ -80,6 +80,35 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Reporter</span></div>
+      <div class="level2"><a class="xref" href="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html">ALMReporter</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">AutomationTestSetFramework.IReporter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.html">AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters</a></h6>
   <h6><strong>Assembly</strong>: AutomationTestingProgram.dll</h6>
@@ -182,7 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">ITestCaseStatus</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">AutomationTestSetFramework.ITestCaseStatus</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -213,7 +242,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<span class="xref">ITestCaseStatus</span>, <span class="xref">List</span>&lt;<span class="xref">ITestStepStatus</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">AutomationTestSetFramework.ITestCaseStatus</span>, <span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">AutomationTestSetFramework.ITestStepStatus</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -244,7 +273,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">ITestSetStatus</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">AutomationTestSetFramework.ITestSetStatus</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -253,18 +282,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestCaseStatus_ITestCaseStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(ITestCaseStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestCaseStatus_AutomationTestSetFramework_ITestCaseStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs/#L53">View Source</a>
   </span>
   <a id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestCaseStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus*"></a>
-  <h4 id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestCaseStatus_ITestCaseStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(ITestCaseStatus)">AddTestCaseStatus(ITestCaseStatus)</h4>
+  <h4 id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestCaseStatus_AutomationTestSetFramework_ITestCaseStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)">AddTestCaseStatus(ITestCaseStatus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddTestCaseStatus(ITestCaseStatus testCaseStatus)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void AddTestCaseStatus(ITestCaseStatus testCaseStatus)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,7 +306,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestCaseStatus</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestCaseStatus</span></td>
         <td><span class="parametername">testCaseStatus</span></td>
         <td></td>
       </tr>
@@ -285,18 +314,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestSetStatus_ITestSetStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(ITestSetStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestSetStatus_AutomationTestSetFramework_ITestSetStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs/#L59">View Source</a>
   </span>
   <a id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestSetStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus*"></a>
-  <h4 id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestSetStatus_ITestSetStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(ITestSetStatus)">AddTestSetStatus(ITestSetStatus)</h4>
+  <h4 id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestSetStatus_AutomationTestSetFramework_ITestSetStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)">AddTestSetStatus(ITestSetStatus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddTestSetStatus(ITestSetStatus testSetStatus)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void AddTestSetStatus(ITestSetStatus testSetStatus)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -309,7 +338,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestSetStatus</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestSetStatus</span></td>
         <td><span class="parametername">testSetStatus</span></td>
         <td></td>
       </tr>
@@ -317,18 +346,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestStepStatusToTestCase_ITestStepStatus_ITestCaseStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(ITestStepStatus%2CITestCaseStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestStepStatusToTestCase_AutomationTestSetFramework_ITestStepStatus_AutomationTestSetFramework_ITestCaseStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus%2CAutomationTestSetFramework.ITestCaseStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs/#L65">View Source</a>
   </span>
   <a id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestStepStatusToTestCase_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase*"></a>
-  <h4 id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestStepStatusToTestCase_ITestStepStatus_ITestCaseStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(ITestStepStatus,ITestCaseStatus)">AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)</h4>
+  <h4 id="AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_AddTestStepStatusToTestCase_AutomationTestSetFramework_ITestStepStatus_AutomationTestSetFramework_ITestCaseStatus_" data-uid="AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)">AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddTestStepStatusToTestCase(ITestStepStatus testStepStatus, ITestCaseStatus testCaseStatus)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void AddTestStepStatusToTestCase(ITestStepStatus testStepStatus, ITestCaseStatus testCaseStatus)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,12 +370,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestStepStatus</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestStepStatus</span></td>
         <td><span class="parametername">testStepStatus</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ITestCaseStatus</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestCaseStatus</span></td>
         <td><span class="parametername">testCaseStatus</span></td>
         <td></td>
       </tr>
@@ -365,7 +394,11 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Report()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Report()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">AutomationTestSetFramework.IReporter</span>
   </div>
 </article>
           </div>

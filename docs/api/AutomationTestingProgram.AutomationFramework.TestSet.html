@@ -81,11 +81,40 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TestSet</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">AutomationTestSetFramework.ITestSet</span></div>
+    <div><span class="xref">AutomationTestSetFramework.IMethodBoundaryAspect</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AutomationTestingProgram.AutomationFramework.html">AutomationTestingProgram.AutomationFramework</a></h6>
   <h6><strong>Assembly</strong>: AutomationTestingProgram.dll</h6>
   <h5 id="AutomationTestingProgram_AutomationFramework_TestSet_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TestSet : ITestSet</code></pre>
+    <pre><code class="lang-csharp hljs">public class TestSet : ITestSet, IMethodBoundaryAspect</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -174,7 +203,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IMethodBoundaryAspect.FlowBehavior</span></td>
+        <td><span class="xref">AutomationTestSetFramework.IMethodBoundaryAspect.FlowBehavior</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -235,7 +264,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestSetStatus</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestSetStatus</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -327,20 +356,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestCase</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestCase</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_TestSet_HandleException_Exception_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.TestSet.HandleException(Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_TestSet_HandleException_System_Exception_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.TestSet.HandleException(System.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/AutomationFramework/TestSet.cs/#L67">View Source</a>
   </span>
   <a id="AutomationTestingProgram_AutomationFramework_TestSet_HandleException_" data-uid="AutomationTestingProgram.AutomationFramework.TestSet.HandleException*"></a>
-  <h4 id="AutomationTestingProgram_AutomationFramework_TestSet_HandleException_Exception_" data-uid="AutomationTestingProgram.AutomationFramework.TestSet.HandleException(Exception)">HandleException(Exception)</h4>
+  <h4 id="AutomationTestingProgram_AutomationFramework_TestSet_HandleException_System_Exception_" data-uid="AutomationTestingProgram.AutomationFramework.TestSet.HandleException(System.Exception)">HandleException(Exception)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -358,7 +387,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Exception</span></td>
+        <td><span class="xref">System.Exception</span></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -426,13 +455,13 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_TestSet_UpdateTestSetStatus_ITestCaseStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(ITestCaseStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_AutomationFramework_TestSet_UpdateTestSetStatus_AutomationTestSetFramework_ITestCaseStatus_.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(AutomationTestSetFramework.ITestCaseStatus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/AutomationFramework/TestSet.cs/#L106">View Source</a>
   </span>
   <a id="AutomationTestingProgram_AutomationFramework_TestSet_UpdateTestSetStatus_" data-uid="AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus*"></a>
-  <h4 id="AutomationTestingProgram_AutomationFramework_TestSet_UpdateTestSetStatus_ITestCaseStatus_" data-uid="AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(ITestCaseStatus)">UpdateTestSetStatus(ITestCaseStatus)</h4>
+  <h4 id="AutomationTestingProgram_AutomationFramework_TestSet_UpdateTestSetStatus_AutomationTestSetFramework_ITestCaseStatus_" data-uid="AutomationTestingProgram.AutomationFramework.TestSet.UpdateTestSetStatus(AutomationTestSetFramework.ITestCaseStatus)">UpdateTestSetStatus(ITestCaseStatus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -450,12 +479,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestCaseStatus</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestCaseStatus</span></td>
         <td><span class="parametername">testCaseStatus</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">AutomationTestSetFramework.ITestSet</span>
+  </div>
+  <div>
+      <span class="xref">AutomationTestSetFramework.IMethodBoundaryAspect</span>
+  </div>
 </article>
           </div>
           

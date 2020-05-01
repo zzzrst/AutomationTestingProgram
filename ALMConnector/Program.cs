@@ -12,7 +12,7 @@ namespace ALMConnector
     /// Main program for ALMConnector.
     /// </summary>
     public class Program
-    {
+    {/*
         /// <summary>
         /// Main method for alm connector.
         /// </summary>
@@ -50,6 +50,6 @@ namespace ALMConnector
 
                 Console.WriteLine($"  A total of {count} test cases inside {tsi.Name} has been updated.");
             }
-        }
+        }*/
     }
 }

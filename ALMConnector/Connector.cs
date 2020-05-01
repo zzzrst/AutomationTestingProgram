@@ -46,7 +46,15 @@ namespace ALMConnector
             this.AlmUrl = ConfigurationManager.AppSettings["ALMURL"];
 
             // attempt to connect to server
-            this.Connected = this.ConnectToServer();
+            try
+            {
+                this.Connected = this.ConnectToServer();
+            }
+            catch (System.Runtime.InteropServices.COMException e)
+            {
+                throw e;
+                //throw new Exception("Please register your HP ALM Client");
+            }
         }
 
         /// <summary>

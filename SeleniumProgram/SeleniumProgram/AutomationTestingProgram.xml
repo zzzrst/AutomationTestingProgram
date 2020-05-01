@@ -1027,6 +1027,29 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.FakeTestStep.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter">
+            <summary>
+            The implementation of the reporter class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter"/> class.
+            </summary>
+            <param name="saveLocation">The location to save the file to.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter">
             <summary>
             The implementation of the reporter class.
@@ -2240,11 +2263,27 @@
             An implementation of the test set data using ALM.
             </summary>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData"/> class.
+            </summary>
+            <param name="args">argument to be passed in.</param>
+        </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs">
             <inheritdoc/>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name">
             <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet">
+            <summary>
+            Gets the current Test Set Instance.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM">
+            <summary>
+            Gets or sets the ALM Connector.
+            </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)">
             <inheritdoc/>
@@ -2260,6 +2299,11 @@
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet">
             <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM">
+            <summary>
+            Connects to ALM.
+            </summary>
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData">
             <summary>

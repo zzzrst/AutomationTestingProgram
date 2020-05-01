@@ -50,19 +50,19 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         public Dictionary<ITestCaseStatus, List<ITestStepStatus>> TestCaseToTestSteps { get; set; }
 
         /// <inheritdoc/>
-        public void AddTestCaseStatus(ITestCaseStatus testCaseStatus)
+        public virtual void AddTestCaseStatus(ITestCaseStatus testCaseStatus)
         {
             this.TestCaseStatuses.Add(testCaseStatus);
         }
 
         /// <inheritdoc/>
-        public void AddTestSetStatus(ITestSetStatus testSetStatus)
+        public virtual void AddTestSetStatus(ITestSetStatus testSetStatus)
         {
             this.TestSetStatuses.Add(testSetStatus);
         }
 
         /// <inheritdoc/>
-        public void AddTestStepStatusToTestCase(ITestStepStatus testStepStatus, ITestCaseStatus testCaseStatus)
+        public virtual void AddTestStepStatusToTestCase(ITestStepStatus testStepStatus, ITestCaseStatus testCaseStatus)
         {
             if (!this.TestCaseToTestSteps.ContainsKey(testCaseStatus))
             {
@@ -73,7 +73,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         }
 
         /// <inheritdoc/>
-        public void Report()
+        public virtual void Report()
         {
             List<string> str = new List<string>();
             str.Add($"Running SeleniumPerfXML Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");

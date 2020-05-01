@@ -110,7 +110,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public void UpdateTestCaseStatus(ITestStepStatus testStepStatus)
         {
-            string actual = testStepStatus.Actual;
+            string actual = this.GetTotalElapsedTime(testStepStatus).ToString();
             if (testStepStatus.RunSuccessful == false)
             {
                 this.TestCaseStatus.RunSuccessful = false;
@@ -124,6 +124,11 @@ namespace AutomationTestingProgram.AutomationFramework
             }
 
             InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);
+        }
+
+        private double GetTotalElapsedTime(ITestStepStatus testStepStatus)
+        {
+            return Math.Abs((testStepStatus.StartTime - testStepStatus.EndTime).TotalSeconds);
         }
     }
 }

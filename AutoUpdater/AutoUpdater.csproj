@@ -6,6 +6,7 @@
     <Version>1.0.0</Version>
     <ApplicationIcon />
     <StartupObject>AutoUpdater.AutoUpdater</StartupObject>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -13,8 +14,18 @@
     <DocumentationFile>.\AutoUpdater.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutputPath>..\AutomationTestingProgram\bin\x86\Debug\</OutputPath>
+    <DocumentationFile>.\AutoUpdater.xml</DocumentationFile>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>..\AutomationTestingProgram\bin\Release\</OutputPath>
+    <DocumentationFile>.\AutoUpdater.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutputPath>..\AutomationTestingProgram\bin\x86\Release\</OutputPath>
     <DocumentationFile>.\AutoUpdater.xml</DocumentationFile>
   </PropertyGroup>
 

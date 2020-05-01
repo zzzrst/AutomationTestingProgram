@@ -217,8 +217,6 @@ namespace AutomationTestingProgram
             LogSaveFileLocation = logSaveLocation;
             ScreenshotSaveLocation = screenshotSaveLocation;
 
-            Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
-
             RespectRepeatFor = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRepeatFor));
             RespectRunAODAFlag = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRunAODAFlag));
 
@@ -226,6 +224,8 @@ namespace AutomationTestingProgram
             Directory.CreateDirectory(logSaveLocation);
             Directory.CreateDirectory(reportSaveLocation);
             Directory.CreateDirectory(screenshotSaveLocation);
+
+            SetReporter(reportSaveLocation);
         }
 
         /// <summary>
@@ -252,6 +252,18 @@ namespace AutomationTestingProgram
             }
 
             return value;
+        }
+
+        private static void SetReporter(string reportSaveLocation)
+        {
+            if (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower() == "alm")
+            {
+                Reporter = new ALMReporter(Path.Combine(reportSaveLocation, "Report.txt"));
+            }
+            else
+            {
+                Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
+            }
         }
     }
 }

@@ -100,6 +100,7 @@ namespace AutomationTestingProgram.AutomationFramework
                     StartTime = DateTime.UtcNow,
                     TestStepNumber = this.TestStepNumber,
                     Description = this.Description,
+                    Expected = this.Description,
                 };
             }
 
@@ -126,8 +127,6 @@ namespace AutomationTestingProgram.AutomationFramework
                 InformationObject.TestAutomationDriver.RunAODA(this.RunAODAPageName);
             }
 
-            double totalTime = this.GetTotalElapsedTime();
-
             if (this.ShouldLog)
             {
                 ITestStepLogger log = new TestStepLogger();
@@ -135,18 +134,13 @@ namespace AutomationTestingProgram.AutomationFramework
 
                 if (this.TestStepStatus.Actual == string.Empty)
                 {
-                    this.TestStepStatus.Actual = totalTime.ToString();
+                    this.TestStepStatus.Actual = this.TestStepStatus.Expected;
                 }
             }
             else
             {
                 this.TestStepStatus.Actual = "No Log";
             }
-        }
-
-        private double GetTotalElapsedTime()
-        {
-            return Math.Abs((this.TestStepStatus.StartTime - this.TestStepStatus.EndTime).TotalSeconds);
         }
     }
 }

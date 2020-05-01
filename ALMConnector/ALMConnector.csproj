@@ -1,12 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="ALMProjectEntityFieldMapping.xml" />
+    <None Remove="TDAPIOLELib.dll" />
     <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html" />
     <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html" />
     <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html" />
@@ -25,20 +27,35 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="ALMProjectEntityFieldMapping.xml" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html" />
-    <Content Include="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

@@ -83,6 +83,11 @@
     <div class="level2"><a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html">ActionObject</a></div>
     <div class="level3"><span class="xref">VerifyWebElementContent</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">AutomationTestSetFramework.ITestStep</span></div>
+    <div><span class="xref">AutomationTestSetFramework.IMethodBoundaryAspect</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -98,13 +103,13 @@
       <a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder_System_Boolean_">ActionObject.XPathBuilder(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_CreateJSCommandForAttributeValuePairs_IDictionary_System_String_System_String__">ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary&lt;String, String&gt;)</a>
+      <a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_CreateJSCommandForAttributeValuePairs_System_Collections_Generic_IDictionary_System_String_System_String__">ActionObject.CreateJSCommandForAttributeValuePairs(IDictionary&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_FixAttribute_System_String_">ActionObject.FixAttribute(String)</a>
     </div>
     <div>
-      <a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathTagHelper_List_System_String__">ActionObject.XPathTagHelper(List&lt;String&gt;)</a>
+      <a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathTagHelper_System_Collections_Generic_List_System_String__">ActionObject.XPathTagHelper(List&lt;String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click_System_Boolean_">ActionObject.Click(Boolean)</a>
@@ -143,7 +148,7 @@
       <a class="xref" href="AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_Description">TestStep.Description</a>
     </div>
     <div>
-      <a class="xref" href="AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_HandleException_Exception_">TestStep.HandleException(Exception)</a>
+      <a class="xref" href="AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_HandleException_System_Exception_">TestStep.HandleException(Exception)</a>
     </div>
     <div>
       <a class="xref" href="AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_SetUp">TestStep.SetUp()</a>
@@ -154,12 +159,33 @@
     <div>
       <a class="xref" href="AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_TearDown">TestStep.TearDown()</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AutomationTestingProgram.AutomationFramework.html">AutomationTestingProgram.AutomationFramework</a></h6>
   <h6><strong>Assembly</strong>: AutomationTestingProgram.dll</h6>
   <h5 id="AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class VerifyWebElementContent : ActionObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class VerifyWebElementContent : ActionObject, ITestStep, IMethodBoundaryAspect</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -214,6 +240,13 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Execute">ActionObject.Execute()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">AutomationTestSetFramework.ITestStep</span>
+  </div>
+  <div>
+      <span class="xref">AutomationTestSetFramework.IMethodBoundaryAspect</span>
+  </div>
 </article>
           </div>
           

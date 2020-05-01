@@ -87,11 +87,35 @@ Only used for proof of concept.</p>
     <div><a class="xref" href="AutomationTestingProgram.TestingData.ITestCaseData.html">ITestCaseData</a></div>
     <div><a class="xref" href="AutomationTestingProgram.TestingData.ITestData.html">ITestData</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AutomationTestingProgram.TestingData.TestDrivers.html">AutomationTestingProgram.TestingData.TestDrivers</a></h6>
   <h6><strong>Assembly</strong>: AutomationTestingProgram.dll</h6>
   <h5 id="AutomationTestingProgram_TestingData_TestDrivers_TextCaseData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TextCaseData : object, ITestCaseData, ITestData</code></pre>
+    <pre><code class="lang-csharp hljs">public class TextCaseData : ITestCaseData, ITestData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -256,7 +280,7 @@ This is where you get the test args.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestStep</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestStep</span></td>
         <td><p>The next Test Step.</p>
 </td>
       </tr>
@@ -331,7 +355,7 @@ guarantees that it is the right type.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ITestCase</span></td>
+        <td><span class="xref">AutomationTestSetFramework.ITestCase</span></td>
         <td><p>The test Case to run.</p>
 </td>
       </tr>

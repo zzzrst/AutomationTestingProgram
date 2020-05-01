@@ -166,7 +166,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         {
             this.TestDB = this.ConnectToDatabase(this.TestDB);
             string query = $"SELECT T.TESTCASE, T.TESTSTEPDESCRIPTION, T.STEPNUM, T.ACTIONONOBJECT, T.OBJECT, T.VALUE, T.COMMENTS, T.RELEASE, T.LOCAL_ATTEMPTS, T.LOCAL_TIMEOUT, T.CONTROL, T.COLLECTION, T.TEST_STEP_TYPE_ID, T.GOTOSTEP FROM {this.TestDBName} T WHERE T.TESTCASE = '{testcase}' AND T.COLLECTION = '{this.Collection}' AND T.RELEASE = '{this.Release}' ORDER BY T.STEPNUM";
-            Logger.Info("Querying the following: [" + query + "]");
+
+            // Logger.Info("Querying the following: [" + query + "]");
             var result = this.TestDB.ExecuteQuery(query);
             this.TestDB.Disconnect();
             Logger.Info("Closed connection to database.\n");
