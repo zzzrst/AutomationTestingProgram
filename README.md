@@ -63,6 +63,13 @@ Optional
 * Defaults to caseArgs
 
 ### Table of Test Set/Case/Step Arguments
+|DataName|TestType|Arguments|Examples|
+|---|---|---|---|
+|XML|Set/Case/Step|.xml File location|--setType "XML" --setArgs "C:\XMLDocs\Test.xml"|
+|Txt|Case/Step|.txt File Location|--setType "Txt" --setArgs "C:\TxtDocs\Test.txt"|
+|Database|Case/Step|Collection,Release| --caseType "Database" --caseArgs "1,3"|
+|ALM|Set|Test Set ID OR Test Set Name|--setType "ALM"  --setArgs "12345"|
+|None|Set|Test Case Name|--setType "None" --setArgs "Test Case Name"|
 
 
 ## Dependancies
