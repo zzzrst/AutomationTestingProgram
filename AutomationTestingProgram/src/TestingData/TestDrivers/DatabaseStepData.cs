@@ -134,7 +134,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The <see cref="string"/>.</returns>
         public string GetEnvironmentEmailNotificationFolder(string environment)
         {
-            this.ConnectToDatabase(this.TestDB);
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
             string query = $"select t.EMAIL_NOTIFICATION_FOLDER from QA_AUTOMATION.test_environments t where t.environment = '{environment}'";
             List<List<object>> result = this.TestDB.ExecuteQuery(query);
             if (result.Count == 0)
@@ -166,8 +166,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             if (original.Length >= 7 && original.Substring(0, 7).ToLower() == "!select")
             {
-                // query from RVDEV1 database
-                this.ConnectToDatabase(this.TestDB);
+                // query from database
+                this.TestDB = this.ConnectToDatabase(this.TestDB);
                 result = this.TestDB.ExecuteQuery(original.Substring(1))[0][0];
                 msg += $"Query replaced with: {result}.";
             }
@@ -305,10 +305,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The information needed to build the connection string.</returns>
         private List<object> QueryEnvironmentConnectionInformation(string environment)
         {
-            this.ConnectToDatabase(this.TestDB);
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
 
             // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
             string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {this.EnvDBName} t where t.environment = '{environment}'";
+            Logger.Debug($"Querying for QueryEnvironmentConnectionInformation : [{query}]");
 
             // decrypt password if needed.
             List<List<object>> result = this.TestDB.ExecuteQuery(query);
@@ -409,7 +410,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The URL to access the environment.</returns>
         private string GetEnvironmentURL(string environment)
         {
-            this.ConnectToDatabase(this.TestDB);
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
             string query = $"select t.url from {this.EnvDBName} t where t.environment = '{environment}'";
             List<List<object>> result = this.TestDB.ExecuteQuery(query);
             if (result.Count == 0)

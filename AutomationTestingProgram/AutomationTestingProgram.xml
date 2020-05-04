@@ -2384,6 +2384,16 @@
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.Boolean)">
             <inheritdoc/>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Same as The Original Method but also overwrites the collection and release.
+            </summary>
+            <param name="testCaseName">The name of the test case.</param>
+            <param name="collection">the collection.</param>
+            <param name="release">the release.</param>
+            <param name="performAction">Whether or not it should execute.</param>
+            <returns>the new test case.</returns>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CreateTestCase(System.String)">
             <summary>
             Creates a new test step.

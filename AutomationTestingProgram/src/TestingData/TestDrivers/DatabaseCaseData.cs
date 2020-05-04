@@ -75,6 +75,21 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         }
 
         /// <summary>
+        /// Same as The Original Method but also overwrites the collection and release.
+        /// </summary>
+        /// <param name="testCaseName">The name of the test case.</param>
+        /// <param name="collection">the collection.</param>
+        /// <param name="release">the release.</param>
+        /// <param name="performAction">Whether or not it should execute.</param>
+        /// <returns>the new test case.</returns>
+        public ITestCase SetUpTestCase(string testCaseName, string collection, string release, bool performAction = true)
+        {
+            this.Collection = collection;
+            this.Release = release;
+            return this.CreateTestCase(testCaseName);
+        }
+
+        /// <summary>
         /// Creates a new test step.
         /// </summary>
         /// <param name="testCaseName">The name of the test step.</param>

@@ -74,16 +74,33 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.ConnectToALM();
             ITestCase testCase;
             string testCaseID = this.TestSet.GetCurrentTestCaseName();
+            string release = string.Empty;
+            string collection = string.Empty;
+
+            // if the test case doesn't have any arguments, use the alm arguments instead.
+            if (GetEnvironmentVariable(EnvVar.TestCaseDataArgs) != string.Empty)
+            {
+                release = this.TestSet.GetField("Test Case Version");
+                collection = this.TestSet.GetField("Application Collection");
+            }
+
             try
             {
-                testCase = TestCaseData.SetUpTestCase(testCaseID, true);
+                if (TestCaseData is DatabaseCaseData)
+                {
+                    testCase = ((DatabaseCaseData)TestCaseData).SetUpTestCase(testCaseID, collection, release, true);
+                }
+                else
+                {
+                    testCase = TestCaseData.SetUpTestCase(testCaseID, true);
+                }
 
                 int testCondType = this.TestSet.GetCurrentTestCaseConditionType();
-                //this.ContinueToRun = this.TestSet.MoveToNextTestCase();
             }
            catch (Exception e)
             {
                 Logger.Error("Sorry, something went wrong during the creation of the test case." + testCaseID);
+
                 // this.TestSet.AddTestStepToTestCase(testStepName, "Failed", testStepDesc, testStepExp, testStepAct);
                 this.TestSet.SetTestCaseRunStatus("Blocked");
 

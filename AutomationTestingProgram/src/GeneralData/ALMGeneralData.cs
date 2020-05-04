@@ -9,7 +9,7 @@ namespace AutomationTestingProgram.GeneralData
     using System.Configuration;
     using System.Text;
     using ALMConnector;
-    using Helper;
+    using AutomationTestingProgram.Helper;
     using TDAPIOLELib;
     using static AutomationTestingProgram.InformationObject;
 
@@ -67,7 +67,7 @@ namespace AutomationTestingProgram.GeneralData
             }
             catch (Exception)
             {
-                Logger.Error("Missing Enviroment URL in Config File");
+                Logger.Error($"Missing Enviroment URL for {enviornment} in Config File");
                 throw new Exception("Missing Enviroment URL in Config File");
             }
 

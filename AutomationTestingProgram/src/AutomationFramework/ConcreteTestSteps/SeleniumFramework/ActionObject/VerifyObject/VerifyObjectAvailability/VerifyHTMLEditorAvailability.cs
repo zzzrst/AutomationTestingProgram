@@ -18,7 +18,7 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "Verify HTML Editor Availability";
 
         /// <inheritdoc/>
-        protected override string HTMLWhiteListTag { get; set; } = "";
+        protected override string HTMLWhiteListTag { get; set; } = string.Empty;
 
         /// <inheritdoc/>
         public override void Execute()

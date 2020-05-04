@@ -21,7 +21,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Gets or sets the html Tag to use.
         /// </summary>
-        protected virtual string HTMLWhiteListTag { get; set; } = "";
+        protected virtual string HTMLWhiteListTag { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the attributes of the element provided through the data.
