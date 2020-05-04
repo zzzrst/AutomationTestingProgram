@@ -2165,19 +2165,19 @@
             </summary>
             <returns>An ILogger.</returns>
         </member>
-        <member name="M:AutomationTestingProgram.Logger.GetLogger(System.Type)">
-            <summary>
-            Returns the type for the logger.
-            </summary>
-            <param name="type">Class this logger is under.</param>
-            <returns>ILog instance to interact with.</returns>
-        </member>
         <member name="M:AutomationTestingProgram.Logger.Tab(System.Int32)">
             <summary>
             Returns a sequence of whitespaces of fixed length to represent tabs in the print log.
             </summary>
             <param name="indents">Number of tabs.</param>
             <returns>Sequence of tabs represented as whitespaces.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.Logger.GetLogger(System.Type)">
+            <summary>
+            Returns the type for the logger.
+            </summary>
+            <param name="type">Class this logger is under.</param>
+            <returns>ILog instance to interact with.</returns>
         </member>
         <member name="M:AutomationTestingProgram.Logger.SetLog4NetConfiguration">
             <summary>

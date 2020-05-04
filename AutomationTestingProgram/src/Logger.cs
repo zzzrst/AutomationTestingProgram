@@ -103,6 +103,16 @@ namespace AutomationTestingProgram
         }
 
         /// <summary>
+        /// Returns a sequence of whitespaces of fixed length to represent tabs in the print log.
+        /// </summary>
+        /// <param name="indents">Number of tabs.</param>
+        /// <returns>Sequence of tabs represented as whitespaces.</returns>
+        public static string Tab(int indents = 1)
+        {
+            return string.Concat(Enumerable.Repeat("    ", indents));
+        }
+
+        /// <summary>
         /// Returns the type for the logger.
         /// </summary>
         /// <param name="type">Class this logger is under.</param>
@@ -112,16 +122,6 @@ namespace AutomationTestingProgram
             ILog logger = LogManager.GetLogger(type);
             SetLog4NetConfiguration();
             return logger;
-        }
-
-        /// <summary>
-        /// Returns a sequence of whitespaces of fixed length to represent tabs in the print log.
-        /// </summary>
-        /// <param name="indents">Number of tabs.</param>
-        /// <returns>Sequence of tabs represented as whitespaces.</returns>
-        public static string Tab(int indents = 1)
-        {
-            return string.Concat(Enumerable.Repeat("    ", indents));
         }
 
         /// <summary>

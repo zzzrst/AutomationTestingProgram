@@ -69,7 +69,61 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="reporter-and-loggers">Reporter and Loggers</h1>
 
-<p>To be added...</p>
+<h2 id="reporter">Reporter</h2>
+<h3 id="default-reporter">Default Reporter</h3>
+<p>There are 3 Lists that take in a TestStatus.</p>
+<pre><code class="lang-c#">public List&lt;ITestSetStatus&gt; TestSetStatuses { get; set; }
+</code></pre>
+<ul>
+<li>There is usualy only one object in this list since you will usualy only run one test set.</li>
+</ul>
+<pre><code class="lang-c#">public List&lt;ITestCaseStatus&gt; TestCaseStatuses { get; set; }
+</code></pre>
+<ul>
+<li>This is the list of all the test cases.</li>
+</ul>
+<pre><code class="lang-c#">public Dictionary&lt;ITestCaseStatus, List&lt;ITestStepStatus&gt;&gt; TestCaseToTestSteps { get; set; }
+</code></pre>
+<ul>
+<li>This maps the test case to the list of all test steps it ran</li>
+</ul>
+<p>There are 4 Methods that the report uses. These methods can be overrided by another reporter class. See ALM Reporter</p>
+<pre><code class="lang-c#">public virtual void AddTestCaseStatus(ITestCaseStatus testCaseStatus)
+</code></pre>
+<ul>
+<li>This is called after the test case is ran.</li>
+</ul>
+<pre><code class="lang-c#">public virtual void AddTestSetStatus(ITestSetStatus testSetStatus)
+</code></pre>
+<ul>
+<li>This is called after the entire test set is ran.</li>
+</ul>
+<pre><code class="lang-c#">public virtual void AddTestStepStatusToTestCase(ITestStepStatus testStepStatus, ITestCaseStatus testCaseStatus)
+</code></pre>
+<ul>
+<li>This is called after the test step is ran. The test case status is the current test case.</li>
+</ul>
+<pre><code class="lang-c#">public virtual void Report()
+</code></pre>
+<ul>
+<li>This is ran at the very end of the program.</li>
+</ul>
+<h2 id="loggers">Loggers</h2>
+<p>Each Test Set/Case/Step has a log function that runs at the end of excecuting the test Set/Case/Step</p>
+<pre><code class="lang-c#">public void Log(ITestSet testSet)
+public void Log(ITestCase testCase)
+public void Log(ITestStep testStep)
+</code></pre>
+<p>Use this to log the status of the test set/case/step.</p>
+<h2 id="built-in-loggers">Built in Loggers</h2>
+<p>There are a few built in loggers you can use in replace of Console.WriteLine</p>
+<h3 id="logger-class">Logger (Class)</h3>
+<pre><code class="lang-c#">public static void Debug(object message)
+public static void Error(object message)
+public static void Fatal(object message)
+public static void Info(object message)
+public static void Warn(object message)
+</code></pre>
 </article>
           </div>
           

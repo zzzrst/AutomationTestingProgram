@@ -61,7 +61,16 @@ namespace AutomationTestingProgram.GeneralData
 
             string enviornment = testset.GetField("Test Environment");
             parameters.Add(EnvVar.Environment, enviornment);
-            parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());
+            try
+            {
+                parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());
+            }
+            catch (Exception)
+            {
+                Logger.Error("Missing Enviroment URL in Config File");
+                throw new Exception("Missing Enviroment URL in Config File");
+            }
+
             alm.DisconnectFromServer();
 
             return parameters;
