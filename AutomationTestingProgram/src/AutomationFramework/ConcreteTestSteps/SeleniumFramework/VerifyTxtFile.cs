@@ -24,7 +24,7 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
 
-            string option = this.Arguments["comments"];
+            string option = this.Arguments["comment"];
             if (option.ToLower() == "againsttextfile" || option == "0")
             {
                 this.VerifyAgainstTextFile();
@@ -54,7 +54,7 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.RunSuccessful = expectedTxtFile.Compare(txtfile, resultFileName, ignoreWhitespace: true, caseInsensitive: true);
             expectedTxtFile.Close();
 
-            // CR: Attach excel files that were compared. Attach resulting file if there were differences.
+            // CR: Attach files that were compared. Attach resulting file if there were differences.
             InformationObject.TestSetData.AddAttachment(fileName);
             InformationObject.TestSetData.AddAttachment(this.Arguments["object"]);
             if (!this.TestStepStatus.RunSuccessful)

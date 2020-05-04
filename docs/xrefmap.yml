@@ -93,6 +93,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute
   nameWithType: ActionObject.FixAttribute
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  nameWithType: ActionObject.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  nameWithType: ActionObject.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand
   name: JsCommand
   href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_JsCommand
@@ -132,12 +145,12 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPath
   nameWithType: ActionObject.XPath
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
-  name: XPathBuilder(Boolean)
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder_System_Boolean_
-  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
-  nameWithType: ActionObject.XPathBuilder(Boolean)
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder
+  name: XPathBuilder()
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder()
+  nameWithType: ActionObject.XPathBuilder()
 - uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder*
   name: XPathBuilder
   href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder_
@@ -3072,6 +3085,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability
   nameWithType: VerifyButtonAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyButtonAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  nameWithType: VerifyButtonAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyButtonAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  nameWithType: VerifyButtonAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyButtonAvailability_Name
@@ -3091,6 +3117,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability
   nameWithType: VerifyCheckBoxAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxAvailability_Name
@@ -3123,6 +3162,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute
   nameWithType: VerifyCheckBoxStatus.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxStatus.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxStatus.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_Name
@@ -3142,6 +3194,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability
   nameWithType: VerifyDDLAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyDDLAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  nameWithType: VerifyDDLAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyDDLAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  nameWithType: VerifyDDLAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyDDLAvailability_Name
@@ -3174,6 +3239,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute
   nameWithType: VerifyDDLContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  nameWithType: VerifyDDLContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  nameWithType: VerifyDDLContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_Name
@@ -3270,6 +3348,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Execute
   nameWithType: VerifyHTMLEditorAvailability.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_Name
@@ -3315,6 +3406,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute
   nameWithType: VerifyHTMLEditorContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_Name
@@ -3334,6 +3438,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability
   nameWithType: VerifyImageAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyImageAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  nameWithType: VerifyImageAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyImageAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  nameWithType: VerifyImageAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyImageAvailability_Name
@@ -3366,6 +3483,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute
   nameWithType: VerifyImageContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  nameWithType: VerifyImageContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  nameWithType: VerifyImageContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_Name
@@ -3385,6 +3515,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability
   nameWithType: VerifyLinkAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyLinkAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  nameWithType: VerifyLinkAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyLinkAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  nameWithType: VerifyLinkAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyLinkAvailability_Name
@@ -3398,38 +3541,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name
   nameWithType: VerifyLinkAvailability.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  name: VerifyObjectAttribute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html
-  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  nameWithType: VerifyObjectAttribute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute()
-  nameWithType: VerifyObjectAttribute.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  nameWithType: VerifyObjectAttribute.Execute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Name
-  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  nameWithType: VerifyObjectAttribute.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name*
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Name_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  nameWithType: VerifyObjectAttribute.Name
 - uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability
   name: VerifyObjectAvailability
   href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.html
@@ -3513,6 +3624,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability
   nameWithType: VerifyTextBoxAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxAvailability_Name
@@ -3558,6 +3682,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException
   nameWithType: VerifyTextBoxContent.HandleException
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_Name
@@ -3609,6 +3746,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
   nameWithType: VerifyWebElementAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebElementAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebElementAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_Name
@@ -3641,6 +3791,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute
   nameWithType: VerifyWebElementContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  nameWithType: VerifyWebElementContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  nameWithType: VerifyWebElementContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_Name
@@ -3660,6 +3823,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
   nameWithType: VerifyWebRadioGroupAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebRadioGroupAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_Name
@@ -3679,6 +3855,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
   nameWithType: VerifyWebTableAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebTableAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebTableAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_Name
@@ -3711,6 +3900,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute
   nameWithType: VerifyWebTableContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  nameWithType: VerifyWebTableContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  nameWithType: VerifyWebTableContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_Name
@@ -5042,6 +5244,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.Logger.LogWithFiveTabs
   nameWithType: Logger.LogWithFiveTabs
+- uid: AutomationTestingProgram.Logger.Tab(System.Int32)
+  name: Tab(Int32)
+  href: api/AutomationTestingProgram.Logger.html#AutomationTestingProgram_Logger_Tab_System_Int32_
+  commentId: M:AutomationTestingProgram.Logger.Tab(System.Int32)
+  fullName: AutomationTestingProgram.Logger.Tab(System.Int32)
+  nameWithType: Logger.Tab(Int32)
+- uid: AutomationTestingProgram.Logger.Tab*
+  name: Tab
+  href: api/AutomationTestingProgram.Logger.html#AutomationTestingProgram_Logger_Tab_
+  commentId: Overload:AutomationTestingProgram.Logger.Tab
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Logger.Tab
+  nameWithType: Logger.Tab
 - uid: AutomationTestingProgram.Logger.Warn(System.Object)
   name: Warn(Object)
   href: api/AutomationTestingProgram.Logger.html#AutomationTestingProgram_Logger_Warn_System_Object_

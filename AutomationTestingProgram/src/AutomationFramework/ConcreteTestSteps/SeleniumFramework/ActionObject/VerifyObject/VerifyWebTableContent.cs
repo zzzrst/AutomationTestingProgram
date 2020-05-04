@@ -19,6 +19,9 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "Verify WebTable Content";
 
         /// <inheritdoc/>
+        protected override string HTMLWhiteListTag { get; set; } = "";
+
+        /// <inheritdoc/>
         public override void Execute()
         {
             base.Execute();
@@ -109,7 +112,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <returns>The 2D array of the table in string representation.</returns>
         private List<List<string>> GetTable()
         {
-            string baseXPath = this.XPathBuilder(false);
+            string baseXPath = this.XPathBuilder();
 
             string tableHeaderpath = baseXPath + "/thead/tr/th";
             string tableRowPath = baseXPath + "/tbody/tr";

@@ -13,6 +13,9 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "Verify Image Content";
 
         /// <inheritdoc/>
+        protected override string HTMLWhiteListTag { get; set; } = "Image_HTMLTags";
+
+        /// <inheritdoc/>
         public override void Execute()
         {
             base.Execute();

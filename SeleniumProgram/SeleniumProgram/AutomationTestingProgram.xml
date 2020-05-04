@@ -257,6 +257,11 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.ActionObject.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag">
+            <summary>
+            Gets or sets the html Tag to use.
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.ActionObject.Attributes">
             <summary>
             Gets or sets the attributes of the element provided through the data.
@@ -275,11 +280,10 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.Execute">
             <inheritdoc/>
         </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)">
+        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder">
             <summary>
             Builds the XPath query given a test object's property attribute-value pairs.
             </summary>
-            <param name="htmlWhitelist">Determins whether to use the white list or not.</param>
             <returns>The XPath query built from the given property attribute-value pairs.</returns>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary{System.String,System.String})">
@@ -467,23 +471,15 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.UploadFile.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute">
-            <summary>
-            This test step an abstract class to verify an object's attribute.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus">
             <summary>
             This test step to verify the status of a check box.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute">
@@ -497,6 +493,9 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute">
             <inheritdoc/>
         </member>
@@ -506,6 +505,9 @@
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute">
@@ -519,6 +521,9 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute">
             <inheritdoc/>
         </member>
@@ -528,6 +533,9 @@
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute">
@@ -542,6 +550,9 @@
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute">
@@ -573,12 +584,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability">
             <summary>
             This test step to verify the availability of a check box.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability">
@@ -589,12 +606,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability">
             <summary>
             This test step to verify the availabilty of an html editor.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Execute">
@@ -611,12 +634,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability">
             <summary>
             This test step to verify the availability of an image.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability">
@@ -627,12 +656,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability">
             <summary>
             This test step to verify the availability of a textbox.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability">
@@ -643,6 +678,9 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability">
             <summary>
             This test step to verify the availability of a textbox.
@@ -651,12 +689,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent">
             <summary>
             This test step is the same as testStepXml.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute">
@@ -2283,6 +2327,11 @@
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM">
             <summary>
             Gets or sets the ALM Connector.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun">
+            <summary>
+            Gets or sets a value indicating whether determines whether or not to continue to run.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)">

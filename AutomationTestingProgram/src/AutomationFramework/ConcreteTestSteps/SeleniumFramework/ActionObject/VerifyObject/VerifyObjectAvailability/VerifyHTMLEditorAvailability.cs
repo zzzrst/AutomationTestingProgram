@@ -18,6 +18,9 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "Verify HTML Editor Availability";
 
         /// <inheritdoc/>
+        protected override string HTMLWhiteListTag { get; set; } = "";
+
+        /// <inheritdoc/>
         public override void Execute()
         {
             InformationObject.TestAutomationDriver.SwitchToIFrame(this.Arguments["object"]);

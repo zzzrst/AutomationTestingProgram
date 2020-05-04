@@ -9,6 +9,7 @@ namespace AutomationTestingProgram.GeneralData
     using System.Configuration;
     using System.Text;
     using ALMConnector;
+    using Helper;
     using TDAPIOLELib;
     using static AutomationTestingProgram.InformationObject;
 
@@ -27,6 +28,19 @@ namespace AutomationTestingProgram.GeneralData
             string password = ConfigurationManager.AppSettings["ALMpassword"];
             string domain = ConfigurationManager.AppSettings["ALMdomain"];
             string project = ConfigurationManager.AppSettings["ALMproject"];
+
+            // check if password is encrypted
+            try
+            {
+                if (bool.Parse(ConfigurationManager.AppSettings["passwordEncrypted"]))
+                {
+                    password = Helper.DecryptString(password, Environment.MachineName);
+                }
+            }
+            catch (Exception)
+            {
+                Logger.Warn("Configuration passwordEncrypted has the wrong value. Use true or false as values");
+            }
 
             Dictionary<EnvVar, string> parameters = new Dictionary<EnvVar, string>();
             Connector alm = new Connector(username, password, domain, project);

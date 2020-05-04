@@ -19,6 +19,11 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "ActionObject";
 
         /// <summary>
+        /// Gets or sets the html Tag to use.
+        /// </summary>
+        protected virtual string HTMLWhiteListTag { get; set; } = "";
+
+        /// <summary>
         /// Gets or sets the attributes of the element provided through the data.
         /// </summary>
         protected IDictionary<string, string> Attributes { get; set; }
@@ -73,12 +78,12 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Builds the XPath query given a test object's property attribute-value pairs.
         /// </summary>
-        /// <param name="htmlWhitelist">Determins whether to use the white list or not.</param>
         /// <returns>The XPath query built from the given property attribute-value pairs.</returns>
-        protected string XPathBuilder(bool htmlWhitelist = true)
+        protected string XPathBuilder()
         {
+            bool htmlWhitelist = this.HTMLWhiteListTag != string.Empty;
             const string AND = " and ";
-            List<string> htmltagwhiteList = htmlWhitelist ? new List<string>(ConfigurationManager.AppSettings["WebCheckBox_HTMLTags"].ToString().Split(',')) : new List<string>() { };
+            List<string> htmltagwhiteList = htmlWhitelist ? new List<string>(ConfigurationManager.AppSettings[this.HTMLWhiteListTag].ToString().Split(',')) : new List<string>() { };
             List<string> xPathIgnoreList = new List<string>(ConfigurationManager.AppSettings["XPATH_IGNORE_LIST"].ToString().Split(','));
             for (int i = 0; i < xPathIgnoreList.Count; i++)
             {

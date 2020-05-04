@@ -22,33 +22,18 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
 
-            string pdfPath = this.Arguments["object"];
-            string cmdRun = this.Arguments["value"];
-            string outputPath = this.Arguments["comments"];
+            string pdfFileToConvert_Expected = $"{this.Arguments["object"]}";
+            string pdfFileToConvert_Actual = this.Arguments["value"];
 
-            string executingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string scriptPath = Path.Combine(executingPath, "scripts", "PDFConverter\\converter.bat");
+            PDFToolWrapper.RunPDFToText(pdfFileToConvert_Expected, @"C:\Temp\expected.txt", Logger.GetLog4NetLogger());
+            this.TestStepStatus.Actual = $@"Converted {pdfFileToConvert_Expected} to C:\Temp\expected.txt.";
+            Logger.Info(Logger.Tab(4) + this.TestStepStatus.Actual);
 
-            Process p = new Process();
-            ProcessStartInfo startInfo = new ProcessStartInfo
-            {
-                UseShellExecute = false,
-                RedirectStandardOutput = true,
-                FileName = "cmd.exe",
-                Arguments = $"/C exit | \"{scriptPath}\" \"{pdfPath}\" \"{cmdRun}\" {outputPath}",
-            };
-            p.StartInfo = startInfo;
-            p.Start();
-            Logger.LogStdout();
-            string line;
-            while ((line = p.StandardOutput.ReadLine()) != null)
-            {
-                Logger.LogWithFiveTabs(line);
-                this.TestStepStatus.Actual += "\n" + line;
-            }
+            PDFToolWrapper.RunPDFToText(pdfFileToConvert_Expected, @"C:\Temp\actual.txt", Logger.GetLog4NetLogger());
+            string secondMessage = $@"Converted {pdfFileToConvert_Actual} to C:\Temp\actual.txt.";
+            this.TestStepStatus.Actual += secondMessage;
 
-            p.WaitForExit();
-            this.TestStepStatus.RunSuccessful = p.ExitCode == 0;
+            Logger.Info(Logger.Tab(4) + secondMessage);
         }
     }
 }

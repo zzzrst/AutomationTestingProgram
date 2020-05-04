@@ -10,6 +10,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.Text;
     using ALMConnector;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
+    using AutomationTestingProgram.Helper;
     using AutomationTestingProgram.TestingData;
     using AutomationTestSetFramework;
     using static AutomationTestingProgram.InformationObject;
@@ -44,6 +45,9 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         public Connector ALM { get; set; }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether determines whether or not to continue to run.
+        /// </summary>
         public bool ContinueToRun { get; set; } = true;
 
         private string TestIDName { get; set; }
@@ -124,6 +128,19 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             string password = ConfigurationManager.AppSettings["ALMpassword"].ToString();
             string domain = ConfigurationManager.AppSettings["ALMdomain"].ToString();
             string project = ConfigurationManager.AppSettings["ALMproject"].ToString();
+
+            // check if password is encrypted
+            try
+            {
+                if (bool.Parse(ConfigurationManager.AppSettings["passwordEncrypted"]))
+                {
+                    password = Helper.DecryptString(password, Environment.MachineName);
+                }
+            }
+            catch (Exception)
+            {
+                Logger.Warn("Configuration passwordEncrypted has the wrong value. Use true or false as values");
+            }
 
             if (this.ALM == null)
             {

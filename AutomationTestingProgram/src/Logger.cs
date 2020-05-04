@@ -119,7 +119,7 @@ namespace AutomationTestingProgram
         /// </summary>
         /// <param name="indents">Number of tabs.</param>
         /// <returns>Sequence of tabs represented as whitespaces.</returns>
-        private static string Tab(int indents = 1)
+        public static string Tab(int indents = 1)
         {
             return string.Concat(Enumerable.Repeat("    ", indents));
         }
