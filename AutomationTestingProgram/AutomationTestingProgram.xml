@@ -965,6 +965,9 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute">
             <inheritdoc/>
         </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyAlertText">
             <summary>
             This test step is  to verify the text of an alert.

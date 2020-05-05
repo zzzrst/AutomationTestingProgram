@@ -17,23 +17,17 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
 
-            bool passed = false;
-            string message = string.Empty;
             string value = this.Arguments["value"];
             string alertText = InformationObject.TestAutomationDriver.GetAlertText();
 
-            if (alertText == value)
+            if (this.TestStepStatus.RunSuccessful = alertText == value)
             {
-                passed = true;
-                message = $"Text found in the alert was same as expected: {value}";
+                this.TestStepStatus.Actual = $"Text found in the alert was same as expected: {value}";
             }
             else
             {
-                message = $"Expected text to be {value} but found {alertText}";
+                this.TestStepStatus.Actual = $"Expected text to be {value} but found {alertText}";
             }
-
-            this.TestStepStatus.Actual = message;
-            this.TestStepStatus.RunSuccessful = passed;
         }
     }
 }

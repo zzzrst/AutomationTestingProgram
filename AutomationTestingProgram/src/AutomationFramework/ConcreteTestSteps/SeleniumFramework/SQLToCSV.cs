@@ -17,6 +17,11 @@ namespace AutomationTestingProgram.AutomationFramework
     /// </summary>
     public class SQLToCSV : TestStep
     {
+        private string sqlQuery;
+        private string csvPath;
+        private string comment;
+        private string environment;
+
         /// <inheritdoc/>
         public override string Name { get; set; } = "SQLToCSV";
 
@@ -24,56 +29,46 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            bool passed = false;
-            string environment = GetEnvironmentVariable(EnvVar.Environment);
 
-            string sqlQuery = this.Arguments["object"];
-            string csvPath = this.Arguments["value"];
-            string comment = this.Arguments["comment"];
-            string message = string.Empty;
+            this.environment = GetEnvironmentVariable(EnvVar.Environment);
+            this.sqlQuery = this.Arguments["object"];
+            this.csvPath = this.Arguments["value"];
+            this.comment = this.Arguments["comment"];
 
-            // need to implement.
-            if (comment.StartsWith("@"))
+            if (this.comment.StartsWith("@") && !this.comment.ToLower().Contains("current"))
             {
-                if (!comment.ToLower().Contains("current"))
-                {
-                    environment = comment.Substring(1);
-                }
+                this.environment = this.comment.Substring(1);
             }
 
             // attempt to execute the SQL script
-            try
+            List<List<object>> table = null;
+            if (this.environment.ToLower() == ConfigurationManager.AppSettings["DBTestCaseDatabase"].ToString().ToLower())
             {
-                List<List<object>> table = null;
-                if (environment.ToLower() == ConfigurationManager.AppSettings["DBTestCaseDatabase"].ToString().ToLower())
-                {
-                    table = ((DatabaseStepData)TestStepData).ProcessQADBSelectQuery(sqlQuery);
-                }
-                else
-                {
-                    table = ((DatabaseStepData)TestStepData).ProcessEnvironmentSelectQuery(environment, sqlQuery);
-                }
-
-                string csv = string.Join("\n", table.Select(
-                                                     x => string.Join(",", x.Select(
-                                                                             y => y == null ? string.Empty : $"\"{y}\"").ToArray())).ToArray());
-                if (File.Exists(csvPath))
-                {
-                    File.Delete(csvPath);
-                }
-
-                File.WriteAllText(csvPath, csv);
-                passed = true;
-                message = $"Sucessfully wrote sql (${table.Count} rows) to {csvPath}";
+                table = ((DatabaseStepData)TestStepData).ProcessQADBSelectQuery(this.sqlQuery);
             }
-            catch (Exception ex)
+            else
             {
-                message = $"Something went wrong {ex.ToString()}";
-                this.TestStepStatus.FriendlyErrorMessage = $"Tryed to execute {sqlQuery} in {environment} saving to {csvPath}.";
+                table = ((DatabaseStepData)TestStepData).ProcessEnvironmentSelectQuery(this.environment, this.sqlQuery);
             }
 
-            this.TestStepStatus.ErrorStack = message;
-            this.TestStepStatus.RunSuccessful = passed;
+            string csv = string.Join("\n", table.Select(
+                                                    x => string.Join(",", x.Select(
+                                                                            y => y == null ? string.Empty : $"\"{y}\"").ToArray())).ToArray());
+            if (File.Exists(this.csvPath))
+            {
+                File.Delete(this.csvPath);
+            }
+
+            File.WriteAllText(this.csvPath, csv);
+            this.TestStepStatus.Actual = $"Sucessfully wrote sql (${table.Count} rows) to {this.csvPath}";
+        }
+
+        /// <inheritdoc/>
+        public override void HandleException(Exception e)
+        {
+            base.HandleException(e);
+            this.TestStepStatus.Actual += $"Something went wrong {e}";
+            this.TestStepStatus.FriendlyErrorMessage = $"Tryed to execute {this.sqlQuery} in {this.environment} saving to {this.csvPath}.";
         }
     }
 }

@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using OpenQA.Selenium;
-using TestingDriver;
-
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using OpenQA.Selenium;
+    using TestingDriver;
+
     /// <summary>
     /// .
     /// </summary>

@@ -1934,6 +1934,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute
   nameWithType: SQLToCSV.Execute
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)
+  name: HandleException(Exception)
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_HandleException_System_Exception_
+  commentId: M:AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)
+  nameWithType: SQLToCSV.HandleException(Exception)
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException*
+  name: HandleException
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_HandleException_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException
+  nameWithType: SQLToCSV.HandleException
 - uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_Name

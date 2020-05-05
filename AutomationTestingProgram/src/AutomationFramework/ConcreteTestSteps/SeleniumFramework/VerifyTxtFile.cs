@@ -25,21 +25,20 @@ namespace AutomationTestingProgram.AutomationFramework
             base.Execute();
 
             string option = this.Arguments["comment"];
-            if (option.ToLower() == "againsttextfile" || option == "0")
+            switch (option.ToLower())
             {
-                this.VerifyAgainstTextFile();
-            }
-            else if (option.ToLower() == "againststring" || option == "1")
-            {
-                this.VerifyAgainstString();
-            }
-            else if (option.ToLower() == "findString" || option == "2")
-            {
-                this.FindString();
-            }
-            else
-            {
-                Logger.Warn($"{option} is not an option for verify txt file");
+                case "0": case "againsttextfile":
+                    this.VerifyAgainstTextFile();
+                    break;
+                case "1": case "againststring":
+                    this.VerifyAgainstString();
+                    break;
+                case "2": case "findstring":
+                    this.FindString();
+                    break;
+                default:
+                    Logger.Warn($"{option} is not an option for verify txt file");
+                    break;
             }
         }
 
@@ -71,19 +70,15 @@ namespace AutomationTestingProgram.AutomationFramework
             TextInteractor txtfile = new TextInteractor(this.Arguments["object"], Logger.GetLog4NetLogger());
             if (value.Contains(Seperator))
             {
-                int lineNumber = 0;
-                string expectedString = string.Empty;
-
-                lineNumber = int.Parse(value.Substring(0, value.IndexOf(Seperator)));
-                expectedString = value.Substring(value.IndexOf(Seperator) + 3);
-
+                int lineNumber = int.Parse(value.Substring(0, value.IndexOf(Seperator)));
+                string expectedString = value.Substring(value.IndexOf(Seperator) + 3);
                 if (InformationObject.TestCaseData is DatabaseStepData database)
                 {
                     expectedString = database.QuerySpecialChars(GetEnvironmentVariable(EnvVar.Environment), expectedString).ToString();
                 }
 
                 this.TestStepStatus.RunSuccessful = txtfile.LineExactMatch(expectedString, lineNumber);
-                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? $"Successfully found {expectedString} on line {lineNumber}" : $"Could not find {expectedString} on line {lineNumber}";
+                this.TestStepStatus.Actual = (this.TestStepStatus.RunSuccessful ? "Successfully found" : "Could not find") + $" {expectedString} on line {lineNumber}";
             }
             else
             {
@@ -98,48 +93,48 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             string value = this.Arguments["value"];
             TextInteractor txtfile = new TextInteractor(this.Arguments["object"], Logger.GetLog4NetLogger());
+            string expectedString;
+
             if (value.Contains(Seperator))
             {
-                string expectedString = value.Substring(0, value.IndexOf(Seperator));
+                expectedString = value.Substring(0, value.IndexOf(Seperator));
                 string argument = value.Substring(value.IndexOf(Seperator) + 3);
-                int amountOfTimes = -1;
-
                 if (InformationObject.TestCaseData is DatabaseStepData database)
                 {
                     expectedString = database.QuerySpecialChars(GetEnvironmentVariable(EnvVar.Environment), expectedString).ToString();
                 }
 
+                int amountOfTimes;
                 if (int.TryParse(argument, out amountOfTimes))
                 {
                     this.TestStepStatus.RunSuccessful = txtfile.FindAndCount(expectedString) == amountOfTimes;
                 }
                 else
                 {
-                    if (argument.ToLower() == "exist")
+                    switch (argument.ToLower())
                     {
-                        this.TestStepStatus.RunSuccessful = txtfile.Find(expectedString);
-                    }
-                    else if (argument.ToLower() == "dne")
-                    {
-                        this.TestStepStatus.RunSuccessful = !txtfile.Find(expectedString);
-                    }
-                    else
-                    {
-                        this.TestStepStatus.RunSuccessful = false;
-                        this.TestStepStatus.Actual = "For the value argument, did not pass Exist, DNE or a number.";
-                    }
-
-                    if (this.TestStepStatus.Actual == string.Empty)
-                    {
-                        this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? $"Successfully found {expectedString}." : $"Could not find {expectedString}.";
+                        case "exist":
+                            this.TestStepStatus.RunSuccessful = txtfile.Find(expectedString);
+                            break;
+                        case "dne":
+                            this.TestStepStatus.RunSuccessful = !txtfile.Find(expectedString);
+                            break;
+                        default:
+                            this.TestStepStatus.RunSuccessful = false;
+                            this.TestStepStatus.Actual = "For the value argument, did not pass Exist, DNE or a number.";
+                            break;
                     }
                 }
             }
             else
             {
-                string expectedString = value;
+                expectedString = value;
                 this.TestStepStatus.RunSuccessful = txtfile.Find(expectedString);
-                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? $"Successfully found {expectedString}" : $"Could not find {expectedString}";
+            }
+
+            if (this.TestStepStatus.Actual == string.Empty)
+            {
+                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? $"Successfully found {expectedString}." : $"Could not find {expectedString}.";
             }
 
             txtfile.Close();

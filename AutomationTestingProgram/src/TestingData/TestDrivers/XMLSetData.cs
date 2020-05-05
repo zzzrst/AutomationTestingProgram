@@ -6,10 +6,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;
-    using System.IO;
     using System.Xml;
-    using AutomationTestingProgram.AutomationFramework;
-    using AutomationTestingProgram.Helper;
     using AutomationTestSetFramework;
     using TestingDriver;
 

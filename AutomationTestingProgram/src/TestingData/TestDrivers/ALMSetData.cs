@@ -79,9 +79,9 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             try
             {
-                if (TestCaseData is DatabaseCaseData)
+                if (TestCaseData is DatabaseCaseData databaseData)
                 {
-                    testCase = ((DatabaseCaseData)TestCaseData).SetUpTestCase(testCaseID, collection, release, true);
+                    testCase = databaseData.SetUpTestCase(testCaseID, collection, release, true);
                 }
                 else
                 {

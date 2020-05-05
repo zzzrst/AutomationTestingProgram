@@ -30,43 +30,32 @@ namespace AutomationTestingProgram.AutomationFramework
             string expectedFilePath = this.Arguments["object"];
             string actualFilePath = this.Arguments["value"];
             string comment = this.Arguments["comment"];
-            bool passed = false;
-            string resultMsg = "Something went wrong!";
 
-            try
+            // parse comment to get coordinates of bounding box
+            List<string> valueSeperated = comment.Split(';').ToList();
+            if (valueSeperated.Count != 2)
             {
-                // parse comment to get coordinates of bounding box
-                List<string> valueSeperated = comment.Split(';').ToList();
-                if (valueSeperated.Count != 2)
-                {
-                    Logger.Info("Was not formatted properly. Must be SheetName;x1,y1:x2,y2");
-                }
-
-                string sheetName = valueSeperated[0];
-                int topX = int.Parse(valueSeperated[1].Split(':')[0].Split(',')[0]) - 1;
-                int topY = int.Parse(valueSeperated[1].Split(':')[0].Split(',')[1]) - 1;
-                int botX = int.Parse(valueSeperated[1].Split(':')[1].Split(',')[0]) - 1;
-                int botY = int.Parse(valueSeperated[1].Split(':')[1].Split(',')[1]) - 1;
-
-                passed = this.CompareExcel(expectedFilePath, actualFilePath, sheetName, topX, topY, botX, botY);
-                resultMsg = passed ? "Both files were the same" : "There were differences!. Please find the result file on the desktop";
-
-                // CR: Attach excel files that were compared. Attach resulting file if there were differences.
-                InformationObject.TestSetData.AddAttachment(expectedFilePath);
-                InformationObject.TestSetData.AddAttachment(actualFilePath);
-                if (!passed)
-                {
-                    InformationObject.TestSetData.AddAttachment(this.resultFilePath);
-                }
-            }
-            catch (Exception e)
-            {
-                Logger.Error(e.ToString());
+                Logger.Info("Was not formatted properly. Must be SheetName;x1,y1:x2,y2");
             }
 
-            this.TestStepStatus.Actual = resultMsg;
+            string sheetName = valueSeperated[0];
+            int topX = int.Parse(valueSeperated[1].Split(':')[0].Split(',')[0]) - 1;
+            int topY = int.Parse(valueSeperated[1].Split(':')[0].Split(',')[1]) - 1;
+            int botX = int.Parse(valueSeperated[1].Split(':')[1].Split(',')[0]) - 1;
+            int botY = int.Parse(valueSeperated[1].Split(':')[1].Split(',')[1]) - 1;
+
+            bool passed = this.CompareExcel(expectedFilePath, actualFilePath, sheetName, topX, topY, botX, botY);
+            this.TestStepStatus.Actual = passed ? "Both files were the same" : "There were differences!. Please find the result file on the desktop";
+
+            // CR: Attach excel files that were compared. Attach resulting file if there were differences.
+            InformationObject.TestSetData.AddAttachment(expectedFilePath);
+            InformationObject.TestSetData.AddAttachment(actualFilePath);
+            if (!passed)
+            {
+                InformationObject.TestSetData.AddAttachment(this.resultFilePath);
+            }
+
             this.TestStepStatus.RunSuccessful = passed;
-            Logger.Info(resultMsg);
         }
 
         /// <summary> Open an Excel file (xls or xlsx) and convert it into a DataTable.
@@ -81,140 +70,125 @@ namespace AutomationTestingProgram.AutomationFramework
         private bool CompareExcel(string filePath, string filePath2, string sheetName, int topX, int topY, int botX, int botY)
         {
             bool difference = false;
-            try
+
+            filePath = this.VerifyAndConvert(filePath);
+            filePath2 = this.VerifyAndConvert(filePath2);
+            this.resultFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"//CompareExcelResult_{DateTime.Now:MM_dd_yyyy_hh_mm_ss_tt}.xlsx";
+
+            using (FileStream expectedFS = new FileStream(filePath, FileMode.Open, FileAccess.Read))
             {
-                // check if file was found / not.
-                if (!File.Exists(filePath))
+                using (FileStream actualFS = new FileStream(filePath2, FileMode.Open, FileAccess.Read))
                 {
-                    throw new Exception($"File {filePath} was not found.");
-                }
-
-                if (!File.Exists(filePath2))
-                {
-                    throw new Exception($"File  {filePath2} was not found.");
-                }
-
-                this.resultFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"//CompareExcelResult_{DateTime.Now:MM_dd_yyyy_hh_mm_ss_tt}.xlsx";
-
-                // Convert if provided file has .csv extension.
-                if (Path.GetExtension(filePath) == ".csv")
-                {
-                    string excelFilePath = Path.GetDirectoryName(filePath) + "\\" + Path.GetFileNameWithoutExtension(filePath) + ".xlsx";
-                    this.ConvertCSVtoXLSX(excelFilePath, filePath);
-                    filePath = excelFilePath;
-                }
-
-                if (Path.GetExtension(filePath2) == ".csv")
-                {
-                    string excelFilePath = Path.GetDirectoryName(filePath2) + "\\" + Path.GetFileNameWithoutExtension(filePath2) + ".xlsx";
-                    this.ConvertCSVtoXLSX(excelFilePath, filePath2);
-                    filePath2 = excelFilePath;
-                }
-
-                // set up workbooks and sheets to use.
-                IWorkbook expectedWorkbook = null;
-                IWorkbook actualWorkbook = null;
-                IWorkbook resultWorkbook = null;
-
-                ISheet expectedSheet = null;
-                ISheet actualSheet = null;
-                ISheet resultSheet = null;
-
-                using (FileStream expectedFS = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-                {
-                    using (FileStream actualFS = new FileStream(filePath2, FileMode.Open, FileAccess.Read))
+                    using (FileStream resultFS = new FileStream(this.resultFilePath, FileMode.Create, FileAccess.Write))
                     {
-                        using (FileStream resultFS = new FileStream(this.resultFilePath, FileMode.Create, FileAccess.Write))
+                        // set up workbooks and sheets to use.
+                        // open both XLS and XLSX
+                        IWorkbook expectedWorkbook = WorkbookFactory.Create(expectedFS);
+                        IWorkbook actualWorkbook = WorkbookFactory.Create(actualFS);
+                        IWorkbook resultWorkbook = new XSSFWorkbook();
+
+                        // set sheet. If null, use the first sheet.
+                        ISheet expectedSheet = expectedWorkbook.GetSheet(sheetName) ?? expectedWorkbook.GetSheetAt(0);
+                        ISheet actualSheet = actualWorkbook.GetSheet(sheetName) ?? actualWorkbook.GetSheetAt(0);
+                        ISheet resultSheet = resultWorkbook.CreateSheet();
+
+                        // create cell style for result file.
+                        ICellStyle resultCellStyle = resultWorkbook.CreateCellStyle();
+                        resultCellStyle.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Yellow.Index;
+                        resultCellStyle.FillPattern = FillPattern.SolidForeground;
+
+                        // Error if our range is greater than our worksheet last row number
+                        int lastRow = botX;
+                        if (botX > expectedSheet.LastRowNum || botX > actualSheet.LastRowNum)
                         {
-                            // open both XLS and XLSX
-                            expectedWorkbook = WorkbookFactory.Create(expectedFS);
-                            actualWorkbook = WorkbookFactory.Create(actualFS);
-                            resultWorkbook = new XSSFWorkbook();
+                            lastRow = Math.Min(expectedSheet.LastRowNum, actualSheet.LastRowNum);
+                            Logger.Info($"The range is not valid. Provided last row is {botX + 1} while sheet only has {lastRow + 1}");
+                        }
 
-                            // set sheet. If null, use the first sheet.
-                            expectedSheet = expectedWorkbook.GetSheet(sheetName) ?? expectedWorkbook.GetSheetAt(0);
-                            actualSheet = actualWorkbook.GetSheet(sheetName) ?? actualWorkbook.GetSheetAt(0);
-                            resultSheet = resultWorkbook.CreateSheet();
+                        // loop from topX to lastRow
+                        for (int rowIndex = topX; rowIndex <= lastRow; rowIndex++)
+                        {
+                            IRow expectedRow = expectedSheet.GetRow(rowIndex);
+                            IRow actualRow = actualSheet.GetRow(rowIndex);
+                            IRow resultRow = resultSheet.CreateRow(rowIndex);
 
-                            // create cell style for result file.
-                            ICellStyle resultCellStyle = resultWorkbook.CreateCellStyle();
-                            resultCellStyle.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Yellow.Index;
-                            resultCellStyle.FillPattern = FillPattern.SolidForeground;
-
-                            // Error if our range is greater than our worksheet last row number
-                            int lastRow = botX;
-                            if (botX > expectedSheet.LastRowNum || botX > actualSheet.LastRowNum)
+                            // null is when the row only contains empty cells
+                            if (expectedRow == null)
                             {
-                                lastRow = Math.Min(expectedSheet.LastRowNum, actualSheet.LastRowNum);
-                                Logger.Info($"The range is not valid. Provided last row is {botX + 1} while sheet only has {lastRow + 1}");
-                            }
-
-                            // loop from topX to lastRow
-                            for (int rowIndex = topX; rowIndex <= lastRow; rowIndex++)
-                            {
-                                IRow expectedRow = expectedSheet.GetRow(rowIndex);
-                                IRow actualRow = actualSheet.GetRow(rowIndex);
-                                IRow resultRow = resultSheet.CreateRow(rowIndex);
-
-                                // null is when the row only contains empty cells
-                                if (expectedRow == null)
+                                if (actualRow != null)
                                 {
-                                    if (actualRow != null)
-                                    {
-                                        Logger.Info($"Expected row is empty, but actualRow isn't. We found {actualRow}.");
-                                    }
+                                    Logger.Info($"Expected row is empty, but actualRow isn't. We found {actualRow}.");
                                 }
-                                else
+                            }
+                            else
+                            {
+                                // set up for column index.
+                                int lastColIndex = botY;
+                                if (lastColIndex > expectedRow.Cells.Count || lastColIndex > actualRow.Cells.Count)
                                 {
-                                    // set up for column index.
-                                    int lastColIndex = botY;
-                                    if (lastColIndex > expectedRow.Cells.Count || lastColIndex > actualRow.Cells.Count)
+                                    lastColIndex = Math.Min(expectedRow.Cells.Count, actualRow.Cells.Count);
+                                }
+
+                                for (int colIndex = topY; colIndex <= lastColIndex; colIndex++)
+                                {
+                                    ICell expectedCell = expectedRow.GetCell(colIndex);
+                                    ICell actualCell = actualRow.GetCell(colIndex);
+                                    ICell resultCell = resultRow.CreateCell(colIndex);
+
+                                    string expectedValue = expectedCell == null ? string.Empty : expectedCell.ToString();
+                                    string actualValue = actualCell == null ? string.Empty : actualCell.ToString();
+
+                                    // if both are null, then expetedCell will be equal to actual cell
+                                    if (expectedValue != actualValue)
                                     {
-                                        lastColIndex = Math.Min(expectedRow.Cells.Count, actualRow.Cells.Count);
+                                        string cellValue = $"Expected {expectedValue} but found {actualValue} at ({rowIndex + 1},{colIndex + 1})";
+                                        resultCell.CellStyle = resultCellStyle;
+                                        resultCell.SetCellValue(cellValue);
+                                        Logger.Info(cellValue);
+                                        difference = true;
                                     }
-
-                                    for (int colIndex = topY; colIndex <= lastColIndex; colIndex++)
+                                    else
                                     {
-                                        ICell expectedCell = expectedRow.GetCell(colIndex);
-                                        ICell actualCell = actualRow.GetCell(colIndex);
-                                        ICell resultCell = resultRow.CreateCell(colIndex);
-
-                                        string expectedValue = expectedCell == null ? string.Empty : expectedCell.ToString();
-                                        string actualValue = actualCell == null ? string.Empty : actualCell.ToString();
-
-                                        // if both are null, then expetedCell will be equal to actual cell
-                                        if (expectedValue != actualValue)
-                                        {
-                                            string cellValue = $"Expected {expectedValue} but found {actualValue} at ({rowIndex + 1},{colIndex + 1})";
-                                            resultCell.CellStyle = resultCellStyle;
-                                            resultCell.SetCellValue(cellValue);
-                                            Logger.Info(cellValue);
-                                            difference = true;
-                                        }
-                                        else
-                                        {
-                                            resultCell.SetCellValue($"{expectedCell}");
-                                        }
+                                        resultCell.SetCellValue($"{expectedCell}");
                                     }
                                 }
                             }
+                        }
 
-                            resultWorkbook.Write(resultFS);
+                        resultWorkbook.Write(resultFS);
 
-                            if (!difference)
-                            {
-                                File.Delete(this.resultFilePath);
-                            }
+                        if (!difference)
+                        {
+                            File.Delete(this.resultFilePath);
                         }
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
 
             return !difference;
+        }
+
+        /// <summary>
+        /// Verifies that the file exists and convert to xlsx if needed.
+        /// </summary>
+        /// <param name="filePath">the path to the file.</param>
+        private string VerifyAndConvert(string filePath)
+        {
+            // check if file was found / not.
+            if (!File.Exists(filePath))
+            {
+                throw new Exception($"File {filePath} was not found.");
+            }
+
+            // Convert if provided file has .csv extension.
+            if (Path.GetExtension(filePath) == ".csv")
+            {
+                string excelFilePath = Path.GetDirectoryName(filePath) + "\\" + Path.GetFileNameWithoutExtension(filePath) + ".xlsx";
+                this.ConvertCSVtoXLSX(excelFilePath, filePath);
+                filePath = excelFilePath;
+            }
+
+            return filePath;
         }
 
         /// <summary>

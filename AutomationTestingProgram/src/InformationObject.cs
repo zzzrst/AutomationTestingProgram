@@ -211,7 +211,7 @@ namespace AutomationTestingProgram
             csvFileName = csvFileName.Substring(0, csvFileName.Length - 4);
 
             CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{csvFileName}.csv");
-            CSVLogger.AddResults($"Transaction, {DateTime.Now.ToString("G")}");
+            CSVLogger.AddResults($"Transaction, {DateTime.Now:G}");
             CSVLogger.AddResults($"Environment URL, {GetEnvironmentVariable(EnvVar.URL)}");
 
             LogSaveFileLocation = logSaveLocation;
@@ -256,13 +256,14 @@ namespace AutomationTestingProgram
 
         private static void SetReporter(string reportSaveLocation)
         {
-            if (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower() == "alm")
+            switch (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower())
             {
-                Reporter = new ALMReporter(Path.Combine(reportSaveLocation, "Report.txt"));
-            }
-            else
-            {
-                Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
+                case "alm":
+                    Reporter = new ALMReporter(string.Empty);
+                    break;
+                default:
+                    Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
+                    break;
             }
         }
     }
