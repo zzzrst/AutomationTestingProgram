@@ -20,9 +20,7 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
 
-            string expectedValue = this.Arguments["value"];
-            expectedValue = expectedValue.ToUpper();
-
+            string expectedValue = this.Arguments["value"].ToUpper();
             bool state = InformationObject.TestAutomationDriver.VerifyElementSelected(this.XPath, this.JsCommand);
 
             this.TestStepStatus.RunSuccessful = (expectedValue == "ON" && state) || (expectedValue == "OFF" && !state);
