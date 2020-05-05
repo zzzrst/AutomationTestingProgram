@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <DocumentationFile>C:\Users\DUONGCH\Projects\SeleniumFramework\SeleniumProgram\SeleniumProgram\AutomationTestingProgram.xml</DocumentationFile>
+    <DocumentationFile>.\AutomationTestingProgram.XML</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -26,17 +26,6 @@
 
   <ItemGroup>
     <None Remove="src\GeneralData\DataVerifier\SeleniumPerf.xsd" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <COMReference Include="TDAPIOLELib.dll">
-      <Guid>f645bd06-e1b4-4e6a-82fb-e97d027fd456</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>false</Isolated>
-    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -78,6 +67,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ALMConnector\ALMConnector.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TDAPIOLELib">
+      <HintPath>..\ALMConnector\TDAPIOLELib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

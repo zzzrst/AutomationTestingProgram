@@ -20,17 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <COMReference Include="TDAPIOLELib.dll">
-      <Guid>f645bd06-e1b4-4e6a-82fb-e97d027fd456</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>false</Isolated>
-    </COMReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="ALMProjectEntityFieldMapping.xml" />
     <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -62,6 +51,12 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TDAPIOLELib">
+      <HintPath>TDAPIOLELib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
