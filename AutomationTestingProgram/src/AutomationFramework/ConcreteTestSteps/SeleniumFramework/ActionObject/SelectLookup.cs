@@ -28,32 +28,13 @@ namespace AutomationTestingProgram.AutomationFramework
             }
 
             // widgetSpanXPath += $"//span[@arial-label='Select box activate']";
-            /*WebElement widgetSpan = new WebElement(this.BrowserDriver.GetBrowser(), widgetSpanXPath, 10);
-            if (widgetSpan.IsFound)
-            {
-                widgetSpan.Click();
+            InformationObject.TestAutomationDriver.ClickElement(widgetSpanXPath);
 
-                this.BrowserDriver.WaitForSpinner();
+            // click link based on value
+            string link = $"//div[contains(text(),'{this.Arguments["value"]}')]";
+            InformationObject.TestAutomationDriver.ClickElement(link);
 
-                // click link based on value
-                string link = $"//div[contains(text(),'{this.Value}')]";
-                WebElement lookupLink = new WebElement(this.BrowserDriver.GetBrowser(), link, 10);
-
-                if (lookupLink.IsFound)
-                {
-                    lookupLink.Click();
-                    this.TestStepStatus.RunSuccessful = true;
-                    this.TestStepStatus.Actual = $"Successfully clicked on {value} found in {widgetSpanXPath}";
-                }
-                else
-                {
-                    this.TestStepStatus.Actual = $"Could not find the link that contains the text {value}";
-                }
-            }
-            else
-            {
-                this.TestStepStatus.Actual = $"Could not find drop down list using {widgetSpanXPath}";
-            }*/
+            this.TestStepStatus.Actual = $"Successfully clicked on {value} found in {widgetSpanXPath}";
         }
     }
 }
