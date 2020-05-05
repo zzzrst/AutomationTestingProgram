@@ -1,9 +1,10 @@
 # Automation Testing Program
-This is a .Net Core 3 Console Application. This Directory contains the source code for the Automation Testing program application. This program allows users to create and run tests for application from different files. Please read the [Documentation](https://zzzrst.github.io/AutomationTestingProgram/.) on how to use and modify the program to your needs.
+This is a _.Net Core 3_ console application. This repository contains the source code for the Automation Testing Program. This application allows users to create and run tests with different data formats for web applications. Please read the [Documentation](https://zzzrst.github.io/AutomationTestingProgram/.) on how to use and modify the program to your needs.
 
-## How To run
+## How to Run
 
-You need to pass in arguments when running this through command line. Below are arguments that you can use.
+Below are the command line arguments that can be passed in.
+
 
 Mandatory
 
@@ -76,14 +77,16 @@ Optional
 
 * [TestingDrivers](https://github.com/zzzrst/TestingDrivers)
 * [AutomationTestSetFramework](https://github.com/zzzrst/AutomationTestSetFramework)
-
-To Be added
-* [ALM](https://github.com/zzzrst/ALM)
 * [DatabaseConnector](https://github.com/zzzrst/DatabaseConnector)
 * [TextInteractor](https://github.com/zzzrst/TextInteractor)
 * [ComparePDF](https://github.com/zzzrst/ComparePDF)
 
-## Other Notes
-Version number are labed as MAJOR.MINOR.dailyBuild.buildTime
-Major changes are when new classes are added, except helper classes, or when a large change is made to the code such as a large functionality change.
-Minor changes are when methods are added/removed or a helper class is added.
+To Be added
+* [ALM](https://github.com/zzzrst/ALM)
+
+## Version Number
+The version number for this repository follows (MAJOR).(MINOR).(dailyBuild).(buildTime).
+
+Major version is updated when a large functionality has changed / is introduced.
+
+Minor version is updated when methods are added / removed for bug fixes or a helper class is added due to refactoring.
