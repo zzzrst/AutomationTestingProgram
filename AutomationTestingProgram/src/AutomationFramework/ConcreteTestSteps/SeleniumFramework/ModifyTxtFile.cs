@@ -30,19 +30,23 @@ namespace AutomationTestingProgram.AutomationFramework
             string toReplace = value.Substring(0, value.IndexOf(seperator));
             string replaceWith = value.Substring(value.IndexOf(seperator) + 3);
 
-            if (comments.ToLower() == "replaceonce" || comments.ToLower() == "0")
+            switch (comments.ToLower())
             {
-                pass = txtfile.ReplaceOccurances(toReplace, replaceWith, numberOfTimes: 1);
-            }
-            else if (comments.ToLower() == "replaceall" || comments.ToLower() == "1")
-            {
-                pass = txtfile.ReplaceOccurances(toReplace, replaceWith);
-            }
-            else if (comments.ToLower() == "replaceline" || comments.ToLower() == "2")
-            {
-                var stringLines = toReplace.Split(';');
-                int[] lines = Array.ConvertAll(stringLines, x => int.Parse(x));
-                pass = txtfile.ReplaceLine(lines, replaceWith);
+                case "0": case "replaceonce":
+                    pass = txtfile.ReplaceOccurances(toReplace, replaceWith, numberOfTimes: 1);
+                    break;
+                case "1": case "replaceall":
+                    pass = txtfile.ReplaceOccurances(toReplace, replaceWith);
+                    break;
+                case "2": case "replaceline":
+                    string[] stringLines = toReplace.Split(';');
+                    int[] lines = Array.ConvertAll(stringLines, x => int.Parse(x));
+                    pass = txtfile.ReplaceLine(lines, replaceWith);
+                    break;
+                default:
+                    Logger.Warn($"{comments} is not a valid option");
+                    this.TestStepStatus.Actual = $"{comments} is not a valid option";
+                    break;
             }
 
             this.TestStepStatus.RunSuccessful = pass;

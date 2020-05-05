@@ -22,26 +22,16 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
 
-            bool passed = false;
             string scriptPath = this.Arguments["object"];
             string environment = GetEnvironmentVariable(EnvVar.Environment);
-            string message = $"Running script at '{scriptPath}'.";
+            Logger.Info($"Running script at '{scriptPath}'.");
 
-            Logger.Info(message);
-
-            ITestStepData testStepData = TestStepData;
-
-            if (testStepData.Name.ToLower() == "database")
+            if ((TestStepData as DatabaseStepData) != null)
             {
-                passed = ((DatabaseStepData)testStepData).ExecuteEnvironmentNonQuery(environment, scriptPath);
-
-                message = passed
+                this.TestStepStatus.RunSuccessful = ((DatabaseStepData)TestStepData).ExecuteEnvironmentNonQuery(environment, scriptPath);
+                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful
                     ? "Script has been successfully run."
                     : "Exited with non-zero code. Something may have went wrong.";
-
-                Logger.Info(message);
-                this.TestStepStatus.Actual = message;
-                this.TestStepStatus.RunSuccessful = passed;
             }
             else
             {
