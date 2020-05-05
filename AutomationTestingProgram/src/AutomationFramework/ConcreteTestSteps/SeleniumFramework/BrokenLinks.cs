@@ -20,18 +20,16 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            bool passed = true;
 
             // get all links
             List<string> urlList = InformationObject.TestAutomationDriver.GetAllLinksURL();
 
-            string message = string.Empty;
             if (urlList.Count != 0)
             {
                 // attempt to click on link
                 foreach (string url in urlList)
                 {
-                    HttpWebResponse response = null;
+                    HttpWebResponse response;
                     HttpStatusCode statusCode;
                     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
                     try
@@ -46,15 +44,13 @@ namespace AutomationTestingProgram.AutomationFramework
                     statusCode = response.StatusCode;
                     if ((int)statusCode >= 400)
                     {
-                        passed = false;
-                        message += $"Found broken link '{url}' with status code of '{(int)statusCode}'.";
+                        this.TestStepStatus.RunSuccessful = false;
+                        this.TestStepStatus.FriendlyErrorMessage += $"Found broken link '{url}' with status code of '{(int)statusCode}'.";
                     }
                 }
             }
 
-            this.TestStepStatus.Actual = passed ? "No broken links were found" : "Something Went wrong.";
-            this.TestStepStatus.FriendlyErrorMessage = message;
-            this.TestStepStatus.RunSuccessful = passed;
+            this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? "No broken links were found" : "Something Went wrong.";
         }
     }
 }

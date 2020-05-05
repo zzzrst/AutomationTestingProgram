@@ -16,6 +16,12 @@ namespace AutomationTestingProgram.AutomationFramework
     /// </summary>
     public class GetEmail : TestStep
     {
+        private string executingPath;
+        private string emailPath;
+        private string emailFolderLocation;
+        private string username;
+        private string password;
+
         /// <inheritdoc/>
         public override string Name { get; set; } = "GetEmail";
 
@@ -23,92 +29,67 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string emailFolderLocation = string.Empty;
-            string username = string.Empty;
-            string password = string.Empty;
+            this.executingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            this.emailPath = Path.Combine(this.Arguments["comment"], "Emails");
 
-            string executingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string emailPath = Path.Combine(this.Arguments["comment"], "Emails");
+            this.emailFolderLocation = ((DatabaseStepData)TestStepData).GetEnvironmentEmailNotificationFolder(GetEnvironmentVariable(EnvVar.Environment));
+            this.username = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT USERNAME");
+            this.password = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT PASSWORD");
 
-            emailFolderLocation = ((DatabaseStepData)TestStepData).GetEnvironmentEmailNotificationFolder(GetEnvironmentVariable(EnvVar.Environment));
-            username = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT USERNAME");
-            password = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT PASSWORD");
+            this.SaveEmailToFile();
+            this.VerifyEmailExists();
+        }
 
-            try
+        private void SaveEmailToFile()
+        {
+            string powershellFile = Path.Combine(this.executingPath, "scripts", "getEmail.ps1");
+
+            string command = $"powershell -Executionpolicy Bypass \"&'{powershellFile}' " +
+                $"-emailSharedLocationPath '{this.emailFolderLocation}' " +
+                $"-emailLocalPath '{this.emailPath}' " +
+                $"-Username '{this.username}' " +
+                $"-Password '{this.password}' \"";
+
+            this.TestStepStatus.RunSuccessful = this.StartProcess(command) == 0;
+        }
+
+        private void VerifyEmailExists()
+        {
+            string emailShortList = Path.Combine(this.Arguments["comment"], "EmailList.txt");
+            string powershellFile = Path.Combine(this.executingPath, "scripts", "getEmailShortList.ps1");
+            string command = $"powershell -Executionpolicy Bypass \"&'{powershellFile}' " +
+                $"-timeSpanValue '{this.Arguments["object"]}' " +
+                $"-emailPath '{this.emailPath}' " +
+                $"-subject '{this.Arguments["value"]}' " +
+                $"-emailList '{emailShortList}' \"";
+
+            this.StartProcess(command);
+            this.TestStepStatus.RunSuccessful = File.Exists(emailShortList);
+            this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? "At least 1 matching email was found." : "No emails were found";
+        }
+
+        private int StartProcess(string command)
+        {
+            Process p = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo
             {
-                string powershellFile = Path.Combine(executingPath, "scripts", "getEmail.ps1");
-
-                string command = $"powershell -Executionpolicy Bypass \"&'{powershellFile}' " +
-                    $"-emailSharedLocationPath '{emailFolderLocation}' " +
-                    $"-emailLocalPath '{emailPath}' " +
-                    $"-Username '{username}' " +
-                    $"-Password '{password}' \"";
-
-                Process p = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo
-                {
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    FileName = "cmd.exe",
-                    Arguments = $"/C exit | {command}",
-                };
-                p.StartInfo = startInfo;
-                p.Start();
-                Logger.LogStdout();
-                string line;
-                while ((line = p.StandardOutput.ReadLine()) != null)
-                {
-                    Logger.LogWithFiveTabs(line);
-                    this.TestStepStatus.Actual += "\n" + line;
-                }
-
-                p.WaitForExit();
-                this.TestStepStatus.RunSuccessful = p.ExitCode == 0;
-            }
-            catch (Exception e)
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                FileName = "cmd.exe",
+                Arguments = $"/C exit | {command}",
+            };
+            p.StartInfo = startInfo;
+            p.Start();
+            Logger.LogStdout();
+            string line;
+            while ((line = p.StandardOutput.ReadLine()) != null)
             {
-                Logger.Error(e.ToString());
-                this.TestStepStatus.RunSuccessful = false;
+                Logger.LogWithFiveTabs(line);
+                this.TestStepStatus.Actual += "\n" + line;
             }
 
-            try
-            {
-                string emailShortList = Path.Combine(this.Arguments["comment"], "EmailList.txt");
-                string powershellFile = Path.Combine(executingPath, "scripts", "getEmailShortList.ps1");
-                string command = $"powershell -Executionpolicy Bypass \"&'{powershellFile}' " +
-                    $"-timeSpanValue '{this.Arguments["object"]}' " +
-                    $"-emailPath '{emailPath}' " +
-                    $"-subject '{this.Arguments["value"]}' " +
-                    $"-emailList '{emailShortList}' \"";
-
-                Process p = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo
-                {
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    FileName = "cmd.exe",
-                    Arguments = $"/C exit | {command}",
-                };
-                p.StartInfo = startInfo;
-                p.Start();
-                Logger.LogStdout();
-                string line;
-                while ((line = p.StandardOutput.ReadLine()) != null)
-                {
-                    Logger.LogWithFiveTabs(line);
-                    this.TestStepStatus.Actual += "\n" + line;
-                }
-
-                p.WaitForExit();
-                this.TestStepStatus.RunSuccessful = File.Exists(emailShortList);
-                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? "At least 1 matching email was found." : "No emails were found";
-                Logger.Info(this.TestStepStatus.Actual);
-            }
-            catch (Exception e)
-            {
-                Logger.Error(e.ToString());
-                this.TestStepStatus.RunSuccessful = false;
-            }
+            p.WaitForExit();
+            return p.ExitCode;
         }
     }
 }

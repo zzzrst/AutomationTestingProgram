@@ -20,10 +20,6 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string emailFolderLocation = string.Empty;
-
-            emailFolderLocation = ((DatabaseStepData)TestStepData).GetEnvironmentEmailNotificationFolder(GetEnvironmentVariable(EnvVar.Environment));
-
             GetEmail ge = new GetEmail();
             AutomationTestSetDriver.RunTestStep(ge);
             ge.Execute();
