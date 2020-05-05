@@ -97,7 +97,7 @@ namespace AutomationTestingProgram.AutomationFramework
             }
 
             // initialize xPath
-            string xPath = string.Empty;
+            string xPath;
 
             // if user provides html tags, then we ignore the htmltagwhilteList and htmltagblackList
             if (this.Attributes.ContainsKey("tag"))
@@ -223,50 +223,6 @@ namespace AutomationTestingProgram.AutomationFramework
             xPath += ")[";
 
             return xPath;
-        }
-
-        /// <summary>
-        /// Clicks on this browser object. If the object opens a modal box after clicking,. <code>opensModal</code> can be set
-        /// to execute a separate JavaScript click call that bypasses the modal's blocking call.
-        /// </summary>
-        /// <param name="opensModal">Whether to execute the JavaScript click call to bypass modal's blocking call.</param>
-        /// <returns><code>true</code> if browser object was successfully clicked.</returns>
-        protected bool Click(bool opensModal)
-        {
-            /*
-            try
-            {
-                // this.Browser.MouseOver(this.Element);
-                InformationObject.TestAutomationDriver.WDWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(this.Element));
-
-                // if button opens a modal, use Javascript to bypass blocking call, and try clicking it a second time
-                if (opensModal && this.Browser.BrowserType.Contains("ie"))
-                {
-                    IJavaScriptExecutor executor = (IJavaScriptExecutor)this.Browser.Driver;
-                    executor.ExecuteScript("var element=arguments[0]; setTimeout(function() {element.click();}, 100)", this.Element);
-                }
-                else
-                {
-                    this.Element.Click();
-                }
-
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            */
-            return false;
-        }
-
-        /// <summary>
-        /// Clicks on this browser object.
-        /// </summary>
-        /// <returns><code>true</code> if browser object was successfully clicked.</returns>
-        protected bool Click()
-        {
-            return this.Click(false);
         }
     }
 }
