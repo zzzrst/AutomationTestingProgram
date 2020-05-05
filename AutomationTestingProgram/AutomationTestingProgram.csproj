@@ -9,19 +9,20 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\DUONGCH\Projects\SeleniumFramework\SeleniumProgram\SeleniumProgram\AutomationTestingProgram.xml</DocumentationFile>
+    <DocumentationFile>.\AutomationTestingProgram.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <DocumentationFile>.\AutomationTestingProgram.XML</DocumentationFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\DuongCh\Projects\SeleniumFramework\AutomationTestingProgram\AutomationTestingProgram.xml</DocumentationFile>
+    <DocumentationFile>.\AutomationTestingProgram.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <DocumentationFile>C:\Users\DuongCh\Projects\SeleniumFramework\AutomationTestingProgram\AutomationTestingProgram.xml</DocumentationFile>
+    <DocumentationFile>.\AutomationTestingProgram.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -84,12 +85,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.4.7417.14993\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.4.7423.32332\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Update="WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
