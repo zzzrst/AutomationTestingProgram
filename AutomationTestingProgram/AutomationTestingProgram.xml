@@ -307,20 +307,6 @@
             <param name="htmltagwhiteList">The htmltagwhiteList<see cref="T:List{string}"/>.</param>
             <returns>The <see cref="T:System.String"/>.</returns>
         </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)">
-            <summary>
-            Clicks on this browser object. If the object opens a modal box after clicking,. <code>opensModal</code> can be set
-            to execute a separate JavaScript click call that bypasses the modal's blocking call.
-            </summary>
-            <param name="opensModal">Whether to execute the JavaScript click call to bypass modal's blocking call.</param>
-            <returns><code>true</code> if browser object was successfully clicked.</returns>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.Click">
-            <summary>
-            Clicks on this browser object.
-            </summary>
-            <returns><code>true</code> if browser object was successfully clicked.</returns>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.CheckBox">
             <summary>
             This test step to click check box.
@@ -1011,6 +997,12 @@
             <param name="topY"> The top y coordinate. </param>
             <param name="botX"> The bottom x coordinate. </param>
             <param name="botY"> The bottom y coordinate. </param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyExcelFile.VerifyAndConvert(System.String)">
+            <summary>
+            Verifies that the file exists and convert to xlsx if needed.
+            </summary>
+            <param name="filePath">the path to the file.</param>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyExcelFile.ConvertCSVtoXLSX(System.String,System.String)">
             <summary>

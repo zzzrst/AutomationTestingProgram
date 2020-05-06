@@ -60,7 +60,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Gets or sets the description of the test step.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         private int Attempts { get; set; } = 0;
 

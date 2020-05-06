@@ -32,25 +32,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Attributes
   nameWithType: ActionObject.Attributes
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  name: Click()
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click
-  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click()
-  nameWithType: ActionObject.Click()
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
-  name: Click(Boolean)
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click_System_Boolean_
-  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
-  nameWithType: ActionObject.Click(Boolean)
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click*
-  name: Click
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  nameWithType: ActionObject.Click
 - uid: AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary{System.String,System.String})
   name: CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
   href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_CreateJSCommandForAttributeValuePairs_System_Collections_Generic_IDictionary_System_String_System_String__
