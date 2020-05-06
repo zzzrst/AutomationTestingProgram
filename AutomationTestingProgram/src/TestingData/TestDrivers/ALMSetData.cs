@@ -79,7 +79,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             try
             {
-                if (TestCaseData is DatabaseCaseData databaseData)
+                if (TestCaseData is DatabaseCaseData databaseData && GetEnvironmentVariable(EnvVar.TestCaseDataArgs) == string.Empty)
                 {
                     testCase = databaseData.SetUpTestCase(testCaseID, collection, release, true);
                 }

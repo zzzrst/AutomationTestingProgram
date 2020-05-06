@@ -88,6 +88,9 @@
     <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.4.7423.32332\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="C:\Users\DuongCh\.nuget\packages\testingdriver\1.4.7431.14631\contentFiles\any\netstandard2.1\WATR_Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="WATR_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
