@@ -77,7 +77,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public virtual void Execute()
         {
-            this.ShouldExecuteVariable = false;
+            this.Attempts++;
         }
 
         /// <inheritdoc/>
@@ -90,8 +90,6 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.ErrorStack += e.StackTrace;
             this.TestStepStatus.FriendlyErrorMessage += e.Message;
             this.TestStepStatus.RunSuccessful = false;
-
-            this.Attempts++;
 
             Logger.Error(e.Message);
 
@@ -138,6 +136,8 @@ namespace AutomationTestingProgram.AutomationFramework
                 InformationObject.TestAutomationDriver.RunAODA(this.RunAODAPageName);
             }
 
+            this.TestStepStatus.RunSuccessful = !this.ShouldExecuteVariable || (this.TestStepStatus.RunSuccessful == this.PassCondition);
+
             if (this.ShouldLog)
             {
                 ITestStepLogger log = new TestStepLogger();
@@ -152,8 +152,6 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.TestStepStatus.Actual = "No Log";
             }
-
-            this.TestStepStatus.RunSuccessful = this.TestStepStatus.RunSuccessful && this.PassCondition;
         }
     }
 }
