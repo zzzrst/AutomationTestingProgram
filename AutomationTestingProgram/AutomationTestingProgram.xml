@@ -457,6 +457,17 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.UploadFile.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute">
+            <summary>
+            This test step an abstract class to verify an object's attribute.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus">
             <summary>
             This test step to verify the status of a check box.
@@ -1273,6 +1284,11 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional">
+            <summary>
+            Gets or sets a value indicating whether the test step is nessesary to pass.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.TestCase">
             <summary>
             Implementation of the testCase class.
@@ -1418,6 +1434,16 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.Description">
             <summary>
             Gets or sets the description of the test step.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.Optional">
+            <summary>
+            Gets or sets a value indicating whether determines whether the test step is optional or not.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.PassCondition">
+            <summary>
+            Gets or sets a value indicating whether the test step should pass when it passes.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.TestStep.Execute">
@@ -2352,6 +2378,42 @@
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData">
             <summary>
             A concrete implementation of the ITestCaseData for databases.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.MANDATORY">
+            <summary>
+            Gets the MANDATORY
+            Test step type ID flag for a mandatory test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.IMPORTANT">
+            <summary>
+            Gets the IMPORTANT
+            Test step type ID flag for an important test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.OPTIONAL">
+            <summary>
+            Gets the OPTIONAL
+            Test step type ID flag for an optional test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CONDITIONAL">
+            <summary>
+            Gets the CONDITIONAL
+            Test step type ID flag for a conditional test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.INVERTEDMANDATORY">
+            <summary>
+            Gets the INVERTED_MANDATORY
+            Test step type ID flag for an inverted mandatory test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.INVERTEDIMPORTANT">
+            <summary>
+            Gets the INVERTED_IMPORTANT
+            Test step type ID flag for an inverted important test step.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.#ctor(System.String)">

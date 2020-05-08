@@ -26,11 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="src\GeneralData\DataVerifier\SeleniumPerf.xsd" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="src\GeneralData\DataVerifier\SeleniumPerf.xsd">
+    <Content Include="SeleniumPerf.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

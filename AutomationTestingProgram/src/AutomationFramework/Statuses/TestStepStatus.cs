@@ -41,5 +41,10 @@ namespace AutomationTestingProgram.AutomationFramework
 
         /// <inheritdoc/>
         public string Actual { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the test step is nessesary to pass.
+        /// </summary>
+        public bool Optional { get; set; } = false;
     }
 }

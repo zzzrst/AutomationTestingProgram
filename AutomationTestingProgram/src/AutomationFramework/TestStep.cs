@@ -62,6 +62,16 @@ namespace AutomationTestingProgram.AutomationFramework
         /// </summary>
         public string Description { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Gets or sets a value indicating whether determines whether the test step is optional or not.
+        /// </summary>
+        public bool Optional { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the test step should pass when it passes.
+        /// </summary>
+        public bool PassCondition { get; set; } = true;
+
         private int Attempts { get; set; } = 0;
 
         /// <inheritdoc/>
@@ -101,6 +111,7 @@ namespace AutomationTestingProgram.AutomationFramework
                     TestStepNumber = this.TestStepNumber,
                     Description = this.Description,
                     Expected = this.Description,
+                    Optional = this.Optional,
                 };
             }
 
@@ -141,6 +152,8 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.TestStepStatus.Actual = "No Log";
             }
+
+            this.TestStepStatus.RunSuccessful = this.TestStepStatus.RunSuccessful && this.PassCondition;
         }
     }
 }
