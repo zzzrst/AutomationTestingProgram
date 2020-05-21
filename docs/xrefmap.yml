@@ -3574,38 +3574,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name
   nameWithType: VerifyLinkAvailability.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  name: VerifyObjectAttribute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html
-  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  nameWithType: VerifyObjectAttribute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute()
-  nameWithType: VerifyObjectAttribute.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  nameWithType: VerifyObjectAttribute.Execute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Name
-  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  nameWithType: VerifyObjectAttribute.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name*
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Name_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  nameWithType: VerifyObjectAttribute.Name
 - uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability
   name: VerifyObjectAvailability
   href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.html

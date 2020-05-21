@@ -39,6 +39,12 @@ namespace AutomationTestingProgram.GeneralData
 
             string enviornment = testset.GetField("Test Environment");
             parameters.Add(EnvVar.Environment, enviornment);
+
+            string collection = testset.GetField("Application Collection");
+            string release = testset.GetField("Test Case Version");
+
+            parameters.Add(EnvVar.TestCaseDataArgs, $"{collection},{release}");
+
             try
             {
                 parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());

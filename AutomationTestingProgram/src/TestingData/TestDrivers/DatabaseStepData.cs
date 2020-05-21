@@ -309,7 +309,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
             string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {this.EnvDBName} t where t.environment = '{environment}'";
-            Logger.Debug($"Querying for QueryEnvironmentConnectionInformation : [{query}]");
+            Logger.Info($"Querying for QueryEnvironmentConnectionInformation : [{query}]");
 
             // decrypt password if needed.
             List<List<object>> result = this.TestDB.ExecuteQuery(query);

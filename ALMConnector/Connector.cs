@@ -52,8 +52,7 @@ namespace ALMConnector
             }
             catch (System.Runtime.InteropServices.COMException e)
             {
-                throw e;
-                //throw new Exception("Please register your HP ALM Client");
+                throw new Exception("Please register your HP ALM Client");
             }
         }
 

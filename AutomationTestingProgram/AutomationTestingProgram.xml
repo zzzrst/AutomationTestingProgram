@@ -457,17 +457,6 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.UploadFile.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute">
-            <summary>
-            This test step an abstract class to verify an object's attribute.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus">
             <summary>
             This test step to verify the status of a check box.

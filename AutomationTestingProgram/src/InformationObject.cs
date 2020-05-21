@@ -220,10 +220,18 @@ namespace AutomationTestingProgram
             RespectRepeatFor = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRepeatFor));
             RespectRunAODAFlag = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRunAODAFlag));
 
-            Directory.CreateDirectory(csvSaveLocation);
-            Directory.CreateDirectory(logSaveLocation);
-            Directory.CreateDirectory(reportSaveLocation);
-            Directory.CreateDirectory(screenshotSaveLocation);
+            try
+            {
+                Directory.CreateDirectory(csvSaveLocation);
+                Directory.CreateDirectory(logSaveLocation);
+                Directory.CreateDirectory(reportSaveLocation);
+                Directory.CreateDirectory(screenshotSaveLocation);
+            }
+            catch (ArgumentException)
+            {
+                throw new Exception("Missing file path parameters. On one or more of these Directories. " +
+                    "csv,log,report,screenshot");
+            }
 
             SetReporter(reportSaveLocation);
         }

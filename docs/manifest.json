@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.ActionObject.html",
-          "hash": "dSOxUUk3D2TILilCbTT5IQ=="
+          "hash": "AOQEdSjGWMjX8LLpMgtYVg=="
         }
       },
       "is_incremental": false,
@@ -953,18 +953,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html",
-          "hash": "LJQ1bLeVJzcWSXskAvuvxw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.yml",
       "output": {
         ".html": {
@@ -1113,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AutomationTestingProgram.AutomationFramework.html",
-          "hash": "ilkXeJaC92/Sq8r/xMuZYg=="
+          "hash": "NiD73P/B829k0QgvE4rKUA=="
         }
       },
       "is_incremental": false,
@@ -1641,7 +1629,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "43TQ1+i5lKB6zIRY5ci4/w=="
+          "hash": "cP0SeB5eAXX+RLtuKp6vKQ=="
         }
       },
       "is_incremental": false,
@@ -1896,7 +1884,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 135,
+          "total_file_count": 134,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

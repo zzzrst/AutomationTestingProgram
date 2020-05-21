@@ -46,7 +46,7 @@ namespace AutoUpdater
                 RedirectStandardOutput = false,
                 RedirectStandardError = false,
                 FileName = "AutomationTestingProgram.exe",
-                Arguments = string.Join(" ", args),
+                Arguments = string.Join(" ", args) + " --update \"false\"",
             };
 
             p.StartInfo = startInfo;
