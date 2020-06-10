@@ -2479,11 +2479,6 @@
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Name">
             <inheritdoc/>
         </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.EnvDBName">
-            <summary>
-            Gets or sets the name of the enviornment database.
-            </summary>
-        </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName">
             <summary>
             Gets or sets the name of the test case db.
@@ -2535,6 +2530,11 @@
             <summary>
             Gets or sets a value indicating whether flag for querying special characters.
             MAy REmove.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.EnvDBName">
+            <summary>
+            Gets or sets the name of the enviornment database.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)">

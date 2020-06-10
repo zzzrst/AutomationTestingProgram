@@ -26,7 +26,7 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Gets or sets the attributes of the element provided through the data.
         /// </summary>
-        protected IDictionary<string, string> Attributes { get; set; }
+        public IDictionary<string, string> Attributes { get; set; }
 
         /// <summary>
         /// Gets or sets xPath of the element.

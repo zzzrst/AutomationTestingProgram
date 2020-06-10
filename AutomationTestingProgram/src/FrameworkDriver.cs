@@ -107,7 +107,7 @@ namespace AutomationTestingProgram
                 InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
                 InformationObject.CSVLogger.WriteOutResults();
 
-                string resultString = testSet.TestSetStatus.RunSuccessful ? "successfull" : "not successful";
+                string resultString = testSet.TestSetStatus.RunSuccessful ? "successful" : "not successful";
                 Logger.Info($"Automation Testing Program has finished. It was {resultString}");
             }
             else

@@ -21,6 +21,7 @@ namespace AutoUpdater
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
     using AutomationTestingProgram;
+    using System.Linq;
 
     /// <summary>
     /// Adapted From https://starbeamrainbowlabs.com/blog/article.php?article=posts/156-Autoupdate-CSharp.html.
@@ -30,13 +31,14 @@ namespace AutoUpdater
         private static WebClient client;
         private static ProgressBar progress = new ProgressBar(100);
         private static Dictionary<string, string> fileToHash = new Dictionary<string, string>();
-
+        private static string url = "https://github.com/zzzrst/AutomationTestingProgram/releases/latest";
         /// <summary>
         /// Runs then re runs PrefXML.
         /// </summary>
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
+            args = RemoveUpdateFlag(args);
             DownloadUpdates();
             Logger.Info("Download compelete, Restarting....");
             Process p = new Process();
@@ -51,6 +53,16 @@ namespace AutoUpdater
 
             p.StartInfo = startInfo;
             p.Start();
+        }
+
+        private static string[] RemoveUpdateFlag(string[] args)
+        {
+            List<string> arguments = new List<string>(args);
+            if (arguments.Contains("--update")) 
+            {
+                arguments.RemoveRange(arguments.FindIndex(0, x => x.Equals("--update")), 2);
+            }
+            return arguments.ToArray();
         }
 
         /// <summary>
@@ -79,7 +91,7 @@ namespace AutoUpdater
             Version currentReleaseVersion = new Version(FileVersionInfo.GetVersionInfo(program).ProductVersion);
 
             // get the release version
-            Version latestReleaseVersion = new Version(GetLatestReleaseVersion("https://github.com/zzzrst/SeleniumPerfXML/releases/latest"));
+            Version latestReleaseVersion = new Version(GetLatestReleaseVersion(url));
 
             Logger.Info($"Current Version: {currentReleaseVersion}");
 
@@ -214,7 +226,7 @@ namespace AutoUpdater
         private static void GetKeyPairHash()
         {
             WebClient wc = new WebClient();
-            string result = wc.DownloadString("https://github.com/zzzrst/SeleniumPerfXML/releases/latest/download/Contents");
+            string result = wc.DownloadString(url + "/download/Contents");
             foreach (string line in result.Split("\n"))
             {
                 if (line != string.Empty)
@@ -320,7 +332,7 @@ namespace AutoUpdater
                 client.DownloadProgressChanged += Client_DownloadProgressChanged; // Add new event handler for updating the progress bar
             }
 
-            client.DownloadFileTaskAsync("https://github.com/zzzrst/AutomationTestingProgram/releases/latest/download/" + fileName, path).Wait();
+            client.DownloadFileTaskAsync(url + "/download/" + fileName, path).Wait();
         }
 
         private static void Client_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e) // This is our new method!

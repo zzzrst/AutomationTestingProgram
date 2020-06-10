@@ -232,6 +232,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
                 .Find(x => x.Name.Equals(action));
 
+            if (testStep == null)
+            {
+                Logger.Error($"Sorry We can't find {action}");
+            }
+
             testStep.Description = testStepDesc;
             testStep.Arguments.Add("object", Helper.Cleanse(obj));
             testStep.Arguments.Add("value", Helper.Cleanse(value));

@@ -31,11 +31,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public string Name { get; } = "Database";
 
         /// <summary>
-        /// Gets or sets the name of the enviornment database.
-        /// </summary>
-        protected string EnvDBName { get; set; }
-
-        /// <summary>
         /// Gets or sets the name of the test case db.
         /// </summary>
         protected string TestDBName { get; set; }
@@ -58,7 +53,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public void SetUp()
         {
-            this.EnvDBName = ConfigurationManager.AppSettings["DBEnvDatabase"].ToString();
             this.TestDBName = ConfigurationManager.AppSettings["DBTestCaseDatabase"].ToString();
         }
 
