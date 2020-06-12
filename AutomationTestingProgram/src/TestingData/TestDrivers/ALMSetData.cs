@@ -92,7 +92,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
            catch (Exception e)
             {
-                Logger.Error("Sorry, something went wrong during the creation of the test case." + testCaseID);
+                Logger.Error("Sorry, something went wrong during the creation of the test case. " + testCaseID);
 
                 // this.TestSet.AddTestStepToTestCase(testStepName, "Failed", testStepDesc, testStepExp, testStepAct);
                 this.TestSet.SetTestCaseRunStatus("Blocked");
