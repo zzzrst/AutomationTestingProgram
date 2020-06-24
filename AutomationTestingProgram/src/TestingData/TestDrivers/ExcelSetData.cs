@@ -9,9 +9,18 @@ namespace AutomationTestingProgram.TestingData
     /// <summary>
     /// The interface to get the test set data.
     /// </summary>
-    public class ExcelSetData : ExcelData
+    public class ExcelSetData : ExcelData, ITestSetData
     {
-        private int ColIndex { get; set; } = 0;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExcelSetData"/> class.
+        /// </summary>
+        /// <param name="args">The arguments to be passed in.</param>
+        public ExcelSetData(string args)
+            : base(args)
+        {
+        }
+
+        private int ColIndex { get; set; } = 3;
 
         /// <summary>
         /// Gets The next test case.
@@ -19,7 +28,8 @@ namespace AutomationTestingProgram.TestingData
         /// <returns>The next test case to run.</returns>
         public ITestCase GetNextTestCase()
         {
-            return InformationObject.TestCaseData.SetUpTestCase(this.ColIndex.ToString());
+            this.ColIndex++;
+            return InformationObject.TestCaseData.SetUpTestCase((this.ColIndex - 1).ToString());
         }
 
         /// <summary>

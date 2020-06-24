@@ -1,4 +1,4 @@
-﻿// <copyright file="ITestGeneralData.cs" company="PlaceholderCompany">
+﻿// <copyright file="ExcelGeneralData.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -27,7 +27,7 @@ namespace AutomationTestingProgram.GeneralData
         /// <returns>True if valid.</returns>
         public bool Verify(string testArgs)
         {
-
+            return true;
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace AutomationTestingProgram.GeneralData
         /// <returns>The parsed parameters.</returns>
         public Dictionary<EnvVar, string> ParseParameters(string testArgs, string dataFile)
         {
-
+            return new Dictionary<EnvVar, string>();
         }
     }
 }

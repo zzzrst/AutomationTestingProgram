@@ -4,10 +4,10 @@
 
 namespace AutomationTestingProgram.TestingData
 {
+    using System.IO;
     using AutomationTestSetFramework;
     using NPOI.SS.UserModel;
     using NPOI.XSSF.UserModel;
-    using System.IO;
     using TDAPIOLELib;
 
     /// <summary>
@@ -15,6 +15,15 @@ namespace AutomationTestingProgram.TestingData
     /// </summary>
     public class ExcelData : ITestData
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExcelData"/> class.
+        /// </summary>
+        /// <param name="args">The path to the excel file.</param>
+        public ExcelData(string args)
+        {
+            this.TestArgs = args;
+        }
+
         /// <inheritdoc/>
         /// The path to the excel document
         public string TestArgs { get; set; }

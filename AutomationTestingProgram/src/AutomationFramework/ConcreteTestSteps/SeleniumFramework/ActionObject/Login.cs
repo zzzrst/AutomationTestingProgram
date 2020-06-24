@@ -2,14 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using AutomationTestingProgram.TestingData.TestDrivers;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using static AutomationTestingProgram.InformationObject;
-
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using AutomationTestingProgram.TestingData.TestDrivers;
+    using static AutomationTestingProgram.InformationObject;
+
     /// <summary>
     /// This test step to log in.
     /// </summary>

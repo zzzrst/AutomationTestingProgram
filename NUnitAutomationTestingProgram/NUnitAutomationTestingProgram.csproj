@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\AutomationTestingProgram\src\TestingData\TestDrivers\ExcelCaseData.cs" Link="ExcelCaseData.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\AutomationTestingProgram\App.config" Link="App.config" />
   </ItemGroup>
 
