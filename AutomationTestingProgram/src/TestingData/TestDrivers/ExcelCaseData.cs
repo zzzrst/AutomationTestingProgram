@@ -40,10 +40,10 @@ namespace AutomationTestingProgram.TestingData
         {
             if (this.testStepQueue.Count == 0)
             {
-                string url = this.TestSetSheet.GetRow(this.RowIndex).GetCell(URLCOL)?.ToString();
-                string action = this.TestSetSheet.GetRow(this.RowIndex).GetCell(ACTIONCOL)?.ToString();
-                string xpath = this.TestSetSheet.GetRow(this.RowIndex).GetCell(XPATHCOL)?.ToString();
-                string permission = this.TestSetSheet.GetRow(this.RowIndex).GetCell(this.ColIndex)?.ToString();
+                string url = this.TestSetSheet.GetRow(this.RowIndex).GetCell(URLCOL)?.ToString() ?? string.Empty;
+                string action = this.TestSetSheet.GetRow(this.RowIndex).GetCell(ACTIONCOL)?.ToString() ?? string.Empty;
+                string xpath = this.TestSetSheet.GetRow(this.RowIndex).GetCell(XPATHCOL)?.ToString() ?? string.Empty;
+                string permission = this.TestSetSheet.GetRow(this.RowIndex).GetCell(this.ColIndex)?.ToString() ?? string.Empty;
                 string value;
                 TestStep testStep;
 
@@ -60,7 +60,15 @@ namespace AutomationTestingProgram.TestingData
                 }
                 catch (System.NullReferenceException)
                 {
-                    Logger.Error("Cannot Find Test Step" + action);
+                    if (action == string.Empty)
+                    {
+                        Logger.Error("Missing Test Action!");
+                        throw new System.Exception("Missing Test Action!");
+                    }
+                    else
+                    {
+                        Logger.Error("Cannot Find Test Step: " + action);
+                    }
                 }
 
                 this.RowIndex++;
@@ -75,7 +83,7 @@ namespace AutomationTestingProgram.TestingData
         /// <returns>Returns true if there is another test Step.</returns>
         public bool ExistNextTestStep()
         {
-            return this.TestSetSheet.GetRow(this.RowIndex).GetCell(this.ColIndex).ToString() != null
+            return this.TestSetSheet.GetRow(this.RowIndex)?.GetCell(this.ColIndex) != null
                 || this.testStepQueue.Count > 0;
         }
 

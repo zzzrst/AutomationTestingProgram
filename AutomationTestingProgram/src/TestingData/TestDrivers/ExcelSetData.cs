@@ -38,7 +38,7 @@ namespace AutomationTestingProgram.TestingData
         /// <returns>Returns true if there is another test case.</returns>
         public bool ExistNextTestCase()
         {
-            return this.TestSetSheet.GetRow(0).GetCell(this.ColIndex).ToString() != null;
+            return this.TestSetSheet.GetRow(0)?.GetCell(this.ColIndex) != null;
         }
 
         /// <summary>
