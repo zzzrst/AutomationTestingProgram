@@ -43,6 +43,12 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             }
         }
 
+        [TearDown]
+        public void TearDown()
+        {
+            InformationObject.TestAutomationDriver.Quit();
+        }
+
         [Test]
         public void TestNoUrl()
         {
@@ -56,7 +62,9 @@ namespace NUnitAutomationTestingProgram.TestTestingData
 
             reporter = InformationObject.Reporter;
 
-            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.IsFalse(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to fail");
+            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
+            Assert.AreEqual(1, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 1 test steps");
         }
 
         [Test]
@@ -73,6 +81,8 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             reporter = InformationObject.Reporter;
 
             Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.AreEqual(0, reporter.TestCaseStatuses.Count, "Expected to have 0 test case");
+            Assert.AreEqual(0, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 0 test steps");
         }
 
         [Test]
@@ -89,6 +99,8 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             reporter = InformationObject.Reporter;
 
             Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
+            Assert.AreEqual(2, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 2 test steps");
         }
 
         [Test]
@@ -99,19 +111,14 @@ namespace NUnitAutomationTestingProgram.TestTestingData
 
             testSet = buildTestSet("/Test Missing Test Action.xlsx");
 
-            try
-            {
-                AutomationTestSetDriver.RunTestSet(testSet);
-                Assert.Fail("An Exception should of been thrown");
-            }
-            catch (Exception)
-            {
-                InformationObject.Reporter.Report();
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
 
-                reporter = InformationObject.Reporter;
+            reporter = InformationObject.Reporter;
 
-                Assert.IsFalse(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
-            }
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to Pass");
+            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
+            Assert.AreEqual(3, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 3 test steps");
         }
 
         [Test]
@@ -128,6 +135,26 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             reporter = InformationObject.Reporter;
 
             Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
+            Assert.AreEqual(6, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 6 test steps");
+        }
+
+        [Test]
+        public void TestMultipleURL()
+        {
+            TestSet testSet;
+            Reporter reporter;
+
+            testSet = buildTestSet("/Test Multiple URL.xlsx");
+
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
+
+            reporter = InformationObject.Reporter;
+
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
+            Assert.AreEqual(8, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 8 test steps");
         }
 
         [Test]
@@ -144,6 +171,8 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             reporter = InformationObject.Reporter;
 
             Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.AreEqual(2, reporter.TestCaseStatuses.Count, "Expected to have 2 test case");
+            Assert.AreEqual(12, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 12 test steps");
         }
 
         [Test]
@@ -169,20 +198,12 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             Reporter reporter;
 
             testSet = buildTestSet("/Test One User.xlsx");
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
 
-            try
-            {
-                AutomationTestSetDriver.RunTestSet(testSet);
-                Assert.Fail("An exception should be thrown");
-            }
-            catch (Exception)
-            {
-                InformationObject.Reporter.Report();
+            reporter = InformationObject.Reporter;
 
-                reporter = InformationObject.Reporter;
-
-                Assert.IsFalse(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
-            }
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
         }
 
         private TestSet buildTestSet(string testFileName, string url = "testUrl")

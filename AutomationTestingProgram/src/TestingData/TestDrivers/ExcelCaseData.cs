@@ -30,7 +30,7 @@ namespace AutomationTestingProgram.TestingData
 
         private int ColIndex { get; set; }
 
-        private int RowIndex { get; set; } = 1;
+        private int RowIndex { get; set; }
 
         /// <summary>
         /// Gets the next Test Step.
@@ -63,7 +63,7 @@ namespace AutomationTestingProgram.TestingData
                     if (action == string.Empty)
                     {
                         Logger.Error("Missing Test Action!");
-                        throw new System.Exception("Missing Test Action!");
+                        //throw new System.Exception("Missing Test Action!");
                     }
                     else
                     {
@@ -83,7 +83,8 @@ namespace AutomationTestingProgram.TestingData
         /// <returns>Returns true if there is another test Step.</returns>
         public bool ExistNextTestStep()
         {
-            return this.TestSetSheet.GetRow(this.RowIndex)?.GetCell(this.ColIndex) != null
+            return (this.TestSetSheet.GetRow(this.RowIndex)?.GetCell(ACTIONCOL) != null
+                && this.TestSetSheet.GetRow(this.RowIndex)?.GetCell(ACTIONCOL)?.ToString() != string.Empty)
                 || this.testStepQueue.Count > 0;
         }
 
@@ -98,6 +99,7 @@ namespace AutomationTestingProgram.TestingData
             int index = 0;
             int.TryParse(testCaseName, out index);
             this.ColIndex = index;
+            this.RowIndex = 1;
             ITestCase testCase = new TestCase()
             {
                 Name = this.TestSetSheet.GetRow(0).GetCell(this.ColIndex).ToString(),

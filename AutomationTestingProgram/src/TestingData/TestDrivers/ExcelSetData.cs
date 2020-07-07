@@ -29,6 +29,7 @@ namespace AutomationTestingProgram.TestingData
         public ITestCase GetNextTestCase()
         {
             this.ColIndex++;
+            InformationObject.TestAutomationDriver.Quit();
             return InformationObject.TestCaseData.SetUpTestCase((this.ColIndex - 1).ToString());
         }
 

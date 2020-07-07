@@ -181,8 +181,6 @@ namespace NUnitAutomationTestingProgram.TestTestingData
         [Test]
         public void TestAllConcreteTestSteps()
         {
-            var s = Assembly.GetExecutingAssembly().CodeBase;
-            var k = ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = "NUnitAutomationTestingProgram.dll.config" }, ConfigurationUserLevel.None);
             TestSet testSet;
 
             testSet = buildTestSet("/TestAllConcreteSteps.xml");

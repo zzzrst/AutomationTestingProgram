@@ -55,6 +55,9 @@
     <None Update="SampleTests\Excel\Test Multiple Test Step.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="SampleTests\Excel\Test Multiple URL.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="SampleTests\Excel\Test Multiple Users.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

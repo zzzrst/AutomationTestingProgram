@@ -111,15 +111,15 @@ namespace AutomationTestingProgram.Builders
             {
                 case 0:
                     testData = ReflectiveGetter.GetImplementationOfType<ITestSetData>(dataTypeLocation)
-                                .Find(x => x.Name.Equals(dataTypeName));
+                                .Find(x => x.Name.ToLower().Equals(dataTypeName.ToLower()));
                     break;
                 case 1:
                     testData = ReflectiveGetter.GetImplementationOfType<ITestCaseData>(dataTypeLocation)
-                                .Find(x => x.Name.Equals(dataTypeName));
+                                .Find(x => x.Name.ToLower().Equals(dataTypeName.ToLower()));
                     break;
                 case 2:
                     testData = ReflectiveGetter.GetImplementationOfType<ITestStepData>(dataTypeLocation)
-                                .Find(x => x.Name.Equals(dataTypeName));
+                                .Find(x => x.Name.ToLower().Equals(dataTypeName.ToLower()));
                     break;
                 default:
                     throw new Exception("Not a valid testDataType");
