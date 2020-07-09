@@ -23,42 +23,35 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
 
-            bool passed = false;
-
             // find browser object
             string resultMsgEnd = this.Description.ToString().Replace("with", "using its");
 
-            string value = this.Arguments["value"];
-
             // parse provided flag
-            string flag = value.ToUpper();
+            string flag = this.Arguments["value"].ToUpper();
 
             string resultMsg = $"Provided flag is {flag}. ";
 
             TestingDriver.ITestingDriver.ElementState elementState;
 
-            if (flag == "0" || flag == "ENABLED")
+            switch (flag)
             {
-                elementState = TestingDriver.ITestingDriver.ElementState.Visible;
-            }
-            else if (flag == "1" || flag == "DISABLED")
-            {
-                elementState = TestingDriver.ITestingDriver.ElementState.Invisible;
-            }
-            else if (flag == "2" || flag == "EXIST")
-            {
-                elementState = TestingDriver.ITestingDriver.ElementState.Clickable;
-            }
-            else if (flag == "3" || flag == "DOES NOT EXIST")
-            {
-                elementState = TestingDriver.ITestingDriver.ElementState.Invisible;
-            }
-            else
-            {
-                throw new Exception($"Provided availability flag is '{flag}' which is not in [Enabled, Disabled, Exist, Does not exist].");
+                case "0": case "ENABLED":
+                    elementState = TestingDriver.ITestingDriver.ElementState.Visible;
+                    break;
+                case "1": case "DISABLED":
+                    elementState = TestingDriver.ITestingDriver.ElementState.Invisible;
+                    break;
+                case "2": case "EXIST":
+                    elementState = TestingDriver.ITestingDriver.ElementState.Clickable;
+                    break;
+                case "3": case "DOES NOT EXIST":
+                    elementState = TestingDriver.ITestingDriver.ElementState.Invisible;
+                    break;
+                default:
+                    throw new Exception($"Provided availability flag is '{flag}' which is not in [Enabled, Disabled, Exist, Does not exist].");
             }
 
-            passed = this.VerifyElementState(elementState);
+            bool passed = this.VerifyElementState(elementState);
             resultMsg += passed ? $"{resultMsgEnd} is {flag}." : $"{resultMsgEnd} was not {flag}.";
 
             this.TestStepStatus.Actual = resultMsg;

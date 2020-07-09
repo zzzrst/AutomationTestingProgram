@@ -11,5 +11,8 @@ namespace AutomationTestingProgram.AutomationFramework
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "Verify WebElement Availability";
+
+        /// <inheritdoc/>
+        protected override string HTMLWhiteListTag { get; set; } = "WebElement_HTMLTag";
     }
 }

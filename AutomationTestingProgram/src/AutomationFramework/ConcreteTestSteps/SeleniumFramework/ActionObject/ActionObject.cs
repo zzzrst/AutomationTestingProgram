@@ -19,9 +19,14 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "ActionObject";
 
         /// <summary>
+        /// Gets or sets the html Tag to use.
+        /// </summary>
+        protected virtual string HTMLWhiteListTag { get; set; } = string.Empty;
+
+        /// <summary>
         /// Gets or sets the attributes of the element provided through the data.
         /// </summary>
-        protected IDictionary<string, string> Attributes { get; set; }
+        public IDictionary<string, string> Attributes { get; set; }
 
         /// <summary>
         /// Gets or sets xPath of the element.
@@ -73,12 +78,12 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Builds the XPath query given a test object's property attribute-value pairs.
         /// </summary>
-        /// <param name="htmlWhitelist">Determins whether to use the white list or not.</param>
         /// <returns>The XPath query built from the given property attribute-value pairs.</returns>
-        protected string XPathBuilder(bool htmlWhitelist = true)
+        protected string XPathBuilder()
         {
+            bool htmlWhitelist = this.HTMLWhiteListTag != string.Empty;
             const string AND = " and ";
-            List<string> htmltagwhiteList = htmlWhitelist ? new List<string>(ConfigurationManager.AppSettings["WebCheckBox_HTMLTags"].ToString().Split(',')) : new List<string>() { };
+            List<string> htmltagwhiteList = htmlWhitelist ? new List<string>(ConfigurationManager.AppSettings[this.HTMLWhiteListTag].ToString().Split(',')) : new List<string>() { };
             List<string> xPathIgnoreList = new List<string>(ConfigurationManager.AppSettings["XPATH_IGNORE_LIST"].ToString().Split(','));
             for (int i = 0; i < xPathIgnoreList.Count; i++)
             {
@@ -92,7 +97,7 @@ namespace AutomationTestingProgram.AutomationFramework
             }
 
             // initialize xPath
-            string xPath = string.Empty;
+            string xPath;
 
             // if user provides html tags, then we ignore the htmltagwhilteList and htmltagblackList
             if (this.Attributes.ContainsKey("tag"))
@@ -218,50 +223,6 @@ namespace AutomationTestingProgram.AutomationFramework
             xPath += ")[";
 
             return xPath;
-        }
-
-        /// <summary>
-        /// Clicks on this browser object. If the object opens a modal box after clicking,. <code>opensModal</code> can be set
-        /// to execute a separate JavaScript click call that bypasses the modal's blocking call.
-        /// </summary>
-        /// <param name="opensModal">Whether to execute the JavaScript click call to bypass modal's blocking call.</param>
-        /// <returns><code>true</code> if browser object was successfully clicked.</returns>
-        protected bool Click(bool opensModal)
-        {
-            /*
-            try
-            {
-                // this.Browser.MouseOver(this.Element);
-                InformationObject.TestAutomationDriver.WDWait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(this.Element));
-
-                // if button opens a modal, use Javascript to bypass blocking call, and try clicking it a second time
-                if (opensModal && this.Browser.BrowserType.Contains("ie"))
-                {
-                    IJavaScriptExecutor executor = (IJavaScriptExecutor)this.Browser.Driver;
-                    executor.ExecuteScript("var element=arguments[0]; setTimeout(function() {element.click();}, 100)", this.Element);
-                }
-                else
-                {
-                    this.Element.Click();
-                }
-
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            */
-            return false;
-        }
-
-        /// <summary>
-        /// Clicks on this browser object.
-        /// </summary>
-        /// <returns><code>true</code> if browser object was successfully clicked.</returns>
-        protected bool Click()
-        {
-            return this.Click(false);
         }
     }
 }

@@ -32,25 +32,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Attributes
   nameWithType: ActionObject.Attributes
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  name: Click()
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click
-  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click()
-  nameWithType: ActionObject.Click()
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
-  name: Click(Boolean)
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click_System_Boolean_
-  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)
-  nameWithType: ActionObject.Click(Boolean)
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.Click*
-  name: Click
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_Click_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.Click
-  nameWithType: ActionObject.Click
 - uid: AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary{System.String,System.String})
   name: CreateJSCommandForAttributeValuePairs(IDictionary<String, String>)
   href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_CreateJSCommandForAttributeValuePairs_System_Collections_Generic_IDictionary_System_String_System_String__
@@ -93,6 +74,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ActionObject.FixAttribute
   nameWithType: ActionObject.FixAttribute
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  nameWithType: ActionObject.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag
+  nameWithType: ActionObject.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.ActionObject.JsCommand
   name: JsCommand
   href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_JsCommand
@@ -132,12 +126,12 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPath
   nameWithType: ActionObject.XPath
-- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
-  name: XPathBuilder(Boolean)
-  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder_System_Boolean_
-  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
-  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)
-  nameWithType: ActionObject.XPathBuilder(Boolean)
+- uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder
+  name: XPathBuilder()
+  href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder
+  commentId: M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder
+  fullName: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder()
+  nameWithType: ActionObject.XPathBuilder()
 - uid: AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder*
   name: XPathBuilder
   href: api/AutomationTestingProgram.AutomationFramework.ActionObject.html#AutomationTestingProgram_AutomationFramework_ActionObject_XPathBuilder_
@@ -908,6 +902,77 @@ references:
   commentId: N:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
   nameWithType: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  name: ALMReporter
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  nameWithType: ALMReporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor(System.String)
+  name: ALMReporter(String)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter__ctor_System_String_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor(System.String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.ALMReporter(System.String)
+  nameWithType: ALMReporter.ALMReporter(String)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor*
+  name: ALMReporter
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter__ctor_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.ALMReporter
+  nameWithType: ALMReporter.ALMReporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  name: AddTestCaseStatus(ITestCaseStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_AddTestCaseStatus_AutomationTestSetFramework_ITestCaseStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  nameWithType: ALMReporter.AddTestCaseStatus(ITestCaseStatus)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus*
+  name: AddTestCaseStatus
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_AddTestCaseStatus_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus
+  nameWithType: ALMReporter.AddTestCaseStatus
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  name: AddTestSetStatus(ITestSetStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_AddTestSetStatus_AutomationTestSetFramework_ITestSetStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  nameWithType: ALMReporter.AddTestSetStatus(ITestSetStatus)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus*
+  name: AddTestSetStatus
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_AddTestSetStatus_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus
+  nameWithType: ALMReporter.AddTestSetStatus
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  name: AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_AddTestStepStatusToTestCase_AutomationTestSetFramework_ITestStepStatus_AutomationTestSetFramework_ITestCaseStatus_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus, AutomationTestSetFramework.ITestCaseStatus)
+  nameWithType: ALMReporter.AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase*
+  name: AddTestStepStatusToTestCase
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_AddTestStepStatusToTestCase_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase
+  nameWithType: ALMReporter.AddTestStepStatusToTestCase
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  name: Report()
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_Report
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report()
+  nameWithType: ALMReporter.Report()
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report*
+  name: Report
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_ALMReporter_Report_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  nameWithType: ALMReporter.Report
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
   name: Reporter
   href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html
@@ -1850,6 +1915,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute
   nameWithType: SQLToCSV.Execute
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)
+  name: HandleException(Exception)
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_HandleException_System_Exception_
+  commentId: M:AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)
+  nameWithType: SQLToCSV.HandleException(Exception)
+- uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException*
+  name: HandleException
+  href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_HandleException_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException
+  nameWithType: SQLToCSV.HandleException
 - uid: AutomationTestingProgram.AutomationFramework.SQLToCSV.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.SQLToCSV.html#AutomationTestingProgram_AutomationFramework_SQLToCSV_Name
@@ -2678,6 +2756,32 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestStep.OnExceptionFlowBehavior
   nameWithType: TestStep.OnExceptionFlowBehavior
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  name: Optional
+  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_Optional
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  nameWithType: TestStep.Optional
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Optional*
+  name: Optional
+  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_Optional_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  nameWithType: TestStep.Optional
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  name: PassCondition
+  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_PassCondition
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  nameWithType: TestStep.PassCondition
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.PassCondition*
+  name: PassCondition
+  href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_PassCondition_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  nameWithType: TestStep.PassCondition
 - uid: AutomationTestingProgram.AutomationFramework.TestStep.RunAODA
   name: RunAODA
   href: api/AutomationTestingProgram.AutomationFramework.TestStep.html#AutomationTestingProgram_AutomationFramework_TestStep_RunAODA
@@ -2892,6 +2996,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
   nameWithType: TestStepStatus.Name
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  name: Optional
+  href: api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html#AutomationTestingProgram_AutomationFramework_TestStepStatus_Optional
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  nameWithType: TestStepStatus.Optional
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional*
+  name: Optional
+  href: api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html#AutomationTestingProgram_AutomationFramework_TestStepStatus_Optional_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  nameWithType: TestStepStatus.Optional
 - uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
   name: RunSuccessful
   href: api/AutomationTestingProgram.AutomationFramework.TestStepStatus.html#AutomationTestingProgram_AutomationFramework_TestStepStatus_RunSuccessful
@@ -3001,6 +3118,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability
   nameWithType: VerifyButtonAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyButtonAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  nameWithType: VerifyButtonAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyButtonAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag
+  nameWithType: VerifyButtonAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyButtonAvailability_Name
@@ -3020,6 +3150,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability
   nameWithType: VerifyCheckBoxAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxAvailability_Name
@@ -3052,6 +3195,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute
   nameWithType: VerifyCheckBoxStatus.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxStatus.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag
+  nameWithType: VerifyCheckBoxStatus.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.html#AutomationTestingProgram_AutomationFramework_VerifyCheckBoxStatus_Name
@@ -3071,6 +3227,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability
   nameWithType: VerifyDDLAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyDDLAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  nameWithType: VerifyDDLAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyDDLAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag
+  nameWithType: VerifyDDLAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyDDLAvailability_Name
@@ -3103,6 +3272,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute
   nameWithType: VerifyDDLContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  nameWithType: VerifyDDLContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag
+  nameWithType: VerifyDDLContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyDDLContent.html#AutomationTestingProgram_AutomationFramework_VerifyDDLContent_Name
@@ -3199,6 +3381,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Execute
   nameWithType: VerifyHTMLEditorAvailability.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorAvailability_Name
@@ -3244,6 +3439,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute
   nameWithType: VerifyHTMLEditorContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag
+  nameWithType: VerifyHTMLEditorContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.html#AutomationTestingProgram_AutomationFramework_VerifyHTMLEditorContent_Name
@@ -3263,6 +3471,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability
   nameWithType: VerifyImageAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyImageAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  nameWithType: VerifyImageAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyImageAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag
+  nameWithType: VerifyImageAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyImageAvailability_Name
@@ -3295,6 +3516,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute
   nameWithType: VerifyImageContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  nameWithType: VerifyImageContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag
+  nameWithType: VerifyImageContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyImageContent.html#AutomationTestingProgram_AutomationFramework_VerifyImageContent_Name
@@ -3314,6 +3548,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability
   nameWithType: VerifyLinkAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyLinkAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  nameWithType: VerifyLinkAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyLinkAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag
+  nameWithType: VerifyLinkAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyLinkAvailability_Name
@@ -3327,38 +3574,6 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name
   nameWithType: VerifyLinkAvailability.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  name: VerifyObjectAttribute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html
-  commentId: T:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute
-  nameWithType: VerifyObjectAttribute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  name: Execute()
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Execute
-  commentId: M:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute()
-  nameWithType: VerifyObjectAttribute.Execute()
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute*
-  name: Execute
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Execute_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute
-  nameWithType: VerifyObjectAttribute.Execute
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Name
-  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  nameWithType: VerifyObjectAttribute.Name
-- uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name*
-  name: Name
-  href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.html#AutomationTestingProgram_AutomationFramework_VerifyObjectAttribute_Name_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name
-  nameWithType: VerifyObjectAttribute.Name
 - uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability
   name: VerifyObjectAvailability
   href: api/AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.html
@@ -3442,6 +3657,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability
   nameWithType: VerifyTextBoxAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxAvailability_Name
@@ -3487,6 +3715,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException
   nameWithType: VerifyTextBoxContent.HandleException
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag
+  nameWithType: VerifyTextBoxContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.html#AutomationTestingProgram_AutomationFramework_VerifyTextBoxContent_Name
@@ -3538,6 +3779,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
   nameWithType: VerifyWebElementAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebElementAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebElementAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementAvailability_Name
@@ -3570,6 +3824,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute
   nameWithType: VerifyWebElementContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  nameWithType: VerifyWebElementContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag
+  nameWithType: VerifyWebElementContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebElementContent_Name
@@ -3589,6 +3856,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
   nameWithType: VerifyWebRadioGroupAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebRadioGroupAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebRadioGroupAvailability_Name
@@ -3608,6 +3888,19 @@ references:
   commentId: T:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
   nameWithType: VerifyWebTableAvailability
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebTableAvailability.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag
+  nameWithType: VerifyWebTableAvailability.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableAvailability_Name
@@ -3640,6 +3933,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute
   nameWithType: VerifyWebTableContent.Execute
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_HTMLWhiteListTag
+  commentId: P:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  nameWithType: VerifyWebTableContent.HTMLWhiteListTag
+- uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag*
+  name: HTMLWhiteListTag
+  href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_HTMLWhiteListTag_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag
+  nameWithType: VerifyWebTableContent.HTMLWhiteListTag
 - uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name
   name: Name
   href: api/AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.html#AutomationTestingProgram_AutomationFramework_VerifyWebTableContent_Name
@@ -4311,6 +4617,51 @@ references:
   commentId: N:AutomationTestingProgram.GeneralData
   fullName: AutomationTestingProgram.GeneralData
   nameWithType: AutomationTestingProgram.GeneralData
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData
+  name: ALMGeneralData
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html
+  commentId: T:AutomationTestingProgram.GeneralData.ALMGeneralData
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData
+  nameWithType: ALMGeneralData
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  name: Name
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Name
+  commentId: P:AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  nameWithType: ALMGeneralData.Name
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Name*
+  name: Name
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Name_
+  commentId: Overload:AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Name
+  nameWithType: ALMGeneralData.Name
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String,System.String)
+  name: ParseParameters(String, String)
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_ParseParameters_System_String_System_String_
+  commentId: M:AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String,System.String)
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String, System.String)
+  nameWithType: ALMGeneralData.ParseParameters(String, String)
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters*
+  name: ParseParameters
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_ParseParameters_
+  commentId: Overload:AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters
+  nameWithType: ALMGeneralData.ParseParameters
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)
+  name: Verify(String)
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Verify_System_String_
+  commentId: M:AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)
+  nameWithType: ALMGeneralData.Verify(String)
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify*
+  name: Verify
+  href: api/AutomationTestingProgram.GeneralData.ALMGeneralData.html#AutomationTestingProgram_GeneralData_ALMGeneralData_Verify_
+  commentId: Overload:AutomationTestingProgram.GeneralData.ALMGeneralData.Verify
+  isSpec: "True"
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData.Verify
+  nameWithType: ALMGeneralData.Verify
 - uid: AutomationTestingProgram.GeneralData.ITestGeneralData
   name: ITestGeneralData
   href: api/AutomationTestingProgram.GeneralData.ITestGeneralData.html
@@ -4541,6 +4892,12 @@ references:
   commentId: T:AutomationTestingProgram.InformationObject.EnvVar
   fullName: AutomationTestingProgram.InformationObject.EnvVar
   nameWithType: InformationObject.EnvVar
+- uid: AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  name: Attempts
+  href: api/AutomationTestingProgram.InformationObject.EnvVar.html#AutomationTestingProgram_InformationObject_EnvVar_Attempts
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  nameWithType: InformationObject.EnvVar.Attempts
 - uid: AutomationTestingProgram.InformationObject.EnvVar.Browser
   name: Browser
   href: api/AutomationTestingProgram.InformationObject.EnvVar.html#AutomationTestingProgram_InformationObject_EnvVar_Browser
@@ -4920,6 +5277,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.Logger.LogWithFiveTabs
   nameWithType: Logger.LogWithFiveTabs
+- uid: AutomationTestingProgram.Logger.Tab(System.Int32)
+  name: Tab(Int32)
+  href: api/AutomationTestingProgram.Logger.html#AutomationTestingProgram_Logger_Tab_System_Int32_
+  commentId: M:AutomationTestingProgram.Logger.Tab(System.Int32)
+  fullName: AutomationTestingProgram.Logger.Tab(System.Int32)
+  nameWithType: Logger.Tab(Int32)
+- uid: AutomationTestingProgram.Logger.Tab*
+  name: Tab
+  href: api/AutomationTestingProgram.Logger.html#AutomationTestingProgram_Logger_Tab_
+  commentId: Overload:AutomationTestingProgram.Logger.Tab
+  isSpec: "True"
+  fullName: AutomationTestingProgram.Logger.Tab
+  nameWithType: Logger.Tab
 - uid: AutomationTestingProgram.Logger.Warn(System.Object)
   name: Warn(Object)
   href: api/AutomationTestingProgram.Logger.html#AutomationTestingProgram_Logger_Warn_System_Object_
@@ -5163,6 +5533,168 @@ references:
   commentId: N:AutomationTestingProgram.TestingData.TestDrivers
   fullName: AutomationTestingProgram.TestingData.TestDrivers
   nameWithType: AutomationTestingProgram.TestingData.TestDrivers
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData
+  name: ALMSetData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData
+  nameWithType: ALMSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.#ctor(System.String)
+  name: ALMSetData(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData__ctor_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.#ctor(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALMSetData(System.String)
+  nameWithType: ALMSetData.ALMSetData(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.#ctor*
+  name: ALMSetData
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData__ctor_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.#ctor
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALMSetData
+  nameWithType: ALMSetData.ALMSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)
+  name: AddAttachment(String)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_AddAttachment_System_String_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)
+  nameWithType: ALMSetData.AddAttachment(String)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment*
+  name: AddAttachment
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_AddAttachment_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment
+  nameWithType: ALMSetData.AddAttachment
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM
+  name: ALM
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ALM
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM
+  nameWithType: ALMSetData.ALM
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM*
+  name: ALM
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ALM_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM
+  nameWithType: ALMSetData.ALM
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM
+  name: ConnectToALM()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ConnectToALM
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM()
+  nameWithType: ALMSetData.ConnectToALM()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM*
+  name: ConnectToALM
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ConnectToALM_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM
+  nameWithType: ALMSetData.ConnectToALM
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun
+  name: ContinueToRun
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ContinueToRun
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun
+  nameWithType: ALMSetData.ContinueToRun
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun*
+  name: ContinueToRun
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ContinueToRun_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun
+  nameWithType: ALMSetData.ContinueToRun
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  name: ExistNextTestCase()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ExistNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase()
+  nameWithType: ALMSetData.ExistNextTestCase()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase*
+  name: ExistNextTestCase
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_ExistNextTestCase_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase
+  nameWithType: ALMSetData.ExistNextTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  name: GetNextTestCase()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_GetNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase()
+  nameWithType: ALMSetData.GetNextTestCase()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase*
+  name: GetNextTestCase
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_GetNextTestCase_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase
+  nameWithType: ALMSetData.GetNextTestCase
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  name: Name
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_Name
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  nameWithType: ALMSetData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name*
+  name: Name
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_Name_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name
+  nameWithType: ALMSetData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  name: SetUp()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUp
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp()
+  nameWithType: ALMSetData.SetUp()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp*
+  name: SetUp
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUp_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp
+  nameWithType: ALMSetData.SetUp
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  name: SetUpTestSet()
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUpTestSet
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet()
+  nameWithType: ALMSetData.SetUpTestSet()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet*
+  name: SetUpTestSet
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_SetUpTestSet_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet
+  nameWithType: ALMSetData.SetUpTestSet
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  nameWithType: ALMSetData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs*
+  name: TestArgs
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_TestArgs_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs
+  nameWithType: ALMSetData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet
+  name: TestSet
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_TestSet
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet
+  nameWithType: ALMSetData.TestSet
+- uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet*
+  name: TestSet
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.html#AutomationTestingProgram_TestingData_TestDrivers_ALMSetData_TestSet_
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet
+  isSpec: "True"
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet
+  nameWithType: ALMSetData.TestSet
 - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData
   name: DatabaseCaseData
   href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html
@@ -5214,6 +5746,12 @@ references:
   commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.Boolean)
   fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String, System.Boolean)
   nameWithType: DatabaseCaseData.SetUpTestCase(String, Boolean)
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.String,System.String,System.Boolean)
+  name: SetUpTestCase(String, String, String, Boolean)
+  href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseCaseData_SetUpTestCase_System_String_System_String_System_String_System_Boolean_
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.String,System.String,System.Boolean)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String, System.String, System.String, System.Boolean)
+  nameWithType: DatabaseCaseData.SetUpTestCase(String, String, String, Boolean)
 - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase*
   name: SetUpTestCase
   href: api/AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.html#AutomationTestingProgram_TestingData_TestDrivers_DatabaseCaseData_SetUpTestCase_

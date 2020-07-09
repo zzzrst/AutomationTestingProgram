@@ -37,36 +37,34 @@ namespace AutomationTestingProgram.AutomationFramework
                              $"-patternToRemove '{this.Arguments["object"]}' " +
                              $"-resultFilePath '{resultFilePath}' \"";
 
-            try
-            {
-                Process p = new Process();
-                ProcessStartInfo startInfo = new ProcessStartInfo
-                {
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    FileName = "cmd.exe",
-                    Arguments = $"/C exit | {command}",
-                };
-                p.StartInfo = startInfo;
-                p.Start();
-                Logger.LogStdout();
-                string line;
-                while ((line = p.StandardOutput.ReadLine()) != null)
-                {
-                    Logger.LogWithFiveTabs(line);
-                    this.TestStepStatus.Actual += "\n" + line;
-                }
+            this.TestStepStatus.RunSuccessful = this.RunProcess(command) == 0 && !File.Exists(resultFilePath);
+            this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? "Email Matched" : "Email did not match. Please check desktop for results.";
+            Logger.Info(this.TestStepStatus.Actual);
+        }
 
-                p.WaitForExit();
-                this.TestStepStatus.RunSuccessful = p.ExitCode == 0 && !File.Exists(resultFilePath);
-                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? "Email Matched" : "Email did not match. Please check desktop for results.";
-                Logger.Info(this.TestStepStatus.Actual);
-            }
-            catch (Exception e)
+        private int RunProcess(string command)
+        {
+            Process p = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo
             {
-                Logger.Error(e.ToString());
-                this.TestStepStatus.RunSuccessful = false;
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                FileName = "cmd.exe",
+                Arguments = $"/C exit | {command}",
+            };
+            p.StartInfo = startInfo;
+            p.Start();
+            Logger.LogStdout();
+            string line;
+            while ((line = p.StandardOutput.ReadLine()) != null)
+            {
+                Logger.LogWithFiveTabs(line);
+                this.TestStepStatus.Actual += "\n" + line;
             }
+
+            p.WaitForExit();
+
+            return p.ExitCode;
         }
     }
 }

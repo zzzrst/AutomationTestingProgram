@@ -8,6 +8,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.Collections.Generic;
     using System.Configuration;
     using System.IO;
+    using System.Linq;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.Exceptions;
@@ -45,6 +46,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         private bool SpecialCharFlag { get; set; } = false;
 
+        /// <summary>
+        /// Gets or sets the name of the enviornment database.
+        /// </summary>
+        private string EnvDBName { get; set; }
+
         /// <inheritdoc/>
         public void SetArguments(TestStep testStep)
         {
@@ -68,15 +74,19 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         {
             string environment = GetEnvironmentVariable(EnvVar.Environment);
             /*
-
-            // query to update each of the test object's attribute value
-            foreach (string attribute in this.TestObject.GetAttributes())
+            if (testStep is ActionObject)
             {
-                string attribVal = this.TestObject.GetAttributeValue(attribute);
-                string queried = this.DbDriver.QuerySpecialChars(environment, attribVal) as string;
-                this.TestObject.SetAttribute(attribute, queried);
+                // query to update each of the test object's attribute value
+                foreach (string attribute in ((ActionObject)testStep).Attributes.Keys.ToList())
+                {
+                    if (((ActionObject)testStep).Attributes.TryGetValue(attribute, out string value))
+                    {
+                        string attribVal = value;
+                        string queried = this.QuerySpecialChars(environment, attribVal) as string;
+                        ((ActionObject)testStep).Attributes.Add(attribute, queried);
+                    }
+                }
             }*/
-
             Dictionary<string, string> arguments = new Dictionary<string, string>();
 
             // query to update each of the test action's values
@@ -134,7 +144,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The <see cref="string"/>.</returns>
         public string GetEnvironmentEmailNotificationFolder(string environment)
         {
-            this.ConnectToDatabase(this.TestDB);
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
             string query = $"select t.EMAIL_NOTIFICATION_FOLDER from QA_AUTOMATION.test_environments t where t.environment = '{environment}'";
             List<List<object>> result = this.TestDB.ExecuteQuery(query);
             if (result.Count == 0)
@@ -166,8 +176,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             if (original.Length >= 7 && original.Substring(0, 7).ToLower() == "!select")
             {
-                // query from RVDEV1 database
-                this.ConnectToDatabase(this.TestDB);
+                // query from database
+                this.TestDB = this.ConnectToDatabase(this.TestDB);
                 result = this.TestDB.ExecuteQuery(original.Substring(1))[0][0];
                 msg += $"Query replaced with: {result}.";
             }
@@ -305,10 +315,11 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The information needed to build the connection string.</returns>
         private List<object> QueryEnvironmentConnectionInformation(string environment)
         {
-            this.ConnectToDatabase(this.TestDB);
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
 
             // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
-            string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {this.EnvDBName} t where t.environment = '{environment}'";
+            string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {ConfigurationManager.AppSettings["DBEnvDatabase"]} t where t.environment = '{environment}'";
+            Logger.Info($"Querying for QueryEnvironmentConnectionInformation : [{query}]");
 
             // decrypt password if needed.
             List<List<object>> result = this.TestDB.ExecuteQuery(query);
@@ -409,7 +420,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The URL to access the environment.</returns>
         private string GetEnvironmentURL(string environment)
         {
-            this.ConnectToDatabase(this.TestDB);
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
             string query = $"select t.url from {this.EnvDBName} t where t.environment = '{environment}'";
             List<List<object>> result = this.TestDB.ExecuteQuery(query);
             if (result.Count == 0)

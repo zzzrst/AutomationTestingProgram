@@ -60,14 +60,24 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <summary>
         /// Gets or sets the description of the test step.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether determines whether the test step is optional or not.
+        /// </summary>
+        public bool Optional { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the test step should pass when it passes.
+        /// </summary>
+        public bool PassCondition { get; set; } = true;
 
         private int Attempts { get; set; } = 0;
 
         /// <inheritdoc/>
         public virtual void Execute()
         {
-            this.ShouldExecuteVariable = false;
+            this.Attempts++;
         }
 
         /// <inheritdoc/>
@@ -80,8 +90,6 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.ErrorStack += e.StackTrace;
             this.TestStepStatus.FriendlyErrorMessage += e.Message;
             this.TestStepStatus.RunSuccessful = false;
-
-            this.Attempts++;
 
             Logger.Error(e.Message);
 
@@ -100,6 +108,8 @@ namespace AutomationTestingProgram.AutomationFramework
                     StartTime = DateTime.UtcNow,
                     TestStepNumber = this.TestStepNumber,
                     Description = this.Description,
+                    Expected = this.Description,
+                    Optional = this.Optional,
                 };
             }
 
@@ -126,7 +136,7 @@ namespace AutomationTestingProgram.AutomationFramework
                 InformationObject.TestAutomationDriver.RunAODA(this.RunAODAPageName);
             }
 
-            double totalTime = this.GetTotalElapsedTime();
+            this.TestStepStatus.RunSuccessful = !this.ShouldExecuteVariable || (this.TestStepStatus.RunSuccessful == this.PassCondition);
 
             if (this.ShouldLog)
             {
@@ -135,18 +145,13 @@ namespace AutomationTestingProgram.AutomationFramework
 
                 if (this.TestStepStatus.Actual == string.Empty)
                 {
-                    this.TestStepStatus.Actual = totalTime.ToString();
+                    this.TestStepStatus.Actual = this.TestStepStatus.Expected;
                 }
             }
             else
             {
                 this.TestStepStatus.Actual = "No Log";
             }
-        }
-
-        private double GetTotalElapsedTime()
-        {
-            return Math.Abs((this.TestStepStatus.StartTime - this.TestStepStatus.EndTime).TotalSeconds);
         }
     }
 }

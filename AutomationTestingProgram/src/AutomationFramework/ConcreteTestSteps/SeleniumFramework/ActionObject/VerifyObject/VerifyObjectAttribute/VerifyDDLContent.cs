@@ -16,6 +16,9 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "VerifyDDLContent";
 
         /// <inheritdoc/>
+        protected override string HTMLWhiteListTag { get; set; } = "WebList_HTMLTag";
+
+        /// <inheritdoc/>
         public override void Execute()
         {
             base.Execute();

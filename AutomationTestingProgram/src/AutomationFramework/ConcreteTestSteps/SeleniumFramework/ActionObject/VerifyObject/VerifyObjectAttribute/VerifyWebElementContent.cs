@@ -13,6 +13,9 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "Verify WebElement Content";
 
         /// <inheritdoc/>
+        protected override string HTMLWhiteListTag { get; set; } = "WebElement_HTMLTag";
+
+        /// <inheritdoc/>
         public override void Execute()
         {
             base.Execute();

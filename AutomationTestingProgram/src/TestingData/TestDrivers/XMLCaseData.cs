@@ -105,8 +105,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public ITestStep GetNextTestStep()
         {
-            ITestStep testStep = null;
-
             // reached end of loop, check if should loop again.
             if (this.testStack.Count == 0 && this.ShouldExecuteAmountOfTimes > this.ExecuteCount)
             {
@@ -114,7 +112,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 this.ExecuteCount += 1;
             }
 
-            testStep = this.RunIfTestStepLayer();
+            ITestStep testStep = this.RunIfTestStepLayer();
 
             return testStep;
         }

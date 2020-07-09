@@ -24,6 +24,11 @@ namespace AutomationTestingProgram
         public enum EnvVar
         {
             /// <summary>
+            /// The attempts to try before timing out.
+            /// </summary>
+            Attempts,
+
+            /// <summary>
             /// The Browser To use.
             /// browser type.
             /// </summary>
@@ -206,21 +211,29 @@ namespace AutomationTestingProgram
             csvFileName = csvFileName.Substring(0, csvFileName.Length - 4);
 
             CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{csvFileName}.csv");
-            CSVLogger.AddResults($"Transaction, {DateTime.Now.ToString("G")}");
+            CSVLogger.AddResults($"Transaction, {DateTime.Now:G}");
             CSVLogger.AddResults($"Environment URL, {GetEnvironmentVariable(EnvVar.URL)}");
 
             LogSaveFileLocation = logSaveLocation;
             ScreenshotSaveLocation = screenshotSaveLocation;
 
-            Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
-
             RespectRepeatFor = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRepeatFor));
             RespectRunAODAFlag = bool.Parse(GetEnvironmentVariable(EnvVar.RespectRunAODAFlag));
 
-            Directory.CreateDirectory(csvSaveLocation);
-            Directory.CreateDirectory(logSaveLocation);
-            Directory.CreateDirectory(reportSaveLocation);
-            Directory.CreateDirectory(screenshotSaveLocation);
+            try
+            {
+                Directory.CreateDirectory(csvSaveLocation);
+                Directory.CreateDirectory(logSaveLocation);
+                Directory.CreateDirectory(reportSaveLocation);
+                Directory.CreateDirectory(screenshotSaveLocation);
+            }
+            catch (ArgumentException)
+            {
+                throw new Exception("Missing file path parameters. On one or more of these Directories. " +
+                    "csv,log,report,screenshot");
+            }
+
+            SetReporter(reportSaveLocation);
         }
 
         /// <summary>
@@ -247,6 +260,19 @@ namespace AutomationTestingProgram
             }
 
             return value;
+        }
+
+        private static void SetReporter(string reportSaveLocation)
+        {
+            switch (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower())
+            {
+                case "alm":
+                    Reporter = new ALMReporter(string.Empty);
+                    break;
+                default:
+                    Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
+                    break;
+            }
         }
     }
 }

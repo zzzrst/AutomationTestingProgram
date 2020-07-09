@@ -20,8 +20,6 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            bool passed;
-            string message;
             string environment = GetEnvironmentVariable(EnvVar.Environment);
             string expectedQuery = this.Arguments["object"];
             string toCheckQuery = this.Arguments["value"];
@@ -31,13 +29,9 @@ namespace AutomationTestingProgram.AutomationFramework
             string dbValue = ((DatabaseStepData)TestStepData).QuerySpecialChars(environment, toCheckQuery).ToString();
 
             // check if both values are equal
-            message = (passed = dbValue == dbObject)
+            this.TestStepStatus.Actual = (this.TestStepStatus.RunSuccessful = dbValue == dbObject)
                 ? $"Both expected and actual value were: '{dbValue}'."
                 : $"Expected value is: '{dbValue}'. SQLQuery value is: '{dbObject}'. They are not equal.";
-
-            this.TestStepStatus.Actual = message;
-            this.TestStepStatus.RunSuccessful = passed;
-            Logger.Info(message);
         }
     }
 }

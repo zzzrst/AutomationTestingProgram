@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Platforms>AnyCPU;x86</Platforms>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ALMProjectEntityFieldMapping.xml" />
+    <None Remove="TDAPIOLELib.dll" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html" />
+    <None Remove="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ALMProjectEntityFieldMapping.xml" />
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="System.Management" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TDAPIOLELib">
+      <HintPath>TDAPIOLELib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

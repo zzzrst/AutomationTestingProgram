@@ -257,6 +257,11 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.ActionObject.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ActionObject.HTMLWhiteListTag">
+            <summary>
+            Gets or sets the html Tag to use.
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.ActionObject.Attributes">
             <summary>
             Gets or sets the attributes of the element provided through the data.
@@ -275,11 +280,10 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.Execute">
             <inheritdoc/>
         </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder(System.Boolean)">
+        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.XPathBuilder">
             <summary>
             Builds the XPath query given a test object's property attribute-value pairs.
             </summary>
-            <param name="htmlWhitelist">Determins whether to use the white list or not.</param>
             <returns>The XPath query built from the given property attribute-value pairs.</returns>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.CreateJSCommandForAttributeValuePairs(System.Collections.Generic.IDictionary{System.String,System.String})">
@@ -302,20 +306,6 @@
             </summary>
             <param name="htmltagwhiteList">The htmltagwhiteList<see cref="T:List{string}"/>.</param>
             <returns>The <see cref="T:System.String"/>.</returns>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.Click(System.Boolean)">
-            <summary>
-            Clicks on this browser object. If the object opens a modal box after clicking,. <code>opensModal</code> can be set
-            to execute a separate JavaScript click call that bypasses the modal's blocking call.
-            </summary>
-            <param name="opensModal">Whether to execute the JavaScript click call to bypass modal's blocking call.</param>
-            <returns><code>true</code> if browser object was successfully clicked.</returns>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.ActionObject.Click">
-            <summary>
-            Clicks on this browser object.
-            </summary>
-            <returns><code>true</code> if browser object was successfully clicked.</returns>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.CheckBox">
             <summary>
@@ -366,6 +356,17 @@
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.ClickWebElement.Name">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Login">
+            <summary>
+            This test step to log in.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Login.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Login.Execute">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.PopulateHTMLEditor">
@@ -467,23 +468,15 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.UploadFile.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute">
-            <summary>
-            This test step an abstract class to verify an object's attribute.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyObjectAttribute.Execute">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus">
             <summary>
             This test step to verify the status of a check box.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute">
@@ -497,6 +490,9 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute">
             <inheritdoc/>
         </member>
@@ -506,6 +502,9 @@
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute">
@@ -519,6 +518,9 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute">
             <inheritdoc/>
         </member>
@@ -528,6 +530,9 @@
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute">
@@ -542,6 +547,9 @@
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute">
@@ -573,12 +581,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability">
             <summary>
             This test step to verify the availability of a check box.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability">
@@ -589,12 +603,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability">
             <summary>
             This test step to verify the availabilty of an html editor.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Execute">
@@ -611,12 +631,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability">
             <summary>
             This test step to verify the availability of an image.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability">
@@ -627,12 +653,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability">
             <summary>
             This test step to verify the availability of a textbox.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability">
@@ -643,6 +675,9 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability">
             <summary>
             This test step to verify the availability of a textbox.
@@ -651,12 +686,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent">
             <summary>
             This test step is the same as testStepXml.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent.Execute">
@@ -796,17 +837,6 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.Login">
-            <summary>
-            This test step to log in.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Login.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Login.Execute">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.MapEmailFolder">
             <summary>
             This test step to log in.
@@ -921,6 +951,9 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.SQLToCSV.Execute">
             <inheritdoc/>
         </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyAlertText">
             <summary>
             This test step is  to verify the text of an alert.
@@ -964,6 +997,12 @@
             <param name="topY"> The top y coordinate. </param>
             <param name="botX"> The bottom x coordinate. </param>
             <param name="botY"> The bottom y coordinate. </param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyExcelFile.VerifyAndConvert(System.String)">
+            <summary>
+            Verifies that the file exists and convert to xlsx if needed.
+            </summary>
+            <param name="filePath">the path to the file.</param>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyExcelFile.ConvertCSVtoXLSX(System.String,System.String)">
             <summary>
@@ -1025,6 +1064,29 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.FakeTestStep.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter">
+            <summary>
+            The implementation of the reporter class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter"/> class.
+            </summary>
+            <param name="saveLocation">The location to save the file to.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter">
@@ -1211,6 +1273,11 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional">
+            <summary>
+            Gets or sets a value indicating whether the test step is nessesary to pass.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.TestCase">
             <summary>
             Implementation of the testCase class.
@@ -1356,6 +1423,16 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.Description">
             <summary>
             Gets or sets the description of the test step.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.Optional">
+            <summary>
+            Gets or sets a value indicating whether determines whether the test step is optional or not.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.PassCondition">
+            <summary>
+            Gets or sets a value indicating whether the test step should pass when it passes.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.TestStep.Execute">
@@ -1724,6 +1801,20 @@
             If not set, will use the test case args.
             </summary>
         </member>
+        <member name="T:AutomationTestingProgram.GeneralData.ALMGeneralData">
+            <summary>
+            An implementation of the General Data for ALM.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.GeneralData.ALMGeneralData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.GeneralData.ALMGeneralData.ParseParameters(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.GeneralData.ALMGeneralData.Verify(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.GeneralData.ITestGeneralData">
             <summary>
             General data regarding the test data type. This should be ran once at the beginning and never used again.
@@ -1837,6 +1928,11 @@
         <member name="T:AutomationTestingProgram.InformationObject.EnvVar">
             <summary>
             Enviornement variables used by the program.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.InformationObject.EnvVar.Attempts">
+            <summary>
+            The attempts to try before timing out.
             </summary>
         </member>
         <member name="F:AutomationTestingProgram.InformationObject.EnvVar.Browser">
@@ -2079,19 +2175,19 @@
             </summary>
             <returns>An ILogger.</returns>
         </member>
-        <member name="M:AutomationTestingProgram.Logger.GetLogger(System.Type)">
-            <summary>
-            Returns the type for the logger.
-            </summary>
-            <param name="type">Class this logger is under.</param>
-            <returns>ILog instance to interact with.</returns>
-        </member>
         <member name="M:AutomationTestingProgram.Logger.Tab(System.Int32)">
             <summary>
             Returns a sequence of whitespaces of fixed length to represent tabs in the print log.
             </summary>
             <param name="indents">Number of tabs.</param>
             <returns>Sequence of tabs represented as whitespaces.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.Logger.GetLogger(System.Type)">
+            <summary>
+            Returns the type for the logger.
+            </summary>
+            <param name="type">Class this logger is under.</param>
+            <returns>ILog instance to interact with.</returns>
         </member>
         <member name="M:AutomationTestingProgram.Logger.SetLog4NetConfiguration">
             <summary>
@@ -2216,9 +2312,97 @@
             </summary>
             <param name="testStep">Test steps to get the arguments for.</param>
         </member>
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData">
+            <summary>
+            An implementation of the test set data using ALM.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData"/> class.
+            </summary>
+            <param name="args">argument to be passed in.</param>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestArgs">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.TestSet">
+            <summary>
+            Gets the current Test Set Instance.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ALM">
+            <summary>
+            Gets or sets the ALM Connector.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ContinueToRun">
+            <summary>
+            Gets or sets a value indicating whether determines whether or not to continue to run.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.GetNextTestCase">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUp">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.SetUpTestSet">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ConnectToALM">
+            <summary>
+            Connects to ALM.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData">
             <summary>
             A concrete implementation of the ITestCaseData for databases.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.MANDATORY">
+            <summary>
+            Gets the MANDATORY
+            Test step type ID flag for a mandatory test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.IMPORTANT">
+            <summary>
+            Gets the IMPORTANT
+            Test step type ID flag for an important test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.OPTIONAL">
+            <summary>
+            Gets the OPTIONAL
+            Test step type ID flag for an optional test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CONDITIONAL">
+            <summary>
+            Gets the CONDITIONAL
+            Test step type ID flag for a conditional test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.INVERTEDMANDATORY">
+            <summary>
+            Gets the INVERTED_MANDATORY
+            Test step type ID flag for an inverted mandatory test step.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.INVERTEDIMPORTANT">
+            <summary>
+            Gets the INVERTED_IMPORTANT
+            Test step type ID flag for an inverted important test step.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.#ctor(System.String)">
@@ -2245,6 +2429,16 @@
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.Boolean)">
             <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.SetUpTestCase(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Same as The Original Method but also overwrites the collection and release.
+            </summary>
+            <param name="testCaseName">The name of the test case.</param>
+            <param name="collection">the collection.</param>
+            <param name="release">the release.</param>
+            <param name="performAction">Whether or not it should execute.</param>
+            <returns>the new test case.</returns>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData.CreateTestCase(System.String)">
             <summary>
@@ -2284,11 +2478,6 @@
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Name">
             <inheritdoc/>
-        </member>
-        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.EnvDBName">
-            <summary>
-            Gets or sets the name of the enviornment database.
-            </summary>
         </member>
         <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName">
             <summary>
@@ -2341,6 +2530,11 @@
             <summary>
             Gets or sets a value indicating whether flag for querying special characters.
             MAy REmove.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.EnvDBName">
+            <summary>
+            Gets or sets the name of the enviornment database.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)">
@@ -2668,6 +2862,9 @@
             </summary>
             <param name="xmlLocation">The location of the Xml file.</param>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.SetUpTestSet">
             <inheritdoc/>
         </member>
@@ -2675,9 +2872,6 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.GetNextTestCase">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment(System.String)">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddNodesToStack(System.Xml.XmlNode,System.Boolean)">

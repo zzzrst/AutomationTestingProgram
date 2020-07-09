@@ -11,5 +11,8 @@ namespace AutomationTestingProgram.AutomationFramework
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "Verify Button Availability";
+
+        /// <inheritdoc/>
+        protected override string HTMLWhiteListTag { get; set; } = "WebButton_HTMLTags";
     }
 }

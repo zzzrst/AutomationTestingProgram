@@ -31,20 +31,15 @@ namespace AutomationTestingProgram.AutomationFramework
             };
             p.StartInfo = startInfo;
             p.Start();
-            Logger.Info($"{Tab(4)}Stdout:");
+            Logger.Info($"{Logger.Tab(4)}Stdout:");
             string line;
             while ((line = p.StandardOutput.ReadLine()) != null)
             {
-                Logger.Info($"{Tab(5)}{line}");
+                Logger.Info($"{Logger.Tab(5)}{line}");
                 this.TestStepStatus.Actual += "\n" + line;
             }
 
             p.WaitForExit();
-        }
-
-        private static string Tab(int indents = 1)
-        {
-            return string.Concat(Enumerable.Repeat("    ", indents));
         }
     }
 }

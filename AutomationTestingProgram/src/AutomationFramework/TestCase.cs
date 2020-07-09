@@ -110,20 +110,28 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public void UpdateTestCaseStatus(ITestStepStatus testStepStatus)
         {
-            string actual = testStepStatus.Actual;
+            string result = this.GetTotalElapsedTime(testStepStatus).ToString();
             if (testStepStatus.RunSuccessful == false)
             {
-                this.TestCaseStatus.RunSuccessful = false;
-                this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a test step";
-                actual = "F";
+                result = "F";
+                if (!((TestStepStatus)testStepStatus).Optional)
+                {
+                    this.TestCaseStatus.RunSuccessful = false;
+                    this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a test step";
+                }
             }
 
             if (testStepStatus.Actual != "No Log")
             {
-                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{actual}\"");
+                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{result}\"");
             }
 
             InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);
+        }
+
+        private double GetTotalElapsedTime(ITestStepStatus testStepStatus)
+        {
+            return Math.Abs((testStepStatus.StartTime - testStepStatus.EndTime).TotalSeconds);
         }
     }
 }

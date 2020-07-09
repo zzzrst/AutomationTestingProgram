@@ -50,7 +50,14 @@ namespace AutomationTestingProgram
                 Assembly.GetExecutingAssembly().GetTypes()
                 .Where(myType => myType.GetInterfaces().Contains(typeof(T)) && myType.IsClass && !myType.IsAbstract))
             {
-                objects.Add((T)Activator.CreateInstance(type, constructorArgs));
+                try
+                {
+                    objects.Add((T)Activator.CreateInstance(type, constructorArgs));
+                }
+                catch (MissingMethodException)
+                {
+                    throw new MissingMethodException($"{type.Name} is missing a constructor that takes in a string.");
+                }
             }
 
             return objects;

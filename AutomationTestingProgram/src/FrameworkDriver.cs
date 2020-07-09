@@ -6,6 +6,7 @@ namespace AutomationTestingProgram
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Diagnostics;
     using System.IO;
     using System.IO.Compression;
@@ -80,6 +81,8 @@ namespace AutomationTestingProgram
                 SetDefaultParameters();
             }
 
+            Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
+
             if (!errorParsing)
             {
                 // Set up all the parts.
@@ -91,21 +94,20 @@ namespace AutomationTestingProgram
                 TestAutomationBuilder automationBuilder = new TestAutomationBuilder();
                 automationBuilder.Build();
 
-                Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
-
                 // Run main program.
                 DateTime start = DateTime.UtcNow;
                 AutomationTestSetDriver.RunTestSet(testSet);
-                InformationObject.Reporter.Report();
 
                 RunAODA();
 
                 DateTime end = DateTime.UtcNow;
 
+                InformationObject.Reporter.Report();
+
                 InformationObject.CSVLogger.AddResults($"Total, {Math.Abs((start - end).TotalSeconds)}");
                 InformationObject.CSVLogger.WriteOutResults();
 
-                string resultString = testSet.TestSetStatus.RunSuccessful ? "successfull" : "not successful";
+                string resultString = testSet.TestSetStatus.RunSuccessful ? "successful" : "not successful";
                 Logger.Info($"Automation Testing Program has finished. It was {resultString}");
             }
             else
@@ -250,6 +252,7 @@ namespace AutomationTestingProgram
         private static bool ParseCommandLine(string[] args)
         {
             bool errorParsing = false;
+            SetEnvironmentVariable(EnvVar.Attempts, string.Empty);
             Parser.Default.ParseArguments<FrameworkOptions>(args)
                .WithParsed(o =>
                {
