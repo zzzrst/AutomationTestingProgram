@@ -358,6 +358,17 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.ClickWebElement.Name">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Login">
+            <summary>
+            This test step to log in.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.Login.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Login.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.PopulateHTMLEditor">
             <summary>
             This test step to populate the html editor.
@@ -824,17 +835,6 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute">
-            <inheritdoc/>
-        </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.Login">
-            <summary>
-            This test step to log in.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.Login.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.Login.Execute">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.MapEmailFolder">

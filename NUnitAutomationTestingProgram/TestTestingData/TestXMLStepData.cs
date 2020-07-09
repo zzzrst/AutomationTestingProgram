@@ -200,8 +200,8 @@ namespace NUnitAutomationTestingProgram.TestTestingData
         {
             SetEnvironmentVariable(EnvVar.Browser, "chrome");
             SetEnvironmentVariable(EnvVar.Environment, "");
-            SetEnvironmentVariable(EnvVar.TimeOutThreshold, "50");
-            SetEnvironmentVariable(EnvVar.WarningThreshold, "50");
+            SetEnvironmentVariable(EnvVar.TimeOutThreshold, "5");
+            SetEnvironmentVariable(EnvVar.WarningThreshold, "5");
             SetEnvironmentVariable(EnvVar.URL, url);
             SetEnvironmentVariable(EnvVar.DataFile, $"{readFileLocation}{testFileName}");
             SetEnvironmentVariable(EnvVar.CsvSaveFileLocation, saveFileLocation);
