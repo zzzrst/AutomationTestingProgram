@@ -50,6 +50,42 @@ namespace NUnitAutomationTestingProgram.TestTestingData
         }
 
         [Test]
+        public void TestClickXPath()
+        {
+            TestSet testSet;
+            Reporter reporter;
+
+            testSet = buildTestSet("/Test Click Xpath.xlsx");
+
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
+
+            reporter = InformationObject.Reporter;
+
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
+            Assert.AreEqual(2, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 2 test steps");
+        }
+
+        [Test]
+        public void TestChooseUser()
+        {
+            TestSet testSet;
+            Reporter reporter;
+
+            testSet = buildTestSet("/Test Multiple Users.xlsx;User 2");
+
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
+
+            reporter = InformationObject.Reporter;
+
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
+            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
+            Assert.AreEqual(6, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 6 test steps");
+        }
+
+        [Test]
         public void TestNoUrl()
         {
             TestSet testSet;
@@ -83,24 +119,6 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
             Assert.AreEqual(0, reporter.TestCaseStatuses.Count, "Expected to have 0 test case");
             Assert.AreEqual(0, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 0 test steps");
-        }
-
-        [Test]
-        public void TestClickXPath()
-        {
-            TestSet testSet;
-            Reporter reporter;
-
-            testSet = buildTestSet("/Test Click Xpath.xlsx");
-
-            AutomationTestSetDriver.RunTestSet(testSet);
-            InformationObject.Reporter.Report();
-
-            reporter = InformationObject.Reporter;
-
-            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful, "Expeted to pass");
-            Assert.AreEqual(1, reporter.TestCaseStatuses.Count, "Expected to have 1 test case");
-            Assert.AreEqual(2, reporter.TestCaseToTestSteps.Sum(x => x.Value.Count), "Expected to have 2 test steps");
         }
 
         [Test]

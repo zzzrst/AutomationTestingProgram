@@ -4,6 +4,7 @@
 
 namespace AutomationTestingProgram.TestingData
 {
+    using AutomationTestingProgram.Exceptions;
     using AutomationTestSetFramework;
 
     /// <summary>
@@ -28,9 +29,33 @@ namespace AutomationTestingProgram.TestingData
         /// <returns>The next test case to run.</returns>
         public ITestCase GetNextTestCase()
         {
-            this.ColIndex++;
+            ITestCase testCase = null;
             InformationObject.TestAutomationDriver.Quit();
-            return InformationObject.TestCaseData.SetUpTestCase((this.ColIndex - 1).ToString());
+            if (this.User != string.Empty)
+            {
+                // find the Column index which the user is under.
+                while (this.TestSetSheet.GetRow(0)?.GetCell(this.ColIndex) != null)
+                {
+                    if (this.TestSetSheet.GetRow(0)?.GetCell(this.ColIndex).ToString() == this.User)
+                    {
+                        testCase = InformationObject.TestCaseData.SetUpTestCase(this.ColIndex.ToString());
+                    }
+
+                    this.ColIndex++;
+                }
+
+                if (testCase == null)
+                {
+                    throw new TestCaseCreationFailed($"Cannot find Test case {this.User}");
+                }
+            }
+            else
+            {
+                testCase = InformationObject.TestCaseData.SetUpTestCase(this.ColIndex.ToString());
+            }
+
+            this.ColIndex++;
+            return testCase;
         }
 
         /// <summary>

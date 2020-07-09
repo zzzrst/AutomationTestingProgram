@@ -3021,6 +3021,11 @@
             Gets or sets this sheet contains the test set info and data.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.TestingData.ExcelData.User">
+            <summary>
+            Gets or sets which user to check the Test Case against.
+            </summary>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.ExcelData.SetUp">
             <inheritdoc/>
         </member>

@@ -4,6 +4,7 @@
 
 namespace AutomationTestingProgram.TestingData
 {
+    using System;
     using System.IO;
     using AutomationTestSetFramework;
     using NPOI.SS.UserModel;
@@ -22,6 +23,17 @@ namespace AutomationTestingProgram.TestingData
         public ExcelData(string args)
         {
             this.TestArgs = args;
+            try
+            {
+                string[] argument = args.Split(";");
+                this.TestArgs = argument[0];
+                this.User = argument[1];
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Logger.Info("One Argument Found, Will run all Test Cases in Excel (use ';" +
+                    " to add another argument");
+            }
         }
 
         /// <inheritdoc/>
@@ -40,6 +52,11 @@ namespace AutomationTestingProgram.TestingData
         /// Gets or sets this sheet contains the test set info and data.
         /// </summary>
         protected ISheet TestSetSheet { get; set; }
+
+        /// <summary>
+        /// Gets or sets which user to check the Test Case against.
+        /// </summary>
+        protected string User { get; set; } = string.Empty;
 
         /// <inheritdoc/>
         public void SetUp()
