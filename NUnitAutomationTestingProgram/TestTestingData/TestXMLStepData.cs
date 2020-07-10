@@ -56,6 +56,26 @@ namespace NUnitAutomationTestingProgram.TestTestingData
                 Directory.Delete(saveFileLocation, true);
             }
         }
+        //These don't work on the work flow for some reason...
+#if DEBUG
+        [Test]
+        public void TestWait()
+        {
+            TestSet testSet;
+
+            testSet = buildTestSet("/TestWait.xml");
+
+            var start = DateTime.Now;
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
+            var end = DateTime.Now;
+
+            Reporter reporter = InformationObject.Reporter;
+
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful);
+            Assert.IsTrue(reporter.TestCaseStatuses[0].RunSuccessful);
+            Assert.AreEqual(5, (end.Second - start.Second), "It should of waited 5 seconds");
+        }
 
         [Test]
         public void TestFailTestStep()
@@ -73,27 +93,7 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             Assert.IsFalse(reporter.TestCaseToTestSteps[reporter.TestCaseStatuses[0]][0].RunSuccessful);
         }
 
-        [Test]
-        public void TestWait()
-        {
-            TestSet testSet;
 
-            testSet = buildTestSet("/TestWait.xml");
-
-            var start = DateTime.Now;
-            AutomationTestSetDriver.RunTestSet(testSet);
-            InformationObject.Reporter.Report();
-            var end = DateTime.Now;
-
-            Reporter reporter = InformationObject.Reporter;
-
-            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful);
-            Assert.IsTrue(reporter.TestCaseStatuses[0].RunSuccessful);
-            Assert.AreEqual(5, (end.Second - start.Second),"It should of waited 5 seconds");
-        }
-
-        //These don't work on the work flow for some reason...
-#if DEBUG
         [Test]
         public void TestLog()
         {
@@ -198,8 +198,8 @@ namespace NUnitAutomationTestingProgram.TestTestingData
         {
             SetEnvironmentVariable(EnvVar.Browser, "chrome");
             SetEnvironmentVariable(EnvVar.Environment, "");
-            SetEnvironmentVariable(EnvVar.TimeOutThreshold, "50");
-            SetEnvironmentVariable(EnvVar.WarningThreshold, "50");
+            SetEnvironmentVariable(EnvVar.TimeOutThreshold, "5");
+            SetEnvironmentVariable(EnvVar.WarningThreshold, "5");
             SetEnvironmentVariable(EnvVar.URL, url);
             SetEnvironmentVariable(EnvVar.DataFile, $"{readFileLocation}{testFileName}");
             SetEnvironmentVariable(EnvVar.CsvSaveFileLocation, saveFileLocation);
