@@ -2,7 +2,7 @@
   "profiles": {
     "AutomationTestingProgram": {
       "commandName": "Project",
-      "commandLineArgs": ".\\AutomationTestingProgram.exe --setType \"XML\" --csvSaveFileLocation \"./Log\" --setArgs \"./TestAODA.xml\" --update \"false\"",
+      "commandLineArgs": ".\\AutomationTestingProgram.exe --setType \"Excel\" --csvSaveFileLocation \"./Log\" --setArgs \"./HHBI Securtiy Matrix.xlsx\" --update \"false\" --browser \"Chrome\"",
       "nativeDebugging": false
     }
   }

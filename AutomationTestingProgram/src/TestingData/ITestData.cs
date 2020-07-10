@@ -24,8 +24,8 @@ namespace AutomationTestingProgram.TestingData
         /// <summary>
         /// Since The constructor is called through reflective getter,
         /// any errors during the constructor caused by wrong arguments,
-        /// will cause the program to crash. run here instead,
-        /// guarantees that it is the right type.
+        /// will cause the program to crash. Run here instead,
+        /// As this guarnetees that the right test set/case/step is ran.
         /// </summary>
         public void SetUp();
     }

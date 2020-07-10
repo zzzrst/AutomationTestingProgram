@@ -20,7 +20,7 @@ namespace AutomationTestingProgram.AutomationFramework
             bool useJS = false;
             if (this.Arguments.ContainsKey("comment"))
             {
-                useJS = bool.Parse(this.Arguments["comment"]);
+                bool.TryParse(this.Arguments["comment"], out useJS);
             }
 
             InformationObject.TestAutomationDriver.ClickElement(xPath, useJS);

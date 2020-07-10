@@ -13,20 +13,20 @@ namespace AutomationTestingProgram.AutomationFramework
     /// <summary>
     /// This test step abstract class for verifying objects.
     /// </summary>
-    public abstract class ActionObject : TestStep
+    public class ActionObject : TestStep
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "ActionObject";
 
         /// <summary>
-        /// Gets or sets the html Tag to use.
-        /// </summary>
-        protected virtual string HTMLWhiteListTag { get; set; } = string.Empty;
-
-        /// <summary>
         /// Gets or sets the attributes of the element provided through the data.
         /// </summary>
         public IDictionary<string, string> Attributes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the html Tag to use.
+        /// </summary>
+        protected virtual string HTMLWhiteListTag { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets xPath of the element.

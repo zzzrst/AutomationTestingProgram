@@ -13,7 +13,7 @@ namespace AutomationTestingProgram.AutomationFramework
     /// <summary>
     /// This test step an abstract class to verify an object's avalibility.
     /// </summary>
-    public abstract class VerifyObjectAvailability : ActionObject
+    public class VerifyObjectAvailability : ActionObject
     {
         /// <inheritdoc/>
         public override string Name { get; set; } = "Verify Object Availability";

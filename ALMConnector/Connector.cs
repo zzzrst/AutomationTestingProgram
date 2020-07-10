@@ -50,7 +50,7 @@ namespace ALMConnector
             {
                 this.Connected = this.ConnectToServer();
             }
-            catch (System.Runtime.InteropServices.COMException e)
+            catch (System.Runtime.InteropServices.COMException)
             {
                 throw new Exception("Please register your HP ALM Client and Check your config file!");
             }
