@@ -40,10 +40,10 @@
 
   <ItemGroup>
     <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
-    <PackageReference Include="CommandLineParser" Version="2.7.82" />
-    <PackageReference Include="ComparePDF" Version="2.0.7430.14074" />
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="ComparePDF" Version="2.0.7493.14097" />
     <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7390.35168" />
-    <PackageReference Include="docfx.console" Version="2.52.0">
+    <PackageReference Include="docfx.console" Version="2.56.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -53,8 +53,8 @@
     <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.26.0" />
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="81.0.4044.13800" />
-    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.1" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="83.0.4103.3910" />
+    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.1.1" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
