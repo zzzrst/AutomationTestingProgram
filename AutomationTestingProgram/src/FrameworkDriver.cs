@@ -79,6 +79,7 @@ namespace AutomationTestingProgram
 
                 errorParsing = ParseTestSetParameters();
                 SetDefaultParameters();
+                SetConfigValues();
             }
 
             Logger.Info($"Running AutomationFramework Version: {FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion}");
@@ -181,6 +182,30 @@ namespace AutomationTestingProgram
             return rx.Match(result).Value.Substring(1);
         }
 
+        /// <summary>
+        /// Fills in any missing parameters with the config file parameters.
+        /// </summary>
+        private static void SetConfigValues()
+        {
+            foreach (var variable in Enum.GetValues(typeof(EnvVar)).Cast<EnvVar>())
+            {
+                // If the variable value has not been declared, fill in from config file.
+                if (GetEnvironmentVariable(variable) == string.Empty)
+                {
+                    foreach (string config in ConfigurationManager.AppSettings.AllKeys)
+                    {
+                        if (config == variable.ToString())
+                        {
+                            SetEnvironmentVariable(variable, ConfigurationManager.AppSettings[config]);
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sets the default values for file paths.
+        /// </summary>
         private static void SetDefaultParameters()
         {
             if (GetEnvironmentVariable(EnvVar.LogSaveFileLocation) == string.Empty)

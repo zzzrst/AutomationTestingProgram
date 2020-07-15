@@ -1675,6 +1675,16 @@
             Saves the AODA result to the file location.
             </summary>
         </member>
+        <member name="M:AutomationTestingProgram.FrameworkDriver.SetConfigValues">
+            <summary>
+            Fills in any missing parameters with the config file parameters.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.FrameworkDriver.SetDefaultParameters">
+            <summary>
+            Sets the default values for file paths
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.FrameworkOptions">
             <summary>
             This class stores the command line arguments that are taken in, both mandatory and optional.
