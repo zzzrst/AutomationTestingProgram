@@ -23,17 +23,6 @@ namespace AutomationTestingProgram.TestingData
         public ExcelData(string args)
         {
             this.TestArgs = args;
-            try
-            {
-                string[] argument = args.Split(";");
-                this.TestArgs = argument[0];
-                this.User = argument[1];
-            }
-            catch (IndexOutOfRangeException)
-            {
-                Logger.Info("One Argument Found, Will run all Test Cases in Excel (use ';" +
-                    " to add another argument");
-            }
         }
 
         /// <inheritdoc/>
@@ -61,6 +50,18 @@ namespace AutomationTestingProgram.TestingData
         /// <inheritdoc/>
         public void SetUp()
         {
+            try
+            {
+                string[] argument = this.TestArgs.Split(";");
+                this.TestArgs = argument[0];
+                this.User = argument[1];
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Logger.Info("One Argument Found, Will run all Test Cases in Excel (use ';" +
+                    " to choose a test Case)");
+            }
+
             using (FileStream templateFS = new FileStream(this.TestArgs, FileMode.Open, FileAccess.Read))
             {
                 this.ExcelFile = new XSSFWorkbook(templateFS);

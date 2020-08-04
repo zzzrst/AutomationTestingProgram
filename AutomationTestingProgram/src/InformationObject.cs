@@ -269,6 +269,9 @@ namespace AutomationTestingProgram
                 case "alm":
                     Reporter = new ALMReporter(string.Empty);
                     break;
+                case "excel":
+                    Reporter = new ExcelReporter(Path.Combine(reportSaveLocation, "Report.csv"));
+                    break;
                 default:
                     Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
                     break;

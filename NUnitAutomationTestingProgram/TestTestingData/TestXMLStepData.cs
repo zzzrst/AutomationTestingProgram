@@ -174,6 +174,27 @@ namespace NUnitAutomationTestingProgram.TestTestingData
         }
 
         /// <summary>
+        /// Test To see if AODA Works when running twice
+        /// Not ran automaticaly since it requires a web browser
+        /// </summary>
+        [Test]
+        public void TestAODATwice()
+        {
+            TestSet testSet;
+            Reporter reporter;
+
+            testSet = buildTestSet("/TestAODATwice.xml", $"{webSiteLocation}/Google.html");
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
+            FrameworkDriver.RunAODA();
+
+            reporter = InformationObject.Reporter;
+
+            Assert.IsTrue(Directory.Exists(saveFileLocation));
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful);
+        }
+
+        /// <summary>
         /// Tests all concrete test steps except:
         /// Sign in: it is a combination of click element and populate element
         /// Not ran automaticaly since it requires a web browser
@@ -184,6 +205,24 @@ namespace NUnitAutomationTestingProgram.TestTestingData
             TestSet testSet;
 
             testSet = buildTestSet("/TestAllConcreteSteps.xml");
+            AutomationTestSetDriver.RunTestSet(testSet);
+            InformationObject.Reporter.Report();
+
+            Reporter reporter = InformationObject.Reporter;
+
+            Assert.IsTrue(reporter.TestSetStatuses[0].RunSuccessful);
+            Assert.IsTrue(reporter.TestCaseStatuses[0].RunSuccessful);
+        }
+
+        /// <summary>
+        /// Tests Verify Element.
+        /// </summary>
+        [Test]
+        public void TestVerifyElement()
+        {
+            TestSet testSet;
+
+            testSet = buildTestSet("/TestVerifyElement.xml");
             AutomationTestSetDriver.RunTestSet(testSet);
             InformationObject.Reporter.Report();
 

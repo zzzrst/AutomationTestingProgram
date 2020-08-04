@@ -84,7 +84,17 @@ namespace AutomationTestingProgram.AutomationFramework
             bool htmlWhitelist = this.HTMLWhiteListTag != string.Empty;
             const string AND = " and ";
             List<string> htmltagwhiteList = htmlWhitelist ? new List<string>(ConfigurationManager.AppSettings[this.HTMLWhiteListTag].ToString().Split(',')) : new List<string>() { };
-            List<string> xPathIgnoreList = new List<string>(ConfigurationManager.AppSettings["XPATH_IGNORE_LIST"].ToString().Split(','));
+            List<string> xPathIgnoreList;
+            try
+            {
+                xPathIgnoreList = new List<string>(ConfigurationManager.AppSettings["XPATH_IGNORE_LIST"].ToString().Split(','));
+            }
+            catch
+            {
+                Logger.Warn("Missing App Settings for XPATH_IGNORE_LIST.");
+                xPathIgnoreList = new List<string>();
+            }
+
             for (int i = 0; i < xPathIgnoreList.Count; i++)
             {
                 xPathIgnoreList[i] = xPathIgnoreList[i].ToLower();

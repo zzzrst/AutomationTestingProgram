@@ -61,26 +61,13 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // initial value is respectRunAODAFlag
             // if we respect the flag, and it is not found, then default value is false.
             bool runAODA = InformationObject.RespectRunAODAFlag;
-            if (runAODA)
-            {
-                if (testStepNode.Attributes["runAODA"] != null)
-                {
-                    runAODA = bool.Parse(testStepNode.Attributes["runAODA"].Value);
-                }
-                else
-                {
-                    runAODA = false;
-                }
-            }
+            runAODA = runAODA && bool.Parse(testStepNode.Attributes["runAODA"]?.Value ?? "false");
 
             // populate runAODAPageName. Deault is Not provided.
             string runAODAPageName = "Not provided.";
             if (runAODA)
             {
-                if (testStepNode.Attributes["runAODAPageName"] != null)
-                {
-                    runAODAPageName = this.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"].Value, this.XMLDataFile);
-                }
+                runAODAPageName = this.ReplaceIfToken(testStepNode.Attributes["runAODAPageName"]?.Value ?? "Not provided.", this.XMLDataFile);
             }
 
             // log is true by default.

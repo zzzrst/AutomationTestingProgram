@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSet xmlns="http://qa/SeleniumPerf">
+	<Parameters>
+		<Browser>chrome</Browser>
+		<Environment>TestEnvironment</Environment>
+		<URL>http://the-internet.herokuapp.com/</URL>
+
+		<WarningThreshold>60</WarningThreshold>
+		<TimeOutThreshold>120</TimeOutThreshold>
+
+		<CSVSaveLocation>C:\SeleniumPerfXML</CSVSaveLocation>
+	</Parameters>
+
+	<SpecialElements>
+		<!-- explicitly give the xpath for the loading spinner if any -->
+		<LoadingSpinner>//*[@id='loadingspinner']</LoadingSpinner>
+		<!-- will check this xpath and log anything found in this element if found -->
+		<ErrorContainer>//div[@class='alert alert-danger']</ErrorContainer>
+	</SpecialElements>
+
+	<TestCaseFlow>
+		<RunTestCase>Test Case ID 1</RunTestCase>
+	</TestCaseFlow>
+
+	<TestCases>
+		<TestCase name='Test Case Name 1' id='Test Case ID 1'>
+			<RunTestStep>Step 0</RunTestStep>
+			<RunTestStep>Step Reset</RunTestStep>
+      <RunTestStep>Step 1</RunTestStep>
+			<RunTestStep>Step 2</RunTestStep>
+			<RunTestStep>Step 3</RunTestStep>
+			<RunTestStep>Step 4</RunTestStep>
+			<RunTestStep>Step 5</RunTestStep>
+			<RunTestStep>Step 6</RunTestStep>
+			<RunTestStep>Step 7</RunTestStep>
+      <RunTestStep>Step 2</RunTestStep>
+      <RunTestStep>close</RunTestStep>
+		</TestCase>
+	</TestCases>
+
+	<TestSteps>
+    <OpenBrowser id='Step 0' name='Open Browser'/>
+		<NavigateToURL id='Step Reset' name='Navigate to url' url="http://the-internet.herokuapp.com/"/>
+		<ClickElementByXPath id='Step 1' name='Click Dynamic Content Link' xPath="//a[contains(text(),'Dynamic Controls')]"/>
+		<VerifyObjectAvailability id='Step 2' name='Verify Text Field' xPath="//form[@id='input-example']//input" value='DISABLED' comment='xpath'/>
+    <ClickElementByXPath id='Step 3' name='Click Enable Option' xPath="//button[contains(text(),'Enable')]"/>
+    <WaitForElement id="Step 4" name="Wait for Element" xPath="//button[contains(text(),'Enable')]" value="true"/>
+    <VerifyObjectAvailability id='Step 5' name='Verify Text Field' xPath="//form[@id='input-example']//input" value='Enabled' comment='xpath'/>
+    <ClickElementByXPath id='Step 6' name='Click Disabled Option' xPath="//button[contains(text(),'Disable')]"/>
+    <WaitForElement id="Step 7" name="Wait for Element" xPath="//button[contains(text(),'Enable')]" value="false"/>
+		<CloseBrowser id="close" name="Close Browser"/>
+	</TestSteps>
+	
+</TestSet>

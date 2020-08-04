@@ -63,8 +63,8 @@ namespace AutomationTestingProgram.TestingData
                     if (action == string.Empty)
                     {
                         Logger.Error("Missing Test Action!");
-                        // throw new System.Exception("Missing Test Action!");
 
+                        // throw new System.Exception("Missing Test Action!");
                     }
                     else
                     {

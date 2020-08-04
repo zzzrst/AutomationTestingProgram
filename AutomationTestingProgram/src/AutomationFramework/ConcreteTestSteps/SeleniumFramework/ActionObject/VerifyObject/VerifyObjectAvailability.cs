@@ -16,7 +16,7 @@ namespace AutomationTestingProgram.AutomationFramework
     public class VerifyObjectAvailability : ActionObject
     {
         /// <inheritdoc/>
-        public override string Name { get; set; } = "Verify Object Availability";
+        public override string Name { get; set; } = "VerifyObjectAvailability";
 
         /// <inheritdoc/>
         public override void Execute()
@@ -39,7 +39,7 @@ namespace AutomationTestingProgram.AutomationFramework
                     elementState = TestingDriver.ITestingDriver.ElementState.Visible;
                     break;
                 case "1": case "DISABLED":
-                    elementState = TestingDriver.ITestingDriver.ElementState.Invisible;
+                    elementState = TestingDriver.ITestingDriver.ElementState.Disabled;
                     break;
                 case "2": case "EXIST":
                     elementState = TestingDriver.ITestingDriver.ElementState.Clickable;
@@ -54,6 +54,7 @@ namespace AutomationTestingProgram.AutomationFramework
             bool passed = this.VerifyElementState(elementState);
             resultMsg += passed ? $"{resultMsgEnd} is {flag}." : $"{resultMsgEnd} was not {flag}.";
 
+            this.TestStepStatus.Expected = this.Arguments["value"];
             this.TestStepStatus.Actual = resultMsg;
             this.TestStepStatus.RunSuccessful = passed;
         }

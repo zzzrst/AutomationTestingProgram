@@ -8,6 +8,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using System.Collections.Generic;
     using System.Configuration;
     using System.Text;
+    using AutomationTestSetFramework;
     using DatabaseConnector;
 
     /// <summary>
@@ -28,7 +29,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public string TestArgs { get; set; }
 
         /// <inheritdoc/>
-        public string Name { get; } = "Database";
+        public virtual string Name { get; } = "Database";
 
         /// <summary>
         /// Gets or sets the name of the test case db.
@@ -61,7 +62,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// </summary>
         /// <param name="database">The database to connect to.</param>
         /// <returns>The same database.</returns>
-        protected OracleDatabase ConnectToDatabase(OracleDatabase database)
+        protected virtual OracleDatabase ConnectToDatabase(OracleDatabase database)
         {
             if (database == null || !database.IsConnected())
             {

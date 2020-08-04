@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AutoUpdater": {
+      "commandName": "Project",
+      "commandLineArgs": "--setType \"XML\" --setArgs '.\\ISPM Power BI.xml'"
+    }
+  }
+}

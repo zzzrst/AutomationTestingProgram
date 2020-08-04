@@ -1089,6 +1089,32 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ExcelReporter">
+            <summary>
+            The implementation of the reporter class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ExcelReporter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ExcelReporter"/> class.
+            </summary>
+            <param name="saveLocation">The location to save the file to.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ExcelReporter.Report">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ExcelReporter.WriteOutResults">
+            <summary>
+            Writes to the CSV file for the accumulated results saved.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ExcelReporter.IsFileReady(System.String)">
+            <summary>
+            Checks if the file is ready before attempting to write to it.
+            </summary>
+            <param name="filename">The name of the file to write to.</param>
+            <returns><code>true</code> if the file is ready. </returns>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter">
             <summary>
             The implementation of the reporter class.
@@ -1682,7 +1708,7 @@
         </member>
         <member name="M:AutomationTestingProgram.FrameworkDriver.SetDefaultParameters">
             <summary>
-            Sets the default values for file paths
+            Sets the default values for file paths.
             </summary>
         </member>
         <member name="T:AutomationTestingProgram.FrameworkOptions">
@@ -2721,6 +2747,97 @@
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseCaseData">
+            <summary>
+            An implementation of the SQl Database Test step using the Original
+            Database as a Base.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseCaseData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseCaseData"/> class.
+            </summary>
+            <param name="args">args to be passed in.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseCaseData.ExistNextTestStep">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseCaseData.GetNextTestStep">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseCaseData.SetUpTestCase(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData">
+            <summary>
+            SqlDatabase Base Object.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData"/> class.
+            A Base Implementation of the SqlDatabaseData
+            Using The DatabaseData as a Base.
+            </summary>
+            <param name="args">arguments to pass in.</param>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.TestArgs">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.TestDBName">
+            <summary>
+            Gets or sets the name of the test case db.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.TestDB">
+            <summary>
+            Gets or sets connection established to test database.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.EnvDB">
+            <summary>
+            Gets or sets connection established to environment database.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.Environment">
+            <summary>
+            Gets or sets name of the environment.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.SetUp">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseData.ConnectToDatabase(DatabaseConnector.SQLDatabase)">
+            <summary>
+            connects the given database and returns it.
+            </summary>
+            <param name="database">The database to connect to.</param>
+            <returns>The same database.</returns>
+        </member>
+        <member name="T:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseStepData">
+            <summary>
+            An implementation of the SQl Database Test step using the Original
+            Database as a Base.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseStepData.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseStepData"/> class.
+            </summary>
+            <param name="args">args to be passed in.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseStepData.ExistNextTestStep">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseStepData.GetNextTestStep">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.SqlDatabaseStepData.SetUpTestCase(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData">
             <summary>
             Not a good impentation to read test cases from text file.
@@ -3078,6 +3195,11 @@
             The interface to get the test step data.
             </summary>
         </member>
+        <member name="F:AutomationTestingProgram.TestingData.ExcelStepData.KEYCHAINACCOUNTFILEPATH">
+            <summary>
+            The path to the keychain account.
+            </summary>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.ExcelStepData.#ctor(System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.ExcelStepData"/> class.
@@ -3097,6 +3219,21 @@
             Sets any arguments at runtime.
             </summary>
             <param name="testStep">Test steps to get the arguments for.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.ExcelStepData.QuerySpecialChars(System.String)">
+            <summary>
+            If the original string begins with special characters in ['##'], then
+            it is replaced by the respective value in the excel file.
+            </summary>
+            <param name="original">Original string.</param>
+            <returns>The respective value in the excel file, or the original string itself.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.ExcelStepData.QueryKeychainAccountPassword(System.String)">
+            <summary>
+            Queries password of a given username from the Keychain accounts spreadsheet.
+            </summary>
+            <param name="username">Username to find password of.</param>
+            <returns>Password of the Keychain account.</returns>
         </member>
     </members>
 </doc>

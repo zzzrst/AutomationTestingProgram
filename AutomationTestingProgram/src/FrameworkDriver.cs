@@ -190,11 +190,12 @@ namespace AutomationTestingProgram
             foreach (var variable in Enum.GetValues(typeof(EnvVar)).Cast<EnvVar>())
             {
                 // If the variable value has not been declared, fill in from config file.
-                if (GetEnvironmentVariable(variable) == string.Empty)
+                if (GetEnvironmentVariable(variable) == string.Empty
+                    || GetEnvironmentVariable(variable) == "0")
                 {
                     foreach (string config in ConfigurationManager.AppSettings.AllKeys)
                     {
-                        if (config == variable.ToString())
+                        if (config.ToLower() == variable.ToString().ToLower())
                         {
                             SetEnvironmentVariable(variable, ConfigurationManager.AppSettings[config]);
                         }
@@ -241,7 +242,6 @@ namespace AutomationTestingProgram
 
             SetEnvironmentVariable(EnvVar.LoadingSpinner, string.Empty);
             SetEnvironmentVariable(EnvVar.ErrorContainer, string.Empty);
-            var l = GetEnvironmentVariable(EnvVar.TestSetDataType);
             ITestGeneralData dataInformation = ReflectiveGetter.GetImplementationOfType<ITestGeneralData>()
                 .Find(x => x.Name.Equals(GetEnvironmentVariable(EnvVar.TestSetDataType)));
             if (dataInformation != null)

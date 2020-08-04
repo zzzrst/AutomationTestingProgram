@@ -11,7 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\AutomationTestingProgram\src\TestingData\TestDrivers\ExcelCaseData.cs" Link="ExcelCaseData.cs" />
+    <Content Include="..\..\..\.nuget\packages\testingdriver\1.4.7433.35735\contentFiles\any\netstandard2.1\WATR_Template.xlsx" Link="WATR_Template.xlsx">
+      <Private>False</Private>
+      <NuGetPackageVersion>1.4.7433.35735</NuGetPackageVersion>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>TestingDriver</NuGetPackageId>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +31,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="83.0.4103.3910" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="81.0.4044.13800" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
   </ItemGroup>
 
@@ -145,7 +151,13 @@
     <None Update="SampleTests\XML\TestTestCase\TestCaseUnknownNodeName.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="SampleTests\XML\TestTestStep\TestVerifyElement.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="SampleTests\XML\TestTestStep\TestAllConcreteSteps.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleTests\XML\TestTestStep\TestAODATwice.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="SampleTests\XML\TestTestStep\TestAODA.xml">
