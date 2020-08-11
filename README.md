@@ -70,6 +70,8 @@ Optional
 |Txt|Case/Step|.txt File Location|--setType "Txt" --setArgs "C:\TxtDocs\Test.txt"|
 |Database|Case/Step|Collection,Release| --caseType "Database" --caseArgs "1,3"|
 |ALM|Set|Test Set ID OR Test Set Name|--setType "ALM"  --setArgs "12345"|
+|Excel|Set/Case/Step|.xlsx File Location| --setType "Excel" --setArgs "C:\ExcelDocs\Text.xlsx"|
+|||Optional arguments, choose test case|--setType "Excel" --setArgs "C:\ExcelDocs\Text.xlsx;Testcase3"|
 |None|Set|Test Case Name|--setType "None" --setArgs "Test Case Name"|
 
 
@@ -80,8 +82,6 @@ Optional
 * [DatabaseConnector](https://github.com/zzzrst/DatabaseConnector)
 * [TextInteractor](https://github.com/zzzrst/TextInteractor)
 * [ComparePDF](https://github.com/zzzrst/ComparePDF)
-
-To Be added
 * [ALM](https://github.com/zzzrst/ALM)
 
 ## Version Number
