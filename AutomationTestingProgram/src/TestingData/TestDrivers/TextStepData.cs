@@ -44,7 +44,14 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public void SetUp()
         {
-            TextInteractor interactor = new TextInteractor(this.TestArgs);
+        }
+
+        /// <inheritdoc/>
+        public ITestStep SetUpTestStep(string testStepFileLocation, bool performAction = true)
+        {
+            TextInteractor interactor = new TextInteractor(testStepFileLocation);
+            Dictionary<string, string> args = new Dictionary<string, string>();
+
             interactor.Open();
             while (!interactor.FinishedReading())
             {
@@ -52,43 +59,19 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             }
 
             interactor.Close();
-        }
 
-        /// <inheritdoc/>
-        public ITestStep SetUpTestStep(string testStepName, bool performAction = true)
-        {
-            string[] testStepValue = null;
-            string testStepObjectName = string.Empty;
-            Dictionary<string, string> args = new Dictionary<string, string>();
+            string[] values = this.FileData[0].Split(';');
+            TestStep testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
+                .Find(x => x.Name.Equals(values[1]));
 
-            foreach (string line in this.FileData)
-            {
-                string[] values = line.Split(';');
-                if (values[0].Equals(testStepName))
-                {
-                    testStepValue = values;
-                }
-            }
+            testStep.Name = values[0];
 
-            if (testStepValue == null)
-            {
-                throw new Exception($"Test Set: {testStepName} not found.");
-            }
-
-            // get the object name.
-            testStepObjectName = testStepValue[1];
-
-            // parse the arguments.
-            foreach (string arg in testStepValue[2].Split(','))
+            foreach (string arg in values[2].Split(','))
             {
                 string[] value = arg.Split('=');
                 args.Add(value[0], value[1]);
             }
 
-            TestStep testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
-                .Find(x => x.Name.Equals(testStepObjectName));
-
-            testStep.Name = testStepName;
             testStep.Arguments = args;
 
             return testStep;

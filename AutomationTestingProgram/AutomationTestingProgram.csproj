@@ -41,8 +41,8 @@
   <ItemGroup>
     <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
-    <PackageReference Include="ComparePDF" Version="2.0.7530.13629" />
-    <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7529.15990" />
+    <PackageReference Include="ComparePDF" Version="2.0.7514.13645" />
+    <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7514.34007" />
     <PackageReference Include="docfx.console" Version="2.56.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -53,7 +53,7 @@
     <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.26.0" />
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="84.0.4147.3001" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="81.0.4044.13800" />
     <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.1.2" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
@@ -61,8 +61,8 @@
     </PackageReference>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
     <PackageReference Include="System.Management" Version="4.7.0" />
-    <PackageReference Include="TestingDriver" Version="1.4.7524.13575" />
-    <PackageReference Include="TextInteractor" Version="1.2.7529.13528" />
+    <PackageReference Include="TestingDriver" Version="1.4.7517.27670" />
+    <PackageReference Include="TextInteractor" Version="1.2.7513.14141" />
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
   </ItemGroup>
 
