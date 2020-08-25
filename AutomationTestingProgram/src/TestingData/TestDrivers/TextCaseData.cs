@@ -59,9 +59,10 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         }
 
         /// <inheritdoc/>
-        public ITestCase SetUpTestCase(string testCaseName, bool performAction = true)
+        public ITestCase SetUpTestCase(string txtFile, bool performAction = true)
         {
-            TextInteractor interactor = new TextInteractor(Path.ChangeExtension(Path.Combine(this.TestArgs, testCaseName), ".txt"));
+            TextInteractor interactor = new TextInteractor(txtFile);
+
             interactor.Open();
             while (!interactor.FinishedReading())
             {
@@ -74,7 +75,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 
             ITestCase testCase = new TestCase()
             {
-                Name = testCaseName,
+                Name = txtFile,
                 ShouldExecuteVariable = performAction,
             };
             return testCase;
