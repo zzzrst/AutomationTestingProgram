@@ -42,7 +42,7 @@
     <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="ComparePDF" Version="2.0.7593.11632" />
-    <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7592.12420" />
+    <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7598.12522" />
     <PackageReference Include="docfx.console" Version="2.56.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
