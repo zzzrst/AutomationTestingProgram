@@ -61,7 +61,7 @@
     </PackageReference>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
     <PackageReference Include="System.Management" Version="5.0.0" />
-    <PackageReference Include="TestingDriver" Version="1.4.7725.11039" />
+    <PackageReference Include="TestingDriver" Version="1.4.7732.11054" />
     <PackageReference Include="TextInteractor" Version="1.2.7725.10792" />
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
   </ItemGroup>
