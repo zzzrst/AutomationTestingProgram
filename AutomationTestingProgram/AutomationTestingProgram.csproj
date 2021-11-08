@@ -60,7 +60,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
-    <PackageReference Include="System.Management" Version="5.0.0" />
+    <PackageReference Include="System.Management" Version="6.0.0" />
     <PackageReference Include="TestingDriver" Version="1.4.7734.11201" />
     <PackageReference Include="TextInteractor" Version="1.2.7725.10792" />
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
