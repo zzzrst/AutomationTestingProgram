@@ -113,57 +113,80 @@ namespace ALMConnector
             this.connection.ReleaseConnection();
         }
 
-        /// <summary>
-        /// The ConnectToServer.
-        /// </summary>
-        /// <returns>The <see cref="bool"/>.</returns>
-        public bool ConnectToServer()
-        {
-            // initialize new TDConnection
-            this.connection = new TDConnection();
-            bool connected = false; // initializes returning result
+		/// <summary>
+		/// The ConnectToServer.
+		/// </summary>
+		/// <returns>The <see cref="bool"/>.</returns>
+		public bool ConnectToServer()
+		{
 
-            // conn.InitConnectionEx(almurl);
-            // Console.WriteLine("Checking Server Compatibility: " + connection.InitAndCheckServerCompatibility(almUrl));
-            this.connection.InitAndCheckServerCompatibility(this.AlmUrl);
+			try
+			{
+				this.connection = new TDAPIOLELib.TDConnection();
+				this.connection.InitConnectionEx(this.AlmUrl);
 
-            // Authentication
-            // Console.WriteLine("Logging in...");
-            try
-            {
-                this.connection.Login(this.Username, this.Password);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Login Failed");
-                return false;
-            }
+				//Authentication
+				this.connection.Login(this.Username, this.Password);
 
-            // Connect to a project
-            // Console.WriteLine("Connecting to Project...");
-            try
-            {
-                this.connection.Connect(this.Domain, this.Project);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Connecting to Project Failed");
-                return false;
-            }
+				//Connect to a project
+				this.connection.Connect(this.Domain, this.Project);
 
-            // check connected status
-            connected = this.connection.ProjectConnected && this.connection.Connected && this.connection.LoggedIn;
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+			}
 
-            // Console.WriteLine("Connected: " + connected);
-            return connected;
-        }
 
-        /// <summary>
-        /// The SetTestSetByPath.
-        /// </summary>
-        /// <param name="path">The path<see cref="string"/>.</param>
-        /// <returns>The <see cref="TestSetInstance"/>.</returns>
-        public TestSetInstance SetTestSetByPath(string path)
+
+
+
+
+			//// initialize new TDConnection
+			//this.connection = new TDConnection();
+			bool connected = false; // initializes returning result
+
+			//// conn.InitConnectionEx(almurl);
+			//// Console.WriteLine("Checking Server Compatibility: " + connection.InitAndCheckServerCompatibility(almUrl));
+			//this.connection.InitAndCheckServerCompatibility(this.AlmUrl);
+
+			//// Authentication
+			//// Console.WriteLine("Logging in...");
+			//try
+			//{
+			//    this.connection.Login(this.Username, this.Password);
+			//}
+			//catch (Exception e)
+			//{
+			//    Console.WriteLine(e.Message);
+			//    return false;
+			//}
+
+			//// Connect to a project
+			//// Console.WriteLine("Connecting to Project...");
+			//try
+			//{
+			//    this.connection.Connect(this.Domain, this.Project);
+			//}
+			//catch (Exception e)
+			//{
+			//    Console.WriteLine(e.Message);
+			//    return false;
+			//}
+
+			//// check connected status
+			connected = this.connection.ProjectConnected && this.connection.Connected && this.connection.LoggedIn;
+
+			// Console.WriteLine("Connected: " + connected);
+			return connected;
+		}
+
+		/// <summary>
+		/// The SetTestSetByPath.
+		/// </summary>
+		/// <param name="path">The path<see cref="string"/>.</param>
+		/// <returns>The <see cref="TestSetInstance"/>.</returns>
+		public TestSetInstance SetTestSetByPath(string path)
         {
             // trim off the testname from the end of the path
             string[] trimmed = this.TrimTestName(path);
