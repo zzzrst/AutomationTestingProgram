@@ -468,6 +468,227 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.UploadFile.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus">
+            <summary>
+            This test step to verify the status of a check box.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyDDLContent">
+            <summary>
+            This test step to verify the content of a drop down list.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyDDLContent.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent">
+            <summary>
+            This test step to verify the content of a HTML editor.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyImageContent">
+            <summary>
+            This test step to verify the content of an image.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyImageContent.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent">
+            <summary>
+            This test step to verify the content of an image.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException(System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent">
+            <summary>
+            This test step to verify the content of an image.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability">
+            <summary>
+            This test step an abstract class to verify an object's avalibility.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.VerifyElementState(TestingDriver.ITestingDriver.ElementState)">
+            <summary>
+            Verifys if the given element state holds true.
+            </summary>
+            <param name="elementState">The state of the element.</param>
+            <returns>returns true if the state is correct.</returns>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability">
+            <summary>
+            This test step is to verify the button availavility.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability">
+            <summary>
+            This test step to verify the availability of a check box.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability">
+            <summary>
+            This test step to verify the availability of a drop down list.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability">
+            <summary>
+            This test step to verify the availabilty of an html editor.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability.VerifyElementState(TestingDriver.ITestingDriver.ElementState)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability">
+            <summary>
+            This test step to verify the availbility of a image.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyImageAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability">
+            <summary>
+            This test step to verify the availability of an image.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability">
+            <summary>
+            This test step to verify the availability of a textbox.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability">
+            <summary>
+            This test step to verify the availability of a textbox.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability">
+            <summary>
+            This test step to verify the availability of a textbox.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability">
+            <summary>
+            This test step to verify the availability of a textbox.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebTableContent">
             <summary>
             This test step is the same as testStepXml.
