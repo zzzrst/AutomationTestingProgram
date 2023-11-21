@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x86</PlatformTarget>
+    <Company>$(Authors)</Company>
+    <Description>Migrator tool for ALM to DevOps</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FreeSpire.XLS" Version="12.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ALMConnector\ALMConnector.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="TDAPIOLELib">
+		<HintPath>..\ALMConnector\TDAPIOLELib.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
