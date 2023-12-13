@@ -1,5 +1,5 @@
 # Automation Testing Program
-This is a _.Net Core 3_ console application. This repository contains the source code for the Automation Testing Program. This application allows users to create and run tests with different data formats for web applications. Please read the [Documentation](https://zzzrst.github.io/AutomationTestingProgram/.) on how to use and modify the program to your needs.
+This is a .Net 6.0 console application. This repository contains the source code for the Automation Testing Program. This application allows users to create and run tests with different data formats for web applications. Please read the [Documentation](https://zzzrst.github.io/AutomationTestingProgram/.) on how to use and modify the program to your needs.
 
 ## How to Run
 
