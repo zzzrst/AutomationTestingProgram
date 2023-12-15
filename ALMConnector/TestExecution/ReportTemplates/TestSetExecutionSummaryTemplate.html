@@ -1,0 +1,394 @@
+﻿<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		</head>
+
+		<body>
+			<style>
+				.textfont {
+				font-weight: normal;
+				font-size: 12px;
+				color: #000000;
+				font-family: 'verdana', 'arial', 'helvetica', sans-serif
+				}
+
+				.owner {
+				width: 100%;
+				border-right: #6d7683 1px solid;
+				border-top: #6d7683 1px solid;
+				border-left: #6d7683 1px solid;
+				border-bottom: #6d7683 1px solid;
+				background-color: #a3a9b1;
+				padding-top: 3px;
+				padding-left: 3px;
+				padding-right: 3px;
+				padding-bottom: 10px
+				}
+
+				.product {
+				color: white;
+				font-size: 22px;
+				font-family: 'arial', 'helvetica', 'geneva', 'swiss', 'sunsans-regular';
+				background-color: #54658c;
+				padding: 5px 10px;
+				border-top: 5px solid #a9b2c5;
+				border-right: 5px solid #a9b2c5;
+				border-bottom: #293f6f;
+				border-left: 5px solid #a9b2c5
+				}
+
+				.rest {
+				color: white;
+				font-size: 24px;
+				font-family: 'arial', 'helvetica', 'geneva', 'swiss', 'sunsans-regular';
+				background-color: white;
+				padding: 10px;
+				border-right: 5px solid #a9b2c5;
+				border-bottom: 5px solid #a9b2c5;
+				border-left: 5px solid #a9b2c5
+				}
+
+				.chl {
+				font-size: 10px;
+				font-weight: bold;
+				background-color: #eee;
+				padding-right: 5px;
+				padding-left: 5px;
+				width: 17%;
+				height: 20px;
+				border-bottom: 1px solid white
+				}
+
+				a {
+				color: #336
+				}
+
+				a:hover {
+				color: #724e6d
+				}
+
+				.ctext {
+				font-size: 11px;
+				padding-right: 5px;
+				padding-left: 5px;
+				width: 80%;
+				height: 20px;
+				border-bottom: 1px solid #eee
+				}
+
+				.hl {
+				color: #724e6d;
+				font-size: 12px;
+				font-weight: bold;
+				background-color: white;
+				height: 20px;
+				border-bottom: 2px dotted #a9b2c5
+				}
+
+				.space {
+				height: 10px
+				}
+
+				h3 {
+				font-weight: bold;
+				font-size: 11px;
+				color: white;
+				font-family: 'verdana', 'arial', 'helvetica', sans-serif
+				}
+			</style>
+
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td class="product">Quality Center</td>
+					</tr>
+					<tr>
+						<td class="rest">
+							<table class="space" width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tbody>
+									<tr>
+										<td/>
+									</tr>
+								</tbody>
+							</table>
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<th class="hl" align="left">Test Set Execution Summary</th>
+									</tr>
+									<tr>
+										<th class="space" align="left"/>
+									</tr>
+								</tbody>
+							</table>
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<td>
+											<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center"
+													border="0">
+												<tbody>
+													<tr>
+														<td class="chl" width="20%">Domain Name</td>
+														<td class="ctext">{DOMAIN_NAME}</td>
+													</tr>
+													<tr>
+														<td class="chl" width="20%">Project Name</td>
+														<td class="ctext">{PROJECT_NAME}</td>
+													</tr>
+													<tr>
+														<td class="chl" width="20%">Started</td>
+														<td class="ctext">{STARTED_TIME}</td>
+													</tr>
+													<tr>
+														<td class="chl" width="20%">Finished</td>
+														<td class="ctext">{END_TIME}</td>
+													</tr>
+													<tr>
+														<td class="chl" width="20%">Duration</td>
+														<td class="ctext">{DURATION}</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td class="space"/>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<td>
+											<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center"
+													border="0">
+												<tbody>
+													<tr>
+														<td class="chl" style="width:14%">Blocked</td>
+														<td class="chl" style="width:14%">Failed</td>
+														<td class="chl" style="width:14%">N/A</td>
+														<td class="chl" style="width:14%">No Run</td>
+														<td class="chl" style="width:14%">Not Completed</td>
+														<td class="chl" style="width:14%">Passed</td>
+														<td class="chl" style="width:14%">Undelivered</td>
+													</tr>
+													<tr>
+														<td class="ctext" style="width:14%">{TOTAL_BLOCKED}</td>
+														<td class="ctext" style="width:14%">{TOTAL_FAILED}</td>
+														<td class="ctext" style="width:14%">{TOTAL_NA}</td>
+														<td class="ctext" style="width:14%">{TOTAL_NO_RUN}</td>
+														<td class="ctext" style="width:14%">{TOTAL_NOT_COMPLETED}</td>
+														<td class="ctext" style="width:14%">{TOTAL_PASSED}</td>
+														<td class="ctext" style="width:14%">{TOTAL_UNDELIVERED}</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td class="space"/>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<td>
+											<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center"
+													border="0">
+												<tbody>
+													<tr>
+														<td colspan="4" class="owner">
+															<h3>Test Set ID ({TEST_SET_ID}) - {TEST_SET_NAME}</h3>
+														</td>
+													</tr>
+													<tr>
+														<td class="chl" style="width:15%">Name:</td>
+														<td class="ctext" style="width:35%">
+															<a
+																	href="td://{PROJECT_NAME}.{DOMAIN_NAME}.{HOST_NAME}/TestLabModule-{TESTLABMODULE_ID}?EntityType=ITestSet&amp;EntityID={TEST_SET_ID}">
+																{TEST_SET_NAME}
+															</a>
+														</td>
+														<td class="chl" style="width:15%">Test Set ID</td>
+														<td class="ctext" style="width:35%">{TEST_SET_ID}</td>
+													</tr>
+													<tr>
+														<td class="chl" style="width:15%">Test Set Folder</td>
+														<td class="ctext" style="width:35%">{TEST_SET_FOLDER}</td>
+														<td class="chl" style="width:15%">Type</td>
+														<td class="ctext" style="width:35%">Selenium</td>
+													</tr>
+													<tr>
+
+														<td class="chl" style="width:15%">Target Cycle</td>
+														<td class="ctext" style="width:35%">{TARGET_CYCLE}</td>
+														<td class="chl" style="width:15%">Baseline</td>
+														<td class="ctext" style="width:35%">{BASELINE}</td>
+													</tr>
+													<tr>
+														<td class="chl" style="width:15%">Test Set Description</td>
+														<td class="ctext" style="width:35%">{TEST_SET_DESCRIPTION}</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td class="space"/>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<th class="hl" align="left">Machine Settings</th>
+									</tr>
+									<tr>
+										<th class="space" align="left"/>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<td>
+											<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center"
+													border="0">
+												<tbody>
+                                                    <tr>
+                                                        <td class="chl" style="width:15%">Operating System</td>
+                                                        <td class="ctext" style="width:35%">{OPERATING_SYSTEM}</td>
+                                                        <td class="chl" style="width:15%">OS Build Number</td>
+                                                        <td class="ctext" style="width:35%">{OS_BUILD_NUMBER}</td>
+                                                    </tr>
+													<tr>
+														<td class="chl" style="width:15%">OS Service Pack</td>
+														<td class="ctext" style="width:35%">{OS_Service_Pack}</td>
+														<td class="chl" style="width:15%">Processor</td>
+														<td class="ctext" style="width:35%">{PROCESSOR}</td>
+													</tr>
+													<tr>
+														<td class="chl" style="width:15%">Free Space on C Drive</td>
+														<td class="ctext" style="width:35%">{FREE_SPACE_ON_C_DRIVE}</td>
+														<td class="chl" style="width:15%">Ram Allocation</td>
+														<td class="ctext" style="width:35%">{TOTAL_RAM}</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td class="space"/>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<th class="hl" align="left">Environment Setings</th>
+									</tr>
+									<tr>
+										<th class="space" align="left"/>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<td>
+											<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center"
+													border="0">
+												<tbody>
+													<tr>
+														<td class="chl" style="width:15%">Application</td>
+														<td class="ctext" style="width:35%">{APPLICATION}</td>
+														<td class="chl" style="width:15%">Application Collection</td>
+														<td class="ctext" style="width:35%">{APPLICATION_COLLECTION}</td>
+													</tr>
+													<tr>
+														<td class="chl" style="width:15%">Test Environment</td>
+														<td class="ctext" style="width:35%">{TEST_ENVIRONMENT}</td>
+														<td class="chl" style="width:15%">Test Case Version</td>
+														<td class="ctext" style="width:35%">{TEST_CASE_VERSION}</td>
+													</tr>
+													<tr>
+														<td class="chl" style="width:15%">Automation Library Version</td>
+														<td class="ctext" style="width:35%">{AUTOMATION_LIBRARY_VERSION}</td>
+														<td class="chl" style="width:15%">Browser</td>
+														<td class="ctext" style="width:35%">{BROWSER_VERSION}</td>
+													</tr>
+													<tr>
+														<td class="chl" style="width:15%">Global Attempts</td>
+														<td class="ctext" style="width:35%">{GLOBAL_ATTEMPTS}</td>
+														<td class="chl" style="width:15%">Global Timeout (seconds)</td>
+														<td class="ctext" style="width:35%">{GLOBAL_TIMEOUT}</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td class="space"/>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+								<tbody>
+									<tr>
+										<th class="hl" align="left">Executed Tests</th>
+									</tr>
+									<tr>
+										<th class="space" align="left"/>
+									</tr>
+								</tbody>
+							</table>
+							<table class="textfont" cellspacing="0" cellpadding="0" width="100%" align="center" border="0" id="ExecutedTestsTable">
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Run Name
+                                        </td>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Test
+                                        </td>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Status
+                                        </td>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Tester
+                                        </td>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Exec Date
+                                        </td>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Exec Time
+                                        </td>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Screenshot
+                                        </td>
+                                        <td style="font-size:10px;font-weight:bold;background-color:#eee;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid white">
+                                            Logs
+                                        </td>
+                                        <td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee"></td>
+                                        <td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee"></td>
+                                    </tr>
+                                    {Executed_Tests_Table_BODY}
+                                </tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

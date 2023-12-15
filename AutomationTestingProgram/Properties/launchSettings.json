@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "AutomationTestingProgram": {
+      "commandName": "Project",
+      "commandLineArgs": ".\\AutomationTestingProgram.exe --setType \"Txt\" --csvSaveFileLocation \"./Log\" --setArgs \"C:\\Users\\RamanaSa\\OneDrive - Government of Ontario\\Desktop\\Automation KT Prac\\TextSet.txt\" --update \"false\" --browser \"Chrome\" --url \"https://www.google.ca/\"",
+      "nativeDebugging": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ALM_Migrator": {
+      "commandName": "Project",
+      "commandLineArgs": "1 true 93436 93299"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}

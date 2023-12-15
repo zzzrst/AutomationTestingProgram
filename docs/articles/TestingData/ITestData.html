@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ITestData </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ITestData ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="itestdata">ITestData</h1>
+
+<p>There are four interfaces in this part</p>
+<h2 id="itestdata-1">ITestData</h2>
+<p>This is what all the other test data implements</p>
+<h3 id="variables">Variables</h3>
+<pre><code class="lang-c#">string Name
+</code></pre>
+<ul>
+<li>The name to use when you want to use this data type from the
+cmd. ie, if the test set data was called &quot;XML&quot; then when running in cmd, the test set data parameter will be &quot;XML&quot; too.</li>
+</ul>
+<pre><code class="lang-c#">string TestArgs
+</code></pre>
+<ul>
+<li>Arguments that are passed in. Often the location of the file.</li>
+</ul>
+<h3 id="constructors">Constructors</h3>
+<pre><code class="lang-c#">public ExampleTestCaseData(string args);
+``
+* Make sure there is a constructor that accepts a string. This is how it gets any arguments passed in such as the file location.
+## ITestSetData
+### Methods
+```c#
+ITestCase GetNextTestCase()
+</code></pre>
+<ul>
+<li>Gets the next test case.</li>
+<li>Often needs to call <code>InformationObject.TestCaseData.SetUpTestCase(string,bool)</code> since that is where the test case data is located.</li>
+</ul>
+<pre><code class="lang-c#">bool ExistNextTestCase()
+</code></pre>
+<ul>
+<li>Checks if the next test case exists.</li>
+</ul>
+<pre><code class="lang-c#">void SetUpTestSet()
+</code></pre>
+<ul>
+<li>Ran before it is called at the start of the program.</li>
+<li>You can use it to set up your logic for the test set.</li>
+</ul>
+<h2 id="itestcasedata">ITestCaseData</h2>
+<h3 id="methods">Methods</h3>
+<pre><code class="lang-c#">ITestStep GetNextTestStep()
+</code></pre>
+<ul>
+<li>Gets the next test step.</li>
+<li>Often needs to call <code>InformationObject.TestStepData.SetUpTestStep(string,bool)</code> since that is where the test step data is located.</li>
+</ul>
+<pre><code class="lang-c#">bool ExistNextTestStep()
+</code></pre>
+<ul>
+<li>Checks to see if there is a next test step.</li>
+</ul>
+<pre><code class="lang-c#">ITestCase SetUpTestCase(string testCaseName, bool performAction = true)
+</code></pre>
+<ul>
+<li>Usualy ran when the next test case is needed.</li>
+<li>You can also set up any logic needed in the test case here.</li>
+</ul>
+<h2 id="iteststepdata">ITestStepData</h2>
+<h3 id="methods-1">Methods</h3>
+<pre><code class="lang-c#">ITestStep SetUpTestSet(string testStepName, bool performAction = true)
+</code></pre>
+<ul>
+<li>Usualy ran when the next test step is needed.</li>
+<li>You can also set up any logic needed in the test step here .</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/master/AutomationTestingProgram/articles/TestingData/ITestData.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

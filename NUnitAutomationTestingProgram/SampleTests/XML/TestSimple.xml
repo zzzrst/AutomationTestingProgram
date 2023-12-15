@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSet xmlns="http://qa/SeleniumPerf">
+	<Parameters>
+		<Browser>chrome</Browser>
+		<Environment>Test</Environment>
+		<URL>testUrl</URL>
+		<RespectRepeatFor>true</RespectRepeatFor>
+
+		<WarningThreshold>60</WarningThreshold>
+		<TimeOutThreshold>120</TimeOutThreshold>
+		
+		<CSVSaveLocation>C:\SeleniumPerfXML</CSVSaveLocation>
+	</Parameters>
+
+  <SpecialElements>
+    <!-- explicitly give the xpath for the loading spinner if any -->
+    <LoadingSpinner>//*[@id='loadingspinner']</LoadingSpinner>
+    <!-- will check this xpath and log anything found in this element if found -->
+    <ErrorContainer>//div[@class='alert alert-danger']</ErrorContainer>
+  </SpecialElements>
+	
+	<TestCaseFlow>
+		<RunTestCase>Fake Test Case ID 1</RunTestCase>
+	</TestCaseFlow>
+	
+	<TestCases>
+		<TestCase name='Case 1' id='Fake Test Case ID 1'>
+			<RunTestStep>Test Step</RunTestStep>
+		</TestCase>
+	</TestCases>
+	
+	<TestSteps>
+		<WaitInSeconds id='Test Step' name='Wait' seconds="0"/>
+	</TestSteps>
+
+</TestSet>

@@ -1,0 +1,48 @@
+name: build and test on pull
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+      
+  test:
+    needs: build
+    
+    runs-on: windows-latest
+    
+    steps:  
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Run Unit Tests
+      run: dotnet test --verbosity normal --configuration Release
+      
+  automerge:
+    needs: [build,test]
+    
+    runs-on: ubuntu-latest
+    steps:
+      - name: get actor
+        run: echo "${{github.actor}}"
+      - name: automerge
+        uses: "pascalgn/automerge-action@ccae530ae13b6af67a7a2009c266fe925844e658"
+        if: github.actor == 'dependabot-preview[bot]'
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: ""

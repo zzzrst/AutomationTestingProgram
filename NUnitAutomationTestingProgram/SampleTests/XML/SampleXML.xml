@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSet xmlns="http://qa/SeleniumPerf">
+
+	<Parameters>
+		<Browser>chrome</Browser>
+		<Environment>EDCS-9</Environment>
+		<URL>fakeURL</URL>
+
+		<RespectRepeatFor>true</RespectRepeatFor>
+		<RespectRunAODAFlag>false</RespectRunAODAFlag>
+
+		<WarningThreshold>60</WarningThreshold>
+		<TimeOutThreshold>120</TimeOutThreshold>
+
+		<DataFile>sampleDataFile</DataFile>
+		<CSVSaveLocation>C:\Selenium\CSV\</CSVSaveLocation>
+		<LogSaveLocation>C:\Selenium\Logs\</LogSaveLocation>
+		<ScreenshotSaveLocation>C:\Selenium\Screenshots\</ScreenshotSaveLocation>
+	</Parameters>
+
+	<SpecialElements>
+		<!-- explicitly give the xpath for the loading spinner if any -->
+		<LoadingSpinner>//*[@id='loadingspinner']</LoadingSpinner>
+		<!-- will check this xpath and log anything found in this element if found -->
+		<ErrorContainer>//div[@class='alert alert-danger']</ErrorContainer>
+	</SpecialElements>
+
+	<TestCaseFlow>
+		<RunTestCase>Fake Test Case ID 1</RunTestCase>
+		<If elementXPath='//div' condition='EXIST'>
+			<Then>
+				<RunTestCase>Fake Test Case ID 2</RunTestCase>
+				<RunTestCase>Fake Test Case ID 3</RunTestCase>
+			</Then>
+			<ElseIf elementXPath='//a' condition='DNE'>
+				<RunTestCase>Fake Test Case ID 4</RunTestCase>
+				<RunTestCase>Fake Test Case ID 5</RunTestCase>
+			</ElseIf>
+			<Else>
+				<RunTestCase>Fake Test Case ID 6</RunTestCase>
+				<RunTestCase>Fake Test Case ID 7</RunTestCase>
+				<If elementXPath='//img' condition='EXIST'>
+					<Then>
+						<RunTestCase>Fake Test Case ID 8</RunTestCase>
+						<RunTestCase>Fake Test Case ID 9</RunTestCase>
+					</Then>
+					<Else>
+						<RunTestCase>Fake Test Case ID 10</RunTestCase>
+						<RunTestCase>Fake Test Case ID 11</RunTestCase>
+					</Else>
+				</If>
+			</Else>
+		</If>
+		<RunTestCase>Fake Test Case ID 12</RunTestCase>
+	</TestCaseFlow>
+
+	<TestCases>
+		<TestCase name='Fake Test Case Name 1' id='Fake Test Case ID 1' repeatFor='1'>
+			<RunTestStep>Fake Test Step ID 1</RunTestStep>
+			<If elementXPath='//a' condition='EXIST'>
+				<Then>
+					<RunTestStep>Fake Test Step ID 2</RunTestStep>
+					<RunTestStep>Fake Test Step ID 3</RunTestStep>
+				</Then>
+				<ElseIf elementXPath='//div' condition='DNE'>
+					<RunTestStep>Fake Test Step ID 4</RunTestStep>
+					<RunTestStep>Fake Test Step ID 5</RunTestStep>
+				</ElseIf>
+				<Else>
+					<RunTestStep>Fake Test Step ID 6</RunTestStep>
+					<RunTestStep>Fake Test Step ID 7</RunTestStep>
+					<If elementXPath='//img' condition='EXIST'>
+						<Then>
+							<RunTestStep>Fake Test Step ID 8</RunTestStep>
+							<RunTestStep>Fake Test Step ID 9</RunTestStep>
+						</Then>
+						<Else>
+							<RunTestStep>Fake Test Step ID 10</RunTestStep>
+							<RunTestStep>Fake Test Step ID 11</RunTestStep>
+						</Else>
+					</If>
+				</Else>
+			</If>
+			<RunTestStep>Fake Test Step ID 12</RunTestStep>
+		</TestCase>
+		<TestCase name='Fake Test Case Name 2' id='Fake Test Case ID 2' repeatFor='2'>
+			<RunTestStep>Fake Test Step ID 13</RunTestStep>
+		</TestCase>
+	</TestCases>
+
+	<TestSteps>
+		<!-- log is true by default. runAODA is false by default. Need runAODAPageName if runAODA is true.-->
+		<ChooseCollection id='Fake Test Step ID 1' name='Fake Step Name 1' log='false' collectionSearchField="Search Text" collectionName="Collection Name"/>
+		<ClickElementByXPath id='Fake Test Step ID 2' name='Fake Step Name 2' xPath="Fake xPath"/>
+		<CloseBrowser id='Fake Test Step ID 3' name='Fake Step Name 3' runAODA='true' log='true'/>
+		<CloseTab id='Fake Test Step ID 4' name='Fake Step Name 4' runAODA='true' runAODAPageName='Fake Page Name' tabIndex="1"/>
+		<DDLSelectByXPath id='Fake Test Step ID 5' name='Fake Step Name 5' runAODA='true' runAODAPageName='Fake Page Name' xPath="Fake xPath" selection="value to be selected"/>
+		<OpenBrowser id='Fake Test Step ID 6' name='Fake Step Name 6' runAODA='true' runAODAPageName='Fake Page Name'/>
+		<PopulateElementByXPath id='Fake Test Step ID 7' name='Fake Step Name 7' runAODA='true' runAODAPageName='Fake Page Name' xPath="Fake xPath" text="value"/>
+		<SignIn id='Fake Test Step ID 8' name='Fake Step Name 8' runAODA='true' runAODAPageName='Fake Page Name' username="fake username" password="fake password"/>
+		<SwitchIntoIFrame id='Fake Test Step ID 9' name='Fake Step Name 9' runAODA='true' runAODAPageName='Fake Page Name' xPath="Fake xPath"/>
+		<SwitchToTab id='Fake Test Step ID 10' name='Fake Step Name 10' runAODA='true' runAODAPageName='Fake Page Name' tabIndex="1"/>
+		<WaitForElement id='Fake Test Step ID 11' name='Fake Step Name 11' runAODA='true' runAODAPageName='Fake Page Name' xPath="Fake xPath" invisible="false"/>
+		<WaitInSeconds id='Fake Test Step ID 12' name='Fake Step Name 12' runAODA='true' runAODAPageName='Fake Page Name' seconds="10"/>
+	</TestSteps>
+	
+</TestSet>

@@ -1,0 +1,281 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Projects/GitHub/AutomationTestingProgram/AutomationTestingProgram/AutomationTestingProgram",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework.html",
+          "hash": "m8iKmCMvrrLqme3ghwFgwAGuP/Dv+NB6sq5MxEv+mXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework/ConcreteSteps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework/ConcreteSteps.html",
+          "hash": "EXcOMreELMfLhxQqtKh7sYQd9CW2PAXIMmLWUC8J10M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework/ReporterLogger.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework/ReporterLogger.html",
+          "hash": "FipnXWd9ngICEUzyCcJ/sfIXvJqm5FB7qzipMzj4Rnw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AutomationFramework/TestObjects.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AutomationFramework/TestObjects.html",
+          "hash": "Ko5IxutWIMnr4FxpfQkUdMR1fsK4RreHjfVpkvGkvWc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver.html",
+          "hash": "fBGNdYIFgZRCkTCKLeRqApPM2TUWoPZQsVSqfJ3Eza8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver/AddingMore.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver/AddingMore.html",
+          "hash": "5PlChcqczT+XJiEYoVfce/OunaIIqzwmb+dXSSbgZgc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver/ITestAutomation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver/ITestAutomation.html",
+          "hash": "IK8y6SwFWnMPVkc1U7u0s833xxqjPHjkTU43SGOK21s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestAutomationDriver/SeleniumDriver.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestAutomationDriver/SeleniumDriver.html",
+          "hash": "bE5bqbp/b0tzMQyTnERIvlV3gQXGPHs6IijuHDcQ9dM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData.html",
+          "hash": "gD8nUqpNcEDjrzlrpXbArDXbNfkFtESmQZEHw0v5CLI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/AddingData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/AddingData.html",
+          "hash": "uWb2bkyBn18WFETUBYNF/hXVPiMM7/W95bBF2Wsggyo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/DatabaseData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/DatabaseData.html",
+          "hash": "vN/1av4mJE15Hl5cYDbpcYc0U+QM/hxpcUb1pvopULo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/ITestData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/ITestData.html",
+          "hash": "NsYFtLViEs2w7u/3cNGir+Uvl+L3+2TK9wE9G8yyHtY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/ITestGeneralData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/ITestGeneralData.html",
+          "hash": "aq5xp7cg+kxtklij/FBOYHseIwrkgY18ZXMLCC1gu04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/TextData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/TextData.html",
+          "hash": "RV865CzefLwoYB+rm92a/LhnQM/ZVL5ssE5m7ywpXgI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/TestingData/XMLData.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/TestingData/XMLData.html",
+          "hash": "8AOf8i2QgS4S62hPOcMKu0/qPr0r/xM3pyfEenC4k1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "0hrxpSn1yu/SHI0WFQ9hS3VkHBRRfehvuUYSyRL0YLI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "TbFdOAkImGyaGkj3vqNioOMgm3o11sM4JsHD+Tm8FO4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "v+dN9/KFsrI5SOZALb/yTeeBiI/Onoszk8eQmgTZd8E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "xPhqJhBsXLL214C4gQ+jHE2teA05usVtBfstzRSQmHs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 17,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

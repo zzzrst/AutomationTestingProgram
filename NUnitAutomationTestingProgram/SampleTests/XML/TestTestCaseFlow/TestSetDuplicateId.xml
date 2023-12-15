@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSet xmlns="http://qa/SeleniumPerf">
+	<Parameters>
+		<Browser>chrome</Browser>
+		<Environment>Test</Environment>
+		<URL>testUrl</URL>
+				
+		<WarningThreshold>60</WarningThreshold>
+		<TimeOutThreshold>120</TimeOutThreshold>
+		
+		<CSVSaveLocation>C:\SeleniumPerfXML</CSVSaveLocation>
+	</Parameters>
+	
+	<SpecialElements/>
+	
+	<TestCaseFlow>
+		<RunTestCase>Run Test Case</RunTestCase>
+	</TestCaseFlow>
+	
+	<TestCases>
+		<TestCase name='Running Test Case' id='Run Test Case'>
+			<RunTestStep>Test Step</RunTestStep>
+		</TestCase>
+		<TestCase name='I am a Duplicate' id='Run Test Case'>
+			<RunTestStep>Test Step</RunTestStep>
+		</TestCase>
+	</TestCases>
+	
+	<TestSteps>
+		<FakeTestStep id='Test Step' name='Testing'/>
+	</TestSteps>
+
+</TestSet>
