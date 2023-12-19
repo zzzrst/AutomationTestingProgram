@@ -43,7 +43,7 @@ namespace TestRunner
             }
             else
             {
-                messageBoxText += "Running " + fileName;
+                messageBoxText = "Running " + fileName;
             }
 
             // mandatory fields
