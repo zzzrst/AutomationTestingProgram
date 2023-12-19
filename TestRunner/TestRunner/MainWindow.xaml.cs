@@ -54,7 +54,7 @@ namespace TestRunner
             }
 
             // mandatory fields
-            string azurePAT = "****";
+            string azurePAT = "***";
 
             string env = this.EnvironmentValue.Text;
             string browser = this.BrowserPicker.Text;
@@ -190,17 +190,12 @@ namespace TestRunner
 
             if (this.DevOpsCheckbox.IsChecked != true)
             {
-                //this.PathToExecutableLabelAndReleaseIdLabel.Visibility = Visibility.Visible;
-                //this.PathToExecutableValueAndReleaseIDValue.Visibility = Visibility.Visible;
                 this.PathToExecutableLabelAndReleaseIdLabel.Text = "Path to Executable";
                 this.BrowseForExecutableButton.Visibility = Visibility.Visible;
-                //this.PathToExecutableValueAndReleaseIDValue.Text = 
             }
             else if (this.DevOpsCheckbox.IsChecked == true)
             {
                 this.PathToExecutableLabelAndReleaseIdLabel.Text = "DevOps Release ID";
-                //this.PathToExecutableLabelAndReleaseIdLabel.Visibility = Visibility.Hidden;
-                //this.PathToExecutableValueAndReleaseIDValue.Visibility = Visibility.Hidden;
                 this.BrowseForExecutableButton.Visibility = Visibility.Hidden;
             }
         }
