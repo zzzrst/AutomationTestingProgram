@@ -54,7 +54,7 @@ namespace TestRunner
             }
 
             // mandatory fields
-            string azurePAT = "***";
+            string azurePAT = "****";
 
             string env = this.EnvironmentValue.Text;
             string browser = this.BrowserPicker.Text;
@@ -99,6 +99,16 @@ namespace TestRunner
                 string pathToExe = this.PathToExecutableValueAndReleaseIDValue.Text;
 
                 // run on local
+                RunTestSetLocally(
+                    pathToExecutable: pathToExe,
+                    projectName: projectName,
+                    planName: planName,
+                    setArgs: fileName,
+                    browser: browser,
+                    buildNumber: buildNumber,
+                    environment: env,
+                    respectRunAODAFlag: runAODA,
+                    notifyList: notifyList);
             }
         }
 
@@ -209,17 +219,10 @@ namespace TestRunner
             p.Start();
             string line;
 
-            string message = "";
-
             while ((line = p.StandardOutput.ReadLine()) != null)
             {
-                //message += line;
                 log.Info(line);
             }
-
-            // File.WriteAllText("C:\\TEMP\\output.txt", message);
-
-            // Console.WriteLine("Finished");
 
             p.WaitForExit();
 
@@ -235,27 +238,10 @@ namespace TestRunner
             return p.ExitCode;
         }
 
-
-        public void RunTestSetLocally(string pathToExecutable, string setType, string setArgs, string browser, string buildNumber, string environment,
-            string respectRunFor, string respectRunAODAFlag, string timeOutThreshold, string warningTheshold, string dataFile, string csvSaveFileLocation, string
-            logSaveFileLocation, string screenShotSaveLocation, string automationProgram, string caseType, string stepType, string caseArgs, string stepArgs)
+        public void RunTestSetLocally(string pathToExecutable, string projectName, string planName, string setArgs, string browser, string buildNumber, string environment,
+             string respectRunAODAFlag, string notifyList)
         {
-            //string cmdToRun = $"C:\\TAP\\AutomationTestingProgram.exe runByID --testIdentifier \"{testIdentifier}\" --e \"{environment}\"";
-            //string cmdToRun = $"C:\\TAP\\AutomationTestingProgram.exe --setType \"{setType}\" --setArgs \"{setArgs}\" --caseType \"{caseType}\"";
-            string cmdToRun = $"{pathToExecutable} --setType \"{setType}\" --setArgs \"{setArgs}\" --caseType \"{caseType}\"";
-
-            // tried doing it without duplicating code, but this doesn't work.
-            //for (int i = 0; i < System.Reflection.MethodInfo.GetCurrentMethod().GetParameters().Count(); i++)
-            //{
-            //    string value = System.Reflection.MethodInfo.GetCurrentMethod().GetParameters()[i].Name;
-
-            //    Console.WriteLine("val " + value + " value: " + nameof(value));
-
-            //    if(nameof(value) != string.Empty)
-            //    {
-            //        cmdToRun += $"--{value} \"{nameof(value)}\"";
-            //    }
-            //}
+            string cmdToRun = $"{pathToExecutable} --setArgs \"{setArgs}\"";
 
             if (browser != string.Empty)
             {
@@ -269,57 +255,24 @@ namespace TestRunner
             {
                 cmdToRun += $" --buildNumber \"{buildNumber}\"";
             }
-            if (respectRunFor != string.Empty)
-            {
-                cmdToRun += $" --respectRunFor \"{respectRunFor}\"";
-            }
             if (respectRunAODAFlag != string.Empty)
             {
                 cmdToRun += $" --respectRunAODAFlag \"{respectRunAODAFlag}\"";
             }
-            if (timeOutThreshold != string.Empty)
+            if (notifyList != string.Empty)
             {
-                cmdToRun += $" --timeOutThreshold \"{timeOutThreshold}\"";
+                cmdToRun += $" --notifyList \"{notifyList}\"";
             }
-            if (warningTheshold != string.Empty)
+            if (planName != string.Empty)
             {
-                cmdToRun += $" --warningTheshold \"{warningTheshold}\"";
+                cmdToRun += $" --planName \"{planName}\"";
             }
-            if (dataFile != string.Empty)
+            if (projectName != string.Empty)
             {
-                cmdToRun += $" --dataFile \"{dataFile}\"";
-            }
-            if (csvSaveFileLocation != string.Empty)
-            {
-                cmdToRun += $" --csvSaveFileLocation \"{csvSaveFileLocation}\"";
-            }
-            if (logSaveFileLocation != string.Empty)
-            {
-                cmdToRun += $" --logSaveFileLocation \"{logSaveFileLocation}\"";
-            }
-            if (screenShotSaveLocation != string.Empty)
-            {
-                cmdToRun += $" --screenShotSaveLocation \"{screenShotSaveLocation}\"";
-            }
-            if (automationProgram != string.Empty)
-            {
-                cmdToRun += $" --automationProgram \"{automationProgram}\"";
-            }
-            if (stepType != string.Empty)
-            {
-                cmdToRun += $" --stepType \"{stepType}\"";
-            }
-            if (caseArgs != string.Empty)
-            {
-                cmdToRun += $" --caseArgs \"{caseArgs}\"";
-            }
-            if (stepArgs != string.Empty)
-            {
-                cmdToRun += $" --stepArgs \"{stepArgs}\"";
+                cmdToRun += $" --projectName \"{projectName}\"";
             }
 
-
-            Console.WriteLine(cmdToRun);
+            log.Info("Logging " + cmdToRun);
 
             try
             {
@@ -327,26 +280,31 @@ namespace TestRunner
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
                     // we use shell to execute (not headless)
-                    //UseShellExecute = true,
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     FileName = "cmd.exe",
                     Arguments = $"/C exit | {cmdToRun}",
-
                 };
                 p.StartInfo = startInfo;
 
                 p.Start();
-                Console.WriteLine();
+
                 string line;
                 while ((line = p.StandardOutput.ReadLine()) != null)
                 {
-                    Console.WriteLine("                 " + line);
+                    log.Info(line);
                 }
 
                 p.WaitForExit();
 
-                //Assert.IsTrue(p.ExitCode == 0, "Test Set did not pass");
+                if (p.ExitCode == 0)
+                {
+                    MessageBox.Show("Successfully completed execution locally", "Successful execution", MessageBoxButton.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Failed, see executionLogger.log for details.", "Failed Execution", MessageBoxButton.OK);
+                }
             }
             catch (Exception ex)
             {
