@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="AppTitle" HorizontalAlignment="Left" Height="198" Margin="10,10,0,0" TextWrapping="Wrap" Text="Testing Automation Program" VerticalAlignment="Top" Width="407" FontSize="48" FontFamily="Segoe UI Black"/>
         <Button x:Name="RunAutomationButton" Content="Run Automation" HorizontalAlignment="Left" Margin="654,375,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Arial" FontSize="16" Height="49" Width="136" BorderThickness="1,1,1,1" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="ComboBoxPicker" HorizontalAlignment="Left" Height="55" Margin="466,38,0,0" VerticalAlignment="Top" Width="292" SelectionChanged="ComboBox_SelectionChanged" Text="Pick" Grid.ColumnSpan="2">
+        <ComboBox x:Name="ComboBoxPicker" HorizontalAlignment="Left" Height="28" Margin="458,34,0,0" VerticalAlignment="Top" Width="302" SelectionChanged="ComboBox_SelectionChanged" Text="Pick" Grid.ColumnSpan="2">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
@@ -24,6 +24,31 @@
             <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
             <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
         </ComboBox>
+        <ComboBox x:Name="ComboBoxPicker_Copy" HorizontalAlignment="Left" Height="32" Margin="458,93,0,0" VerticalAlignment="Top" Width="302" SelectionChanged="ComboBox_SelectionChanged" Text="Pick" Grid.ColumnSpan="2">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FF4C0B0B" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="ComboBox Item #1"/>
+            <ComboBoxItem Content="ComboBox Item #2"/>
+            <ComboBoxItem Content="ComboBox Item #3"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Height="22" Margin="458,7,0,0" TextWrapping="Wrap" Text="Browser" VerticalAlignment="Top" Width="244" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="458,69,0,0" TextWrapping="Wrap" Text="Environment" VerticalAlignment="Top" Width="244" FontSize="18"/>
+        <ComboBox x:Name="ComboBoxPicker_Copy1" HorizontalAlignment="Left" Height="32" Margin="458,154,0,0" VerticalAlignment="Top" Width="302" SelectionChanged="ComboBox_SelectionChanged" Text="Pick" Grid.ColumnSpan="2">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FF4C0B0B" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="ComboBox Item #1"/>
+            <ComboBoxItem Content="ComboBox Item #2"/>
+            <ComboBoxItem Content="ComboBox Item #3"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="458,130,0,0" TextWrapping="Wrap" Text="Project Name" VerticalAlignment="Top" Width="244" FontSize="18"/>
 
     </Grid>
 </Window>
