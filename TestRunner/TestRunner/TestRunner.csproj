@@ -13,7 +13,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="user-testing.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="runOnDevOps.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!--<Target Name="CopyRunPowershell" AfterTargets="AfterBuild">
+    <Copy SourceFiles="runOnDevOps.ps1" DestinationFolder="$(OutDir)" />
+  </Target>-->
 </Project>

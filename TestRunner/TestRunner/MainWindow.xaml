@@ -38,7 +38,7 @@ Width="324" VerticalAlignment="Top" Text="Testing Automation Program" TextWrappi
         <Button
 Width="189" VerticalAlignment="Top" x:Name="RunAutomationButton" Margin="216,97,0,0" Height="73" HorizontalAlignment="Left" FontSize="22" FontWeight="Bold" FontFamily="Arial" Content="Run Automation" Click="Button_Click" BorderThickness="1,1,1,1" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
         <ComboBox
-Width="302" VerticalAlignment="Top" Text="Pick" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged" x:Name="BrowserPicker" Margin="86,34,0,0" Height="34" HorizontalAlignment="Left" FontSize="16" Grid.Column="1">
+Width="151" VerticalAlignment="Top" Text="Pick" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged" x:Name="BrowserPicker" Margin="86,34,0,0" Height="34" HorizontalAlignment="Left" FontSize="16" Grid.Column="1">
             <ComboBox.Background
 >
                 <LinearGradientBrush
@@ -60,11 +60,11 @@ Content="FireFox"/>
         <TextBlock
 Width="244" VerticalAlignment="Top" Text="Browser" TextWrapping="Wrap" Margin="86,7,0,0" Height="22" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock
-Width="244" VerticalAlignment="Top" Text="Environment" TextWrapping="Wrap" Margin="86,79,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
+Width="132" VerticalAlignment="Top" Text="Environment" TextWrapping="Wrap" Margin="86,79,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock
 Width="244" VerticalAlignment="Top" Text="Project Name" TextWrapping="Wrap" Margin="86,145,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
         <TextBox x:Name="EnvironmentValue"
-Width="302" VerticalAlignment="Top" Text="EDCS-9-PR" TextWrapping="Wrap" Margin="86,108,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1" TextChanged="Environment_TextBoxChanged"/>
+Width="165" VerticalAlignment="Top" Text="EDCS-9-PR" TextWrapping="Wrap" Margin="86,108,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1" TextChanged="Environment_TextBoxChanged"/>
         <TextBox x:Name="ProjectNameValues"
 Width="302" VerticalAlignment="Center" Text="AutomationAndAccessibility" TextWrapping="Wrap" TextChanged="ProjectNameValues_TextChanged" Margin="86,0,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1"/>
         <TextBlock
@@ -77,16 +77,16 @@ Width="244" VerticalAlignment="Top" Text="Plan Name" TextWrapping="Wrap" Margin=
 Width="374" VerticalAlignment="Top" Text="C:\TAP\runner.xlsx" TextWrapping="Wrap" TextChanged="FileNameTextbox_TextChanged" Margin="20,256,0,0" Height="46" HorizontalAlignment="Left" FontSize="16" Grid.ColumnSpan="2"/>
         <Button
 Width="141" VerticalAlignment="Top" x:Name="BrowseFilesButton" Margin="20,313,0,0" HorizontalAlignment="Left" Content="Browse Files" Height="20" Click="BrowseFilesButton_Click"/>
-        <TextBox x:Name="NotifyListValues"
+        <TextBox x:Name="PlanStructure"
 Width="302" VerticalAlignment="Top" TextWrapping="Wrap" TextChanged="TextBox_TextChanged_1" Margin="86,312,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1"/>
         <TextBlock
-Width="244" VerticalAlignment="Top" Text="Notify List" TextWrapping="Wrap" Margin="86,289,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
+Width="244" VerticalAlignment="Top" Text="Plan Stucture" TextWrapping="Wrap" Margin="86,289,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
         <CheckBox x:Name="RunAODACheckbox"
 Width="118" Margin="20,18,0,67" HorizontalAlignment="Left" FontSize="18" Content="RunAODA" Grid.Row="1"/>
         <CheckBox x:Name="DebugModeCheckbox"
 Width="132" Margin="191,18,0,67" HorizontalAlignment="Left" FontSize="18" Content="DebugMode" Grid.Row="1"/>
         <CheckBox x:Name="DevOpsCheckbox"
-Margin="20,68,0,17" Width="159" IsChecked="True" HorizontalAlignment="Left" FontSize="18" Content="Run on DevOps" Grid.Row="1"/>
+Margin="20,68,0,17" Width="159" IsChecked="False" HorizontalAlignment="Left" FontSize="18" Content="Run on DevOps" Grid.Row="1" Unchecked ="DevOpsCheckbox_Checked_1" Checked="DevOpsCheckbox_Checked_1"/>
         <CheckBox x:Name="GenerateHTMLCheckbox"
 Width="159" Margin="20,125,0,78" IsChecked="True" HorizontalAlignment="Left" FontSize="18" Content="Generate HTML" Grid.Row="1" Grid.RowSpan="2"/>
         <CheckBox x:Name="ReportToDevOpsCheckbox"
@@ -95,6 +95,20 @@ Width="180" Margin="191,125,0,78" IsChecked="True" HorizontalAlignment="Left" Fo
 Width="256" VerticalAlignment="Top" Text="Additional Configurations" TextWrapping="Wrap" Margin="20,348,0,0" Height="31" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Grid.RowSpan="2"/>
         <CheckBox x:Name="HeadlessCheckbox"
 Width="180" Margin="191,66,0,19" IsChecked="True" HorizontalAlignment="Left" FontSize="18" Content="Headless" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <TextBox x:Name="NotifyListValues"
+            Width="302" VerticalAlignment="Top" TextWrapping="Wrap" TextChanged="TextBox_TextChanged_1" Margin="86,16,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock
+            Width="244" VerticalAlignment="Top" Text="Notify List" TextWrapping="Wrap" Margin="86,360,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold" Grid.RowSpan="2"/>
+        <TextBox x:Name="PathToExecutableValueAndReleaseIDValue"
+            Width="346" VerticalAlignment="Top" TextWrapping="Wrap" TextChanged="TextBox_TextChanged_1" Margin="13,83,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Row="2" Grid.RowSpan="2" Text="C:\\TAP\\AutomationTestingProgram.exe" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="PathToExecutableLabelAndReleaseIdLabel"
+            Width="244" VerticalAlignment="Top" Text="Path To Executable" TextWrapping="Wrap" Margin="13,55,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Grid.Row="2"/>
+        <Button
+            Width="87" VerticalAlignment="Top" x:Name="BrowseForExecutableButton" Margin="194,55,0,0" HorizontalAlignment="Left" Content="Browse Exe" Height="23" Click="BrowseForExecutableButton_Click" Grid.Row="2"/>
+        <TextBlock
+            Width="132" VerticalAlignment="Top" Text="Build Number" TextWrapping="Wrap" Margin="273,80,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
+        <TextBox x:Name="BuildNumberValue"
+            Width="115" VerticalAlignment="Top" Text="23.12" TextWrapping="Wrap" Margin="273,108,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1" TextChanged="Environment_TextBoxChanged"/>
 
     </Grid>
 
