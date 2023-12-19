@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestRunner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="654" Width="800">
+        Title="MainWindow" Height="634" Width="810">
     <Grid Margin="0,0,-36,14">
         <Grid.RowDefinitions>
             <RowDefinition Height="391*"/>
@@ -21,6 +21,18 @@ Width="329*"/>
             <ColumnDefinition
 Width="58*"/>
         </Grid.ColumnDefinitions>
+        <Image Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="1134" Margin="0,-21,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="995" Source="/user-testing.jpg">
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.065">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FF414141" Offset="0.293"/>
+                    <GradientStop Color="#FF414141" Offset="1"/>
+                    <GradientStop Color="#FF575757" Offset="0.343"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+        </Image>
+
         <TextBlock
 Width="324" VerticalAlignment="Top" Text="Testing Automation Program" TextWrapping="Wrap" x:Name="AppTitle" Margin="0,10,0,0" Height="198" HorizontalAlignment="Center" FontSize="48" FontFamily="Segoe UI Black"/>
         <Button
@@ -51,7 +63,7 @@ Width="244" VerticalAlignment="Top" Text="Browser" TextWrapping="Wrap" Margin="8
 Width="244" VerticalAlignment="Top" Text="Environment" TextWrapping="Wrap" Margin="86,79,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock
 Width="244" VerticalAlignment="Top" Text="Project Name" TextWrapping="Wrap" Margin="86,145,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
-        <TextBox
+        <TextBox x:Name="EnvironmentValue"
 Width="302" VerticalAlignment="Top" Text="EDCS-9-PR" TextWrapping="Wrap" Margin="86,108,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1" TextChanged="Environment_TextBoxChanged"/>
         <TextBox x:Name="ProjectNameValues"
 Width="302" VerticalAlignment="Center" Text="AutomationAndAccessibility" TextWrapping="Wrap" TextChanged="ProjectNameValues_TextChanged" Margin="86,0,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1"/>
@@ -62,9 +74,9 @@ Width="302" VerticalAlignment="Top" Text="23.12 Picasso Release Code Freeze Nov 
         <TextBlock
 Width="244" VerticalAlignment="Top" Text="Plan Name" TextWrapping="Wrap" Margin="86,222,0,0" Height="21" HorizontalAlignment="Left" FontSize="18" Grid.Column="1" FontWeight="Bold"/>
         <TextBox x:Name="FileNameTextbox"
-Width="324" VerticalAlignment="Top" Text="C:\TAP\runner.xlsx" TextWrapping="Wrap" TextChanged="FileNameTextbox_TextChanged" Margin="20,256,0,0" Height="26" HorizontalAlignment="Left" FontSize="16" Grid.ColumnSpan="2"/>
+Width="374" VerticalAlignment="Top" Text="C:\TAP\runner.xlsx" TextWrapping="Wrap" TextChanged="FileNameTextbox_TextChanged" Margin="20,256,0,0" Height="46" HorizontalAlignment="Left" FontSize="16" Grid.ColumnSpan="2"/>
         <Button
-Width="141" VerticalAlignment="Top" x:Name="BrowseFilesButton" Margin="20,298,0,0" HorizontalAlignment="Left" Content="Browse Files" Height="20"/>
+Width="141" VerticalAlignment="Top" x:Name="BrowseFilesButton" Margin="20,313,0,0" HorizontalAlignment="Left" Content="Browse Files" Height="20" Click="BrowseFilesButton_Click"/>
         <TextBox x:Name="NotifyListValues"
 Width="302" VerticalAlignment="Top" TextWrapping="Wrap" TextChanged="TextBox_TextChanged_1" Margin="86,312,0,0" Height="32" HorizontalAlignment="Left" FontSize="16" Grid.Column="1"/>
         <TextBlock
@@ -73,8 +85,8 @@ Width="244" VerticalAlignment="Top" Text="Notify List" TextWrapping="Wrap" Margi
 Width="118" Margin="20,18,0,67" HorizontalAlignment="Left" FontSize="18" Content="RunAODA" Grid.Row="1"/>
         <CheckBox x:Name="DebugModeCheckbox"
 Width="132" Margin="191,18,0,67" HorizontalAlignment="Left" FontSize="18" Content="DebugMode" Grid.Row="1"/>
-        <CheckBox x:Name="IncognitoCheckbox"
-Margin="20,68,0,17" Width="159" IsChecked="True" HorizontalAlignment="Left" FontSize="18" Content="Incognito Mode" Grid.Row="1"/>
+        <CheckBox x:Name="DevOpsCheckbox"
+Margin="20,68,0,17" Width="159" IsChecked="True" HorizontalAlignment="Left" FontSize="18" Content="Run on DevOps" Grid.Row="1"/>
         <CheckBox x:Name="GenerateHTMLCheckbox"
 Width="159" Margin="20,125,0,78" IsChecked="True" HorizontalAlignment="Left" FontSize="18" Content="Generate HTML" Grid.Row="1" Grid.RowSpan="2"/>
         <CheckBox x:Name="ReportToDevOpsCheckbox"
