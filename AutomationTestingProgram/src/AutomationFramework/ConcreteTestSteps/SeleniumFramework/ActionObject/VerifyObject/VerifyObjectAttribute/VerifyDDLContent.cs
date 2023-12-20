@@ -4,6 +4,8 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
+
+    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -26,6 +28,17 @@ namespace AutomationTestingProgram.AutomationFramework
             List<string> expected = this.Arguments["value"].Split(';').ToList();
 
             this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyDropDownContent(expected, this.XPath, this.JsCommand);
+
+            if (this.TestStepStatus.RunSuccessful)
+            {
+                this.TestStepStatus.Actual = "Successfully verified DDL Content xpath: " + this.XPath;
+            }
+            else
+            {
+                this.TestStepStatus.Actual = "Failure in Verifying DDL Content";
+
+                throw new Exception(this.TestStepStatus.Actual);
+            }
         }
     }
 }
