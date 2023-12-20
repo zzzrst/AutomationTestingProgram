@@ -2,7 +2,6 @@
     [Parameter(Mandatory=$true)][string]$emailPath,
     [Parameter(Mandatory=$true)][string]$ExpectedPath,
 	[Parameter(Mandatory=$true)][string]$emailShortList,
-    [Parameter(Mandatory=$true)][string]$patternToRemove,
     [Parameter(Mandatory=$true)][string]$resultFilePath
  )
 
@@ -97,7 +96,7 @@ if (Test-Path $ExpectedPath) {
 
         if (-not (String-Compare $expectedSubject $actualSubject)) {
             "Expected Subject is: " + $expectedSubject >> $resultFilePath
-            "Actual Subejct is: " + $actualSubject >> $resultFilePath
+            "Actual Subject is: " + $actualSubject >> $resultFilePath
             "" >> $resultFilePath
             $tempCond = $false
         }
