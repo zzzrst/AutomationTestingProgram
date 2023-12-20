@@ -1,0 +1,18 @@
+<tr>
+	<td class="failureAccordion" style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">
+		<a href="https://dev.azure.com/{ORG_NAME}/{PROJECT_NAME}/_TestManagement/Runs/?runId={TEST_RUN_ID}&_a=resultSummary&resultId={TEST_CASE_ID}">{TEST_CASE_NAME}</a>
+	</td>
+	<!-- IF_EMAIL_THEN_DELETE -->
+	<td class="testResults" style="font-size:12px;padding-right:5px;height:auto;border-bottom:1px solid #eee; color:#cc0300">
+		<p style="color:black">The following are the steps for this test</p>
+		{TEST_STEP_RESULT}
+	</td>
+	<td class="resultsCol" style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee"></td>
+	<!-- IF_EMAIL_THEN_DELETE -->
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee; color:#ff3333">Failed</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{TESTER_NAME}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{EXEC_DATE}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{EXEC_TIME}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{HAS_SCREENSHOT}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{NUMSTEPS}</td>
+</tr>
