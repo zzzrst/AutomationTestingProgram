@@ -5,6 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
+    using AutomationTestinProgram.Helper;
     using TextInteractor;
 
     /// <summary>
@@ -24,11 +25,14 @@ namespace AutomationTestingProgram.AutomationFramework
             string comments = this.Arguments["comment"];
             string value = this.Arguments["value"];
             bool pass = false;
-            TextInteractor txtfile = new TextInteractor(txt1, Logger.GetLog4NetLogger());
 
-            string seperator = "];[";
-            string toReplace = value.Substring(0, value.IndexOf(seperator));
-            string replaceWith = value.Substring(value.IndexOf(seperator) + 3);
+            string textFilePath = FilePathResolver.Resolve(txt1);
+
+            TextInteractor txtfile = new TextInteractor(textFilePath, Logger.GetLog4NetLogger());
+
+            string separator = "];[";
+            string toReplace = value.Substring(0, value.IndexOf(separator));
+            string replaceWith = value.Substring(value.IndexOf(separator) + 3);
 
             switch (comments.ToLower())
             {
@@ -51,6 +55,9 @@ namespace AutomationTestingProgram.AutomationFramework
 
             this.TestStepStatus.RunSuccessful = pass;
             this.TestStepStatus.Actual = pass ? "File successfully modified." : "File was not successfully modified.";
+
+            // close the file after using it
+            txtfile.Close();
         }
     }
 }
