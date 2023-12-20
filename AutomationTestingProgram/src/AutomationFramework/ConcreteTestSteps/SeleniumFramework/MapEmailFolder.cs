@@ -19,9 +19,13 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public override void Execute()
         {
-            string emailFolderLocation = ((DatabaseStepData)TestStepData).GetEnvironmentEmailNotificationFolder(GetEnvironmentVariable(EnvVar.Environment));
-            string username = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT USERNAME");
-            string password = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT PASSWORD");
+            base.Execute(); // run base execute
+
+            DatabaseStepData dbdata = new DatabaseStepData("");
+
+            string emailFolderLocation = dbdata.GetEnvironmentEmailNotificationFolder(GetEnvironmentVariable(EnvVar.Environment));
+            string username = dbdata.GetGlobalVariableValue("WINDOW ACCOUNT USERNAME");
+            string password = dbdata.GetGlobalVariableValue("WINDOW ACCOUNT PASSWORD");
 
             Process p = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo
@@ -42,6 +46,10 @@ namespace AutomationTestingProgram.AutomationFramework
             }
 
             p.WaitForExit();
+
+            // complete mapping email folder and list as successful immediately.
+            this.TestStepStatus.RunSuccessful = true;
+            this.TestStepStatus.Actual = "Successfully mapped email folder";
         }
     }
 }
