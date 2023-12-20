@@ -32,9 +32,11 @@ namespace AutomationTestingProgram.AutomationFramework
             this.executingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             this.emailPath = Path.Combine(this.Arguments["comment"], "Emails");
 
-            this.emailFolderLocation = ((DatabaseStepData)TestStepData).GetEnvironmentEmailNotificationFolder(GetEnvironmentVariable(EnvVar.Environment));
-            this.username = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT USERNAME");
-            this.password = ((DatabaseStepData)TestStepData).GetGlobalVariableValue("WINDOW ACCOUNT PASSWORD");
+            DatabaseStepData dbdata = new DatabaseStepData("");
+
+            this.emailFolderLocation = dbdata.GetEnvironmentEmailNotificationFolder(GetEnvironmentVariable(EnvVar.Environment));
+            this.username = dbdata.GetGlobalVariableValue("WINDOW ACCOUNT USERNAME");
+            this.password = dbdata.GetGlobalVariableValue("WINDOW ACCOUNT PASSWORD");
 
             this.SaveEmailToFile();
             this.VerifyEmailExists();
