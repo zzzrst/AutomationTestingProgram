@@ -28,7 +28,7 @@ namespace ALMConnector
         /// <summary>
         /// The build number associated.
         /// </summary>
-        public string buildNumber { get; set; } = "My build number";
+        public static string buildNumber { get; set; } = "My build number";
 
         /// <summary>
         /// The description for this test set.
@@ -108,7 +108,14 @@ namespace ALMConnector
                 throw new ExecutionFlowDeterminer(ExecutionFlowDeterminer.ErrorMsg + " " + e.ToString());
             }
 
-            this.currTestCase = new TestCaseInstance(this.testCaseDict[this.currTestCaseID], this.GetField("Test Environment"), this.buildNumber);
+            if (this.currTestCaseID < 0)
+            {
+                this.currTestCase = null;
+            }
+            else
+            {
+                this.currTestCase = new TestCaseInstance(this.testCaseDict[this.currTestCaseID], this.GetField("Test Environment"), buildNumber);
+            }
         }
 
         /// <summary>
@@ -151,6 +158,14 @@ namespace ALMConnector
         /// Gets or sets the total test cases the test set contains.
         /// </summary>
         public int TotalTestCases { get; set; } = 0;
+
+        /// <summary>
+        /// Gets the current TestCase
+        /// </summary>
+        public TestCaseInstance CurrTestCase
+        {
+            get { return this.currTestCase; }
+        }
 
         /// <summary>
         /// Gets the total number of blocked test cases.
@@ -221,6 +236,7 @@ namespace ALMConnector
                     Console.WriteLine("Field Name '" + fieldName + "' is not valid");
                 }
             }
+            Console.WriteLine("GetField: Could not get " + fieldName);
 
             return string.Empty;
         }
@@ -355,7 +371,7 @@ namespace ALMConnector
             if (this.currTestCaseID != this.lastTestCaseID)
             {
                 this.currTestCaseID = this.testCaseFlow[this.currTestCaseID][0];
-                this.currTestCase = new TestCaseInstance(this.testCaseDict[this.currTestCaseID], this.GetField("Test Environment"), this.buildNumber);
+                this.currTestCase = new TestCaseInstance(this.testCaseDict[this.currTestCaseID], this.GetField("Test Environment"), buildNumber);
                 return true;
             }
 
