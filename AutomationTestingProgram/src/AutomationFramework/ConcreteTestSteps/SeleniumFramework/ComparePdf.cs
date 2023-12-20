@@ -1,4 +1,4 @@
-﻿// <copyright file="ComparePdf.cs" company="PlaceholderCompany">
+﻿// <copyright file="ComparePDF.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
