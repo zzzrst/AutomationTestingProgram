@@ -5,6 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
+    using AutomationTestinProgram.Helper;
     using AutomationTestSetFramework;
     using OpenQA.Selenium;
 
@@ -20,14 +21,34 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
-            string uploadBtn = this.Arguments["object"];
+            string uploadBtn;
+
+            // add implementation to read html ids -- added by Victor
+            if (this.Arguments["comment"] == "html id")
+            {
+                // Ideally we get: //*[@id='Name']
+                uploadBtn = $"//*[@id='{this.Arguments["object"]}']";
+                Logger.Info("xpath from HTML ID: " + uploadBtn);
+            }
+            else
+            {
+                // original
+                uploadBtn = this.Arguments["object"];
+            }
+
+            Logger.Warn("This test step only does xpaths and html ids for now.");
+
             string filePath = this.Arguments["value"];
+            filePath = FilePathResolver.Resolve(filePath); // resolve the file path in case it's as K folder
+
+            Logger.Info("Attempting to upload file to: " + filePath + " with upload button:  " + uploadBtn);
 
             // check if this is input with type=file
             if (InformationObject.TestAutomationDriver.VerifyAttribute("type", "file", uploadBtn))
             {
                 // we can just send the path in
                 ((TestingDriver.SeleniumDriver)InformationObject.TestAutomationDriver).GetWebElement(uploadBtn).SendKeys(filePath);
+                this.TestStepStatus.RunSuccessful = true;
                 this.TestStepStatus.Actual = "Successfully inputted the value into upload file.";
                 return;
             }
@@ -50,6 +71,9 @@ namespace AutomationTestingProgram.AutomationFramework
                     elements[0].SendKeys(filePath);
                     this.TestStepStatus.RunSuccessful = true;
                     this.TestStepStatus.Actual = "Successfully inputted the value into upload file.";
+
+                    // add test run attachment for upload file
+                    InformationObject.TestSetData.AddAttachment(filePath);
                 }
                 else
                 {
@@ -64,6 +88,10 @@ namespace AutomationTestingProgram.AutomationFramework
                     inputFileElement.SendKeys(filePath);
                     this.TestStepStatus.RunSuccessful = true;
                     this.TestStepStatus.Actual = "Successfully inputted the value into upload file.";
+
+                    // add test run attachment for upload file
+                    InformationObject.TestSetData.AddAttachment(filePath);
+
                 }
             }
         }
