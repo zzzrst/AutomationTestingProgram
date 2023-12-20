@@ -13,12 +13,17 @@
 
  <#Retrieve the list of emails#>
  $emailListContents = ls $emailPath -Name
+ # $emailListContents = ls $emailPath -Name | Sort-Ojbect -Property LastAccessTime
  $subjectMatchCount = 0
  $i = 0
  <#Retrieve the date/time that the latest email was sent#>
- $sentOn = (Get-Item "$emailPath\$($emailListContents[$i])").LastWriteTime
+ $sentOn = (Get-ChildItem -File $emailPath | Sort-Object -Property LastAccessTime | Select-Object -Last 1).LastWriteTime
 
  Write-Host "Email was last written at: " $sentOn
+ Write-Host "Email i length" $i 
+ Write-Host "Time span sample" $timeSpanSample 
+ Write-Host "Sent on: " $sentOn 
+ 
 
  <#Retrieve all emails that are within the timespan#>
   while ($i -lt $emailListContents.Length -and ($sentOn -gt $timespanSample -Or $sentOn -eq $timeSpanSample)){
@@ -30,6 +35,9 @@
 	 $CdoMessage = New-Object -ComObject CDO.Message
 	 $CdoMessage.DataSource.OpenObject($AdoDbStream ,"_Stream")
 
+
+    Write-Host "Email subject found is " $CdoMessage.Subject
+	
      # Use the following line to get the subject line
      # $CdoMessage.Subject
      
@@ -48,15 +56,26 @@
         if ($emailSubject -match $subject) {
 		    $subjectMatchCount ++
             $emailListContents[$i] | Out-File -FilePath $emailList -NoClobber -Append
+			
+			Write-Host "Email subject matched found is " $emailSubject " Found: " $subject
 	    }
      }
 
 	 $i++
 	 $sentOn = (Get-Item "$emailPath\$($emailListContents[$i])").LastWriteTime
+	 
+	 # we want to find the next sentOn time that is in the range. 
+	 while ($i -lt $emailListContents.Length -and $sentOn -lt $timespanSample){
+		$i++
+		$sentOn = (Get-Item "$emailPath\$($emailListContents[$i])").LastWriteTime
+	 }
+	 
 	 $AdoDbStream.Close()
 }
+
 <#Read-Host -Prompt "Press Enter to exit"#>
 if ($subjectMatchCount = 0) {
+	Write-Host "None matched" $subjectMatchCount
     $LASTEXITCODE = 1
     exit 1
 }
