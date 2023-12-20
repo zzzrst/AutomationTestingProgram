@@ -4,6 +4,7 @@
 
 namespace ALMConnector
 {
+    using Microsoft.Extensions.Logging;
     using System;
     using System.Collections.Generic;
     using System.Configuration;
@@ -113,80 +114,82 @@ namespace ALMConnector
             this.connection.ReleaseConnection();
         }
 
-		/// <summary>
-		/// The ConnectToServer.
-		/// </summary>
-		/// <returns>The <see cref="bool"/>.</returns>
-		public bool ConnectToServer()
-		{
+        /// <summary>
+        /// The ConnectToServer.
+        /// </summary>
+        /// <returns>The <see cref="bool"/>.</returns>
+        public bool ConnectToServer()
+        {
 
-			try
-			{
-				this.connection = new TDAPIOLELib.TDConnection();
-				this.connection.InitConnectionEx(this.AlmUrl);
-
-				//Authentication
-				this.connection.Login(this.Username, this.Password);
-
-				//Connect to a project
-				this.connection.Connect(this.Domain, this.Project);
-
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e.Message);
-			}
+            try
+            {
+                Console.WriteLine("Trying to connect to the server");
+                this.connection = new TDAPIOLELib.TDConnection();
 
 
+                this.connection.InitConnectionEx(this.AlmUrl);
+
+                //Authentication
+                this.connection.Login(this.Username, this.Password);
+
+                //Connect to a project
+                this.connection.Connect(this.Domain, this.Project);
+                Console.WriteLine($"Connected to: + {this.AlmUrl} + {this.Username} + {this.Password} + {this.Domain} + {this.Project}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
 
 
+            //// initialize new TDConnection
+            // this.connection = new TDConnection();
+            bool connected = false; // initializes returning result
 
-			//// initialize new TDConnection
-			//this.connection = new TDConnection();
-			bool connected = false; // initializes returning result
+            /* This section is a duplicate of above
+            this.connection.InitConnectionEx(this.AlmUrl);
 
-			//// conn.InitConnectionEx(almurl);
-			//// Console.WriteLine("Checking Server Compatibility: " + connection.InitAndCheckServerCompatibility(almUrl));
-			//this.connection.InitAndCheckServerCompatibility(this.AlmUrl);
+            Console.WriteLine("Checking Server Compatibility: " + connection.InitAndCheckServerCompatibility(this.AlmUrl));
+            this.connection.InitAndCheckServerCompatibility(this.AlmUrl);
 
-			//// Authentication
-			//// Console.WriteLine("Logging in...");
-			//try
-			//{
-			//    this.connection.Login(this.Username, this.Password);
-			//}
-			//catch (Exception e)
-			//{
-			//    Console.WriteLine(e.Message);
-			//    return false;
-			//}
+            // Authentication
+            Console.WriteLine("Logging in...");
+            try
+            {
+                this.connection.Login(this.Username, this.Password);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
 
-			//// Connect to a project
-			//// Console.WriteLine("Connecting to Project...");
-			//try
-			//{
-			//    this.connection.Connect(this.Domain, this.Project);
-			//}
-			//catch (Exception e)
-			//{
-			//    Console.WriteLine(e.Message);
-			//    return false;
-			//}
+            // Connect to a project
+            Console.WriteLine("Connecting to Project...");
+            try
+            {
+                this.connection.Connect(this.Domain, this.Project);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }*/
 
-			//// check connected status
-			connected = this.connection.ProjectConnected && this.connection.Connected && this.connection.LoggedIn;
+            //// check connected status
+            connected = this.connection.ProjectConnected && this.connection.Connected && this.connection.LoggedIn;
 
-			// Console.WriteLine("Connected: " + connected);
-			return connected;
-		}
+            Console.WriteLine("Connected: " + connected);
+            return connected;
+        }
 
-		/// <summary>
-		/// The SetTestSetByPath.
-		/// </summary>
-		/// <param name="path">The path<see cref="string"/>.</param>
-		/// <returns>The <see cref="TestSetInstance"/>.</returns>
-		public TestSetInstance SetTestSetByPath(string path)
+        /// <summary>
+        /// The SetTestSetByPath.
+        /// </summary>
+        /// <param name="path">The path<see cref="string"/>.</param>
+        /// <returns>The <see cref="TestSetInstance"/>.</returns>
+        public TestSetInstance SetTestSetByPath(string path)
         {
             // trim off the testname from the end of the path
             string[] trimmed = this.TrimTestName(path);
@@ -220,15 +223,48 @@ namespace ALMConnector
         /// </summary>
         /// <param name="path">The path<see cref="string"/>.</param>
         /// <returns>The <see cref="TestSetInstance"/>.</returns>
+        /// 
         public List<string> GetAllTestSetByPath(string path)
         {
             List<string> res = new List<string>();
 
+            //TestLabFolderFactory folder = this.connection.TestLabFolderFactory as TestLabFolderFactory;
+            TestSetTreeManager tree = this.connection.TestSetTreeManager as TestSetTreeManager;
+            try
+            {
+                //TestLabFolder testLabFolder = folder.Path as TestLabFolder;
+                TestSetFolder tsFolder = tree.NodeByPath[path] as TestSetFolder;
+                List tsList = tsFolder.FindTestSets(string.Empty);
+                foreach (TestSet test in tsList)
+                {
+                    res.Add($"{test.ID}");
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            return res;
+        }
+        public List<string> GetAllTestSetByPath(string path, bool recursiveSearch)
+        {
+            if (recursiveSearch)
+            {
+                return GetAllTestSetByPath(path);
+            }
+            List<string> res = new List<string>();
             TestSetTreeManager tree = this.connection.TestSetTreeManager as TestSetTreeManager;
             try
             {
                 TestSetFolder tsFolder = tree.NodeByPath[path] as TestSetFolder;
-                List tsList = tsFolder.FindTestSets(string.Empty);
+
+                // Do I know how this works? no. However, this Object is not deprecated and seems to have greater support
+                TestSetFactory testSetFactory = tsFolder.TestSetFactory as TestSetFactory;
+
+                // Get the list of TestSets
+                List tsList = testSetFactory.NewList("");
+
+
                 foreach (TestSet test in tsList)
                 {
                     res.Add($"{test.ID}");
