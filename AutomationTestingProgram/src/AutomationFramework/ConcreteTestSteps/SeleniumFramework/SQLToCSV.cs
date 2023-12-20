@@ -40,15 +40,17 @@ namespace AutomationTestingProgram.AutomationFramework
                 this.environment = this.comment.Substring(1);
             }
 
+            DatabaseStepData dbdata = new DatabaseStepData("");
+
             // attempt to execute the SQL script
             List<List<object>> table = null;
             if (this.environment.ToLower() == ConfigurationManager.AppSettings["DBTestCaseDatabase"].ToString().ToLower())
             {
-                table = ((DatabaseStepData)TestStepData).ProcessQADBSelectQuery(this.sqlQuery);
+                table = dbdata.ProcessQADBSelectQuery(this.sqlQuery);
             }
             else
             {
-                table = ((DatabaseStepData)TestStepData).ProcessEnvironmentSelectQuery(this.environment, this.sqlQuery);
+                table = dbdata.ProcessEnvironmentSelectQuery(this.environment, this.sqlQuery);
             }
 
             string csv = string.Join("\n", table.Select(
