@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using log4net.Appender;
+
 namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
