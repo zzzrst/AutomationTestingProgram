@@ -2,11 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using Microsoft.TeamFoundation.TestManagement.WebApi.Legacy;
-using System;
-
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using System;
+
     /// <summary>
     /// This class executes the action of selecting multiple values from the specified dropdownlist.
     /// </summary>
