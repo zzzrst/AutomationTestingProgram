@@ -1,6 +1,7 @@
 @echo off
 
 set argCount=0
+set "dir=%cd%\temporary_files"
 
 for %%x in (%*) do (
    set /A argCount+=1
@@ -9,12 +10,12 @@ for %%x in (%*) do (
 
 
 
-if EXIST C:\TEMP\expected.txt (
-    del /f  C:\TEMP\expected.txt
+if EXIST %dir%\expected.txt (
+    del /f  %dir%\expected.txt
 )
 
-if EXIST  C:\TEMP\actual.txt (
-    del /f  C:\TEMP\actual.txt
+if EXIST  %dir%\actual.txt (
+    del /f  %dir%\actual.txt
 )
 
 
@@ -41,7 +42,7 @@ if %argcount% GEQ 1 (
 if EXIST %1 (
 
     echo Converting '%~1' into 'expected.txt'.
-    call "%~dp0\pdftotext" -nopgbrk -table "%~1"  C:\TEMP\expected.txt
+    call "%~dp0\pdftotext" -nopgbrk -table "%~1"  %dir%\expected.txt
 
 ) ELSE ("
     echo '%~1' was not found!
@@ -69,7 +70,7 @@ if EXIST %1 (
 	    )
 
 	    echo Converting '%~1' into 'expected.txt' starting at %2
-	    call "%~dp0\pdftotext" -f %2 -nopgbrk -table "%~1"   C:\TEMP\expected.txt
+	    call "%~dp0\pdftotext" -f %2 -nopgbrk -table "%~1"   %dir%\expected.txt
 
 	) Else (
 
@@ -82,7 +83,7 @@ if EXIST %1 (
 	    )
 
 	    echo Converting '%~1' into 'expected.txt' from %2:%3
-	    call "%~dp0\pdftotext" -f %2 -l %3 -nopgbrk -table "%~1"   C:\TEMP\expected.txt
+	    call "%~dp0\pdftotext" -f %2 -l %3 -nopgbrk -table "%~1"   %dir%\expected.txt
 	)
 
     )
@@ -99,9 +100,9 @@ goto caseExit
 if %argcount% EQU 2 (
 
     echo Converting '%~1' into 'expected.txt'.
-    call "%~dp0\pdftotext" -nopgbrk -table "%~1" C:\TEMP\expected.txt
+    call "%~dp0\pdftotext" -nopgbrk -table "%~1" %dir%\expected.txt
     echo Converting '%~2' into 'actual.txt'.
-    call "%~dp0\pdftotext" -nopgbrk -table "%~2" C:\TEMP\actual.txt
+    call "%~dp0\pdftotext" -nopgbrk -table "%~2" %dir%\actual.txt
 
 ) Else (
 
@@ -112,10 +113,10 @@ if %argcount% EQU 2 (
 	    )
 
 	echo Converting '%~1' into 'expected.txt' starting at %3
-	call "%~dp0\pdftotext" -f %3 -nopgbrk -table "%~1" C:\TEMP\expected.txt
+	call "%~dp0\pdftotext" -f %3 -nopgbrk -table "%~1" %dir%\expected.txt
 
 	echo Converting '%~2' into 'actual.txt' starting at %3
-	call "%~dp0\pdftotext" -f %3 -nopgbrk -table "%~2" C:\TEMP\actual.txt
+	call "%~dp0\pdftotext" -f %3 -nopgbrk -table "%~2" %dir%\actual.txt
 
     ) Else (
 
@@ -130,10 +131,10 @@ if %argcount% EQU 2 (
 	    )
 
 	    echo Converting '%~1' into 'expected.txt' starting at %3
-	    call "%~dp0\pdftotext" -f %3 -nopgbrk -table "%~1" C:\TEMP\expected.txt
+	    call "%~dp0\pdftotext" -f %3 -nopgbrk -table "%~1" %dir%\expected.txt
 
 	    echo Converting '%~2' into 'actual.txt' starting at %4
-	    call "%~dp0\pdftotext" -f %4 -nopgbrk -table "%~2" C:\TEMP\actual.txt
+	    call "%~dp0\pdftotext" -f %4 -nopgbrk -table "%~2" %dir%\actual.txt
 
 	) Else (
 
@@ -157,10 +158,10 @@ if %argcount% EQU 2 (
 	        )
 
 	        echo Converting '%~1' into 'expected.txt' from %3:%4
-	        call "%~dp0\pdftotext" -f %3 -l %4 -nopgbrk -table "%~1" C:\TEMP\expected.txt
+	        call "%~dp0\pdftotext" -f %3 -l %4 -nopgbrk -table "%~1" %dir%\expected.txt
 
 	        echo Converting '%~2' into 'actual.txt' from %5:%6
-	        call "%~dp0\pdftotext" -f %5 -l %6 -nopgbrk -table "%~2" C:\TEMP\actual.txt
+	        call "%~dp0\pdftotext" -f %5 -l %6 -nopgbrk -table "%~2" %dir%\actual.txt
 
 	     ) Else (
 
