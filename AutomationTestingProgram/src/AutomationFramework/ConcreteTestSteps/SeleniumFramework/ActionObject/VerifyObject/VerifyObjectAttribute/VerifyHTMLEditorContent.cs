@@ -31,6 +31,18 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyElementText(expected, "//body", this.JsCommand);
 
             InformationObject.TestAutomationDriver.SwitchToIFrame("root");
+
+            if (this.TestStepStatus.RunSuccessful)
+            {
+                this.TestStepStatus.Actual = "Successfully verified web HTML Editor Content xpath: " + this.XPath;
+            }
+            else
+            {
+                this.TestStepStatus.Actual = "Failure in Verifying HTML Editor Content";
+
+                throw new Exception(this.TestStepStatus.Actual);
+            }
+
         }
     }
 }
