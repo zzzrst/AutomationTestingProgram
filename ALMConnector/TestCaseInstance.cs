@@ -138,7 +138,7 @@ namespace ALMConnector
                 if (STATUS.Contains(testStatus))
                 {
                     this.TestStatus = testStatus;
-                    
+
                     this.TestRun["RN_STATUS"] = testStatus;
                 }
                 else
