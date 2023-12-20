@@ -18,6 +18,8 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
+
+            Logger.Info("Maximizing browser from MaximizeBrowser");
             InformationObject.TestAutomationDriver.Maximize();
         }
     }
