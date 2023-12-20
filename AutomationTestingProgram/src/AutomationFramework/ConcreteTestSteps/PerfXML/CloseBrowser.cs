@@ -10,13 +10,13 @@ namespace AutomationTestingProgram.AutomationFramework
     public class CloseBrowser : TestStep
     {
         /// <inheritdoc/>
-        public override string Name { get; set; } = "CloseBrowser";
+        public override string Name { get; set; } = "Close Browser";
 
         /// <inheritdoc/>
         public override void Execute()
         {
             base.Execute();
-            InformationObject.TestAutomationDriver.CloseBrowser();
+            InformationObject.TestAutomationDriver.CloseBrowser(true);
         }
     }
 }
