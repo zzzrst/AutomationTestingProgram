@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using System;
+
     /// <summary>
     /// This class executes the action of populating the element identified by the xpath.
     /// </summary>
