@@ -27,17 +27,27 @@ namespace AutomationTestingProgram.AutomationFramework
 
             List<string> expected = this.Arguments["value"].Split(';').ToList();
 
-            this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyDropDownContent(expected, this.XPath, this.JsCommand);
-
-            if (this.TestStepStatus.RunSuccessful)
+            try
             {
-                this.TestStepStatus.Actual = "Successfully verified DDL Content xpath: " + this.XPath;
+                this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyDropDownContent(expected, this.XPath, this.JsCommand);
+
+                if (this.TestStepStatus.RunSuccessful)
+                {
+                    this.TestStepStatus.Actual = "Successfully verified DDL Content xpath: " + this.XPath;
+                }
+                else
+                {
+                    this.TestStepStatus.Actual = "Failure in Verifying DDL content";
+
+                    throw new Exception(this.TestStepStatus.Actual);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.TestStepStatus.Actual = "Failure in Verifying DDL Content";
-
-                throw new Exception(this.TestStepStatus.Actual);
+                Logger.Info($"Could not verify DDL content.");
+                this.ShouldExecuteVariable = true;
+                this.TestStepStatus.RunSuccessful = false;
+                this.HandleException(ex);
             }
         }
     }

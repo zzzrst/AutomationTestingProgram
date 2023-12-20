@@ -26,23 +26,32 @@ namespace AutomationTestingProgram.AutomationFramework
 
             string expected = this.Arguments["value"];
 
-            InformationObject.TestAutomationDriver.SwitchToIFrame(this.Arguments["object"]);
-
-            this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyElementText(expected, "//body", this.JsCommand);
-
-            InformationObject.TestAutomationDriver.SwitchToIFrame("root");
-
-            if (this.TestStepStatus.RunSuccessful)
+            try
             {
-                this.TestStepStatus.Actual = "Successfully verified web HTML Editor Content xpath: " + this.XPath;
+                InformationObject.TestAutomationDriver.SwitchToIFrame(this.Arguments["object"]);
+
+                this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyElementText(expected, "//body", this.JsCommand);
+
+                InformationObject.TestAutomationDriver.SwitchToIFrame("root");
+
+                if (this.TestStepStatus.RunSuccessful)
+                {
+                    this.TestStepStatus.Actual = "Successfully verified web HTML Editor Content xpath: " + this.XPath;
+                }
+                else
+                {
+                    this.TestStepStatus.Actual = "Failure in Verifying HTML Editor Content";
+
+                    throw new Exception(this.TestStepStatus.Actual);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.TestStepStatus.Actual = "Failure in Verifying HTML Editor Content";
-
-                throw new Exception(this.TestStepStatus.Actual);
+                Logger.Info($"Could not verify HTML editor content.");
+                this.ShouldExecuteVariable = true;
+                this.TestStepStatus.RunSuccessful = false;
+                this.HandleException(ex);
             }
-
         }
     }
 }
