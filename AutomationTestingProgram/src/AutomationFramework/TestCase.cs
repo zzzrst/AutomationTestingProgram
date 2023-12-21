@@ -9,6 +9,7 @@ namespace AutomationTestingProgram.AutomationFramework
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestSetFramework;
+    using static AutomationTestingProgram.InformationObject;
     using static AutomationTestSetFramework.IMethodBoundaryAspect;
 
     /// <summary>
@@ -79,25 +80,52 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             if (this.TestCaseStatus == null)
             {
+                var timeUTC = DateTime.UtcNow;
+                TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+                DateTime easternTime = TimeZoneInfo.ConvertTimeFromUtc(timeUTC, easternZone);
+
                 this.TestCaseStatus = new TestCaseStatus()
                 {
                     Name = this.Name,
-                    StartTime = DateTime.UtcNow,
+                    StartTime = easternTime,
                     TestCaseNumber = this.TestCaseNumber,
                 };
+
+                // later: fix for specifying db
+                // if (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower() == "excel")
+                InformationObject.Reporter.CreateAzureTestCase(this.Name, "This is a test description");
             }
         }
 
         /// <inheritdoc/>
         public bool ShouldExecute()
         {
-            return this.ShouldExecuteVariable;
+            // if block test set
+            if (InformationObject.BlockTestSet)
+            {
+                this.TestCaseStatus.RunSuccessful = false;
+                this.TestCaseStatus.Actual = "Blocked";
+                this.TestCaseStatus.Description = "Test Case Blocked";
+
+                ITestStepStatus testStepStatus = new TestStepStatus();
+                testStepStatus.RunSuccessful = false;
+
+                InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);
+
+                return false;
+            }
+
+            return this.ShouldExecuteVariable && InformationObject.ShouldExecute;
         }
 
         /// <inheritdoc/>
         public void TearDown()
         {
-            this.TestCaseStatus.EndTime = DateTime.UtcNow;
+            var timeUTC = DateTime.UtcNow;
+            TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            DateTime easternTime = TimeZoneInfo.ConvertTimeFromUtc(timeUTC, easternZone);
+
+            this.TestCaseStatus.EndTime = easternTime;
             if (!this.ShouldExecuteVariable)
             {
                 this.TestCaseStatus.Actual = "Did not run.";
@@ -117,16 +145,40 @@ namespace AutomationTestingProgram.AutomationFramework
                 if (!((TestStepStatus)testStepStatus).Optional)
                 {
                     this.TestCaseStatus.RunSuccessful = false;
-                    this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a test step";
+                    this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with a MANDATORY test step";
+                    Logger.Warn(this.TestCaseStatus.FriendlyErrorMessage);
+                    this.ShouldExecuteVariable = false;
+                }
+                else if (((TestStepStatus)testStepStatus).ContinueOnError)
+                {
+                    // optional and important
+                    this.TestCaseStatus.RunSuccessful = false;
+                    this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with an IMPORTANT test step";
+                    Logger.Warn(this.TestCaseStatus.FriendlyErrorMessage);
+                }
+                else
+                {
+                    // we won't affect the test case status if it's successful or not. Failed test case will remain failed, success will remain success
+                    // this.TestCaseStatus.RunSuccessful = true; // assume that run was successful
+
+                    this.TestCaseStatus.FriendlyErrorMessage = "Something went wrong with an OPTIONAL test step";
+                    Logger.Warn(this.TestCaseStatus.FriendlyErrorMessage);
                 }
             }
 
             if (testStepStatus.Actual != "No Log")
             {
-                InformationObject.CSVLogger.AddResults($"\"{testStepStatus.Name}\",\"{result}\"");
+                // here we can replace all the commas inside the test friendly error message
+                string errorMessage = testStepStatus.FriendlyErrorMessage.Replace(",", string.Empty);
+                string errorStack = testStepStatus.ErrorStack.Replace(",", string.Empty);
+
+                InformationObject.CSVLogger.AddResults($"{testStepStatus.Name}, {testStepStatus.Description}, {testStepStatus.Expected}, {testStepStatus.RunSuccessful}, {testStepStatus.TestStepNumber},{result}, {errorMessage}, {errorStack}");
             }
 
+            //if (bool.Parse(System.Configuration.ConfigurationManager.AppSettings["ReportToDevOps"]))
+            //{
             InformationObject.Reporter.AddTestStepStatusToTestCase(testStepStatus, this.TestCaseStatus);
+            //}
         }
 
         private double GetTotalElapsedTime(ITestStepStatus testStepStatus)
