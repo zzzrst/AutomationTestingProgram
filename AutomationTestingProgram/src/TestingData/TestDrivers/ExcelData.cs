@@ -5,8 +5,11 @@
 namespace AutomationTestingProgram.TestingData
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using AutomationTestSetFramework;
+    using NPOI.OpenXmlFormats.Spreadsheet;
     using NPOI.SS.UserModel;
     using NPOI.XSSF.UserModel;
     using TDAPIOLELib;
@@ -27,12 +30,15 @@ namespace AutomationTestingProgram.TestingData
             {
                 string[] argument = args.Split(";");
                 this.TestArgs = argument[0];
-                this.User = argument[1];
+
+                // this.User = argument[1];
             }
             catch (IndexOutOfRangeException)
             {
-                Logger.Info("One Argument Found, Will run all Test Cases in Excel (use ';" +
-                    " to add another argument");
+                Logger.Info("Not excel");
+
+                // Logger.Info("One Argument Found, Will run all Test Cases in Excel (use ';" +
+                //    " to add another argument");
             }
         }
 
@@ -42,6 +48,10 @@ namespace AutomationTestingProgram.TestingData
 
         /// <inheritdoc/>
         public string Name { get; } = "Excel";
+
+        public static int RowIndex { get; set; } = 1;
+
+        public static int TestCaseStartIndex { get; set; } = 1;
 
         /// <summary>
         /// Gets or sets the Excel File to read from.
@@ -53,6 +63,8 @@ namespace AutomationTestingProgram.TestingData
         /// </summary>
         protected ISheet TestSetSheet { get; set; }
 
+        //protected int ColIndex { get; set; }
+
         /// <summary>
         /// Gets or sets which user to check the Test Case against.
         /// </summary>
@@ -61,12 +73,38 @@ namespace AutomationTestingProgram.TestingData
         /// <inheritdoc/>
         public void SetUp()
         {
-            using (FileStream templateFS = new FileStream(this.TestArgs, FileMode.Open, FileAccess.Read))
+            try
             {
-                this.ExcelFile = new XSSFWorkbook(templateFS);
-            }
+                using (FileStream templateFS = new FileStream(this.TestArgs, FileMode.Open, FileAccess.Read))
+                {
+                    this.ExcelFile = new XSSFWorkbook(templateFS);
+                }
 
-            this.TestSetSheet = this.ExcelFile.GetSheetAt(0);
+                // move into the try block
+                this.TestSetSheet = this.ExcelFile.GetSheetAt(0);
+            }
+            catch (Exception)
+            {
+                Logger.Error("Excel file is currently in use. Please close. OR does not exist");
+                InformationObject.ShouldExecute = false; // set to false for should execute
+            }
         }
+
+        //public List<string> GetUniqueTestCases()
+        //{
+        //    HashSet<string> testCases = new HashSet<string>();
+
+        //    int rowId = 1;
+        //    ICell nextTestCase;
+        //    // keep on adding next test cases until null reached
+        //    while ((nextTestCase = this.TestSetSheet.GetRow(rowId).GetCell(ExcelCaseData.TESTCASENAME)) != null)
+        //    {
+        //        Console.WriteLine("Added test case: " + nextTestCase.ToString());
+        //        testCases.Add(nextTestCase.ToString());
+        //        rowId++;
+        //    }
+
+        //    return testCases.ToList();
+        //}
     }
 }

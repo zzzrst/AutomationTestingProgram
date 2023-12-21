@@ -7,8 +7,10 @@ namespace AutomationTestingProgram.TestingData
     using System;
     using System.Collections.Generic;
     using AutomationTestingProgram.AutomationFramework;
+    using AutomationTestingProgram.TestingData.TestDrivers;
     using AutomationTestSetFramework;
     using NPOI.SS.Formula.Atp;
+    using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
     /// The interface to get the test step data.
@@ -41,6 +43,54 @@ namespace AutomationTestingProgram.TestingData
         /// <param name="testStep">Test steps to get the arguments for.</param>
         public void SetArguments(TestStep testStep)
         {
+            // run for at most number of
+            // attempts, until test action passes
+            // update object and value by querying special characters
+            this.QueryObjectAndArguments(testStep);
         }
+
+        /// <summary>
+        /// If object identifier or arguments begin with special characters in ['!', '@', '##', '$$'], then
+        /// they are replaced by their respective value in the database.
+        /// </summary>
+        /// <param name="testStep">The Test step to query arguments.</param>.
+        public void QueryObjectAndArguments(TestStep testStep)
+        {
+            string environment = GetEnvironmentVariable(EnvVar.Environment);
+
+            /* Note that this might work? Was here before
+            if (testStep is ActionObject)
+            {
+                // query to update each of the test object's attribute value
+                foreach (string attribute in ((ActionObject)testStep).Attributes.Keys.ToList())
+                {
+                    if (((ActionObject)testStep).Attributes.TryGetValue(attribute, out string value))
+                    {
+                        string attribVal = value;
+                        string queried = this.QuerySpecialChars(environment, attribVal) as string;
+                        ((ActionObject)testStep).Attributes.Add(attribute, queried);
+                    }
+                }
+            }*/
+            Dictionary<string, string> arguments = new Dictionary<string, string>();
+
+            DatabaseStepData dbdata = new DatabaseStepData(environment);
+
+            Console.WriteLine("About to query for DB data");
+
+            // only update these variables if the control is not #
+            if (testStep.ShouldExecuteVariable == true)
+            {
+                // query to update each of the test action's values
+                foreach (string key in testStep.Arguments.Keys)
+                {
+                    arguments.Add(key, dbdata.QuerySpecialChars(environment, testStep.Arguments[key]) as string);
+                }
+                testStep.Arguments = arguments;
+            }
+
+            // this.SpecialCharFlag = false;
+        }
+
     }
 }
