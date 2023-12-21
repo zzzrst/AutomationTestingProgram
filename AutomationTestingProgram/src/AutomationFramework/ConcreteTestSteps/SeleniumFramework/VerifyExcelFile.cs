@@ -8,6 +8,8 @@ namespace AutomationTestingProgram.AutomationFramework
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
+    using AutomationTestinProgram.Helper;
     using NPOI.SS.UserModel;
     using NPOI.XSSF.UserModel;
 
@@ -27,8 +29,8 @@ namespace AutomationTestingProgram.AutomationFramework
             base.Execute();
 
             // get object identifier and arguments
-            string expectedFilePath = this.Arguments["object"];
-            string actualFilePath = this.Arguments["value"];
+            string expectedFilePath = FilePathResolver.Resolve(this.Arguments["object"]);
+            string actualFilePath = FilePathResolver.Resolve(this.Arguments["value"]);
             string comment = this.Arguments["comment"];
 
             // parse comment to get coordinates of bounding box
@@ -48,8 +50,10 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.Actual = passed ? "Both files were the same" : "There were differences!. Please find the result file on the desktop";
 
             // CR: Attach excel files that were compared. Attach resulting file if there were differences.
+
             InformationObject.TestSetData.AddAttachment(expectedFilePath);
             InformationObject.TestSetData.AddAttachment(actualFilePath);
+
             if (!passed)
             {
                 InformationObject.TestSetData.AddAttachment(this.resultFilePath);
@@ -73,7 +77,13 @@ namespace AutomationTestingProgram.AutomationFramework
 
             filePath = this.VerifyAndConvert(filePath);
             filePath2 = this.VerifyAndConvert(filePath2);
-            this.resultFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"//CompareExcelResult_{DateTime.Now:MM_dd_yyyy_hh_mm_ss_tt}.xlsx";
+
+            string logFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Log\\";
+
+            this.resultFilePath = logFolder + $"CompareExcelResult_{DateTime.Now:MM_dd_yyyy_hh_mm_ss_tt}.xlsx";
+
+            Logger.Info("Result file path is: " + this.resultFilePath);
+
 
             using (FileStream expectedFS = new FileStream(filePath, FileMode.Open, FileAccess.Read))
             {
@@ -180,8 +190,8 @@ namespace AutomationTestingProgram.AutomationFramework
                 throw new Exception($"File {filePath} was not found.");
             }
 
-            // Convert if provided file has .csv extension.
-            if (Path.GetExtension(filePath) == ".csv")
+            // Convert if provided file has .csv extension. (added .CSV due to some errors with some test cases)
+            if (Path.GetExtension(filePath) == ".csv" || Path.GetExtension(filePath) == ".CSV")
             {
                 string excelFilePath = Path.GetDirectoryName(filePath) + "\\" + Path.GetFileNameWithoutExtension(filePath) + ".xlsx";
                 this.ConvertCSVtoXLSX(excelFilePath, filePath);
