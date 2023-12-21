@@ -5,6 +5,7 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
+    using System.Data.Common;
     using AutomationTestingProgram.TestingData.TestDrivers;
     using static AutomationTestingProgram.InformationObject;
 
@@ -25,8 +26,10 @@ namespace AutomationTestingProgram.AutomationFramework
             string toCheckQuery = this.Arguments["value"];
 
             // query values from database
-            string dbObject = ((DatabaseStepData)TestStepData).QuerySpecialChars(environment, expectedQuery).ToString();
-            string dbValue = ((DatabaseStepData)TestStepData).QuerySpecialChars(environment, toCheckQuery).ToString();
+            DatabaseStepData dbdata = new DatabaseStepData("");
+
+            string dbObject = dbdata.QuerySpecialChars(environment, expectedQuery).ToString();
+            string dbValue = dbdata.QuerySpecialChars(environment, toCheckQuery).ToString();
 
             // check if both values are equal
             this.TestStepStatus.Actual = (this.TestStepStatus.RunSuccessful = dbValue == dbObject)
