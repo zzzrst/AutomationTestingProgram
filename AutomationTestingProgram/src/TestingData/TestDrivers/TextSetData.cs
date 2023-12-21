@@ -48,5 +48,21 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public void SetUpTestSet()
         {
         }
+
+        /// <summary>
+        /// Adds AODA Report log.
+        /// </summary>
+        /// <param name="attachment">the attachment to attach.</param>
+        public void AddAODAReport(string attachment)
+        {
+        }
+
+        /// <summary>
+        /// Adds error screenshot log.
+        /// </summary>
+        /// <param name="attachment">the attachment to attach.</param>
+        public void AddErrorScreenshot(string attachment)
+        {
+        }
     }
 }
