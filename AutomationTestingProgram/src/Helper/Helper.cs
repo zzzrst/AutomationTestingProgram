@@ -165,7 +165,14 @@ namespace AutomationTestingProgram.Helper
                     using (var cs = new CryptoStream(ms, aES.CreateDecryptor(), CryptoStreamMode.Write))
                     {
                         cs.Write(bytesToBeDecrypted, 0, bytesToBeDecrypted.Length);
-                        cs.Close();
+                        try
+                        {
+                            cs.Close();
+                        }
+                        catch
+                        {
+                            Logger.Info("Error with helper function AES Decrypt");
+                        }
                     }
 
                     decryptedBytes = ms.ToArray();
