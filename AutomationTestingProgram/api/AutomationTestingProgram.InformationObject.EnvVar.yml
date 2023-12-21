@@ -1,0 +1,958 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.InformationObject.EnvVar
+  commentId: T:AutomationTestingProgram.InformationObject.EnvVar
+  id: InformationObject.EnvVar
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  - AutomationTestingProgram.InformationObject.EnvVar.AzurePAT
+  - AutomationTestingProgram.InformationObject.EnvVar.Browser
+  - AutomationTestingProgram.InformationObject.EnvVar.BuildNumber
+  - AutomationTestingProgram.InformationObject.EnvVar.CsvSaveFileLocation
+  - AutomationTestingProgram.InformationObject.EnvVar.DataFile
+  - AutomationTestingProgram.InformationObject.EnvVar.Environment
+  - AutomationTestingProgram.InformationObject.EnvVar.ErrorContainer
+  - AutomationTestingProgram.InformationObject.EnvVar.LoadingSpinner
+  - AutomationTestingProgram.InformationObject.EnvVar.LogSaveFileLocation
+  - AutomationTestingProgram.InformationObject.EnvVar.MaxFailures
+  - AutomationTestingProgram.InformationObject.EnvVar.ReportSaveFileLocation
+  - AutomationTestingProgram.InformationObject.EnvVar.RespectRepeatFor
+  - AutomationTestingProgram.InformationObject.EnvVar.RespectRunAODAFlag
+  - AutomationTestingProgram.InformationObject.EnvVar.ScreenshotSaveLocation
+  - AutomationTestingProgram.InformationObject.EnvVar.SecretInformation
+  - AutomationTestingProgram.InformationObject.EnvVar.TestAutomationDriver
+  - AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataArgs
+  - AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataType
+  - AutomationTestingProgram.InformationObject.EnvVar.TestSetDataArgs
+  - AutomationTestingProgram.InformationObject.EnvVar.TestSetDataType
+  - AutomationTestingProgram.InformationObject.EnvVar.TestStepDataArgs
+  - AutomationTestingProgram.InformationObject.EnvVar.TestStepDataType
+  - AutomationTestingProgram.InformationObject.EnvVar.TimeOutThreshold
+  - AutomationTestingProgram.InformationObject.EnvVar.URL
+  - AutomationTestingProgram.InformationObject.EnvVar.WarningThreshold
+  langs:
+  - csharp
+  - vb
+  name: InformationObject.EnvVar
+  nameWithType: InformationObject.EnvVar
+  fullName: AutomationTestingProgram.InformationObject.EnvVar
+  type: Enum
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: EnvVar
+    path: src/InformationObject.cs
+    startLine: 28
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nEnviornement variables used by the program.\n"
+  example: []
+  syntax:
+    content: public enum EnvVar
+    content.vb: Public Enum EnvVar
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  id: Attempts
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: Attempts
+  nameWithType: InformationObject.EnvVar.Attempts
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.Attempts
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Attempts
+    path: src/InformationObject.cs
+    startLine: 33
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe attempts to try before timing out.\n"
+  example: []
+  syntax:
+    content: Attempts = 0
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.Browser
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.Browser
+  id: Browser
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: Browser
+  nameWithType: InformationObject.EnvVar.Browser
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.Browser
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Browser
+    path: src/InformationObject.cs
+    startLine: 39
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe Browser To use.\nbrowser type.\n"
+  example: []
+  syntax:
+    content: Browser = 1
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.Environment
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.Environment
+  id: Environment
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: Environment
+  nameWithType: InformationObject.EnvVar.Environment
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.Environment
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Environment
+    path: src/InformationObject.cs
+    startLine: 45
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe Environment you are running the test in.\nstring.\n"
+  example: []
+  syntax:
+    content: Environment = 2
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.URL
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.URL
+  id: URL
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: URL
+  nameWithType: InformationObject.EnvVar.URL
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.URL
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: URL
+    path: src/InformationObject.cs
+    startLine: 51
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nURL For the test website.\nstring.\n"
+  example: []
+  syntax:
+    content: URL = 3
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.RespectRepeatFor
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.RespectRepeatFor
+  id: RespectRepeatFor
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: RespectRepeatFor
+  nameWithType: InformationObject.EnvVar.RespectRepeatFor
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.RespectRepeatFor
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RespectRepeatFor
+    path: src/InformationObject.cs
+    startLine: 57
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nWhether or not the program should respect repeat for flags.\nbool.\n"
+  example: []
+  syntax:
+    content: RespectRepeatFor = 4
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.RespectRunAODAFlag
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.RespectRunAODAFlag
+  id: RespectRunAODAFlag
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: RespectRunAODAFlag
+  nameWithType: InformationObject.EnvVar.RespectRunAODAFlag
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.RespectRunAODAFlag
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RespectRunAODAFlag
+    path: src/InformationObject.cs
+    startLine: 63
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nWether or not the program should respect AODA flags.\nbool.\n"
+  example: []
+  syntax:
+    content: RespectRunAODAFlag = 5
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.BuildNumber
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.BuildNumber
+  id: BuildNumber
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: BuildNumber
+  nameWithType: InformationObject.EnvVar.BuildNumber
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.BuildNumber
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: BuildNumber
+    path: src/InformationObject.cs
+    startLine: 69
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nBuild Number of the run.\nstring.\n"
+  example: []
+  syntax:
+    content: BuildNumber = 6
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TimeOutThreshold
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TimeOutThreshold
+  id: TimeOutThreshold
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TimeOutThreshold
+  nameWithType: InformationObject.EnvVar.TimeOutThreshold
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TimeOutThreshold
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TimeOutThreshold
+    path: src/InformationObject.cs
+    startLine: 75
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nTime out threshold.\nint.\n"
+  example: []
+  syntax:
+    content: TimeOutThreshold = 7
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.WarningThreshold
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.WarningThreshold
+  id: WarningThreshold
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: WarningThreshold
+  nameWithType: InformationObject.EnvVar.WarningThreshold
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.WarningThreshold
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: WarningThreshold
+    path: src/InformationObject.cs
+    startLine: 81
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nWarning Threshold.\nint.\n"
+  example: []
+  syntax:
+    content: WarningThreshold = 8
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.DataFile
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.DataFile
+  id: DataFile
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: DataFile
+  nameWithType: InformationObject.EnvVar.DataFile
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.DataFile
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: DataFile
+    path: src/InformationObject.cs
+    startLine: 87
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLocation of the data file.\nstring.\n"
+  example: []
+  syntax:
+    content: DataFile = 9
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.CsvSaveFileLocation
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.CsvSaveFileLocation
+  id: CsvSaveFileLocation
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: CsvSaveFileLocation
+  nameWithType: InformationObject.EnvVar.CsvSaveFileLocation
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.CsvSaveFileLocation
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: CsvSaveFileLocation
+    path: src/InformationObject.cs
+    startLine: 93
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLocation to save the csv file.\nstring.\n"
+  example: []
+  syntax:
+    content: CsvSaveFileLocation = 10
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.LogSaveFileLocation
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.LogSaveFileLocation
+  id: LogSaveFileLocation
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: LogSaveFileLocation
+  nameWithType: InformationObject.EnvVar.LogSaveFileLocation
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.LogSaveFileLocation
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: LogSaveFileLocation
+    path: src/InformationObject.cs
+    startLine: 99
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLocation to save the log.\nstring,\n"
+  example: []
+  syntax:
+    content: LogSaveFileLocation = 11
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.ReportSaveFileLocation
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.ReportSaveFileLocation
+  id: ReportSaveFileLocation
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: ReportSaveFileLocation
+  nameWithType: InformationObject.EnvVar.ReportSaveFileLocation
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.ReportSaveFileLocation
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ReportSaveFileLocation
+    path: src/InformationObject.cs
+    startLine: 105
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLocation to save the report.\nstring.\n"
+  example: []
+  syntax:
+    content: ReportSaveFileLocation = 12
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.ScreenshotSaveLocation
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.ScreenshotSaveLocation
+  id: ScreenshotSaveLocation
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: ScreenshotSaveLocation
+  nameWithType: InformationObject.EnvVar.ScreenshotSaveLocation
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.ScreenshotSaveLocation
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ScreenshotSaveLocation
+    path: src/InformationObject.cs
+    startLine: 111
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLocation to save the screenshot.\nstring.\n"
+  example: []
+  syntax:
+    content: ScreenshotSaveLocation = 13
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TestAutomationDriver
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TestAutomationDriver
+  id: TestAutomationDriver
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TestAutomationDriver
+  nameWithType: InformationObject.EnvVar.TestAutomationDriver
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TestAutomationDriver
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestAutomationDriver
+    path: src/InformationObject.cs
+    startLine: 116
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nWhat type of automation driver to use.\n"
+  example: []
+  syntax:
+    content: TestAutomationDriver = 14
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TestSetDataType
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TestSetDataType
+  id: TestSetDataType
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TestSetDataType
+  nameWithType: InformationObject.EnvVar.TestSetDataType
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TestSetDataType
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetDataType
+    path: src/InformationObject.cs
+    startLine: 121
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe test set data file type.\n"
+  example: []
+  syntax:
+    content: TestSetDataType = 15
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataType
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataType
+  id: TestCaseDataType
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TestCaseDataType
+  nameWithType: InformationObject.EnvVar.TestCaseDataType
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataType
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestCaseDataType
+    path: src/InformationObject.cs
+    startLine: 126
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe test case data file type.\n"
+  example: []
+  syntax:
+    content: TestCaseDataType = 16
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TestStepDataType
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TestStepDataType
+  id: TestStepDataType
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TestStepDataType
+  nameWithType: InformationObject.EnvVar.TestStepDataType
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TestStepDataType
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestStepDataType
+    path: src/InformationObject.cs
+    startLine: 131
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe test step data file type.\n"
+  example: []
+  syntax:
+    content: TestStepDataType = 17
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TestSetDataArgs
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TestSetDataArgs
+  id: TestSetDataArgs
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TestSetDataArgs
+  nameWithType: InformationObject.EnvVar.TestSetDataArgs
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TestSetDataArgs
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetDataArgs
+    path: src/InformationObject.cs
+    startLine: 136
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nTest Set args, usualy the location of the data file.\n"
+  example: []
+  syntax:
+    content: TestSetDataArgs = 18
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataArgs
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataArgs
+  id: TestCaseDataArgs
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TestCaseDataArgs
+  nameWithType: InformationObject.EnvVar.TestCaseDataArgs
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TestCaseDataArgs
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestCaseDataArgs
+    path: src/InformationObject.cs
+    startLine: 141
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nTest Case args, usualy the location of the data file.\n"
+  example: []
+  syntax:
+    content: TestCaseDataArgs = 19
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.TestStepDataArgs
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.TestStepDataArgs
+  id: TestStepDataArgs
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: TestStepDataArgs
+  nameWithType: InformationObject.EnvVar.TestStepDataArgs
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.TestStepDataArgs
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestStepDataArgs
+    path: src/InformationObject.cs
+    startLine: 146
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nTest Step args, usualy the location of the data file.\n"
+  example: []
+  syntax:
+    content: TestStepDataArgs = 20
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.LoadingSpinner
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.LoadingSpinner
+  id: LoadingSpinner
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: LoadingSpinner
+  nameWithType: InformationObject.EnvVar.LoadingSpinner
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.LoadingSpinner
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: LoadingSpinner
+    path: src/InformationObject.cs
+    startLine: 151
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLoading spinner.\n"
+  example: []
+  syntax:
+    content: LoadingSpinner = 21
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.ErrorContainer
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.ErrorContainer
+  id: ErrorContainer
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: ErrorContainer
+  nameWithType: InformationObject.EnvVar.ErrorContainer
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.ErrorContainer
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ErrorContainer
+    path: src/InformationObject.cs
+    startLine: 156
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nError Container.\n"
+  example: []
+  syntax:
+    content: ErrorContainer = 22
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.AzurePAT
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.AzurePAT
+  id: AzurePAT
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: AzurePAT
+  nameWithType: InformationObject.EnvVar.AzurePAT
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.AzurePAT
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AzurePAT
+    path: src/InformationObject.cs
+    startLine: 161
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nPAT for the Azure DvvOps exeuction.\n"
+  example: []
+  syntax:
+    content: AzurePAT = 23
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.SecretInformation
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.SecretInformation
+  id: SecretInformation
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: SecretInformation
+  nameWithType: InformationObject.EnvVar.SecretInformation
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.SecretInformation
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SecretInformation
+    path: src/InformationObject.cs
+    startLine: 166
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nSecrets from the pipeline execution on DevOps.\n"
+  example: []
+  syntax:
+    content: SecretInformation = 24
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.InformationObject.EnvVar.MaxFailures
+  commentId: F:AutomationTestingProgram.InformationObject.EnvVar.MaxFailures
+  id: MaxFailures
+  parent: AutomationTestingProgram.InformationObject.EnvVar
+  langs:
+  - csharp
+  - vb
+  name: MaxFailures
+  nameWithType: InformationObject.EnvVar.MaxFailures
+  fullName: AutomationTestingProgram.InformationObject.EnvVar.MaxFailures
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: MaxFailures
+    path: src/InformationObject.cs
+    startLine: 171
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nMaximum failures before entire execution fails.\n"
+  example: []
+  syntax:
+    content: MaxFailures = 25
+    return:
+      type: AutomationTestingProgram.InformationObject.EnvVar
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: AutomationTestingProgram.InformationObject.EnvVar
+  commentId: T:AutomationTestingProgram.InformationObject.EnvVar
+  parent: AutomationTestingProgram
+  name: InformationObject.EnvVar
+  nameWithType: InformationObject.EnvVar
+  fullName: AutomationTestingProgram.InformationObject.EnvVar

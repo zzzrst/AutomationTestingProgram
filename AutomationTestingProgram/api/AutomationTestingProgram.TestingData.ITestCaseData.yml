@@ -1,0 +1,252 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData.ITestCaseData
+  commentId: T:AutomationTestingProgram.TestingData.ITestCaseData
+  id: ITestCaseData
+  parent: AutomationTestingProgram.TestingData
+  children:
+  - AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep
+  - AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep
+  - AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase(System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: ITestCaseData
+  nameWithType: ITestCaseData
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData
+  type: Interface
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestCaseData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ITestCaseData
+    path: src/TestingData/ITestCaseData.cs
+    startLine: 11
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nThe interface to get the test case data.\n"
+  example: []
+  syntax:
+    content: 'public interface ITestCaseData : ITestData'
+    content.vb: >-
+      Public Interface ITestCaseData
+          Inherits ITestData
+  inheritedMembers:
+  - AutomationTestingProgram.TestingData.ITestData.TestArgs
+  - AutomationTestingProgram.TestingData.ITestData.Name
+  - AutomationTestingProgram.TestingData.ITestData.SetUp
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep
+  commentId: M:AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep
+  id: GetNextTestStep
+  parent: AutomationTestingProgram.TestingData.ITestCaseData
+  langs:
+  - csharp
+  - vb
+  name: GetNextTestStep()
+  nameWithType: ITestCaseData.GetNextTestStep()
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestCaseData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetNextTestStep
+    path: src/TestingData/ITestCaseData.cs
+    startLine: 17
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nGets the next Test Step.\n"
+  example: []
+  syntax:
+    content: ITestStep GetNextTestStep()
+    return:
+      type: AutomationTestSetFramework.ITestStep
+      description: The next Test Step.
+    content.vb: Function GetNextTestStep As ITestStep
+  overload: AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep*
+- uid: AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep
+  commentId: M:AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep
+  id: ExistNextTestStep
+  parent: AutomationTestingProgram.TestingData.ITestCaseData
+  langs:
+  - csharp
+  - vb
+  name: ExistNextTestStep()
+  nameWithType: ITestCaseData.ExistNextTestStep()
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestCaseData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ExistNextTestStep
+    path: src/TestingData/ITestCaseData.cs
+    startLine: 23
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nSees if there is a next test step. Usually needs to call the InformationObject.TestStepData.SetUpTestSet.\n"
+  example: []
+  syntax:
+    content: bool ExistNextTestStep()
+    return:
+      type: System.Boolean
+      description: Returns true if there is another test Step.
+    content.vb: Function ExistNextTestStep As Boolean
+  overload: AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep*
+- uid: AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase(System.String,System.Boolean)
+  commentId: M:AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase(System.String,System.Boolean)
+  id: SetUpTestCase(System.String,System.Boolean)
+  parent: AutomationTestingProgram.TestingData.ITestCaseData
+  langs:
+  - csharp
+  - vb
+  name: SetUpTestCase(String, Boolean)
+  nameWithType: ITestCaseData.SetUpTestCase(String, Boolean)
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestCaseData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetUpTestCase
+    path: src/TestingData/ITestCaseData.cs
+    startLine: 31
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nSet up and returns the new test case.\n"
+  example: []
+  syntax:
+    content: ITestCase SetUpTestCase(string testCaseName, bool performAction = true)
+    parameters:
+    - id: testCaseName
+      type: System.String
+      description: The name of the test case.
+    - id: performAction
+      type: System.Boolean
+      description: Determins if the test case should run.
+    return:
+      type: AutomationTestSetFramework.ITestCase
+      description: The test Case to run.
+    content.vb: Function SetUpTestCase(testCaseName As String, performAction As Boolean = True) As ITestCase
+  overload: AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase*
+references:
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: TestArgs
+  nameWithType: ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+- uid: AutomationTestingProgram.TestingData.ITestData.Name
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.Name
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: Name
+  nameWithType: ITestData.Name
+  fullName: AutomationTestingProgram.TestingData.ITestData.Name
+- uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.ITestData.SetUp
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: SetUp()
+  nameWithType: ITestData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.ITestData.SetUp()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+- uid: AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep
+  name: GetNextTestStep
+  nameWithType: ITestCaseData.GetNextTestStep
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData.GetNextTestStep
+- uid: AutomationTestSetFramework.ITestStep
+  commentId: T:AutomationTestSetFramework.ITestStep
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStep
+  nameWithType: ITestStep
+  fullName: AutomationTestSetFramework.ITestStep
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep
+  name: ExistNextTestStep
+  nameWithType: ITestCaseData.ExistNextTestStep
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData.ExistNextTestStep
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase
+  name: SetUpTestCase
+  nameWithType: ITestCaseData.SetUpTestCase
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData.SetUpTestCase
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestSetFramework.ITestCase
+  commentId: T:AutomationTestSetFramework.ITestCase
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestCase
+  nameWithType: ITestCase
+  fullName: AutomationTestSetFramework.ITestCase

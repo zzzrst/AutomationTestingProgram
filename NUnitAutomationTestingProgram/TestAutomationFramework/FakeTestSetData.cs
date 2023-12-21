@@ -12,8 +12,18 @@ namespace NUnitAutomationTestingProgram.TestAutomationFramework
         public string TestArgs { get; set; }
         public string Name { get; } = "FakeTestSetData";
 
+        public void AddAODAReport(string attachment)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddAttachment(string attachment)
         {
+        }
+
+        public void AddErrorScreenshot(string attachment)
+        {
+            throw new NotImplementedException();
         }
 
         public bool ExistNextTestCase()

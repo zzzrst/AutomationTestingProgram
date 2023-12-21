@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  commentId: N:AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  id: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  children:
+  - AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  nameWithType: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  fullName: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert
+  commentId: T:AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert
+  name: AcceptAlert
+  nameWithType: AcceptAlert
+  fullName: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert

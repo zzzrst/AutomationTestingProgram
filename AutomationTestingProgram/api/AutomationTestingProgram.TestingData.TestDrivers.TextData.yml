@@ -1,0 +1,748 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.TextData
+  id: TextData
+  parent: AutomationTestingProgram.TestingData.TestDrivers
+  children:
+  - AutomationTestingProgram.TestingData.TestDrivers.TextData.#ctor(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.TextData.Name
+  - AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp
+  - AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs
+  - AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr
+  - AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex
+  - AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile
+  langs:
+  - csharp
+  - vb
+  name: TextData
+  nameWithType: TextData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TextData
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 15
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nThe base class for Text data.\n"
+  example: []
+  syntax:
+    content: 'public class TextData : ITestData'
+    content.vb: >-
+      Public Class TextData
+          Implements ITestData
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - AutomationTestingProgram.TestingData.TestDrivers.TextSetData
+  implements:
+  - AutomationTestingProgram.TestingData.ITestData
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.#ctor(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.TextData.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  langs:
+  - csharp
+  - vb
+  name: TextData(String)
+  nameWithType: TextData.TextData(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TextData(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 21
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nInitializes a new instance of the <xref href=\"AutomationTestingProgram.TestingData.TestDrivers.TextData\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TextData(string txtFileLocation)
+    parameters:
+    - id: txtFileLocation
+      type: System.String
+      description: the location of the xml.
+    content.vb: Public Sub New(txtFileLocation As String)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.TextData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.Name
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextData.Name
+  id: Name
+  parent: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TextData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.Name
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Name
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 27
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets the name to be found by the reflective getter.\n"
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.TextData.Name*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestData.Name
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs
+  id: TestArgs
+  parent: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  langs:
+  - csharp
+  - vb
+  name: TestArgs
+  nameWithType: TextData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestArgs
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 30
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets or sets the arguments for the test data. Often the file location.\nYou need to create a constructor that passes in a string/\nThis is where you get the test args.\n"
+  example: []
+  syntax:
+    content: public string TestArgs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TestArgs As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestData.TestArgs
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile
+  id: TextFile
+  parent: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  langs:
+  - csharp
+  - vb
+  name: TextFile
+  nameWithType: TextData.TextFile
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TextFile
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 35
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets or sets text in file location provided by TestArgs.\n"
+  example: []
+  syntax:
+    content: protected string TextFile { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Protected Property TextFile As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile*
+  modifiers.csharp:
+  - protected
+  - get
+  - set
+  modifiers.vb:
+  - Protected
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr
+  id: TestArr
+  parent: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  langs:
+  - csharp
+  - vb
+  name: TestArr
+  nameWithType: TextData.TestArr
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestArr
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 40
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets or sets test cases in a string array.\n"
+  example: []
+  syntax:
+    content: protected string[] TestArr { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Protected Property TestArr As String()
+  overload: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr*
+  modifiers.csharp:
+  - protected
+  - get
+  - set
+  modifiers.vb:
+  - Protected
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex
+  id: TestArrIndex
+  parent: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  langs:
+  - csharp
+  - vb
+  name: TestArrIndex
+  nameWithType: TextData.TestArrIndex
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestArrIndex
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 45
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets or Sets positon in TestCaseArr.\n"
+  example: []
+  syntax:
+    content: protected int TestArrIndex { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected Property TestArrIndex As Integer
+  overload: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex*
+  modifiers.csharp:
+  - protected
+  - get
+  - set
+  modifiers.vb:
+  - Protected
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp
+  id: SetUp
+  parent: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  langs:
+  - csharp
+  - vb
+  name: SetUp()
+  nameWithType: TextData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetUp
+    path: src/TestingData/TestDrivers/TextData.cs
+    startLine: 48
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nSince The constructor is called through reflective getter,\nany errors during the constructor caused by wrong arguments,\nwill cause the program to crash. Run here instead,\nAs this guarnetees that the right test set/case/step is ran.\n"
+  example: []
+  syntax:
+    content: public void SetUp()
+    content.vb: Public Sub SetUp
+  overload: AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestData.SetUp
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram.TestingData.TestDrivers
+  commentId: N:AutomationTestingProgram.TestingData.TestDrivers
+  name: AutomationTestingProgram.TestingData.TestDrivers
+  nameWithType: AutomationTestingProgram.TestingData.TestDrivers
+  fullName: AutomationTestingProgram.TestingData.TestDrivers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.TextData
+  parent: AutomationTestingProgram.TestingData.TestDrivers
+  name: TextData
+  nameWithType: TextData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.#ctor*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextData.#ctor
+  name: TextData
+  nameWithType: TextData.TextData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TextData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.Name*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextData.Name
+  name: Name
+  nameWithType: TextData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.Name
+- uid: AutomationTestingProgram.TestingData.ITestData.Name
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.Name
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: Name
+  nameWithType: ITestData.Name
+  fullName: AutomationTestingProgram.TestingData.ITestData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs
+  name: TestArgs
+  nameWithType: TextData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArgs
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: TestArgs
+  nameWithType: ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile
+  name: TextFile
+  nameWithType: TextData.TextFile
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TextFile
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr
+  name: TestArr
+  nameWithType: TextData.TestArr
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArr
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex
+  name: TestArrIndex
+  nameWithType: TextData.TestArrIndex
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.TestArrIndex
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp
+  name: SetUp
+  nameWithType: TextData.SetUp
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.TextData.SetUp
+- uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.ITestData.SetUp
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: SetUp()
+  nameWithType: ITestData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.ITestData.SetUp()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

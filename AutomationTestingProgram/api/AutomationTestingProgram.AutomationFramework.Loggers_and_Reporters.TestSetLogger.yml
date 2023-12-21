@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  id: TestSetLogger
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  children:
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation
+  langs:
+  - csharp
+  - vb
+  name: TestSetLogger
+  nameWithType: TestSetLogger
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/TestSetLogger.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetLogger
+    path: src/AutomationFramework/Loggers_and_Reporters/TestSetLogger.cs
+    startLine: 12
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  summary: "\nThe Implemntation of the TestSetLogger.\n"
+  example: []
+  syntax:
+    content: 'public class TestSetLogger : ITestSetLogger'
+    content.vb: >-
+      Public Class TestSetLogger
+          Implements ITestSetLogger
+  inheritance:
+  - System.Object
+  implements:
+  - AutomationTestSetFramework.ITestSetLogger
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation
+  commentId: P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation
+  id: SaveFileLocation
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  langs:
+  - csharp
+  - vb
+  name: SaveFileLocation
+  nameWithType: TestSetLogger.SaveFileLocation
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/TestSetLogger.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SaveFileLocation
+    path: src/AutomationFramework/Loggers_and_Reporters/TestSetLogger.cs
+    startLine: 17
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  summary: "\nGets or sets the location to save the log to.\n"
+  example: []
+  syntax:
+    content: public string SaveFileLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SaveFileLocation As String
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  id: Log(AutomationTestSetFramework.ITestSet)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  langs:
+  - csharp
+  - vb
+  name: Log(ITestSet)
+  nameWithType: TestSetLogger.Log(ITestSet)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/TestSetLogger.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Log
+    path: src/AutomationFramework/Loggers_and_Reporters/TestSetLogger.cs
+    startLine: 20
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  example: []
+  syntax:
+    content: public void Log(ITestSet testSet)
+    parameters:
+    - id: testSet
+      type: AutomationTestSetFramework.ITestSet
+    content.vb: Public Sub Log(testSet As ITestSet)
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log*
+  implements:
+  - AutomationTestSetFramework.ITestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  commentId: N:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  nameWithType: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AutomationTestSetFramework.ITestSetLogger
+  commentId: T:AutomationTestSetFramework.ITestSetLogger
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestSetLogger
+  nameWithType: ITestSetLogger
+  fullName: AutomationTestSetFramework.ITestSetLogger
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation
+  name: SaveFileLocation
+  nameWithType: TestSetLogger.SaveFileLocation
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.SaveFileLocation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log
+  name: Log
+  nameWithType: TestSetLogger.Log
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger.Log
+- uid: AutomationTestSetFramework.ITestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  commentId: M:AutomationTestSetFramework.ITestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  parent: AutomationTestSetFramework.ITestSetLogger
+  isExternal: true
+  name: Log(ITestSet)
+  nameWithType: ITestSetLogger.Log(ITestSet)
+  fullName: AutomationTestSetFramework.ITestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+  spec.csharp:
+  - uid: AutomationTestSetFramework.ITestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+    name: Log
+    nameWithType: ITestSetLogger.Log
+    fullName: AutomationTestSetFramework.ITestSetLogger.Log
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestSet
+    name: ITestSet
+    nameWithType: ITestSet
+    fullName: AutomationTestSetFramework.ITestSet
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestSetFramework.ITestSetLogger.Log(AutomationTestSetFramework.ITestSet)
+    name: Log
+    nameWithType: ITestSetLogger.Log
+    fullName: AutomationTestSetFramework.ITestSetLogger.Log
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestSet
+    name: ITestSet
+    nameWithType: ITestSet
+    fullName: AutomationTestSetFramework.ITestSet
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestSetFramework.ITestSet
+  commentId: T:AutomationTestSetFramework.ITestSet
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestSet
+  nameWithType: ITestSet
+  fullName: AutomationTestSetFramework.ITestSet

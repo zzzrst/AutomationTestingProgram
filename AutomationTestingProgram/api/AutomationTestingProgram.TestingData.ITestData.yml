@@ -1,0 +1,170 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  id: ITestData
+  parent: AutomationTestingProgram.TestingData
+  children:
+  - AutomationTestingProgram.TestingData.ITestData.Name
+  - AutomationTestingProgram.TestingData.ITestData.SetUp
+  - AutomationTestingProgram.TestingData.ITestData.TestArgs
+  langs:
+  - csharp
+  - vb
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+  type: Interface
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ITestData
+    path: src/TestingData/ITestData.cs
+    startLine: 9
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nThe interface to get the test case data.\n"
+  example: []
+  syntax:
+    content: public interface ITestData
+    content.vb: Public Interface ITestData
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  id: TestArgs
+  parent: AutomationTestingProgram.TestingData.ITestData
+  langs:
+  - csharp
+  - vb
+  name: TestArgs
+  nameWithType: ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestArgs
+    path: src/TestingData/ITestData.cs
+    startLine: 16
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nGets or sets the arguments for the test data. Often the file location.\nYou need to create a constructor that passes in a string/\nThis is where you get the test args.\n"
+  example: []
+  syntax:
+    content: string TestArgs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property TestArgs As String
+  overload: AutomationTestingProgram.TestingData.ITestData.TestArgs*
+  modifiers.csharp:
+  - get
+  - set
+- uid: AutomationTestingProgram.TestingData.ITestData.Name
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.Name
+  id: Name
+  parent: AutomationTestingProgram.TestingData.ITestData
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ITestData.Name
+  fullName: AutomationTestingProgram.TestingData.ITestData.Name
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Name
+    path: src/TestingData/ITestData.cs
+    startLine: 21
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nGets the name to be found by the reflective getter.\n"
+  example: []
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: AutomationTestingProgram.TestingData.ITestData.Name*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.ITestData.SetUp
+  id: SetUp
+  parent: AutomationTestingProgram.TestingData.ITestData
+  langs:
+  - csharp
+  - vb
+  name: SetUp()
+  nameWithType: ITestData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.ITestData.SetUp()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetUp
+    path: src/TestingData/ITestData.cs
+    startLine: 29
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nSince The constructor is called through reflective getter,\nany errors during the constructor caused by wrong arguments,\nwill cause the program to crash. Run here instead,\nAs this guarnetees that the right test set/case/step is ran.\n"
+  example: []
+  syntax:
+    content: void SetUp()
+    content.vb: Sub SetUp
+  overload: AutomationTestingProgram.TestingData.ITestData.SetUp*
+references:
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  name: TestArgs
+  nameWithType: ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.TestingData.ITestData.Name*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestData.Name
+  name: Name
+  nameWithType: ITestData.Name
+  fullName: AutomationTestingProgram.TestingData.ITestData.Name
+- uid: AutomationTestingProgram.TestingData.ITestData.SetUp*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestData.SetUp
+  name: SetUp
+  nameWithType: ITestData.SetUp
+  fullName: AutomationTestingProgram.TestingData.ITestData.SetUp

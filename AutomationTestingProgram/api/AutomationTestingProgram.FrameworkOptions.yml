@@ -1,0 +1,2620 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.FrameworkOptions
+  commentId: T:AutomationTestingProgram.FrameworkOptions
+  id: FrameworkOptions
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.FrameworkOptions.AppConfigOverrides
+  - AutomationTestingProgram.FrameworkOptions.AutomationProgram
+  - AutomationTestingProgram.FrameworkOptions.AzurePAT
+  - AutomationTestingProgram.FrameworkOptions.Browser
+  - AutomationTestingProgram.FrameworkOptions.BuildNumber
+  - AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation
+  - AutomationTestingProgram.FrameworkOptions.DataFile
+  - AutomationTestingProgram.FrameworkOptions.Environment
+  - AutomationTestingProgram.FrameworkOptions.Examples
+  - AutomationTestingProgram.FrameworkOptions.ExecutionURL
+  - AutomationTestingProgram.FrameworkOptions.LogSaveLocation
+  - AutomationTestingProgram.FrameworkOptions.MaxFailures
+  - AutomationTestingProgram.FrameworkOptions.NotifyList
+  - AutomationTestingProgram.FrameworkOptions.ProjectName
+  - AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri
+  - AutomationTestingProgram.FrameworkOptions.ReportSaveLocation
+  - AutomationTestingProgram.FrameworkOptions.RespectRepeatFor
+  - AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag
+  - AutomationTestingProgram.FrameworkOptions.RunParameters
+  - AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation
+  - AutomationTestingProgram.FrameworkOptions.SecretInformation
+  - AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs
+  - AutomationTestingProgram.FrameworkOptions.TestCaseDataType
+  - AutomationTestingProgram.FrameworkOptions.TesterContact
+  - AutomationTestingProgram.FrameworkOptions.TesterName
+  - AutomationTestingProgram.FrameworkOptions.TestPlanName
+  - AutomationTestingProgram.FrameworkOptions.TestPlanStructure
+  - AutomationTestingProgram.FrameworkOptions.TestSetDataArgs
+  - AutomationTestingProgram.FrameworkOptions.TestSetDataType
+  - AutomationTestingProgram.FrameworkOptions.TestStepDataArgs
+  - AutomationTestingProgram.FrameworkOptions.TestStepDataType
+  - AutomationTestingProgram.FrameworkOptions.TimeOutThreshold
+  - AutomationTestingProgram.FrameworkOptions.Update
+  - AutomationTestingProgram.FrameworkOptions.URL
+  - AutomationTestingProgram.FrameworkOptions.WarningThreshold
+  langs:
+  - csharp
+  - vb
+  name: FrameworkOptions
+  nameWithType: FrameworkOptions
+  fullName: AutomationTestingProgram.FrameworkOptions
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: FrameworkOptions
+    path: src/FrameworkOptions.cs
+    startLine: 13
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThis class stores the command line arguments that are taken in, both mandatory and optional.\n"
+  example: []
+  syntax:
+    content: public class FrameworkOptions
+    content.vb: Public Class FrameworkOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.FrameworkOptions.Examples
+  commentId: P:AutomationTestingProgram.FrameworkOptions.Examples
+  id: Examples
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: Examples
+  nameWithType: FrameworkOptions.Examples
+  fullName: AutomationTestingProgram.FrameworkOptions.Examples
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Examples
+    path: src/FrameworkOptions.cs
+    startLine: 18
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets usage for AutomationTestingProgram.\n"
+  example: []
+  syntax:
+    content: >-
+      [Usage(ApplicationAlias = "AutomationTestingProgram.exe")]
+
+      public static IEnumerable<Example> Examples { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{CommandLine.Text.Example}
+    content.vb: >-
+      <Usage(ApplicationAlias:="AutomationTestingProgram.exe")>
+
+      Public Shared ReadOnly Property Examples As IEnumerable(Of Example)
+  overload: AutomationTestingProgram.FrameworkOptions.Examples*
+  attributes:
+  - type: CommandLine.Text.UsageAttribute
+    ctor: CommandLine.Text.UsageAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ApplicationAlias
+      type: System.String
+      value: AutomationTestingProgram.exe
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: AutomationTestingProgram.FrameworkOptions.Update
+  commentId: P:AutomationTestingProgram.FrameworkOptions.Update
+  id: Update
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: Update
+  nameWithType: FrameworkOptions.Update
+  fullName: AutomationTestingProgram.FrameworkOptions.Update
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Update
+    path: src/FrameworkOptions.cs
+    startLine: 34
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value indicating whether to update or not.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("update", Required = false, HelpText = "Overrides auto update")]
+
+      public string Update { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("update", Required:=False, HelpText:="Overrides auto update")>
+
+      Public Property Update As String
+  overload: AutomationTestingProgram.FrameworkOptions.Update*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: update
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides auto update
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.Browser
+  commentId: P:AutomationTestingProgram.FrameworkOptions.Browser
+  id: Browser
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: Browser
+  nameWithType: FrameworkOptions.Browser
+  fullName: AutomationTestingProgram.FrameworkOptions.Browser
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Browser
+    path: src/FrameworkOptions.cs
+    startLine: 40
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the browser to use.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option('b', "browser", Required = false, HelpText = "Overrides the browser set in the Testing files.")]
+
+      public string Browser { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("b"c, "browser", Required:=False, HelpText:="Overrides the browser set in the Testing files.")>
+
+      Public Property Browser As String
+  overload: AutomationTestingProgram.FrameworkOptions.Browser*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.Char,System.String)
+    arguments:
+    - type: System.Char
+      value: b
+    - type: System.String
+      value: browser
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the browser set in the Testing files.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.Environment
+  commentId: P:AutomationTestingProgram.FrameworkOptions.Environment
+  id: Environment
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: Environment
+  nameWithType: FrameworkOptions.Environment
+  fullName: AutomationTestingProgram.FrameworkOptions.Environment
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Environment
+    path: src/FrameworkOptions.cs
+    startLine: 46
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the environment to use.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option('e', "environment", Required = true, HelpText = "Overrides the browser set in the Testing files.")]
+
+      public string Environment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("e"c, "environment", Required:=True, HelpText:="Overrides the browser set in the Testing files.")>
+
+      Public Property Environment As String
+  overload: AutomationTestingProgram.FrameworkOptions.Environment*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.Char,System.String)
+    arguments:
+    - type: System.Char
+      value: e
+    - type: System.String
+      value: environment
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: true
+    - name: HelpText
+      type: System.String
+      value: Overrides the browser set in the Testing files.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.URL
+  commentId: P:AutomationTestingProgram.FrameworkOptions.URL
+  id: URL
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: URL
+  nameWithType: FrameworkOptions.URL
+  fullName: AutomationTestingProgram.FrameworkOptions.URL
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: URL
+    path: src/FrameworkOptions.cs
+    startLine: 52
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the URL to use. By default, the URL is derived by the environment provided.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option('u', "url", Required = false, HelpText = "Overrides the url set in the Testing files. Also overrides the derived URL from the environment.")]
+
+      public string URL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("u"c, "url", Required:=False, HelpText:="Overrides the url set in the Testing files. Also overrides the derived URL from the environment.")>
+
+      Public Property URL As String
+  overload: AutomationTestingProgram.FrameworkOptions.URL*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.Char,System.String)
+    arguments:
+    - type: System.Char
+      value: u
+    - type: System.String
+      value: url
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the url set in the Testing files. Also overrides the derived URL from the environment.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.RespectRepeatFor
+  commentId: P:AutomationTestingProgram.FrameworkOptions.RespectRepeatFor
+  id: RespectRepeatFor
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: RespectRepeatFor
+  nameWithType: FrameworkOptions.RespectRepeatFor
+  fullName: AutomationTestingProgram.FrameworkOptions.RespectRepeatFor
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RespectRepeatFor
+    path: src/FrameworkOptions.cs
+    startLine: 58
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value indicating whether to respect RespectRepeatFor flag.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("respectRepeatFor", Required = false, HelpText = "Overrides the respect repeat for flag set in the Testing files")]
+
+      public string RespectRepeatFor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("respectRepeatFor", Required:=False, HelpText:="Overrides the respect repeat for flag set in the Testing files")>
+
+      Public Property RespectRepeatFor As String
+  overload: AutomationTestingProgram.FrameworkOptions.RespectRepeatFor*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: respectRepeatFor
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the respect repeat for flag set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag
+  commentId: P:AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag
+  id: RespectRunAodaFlag
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: RespectRunAodaFlag
+  nameWithType: FrameworkOptions.RespectRunAodaFlag
+  fullName: AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RespectRunAodaFlag
+    path: src/FrameworkOptions.cs
+    startLine: 64
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value indicating whether to respect RunAODAFlag.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("respectRunAODAFlag", Required = false, HelpText = "Overrides the respect run AODA flag set in the Testing files")]
+
+      public string RespectRunAodaFlag { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("respectRunAODAFlag", Required:=False, HelpText:="Overrides the respect run AODA flag set in the Testing files")>
+
+      Public Property RespectRunAodaFlag As String
+  overload: AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: respectRunAODAFlag
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the respect run AODA flag set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TimeOutThreshold
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TimeOutThreshold
+  id: TimeOutThreshold
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TimeOutThreshold
+  nameWithType: FrameworkOptions.TimeOutThreshold
+  fullName: AutomationTestingProgram.FrameworkOptions.TimeOutThreshold
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TimeOutThreshold
+    path: src/FrameworkOptions.cs
+    startLine: 70
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the timeout threshold to use.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("timeOutThreshold", Required = false, HelpText = "Overrides the timeout threshold set in the Testing files")]
+
+      public int TimeOutThreshold { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Option("timeOutThreshold", Required:=False, HelpText:="Overrides the timeout threshold set in the Testing files")>
+
+      Public Property TimeOutThreshold As Integer
+  overload: AutomationTestingProgram.FrameworkOptions.TimeOutThreshold*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timeOutThreshold
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the timeout threshold set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.WarningThreshold
+  commentId: P:AutomationTestingProgram.FrameworkOptions.WarningThreshold
+  id: WarningThreshold
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: WarningThreshold
+  nameWithType: FrameworkOptions.WarningThreshold
+  fullName: AutomationTestingProgram.FrameworkOptions.WarningThreshold
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: WarningThreshold
+    path: src/FrameworkOptions.cs
+    startLine: 76
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the warning threshold. Warning must be less than Timeout.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("warningThreshold", Required = false, HelpText = "Overrides the warning threshold set in the Testing files")]
+
+      public int WarningThreshold { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Option("warningThreshold", Required:=False, HelpText:="Overrides the warning threshold set in the Testing files")>
+
+      Public Property WarningThreshold As Integer
+  overload: AutomationTestingProgram.FrameworkOptions.WarningThreshold*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: warningThreshold
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the warning threshold set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.DataFile
+  commentId: P:AutomationTestingProgram.FrameworkOptions.DataFile
+  id: DataFile
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: DataFile
+  nameWithType: FrameworkOptions.DataFile
+  fullName: AutomationTestingProgram.FrameworkOptions.DataFile
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: DataFile
+    path: src/FrameworkOptions.cs
+    startLine: 82
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the datafile.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("dataFile", Required = false, HelpText = "Overrides the data file location")]
+
+      public string DataFile { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("dataFile", Required:=False, HelpText:="Overrides the data file location")>
+
+      Public Property DataFile As String
+  overload: AutomationTestingProgram.FrameworkOptions.DataFile*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: dataFile
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the data file location
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation
+  commentId: P:AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation
+  id: CSVSaveFileLocation
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: CSVSaveFileLocation
+  nameWithType: FrameworkOptions.CSVSaveFileLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: CSVSaveFileLocation
+    path: src/FrameworkOptions.cs
+    startLine: 88
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the CSV file location.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("csvSaveFileLocation", Required = false, HelpText = "Overrides the csv save file location set in the Testing files")]
+
+      public string CSVSaveFileLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("csvSaveFileLocation", Required:=False, HelpText:="Overrides the csv save file location set in the Testing files")>
+
+      Public Property CSVSaveFileLocation As String
+  overload: AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: csvSaveFileLocation
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the csv save file location set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.LogSaveLocation
+  commentId: P:AutomationTestingProgram.FrameworkOptions.LogSaveLocation
+  id: LogSaveLocation
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: LogSaveLocation
+  nameWithType: FrameworkOptions.LogSaveLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.LogSaveLocation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: LogSaveLocation
+    path: src/FrameworkOptions.cs
+    startLine: 96
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the log save location.\n<p> </p>\nIf not set, will use the directory path of CSVSaveFileLocation.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("logSaveLocation", Required = false, HelpText = "Overrides the log save location set in the Testing files")]
+
+      public string LogSaveLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("logSaveLocation", Required:=False, HelpText:="Overrides the log save location set in the Testing files")>
+
+      Public Property LogSaveLocation As String
+  overload: AutomationTestingProgram.FrameworkOptions.LogSaveLocation*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: logSaveLocation
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the log save location set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.ReportSaveLocation
+  commentId: P:AutomationTestingProgram.FrameworkOptions.ReportSaveLocation
+  id: ReportSaveLocation
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: ReportSaveLocation
+  nameWithType: FrameworkOptions.ReportSaveLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.ReportSaveLocation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ReportSaveLocation
+    path: src/FrameworkOptions.cs
+    startLine: 104
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the log save location.\n<p> </p>\nIf not set, will use the directory path of CSVSaveFileLocation.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("reportSaveLocation", Required = false, HelpText = "Overrides the report save location set in the Testing files")]
+
+      public string ReportSaveLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("reportSaveLocation", Required:=False, HelpText:="Overrides the report save location set in the Testing files")>
+
+      Public Property ReportSaveLocation As String
+  overload: AutomationTestingProgram.FrameworkOptions.ReportSaveLocation*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: reportSaveLocation
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the report save location set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation
+  commentId: P:AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation
+  id: ScreenShotSaveLocation
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: ScreenShotSaveLocation
+  nameWithType: FrameworkOptions.ScreenShotSaveLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ScreenShotSaveLocation
+    path: src/FrameworkOptions.cs
+    startLine: 112
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the screenshot save location.\n<p> </p>\nIf not set, will use the directory path of CSVSaveFileLocation.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("screenShotSaveLocation", Required = false, HelpText = "Overrides the screenshot save location set in the Testing files")]
+
+      public string ScreenShotSaveLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("screenShotSaveLocation", Required:=False, HelpText:="Overrides the screenshot save location set in the Testing files")>
+
+      Public Property ScreenShotSaveLocation As String
+  overload: AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: screenShotSaveLocation
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Overrides the screenshot save location set in the Testing files
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.AutomationProgram
+  commentId: P:AutomationTestingProgram.FrameworkOptions.AutomationProgram
+  id: AutomationProgram
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: AutomationProgram
+  nameWithType: FrameworkOptions.AutomationProgram
+  fullName: AutomationTestingProgram.FrameworkOptions.AutomationProgram
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AutomationProgram
+    path: src/FrameworkOptions.cs
+    startLine: 120
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Testing driver to use.\n<p> </p>\nIf not set, will use Selenium.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("automationProgram", Required = false, HelpText = "The Automation Program to use. Defaults to Selenium.")]
+
+      public string AutomationProgram { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("automationProgram", Required:=False, HelpText:="The Automation Program to use. Defaults to Selenium.")>
+
+      Public Property AutomationProgram As String
+  overload: AutomationTestingProgram.FrameworkOptions.AutomationProgram*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: automationProgram
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: The Automation Program to use. Defaults to Selenium.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.BuildNumber
+  commentId: P:AutomationTestingProgram.FrameworkOptions.BuildNumber
+  id: BuildNumber
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: BuildNumber
+  nameWithType: FrameworkOptions.BuildNumber
+  fullName: AutomationTestingProgram.FrameworkOptions.BuildNumber
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: BuildNumber
+    path: src/FrameworkOptions.cs
+    startLine: 128
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Build Number to use.\n<p> </p>\nIf not set, will be called &quot;my build number&quot;.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("buildNumber", Required = false, HelpText = "The build number for the execution.")]
+
+      public string BuildNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("buildNumber", Required:=False, HelpText:="The build number for the execution.")>
+
+      Public Property BuildNumber As String
+  overload: AutomationTestingProgram.FrameworkOptions.BuildNumber*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: buildNumber
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: The build number for the execution.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestSetDataType
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestSetDataType
+  id: TestSetDataType
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestSetDataType
+  nameWithType: FrameworkOptions.TestSetDataType
+  fullName: AutomationTestingProgram.FrameworkOptions.TestSetDataType
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetDataType
+    path: src/FrameworkOptions.cs
+    startLine: 134
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the type of data to use for the test set.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("setType", Required = false, HelpText = "The data type to get the test set from. The type avaliable are: Excel, ALM, XML")]
+
+      public string TestSetDataType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("setType", Required:=False, HelpText:="The data type to get the test set from. The type avaliable are: Excel, ALM, XML")>
+
+      Public Property TestSetDataType As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestSetDataType*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: setType
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: 'The data type to get the test set from. The type avaliable are: Excel, ALM, XML'
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestCaseDataType
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestCaseDataType
+  id: TestCaseDataType
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestCaseDataType
+  nameWithType: FrameworkOptions.TestCaseDataType
+  fullName: AutomationTestingProgram.FrameworkOptions.TestCaseDataType
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestCaseDataType
+    path: src/FrameworkOptions.cs
+    startLine: 143
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the type of data to use for the test case.\n<p> </p>\nIf not set, will use the test set data type.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("caseType", Required = false, HelpText = "The data type to get the test case from. Defaults to the test step type.The type avaliable are: XML, Txt")]
+
+      public string TestCaseDataType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("caseType", Required:=False, HelpText:="The data type to get the test case from. Defaults to the test step type.The type avaliable are: XML, Txt")>
+
+      Public Property TestCaseDataType As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestCaseDataType*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: caseType
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: 'The data type to get the test case from. Defaults to the test step type.The type avaliable are: XML, Txt'
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestStepDataType
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestStepDataType
+  id: TestStepDataType
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestStepDataType
+  nameWithType: FrameworkOptions.TestStepDataType
+  fullName: AutomationTestingProgram.FrameworkOptions.TestStepDataType
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestStepDataType
+    path: src/FrameworkOptions.cs
+    startLine: 152
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the type of data to use for the test step.\n<p> </p>\nIf not set, will use the test case data type.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("stepType", Required = false, HelpText = "The data type to get the test step from. Defaults to the test case type.The type avaliable are: XML, Txt")]
+
+      public string TestStepDataType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("stepType", Required:=False, HelpText:="The data type to get the test step from. Defaults to the test case type.The type avaliable are: XML, Txt")>
+
+      Public Property TestStepDataType As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestStepDataType*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: stepType
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: 'The data type to get the test step from. Defaults to the test case type.The type avaliable are: XML, Txt'
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestSetDataArgs
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestSetDataArgs
+  id: TestSetDataArgs
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestSetDataArgs
+  nameWithType: FrameworkOptions.TestSetDataArgs
+  fullName: AutomationTestingProgram.FrameworkOptions.TestSetDataArgs
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetDataArgs
+    path: src/FrameworkOptions.cs
+    startLine: 159
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the arguments for the test set test data. Most often it is the location of the file.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("setArgs", Required = true, HelpText = "The argument to use for the test step. Most often the file location.")]
+
+      public string TestSetDataArgs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("setArgs", Required:=True, HelpText:="The argument to use for the test step. Most often the file location.")>
+
+      Public Property TestSetDataArgs As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestSetDataArgs*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: setArgs
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: true
+    - name: HelpText
+      type: System.String
+      value: The argument to use for the test step. Most often the file location.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs
+  id: TestCaseDataArgs
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestCaseDataArgs
+  nameWithType: FrameworkOptions.TestCaseDataArgs
+  fullName: AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestCaseDataArgs
+    path: src/FrameworkOptions.cs
+    startLine: 167
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the arguments for the test case test data. Most often the location of the file.\n<p> </p>\nIf not set, will use the test set args.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("caseArgs", Required = false, HelpText = "The argument to use for the test case. Most often the file location. Defaults to the test set args.")]
+
+      public string TestCaseDataArgs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("caseArgs", Required:=False, HelpText:="The argument to use for the test case. Most often the file location. Defaults to the test set args.")>
+
+      Public Property TestCaseDataArgs As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: caseArgs
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: The argument to use for the test case. Most often the file location. Defaults to the test set args.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestStepDataArgs
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestStepDataArgs
+  id: TestStepDataArgs
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestStepDataArgs
+  nameWithType: FrameworkOptions.TestStepDataArgs
+  fullName: AutomationTestingProgram.FrameworkOptions.TestStepDataArgs
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestStepDataArgs
+    path: src/FrameworkOptions.cs
+    startLine: 175
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the arguments for the test step test data. Most often the location of the file.\n<p> </p>\nIf not set, will use the test case args.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("stepArgs", Required = false, HelpText = "The argument to use for the test step. Most often the file location. Defaults to the test case args.")]
+
+      public string TestStepDataArgs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("stepArgs", Required:=False, HelpText:="The argument to use for the test step. Most often the file location. Defaults to the test case args.")>
+
+      Public Property TestStepDataArgs As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestStepDataArgs*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: stepArgs
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: The argument to use for the test step. Most often the file location. Defaults to the test case args.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestPlanName
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestPlanName
+  id: TestPlanName
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestPlanName
+  nameWithType: FrameworkOptions.TestPlanName
+  fullName: AutomationTestingProgram.FrameworkOptions.TestPlanName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestPlanName
+    path: src/FrameworkOptions.cs
+    startLine: 183
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the test plan name.\n<p> </p>\nIf not set, will be set as the test set name.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("planName", Required = false, HelpText = "The name of the test plan to be used for generating test plans in Azure DevOps.")]
+
+      public string TestPlanName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("planName", Required:=False, HelpText:="The name of the test plan to be used for generating test plans in Azure DevOps.")>
+
+      Public Property TestPlanName As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestPlanName*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: planName
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: The name of the test plan to be used for generating test plans in Azure DevOps.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.ProjectName
+  commentId: P:AutomationTestingProgram.FrameworkOptions.ProjectName
+  id: ProjectName
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: ProjectName
+  nameWithType: FrameworkOptions.ProjectName
+  fullName: AutomationTestingProgram.FrameworkOptions.ProjectName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ProjectName
+    path: src/FrameworkOptions.cs
+    startLine: 191
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the test project name.\n<p> </p>\nIf not set, will be set to default AutomationAndAccessibility.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("projectName", Required = false, HelpText = "The project to publish the results to DevOps to.")]
+
+      public string ProjectName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("projectName", Required:=False, HelpText:="The project to publish the results to DevOps to.")>
+
+      Public Property ProjectName As String
+  overload: AutomationTestingProgram.FrameworkOptions.ProjectName*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: projectName
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: The project to publish the results to DevOps to.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.AzurePAT
+  commentId: P:AutomationTestingProgram.FrameworkOptions.AzurePAT
+  id: AzurePAT
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: AzurePAT
+  nameWithType: FrameworkOptions.AzurePAT
+  fullName: AutomationTestingProgram.FrameworkOptions.AzurePAT
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AzurePAT
+    path: src/FrameworkOptions.cs
+    startLine: 199
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets of sets the Azure AD PAT credentials.\n<p> </p>\nIf not set, will take the value of the App.Config user to query.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("azurePAT", Required = false, HelpText = "PAT token for API calls to DevOps")]
+
+      public string AzurePAT { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("azurePAT", Required:=False, HelpText:="PAT token for API calls to DevOps")>
+
+      Public Property AzurePAT As String
+  overload: AutomationTestingProgram.FrameworkOptions.AzurePAT*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: azurePAT
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: PAT token for API calls to DevOps
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.SecretInformation
+  commentId: P:AutomationTestingProgram.FrameworkOptions.SecretInformation
+  id: SecretInformation
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: SecretInformation
+  nameWithType: FrameworkOptions.SecretInformation
+  fullName: AutomationTestingProgram.FrameworkOptions.SecretInformation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SecretInformation
+    path: src/FrameworkOptions.cs
+    startLine: 207
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Azure AD login credentials.\n<p> </p>\nIf not set, will take the value of local KeyVault cred value to query.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("kvSecrets", Required = false, HelpText = "KeyVault secret information to publish to DevOps.")]
+
+      public string SecretInformation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("kvSecrets", Required:=False, HelpText:="KeyVault secret information to publish to DevOps.")>
+
+      Public Property SecretInformation As String
+  overload: AutomationTestingProgram.FrameworkOptions.SecretInformation*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: kvSecrets
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: KeyVault secret information to publish to DevOps.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.MaxFailures
+  commentId: P:AutomationTestingProgram.FrameworkOptions.MaxFailures
+  id: MaxFailures
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: MaxFailures
+  nameWithType: FrameworkOptions.MaxFailures
+  fullName: AutomationTestingProgram.FrameworkOptions.MaxFailures
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: MaxFailures
+    path: src/FrameworkOptions.cs
+    startLine: 215
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the maximum number of consecutive failures.\n<p> </p>\nIf not set, will take the value stored for MaxConsecutiveFailedTestCases in App.Config.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("maxFailures", Required = false, HelpText = "Maximum consecutive failures before entire execution fails.")]
+
+      public string MaxFailures { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("maxFailures", Required:=False, HelpText:="Maximum consecutive failures before entire execution fails.")>
+
+      Public Property MaxFailures As String
+  overload: AutomationTestingProgram.FrameworkOptions.MaxFailures*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: maxFailures
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Maximum consecutive failures before entire execution fails.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.NotifyList
+  commentId: P:AutomationTestingProgram.FrameworkOptions.NotifyList
+  id: NotifyList
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: NotifyList
+  nameWithType: FrameworkOptions.NotifyList
+  fullName: AutomationTestingProgram.FrameworkOptions.NotifyList
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: NotifyList
+    path: src/FrameworkOptions.cs
+    startLine: 223
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the list of comma-separated emails to notify after execution.\n<p> </p>\nIf not set, will take list from App.config.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("notifyList", Required = false, HelpText = "List of comma-separated emails to notify after execution finishes.")]
+
+      public string NotifyList { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("notifyList", Required:=False, HelpText:="List of comma-separated emails to notify after execution finishes.")>
+
+      Public Property NotifyList As String
+  overload: AutomationTestingProgram.FrameworkOptions.NotifyList*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: notifyList
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: List of comma-separated emails to notify after execution finishes.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.RunParameters
+  commentId: P:AutomationTestingProgram.FrameworkOptions.RunParameters
+  id: RunParameters
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: RunParameters
+  nameWithType: FrameworkOptions.RunParameters
+  fullName: AutomationTestingProgram.FrameworkOptions.RunParameters
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RunParameters
+    path: src/FrameworkOptions.cs
+    startLine: 231
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the list of comma-separated run parameters.\n<p> </p>\nIf not set, no parameters are created.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("runParams", Required = false, HelpText = "List of comma-separated parameters with colons separating key-value pairs")]
+
+      public string RunParameters { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("runParams", Required:=False, HelpText:="List of comma-separated parameters with colons separating key-value pairs")>
+
+      Public Property RunParameters As String
+  overload: AutomationTestingProgram.FrameworkOptions.RunParameters*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: runParams
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: List of comma-separated parameters with colons separating key-value pairs
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.ExecutionURL
+  commentId: P:AutomationTestingProgram.FrameworkOptions.ExecutionURL
+  id: ExecutionURL
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: ExecutionURL
+  nameWithType: FrameworkOptions.ExecutionURL
+  fullName: AutomationTestingProgram.FrameworkOptions.ExecutionURL
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ExecutionURL
+    path: src/FrameworkOptions.cs
+    startLine: 239
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the execution url of the devops exeuction\n<p> </p>\nIf not set, no parameters are created.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("executionURL", Required = false, HelpText = "The URL to the execution.")]
+
+      public string ExecutionURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("executionURL", Required:=False, HelpText:="The URL to the execution.")>
+
+      Public Property ExecutionURL As String
+  overload: AutomationTestingProgram.FrameworkOptions.ExecutionURL*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: executionURL
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: The URL to the execution.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.AppConfigOverrides
+  commentId: P:AutomationTestingProgram.FrameworkOptions.AppConfigOverrides
+  id: AppConfigOverrides
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: AppConfigOverrides
+  nameWithType: FrameworkOptions.AppConfigOverrides
+  fullName: AutomationTestingProgram.FrameworkOptions.AppConfigOverrides
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AppConfigOverrides
+    path: src/FrameworkOptions.cs
+    startLine: 247
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets values to override in the App.Config, separated by colons.\n<p> </p>\nIf not set, no overrides are made.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("appConfig", Required = false, HelpText = "App.Config overrides to the execution.")]
+
+      public string AppConfigOverrides { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("appConfig", Required:=False, HelpText:="App.Config overrides to the execution.")>
+
+      Public Property AppConfigOverrides As String
+  overload: AutomationTestingProgram.FrameworkOptions.AppConfigOverrides*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: appConfig
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: App.Config overrides to the execution.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TestPlanStructure
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TestPlanStructure
+  id: TestPlanStructure
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TestPlanStructure
+  nameWithType: FrameworkOptions.TestPlanStructure
+  fullName: AutomationTestingProgram.FrameworkOptions.TestPlanStructure
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestPlanStructure
+    path: src/FrameworkOptions.cs
+    startLine: 255
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe structure of the Azure Test Plans folder structure.\n<p> </p>\nIf not set, no overrides are made.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("testPlanStructure", Required = false, HelpText = "Stucture of azure Test Plans, indicating how the file will be stored")]
+
+      public string TestPlanStructure { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("testPlanStructure", Required:=False, HelpText:="Stucture of azure Test Plans, indicating how the file will be stored")>
+
+      Public Property TestPlanStructure As String
+  overload: AutomationTestingProgram.FrameworkOptions.TestPlanStructure*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: testPlanStructure
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Stucture of azure Test Plans, indicating how the file will be stored
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TesterContact
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TesterContact
+  id: TesterContact
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TesterContact
+  nameWithType: FrameworkOptions.TesterContact
+  fullName: AutomationTestingProgram.FrameworkOptions.TesterContact
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TesterContact
+    path: src/FrameworkOptions.cs
+    startLine: 263
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nTester Email for further contact and for displaying into DevOps.\n<p> </p>\nIf not set, name is set to Default Tester.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("testerContact", Required = false, HelpText = "Tester information for the tester's email, separated by a comma")]
+
+      public string TesterContact { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("testerContact", Required:=False, HelpText:="Tester information for the tester's email, separated by a comma")>
+
+      Public Property TesterContact As String
+  overload: AutomationTestingProgram.FrameworkOptions.TesterContact*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: testerContact
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Tester information for the tester's email, separated by a comma
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.TesterName
+  commentId: P:AutomationTestingProgram.FrameworkOptions.TesterName
+  id: TesterName
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: TesterName
+  nameWithType: FrameworkOptions.TesterName
+  fullName: AutomationTestingProgram.FrameworkOptions.TesterName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TesterName
+    path: src/FrameworkOptions.cs
+    startLine: 271
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nTester name for further contact and for displaying into DevOps.\n<p> </p>\nIf not set, name is set to Default Tester.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("testerName", Required = false, HelpText = "Tester information for the tester's name, separated by a comma")]
+
+      public string TesterName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("testerName", Required:=False, HelpText:="Tester information for the tester's name, separated by a comma")>
+
+      Public Property TesterName As String
+  overload: AutomationTestingProgram.FrameworkOptions.TesterName*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: testerName
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: Tester information for the tester's name, separated by a comma
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri
+  commentId: P:AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri
+  id: ReleaseEnvironmentUri
+  parent: AutomationTestingProgram.FrameworkOptions
+  langs:
+  - csharp
+  - vb
+  name: ReleaseEnvironmentUri
+  nameWithType: FrameworkOptions.ReleaseEnvironmentUri
+  fullName: AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkOptions.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ReleaseEnvironmentUri
+    path: src/FrameworkOptions.cs
+    startLine: 279
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nRelease Uri and Environment Uri separated by a comma.\n<p> </p>\nIf not set, no linkage.\n"
+  example: []
+  syntax:
+    content: >-
+      [Option("releaseEnvUri", Required = false, HelpText = "DevOps release uri and envirnoment uri separated by a comma")]
+
+      public string ReleaseEnvironmentUri { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Option("releaseEnvUri", Required:=False, HelpText:="DevOps release uri and envirnoment uri separated by a comma")>
+
+      Public Property ReleaseEnvironmentUri As String
+  overload: AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri*
+  attributes:
+  - type: CommandLine.OptionAttribute
+    ctor: CommandLine.OptionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: releaseEnvUri
+    namedArguments:
+    - name: Required
+      type: System.Boolean
+      value: false
+    - name: HelpText
+      type: System.String
+      value: DevOps release uri and envirnoment uri separated by a comma
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.FrameworkOptions.Examples*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.Examples
+  name: Examples
+  nameWithType: FrameworkOptions.Examples
+  fullName: AutomationTestingProgram.FrameworkOptions.Examples
+- uid: System.Collections.Generic.IEnumerable{CommandLine.Text.Example}
+  commentId: T:System.Collections.Generic.IEnumerable{CommandLine.Text.Example}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Example>
+  nameWithType: IEnumerable<Example>
+  fullName: System.Collections.Generic.IEnumerable<CommandLine.Text.Example>
+  nameWithType.vb: IEnumerable(Of Example)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of CommandLine.Text.Example)
+  name.vb: IEnumerable(Of Example)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: CommandLine.Text.Example
+    name: Example
+    nameWithType: Example
+    fullName: CommandLine.Text.Example
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: CommandLine.Text.Example
+    name: Example
+    nameWithType: Example
+    fullName: CommandLine.Text.Example
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: AutomationTestingProgram.FrameworkOptions.Update*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.Update
+  name: Update
+  nameWithType: FrameworkOptions.Update
+  fullName: AutomationTestingProgram.FrameworkOptions.Update
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.FrameworkOptions.Browser*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.Browser
+  name: Browser
+  nameWithType: FrameworkOptions.Browser
+  fullName: AutomationTestingProgram.FrameworkOptions.Browser
+- uid: AutomationTestingProgram.FrameworkOptions.Environment*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.Environment
+  name: Environment
+  nameWithType: FrameworkOptions.Environment
+  fullName: AutomationTestingProgram.FrameworkOptions.Environment
+- uid: AutomationTestingProgram.FrameworkOptions.URL*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.URL
+  name: URL
+  nameWithType: FrameworkOptions.URL
+  fullName: AutomationTestingProgram.FrameworkOptions.URL
+- uid: AutomationTestingProgram.FrameworkOptions.RespectRepeatFor*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.RespectRepeatFor
+  name: RespectRepeatFor
+  nameWithType: FrameworkOptions.RespectRepeatFor
+  fullName: AutomationTestingProgram.FrameworkOptions.RespectRepeatFor
+- uid: AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag
+  name: RespectRunAodaFlag
+  nameWithType: FrameworkOptions.RespectRunAodaFlag
+  fullName: AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag
+- uid: AutomationTestingProgram.FrameworkOptions.TimeOutThreshold*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TimeOutThreshold
+  name: TimeOutThreshold
+  nameWithType: FrameworkOptions.TimeOutThreshold
+  fullName: AutomationTestingProgram.FrameworkOptions.TimeOutThreshold
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AutomationTestingProgram.FrameworkOptions.WarningThreshold*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.WarningThreshold
+  name: WarningThreshold
+  nameWithType: FrameworkOptions.WarningThreshold
+  fullName: AutomationTestingProgram.FrameworkOptions.WarningThreshold
+- uid: AutomationTestingProgram.FrameworkOptions.DataFile*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.DataFile
+  name: DataFile
+  nameWithType: FrameworkOptions.DataFile
+  fullName: AutomationTestingProgram.FrameworkOptions.DataFile
+- uid: AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation
+  name: CSVSaveFileLocation
+  nameWithType: FrameworkOptions.CSVSaveFileLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation
+- uid: AutomationTestingProgram.FrameworkOptions.LogSaveLocation*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.LogSaveLocation
+  name: LogSaveLocation
+  nameWithType: FrameworkOptions.LogSaveLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.LogSaveLocation
+- uid: AutomationTestingProgram.FrameworkOptions.ReportSaveLocation*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.ReportSaveLocation
+  name: ReportSaveLocation
+  nameWithType: FrameworkOptions.ReportSaveLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.ReportSaveLocation
+- uid: AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation
+  name: ScreenShotSaveLocation
+  nameWithType: FrameworkOptions.ScreenShotSaveLocation
+  fullName: AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation
+- uid: AutomationTestingProgram.FrameworkOptions.AutomationProgram*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.AutomationProgram
+  name: AutomationProgram
+  nameWithType: FrameworkOptions.AutomationProgram
+  fullName: AutomationTestingProgram.FrameworkOptions.AutomationProgram
+- uid: AutomationTestingProgram.FrameworkOptions.BuildNumber*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.BuildNumber
+  name: BuildNumber
+  nameWithType: FrameworkOptions.BuildNumber
+  fullName: AutomationTestingProgram.FrameworkOptions.BuildNumber
+- uid: AutomationTestingProgram.FrameworkOptions.TestSetDataType*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestSetDataType
+  name: TestSetDataType
+  nameWithType: FrameworkOptions.TestSetDataType
+  fullName: AutomationTestingProgram.FrameworkOptions.TestSetDataType
+- uid: AutomationTestingProgram.FrameworkOptions.TestCaseDataType*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestCaseDataType
+  name: TestCaseDataType
+  nameWithType: FrameworkOptions.TestCaseDataType
+  fullName: AutomationTestingProgram.FrameworkOptions.TestCaseDataType
+- uid: AutomationTestingProgram.FrameworkOptions.TestStepDataType*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestStepDataType
+  name: TestStepDataType
+  nameWithType: FrameworkOptions.TestStepDataType
+  fullName: AutomationTestingProgram.FrameworkOptions.TestStepDataType
+- uid: AutomationTestingProgram.FrameworkOptions.TestSetDataArgs*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestSetDataArgs
+  name: TestSetDataArgs
+  nameWithType: FrameworkOptions.TestSetDataArgs
+  fullName: AutomationTestingProgram.FrameworkOptions.TestSetDataArgs
+- uid: AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs
+  name: TestCaseDataArgs
+  nameWithType: FrameworkOptions.TestCaseDataArgs
+  fullName: AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs
+- uid: AutomationTestingProgram.FrameworkOptions.TestStepDataArgs*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestStepDataArgs
+  name: TestStepDataArgs
+  nameWithType: FrameworkOptions.TestStepDataArgs
+  fullName: AutomationTestingProgram.FrameworkOptions.TestStepDataArgs
+- uid: AutomationTestingProgram.FrameworkOptions.TestPlanName*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestPlanName
+  name: TestPlanName
+  nameWithType: FrameworkOptions.TestPlanName
+  fullName: AutomationTestingProgram.FrameworkOptions.TestPlanName
+- uid: AutomationTestingProgram.FrameworkOptions.ProjectName*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.ProjectName
+  name: ProjectName
+  nameWithType: FrameworkOptions.ProjectName
+  fullName: AutomationTestingProgram.FrameworkOptions.ProjectName
+- uid: AutomationTestingProgram.FrameworkOptions.AzurePAT*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.AzurePAT
+  name: AzurePAT
+  nameWithType: FrameworkOptions.AzurePAT
+  fullName: AutomationTestingProgram.FrameworkOptions.AzurePAT
+- uid: AutomationTestingProgram.FrameworkOptions.SecretInformation*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.SecretInformation
+  name: SecretInformation
+  nameWithType: FrameworkOptions.SecretInformation
+  fullName: AutomationTestingProgram.FrameworkOptions.SecretInformation
+- uid: AutomationTestingProgram.FrameworkOptions.MaxFailures*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.MaxFailures
+  name: MaxFailures
+  nameWithType: FrameworkOptions.MaxFailures
+  fullName: AutomationTestingProgram.FrameworkOptions.MaxFailures
+- uid: AutomationTestingProgram.FrameworkOptions.NotifyList*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.NotifyList
+  name: NotifyList
+  nameWithType: FrameworkOptions.NotifyList
+  fullName: AutomationTestingProgram.FrameworkOptions.NotifyList
+- uid: AutomationTestingProgram.FrameworkOptions.RunParameters*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.RunParameters
+  name: RunParameters
+  nameWithType: FrameworkOptions.RunParameters
+  fullName: AutomationTestingProgram.FrameworkOptions.RunParameters
+- uid: AutomationTestingProgram.FrameworkOptions.ExecutionURL*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.ExecutionURL
+  name: ExecutionURL
+  nameWithType: FrameworkOptions.ExecutionURL
+  fullName: AutomationTestingProgram.FrameworkOptions.ExecutionURL
+- uid: AutomationTestingProgram.FrameworkOptions.AppConfigOverrides*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.AppConfigOverrides
+  name: AppConfigOverrides
+  nameWithType: FrameworkOptions.AppConfigOverrides
+  fullName: AutomationTestingProgram.FrameworkOptions.AppConfigOverrides
+- uid: AutomationTestingProgram.FrameworkOptions.TestPlanStructure*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TestPlanStructure
+  name: TestPlanStructure
+  nameWithType: FrameworkOptions.TestPlanStructure
+  fullName: AutomationTestingProgram.FrameworkOptions.TestPlanStructure
+- uid: AutomationTestingProgram.FrameworkOptions.TesterContact*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TesterContact
+  name: TesterContact
+  nameWithType: FrameworkOptions.TesterContact
+  fullName: AutomationTestingProgram.FrameworkOptions.TesterContact
+- uid: AutomationTestingProgram.FrameworkOptions.TesterName*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.TesterName
+  name: TesterName
+  nameWithType: FrameworkOptions.TesterName
+  fullName: AutomationTestingProgram.FrameworkOptions.TesterName
+- uid: AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri*
+  commentId: Overload:AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri
+  name: ReleaseEnvironmentUri
+  nameWithType: FrameworkOptions.ReleaseEnvironmentUri
+  fullName: AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri

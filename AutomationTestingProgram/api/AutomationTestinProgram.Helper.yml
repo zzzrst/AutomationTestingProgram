@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestinProgram.Helper
+  commentId: N:AutomationTestinProgram.Helper
+  id: AutomationTestinProgram.Helper
+  children:
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  - AutomationTestinProgram.Helper.FilePathResolver
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestinProgram.Helper
+  nameWithType: AutomationTestinProgram.Helper
+  fullName: AutomationTestinProgram.Helper
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  commentId: T:AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  name: CSVEnvironmentGetter
+  nameWithType: CSVEnvironmentGetter
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+- uid: AutomationTestinProgram.Helper.FilePathResolver
+  commentId: T:AutomationTestinProgram.Helper.FilePathResolver
+  name: FilePathResolver
+  nameWithType: FilePathResolver
+  fullName: AutomationTestinProgram.Helper.FilePathResolver

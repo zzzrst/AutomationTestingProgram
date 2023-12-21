@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FrameworkOptions
    ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -115,10 +115,44 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_AutomationProgram.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.AutomationProgram%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_AppConfigOverrides.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.AppConfigOverrides%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L121">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L248">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_AppConfigOverrides_" data-uid="AutomationTestingProgram.FrameworkOptions.AppConfigOverrides*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_AppConfigOverrides" data-uid="AutomationTestingProgram.FrameworkOptions.AppConfigOverrides">AppConfigOverrides</h4>
+  <div class="markdown level1 summary"><p>Gets or sets values to override in the App.Config, separated by colons.</p>
+<p> </p>
+If not set, no overrides are made.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;appConfig&quot;, Required = false, HelpText = &quot;App.Config overrides to the execution.&quot;)]
+public string AppConfigOverrides { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_AutomationProgram.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.AutomationProgram%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L121">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_AutomationProgram_" data-uid="AutomationTestingProgram.FrameworkOptions.AutomationProgram*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_AutomationProgram" data-uid="AutomationTestingProgram.FrameworkOptions.AutomationProgram">AutomationProgram</h4>
@@ -129,7 +163,8 @@ If not set, will use Selenium.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AutomationProgram { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;automationProgram&quot;, Required = false, HelpText = &quot;The Automation Program to use. Defaults to Selenium.&quot;)]
+public string AutomationProgram { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,10 +183,44 @@ If not set, will use Selenium.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Browser.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Browser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_AzurePAT.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.AzurePAT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L41">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L200">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_AzurePAT_" data-uid="AutomationTestingProgram.FrameworkOptions.AzurePAT*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_AzurePAT" data-uid="AutomationTestingProgram.FrameworkOptions.AzurePAT">AzurePAT</h4>
+  <div class="markdown level1 summary"><p>Gets of sets the Azure AD PAT credentials.</p>
+<p> </p>
+If not set, will take the value of the App.Config user to query.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;azurePAT&quot;, Required = false, HelpText = &quot;PAT token for API calls to DevOps&quot;)]
+public string AzurePAT { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Browser.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Browser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L41">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_Browser_" data-uid="AutomationTestingProgram.FrameworkOptions.Browser*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_Browser" data-uid="AutomationTestingProgram.FrameworkOptions.Browser">Browser</h4>
@@ -160,7 +229,8 @@ If not set, will use Selenium.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Browser { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option('b', &quot;browser&quot;, Required = false, HelpText = &quot;Overrides the browser set in the Testing files.&quot;)]
+public string Browser { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,10 +249,44 @@ If not set, will use Selenium.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_CSVSaveFileLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_BuildNumber.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.BuildNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L89">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L129">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_BuildNumber_" data-uid="AutomationTestingProgram.FrameworkOptions.BuildNumber*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_BuildNumber" data-uid="AutomationTestingProgram.FrameworkOptions.BuildNumber">BuildNumber</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the Build Number to use.</p>
+<p> </p>
+If not set, will be called &quot;my build number&quot;.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;buildNumber&quot;, Required = false, HelpText = &quot;The build number for the execution.&quot;)]
+public string BuildNumber { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_CSVSaveFileLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L89">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_CSVSaveFileLocation_" data-uid="AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_CSVSaveFileLocation" data-uid="AutomationTestingProgram.FrameworkOptions.CSVSaveFileLocation">CSVSaveFileLocation</h4>
@@ -191,7 +295,8 @@ If not set, will use Selenium.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CSVSaveFileLocation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;csvSaveFileLocation&quot;, Required = false, HelpText = &quot;Overrides the csv save file location set in the Testing files&quot;)]
+public string CSVSaveFileLocation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,10 +315,10 @@ If not set, will use Selenium.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_DataFile.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.DataFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_DataFile.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.DataFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L83">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L83">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_DataFile_" data-uid="AutomationTestingProgram.FrameworkOptions.DataFile*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_DataFile" data-uid="AutomationTestingProgram.FrameworkOptions.DataFile">DataFile</h4>
@@ -222,7 +327,8 @@ If not set, will use Selenium.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DataFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;dataFile&quot;, Required = false, HelpText = &quot;Overrides the data file location&quot;)]
+public string DataFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,10 +347,10 @@ If not set, will use Selenium.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Environment.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Environment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Environment.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Environment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L47">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L47">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_Environment_" data-uid="AutomationTestingProgram.FrameworkOptions.Environment*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_Environment" data-uid="AutomationTestingProgram.FrameworkOptions.Environment">Environment</h4>
@@ -253,7 +359,8 @@ If not set, will use Selenium.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Environment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option('e', &quot;environment&quot;, Required = true, HelpText = &quot;Overrides the browser set in the Testing files.&quot;)]
+public string Environment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,10 +379,10 @@ If not set, will use Selenium.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Examples.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Examples%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Examples.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Examples%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L19">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L19">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_Examples_" data-uid="AutomationTestingProgram.FrameworkOptions.Examples*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_Examples" data-uid="AutomationTestingProgram.FrameworkOptions.Examples">Examples</h4>
@@ -284,7 +391,8 @@ If not set, will use Selenium.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Example&gt; Examples { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Usage(ApplicationAlias = &quot;AutomationTestingProgram.exe&quot;)]
+public static IEnumerable&lt;Example&gt; Examples { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,10 +411,44 @@ If not set, will use Selenium.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_LogSaveLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.LogSaveLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_ExecutionURL.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.ExecutionURL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L97">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L240">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_ExecutionURL_" data-uid="AutomationTestingProgram.FrameworkOptions.ExecutionURL*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_ExecutionURL" data-uid="AutomationTestingProgram.FrameworkOptions.ExecutionURL">ExecutionURL</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the execution url of the devops exeuction</p>
+<p> </p>
+If not set, no parameters are created.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;executionURL&quot;, Required = false, HelpText = &quot;The URL to the execution.&quot;)]
+public string ExecutionURL { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_LogSaveLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.LogSaveLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L97">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_LogSaveLocation_" data-uid="AutomationTestingProgram.FrameworkOptions.LogSaveLocation*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_LogSaveLocation" data-uid="AutomationTestingProgram.FrameworkOptions.LogSaveLocation">LogSaveLocation</h4>
@@ -317,7 +459,8 @@ If not set, will use the directory path of CSVSaveFileLocation.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string LogSaveLocation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;logSaveLocation&quot;, Required = false, HelpText = &quot;Overrides the log save location set in the Testing files&quot;)]
+public string LogSaveLocation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,10 +479,146 @@ If not set, will use the directory path of CSVSaveFileLocation.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_ReportSaveLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.ReportSaveLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_MaxFailures.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.MaxFailures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L105">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L216">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_MaxFailures_" data-uid="AutomationTestingProgram.FrameworkOptions.MaxFailures*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_MaxFailures" data-uid="AutomationTestingProgram.FrameworkOptions.MaxFailures">MaxFailures</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of consecutive failures.</p>
+<p> </p>
+If not set, will take the value stored for MaxConsecutiveFailedTestCases in App.Config.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;maxFailures&quot;, Required = false, HelpText = &quot;Maximum consecutive failures before entire execution fails.&quot;)]
+public string MaxFailures { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_NotifyList.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.NotifyList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L224">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_NotifyList_" data-uid="AutomationTestingProgram.FrameworkOptions.NotifyList*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_NotifyList" data-uid="AutomationTestingProgram.FrameworkOptions.NotifyList">NotifyList</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the list of comma-separated emails to notify after execution.</p>
+<p> </p>
+If not set, will take list from App.config.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;notifyList&quot;, Required = false, HelpText = &quot;List of comma-separated emails to notify after execution finishes.&quot;)]
+public string NotifyList { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_ProjectName.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.ProjectName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L192">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_ProjectName_" data-uid="AutomationTestingProgram.FrameworkOptions.ProjectName*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_ProjectName" data-uid="AutomationTestingProgram.FrameworkOptions.ProjectName">ProjectName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the test project name.</p>
+<p> </p>
+If not set, will be set to default AutomationAndAccessibility.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;projectName&quot;, Required = false, HelpText = &quot;The project to publish the results to DevOps to.&quot;)]
+public string ProjectName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_ReleaseEnvironmentUri.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L280">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_ReleaseEnvironmentUri_" data-uid="AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_ReleaseEnvironmentUri" data-uid="AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri">ReleaseEnvironmentUri</h4>
+  <div class="markdown level1 summary"><p>Release Uri and Environment Uri separated by a comma.</p>
+<p> </p>
+If not set, no linkage.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;releaseEnvUri&quot;, Required = false, HelpText = &quot;DevOps release uri and envirnoment uri separated by a comma&quot;)]
+public string ReleaseEnvironmentUri { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_ReportSaveLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.ReportSaveLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L105">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_ReportSaveLocation_" data-uid="AutomationTestingProgram.FrameworkOptions.ReportSaveLocation*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_ReportSaveLocation" data-uid="AutomationTestingProgram.FrameworkOptions.ReportSaveLocation">ReportSaveLocation</h4>
@@ -350,7 +629,8 @@ If not set, will use the directory path of CSVSaveFileLocation.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ReportSaveLocation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;reportSaveLocation&quot;, Required = false, HelpText = &quot;Overrides the report save location set in the Testing files&quot;)]
+public string ReportSaveLocation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -369,10 +649,10 @@ If not set, will use the directory path of CSVSaveFileLocation.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_RespectRepeatFor.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.RespectRepeatFor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_RespectRepeatFor.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.RespectRepeatFor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L59">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L59">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_RespectRepeatFor_" data-uid="AutomationTestingProgram.FrameworkOptions.RespectRepeatFor*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_RespectRepeatFor" data-uid="AutomationTestingProgram.FrameworkOptions.RespectRepeatFor">RespectRepeatFor</h4>
@@ -381,7 +661,8 @@ If not set, will use the directory path of CSVSaveFileLocation.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RespectRepeatFor { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;respectRepeatFor&quot;, Required = false, HelpText = &quot;Overrides the respect repeat for flag set in the Testing files&quot;)]
+public string RespectRepeatFor { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -400,10 +681,10 @@ If not set, will use the directory path of CSVSaveFileLocation.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_RespectRunAodaFlag.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_RespectRunAodaFlag.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L65">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L65">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_RespectRunAodaFlag_" data-uid="AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_RespectRunAodaFlag" data-uid="AutomationTestingProgram.FrameworkOptions.RespectRunAodaFlag">RespectRunAodaFlag</h4>
@@ -412,7 +693,8 @@ If not set, will use the directory path of CSVSaveFileLocation.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RespectRunAodaFlag { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;respectRunAODAFlag&quot;, Required = false, HelpText = &quot;Overrides the respect run AODA flag set in the Testing files&quot;)]
+public string RespectRunAodaFlag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -431,10 +713,44 @@ If not set, will use the directory path of CSVSaveFileLocation.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_ScreenShotSaveLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_RunParameters.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.RunParameters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L113">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L232">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_RunParameters_" data-uid="AutomationTestingProgram.FrameworkOptions.RunParameters*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_RunParameters" data-uid="AutomationTestingProgram.FrameworkOptions.RunParameters">RunParameters</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the list of comma-separated run parameters.</p>
+<p> </p>
+If not set, no parameters are created.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;runParams&quot;, Required = false, HelpText = &quot;List of comma-separated parameters with colons separating key-value pairs&quot;)]
+public string RunParameters { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_ScreenShotSaveLocation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L113">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_ScreenShotSaveLocation_" data-uid="AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_ScreenShotSaveLocation" data-uid="AutomationTestingProgram.FrameworkOptions.ScreenShotSaveLocation">ScreenShotSaveLocation</h4>
@@ -445,7 +761,8 @@ If not set, will use the directory path of CSVSaveFileLocation.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ScreenShotSaveLocation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;screenShotSaveLocation&quot;, Required = false, HelpText = &quot;Overrides the screenshot save location set in the Testing files&quot;)]
+public string ScreenShotSaveLocation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -464,10 +781,44 @@ If not set, will use the directory path of CSVSaveFileLocation.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestCaseDataArgs.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_SecretInformation.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.SecretInformation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L160">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L208">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_SecretInformation_" data-uid="AutomationTestingProgram.FrameworkOptions.SecretInformation*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_SecretInformation" data-uid="AutomationTestingProgram.FrameworkOptions.SecretInformation">SecretInformation</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the Azure AD login credentials.</p>
+<p> </p>
+If not set, will take the value of local KeyVault cred value to query.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;kvSecrets&quot;, Required = false, HelpText = &quot;KeyVault secret information to publish to DevOps.&quot;)]
+public string SecretInformation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestCaseDataArgs.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L168">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_TestCaseDataArgs_" data-uid="AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_TestCaseDataArgs" data-uid="AutomationTestingProgram.FrameworkOptions.TestCaseDataArgs">TestCaseDataArgs</h4>
@@ -478,7 +829,8 @@ If not set, will use the test set args.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TestCaseDataArgs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;caseArgs&quot;, Required = false, HelpText = &quot;The argument to use for the test case. Most often the file location. Defaults to the test set args.&quot;)]
+public string TestCaseDataArgs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -497,10 +849,10 @@ If not set, will use the test set args.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestCaseDataType.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestCaseDataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestCaseDataType.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestCaseDataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L136">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L144">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_TestCaseDataType_" data-uid="AutomationTestingProgram.FrameworkOptions.TestCaseDataType*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_TestCaseDataType" data-uid="AutomationTestingProgram.FrameworkOptions.TestCaseDataType">TestCaseDataType</h4>
@@ -511,7 +863,8 @@ If not set, will use the test set data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TestCaseDataType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;caseType&quot;, Required = false, HelpText = &quot;The data type to get the test case from. Defaults to the test step type.The type avaliable are: XML, Txt&quot;)]
+public string TestCaseDataType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,10 +883,146 @@ If not set, will use the test set data type.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestSetDataArgs.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestSetDataArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TesterContact.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TesterContact%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L152">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L264">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_TesterContact_" data-uid="AutomationTestingProgram.FrameworkOptions.TesterContact*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_TesterContact" data-uid="AutomationTestingProgram.FrameworkOptions.TesterContact">TesterContact</h4>
+  <div class="markdown level1 summary"><p>Tester Email for further contact and for displaying into DevOps.</p>
+<p> </p>
+If not set, name is set to Default Tester.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;testerContact&quot;, Required = false, HelpText = &quot;Tester information for the tester's email, separated by a comma&quot;)]
+public string TesterContact { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TesterName.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TesterName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L272">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_TesterName_" data-uid="AutomationTestingProgram.FrameworkOptions.TesterName*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_TesterName" data-uid="AutomationTestingProgram.FrameworkOptions.TesterName">TesterName</h4>
+  <div class="markdown level1 summary"><p>Tester name for further contact and for displaying into DevOps.</p>
+<p> </p>
+If not set, name is set to Default Tester.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;testerName&quot;, Required = false, HelpText = &quot;Tester information for the tester's name, separated by a comma&quot;)]
+public string TesterName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestPlanName.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestPlanName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L184">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_TestPlanName_" data-uid="AutomationTestingProgram.FrameworkOptions.TestPlanName*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_TestPlanName" data-uid="AutomationTestingProgram.FrameworkOptions.TestPlanName">TestPlanName</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the test plan name.</p>
+<p> </p>
+If not set, will be set as the test set name.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;planName&quot;, Required = false, HelpText = &quot;The name of the test plan to be used for generating test plans in Azure DevOps.&quot;)]
+public string TestPlanName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestPlanStructure.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestPlanStructure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L256">View Source</a>
+  </span>
+  <a id="AutomationTestingProgram_FrameworkOptions_TestPlanStructure_" data-uid="AutomationTestingProgram.FrameworkOptions.TestPlanStructure*"></a>
+  <h4 id="AutomationTestingProgram_FrameworkOptions_TestPlanStructure" data-uid="AutomationTestingProgram.FrameworkOptions.TestPlanStructure">TestPlanStructure</h4>
+  <div class="markdown level1 summary"><p>The structure of the Azure Test Plans folder structure.</p>
+<p> </p>
+If not set, no overrides are made.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Option(&quot;testPlanStructure&quot;, Required = false, HelpText = &quot;Stucture of azure Test Plans, indicating how the file will be stored&quot;)]
+public string TestPlanStructure { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestSetDataArgs.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestSetDataArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L160">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_TestSetDataArgs_" data-uid="AutomationTestingProgram.FrameworkOptions.TestSetDataArgs*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_TestSetDataArgs" data-uid="AutomationTestingProgram.FrameworkOptions.TestSetDataArgs">TestSetDataArgs</h4>
@@ -542,7 +1031,8 @@ If not set, will use the test set data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TestSetDataArgs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;setArgs&quot;, Required = true, HelpText = &quot;The argument to use for the test step. Most often the file location.&quot;)]
+public string TestSetDataArgs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -561,10 +1051,10 @@ If not set, will use the test set data type.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestSetDataType.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestSetDataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestSetDataType.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestSetDataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L127">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L135">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_TestSetDataType_" data-uid="AutomationTestingProgram.FrameworkOptions.TestSetDataType*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_TestSetDataType" data-uid="AutomationTestingProgram.FrameworkOptions.TestSetDataType">TestSetDataType</h4>
@@ -573,7 +1063,8 @@ If not set, will use the test set data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TestSetDataType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;setType&quot;, Required = false, HelpText = &quot;The data type to get the test set from. The type avaliable are: Excel, ALM, XML&quot;)]
+public string TestSetDataType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -592,10 +1083,10 @@ If not set, will use the test set data type.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestStepDataArgs.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestStepDataArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestStepDataArgs.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestStepDataArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L168">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L176">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_TestStepDataArgs_" data-uid="AutomationTestingProgram.FrameworkOptions.TestStepDataArgs*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_TestStepDataArgs" data-uid="AutomationTestingProgram.FrameworkOptions.TestStepDataArgs">TestStepDataArgs</h4>
@@ -606,7 +1097,8 @@ If not set, will use the test case args.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TestStepDataArgs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;stepArgs&quot;, Required = false, HelpText = &quot;The argument to use for the test step. Most often the file location. Defaults to the test case args.&quot;)]
+public string TestStepDataArgs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -625,10 +1117,10 @@ If not set, will use the test case args.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestStepDataType.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestStepDataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TestStepDataType.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TestStepDataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L145">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L153">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_TestStepDataType_" data-uid="AutomationTestingProgram.FrameworkOptions.TestStepDataType*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_TestStepDataType" data-uid="AutomationTestingProgram.FrameworkOptions.TestStepDataType">TestStepDataType</h4>
@@ -639,7 +1131,8 @@ If not set, will use the test case data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TestStepDataType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;stepType&quot;, Required = false, HelpText = &quot;The data type to get the test step from. Defaults to the test case type.The type avaliable are: XML, Txt&quot;)]
+public string TestStepDataType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -658,10 +1151,10 @@ If not set, will use the test case data type.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TimeOutThreshold.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TimeOutThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_TimeOutThreshold.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.TimeOutThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L71">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L71">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_TimeOutThreshold_" data-uid="AutomationTestingProgram.FrameworkOptions.TimeOutThreshold*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_TimeOutThreshold" data-uid="AutomationTestingProgram.FrameworkOptions.TimeOutThreshold">TimeOutThreshold</h4>
@@ -670,7 +1163,8 @@ If not set, will use the test case data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int TimeOutThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;timeOutThreshold&quot;, Required = false, HelpText = &quot;Overrides the timeout threshold set in the Testing files&quot;)]
+public int TimeOutThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -689,10 +1183,10 @@ If not set, will use the test case data type.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Update.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_Update.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L35">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L35">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_Update_" data-uid="AutomationTestingProgram.FrameworkOptions.Update*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_Update" data-uid="AutomationTestingProgram.FrameworkOptions.Update">Update</h4>
@@ -701,7 +1195,8 @@ If not set, will use the test case data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Update { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;update&quot;, Required = false, HelpText = &quot;Overrides auto update&quot;)]
+public string Update { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -720,10 +1215,10 @@ If not set, will use the test case data type.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_URL.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.URL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_URL.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.URL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L53">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L53">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_URL_" data-uid="AutomationTestingProgram.FrameworkOptions.URL*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_URL" data-uid="AutomationTestingProgram.FrameworkOptions.URL">URL</h4>
@@ -732,7 +1227,8 @@ If not set, will use the test case data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string URL { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option('u', &quot;url&quot;, Required = false, HelpText = &quot;Overrides the url set in the Testing files. Also overrides the derived URL from the environment.&quot;)]
+public string URL { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -751,10 +1247,10 @@ If not set, will use the test case data type.
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_WarningThreshold.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.WarningThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions_WarningThreshold.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions.WarningThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L77">View Source</a>
+    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L77">View Source</a>
   </span>
   <a id="AutomationTestingProgram_FrameworkOptions_WarningThreshold_" data-uid="AutomationTestingProgram.FrameworkOptions.WarningThreshold*"></a>
   <h4 id="AutomationTestingProgram_FrameworkOptions_WarningThreshold" data-uid="AutomationTestingProgram.FrameworkOptions.WarningThreshold">WarningThreshold</h4>
@@ -763,7 +1259,8 @@ If not set, will use the test case data type.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int WarningThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Option(&quot;warningThreshold&quot;, Required = false, HelpText = &quot;Overrides the warning threshold set in the Testing files&quot;)]
+public int WarningThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -788,15 +1285,16 @@ If not set, will use the test case data type.
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/zzzrst/SeleniumFramework/new/ALM-Branch/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/zzzrst/AutomationTestingProgram/new/development/apiSpec/new?filename=AutomationTestingProgram_FrameworkOptions.md&amp;value=---%0Auid%3A%20AutomationTestingProgram.FrameworkOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/zzzrst/SeleniumFramework/blob/ALM-Branch/AutomationTestingProgram/src/FrameworkOptions.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AutomationTestingProgram/src/FrameworkOptions.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

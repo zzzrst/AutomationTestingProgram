@@ -1,0 +1,1779 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.InformationObject
+  commentId: T:AutomationTestingProgram.InformationObject
+  id: InformationObject
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.InformationObject.BlockTestSet
+  - AutomationTestingProgram.InformationObject.CSVLogger
+  - AutomationTestingProgram.InformationObject.ExecutionURL
+  - AutomationTestingProgram.InformationObject.FolderStructure
+  - AutomationTestingProgram.InformationObject.GetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar)
+  - AutomationTestingProgram.InformationObject.LogSaveFileLocation
+  - AutomationTestingProgram.InformationObject.NotifyEmails
+  - AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName
+  - AutomationTestingProgram.InformationObject.ReleaseEnvUri
+  - AutomationTestingProgram.InformationObject.Reporter
+  - AutomationTestingProgram.InformationObject.RespectRepeatFor
+  - AutomationTestingProgram.InformationObject.RespectRunAODAFlag
+  - AutomationTestingProgram.InformationObject.RunParameters
+  - AutomationTestingProgram.InformationObject.ScreenshotSaveLocation
+  - AutomationTestingProgram.InformationObject.SetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar,System.String)
+  - AutomationTestingProgram.InformationObject.SetUp
+  - AutomationTestingProgram.InformationObject.ShouldExecute
+  - AutomationTestingProgram.InformationObject.TestAutomationDriver
+  - AutomationTestingProgram.InformationObject.TestCaseData
+  - AutomationTestingProgram.InformationObject.TesterEmail
+  - AutomationTestingProgram.InformationObject.TesterName
+  - AutomationTestingProgram.InformationObject.TestPlanName
+  - AutomationTestingProgram.InformationObject.TestProjectName
+  - AutomationTestingProgram.InformationObject.TestSetData
+  - AutomationTestingProgram.InformationObject.TestSetName
+  - AutomationTestingProgram.InformationObject.TestStepData
+  langs:
+  - csharp
+  - vb
+  name: InformationObject
+  nameWithType: InformationObject
+  fullName: AutomationTestingProgram.InformationObject
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: InformationObject
+    path: src/InformationObject.cs
+    startLine: 23
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nAn information class that contains information needed by other objects/methods.\nAlso contains the information about enviornemnt variables created by the program.\n"
+  example: []
+  syntax:
+    content: public static class InformationObject
+    content.vb: Public Module InformationObject
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AutomationTestingProgram.InformationObject.RespectRepeatFor
+  commentId: P:AutomationTestingProgram.InformationObject.RespectRepeatFor
+  id: RespectRepeatFor
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: RespectRepeatFor
+  nameWithType: InformationObject.RespectRepeatFor
+  fullName: AutomationTestingProgram.InformationObject.RespectRepeatFor
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RespectRepeatFor
+    path: src/InformationObject.cs
+    startLine: 177
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value indicating whether to respect the repeat for value.\n"
+  example: []
+  syntax:
+    content: public static bool RespectRepeatFor { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property RespectRepeatFor As Boolean
+  overload: AutomationTestingProgram.InformationObject.RespectRepeatFor*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.RespectRunAODAFlag
+  commentId: P:AutomationTestingProgram.InformationObject.RespectRunAODAFlag
+  id: RespectRunAODAFlag
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: RespectRunAODAFlag
+  nameWithType: InformationObject.RespectRunAODAFlag
+  fullName: AutomationTestingProgram.InformationObject.RespectRunAODAFlag
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RespectRunAODAFlag
+    path: src/InformationObject.cs
+    startLine: 182
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value indicating whether to run AODA.\n"
+  example: []
+  syntax:
+    content: public static bool RespectRunAODAFlag { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property RespectRunAODAFlag As Boolean
+  overload: AutomationTestingProgram.InformationObject.RespectRunAODAFlag*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.LogSaveFileLocation
+  commentId: P:AutomationTestingProgram.InformationObject.LogSaveFileLocation
+  id: LogSaveFileLocation
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: LogSaveFileLocation
+  nameWithType: InformationObject.LogSaveFileLocation
+  fullName: AutomationTestingProgram.InformationObject.LogSaveFileLocation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: LogSaveFileLocation
+    path: src/InformationObject.cs
+    startLine: 187
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the location to save the log.\n"
+  example: []
+  syntax:
+    content: public static string LogSaveFileLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property LogSaveFileLocation As String
+  overload: AutomationTestingProgram.InformationObject.LogSaveFileLocation*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.ScreenshotSaveLocation
+  commentId: P:AutomationTestingProgram.InformationObject.ScreenshotSaveLocation
+  id: ScreenshotSaveLocation
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: ScreenshotSaveLocation
+  nameWithType: InformationObject.ScreenshotSaveLocation
+  fullName: AutomationTestingProgram.InformationObject.ScreenshotSaveLocation
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ScreenshotSaveLocation
+    path: src/InformationObject.cs
+    startLine: 192
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the location to save the screenshot.\n"
+  example: []
+  syntax:
+    content: public static string ScreenshotSaveLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property ScreenshotSaveLocation As String
+  overload: AutomationTestingProgram.InformationObject.ScreenshotSaveLocation*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.CSVLogger
+  commentId: P:AutomationTestingProgram.InformationObject.CSVLogger
+  id: CSVLogger
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: CSVLogger
+  nameWithType: InformationObject.CSVLogger
+  fullName: AutomationTestingProgram.InformationObject.CSVLogger
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: CSVLogger
+    path: src/InformationObject.cs
+    startLine: 197
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the location to save the CSV file.\n"
+  example: []
+  syntax:
+    content: public static CSVLogger CSVLogger { get; set; }
+    parameters: []
+    return:
+      type: AutomationTestingProgram.CSVLogger
+    content.vb: Public Shared Property CSVLogger As CSVLogger
+  overload: AutomationTestingProgram.InformationObject.CSVLogger*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TestSetData
+  commentId: P:AutomationTestingProgram.InformationObject.TestSetData
+  id: TestSetData
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TestSetData
+  nameWithType: InformationObject.TestSetData
+  fullName: AutomationTestingProgram.InformationObject.TestSetData
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetData
+    path: src/InformationObject.cs
+    startLine: 202
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the object to get the test set data from.\n"
+  example: []
+  syntax:
+    content: public static ITestSetData TestSetData { get; set; }
+    parameters: []
+    return:
+      type: AutomationTestingProgram.TestingData.ITestSetData
+    content.vb: Public Shared Property TestSetData As ITestSetData
+  overload: AutomationTestingProgram.InformationObject.TestSetData*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TestCaseData
+  commentId: P:AutomationTestingProgram.InformationObject.TestCaseData
+  id: TestCaseData
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TestCaseData
+  nameWithType: InformationObject.TestCaseData
+  fullName: AutomationTestingProgram.InformationObject.TestCaseData
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestCaseData
+    path: src/InformationObject.cs
+    startLine: 207
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the object to get the test case data from.\n"
+  example: []
+  syntax:
+    content: public static ITestCaseData TestCaseData { get; set; }
+    parameters: []
+    return:
+      type: AutomationTestingProgram.TestingData.ITestCaseData
+    content.vb: Public Shared Property TestCaseData As ITestCaseData
+  overload: AutomationTestingProgram.InformationObject.TestCaseData*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TestStepData
+  commentId: P:AutomationTestingProgram.InformationObject.TestStepData
+  id: TestStepData
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TestStepData
+  nameWithType: InformationObject.TestStepData
+  fullName: AutomationTestingProgram.InformationObject.TestStepData
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestStepData
+    path: src/InformationObject.cs
+    startLine: 212
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the object to get the test step data from.\n"
+  example: []
+  syntax:
+    content: public static ITestStepData TestStepData { get; set; }
+    parameters: []
+    return:
+      type: AutomationTestingProgram.TestingData.ITestStepData
+    content.vb: Public Shared Property TestStepData As ITestStepData
+  overload: AutomationTestingProgram.InformationObject.TestStepData*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TestAutomationDriver
+  commentId: P:AutomationTestingProgram.InformationObject.TestAutomationDriver
+  id: TestAutomationDriver
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TestAutomationDriver
+  nameWithType: InformationObject.TestAutomationDriver
+  fullName: AutomationTestingProgram.InformationObject.TestAutomationDriver
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestAutomationDriver
+    path: src/InformationObject.cs
+    startLine: 217
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the testing driver to run the testing program on.\n"
+  example: []
+  syntax:
+    content: public static ITestingDriver TestAutomationDriver { get; set; }
+    parameters: []
+    return:
+      type: TestingDriver.ITestingDriver
+    content.vb: Public Shared Property TestAutomationDriver As ITestingDriver
+  overload: AutomationTestingProgram.InformationObject.TestAutomationDriver*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.Reporter
+  commentId: P:AutomationTestingProgram.InformationObject.Reporter
+  id: Reporter
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: Reporter
+  nameWithType: InformationObject.Reporter
+  fullName: AutomationTestingProgram.InformationObject.Reporter
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Reporter
+    path: src/InformationObject.cs
+    startLine: 222
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the reporter object.\n"
+  example: []
+  syntax:
+    content: public static Reporter Reporter { get; set; }
+    parameters: []
+    return:
+      type: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+    content.vb: Public Shared Property Reporter As Reporter
+  overload: AutomationTestingProgram.InformationObject.Reporter*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.RunParameters
+  commentId: P:AutomationTestingProgram.InformationObject.RunParameters
+  id: RunParameters
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: RunParameters
+  nameWithType: InformationObject.RunParameters
+  fullName: AutomationTestingProgram.InformationObject.RunParameters
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RunParameters
+    path: src/InformationObject.cs
+    startLine: 227
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a run parameter.\n"
+  example: []
+  syntax:
+    content: public static Dictionary<string, string> RunParameters { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public Shared Property RunParameters As Dictionary(Of String, String)
+  overload: AutomationTestingProgram.InformationObject.RunParameters*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TestSetName
+  commentId: P:AutomationTestingProgram.InformationObject.TestSetName
+  id: TestSetName
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TestSetName
+  nameWithType: InformationObject.TestSetName
+  fullName: AutomationTestingProgram.InformationObject.TestSetName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetName
+    path: src/InformationObject.cs
+    startLine: 232
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the test set name.\n"
+  example: []
+  syntax:
+    content: public static string TestSetName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property TestSetName As String
+  overload: AutomationTestingProgram.InformationObject.TestSetName*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.ShouldExecute
+  commentId: P:AutomationTestingProgram.InformationObject.ShouldExecute
+  id: ShouldExecute
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: ShouldExecute
+  nameWithType: InformationObject.ShouldExecute
+  fullName: AutomationTestingProgram.InformationObject.ShouldExecute
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ShouldExecute
+    path: src/InformationObject.cs
+    startLine: 237
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value whether or not this program should execute.\n"
+  example: []
+  syntax:
+    content: public static bool ShouldExecute { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property ShouldExecute As Boolean
+  overload: AutomationTestingProgram.InformationObject.ShouldExecute*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.BlockTestSet
+  commentId: P:AutomationTestingProgram.InformationObject.BlockTestSet
+  id: BlockTestSet
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: BlockTestSet
+  nameWithType: InformationObject.BlockTestSet
+  fullName: AutomationTestingProgram.InformationObject.BlockTestSet
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: BlockTestSet
+    path: src/InformationObject.cs
+    startLine: 242
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value whether or not this program should execute.\n"
+  example: []
+  syntax:
+    content: public static bool BlockTestSet { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property BlockTestSet As Boolean
+  overload: AutomationTestingProgram.InformationObject.BlockTestSet*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.NotifyEmails
+  commentId: P:AutomationTestingProgram.InformationObject.NotifyEmails
+  id: NotifyEmails
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: NotifyEmails
+  nameWithType: InformationObject.NotifyEmails
+  fullName: AutomationTestingProgram.InformationObject.NotifyEmails
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: NotifyEmails
+    path: src/InformationObject.cs
+    startLine: 247
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a list indicating the people to notify after failure.\n"
+  example: []
+  syntax:
+    content: public static List<string> NotifyEmails { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Shared Property NotifyEmails As List(Of String)
+  overload: AutomationTestingProgram.InformationObject.NotifyEmails*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName
+  commentId: P:AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName
+  id: OriginalTestSetDirectoryName
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: OriginalTestSetDirectoryName
+  nameWithType: InformationObject.OriginalTestSetDirectoryName
+  fullName: AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: OriginalTestSetDirectoryName
+    path: src/InformationObject.cs
+    startLine: 252
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a list indicating the people to notify after failure.\n"
+  example: []
+  syntax:
+    content: public static string OriginalTestSetDirectoryName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property OriginalTestSetDirectoryName As String
+  overload: AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.ExecutionURL
+  commentId: P:AutomationTestingProgram.InformationObject.ExecutionURL
+  id: ExecutionURL
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: ExecutionURL
+  nameWithType: InformationObject.ExecutionURL
+  fullName: AutomationTestingProgram.InformationObject.ExecutionURL
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ExecutionURL
+    path: src/InformationObject.cs
+    startLine: 257
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the URL corresponding to the DevOps execution.\n"
+  example: []
+  syntax:
+    content: public static string ExecutionURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property ExecutionURL As String
+  overload: AutomationTestingProgram.InformationObject.ExecutionURL*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TestPlanName
+  commentId: P:AutomationTestingProgram.InformationObject.TestPlanName
+  id: TestPlanName
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TestPlanName
+  nameWithType: InformationObject.TestPlanName
+  fullName: AutomationTestingProgram.InformationObject.TestPlanName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestPlanName
+    path: src/InformationObject.cs
+    startLine: 262
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the test plan name corresponding to the execution.\n"
+  example: []
+  syntax:
+    content: public static string TestPlanName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property TestPlanName As String
+  overload: AutomationTestingProgram.InformationObject.TestPlanName*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.FolderStructure
+  commentId: P:AutomationTestingProgram.InformationObject.FolderStructure
+  id: FolderStructure
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: FolderStructure
+  nameWithType: InformationObject.FolderStructure
+  fullName: AutomationTestingProgram.InformationObject.FolderStructure
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: FolderStructure
+    path: src/InformationObject.cs
+    startLine: 267
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the test suite folder structure for the execution when reporting to DevOps.\n"
+  example: []
+  syntax:
+    content: public static string FolderStructure { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property FolderStructure As String
+  overload: AutomationTestingProgram.InformationObject.FolderStructure*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TestProjectName
+  commentId: P:AutomationTestingProgram.InformationObject.TestProjectName
+  id: TestProjectName
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TestProjectName
+  nameWithType: InformationObject.TestProjectName
+  fullName: AutomationTestingProgram.InformationObject.TestProjectName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestProjectName
+    path: src/InformationObject.cs
+    startLine: 272
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the test plan name corresponding to the execution.\n"
+  example: []
+  syntax:
+    content: public static string TestProjectName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property TestProjectName As String
+  overload: AutomationTestingProgram.InformationObject.TestProjectName*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TesterEmail
+  commentId: P:AutomationTestingProgram.InformationObject.TesterEmail
+  id: TesterEmail
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TesterEmail
+  nameWithType: InformationObject.TesterEmail
+  fullName: AutomationTestingProgram.InformationObject.TesterEmail
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TesterEmail
+    path: src/InformationObject.cs
+    startLine: 277
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  syntax:
+    content: public static string TesterEmail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property TesterEmail As String
+  overload: AutomationTestingProgram.InformationObject.TesterEmail*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.TesterName
+  commentId: P:AutomationTestingProgram.InformationObject.TesterName
+  id: TesterName
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: TesterName
+  nameWithType: InformationObject.TesterName
+  fullName: AutomationTestingProgram.InformationObject.TesterName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TesterName
+    path: src/InformationObject.cs
+    startLine: 281
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  syntax:
+    content: public static string TesterName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property TesterName As String
+  overload: AutomationTestingProgram.InformationObject.TesterName*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.ReleaseEnvUri
+  commentId: P:AutomationTestingProgram.InformationObject.ReleaseEnvUri
+  id: ReleaseEnvUri
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: ReleaseEnvUri
+  nameWithType: InformationObject.ReleaseEnvUri
+  fullName: AutomationTestingProgram.InformationObject.ReleaseEnvUri
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ReleaseEnvUri
+    path: src/InformationObject.cs
+    startLine: 286
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  syntax:
+    content: public static string ReleaseEnvUri { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property ReleaseEnvUri As String
+  overload: AutomationTestingProgram.InformationObject.ReleaseEnvUri*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.SetUp
+  commentId: M:AutomationTestingProgram.InformationObject.SetUp
+  id: SetUp
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: SetUp()
+  nameWithType: InformationObject.SetUp()
+  fullName: AutomationTestingProgram.InformationObject.SetUp()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetUp
+    path: src/InformationObject.cs
+    startLine: 291
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nSets up all the variables and paths. \n"
+  example: []
+  syntax:
+    content: public static void SetUp()
+    content.vb: Public Shared Sub SetUp
+  overload: AutomationTestingProgram.InformationObject.SetUp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.SetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar,System.String)
+  commentId: M:AutomationTestingProgram.InformationObject.SetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar,System.String)
+  id: SetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar,System.String)
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: SetEnvironmentVariable(InformationObject.EnvVar, String)
+  nameWithType: InformationObject.SetEnvironmentVariable(InformationObject.EnvVar, String)
+  fullName: AutomationTestingProgram.InformationObject.SetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetEnvironmentVariable
+    path: src/InformationObject.cs
+    startLine: 346
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nSets the given enviornemnt variable with the given value.\n"
+  example: []
+  syntax:
+    content: public static void SetEnvironmentVariable(InformationObject.EnvVar variable, string value)
+    parameters:
+    - id: variable
+      type: AutomationTestingProgram.InformationObject.EnvVar
+      description: The Environment Variable to set.
+    - id: value
+      type: System.String
+      description: What Value to set it.
+    content.vb: Public Shared Sub SetEnvironmentVariable(variable As InformationObject.EnvVar, value As String)
+  overload: AutomationTestingProgram.InformationObject.SetEnvironmentVariable*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.InformationObject.GetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar)
+  commentId: M:AutomationTestingProgram.InformationObject.GetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar)
+  id: GetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar)
+  parent: AutomationTestingProgram.InformationObject
+  langs:
+  - csharp
+  - vb
+  name: GetEnvironmentVariable(InformationObject.EnvVar)
+  nameWithType: InformationObject.GetEnvironmentVariable(InformationObject.EnvVar)
+  fullName: AutomationTestingProgram.InformationObject.GetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/InformationObject.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetEnvironmentVariable
+    path: src/InformationObject.cs
+    startLine: 357
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the given environment variable.\n"
+  example: []
+  syntax:
+    content: public static string GetEnvironmentVariable(InformationObject.EnvVar variable)
+    parameters:
+    - id: variable
+      type: AutomationTestingProgram.InformationObject.EnvVar
+      description: Variable to return.
+    return:
+      type: System.String
+      description: The value of the variable.
+    content.vb: Public Shared Function GetEnvironmentVariable(variable As InformationObject.EnvVar) As String
+  overload: AutomationTestingProgram.InformationObject.GetEnvironmentVariable*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.InformationObject.RespectRepeatFor*
+  commentId: Overload:AutomationTestingProgram.InformationObject.RespectRepeatFor
+  name: RespectRepeatFor
+  nameWithType: InformationObject.RespectRepeatFor
+  fullName: AutomationTestingProgram.InformationObject.RespectRepeatFor
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestingProgram.InformationObject.RespectRunAODAFlag*
+  commentId: Overload:AutomationTestingProgram.InformationObject.RespectRunAODAFlag
+  name: RespectRunAODAFlag
+  nameWithType: InformationObject.RespectRunAODAFlag
+  fullName: AutomationTestingProgram.InformationObject.RespectRunAODAFlag
+- uid: AutomationTestingProgram.InformationObject.LogSaveFileLocation*
+  commentId: Overload:AutomationTestingProgram.InformationObject.LogSaveFileLocation
+  name: LogSaveFileLocation
+  nameWithType: InformationObject.LogSaveFileLocation
+  fullName: AutomationTestingProgram.InformationObject.LogSaveFileLocation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.InformationObject.ScreenshotSaveLocation*
+  commentId: Overload:AutomationTestingProgram.InformationObject.ScreenshotSaveLocation
+  name: ScreenshotSaveLocation
+  nameWithType: InformationObject.ScreenshotSaveLocation
+  fullName: AutomationTestingProgram.InformationObject.ScreenshotSaveLocation
+- uid: AutomationTestingProgram.InformationObject.CSVLogger*
+  commentId: Overload:AutomationTestingProgram.InformationObject.CSVLogger
+  name: CSVLogger
+  nameWithType: InformationObject.CSVLogger
+  fullName: AutomationTestingProgram.InformationObject.CSVLogger
+- uid: AutomationTestingProgram.CSVLogger
+  commentId: T:AutomationTestingProgram.CSVLogger
+  parent: AutomationTestingProgram
+  name: CSVLogger
+  nameWithType: CSVLogger
+  fullName: AutomationTestingProgram.CSVLogger
+- uid: AutomationTestingProgram.InformationObject.TestSetData*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TestSetData
+  name: TestSetData
+  nameWithType: InformationObject.TestSetData
+  fullName: AutomationTestingProgram.InformationObject.TestSetData
+- uid: AutomationTestingProgram.TestingData.ITestSetData
+  commentId: T:AutomationTestingProgram.TestingData.ITestSetData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestSetData
+  nameWithType: ITestSetData
+  fullName: AutomationTestingProgram.TestingData.ITestSetData
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.InformationObject.TestCaseData*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TestCaseData
+  name: TestCaseData
+  nameWithType: InformationObject.TestCaseData
+  fullName: AutomationTestingProgram.InformationObject.TestCaseData
+- uid: AutomationTestingProgram.TestingData.ITestCaseData
+  commentId: T:AutomationTestingProgram.TestingData.ITestCaseData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestCaseData
+  nameWithType: ITestCaseData
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData
+- uid: AutomationTestingProgram.InformationObject.TestStepData*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TestStepData
+  name: TestStepData
+  nameWithType: InformationObject.TestStepData
+  fullName: AutomationTestingProgram.InformationObject.TestStepData
+- uid: AutomationTestingProgram.TestingData.ITestStepData
+  commentId: T:AutomationTestingProgram.TestingData.ITestStepData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestStepData
+  nameWithType: ITestStepData
+  fullName: AutomationTestingProgram.TestingData.ITestStepData
+- uid: AutomationTestingProgram.InformationObject.TestAutomationDriver*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TestAutomationDriver
+  name: TestAutomationDriver
+  nameWithType: InformationObject.TestAutomationDriver
+  fullName: AutomationTestingProgram.InformationObject.TestAutomationDriver
+- uid: TestingDriver.ITestingDriver
+  commentId: T:TestingDriver.ITestingDriver
+  parent: TestingDriver
+  name: ITestingDriver
+  nameWithType: ITestingDriver
+  fullName: TestingDriver.ITestingDriver
+- uid: TestingDriver
+  commentId: N:TestingDriver
+  name: TestingDriver
+  nameWithType: TestingDriver
+  fullName: TestingDriver
+- uid: AutomationTestingProgram.InformationObject.Reporter*
+  commentId: Overload:AutomationTestingProgram.InformationObject.Reporter
+  name: Reporter
+  nameWithType: InformationObject.Reporter
+  fullName: AutomationTestingProgram.InformationObject.Reporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: Reporter
+  nameWithType: Reporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  commentId: N:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  nameWithType: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+- uid: AutomationTestingProgram.InformationObject.RunParameters*
+  commentId: Overload:AutomationTestingProgram.InformationObject.RunParameters
+  name: RunParameters
+  nameWithType: InformationObject.RunParameters
+  fullName: AutomationTestingProgram.InformationObject.RunParameters
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: AutomationTestingProgram.InformationObject.TestSetName*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TestSetName
+  name: TestSetName
+  nameWithType: InformationObject.TestSetName
+  fullName: AutomationTestingProgram.InformationObject.TestSetName
+- uid: AutomationTestingProgram.InformationObject.ShouldExecute*
+  commentId: Overload:AutomationTestingProgram.InformationObject.ShouldExecute
+  name: ShouldExecute
+  nameWithType: InformationObject.ShouldExecute
+  fullName: AutomationTestingProgram.InformationObject.ShouldExecute
+- uid: AutomationTestingProgram.InformationObject.BlockTestSet*
+  commentId: Overload:AutomationTestingProgram.InformationObject.BlockTestSet
+  name: BlockTestSet
+  nameWithType: InformationObject.BlockTestSet
+  fullName: AutomationTestingProgram.InformationObject.BlockTestSet
+- uid: AutomationTestingProgram.InformationObject.NotifyEmails*
+  commentId: Overload:AutomationTestingProgram.InformationObject.NotifyEmails
+  name: NotifyEmails
+  nameWithType: InformationObject.NotifyEmails
+  fullName: AutomationTestingProgram.InformationObject.NotifyEmails
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName*
+  commentId: Overload:AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName
+  name: OriginalTestSetDirectoryName
+  nameWithType: InformationObject.OriginalTestSetDirectoryName
+  fullName: AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName
+- uid: AutomationTestingProgram.InformationObject.ExecutionURL*
+  commentId: Overload:AutomationTestingProgram.InformationObject.ExecutionURL
+  name: ExecutionURL
+  nameWithType: InformationObject.ExecutionURL
+  fullName: AutomationTestingProgram.InformationObject.ExecutionURL
+- uid: AutomationTestingProgram.InformationObject.TestPlanName*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TestPlanName
+  name: TestPlanName
+  nameWithType: InformationObject.TestPlanName
+  fullName: AutomationTestingProgram.InformationObject.TestPlanName
+- uid: AutomationTestingProgram.InformationObject.FolderStructure*
+  commentId: Overload:AutomationTestingProgram.InformationObject.FolderStructure
+  name: FolderStructure
+  nameWithType: InformationObject.FolderStructure
+  fullName: AutomationTestingProgram.InformationObject.FolderStructure
+- uid: AutomationTestingProgram.InformationObject.TestProjectName*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TestProjectName
+  name: TestProjectName
+  nameWithType: InformationObject.TestProjectName
+  fullName: AutomationTestingProgram.InformationObject.TestProjectName
+- uid: AutomationTestingProgram.InformationObject.TesterEmail*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TesterEmail
+  name: TesterEmail
+  nameWithType: InformationObject.TesterEmail
+  fullName: AutomationTestingProgram.InformationObject.TesterEmail
+- uid: AutomationTestingProgram.InformationObject.TesterName*
+  commentId: Overload:AutomationTestingProgram.InformationObject.TesterName
+  name: TesterName
+  nameWithType: InformationObject.TesterName
+  fullName: AutomationTestingProgram.InformationObject.TesterName
+- uid: AutomationTestingProgram.InformationObject.ReleaseEnvUri*
+  commentId: Overload:AutomationTestingProgram.InformationObject.ReleaseEnvUri
+  name: ReleaseEnvUri
+  nameWithType: InformationObject.ReleaseEnvUri
+  fullName: AutomationTestingProgram.InformationObject.ReleaseEnvUri
+- uid: AutomationTestingProgram.InformationObject.SetUp*
+  commentId: Overload:AutomationTestingProgram.InformationObject.SetUp
+  name: SetUp
+  nameWithType: InformationObject.SetUp
+  fullName: AutomationTestingProgram.InformationObject.SetUp
+- uid: AutomationTestingProgram.InformationObject.SetEnvironmentVariable*
+  commentId: Overload:AutomationTestingProgram.InformationObject.SetEnvironmentVariable
+  name: SetEnvironmentVariable
+  nameWithType: InformationObject.SetEnvironmentVariable
+  fullName: AutomationTestingProgram.InformationObject.SetEnvironmentVariable
+- uid: AutomationTestingProgram.InformationObject.EnvVar
+  commentId: T:AutomationTestingProgram.InformationObject.EnvVar
+  parent: AutomationTestingProgram
+  name: InformationObject.EnvVar
+  nameWithType: InformationObject.EnvVar
+  fullName: AutomationTestingProgram.InformationObject.EnvVar
+- uid: AutomationTestingProgram.InformationObject.GetEnvironmentVariable*
+  commentId: Overload:AutomationTestingProgram.InformationObject.GetEnvironmentVariable
+  name: GetEnvironmentVariable
+  nameWithType: InformationObject.GetEnvironmentVariable
+  fullName: AutomationTestingProgram.InformationObject.GetEnvironmentVariable

@@ -1,0 +1,720 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  commentId: T:AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  id: CSVEnvironmentGetter
+  parent: AutomationTestinProgram.Helper
+  children:
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName(System.String)
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL(System.String)
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost(System.String)
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted(System.String)
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword(System.String)
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort(System.String)
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername(System.String)
+  - AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword(System.String)
+  langs:
+  - csharp
+  - vb
+  name: CSVEnvironmentGetter
+  nameWithType: CSVEnvironmentGetter
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: CSVEnvironmentGetter
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 18
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nClass to get environment information from a csv file\n"
+  example: []
+  syntax:
+    content: public class CSVEnvironmentGetter
+    content.vb: Public Class CSVEnvironmentGetter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL(System.String)
+  id: GetEnvironmentURL(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: GetEnvironmentURL(String)
+  nameWithType: CSVEnvironmentGetter.GetEnvironmentURL(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetEnvironmentURL
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 43
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nTries to grab the Environment URL from the environment url csv file\n"
+  example: []
+  syntax:
+    content: public static string GetEnvironmentURL(string env)
+    parameters:
+    - id: env
+      type: System.String
+    return:
+      type: System.String
+      description: The provided URL for the environment given.
+    content.vb: Public Shared Function GetEnvironmentURL(env As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost(System.String)
+  id: GetHost(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: GetHost(String)
+  nameWithType: CSVEnvironmentGetter.GetHost(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetHost
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 60
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nTries to grab the host from the environment csv file.\n"
+  example: []
+  syntax:
+    content: public static string GetHost(string env)
+    parameters:
+    - id: env
+      type: System.String
+    return:
+      type: System.String
+      description: The provided password for the environment given.
+    content.vb: Public Shared Function GetHost(env As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort(System.String)
+  id: GetPort(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: GetPort(String)
+  nameWithType: CSVEnvironmentGetter.GetPort(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetPort
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 77
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nTries to grab the port from the environment url csv file.\n"
+  example: []
+  syntax:
+    content: public static string GetPort(string env)
+    parameters:
+    - id: env
+      type: System.String
+    return:
+      type: System.String
+      description: The provided password for the environment given.
+    content.vb: Public Shared Function GetPort(env As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted(System.String)
+  id: GetIsEncrypted(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: GetIsEncrypted(String)
+  nameWithType: CSVEnvironmentGetter.GetIsEncrypted(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetIsEncrypted
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 94
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nTries to determine if encrypted from the environment list csv file.\n"
+  example: []
+  syntax:
+    content: public static string GetIsEncrypted(string env)
+    parameters:
+    - id: env
+      type: System.String
+    return:
+      type: System.String
+      description: The provided password for the environment given.
+    content.vb: Public Shared Function GetIsEncrypted(env As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername(System.String)
+  id: GetUsername(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: GetUsername(String)
+  nameWithType: CSVEnvironmentGetter.GetUsername(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetUsername
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 111
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nTries to grab the username from the environment url csv file.\n"
+  example: []
+  syntax:
+    content: public static string GetUsername(string env)
+    parameters:
+    - id: env
+      type: System.String
+    return:
+      type: System.String
+      description: The provided password for the environment given.
+    content.vb: Public Shared Function GetUsername(env As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName(System.String)
+  id: GetDBName(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: GetDBName(String)
+  nameWithType: CSVEnvironmentGetter.GetDBName(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetDBName
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 128
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nTries to grab the db name from the environment url csv file.\n"
+  example: []
+  syntax:
+    content: public static string GetDBName(string env)
+    parameters:
+    - id: env
+      type: System.String
+    return:
+      type: System.String
+      description: The provided password for the environment given.
+    content.vb: Public Shared Function GetDBName(env As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword(System.String)
+  id: GetPassword(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: GetPassword(String)
+  nameWithType: CSVEnvironmentGetter.GetPassword(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetPassword
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 145
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nTries to grab the passowrd from the environment url csv file.\n"
+  example: []
+  syntax:
+    content: public static string GetPassword(string env)
+    parameters:
+    - id: env
+      type: System.String
+    return:
+      type: System.String
+      description: The provided password for the environment given.
+    content.vb: Public Shared Function GetPassword(env As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword(System.String)
+  commentId: M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword(System.String)
+  id: QueryKeychainAccountPassword(System.String)
+  parent: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+  langs:
+  - csharp
+  - vb
+  name: QueryKeychainAccountPassword(String)
+  nameWithType: CSVEnvironmentGetter.QueryKeychainAccountPassword(String)
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: QueryKeychainAccountPassword
+    path: src/Helper/CSVEnvironmentGetter.cs
+    startLine: 163
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestinProgram.Helper
+  summary: "\nQueries password of a given username from the Keychain accounts spreadsheet.\n"
+  example: []
+  syntax:
+    content: public static string QueryKeychainAccountPassword(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: Username to find password of.
+    return:
+      type: System.String
+      description: Password of the Keychain account.
+    content.vb: Public Shared Function QueryKeychainAccountPassword(username As String) As String
+  overload: AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AutomationTestinProgram.Helper
+  commentId: N:AutomationTestinProgram.Helper
+  name: AutomationTestinProgram.Helper
+  nameWithType: AutomationTestinProgram.Helper
+  fullName: AutomationTestinProgram.Helper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL
+  name: GetEnvironmentURL
+  nameWithType: CSVEnvironmentGetter.GetEnvironmentURL
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost
+  name: GetHost
+  nameWithType: CSVEnvironmentGetter.GetHost
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort
+  name: GetPort
+  nameWithType: CSVEnvironmentGetter.GetPort
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted
+  name: GetIsEncrypted
+  nameWithType: CSVEnvironmentGetter.GetIsEncrypted
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername
+  name: GetUsername
+  nameWithType: CSVEnvironmentGetter.GetUsername
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName
+  name: GetDBName
+  nameWithType: CSVEnvironmentGetter.GetDBName
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword
+  name: GetPassword
+  nameWithType: CSVEnvironmentGetter.GetPassword
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword
+- uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword*
+  commentId: Overload:AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword
+  name: QueryKeychainAccountPassword
+  nameWithType: CSVEnvironmentGetter.QueryKeychainAccountPassword
+  fullName: AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword

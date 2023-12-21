@@ -41,45 +41,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="ALMProjectEntityFieldMapping.xml" />
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <!--<PackageReference Include="AxeAccessibilityDriver" Version="2.1.7732.10828" />-->
     <PackageReference Include="ComparePDF" Version="2.0.7703.11150" />
     <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7732.11738" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
     <PackageReference Include="System.Management" Version="8.0.0" />
     <PackageReference Include="TextInteractor" Version="1.2.7725.10792" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AxeAccessibilityDriver\AxeAccessibilityDriver\AxeAccessibilityDriver.csproj" />
+    <ProjectReference Include="..\..\AxeAccessibilityDriver\AxeAccessibilityDriver\AxeAccessibilityDriver.csproj" />
+    <ProjectReference Include="..\AutomationTestingProgram\AutomationTestingProgram.csproj" />
   </ItemGroup>
 
   <ItemGroup>

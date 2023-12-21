@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29709.97
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3251C2C4-6619-4702-86AE-74F780EC150D}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,6 +15,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoUpdater", "AutoUpdater\AutoUpdater.csproj", "{7DB9CC10-7E4F-44E7-B809-B3D76ED68F6B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALMConnector", "ALMConnector\ALMConnector.csproj", "{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingDriver", "..\TestingDrivers\TestingDriver\TestingDriver.csproj", "{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeAccessibilityDriver", "..\AxeAccessibilityDriver\AxeAccessibilityDriver\AxeAccessibilityDriver.csproj", "{0D1928B6-8D28-492A-883D-3B94E270A80D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +60,22 @@ Global
 		{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}.Release|x86.ActiveCfg = Release|x86
 		{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}.Release|x86.Build.0 = Release|x86
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|x86.ActiveCfg = Debug|x86
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|x86.Build.0 = Debug|x86
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|x86.ActiveCfg = Release|x86
+		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|x86.Build.0 = Release|x86
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|x86.Build.0 = Debug|Any CPU
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|x86.ActiveCfg = Release|Any CPU
+		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

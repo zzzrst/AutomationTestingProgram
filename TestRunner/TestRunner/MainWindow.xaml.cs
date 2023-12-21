@@ -54,7 +54,7 @@ namespace TestRunner
             }
 
             // mandatory fields
-            string azurePAT = "****";
+            string azurePAT = "664dm27nsqmbt3dpuvauzkazu2ak5tdkhtknhzkaa6gokryhki5q";
 
             string env = this.EnvironmentValue.Text;
             string browser = this.BrowserPicker.Text;

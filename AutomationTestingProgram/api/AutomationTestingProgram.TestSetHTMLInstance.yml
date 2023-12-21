@@ -1,0 +1,2258 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestSetHTMLInstance
+  commentId: T:AutomationTestingProgram.TestSetHTMLInstance
+  id: TestSetHTMLInstance
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.TestSetHTMLInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  - AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus(System.String)
+  - AutomationTestingProgram.TestSetHTMLInstance.Attachments
+  - AutomationTestingProgram.TestSetHTMLInstance.Baseline
+  - AutomationTestingProgram.TestSetHTMLInstance.buildNumber
+  - AutomationTestingProgram.TestSetHTMLInstance.Description
+  - AutomationTestingProgram.TestSetHTMLInstance.EmailList
+  - AutomationTestingProgram.TestSetHTMLInstance.EXECFINISHED
+  - AutomationTestingProgram.TestSetHTMLInstance.EXECPASSED
+  - AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL
+  - AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList
+  - AutomationTestingProgram.TestSetHTMLInstance.Finished
+  - AutomationTestingProgram.TestSetHTMLInstance.FolderPath
+  - AutomationTestingProgram.TestSetHTMLInstance.ID
+  - AutomationTestingProgram.TestSetHTMLInstance.Name
+  - AutomationTestingProgram.TestSetHTMLInstance.OrgName
+  - AutomationTestingProgram.TestSetHTMLInstance.PlanID
+  - AutomationTestingProgram.TestSetHTMLInstance.PlanName
+  - AutomationTestingProgram.TestSetHTMLInstance.Project
+  - AutomationTestingProgram.TestSetHTMLInstance.RunID
+  - AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus(System.String,System.String)
+  - AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult(System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.Int32)
+  - AutomationTestingProgram.TestSetHTMLInstance.Started
+  - AutomationTestingProgram.TestSetHTMLInstance.Steps
+  - AutomationTestingProgram.TestSetHTMLInstance.TargetCycle
+  - AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions
+  - AutomationTestingProgram.TestSetHTMLInstance.TestSetDetails
+  - AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalFailed
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalNA
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalPassed
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases
+  - AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered
+  langs:
+  - csharp
+  - vb
+  name: TestSetHTMLInstance
+  nameWithType: TestSetHTMLInstance
+  fullName: AutomationTestingProgram.TestSetHTMLInstance
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetHTMLInstance
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 17
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nA class to represent a test case instance on ALM.\n"
+  example: []
+  syntax:
+    content: public class TestSetHTMLInstance
+    content.vb: Public Class TestSetHTMLInstance
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.TestSetHTMLInstance.EXECFINISHED
+  commentId: F:AutomationTestingProgram.TestSetHTMLInstance.EXECFINISHED
+  id: EXECFINISHED
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: EXECFINISHED
+  nameWithType: TestSetHTMLInstance.EXECFINISHED
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.EXECFINISHED
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: EXECFINISHED
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 22
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nDefines the EXEC_FINISHED.\n"
+  example: []
+  syntax:
+    content: public static readonly int EXECFINISHED
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly EXECFINISHED As Integer
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.EXECPASSED
+  commentId: F:AutomationTestingProgram.TestSetHTMLInstance.EXECPASSED
+  id: EXECPASSED
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: EXECPASSED
+  nameWithType: TestSetHTMLInstance.EXECPASSED
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.EXECPASSED
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: EXECPASSED
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 27
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nDefines the EXEC_PASSED.\n"
+  example: []
+  syntax:
+    content: public static readonly int EXECPASSED
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly EXECPASSED As Integer
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.buildNumber
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.buildNumber
+  id: buildNumber
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: buildNumber
+  nameWithType: TestSetHTMLInstance.buildNumber
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.buildNumber
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: buildNumber
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 32
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe build number associated.\n"
+  example: []
+  syntax:
+    content: public static string buildNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property buildNumber As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.buildNumber*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Description
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Description
+  id: Description
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TestSetHTMLInstance.Description
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Description
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Description
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 37
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe description for this test set.\n"
+  example: []
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Baseline
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Baseline
+  id: Baseline
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Baseline
+  nameWithType: TestSetHTMLInstance.Baseline
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Baseline
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Baseline
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 42
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe description for this test set.\n"
+  example: []
+  syntax:
+    content: public string Baseline { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Baseline As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Baseline*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TargetCycle
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TargetCycle
+  id: TargetCycle
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TargetCycle
+  nameWithType: TestSetHTMLInstance.TargetCycle
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TargetCycle
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TargetCycle
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 47
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe description for this test set.\n"
+  example: []
+  syntax:
+    content: public string TargetCycle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TargetCycle As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TargetCycle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.FolderPath
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.FolderPath
+  id: FolderPath
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: FolderPath
+  nameWithType: TestSetHTMLInstance.FolderPath
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.FolderPath
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: FolderPath
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 52
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe location of the folder path. \n"
+  example: []
+  syntax:
+    content: public string FolderPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FolderPath As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.FolderPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat
+  id: TestSetExecutionFormat
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TestSetExecutionFormat
+  nameWithType: TestSetHTMLInstance.TestSetExecutionFormat
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetExecutionFormat
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 57
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe location of the folder path. \n"
+  example: []
+  syntax:
+    content: public string TestSetExecutionFormat { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TestSetExecutionFormat As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Attachments
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Attachments
+  id: Attachments
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Attachments
+  nameWithType: TestSetHTMLInstance.Attachments
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Attachments
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Attachments
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 62
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the attachments. It has to be List of objects since if string, the backend will not take it... (it has to be object instead of string array).\n"
+  example: []
+  syntax:
+    content: public List<object> Attachments { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Object}
+    content.vb: Public Property Attachments As List(Of Object)
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Attachments*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TestSetDetails
+  commentId: F:AutomationTestingProgram.TestSetHTMLInstance.TestSetDetails
+  id: TestSetDetails
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TestSetDetails
+  nameWithType: TestSetHTMLInstance.TestSetDetails
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TestSetDetails
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestSetDetails
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 65
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  syntax:
+    content: public Dictionary<string, string> TestSetDetails
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public TestSetDetails As Dictionary(Of String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:AutomationTestingProgram.TestSetHTMLInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)'
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TestSetHTMLInstance(String, String, String, String, String, String, DateTime, DateTime, String, String, String, String, String, String, String, String, String, String, String, String, String, String)
+  nameWithType: TestSetHTMLInstance.TestSetHTMLInstance(String, String, String, String, String, String, DateTime, DateTime, String, String, String, String, String, String, String, String, String, String, String, String, String, String)
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TestSetHTMLInstance(System.String, System.String, System.String, System.String, System.String, System.String, System.DateTime, System.DateTime, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 81
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nInitializes a new instance of the <see cref=\"!:TestSetInstance\"></see> class.\n"
+  example: []
+  syntax:
+    content: public TestSetHTMLInstance(string name, string username, string setId, string planId, string project, string orgName, DateTime startTime, DateTime endTime, string folderPath, string executionFormat, string planName, string application, string applicationCollection, string environment, string buildNumber, string testFrameworkVersion, string browser, string description, string testSetRunId, string globalAttempts = "", string globalTimeout = "", string executionURL = "")
+    parameters:
+    - id: name
+      type: System.String
+    - id: username
+      type: System.String
+      description: The username of the alm
+    - id: setId
+      type: System.String
+    - id: planId
+      type: System.String
+    - id: project
+      type: System.String
+    - id: orgName
+      type: System.String
+    - id: startTime
+      type: System.DateTime
+    - id: endTime
+      type: System.DateTime
+    - id: folderPath
+      type: System.String
+    - id: executionFormat
+      type: System.String
+    - id: planName
+      type: System.String
+    - id: application
+      type: System.String
+    - id: applicationCollection
+      type: System.String
+    - id: environment
+      type: System.String
+    - id: buildNumber
+      type: System.String
+    - id: testFrameworkVersion
+      type: System.String
+    - id: browser
+      type: System.String
+    - id: description
+      type: System.String
+    - id: testSetRunId
+      type: System.String
+    - id: globalAttempts
+      type: System.String
+    - id: globalTimeout
+      type: System.String
+    - id: executionURL
+      type: System.String
+    content.vb: Public Sub New(name As String, username As String, setId As String, planId As String, project As String, orgName As String, startTime As Date, endTime As Date, folderPath As String, executionFormat As String, planName As String, application As String, applicationCollection As String, environment As String, buildNumber As String, testFrameworkVersion As String, browser As String, description As String, testSetRunId As String, globalAttempts As String = "", globalTimeout As String = "", executionURL As String = "")
+  overload: AutomationTestingProgram.TestSetHTMLInstance.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.ID
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.ID
+  id: ID
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: TestSetHTMLInstance.ID
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.ID
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ID
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 133
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the TestSet ID.\n"
+  example: []
+  syntax:
+    content: public string ID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ID As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.ID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.PlanID
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.PlanID
+  id: PlanID
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: PlanID
+  nameWithType: TestSetHTMLInstance.PlanID
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.PlanID
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: PlanID
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 138
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Test Set&apos;s Plan ID.\n"
+  example: []
+  syntax:
+    content: public string PlanID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PlanID As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.PlanID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.RunID
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.RunID
+  id: RunID
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: RunID
+  nameWithType: TestSetHTMLInstance.RunID
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.RunID
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RunID
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 143
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the TestSet Run ID.\n"
+  example: []
+  syntax:
+    content: public string RunID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RunID As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.RunID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Name
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Name
+  id: Name
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TestSetHTMLInstance.Name
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Name
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Name
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 148
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Name.\n"
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.EmailList
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.EmailList
+  id: EmailList
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: EmailList
+  nameWithType: TestSetHTMLInstance.EmailList
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.EmailList
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: EmailList
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 153
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the EmailList.\n"
+  example: []
+  syntax:
+    content: public string EmailList { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EmailList As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.EmailList*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.PlanName
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.PlanName
+  id: PlanName
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: PlanName
+  nameWithType: TestSetHTMLInstance.PlanName
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.PlanName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: PlanName
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 158
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Project Name.\n"
+  example: []
+  syntax:
+    content: public string PlanName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PlanName As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.PlanName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Project
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Project
+  id: Project
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Project
+  nameWithType: TestSetHTMLInstance.Project
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Project
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Project
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 163
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Project Name.\n"
+  example: []
+  syntax:
+    content: public string Project { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Project As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Project*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.OrgName
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.OrgName
+  id: OrgName
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: OrgName
+  nameWithType: TestSetHTMLInstance.OrgName
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.OrgName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: OrgName
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 168
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Project Name.\n"
+  example: []
+  syntax:
+    content: public string OrgName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OrgName As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.OrgName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList
+  id: FailedEmailList
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: FailedEmailList
+  nameWithType: TestSetHTMLInstance.FailedEmailList
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: FailedEmailList
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 173
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the FailedEmailList.\n"
+  example: []
+  syntax:
+    content: public string FailedEmailList { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FailedEmailList As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Started
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Started
+  id: Started
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Started
+  nameWithType: TestSetHTMLInstance.Started
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Started
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Started
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 178
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the start date time for this test set.\n"
+  example: []
+  syntax:
+    content: public DateTime Started { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Started As Date
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Started*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Finished
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Finished
+  id: Finished
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Finished
+  nameWithType: TestSetHTMLInstance.Finished
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Finished
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Finished
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 183
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the finished date time for this test set.\n"
+  example: []
+  syntax:
+    content: public DateTime Finished { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Finished As Date
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Finished*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases
+  id: TotalTestCases
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalTestCases
+  nameWithType: TestSetHTMLInstance.TotalTestCases
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalTestCases
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 188
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the total test cases the test set contains.\n"
+  example: []
+  syntax:
+    content: public int TotalTestCases { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalTestCases As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked
+  id: TotalBlocked
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalBlocked
+  nameWithType: TestSetHTMLInstance.TotalBlocked
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalBlocked
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 193
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the total number of blocked test cases.\n"
+  example: []
+  syntax:
+    content: public int TotalBlocked { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalBlocked As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalFailed
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalFailed
+  id: TotalFailed
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalFailed
+  nameWithType: TestSetHTMLInstance.TotalFailed
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalFailed
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalFailed
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 198
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the total number of failed test cases.\n"
+  example: []
+  syntax:
+    content: public int TotalFailed { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalFailed As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalNA
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalNA
+  id: TotalNA
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalNA
+  nameWithType: TestSetHTMLInstance.TotalNA
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalNA
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalNA
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 203
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the total number of not available test cases.\n"
+  example: []
+  syntax:
+    content: public int TotalNA { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalNA As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalNA*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun
+  id: TotalNoRun
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalNoRun
+  nameWithType: TestSetHTMLInstance.TotalNoRun
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalNoRun
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 208
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the total number of unrun test cases.\n"
+  example: []
+  syntax:
+    content: public int TotalNoRun { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalNoRun As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted
+  id: TotalNotCompleted
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalNotCompleted
+  nameWithType: TestSetHTMLInstance.TotalNotCompleted
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalNotCompleted
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 213
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the total number of Not Completed test cases.\n"
+  example: []
+  syntax:
+    content: public int TotalNotCompleted { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalNotCompleted As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalPassed
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalPassed
+  id: TotalPassed
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalPassed
+  nameWithType: TestSetHTMLInstance.TotalPassed
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalPassed
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalPassed
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 218
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the total number of Passed test cases.\n"
+  example: []
+  syntax:
+    content: public int TotalPassed { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalPassed As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalPassed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered
+  id: TotalUndelivered
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TotalUndelivered
+  nameWithType: TestSetHTMLInstance.TotalUndelivered
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TotalUndelivered
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 223
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets the total number of undelivered test cases.\n"
+  example: []
+  syntax:
+    content: public int TotalUndelivered { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalUndelivered As Integer
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions
+  id: TestCaseExecutions
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: TestCaseExecutions
+  nameWithType: TestSetHTMLInstance.TestCaseExecutions
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestCaseExecutions
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 228
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the TestCaseExecutions for this test set.\n"
+  example: []
+  syntax:
+    content: public List<TestCaseHTML> TestCaseExecutions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{AutomationTestingProgram.TestCaseHTML}
+    content.vb: Public Property TestCaseExecutions As List(Of TestCaseHTML)
+  overload: AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL
+  id: ExecutionURL
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: ExecutionURL
+  nameWithType: TestSetHTMLInstance.ExecutionURL
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ExecutionURL
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 233
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the URL corresponding to the DevOps execution.\n"
+  example: []
+  syntax:
+    content: public string ExecutionURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ExecutionURL As String
+  overload: AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Steps
+  commentId: P:AutomationTestingProgram.TestSetHTMLInstance.Steps
+  id: Steps
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: Steps
+  nameWithType: TestSetHTMLInstance.Steps
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Steps
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Steps
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 238
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the list of test step and the result.\n"
+  example: []
+  syntax:
+    content: public List<List<string>> Steps { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.String}}
+    content.vb: Public Property Steps As List(Of List(Of String))
+  overload: AutomationTestingProgram.TestSetHTMLInstance.Steps*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult(System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.Int32)
+  commentId: M:AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult(System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.Int32)
+  id: SetUpTestCaseRunResult(System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.Int32)
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: SetUpTestCaseRunResult(Boolean, String, String, String, String, DateTime, Int32)
+  nameWithType: TestSetHTMLInstance.SetUpTestCaseRunResult(Boolean, String, String, String, String, DateTime, Int32)
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult(System.Boolean, System.String, System.String, System.String, System.String, System.DateTime, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetUpTestCaseRunResult
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 243
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe SetTestCaseRunStatus.\n"
+  example: []
+  syntax:
+    content: public void SetUpTestCaseRunResult(bool hasScreenshot, string testCaseName, string runId, string runName, string testerName, DateTime startTime, int numSteps)
+    parameters:
+    - id: hasScreenshot
+      type: System.Boolean
+    - id: testCaseName
+      type: System.String
+    - id: runId
+      type: System.String
+    - id: runName
+      type: System.String
+    - id: testerName
+      type: System.String
+    - id: startTime
+      type: System.DateTime
+    - id: numSteps
+      type: System.Int32
+    content.vb: Public Sub SetUpTestCaseRunResult(hasScreenshot As Boolean, testCaseName As String, runId As String, runName As String, testerName As String, startTime As Date, numSteps As Integer)
+  overload: AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus(System.String,System.String)
+  commentId: M:AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus(System.String,System.String)
+  id: SetTestStepRunStatus(System.String,System.String)
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: SetTestStepRunStatus(String, String)
+  nameWithType: TestSetHTMLInstance.SetTestStepRunStatus(String, String)
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetTestStepRunStatus
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 273
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe test steps run statuses in the current test case.\n"
+  example: []
+  syntax:
+    content: public void SetTestStepRunStatus(string result, string description)
+    parameters:
+    - id: result
+      type: System.String
+    - id: description
+      type: System.String
+    content.vb: Public Sub SetTestStepRunStatus(result As String, description As String)
+  overload: AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus(System.String)
+  commentId: M:AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus(System.String)
+  id: AddTestCaseRunStatus(System.String)
+  parent: AutomationTestingProgram.TestSetHTMLInstance
+  langs:
+  - csharp
+  - vb
+  name: AddTestCaseRunStatus(String)
+  nameWithType: TestSetHTMLInstance.AddTestCaseRunStatus(String)
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AddTestCaseRunStatus
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
+    startLine: 288
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe test case run statuses.\n"
+  example: []
+  syntax:
+    content: public void AddTestCaseRunStatus(string status)
+    parameters:
+    - id: status
+      type: System.String
+    content.vb: Public Sub AddTestCaseRunStatus(status As String)
+  overload: AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AutomationTestingProgram.TestSetHTMLInstance.buildNumber*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.buildNumber
+  name: buildNumber
+  nameWithType: TestSetHTMLInstance.buildNumber
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.buildNumber
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Description*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Description
+  name: Description
+  nameWithType: TestSetHTMLInstance.Description
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Description
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Baseline*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Baseline
+  name: Baseline
+  nameWithType: TestSetHTMLInstance.Baseline
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Baseline
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TargetCycle*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TargetCycle
+  name: TargetCycle
+  nameWithType: TestSetHTMLInstance.TargetCycle
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TargetCycle
+- uid: AutomationTestingProgram.TestSetHTMLInstance.FolderPath*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.FolderPath
+  name: FolderPath
+  nameWithType: TestSetHTMLInstance.FolderPath
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.FolderPath
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat
+  name: TestSetExecutionFormat
+  nameWithType: TestSetHTMLInstance.TestSetExecutionFormat
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Attachments*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Attachments
+  name: Attachments
+  nameWithType: TestSetHTMLInstance.Attachments
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Attachments
+- uid: System.Collections.Generic.List{System.Object}
+  commentId: T:System.Collections.Generic.List{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Object>
+  nameWithType: List<Object>
+  fullName: System.Collections.Generic.List<System.Object>
+  nameWithType.vb: List(Of Object)
+  fullName.vb: System.Collections.Generic.List(Of System.Object)
+  name.vb: List(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestSetHTMLInstance.#ctor*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.#ctor
+  name: TestSetHTMLInstance
+  nameWithType: TestSetHTMLInstance.TestSetHTMLInstance
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TestSetHTMLInstance
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: AutomationTestingProgram.TestSetHTMLInstance.ID*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.ID
+  name: ID
+  nameWithType: TestSetHTMLInstance.ID
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.ID
+- uid: AutomationTestingProgram.TestSetHTMLInstance.PlanID*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.PlanID
+  name: PlanID
+  nameWithType: TestSetHTMLInstance.PlanID
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.PlanID
+- uid: AutomationTestingProgram.TestSetHTMLInstance.RunID*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.RunID
+  name: RunID
+  nameWithType: TestSetHTMLInstance.RunID
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.RunID
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Name*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Name
+  name: Name
+  nameWithType: TestSetHTMLInstance.Name
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Name
+- uid: AutomationTestingProgram.TestSetHTMLInstance.EmailList*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.EmailList
+  name: EmailList
+  nameWithType: TestSetHTMLInstance.EmailList
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.EmailList
+- uid: AutomationTestingProgram.TestSetHTMLInstance.PlanName*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.PlanName
+  name: PlanName
+  nameWithType: TestSetHTMLInstance.PlanName
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.PlanName
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Project*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Project
+  name: Project
+  nameWithType: TestSetHTMLInstance.Project
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Project
+- uid: AutomationTestingProgram.TestSetHTMLInstance.OrgName*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.OrgName
+  name: OrgName
+  nameWithType: TestSetHTMLInstance.OrgName
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.OrgName
+- uid: AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList
+  name: FailedEmailList
+  nameWithType: TestSetHTMLInstance.FailedEmailList
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Started*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Started
+  name: Started
+  nameWithType: TestSetHTMLInstance.Started
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Started
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Finished*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Finished
+  name: Finished
+  nameWithType: TestSetHTMLInstance.Finished
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Finished
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases
+  name: TotalTestCases
+  nameWithType: TestSetHTMLInstance.TotalTestCases
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked
+  name: TotalBlocked
+  nameWithType: TestSetHTMLInstance.TotalBlocked
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalFailed*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalFailed
+  name: TotalFailed
+  nameWithType: TestSetHTMLInstance.TotalFailed
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalFailed
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalNA*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalNA
+  name: TotalNA
+  nameWithType: TestSetHTMLInstance.TotalNA
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalNA
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun
+  name: TotalNoRun
+  nameWithType: TestSetHTMLInstance.TotalNoRun
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted
+  name: TotalNotCompleted
+  nameWithType: TestSetHTMLInstance.TotalNotCompleted
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalPassed*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalPassed
+  name: TotalPassed
+  nameWithType: TestSetHTMLInstance.TotalPassed
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalPassed
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered
+  name: TotalUndelivered
+  nameWithType: TestSetHTMLInstance.TotalUndelivered
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered
+- uid: AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions
+  name: TestCaseExecutions
+  nameWithType: TestSetHTMLInstance.TestCaseExecutions
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions
+- uid: System.Collections.Generic.List{AutomationTestingProgram.TestCaseHTML}
+  commentId: T:System.Collections.Generic.List{AutomationTestingProgram.TestCaseHTML}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TestCaseHTML>
+  nameWithType: List<TestCaseHTML>
+  fullName: System.Collections.Generic.List<AutomationTestingProgram.TestCaseHTML>
+  nameWithType.vb: List(Of TestCaseHTML)
+  fullName.vb: System.Collections.Generic.List(Of AutomationTestingProgram.TestCaseHTML)
+  name.vb: List(Of TestCaseHTML)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AutomationTestingProgram.TestCaseHTML
+    name: TestCaseHTML
+    nameWithType: TestCaseHTML
+    fullName: AutomationTestingProgram.TestCaseHTML
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AutomationTestingProgram.TestCaseHTML
+    name: TestCaseHTML
+    nameWithType: TestCaseHTML
+    fullName: AutomationTestingProgram.TestCaseHTML
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL
+  name: ExecutionURL
+  nameWithType: TestSetHTMLInstance.ExecutionURL
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL
+- uid: AutomationTestingProgram.TestSetHTMLInstance.Steps*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.Steps
+  name: Steps
+  nameWithType: TestSetHTMLInstance.Steps
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.Steps
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{System.String}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<List<String>>
+  nameWithType: List<List<String>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<System.String>>
+  nameWithType.vb: List(Of List(Of String))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.String))
+  name.vb: List(Of List(Of String))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult
+  name: SetUpTestCaseRunResult
+  nameWithType: TestSetHTMLInstance.SetUpTestCaseRunResult
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus
+  name: SetTestStepRunStatus
+  nameWithType: TestSetHTMLInstance.SetTestStepRunStatus
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus
+- uid: AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus*
+  commentId: Overload:AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus
+  name: AddTestCaseRunStatus
+  nameWithType: TestSetHTMLInstance.AddTestCaseRunStatus
+  fullName: AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus

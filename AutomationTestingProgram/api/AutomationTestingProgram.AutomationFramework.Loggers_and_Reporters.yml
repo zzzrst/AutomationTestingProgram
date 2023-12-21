@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  commentId: N:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  id: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  children:
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  nameWithType: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  name: ALMReporter
+  nameWithType: ALMReporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: Reporter
+  nameWithType: Reporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger
+  name: TestCaseLogger
+  nameWithType: TestCaseLogger
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+  name: TestSetLogger
+  nameWithType: TestSetLogger
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger
+  name: TestStepLogger
+  nameWithType: TestStepLogger
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  commentId: N:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  nameWithType: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters

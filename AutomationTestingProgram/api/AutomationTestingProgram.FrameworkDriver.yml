@@ -1,0 +1,528 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.FrameworkDriver
+  commentId: T:AutomationTestingProgram.FrameworkDriver
+  id: FrameworkDriver
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)
+  - AutomationTestingProgram.FrameworkDriver.Main(System.String[])
+  - AutomationTestingProgram.FrameworkDriver.RunAODA
+  langs:
+  - csharp
+  - vb
+  name: FrameworkDriver
+  nameWithType: FrameworkDriver
+  fullName: AutomationTestingProgram.FrameworkDriver
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkDriver.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: FrameworkDriver
+    path: src/FrameworkDriver.cs
+    startLine: 37
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nMain program.\n"
+  example: []
+  syntax:
+    content: public class FrameworkDriver
+    content.vb: Public Class FrameworkDriver
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.FrameworkDriver.Main(System.String[])
+  commentId: M:AutomationTestingProgram.FrameworkDriver.Main(System.String[])
+  id: Main(System.String[])
+  parent: AutomationTestingProgram.FrameworkDriver
+  langs:
+  - csharp
+  - vb
+  name: Main(String[])
+  nameWithType: FrameworkDriver.Main(String[])
+  fullName: AutomationTestingProgram.FrameworkDriver.Main(System.String[])
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkDriver.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Main
+    path: src/FrameworkDriver.cs
+    startLine: 46
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nThe Main functionality.\n"
+  example: []
+  syntax:
+    content: public static int Main(string[] args)
+    parameters:
+    - id: args
+      type: System.String[]
+      description: Arguments to be passed in.
+    return:
+      type: System.Int32
+      description: '0 if no errors were met. '
+    content.vb: Public Shared Function Main(args As String()) As Integer
+  overload: AutomationTestingProgram.FrameworkDriver.Main*
+  nameWithType.vb: FrameworkDriver.Main(String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AutomationTestingProgram.FrameworkDriver.Main(System.String())
+  name.vb: Main(String())
+- uid: AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)
+  commentId: M:AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)
+  id: CheckForUpdates(System.String)
+  parent: AutomationTestingProgram.FrameworkDriver
+  langs:
+  - csharp
+  - vb
+  name: CheckForUpdates(String)
+  nameWithType: FrameworkDriver.CheckForUpdates(String)
+  fullName: AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkDriver.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: CheckForUpdates
+    path: src/FrameworkDriver.cs
+    startLine: 213
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nChecks to see if there is any update avalible.\n"
+  example: []
+  syntax:
+    content: public static bool CheckForUpdates(string program)
+    parameters:
+    - id: program
+      type: System.String
+      description: Name of the program to check.
+    return:
+      type: System.Boolean
+      description: true if there are updates.
+    content.vb: Public Shared Function CheckForUpdates(program As String) As Boolean
+  overload: AutomationTestingProgram.FrameworkDriver.CheckForUpdates*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.FrameworkDriver.RunAODA
+  commentId: M:AutomationTestingProgram.FrameworkDriver.RunAODA
+  id: RunAODA
+  parent: AutomationTestingProgram.FrameworkDriver
+  langs:
+  - csharp
+  - vb
+  name: RunAODA()
+  nameWithType: FrameworkDriver.RunAODA()
+  fullName: AutomationTestingProgram.FrameworkDriver.RunAODA()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/FrameworkDriver.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: RunAODA
+    path: src/FrameworkDriver.cs
+    startLine: 234
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nSaves the AODA result to the file location.\n"
+  example: []
+  syntax:
+    content: public static void RunAODA()
+    content.vb: Public Shared Sub RunAODA
+  overload: AutomationTestingProgram.FrameworkDriver.RunAODA*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.FrameworkDriver.Main*
+  commentId: Overload:AutomationTestingProgram.FrameworkDriver.Main
+  name: Main
+  nameWithType: FrameworkDriver.Main
+  fullName: AutomationTestingProgram.FrameworkDriver.Main
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AutomationTestingProgram.FrameworkDriver.CheckForUpdates*
+  commentId: Overload:AutomationTestingProgram.FrameworkDriver.CheckForUpdates
+  name: CheckForUpdates
+  nameWithType: FrameworkDriver.CheckForUpdates
+  fullName: AutomationTestingProgram.FrameworkDriver.CheckForUpdates
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestingProgram.FrameworkDriver.RunAODA*
+  commentId: Overload:AutomationTestingProgram.FrameworkDriver.RunAODA
+  name: RunAODA
+  nameWithType: FrameworkDriver.RunAODA
+  fullName: AutomationTestingProgram.FrameworkDriver.RunAODA

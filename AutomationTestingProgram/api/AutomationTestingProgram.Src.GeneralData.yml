@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Src.GeneralData
+  commentId: N:AutomationTestingProgram.Src.GeneralData
+  id: AutomationTestingProgram.Src.GeneralData
+  children:
+  - AutomationTestingProgram.Src.GeneralData.TextGeneralData
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.Src.GeneralData
+  nameWithType: AutomationTestingProgram.Src.GeneralData
+  fullName: AutomationTestingProgram.Src.GeneralData
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.Src.GeneralData.TextGeneralData
+  commentId: T:AutomationTestingProgram.Src.GeneralData.TextGeneralData
+  name: TextGeneralData
+  nameWithType: TextGeneralData
+  fullName: AutomationTestingProgram.Src.GeneralData.TextGeneralData

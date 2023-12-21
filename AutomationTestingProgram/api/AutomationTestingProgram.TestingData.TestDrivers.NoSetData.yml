@@ -1,0 +1,1069 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  id: NoSetData
+  parent: AutomationTestingProgram.TestingData.TestDrivers
+  children:
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  - AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  langs:
+  - csharp
+  - vb
+  name: NoSetData
+  nameWithType: NoSetData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: NoSetData
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 13
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nSkips the test set and goes staight to the test case.\n"
+  example: []
+  syntax:
+    content: 'public class NoSetData : ITestSetData, ITestData'
+    content.vb: >-
+      Public Class NoSetData
+          Implements ITestSetData, ITestData
+  inheritance:
+  - System.Object
+  implements:
+  - AutomationTestingProgram.TestingData.ITestSetData
+  - AutomationTestingProgram.TestingData.ITestData
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: NoSetData(String)
+  nameWithType: NoSetData.NoSetData(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.NoSetData(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 19
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nInitializes a new instance of the <xref href=\"AutomationTestingProgram.TestingData.TestDrivers.NoSetData\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public NoSetData(string args)
+    parameters:
+    - id: args
+      type: System.String
+      description: args to be passed in.
+    content.vb: Public Sub New(args As String)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  id: TestArgs
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: TestArgs
+  nameWithType: NoSetData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: TestArgs
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 25
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets or sets the arguments for the test data. Often the file location.\nYou need to create a constructor that passes in a string/\nThis is where you get the test args.\n"
+  example: []
+  syntax:
+    content: public string TestArgs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TestArgs As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestData.TestArgs
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  id: Name
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: NoSetData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: Name
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 28
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets the name to be found by the reflective getter.\n"
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestData.Name
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  id: ExistNextTestCase
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: ExistNextTestCase()
+  nameWithType: NoSetData.ExistNextTestCase()
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: ExistNextTestCase
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 33
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nSees if there exist another test case.\n"
+  example: []
+  syntax:
+    content: public bool ExistNextTestCase()
+    return:
+      type: System.Boolean
+      description: Returns true if there is another test case.
+    content.vb: Public Function ExistNextTestCase As Boolean
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  id: GetNextTestCase
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: GetNextTestCase()
+  nameWithType: NoSetData.GetNextTestCase()
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: GetNextTestCase
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 39
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets The next test case.\n"
+  example: []
+  syntax:
+    content: public ITestCase GetNextTestCase()
+    return:
+      type: AutomationTestSetFramework.ITestCase
+      description: The next test case to run.
+    content.vb: Public Function GetNextTestCase As ITestCase
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  id: SetUp
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: SetUp()
+  nameWithType: NoSetData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetUp
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 46
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nSince The constructor is called through reflective getter,\nany errors during the constructor caused by wrong arguments,\nwill cause the program to crash. Run here instead,\nAs this guarnetees that the right test set/case/step is ran.\n"
+  example: []
+  syntax:
+    content: public void SetUp()
+    content.vb: Public Sub SetUp
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestData.SetUp
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  id: SetUpTestSet
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: SetUpTestSet()
+  nameWithType: NoSetData.SetUpTestSet()
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: SetUpTestSet
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 51
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nSets up the test set and returns a new test step before it runs.\n"
+  example: []
+  syntax:
+    content: public void SetUpTestSet()
+    content.vb: Public Sub SetUpTestSet
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)
+  id: AddAttachment(System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: AddAttachment(String)
+  nameWithType: NoSetData.AddAttachment(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AddAttachment
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 56
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nAdds an attachment to the result.\n"
+  example: []
+  syntax:
+    content: public void AddAttachment(string attachment)
+    parameters:
+    - id: attachment
+      type: System.String
+      description: the attachment to attach.
+    content.vb: Public Sub AddAttachment(attachment As String)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport(System.String)
+  id: AddAODAReport(System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: AddAODAReport(String)
+  nameWithType: NoSetData.AddAODAReport(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AddAODAReport
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 64
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nAdds AODA Report log.\n"
+  example: []
+  syntax:
+    content: public void AddAODAReport(string attachment)
+    parameters:
+    - id: attachment
+      type: System.String
+      description: the attachment to attach.
+    content.vb: Public Sub AddAODAReport(attachment As String)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot(System.String)
+  id: AddErrorScreenshot(System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  langs:
+  - csharp
+  - vb
+  name: AddErrorScreenshot(String)
+  nameWithType: NoSetData.AddErrorScreenshot(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
+      branch: development
+      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+    id: AddErrorScreenshot
+    path: src/TestingData/TestDrivers/NoSetData.cs
+    startLine: 72
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nAdds error screenshot log.\n"
+  example: []
+  syntax:
+    content: public void AddErrorScreenshot(string attachment)
+    parameters:
+    - id: attachment
+      type: System.String
+      description: the attachment to attach.
+    content.vb: Public Sub AddErrorScreenshot(attachment As String)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram.TestingData.TestDrivers
+  commentId: N:AutomationTestingProgram.TestingData.TestDrivers
+  name: AutomationTestingProgram.TestingData.TestDrivers
+  nameWithType: AutomationTestingProgram.TestingData.TestDrivers
+  fullName: AutomationTestingProgram.TestingData.TestDrivers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AutomationTestingProgram.TestingData.ITestSetData
+  commentId: T:AutomationTestingProgram.TestingData.ITestSetData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestSetData
+  nameWithType: ITestSetData
+  fullName: AutomationTestingProgram.TestingData.ITestSetData
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+  name: NoSetData
+  nameWithType: NoSetData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.#ctor
+  name: NoSetData
+  nameWithType: NoSetData.NoSetData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.NoSetData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+  name: TestArgs
+  nameWithType: NoSetData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.TestArgs
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: TestArgs
+  nameWithType: ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+  name: Name
+  nameWithType: NoSetData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.Name
+- uid: AutomationTestingProgram.TestingData.ITestData.Name
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.Name
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: Name
+  nameWithType: ITestData.Name
+  fullName: AutomationTestingProgram.TestingData.ITestData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+  name: ExistNextTestCase
+  nameWithType: NoSetData.ExistNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.ExistNextTestCase
+- uid: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  name: ExistNextTestCase()
+  nameWithType: ITestSetData.ExistNextTestCase()
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+    name: ExistNextTestCase
+    nameWithType: ITestSetData.ExistNextTestCase
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+    name: ExistNextTestCase
+    nameWithType: ITestSetData.ExistNextTestCase
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+  name: GetNextTestCase
+  nameWithType: NoSetData.GetNextTestCase
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.GetNextTestCase
+- uid: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  name: GetNextTestCase()
+  nameWithType: ITestSetData.GetNextTestCase()
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+    name: GetNextTestCase
+    nameWithType: ITestSetData.GetNextTestCase
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+    name: GetNextTestCase
+    nameWithType: ITestSetData.GetNextTestCase
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestSetFramework.ITestCase
+  commentId: T:AutomationTestSetFramework.ITestCase
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestCase
+  nameWithType: ITestCase
+  fullName: AutomationTestSetFramework.ITestCase
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+  name: SetUp
+  nameWithType: NoSetData.SetUp
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUp
+- uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.ITestData.SetUp
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: SetUp()
+  nameWithType: ITestData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.ITestData.SetUp()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+  name: SetUpTestSet
+  nameWithType: NoSetData.SetUpTestSet
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.SetUpTestSet
+- uid: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  name: SetUpTestSet()
+  nameWithType: ITestSetData.SetUpTestSet()
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+    name: SetUpTestSet
+    nameWithType: ITestSetData.SetUpTestSet
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+    name: SetUpTestSet
+    nameWithType: ITestSetData.SetUpTestSet
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment
+  name: AddAttachment
+  nameWithType: NoSetData.AddAttachment
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  isExternal: true
+  name: AddAttachment(String)
+  nameWithType: ITestSetData.AddAttachment(String)
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+    name: AddAttachment
+    nameWithType: ITestSetData.AddAttachment
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+    name: AddAttachment
+    nameWithType: ITestSetData.AddAttachment
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport
+  name: AddAODAReport
+  nameWithType: NoSetData.AddAODAReport
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  isExternal: true
+  name: AddAODAReport(String)
+  nameWithType: ITestSetData.AddAODAReport(String)
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+    name: AddAODAReport
+    nameWithType: ITestSetData.AddAODAReport
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+    name: AddAODAReport
+    nameWithType: ITestSetData.AddAODAReport
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot
+  name: AddErrorScreenshot
+  nameWithType: NoSetData.AddErrorScreenshot
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  isExternal: true
+  name: AddErrorScreenshot(String)
+  nameWithType: ITestSetData.AddErrorScreenshot(String)
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+    name: AddErrorScreenshot
+    nameWithType: ITestSetData.AddErrorScreenshot
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+    name: AddErrorScreenshot
+    nameWithType: ITestSetData.AddErrorScreenshot
+    fullName: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

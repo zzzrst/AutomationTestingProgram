@@ -1,0 +1,354 @@
+### YamlMime:TableOfContent
+- uid: AutomationTestingProgram
+  name: AutomationTestingProgram
+  items:
+  - uid: AutomationTestingProgram.CannotAddTestCaseAttachment
+    name: CannotAddTestCaseAttachment
+  - uid: AutomationTestingProgram.CannotAddTestStep
+    name: CannotAddTestStep
+  - uid: AutomationTestingProgram.CannotFindTestSet
+    name: CannotFindTestSet
+  - uid: AutomationTestingProgram.CannotPostTestRun
+    name: CannotPostTestRun
+  - uid: AutomationTestingProgram.CannotStartTestRun
+    name: CannotStartTestRun
+  - uid: AutomationTestingProgram.CSVLogger
+    name: CSVLogger
+  - uid: AutomationTestingProgram.ExecutionFlowDeterminer
+    name: ExecutionFlowDeterminer
+  - uid: AutomationTestingProgram.FrameworkDriver
+    name: FrameworkDriver
+  - uid: AutomationTestingProgram.FrameworkOptions
+    name: FrameworkOptions
+  - uid: AutomationTestingProgram.InformationObject
+    name: InformationObject
+  - uid: AutomationTestingProgram.InformationObject.EnvVar
+    name: InformationObject.EnvVar
+  - uid: AutomationTestingProgram.Logger
+    name: Logger
+  - uid: AutomationTestingProgram.NoTestRunStarted
+    name: NoTestRunStarted
+  - uid: AutomationTestingProgram.ReflectiveGetter
+    name: ReflectiveGetter
+  - uid: AutomationTestingProgram.RunMailJet
+    name: RunMailJet
+  - uid: AutomationTestingProgram.TestCaseHTML
+    name: TestCaseHTML
+  - uid: AutomationTestingProgram.TestSetExecutionSummaryReport
+    name: TestSetExecutionSummaryReport
+  - uid: AutomationTestingProgram.TestSetHTMLInstance
+    name: TestSetHTMLInstance
+- uid: AutomationTestingProgram.AutomationFramework
+  name: AutomationTestingProgram.AutomationFramework
+  items:
+  - uid: AutomationTestingProgram.AutomationFramework.ActionObject
+    name: ActionObject
+  - uid: AutomationTestingProgram.AutomationFramework.BrokenLinks
+    name: BrokenLinks
+  - uid: AutomationTestingProgram.AutomationFramework.CheckBox
+    name: CheckBox
+  - uid: AutomationTestingProgram.AutomationFramework.ChooseCollection
+    name: ChooseCollection
+  - uid: AutomationTestingProgram.AutomationFramework.ClickButton
+    name: ClickButton
+  - uid: AutomationTestingProgram.AutomationFramework.ClickElementByXPath
+    name: ClickElementByXPath
+  - uid: AutomationTestingProgram.AutomationFramework.ClickImage
+    name: ClickImage
+  - uid: AutomationTestingProgram.AutomationFramework.ClickLink
+    name: ClickLink
+  - uid: AutomationTestingProgram.AutomationFramework.ClickObject
+    name: ClickObject
+  - uid: AutomationTestingProgram.AutomationFramework.ClickTableLink
+    name: ClickTableLink
+  - uid: AutomationTestingProgram.AutomationFramework.ClickWebElement
+    name: ClickWebElement
+  - uid: AutomationTestingProgram.AutomationFramework.CloseBrowser
+    name: CloseBrowser
+  - uid: AutomationTestingProgram.AutomationFramework.CloseTab
+    name: CloseTab
+  - uid: AutomationTestingProgram.AutomationFramework.Comment
+    name: Comment
+  - uid: AutomationTestingProgram.AutomationFramework.CompareEmail
+    name: CompareEmail
+  - uid: AutomationTestingProgram.AutomationFramework.ComparePdf
+    name: ComparePdf
+  - uid: AutomationTestingProgram.AutomationFramework.ConvertPDF
+    name: ConvertPDF
+  - uid: AutomationTestingProgram.AutomationFramework.DDLSelectByXPath
+    name: DDLSelectByXPath
+  - uid: AutomationTestingProgram.AutomationFramework.DismissAlert
+    name: DismissAlert
+  - uid: AutomationTestingProgram.AutomationFramework.EnterAADCredentials
+    name: EnterAADCredentials
+  - uid: AutomationTestingProgram.AutomationFramework.FakeFailingTestStep
+    name: FakeFailingTestStep
+  - uid: AutomationTestingProgram.AutomationFramework.FakeTestStep
+    name: FakeTestStep
+  - uid: AutomationTestingProgram.AutomationFramework.GetEmail
+    name: GetEmail
+  - uid: AutomationTestingProgram.AutomationFramework.GetWebElementText
+    name: GetWebElementText
+  - uid: AutomationTestingProgram.AutomationFramework.GotoPage
+    name: GotoPage
+  - uid: AutomationTestingProgram.AutomationFramework.LaunchBrowser
+    name: LaunchBrowser
+  - uid: AutomationTestingProgram.AutomationFramework.LaunchTab
+    name: LaunchTab
+  - uid: AutomationTestingProgram.AutomationFramework.LoadFile
+    name: LoadFile
+  - uid: AutomationTestingProgram.AutomationFramework.Login
+    name: Login
+  - uid: AutomationTestingProgram.AutomationFramework.MapEmailFolder
+    name: MapEmailFolder
+  - uid: AutomationTestingProgram.AutomationFramework.MaximizeBrowser
+    name: MaximizeBrowser
+  - uid: AutomationTestingProgram.AutomationFramework.ModifyTxtFile
+    name: ModifyTxtFile
+  - uid: AutomationTestingProgram.AutomationFramework.NavigateToURL
+    name: NavigateToURL
+  - uid: AutomationTestingProgram.AutomationFramework.OpenBrowser
+    name: OpenBrowser
+  - uid: AutomationTestingProgram.AutomationFramework.PopulateElementByXPath
+    name: PopulateElementByXPath
+  - uid: AutomationTestingProgram.AutomationFramework.PopulateHTMLEditor
+    name: PopulateHTMLEditor
+  - uid: AutomationTestingProgram.AutomationFramework.PopulateTextBox
+    name: PopulateTextBox
+  - uid: AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL
+    name: PopulateTextBoxDDL
+  - uid: AutomationTestingProgram.AutomationFramework.PopulateWebElement
+    name: PopulateWebElement
+  - uid: AutomationTestingProgram.AutomationFramework.PressKey
+    name: PressKey
+  - uid: AutomationTestingProgram.AutomationFramework.RefreshBrowser
+    name: RefreshBrowser
+  - uid: AutomationTestingProgram.AutomationFramework.RunJavaScript
+    name: RunJavaScript
+  - uid: AutomationTestingProgram.AutomationFramework.RunShellScript
+    name: RunShellScript
+  - uid: AutomationTestingProgram.AutomationFramework.RunSQLScript
+    name: RunSQLScript
+  - uid: AutomationTestingProgram.AutomationFramework.RunTestCase
+    name: RunTestCase
+  - uid: AutomationTestingProgram.AutomationFramework.SaveFile
+    name: SaveFile
+  - uid: AutomationTestingProgram.AutomationFramework.SaveParameter
+    name: SaveParameter
+  - uid: AutomationTestingProgram.AutomationFramework.SelectDDL
+    name: SelectDDL
+  - uid: AutomationTestingProgram.AutomationFramework.SelectDDLMultiValues
+    name: SelectDDLMultiValues
+  - uid: AutomationTestingProgram.AutomationFramework.SelectLookup
+    name: SelectLookup
+  - uid: AutomationTestingProgram.AutomationFramework.SelectRadioButton
+    name: SelectRadioButton
+  - uid: AutomationTestingProgram.AutomationFramework.SignIn
+    name: SignIn
+  - uid: AutomationTestingProgram.AutomationFramework.SkipToStep
+    name: SkipToStep
+  - uid: AutomationTestingProgram.AutomationFramework.SQLToCSV
+    name: SQLToCSV
+  - uid: AutomationTestingProgram.AutomationFramework.SwitchIntoIFrame
+    name: SwitchIntoIFrame
+  - uid: AutomationTestingProgram.AutomationFramework.SwitchToIFrame
+    name: SwitchToIFrame
+  - uid: AutomationTestingProgram.AutomationFramework.SwitchToTab
+    name: SwitchToTab
+  - uid: AutomationTestingProgram.AutomationFramework.TakeScreenshot
+    name: TakeScreenshot
+  - uid: AutomationTestingProgram.AutomationFramework.TestCase
+    name: TestCase
+  - uid: AutomationTestingProgram.AutomationFramework.TestCaseStatus
+    name: TestCaseStatus
+  - uid: AutomationTestingProgram.AutomationFramework.TestSet
+    name: TestSet
+  - uid: AutomationTestingProgram.AutomationFramework.TestSetStatus
+    name: TestSetStatus
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep
+    name: TestStep
+  - uid: AutomationTestingProgram.AutomationFramework.TestStepStatus
+    name: TestStepStatus
+  - uid: AutomationTestingProgram.AutomationFramework.UploadDataFile
+    name: UploadDataFile
+  - uid: AutomationTestingProgram.AutomationFramework.UploadFile
+    name: UploadFile
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyAlertText
+    name: VerifyAlertText
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyButtonAvailability
+    name: VerifyButtonAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxAvailability
+    name: VerifyCheckBoxAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyCheckBoxStatus
+    name: VerifyCheckBoxStatus
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyDDLAvailability
+    name: VerifyDDLAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyDDLContent
+    name: VerifyDDLContent
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyEmail
+    name: VerifyEmail
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyExcelFile
+    name: VerifyExcelFile
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorAvailability
+    name: VerifyHTMLEditorAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyHTMLEditorContent
+    name: VerifyHTMLEditorContent
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyImageAvailability
+    name: VerifyImageAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyImageContent
+    name: VerifyImageContent
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability
+    name: VerifyLinkAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability
+    name: VerifyObjectAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifySQLQuery
+    name: VerifySQLQuery
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxAvailability
+    name: VerifyTextBoxAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent
+    name: VerifyTextBoxContent
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyTxtFile
+    name: VerifyTxtFile
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementAvailability
+    name: VerifyWebElementAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyWebElementContent
+    name: VerifyWebElementContent
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyWebRadioGroupAvailability
+    name: VerifyWebRadioGroupAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableAvailability
+    name: VerifyWebTableAvailability
+  - uid: AutomationTestingProgram.AutomationFramework.VerifyWebTableContent
+    name: VerifyWebTableContent
+  - uid: AutomationTestingProgram.AutomationFramework.WaitForElement
+    name: WaitForElement
+  - uid: AutomationTestingProgram.AutomationFramework.WaitInSeconds
+    name: WaitInSeconds
+- uid: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  name: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps
+  items:
+  - uid: AutomationTestingProgram.AutomationFramework.ConcreteTestSteps.AcceptAlert
+    name: AcceptAlert
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  items:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+    name: ALMReporter
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+    name: Reporter
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestCaseLogger
+    name: TestCaseLogger
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestSetLogger
+    name: TestSetLogger
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.TestStepLogger
+    name: TestStepLogger
+- uid: AutomationTestingProgram.Builders
+  name: AutomationTestingProgram.Builders
+  items:
+  - uid: AutomationTestingProgram.Builders.TestAutomationBuilder
+    name: TestAutomationBuilder
+  - uid: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+    name: TestAutomationBuilder.TestingDriverType
+  - uid: AutomationTestingProgram.Builders.TestSetBuilder
+    name: TestSetBuilder
+  - uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+    name: TestSetBuilder.TestingDataType
+- uid: AutomationTestingProgram.Exceptions
+  name: AutomationTestingProgram.Exceptions
+  items:
+  - uid: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+    name: DatabaseTestCaseNotFound
+  - uid: AutomationTestingProgram.Exceptions.FileNotFound
+    name: FileNotFound
+  - uid: AutomationTestingProgram.Exceptions.TestActionNotFound
+    name: TestActionNotFound
+  - uid: AutomationTestingProgram.Exceptions.TestCaseCreationFailed
+    name: TestCaseCreationFailed
+- uid: AutomationTestingProgram.GeneralData
+  name: AutomationTestingProgram.GeneralData
+  items:
+  - uid: AutomationTestingProgram.GeneralData.ALMGeneralData
+    name: ALMGeneralData
+  - uid: AutomationTestingProgram.GeneralData.ExcelGeneralData
+    name: ExcelGeneralData
+  - uid: AutomationTestingProgram.GeneralData.ITestGeneralData
+    name: ITestGeneralData
+  - uid: AutomationTestingProgram.GeneralData.NoGeneralData
+    name: NoGeneralData
+  - uid: AutomationTestingProgram.GeneralData.XMLGeneralData
+    name: XMLGeneralData
+- uid: AutomationTestingProgram.Helper
+  name: AutomationTestingProgram.Helper
+  items:
+  - uid: AutomationTestingProgram.Helper.Helper
+    name: Helper
+  - uid: AutomationTestingProgram.Helper.Resource
+    name: Resource
+  - uid: AutomationTestingProgram.Helper.SharepointGetter
+    name: SharepointGetter
+- uid: AutomationTestingProgram.Src.GeneralData
+  name: AutomationTestingProgram.Src.GeneralData
+  items:
+  - uid: AutomationTestingProgram.Src.GeneralData.TextGeneralData
+    name: TextGeneralData
+- uid: AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  items:
+  - uid: AutomationTestingProgram.TestingData.ExcelCaseData
+    name: ExcelCaseData
+  - uid: AutomationTestingProgram.TestingData.ExcelData
+    name: ExcelData
+  - uid: AutomationTestingProgram.TestingData.ExcelSetData
+    name: ExcelSetData
+  - uid: AutomationTestingProgram.TestingData.ExcelStepData
+    name: ExcelStepData
+  - uid: AutomationTestingProgram.TestingData.ITestCaseData
+    name: ITestCaseData
+  - uid: AutomationTestingProgram.TestingData.ITestData
+    name: ITestData
+  - uid: AutomationTestingProgram.TestingData.ITestSetData
+    name: ITestSetData
+  - uid: AutomationTestingProgram.TestingData.ITestStepData
+    name: ITestStepData
+- uid: AutomationTestingProgram.TestingData.TestDrivers
+  name: AutomationTestingProgram.TestingData.TestDrivers
+  items:
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.ALMSetData
+    name: ALMSetData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseCaseData
+    name: DatabaseCaseData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+    name: DatabaseData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+    name: DatabaseStepData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.NoSetData
+    name: NoSetData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.TextCaseData
+    name: TextCaseData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.TextData
+    name: TextData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.TextSetData
+    name: TextSetData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.TextStepData
+    name: TextStepData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLCaseData
+    name: XMLCaseData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLData
+    name: XMLData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLSetData
+    name: XMLSetData
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.XMLStepData
+    name: XMLStepData
+- uid: AutomationTestinProgram.Helper
+  name: AutomationTestinProgram.Helper
+  items:
+  - uid: AutomationTestinProgram.Helper.CSVEnvironmentGetter
+    name: CSVEnvironmentGetter
+  - uid: AutomationTestinProgram.Helper.FilePathResolver
+    name: FilePathResolver
+- uid: AzureReporter
+  name: AzureReporter
+  items:
+  - uid: AzureReporter.TestCaseInstance
+    name: TestCaseInstance
+  - uid: AzureReporter.TestPlanInstance
+    name: TestPlanInstance
