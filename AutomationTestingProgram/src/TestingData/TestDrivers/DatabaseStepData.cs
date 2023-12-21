@@ -6,30 +6,33 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.Configuration;
+    using System.Data;
+    using System.Data.OleDb;
     using System.IO;
+    using System.IO.Pipes;
     using System.Linq;
+    using System.Security.Permissions;
+    using System.Security.Policy;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.Exceptions;
     using AutomationTestingProgram.Helper;
+    using AutomationTestinProgram.Helper;
     using AutomationTestSetFramework;
     using DatabaseConnector;
     using NPOI.SS.UserModel;
     using NPOI.SS.Util;
     using NPOI.XSSF.UserModel;
+    using TDAPIOLELib;
     using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
     /// The test step for the database data.
     /// </summary>
-    internal class DatabaseStepData : DatabaseData, ITestStepData
+    public class DatabaseStepData : DatabaseData, ITestStepData
     {
-        /// <summary>
-        /// The path to the keychain account.
-        /// </summary>
-        internal static readonly string KeychainAccountsFilePath = ConfigurationManager.AppSettings["KeychainAccountsFilePath"].ToString();
-
         /// <summary>
         /// Initializes a new instance of the <see cref="DatabaseStepData"/> class.
         /// A mandatory constructor that won't do anything.
@@ -54,7 +57,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <inheritdoc/>
         public void SetArguments(TestStep testStep)
         {
-            // run for at most number of local attempts, until test action passes
+            // run for at most number of
+            // attempts, until test action passes
             // update object and value by querying special characters
             this.QueryObjectAndArguments(testStep);
         }
@@ -73,7 +77,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public void QueryObjectAndArguments(TestStep testStep)
         {
             string environment = GetEnvironmentVariable(EnvVar.Environment);
-            /*
+
+            /* Note that this might work? Was here before
             if (testStep is ActionObject)
             {
                 // query to update each of the test object's attribute value
@@ -131,8 +136,15 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 string rowid = variable[0].ToString();
 
                 // Encrypt password by dbName and username.
-                result = Helper.DecryptString(result, globalVariableName + rowid);
-            }
+                try
+                {
+                    result = Helper.DecryptString(result, globalVariableName + rowid);
+                }
+                catch
+                {
+                    Logger.Info("Error with decrypting string");
+                }
+             }
 
             return result;
         }
@@ -156,6 +168,64 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         }
 
         /// <summary>
+        /// Returns the URL to access the environment.
+        /// </summary>
+        /// <param name="environment">The enviornment we want to connect to.</param>
+        /// <returns>The URL to access the environment.</returns>
+        public string GetEnvironmentURL(string environment)
+        {
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
+
+            // Updated by Victor to reflect Selenium
+            // string query = $"select t.url from {this.EnvDBName} t where t.environment = '{environment}'";
+            string query = $"select t.url from QA_AUTOMATION.test_environments t where t.environment = '{environment}'";
+            List<List<object>> result = this.TestDB.ExecuteQuery(query);
+            if (result.Count == 0)
+            {
+                Logger.Info($"Environment provided '{environment}' is not in DB table, querying App.Config!");
+                //result = new List<List<object>>();
+                // return the value if it exists in the app seetings folder.
+                return ConfigurationManager.AppSettings[environment];
+            }
+
+            return result[0][0].ToString();
+        }
+
+        /// <summary>
+        /// Gets the environment sharepoint mapping from the database.
+        /// </summary>
+        /// <param name="environment">The environment it is associated with.</param>
+        /// <param name="mappingName">Name of the sharepoint mapping.</param>
+        /// <returns>4 required info used by Sharepoint to get information.</returns>
+        public List<string> GetEnvironmentSharePointMapping(string environment, string mappingName)
+        {
+            this.TestDB = this.ConnectToDatabase(this.TestDB);
+
+            // Get SharePoint mapping info.
+            string query = "SELECT T.SP_MAP_ROOT_SITE, T.SP_MAP_LIST, T.SP_MAP_TARGET_COL_FIELD_REF, " +
+                                   "M.SP_MAP_TRGT_COL_VAL, T.SP_MAP_COL_FIELD_REF " +
+                            "FROM SP_MAP_TYPE T " +
+                            "NATURAL JOIN(ENV_SP_MAP M) " +
+                           $"WHERE T.SP_MAP_TYPE_NAME = '{mappingName}' " +
+                           $"AND M.ENVIRONMENT = '{environment}'";
+
+            List<List<object>> mappingInfoList = this.TestDB.ExecuteQuery(query);
+
+            if (mappingInfoList.Count == 0)
+            {
+                throw new Exception($"Provided environment '{environment}' and mapping {mappingName} does not exist.");
+            }
+
+            List<string> result = new List<string>();
+            foreach (string info in mappingInfoList[0])
+            {
+                result.Add(info);
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// If the original string begins with special characters in ['!', '@', '##', '$$'], then
         /// it is replaced by the respective value in the database.
         /// </summary>
@@ -165,6 +235,9 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public object QuerySpecialChars(string environment, string original)
         {
             string msg = string.Empty;
+
+            // Not certain taht the environment variable is set correctly
+            // string token = "$(environment)";
             string token = "$(environment)";
             if (original.Contains(token))
             {
@@ -197,8 +270,10 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             else if (original.Length >= 2 && original.Substring(0, 2) == "##")
             {
                 // query password from Keychain accounts spreadsheet
-                string username = original.Substring(2);
-                result = this.QueryKeychainAccountPassword(username);
+                string username = original.Substring(2); // we remove the two hashes
+
+                result = CSVEnvironmentGetter.QueryKeychainAccountPassword(username);
+
                 msg += $"Query of {original} replaced password with: {result}.";
             }
             else if (original.Length >= 2 && original.Substring(0, 2) == "$$")
@@ -210,6 +285,43 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 Logger.Error($"Sorry, {original} is not implemented yet. or does not work on the current program.");
 
                 // result = ExcelDriver.QueryExcelFile(filepath, query);
+            }
+
+            // call on parameter to replace content between parameter
+            else if (original.Contains("{") && original.Contains("}"))
+            {
+                //int instances;
+                string currString;
+                Console.WriteLine("Original is: " + original);
+
+                while (original.Length - original.Replace("{", string.Empty).Length > 0 &&
+                       original.Length - original.Replace("}", string.Empty).Length > 0)
+                {
+                    currString = original.Substring(0); // make a copy of the string
+
+                    int indexBegin = currString.IndexOf("{");
+                    int indexEnd = currString.IndexOf("}");
+
+                    string keyPair = currString.Substring(indexBegin + 1, indexEnd - indexBegin - 1);
+
+                    if (InformationObject.RunParameters.ContainsKey(keyPair))
+                    {
+                        string newValue = InformationObject.RunParameters[keyPair];
+                        // replace all instances
+                        original = original.Replace(currString.Substring(indexBegin, indexEnd - indexBegin + 1), newValue);
+                        Console.WriteLine("Successfully queried for value: " + newValue);
+                    }
+                    else
+                    {
+                        // could be not successfully queried because of Press Key using same format
+                        Console.WriteLine("Not successfully queried");
+                        break;
+                    }
+                    // set the next substring and continue
+                    //original = currString.Substring(indexEnd, currString.Length - 1);
+                }
+                // make a copy of original that has been modified as the final result
+                result = original.Substring(0);
             }
 
             // display console log
@@ -252,11 +364,24 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <param name="environment">Name of environment to execute in.</param>
         /// <param name="sql">Query to execute.</param>
         /// <returns><code>true</code> if query was successfully executed.</returns>
-        internal bool ExecuteEnvironmentNonQuery(string environment, string sql)
+        internal bool ExecuteEnvironmentNonQuery(string environment, string sql, bool fromFile)
         {
             this.ConnectToEnvDatabase(environment);
-            string cmd = this.CreateSQLPlusCommand(environment, sql);
-            return this.EnvDB.ExecuteNonQuery(cmd);
+
+            if (fromFile)
+            {
+                string cmd = this.CreateSQLPlusCommand(environment, sql);
+
+                Logger.Info($"Executing following sql in {environment}: {sql}");
+
+                // Logger.Info("Command " +  cmd); // this is the command that is executed
+
+                return this.EnvDB.ExecuteNonQuery(cmd);
+            }
+            else
+            {
+                return this.EnvDB.ExecuteNonQuery(sql);
+            }
         }
 
         /// <summary>
@@ -315,41 +440,81 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         /// <returns>The information needed to build the connection string.</returns>
         private List<object> QueryEnvironmentConnectionInformation(string environment)
         {
-            this.TestDB = this.ConnectToDatabase(this.TestDB);
+            List<object> connectionInfo = new List<object>();
+            int t_isPasswordEncrypted;
+            string t_password;
+            string t_username;
+            string t_db_name;
 
-            // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
-            string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {ConfigurationManager.AppSettings["DBEnvDatabase"]} t where t.environment = '{environment}'";
-            Logger.Info($"Querying for QueryEnvironmentConnectionInformation : [{query}]");
-
-            // decrypt password if needed.
-            List<List<object>> result = this.TestDB.ExecuteQuery(query);
-
-            if (result.Count == 0)
+            // if we are using the DB to get the environment info, then continue, otherwise use CSV file.
+            if (System.Configuration.ConfigurationManager.AppSettings["ENV_LOCATION"].ToUpper() == "DB")
             {
-                throw new Exception($"Environment provided '{environment}' is not in table!");
+                this.TestDB = this.ConnectToDatabase(this.TestDB);
+
+                // we add t.is_password_encrypted to be able to check if the password is encrypted or not.
+                string query = $"select t.host, t.port, t.db_name, t.username, t.password, t.is_password_encrypted from {ConfigurationManager.AppSettings["DBEnvDatabase"]} t where t.environment = '{environment}'";
+                Logger.Info($"Querying for QueryEnvironmentConnectionInformation : [{query}]");
+
+                // decrypt password if needed.
+                List<List<object>> result = this.TestDB.ExecuteQuery(query);
+
+                if (result.Count == 0)
+                {
+                    throw new Exception($"Environment provided '{environment}' is not in table!");
+                }
+
+                connectionInfo = result[0];
+                string t_host = connectionInfo[0].ToString();
+                string t_port = connectionInfo[1].ToString();
+                t_db_name = connectionInfo[2].ToString();
+                t_username = connectionInfo[3].ToString();
+                t_password = connectionInfo[4].ToString();
+                t_isPasswordEncrypted = int.Parse(connectionInfo[5].ToString());
+            }
+            else if (System.Configuration.ConfigurationManager.AppSettings["ENV_LOCATION"].ToUpper() == "CSV")
+            {
+                connectionInfo.Add(CSVEnvironmentGetter.GetHost(environment));
+                Logger.Info("Got port value" + connectionInfo[0]);
+                connectionInfo.Add(CSVEnvironmentGetter.GetPort(environment));
+                Logger.Info("Got port value" + connectionInfo[0]);
+
+                connectionInfo.Add(CSVEnvironmentGetter.GetDBName(environment));
+                connectionInfo.Add(CSVEnvironmentGetter.GetUsername(environment));
+                connectionInfo.Add(CSVEnvironmentGetter.GetPassword(environment));
+                connectionInfo.Add(CSVEnvironmentGetter.GetIsEncrypted(environment));
+
+                t_db_name = connectionInfo[2].ToString();
+                t_username = connectionInfo[3].ToString();
+                t_password = connectionInfo[4].ToString();
+                t_isPasswordEncrypted = int.Parse(connectionInfo[5].ToString());
+            }
+            else
+            {
+                Logger.Error("App.config value ENV_LOCATION not set");
+                return null;
             }
 
-            List<object> connectionInfo = result[0];
-            string t_host = connectionInfo[0].ToString();
-            string t_port = connectionInfo[1].ToString();
-            string t_db_name = connectionInfo[2].ToString();
-            string t_username = connectionInfo[3].ToString();
-            string t_password = connectionInfo[4].ToString();
-            int t_isPasswordEncrypted = int.Parse(connectionInfo[5].ToString());
-
-            switch (t_isPasswordEncrypted)
+            try
             {
-                case DatabasePasswordState.IsProtected:
-                    connectionInfo[4] = Helper.DecryptString(t_password, t_db_name + t_username);
-                    break;
+                switch (t_isPasswordEncrypted)
+                {
+                    case DatabasePasswordState.IsProtected:
+                        connectionInfo[4] = Helper.DecryptString(t_password, t_db_name + t_username);
+                        break;
 
-                case DatabasePasswordState.IsNotProtected:
-                    // do nothing;
-                    break;
+                    case DatabasePasswordState.IsNotProtected:
+                        // do nothing;
+                        break;
 
-                default:
-                    // something went wrong! We have constraint so that the value must be 0 or 1.
-                    break;
+                    default:
+                        // something went wrong! We have constraint so that the value must be 0 or 1.
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("Exception caught in decrypting password: " + ex.Message);
+                Logger.Error("Decrypting password is incorrect, check whether already decrypted!");
             }
 
             return connectionInfo;
@@ -380,58 +545,6 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         }
 
         /// <summary>
-        /// Queries password of a given username from the Keychain accounts spreadsheet.
-        /// </summary>
-        /// <param name="username">Username to find password of.</param>
-        /// <returns>Password of the Keychain account.</returns>
-        private string QueryKeychainAccountPassword(string username)
-        {
-            string password = string.Empty;
-
-            using (FileStream fileStream = new FileStream(KeychainAccountsFilePath, FileMode.Open, FileAccess.Read))
-            {
-                // open both XLS and XLSX
-                IWorkbook excel = WorkbookFactory.Create(fileStream);
-                ISheet sheet = excel.GetSheetAt(0);
-                for (int col = 0; col < sheet.GetRow(0).LastCellNum; col++)
-                {
-                    // Find the username column
-                    if (sheet.GetRow(0).GetCell(col).StringCellValue == "Email_Account")
-                    {
-                        for (int row = 1; row < sheet.LastRowNum; row++)
-                        {
-                            if (sheet.GetRow(row).GetCell(col)?.StringCellValue == username)
-                            {
-                                password = sheet.GetRow(row + 1).GetCell(col).StringCellValue;
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-
-            return password;
-        }
-
-        /// <summary>
-        /// Returns the URL to access the environment.
-        /// </summary>
-        /// <param name="environment">The enviornment we want to connect to.</param>
-        /// <returns>The URL to access the environment.</returns>
-        private string GetEnvironmentURL(string environment)
-        {
-            this.TestDB = this.ConnectToDatabase(this.TestDB);
-            string query = $"select t.url from {this.EnvDBName} t where t.environment = '{environment}'";
-            List<List<object>> result = this.TestDB.ExecuteQuery(query);
-            if (result.Count == 0)
-            {
-                throw new Exception($"Environment provided '{environment}' is not in table!");
-            }
-
-            return result[0][0].ToString();
-        }
-
-        /// <summary>
         /// Executes the given query in an environment database.
         /// </summary>
         /// <param name="environment">Name of environment to execute in.</param>
@@ -440,7 +553,19 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         private string ProcessEnvironmentQuery(string environment, string query)
         {
             this.ConnectToEnvDatabase(environment);
-            return this.EnvDB.ExecuteQuery(query)[0][0].ToString();
+
+            string queryString;
+            try
+            {
+                queryString = this.EnvDB.ExecuteQuery(query)[0][0].ToString();
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Environment query failed because no results returned");
+                throw;
+            }
+
+            return queryString;
         }
 
         /// <summary>
