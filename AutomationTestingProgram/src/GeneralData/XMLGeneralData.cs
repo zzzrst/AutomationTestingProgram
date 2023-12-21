@@ -101,24 +101,24 @@ namespace AutomationTestingProgram.GeneralData
                     parameters.Add(EnvVar.ScreenshotSaveLocation, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ScreenshotSaveLocation")[0].InnerText, xmlDataFile));
                 }
 
-                // Special Elements
-                if (xmlDocObj.GetElementsByTagName("loadingSpinner").Count > 0)
-                {
-                    parameters.Add(EnvVar.LoadingSpinner, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
-                }
-                else
-                {
-                    parameters.Add(EnvVar.LoadingSpinner, ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
-                }
+                //// Special Elements
+                //if (xmlDocObj.GetElementsByTagName("loadingSpinner").Count > 0)
+                //{
+                //    parameters.Add(EnvVar.LoadingSpinner, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("LoadingSpinner")[0].InnerText, xmlDataFile));
+                //}
+                //else
+                //{
+                //    parameters.Add(EnvVar.LoadingSpinner, ConfigurationManager.AppSettings["LoadingSpinner"].ToString());
+                //}
 
-                if (xmlDocObj.GetElementsByTagName("errorContainer").Count > 0)
-                {
-                    parameters.Add(EnvVar.ErrorContainer, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
-                }
-                else
-                {
-                    parameters.Add(EnvVar.ErrorContainer, ConfigurationManager.AppSettings["ErrorContainer"].ToString());
-                }
+                //if (xmlDocObj.GetElementsByTagName("errorContainer").Count > 0)
+                //{
+                //    parameters.Add(EnvVar.ErrorContainer, this.ReplaceIfToken(xmlDocObj.GetElementsByTagName("ErrorContainer")[0].InnerText, xmlDataFile));
+                //}
+                //else
+                //{
+                //    parameters.Add(EnvVar.ErrorContainer, ConfigurationManager.AppSettings["ErrorContainer"].ToString());
+                //}
             }
             catch (Exception e)
             {
