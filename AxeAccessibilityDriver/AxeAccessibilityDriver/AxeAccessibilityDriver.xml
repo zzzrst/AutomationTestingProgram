@@ -1,0 +1,448 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AxeAccessibilityDriver</name>
+    </assembly>
+    <members>
+        <member name="T:AxeAccessibilityDriver.AxeDriver">
+            <summary>
+            This is the driver to deal with Axe.core.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeDriver.results">
+            <summary>
+            Result Type -> { Rule ID -> {Page URL -> HTML, Target, Data, Related Nodes} }.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeDriver.pageInfo">
+            <summary>
+            Page URL -> Provided Page Title, Browser Page Title.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeDriver.ruleInfo">
+            <summary>
+            Rule ID -> Description, Rule Tag, Impact, Help, Help URL.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeDriver.pageSummary">
+            <summary>
+            [Page URL, Provided Page Title, Browser Page Title, Passes, Violations, Incomplete, Inapplicable].
+            </summary>
+        </member>
+        <member name="M:AxeAccessibilityDriver.AxeDriver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AxeAccessibilityDriver.AxeDriver"/> class.
+            </summary>
+        </member>
+        <member name="M:AxeAccessibilityDriver.AxeDriver.CaptureResult(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            This captures the AODA result for this webpage.
+            </summary>
+            <param name="driver">Selenium WebDriver used. </param>
+            <param name="providedPageTitle"> Title of the page. </param>
+        </member>
+        <member name="M:AxeAccessibilityDriver.AxeDriver.LogResults(System.String)">
+            <summary>
+            Logs the result for this file.
+            </summary>
+            <param name="folderLocation">Location to save all the results.</param>
+        </member>
+        <member name="M:AxeAccessibilityDriver.AxeDriver.WriteToExcelData(AxeAccessibilityDriver.TestReportExcel,System.Collections.Generic.List{System.String},System.String,System.String)">
+            <summary>
+            Writes the result to the excel sheet under checklist.
+            </summary>
+            <param name="excelReport">The excel sheet.</param>
+            <param name="ruleTag">List of rules.</param>
+            <param name="resultString">If it passed or failed.</param>
+            <param name="comment">any comments that it comes with.</param>
+        </member>
+        <member name="M:AxeAccessibilityDriver.AxeDriver.GetCriteriaId(System.Collections.Generic.List{System.String})">
+            <summary>
+            Finds the Criteria Id inside the ruleTags.
+            </summary>
+            <param name="ruleTag">List of tags.</param>
+            <returns>the id.</returns>
+        </member>
+        <member name="M:AxeAccessibilityDriver.AxeDriver.MapAxeResult(Selenium.Axe.AxeResultItem[],System.String,System.String)">
+            <summary>
+            Populate RuleInfo and Results based on AxeResultItems[] passed in.
+            </summary>
+            <param name="axeResults">The different results that were found.</param>
+            <param name="resultType"> The type of result. </param>
+            <param name="url">The url used for this page.</param>
+        </member>
+        <member name="T:AxeAccessibilityDriver.AxeResultType">
+            <summary>
+            The different result types for Axe.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeResultType.INAPPLICABLE">
+            <summary>
+            The result type INAPPLICABLE.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeResultType.INCOMPLETE">
+            <summary>
+            The result type INCOMPLETE.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeResultType.PASS">
+            <summary>
+            The result type PASS.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.AxeResultType.VIOLATIONS">
+            <summary>
+            The result type VIOLATIONS.
+            </summary>
+        </member>
+        <member name="T:AxeAccessibilityDriver.IAccessibilityChecker">
+            <summary>
+            The Accessibility interface.
+            </summary>
+        </member>
+        <member name="M:AxeAccessibilityDriver.IAccessibilityChecker.CaptureResult(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            This captures the AODA result for this webpage.
+            </summary>
+            <param name="driver">The driver to use.</param>
+            <param name="providedPageTitle"> Title of the page. </param>
+        </member>
+        <member name="M:AxeAccessibilityDriver.IAccessibilityChecker.LogResults(System.String)">
+            <summary>
+            Logs the result for this file.
+            </summary>
+            <param name="folderLocation">Location to save all the results.</param>
+        </member>
+        <member name="T:AxeAccessibilityDriver.IssueLog">
+            <summary>
+            An object of the issue log's row.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.IssueLog.Url">
+            <summary>
+            Gets or sets url of the issue.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.IssueLog.Criterion">
+            <summary>
+            Gets or sets the success criterion.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.IssueLog.Description">
+            <summary>
+            Gets or sets description of the problem.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.IssueLog.Impact">
+            <summary>
+            Gets or sets the impact of the problem.
+            </summary>
+        </member>
+        <member name="T:AxeAccessibilityDriver.PageInformation">
+            <summary>
+            Class to represent information on a page.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.PageInformation.BrowserPageTitle">
+            <summary>
+            Gets or sets the title found on the page the browser is on..
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.PageInformation.ProvidedPageTitle">
+            <summary>
+            Gets or sets the title provided by the user for the page.
+            </summary>
+        </member>
+        <member name="T:AxeAccessibilityDriver.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CHECKLIST_DATE_CELL">
+            <summary>
+              Looks up a localized string similar to 2.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CHECKLIST_DATE_ROW">
+            <summary>
+              Looks up a localized string similar to 3.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CHECKLIST_START_COL">
+            <summary>
+              Looks up a localized string similar to 3.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CHECKLIST_TOTAL_CELL">
+            <summary>
+              Looks up a localized string similar to 3.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CHECKLIST_TOTAL_ROW">
+            <summary>
+              Looks up a localized string similar to 62.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CommentColumn">
+            <summary>
+              Looks up a localized string similar to 1.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CriteriaColumn">
+            <summary>
+              Looks up a localized string similar to 0.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CriteriaFail">
+            <summary>
+              Looks up a localized string similar to Fail.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CriteriaIncomplete">
+            <summary>
+              Looks up a localized string similar to Incomplete.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CriteriaNA">
+            <summary>
+              Looks up a localized string similar to Criteria not applicable.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.CriteriaPass">
+            <summary>
+              Looks up a localized string similar to Pass.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.Inapplicable">
+            <summary>
+              Looks up a localized string similar to CriteriaNA.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.Incomplete">
+            <summary>
+              Looks up a localized string similar to CriteriaIncomplete.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.ISSUE_HIDDEN_CRITERA_NAME_CELL">
+            <summary>
+              Looks up a localized string similar to 14.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.IssueKeycritical">
+            <summary>
+              Looks up a localized string similar to High.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.IssueKeymoderate">
+            <summary>
+              Looks up a localized string similar to Low.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.IssueKeyserious">
+            <summary>
+              Looks up a localized string similar to Medium.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.Pass">
+            <summary>
+              Looks up a localized string similar to CriteriaPass.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.SheetCheckList">
+            <summary>
+              Looks up a localized string similar to WCAG 2.0 Compliance Checklist.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.SheetIssueLog">
+            <summary>
+              Looks up a localized string similar to Issue Tracking Log.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.SheetSummary">
+            <summary>
+              Looks up a localized string similar to Executive Summary.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.SUMMARY_DATE_CELL">
+            <summary>
+              Looks up a localized string similar to 0.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.SUMMARY_DATE_ROW">
+            <summary>
+              Looks up a localized string similar to 9.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.SUMMARY_PROGRESS_CELL">
+            <summary>
+              Looks up a localized string similar to 0.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.SUMMARY_PROGRESS_ROW">
+            <summary>
+              Looks up a localized string similar to 28.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.TOTAL_CRITERIA">
+            <summary>
+              Looks up a localized string similar to 38.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.Violations">
+            <summary>
+              Looks up a localized string similar to CriteriaFail.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.Properties.Resources.WATR_Template">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="T:AxeAccessibilityDriver.ResourceHelper">
+            <summary>
+            Helper for string resources.
+            </summary>
+        </member>
+        <member name="M:AxeAccessibilityDriver.ResourceHelper.GetString(System.String)">
+            <summary>
+            Gets the string value for the resource name.
+            </summary>
+            <param name="resourceName">Name of the resource.</param>
+            <returns>The string value for the resource name.</returns>
+        </member>
+        <member name="T:AxeAccessibilityDriver.RuleInformation">
+            <summary>
+            Class to represent the information for each rule.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.RuleInformation.Description">
+            <summary>
+            Gets or sets the description of the rule.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.RuleInformation.Help">
+            <summary>
+            Gets or sets the help text for this rule.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.RuleInformation.HelpUrl">
+            <summary>
+            Gets or sets the help url associated with this rule.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.RuleInformation.Impact">
+            <summary>
+            Gets or sets the impact associated with this rule.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.RuleInformation.RuleTag">
+            <summary>
+            Gets or sets the rule tag associated with this rule.
+            </summary>
+        </member>
+        <member name="T:AxeAccessibilityDriver.RuleNodeInformation">
+            <summary>
+            Class to represent the information on a rule node.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.RuleNodeInformation.HTML">
+            <summary>
+            Gets or sets the HTML element this rule pertains to.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.RuleNodeInformation.Target">
+            <summary>
+            Gets or sets the list of target HTML elements / information this rule has.
+            </summary>
+        </member>
+        <member name="T:AxeAccessibilityDriver.TestReportExcel">
+            <summary>
+            The excel test reporter object.
+            </summary>
+        </member>
+        <member name="F:AxeAccessibilityDriver.TestReportExcel.criteriaFailed">
+            <summary>
+            The number of critera Failed.
+            </summary>
+        </member>
+        <member name="M:AxeAccessibilityDriver.TestReportExcel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AxeAccessibilityDriver.TestReportExcel"/> class.
+            Creates a new Excel report.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.TestReportExcel.ExcelData">
+            <summary>
+            Gets or sets the data to write to the excel sheet.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.TestReportExcel.IssueList">
+            <summary>
+            Gets or sets the AODA defects.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.TestReportExcel.ProjectName">
+            <summary>
+            Gets or sets name of the project.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.TestReportExcel.ProjectUrl">
+            <summary>
+            Gets or sets the url of the project.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.TestReportExcel.Date">
+            <summary>
+            Gets or sets the date this was modified.
+            </summary>
+        </member>
+        <member name="P:AxeAccessibilityDriver.TestReportExcel.FileLocation">
+            <summary>
+            Gets or sets the location to save the file to.
+            </summary>
+        </member>
+        <member name="M:AxeAccessibilityDriver.TestReportExcel.WriteToExcel">
+            <summary>
+            Writes the aoda results to the excel file.
+            </summary>
+        </member>
+        <member name="M:AxeAccessibilityDriver.TestReportExcel.DefineColourFormattingChecklistSheet(NPOI.SS.UserModel.ISheet)">
+            <summary>
+            Defines the conditional formatting for the checklist sheet.
+            </summary>
+            <param name="sheet">the checklist sheet.</param>
+        </member>
+        <member name="M:AxeAccessibilityDriver.TestReportExcel.UpdateIssueSheet(NPOI.SS.UserModel.IWorkbook)">
+            <summary>
+            Updates the issue sheet.
+            </summary>
+            <param name="workbook">The workbook containing the issue sheet.</param>
+        </member>
+        <member name="M:AxeAccessibilityDriver.TestReportExcel.DefineColourFormattingIssueSheet(NPOI.SS.UserModel.ISheet)">
+            <summary>
+            Defines the conditional formatting for the issue sheet.
+            </summary>
+            <param name="sheet">the issue sheet.</param>
+        </member>
+        <member name="M:AxeAccessibilityDriver.TestReportExcel.FindIdWithValue(System.String,NPOI.SS.UserModel.ISheet)">
+            <summary>
+            In the Checklist sheet, it finds the row index who's Criteria id is equal to the key.
+            </summary>
+            <param name="key">the id to find.</param>
+            <param name="sheet">Checklist Sheet.</param>
+            <returns>The row index.</returns>
+        </member>
+    </members>
+</doc>
