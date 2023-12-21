@@ -6,11 +6,16 @@ namespace AutomationTestingProgram
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.IO;
+    using System.Reflection;
+    using System.Runtime.CompilerServices;
     using System.Text;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestingProgram.TestingData;
+    using Spire.Pdf.Exporting.XPS.Schema;
     using TestingDriver;
+    using Path = System.IO.Path;
 
     /// <summary>
     /// An information class that contains information needed by other objects/methods.
@@ -57,6 +62,12 @@ namespace AutomationTestingProgram
             /// bool.
             /// </summary>
             RespectRunAODAFlag,
+
+            /// <summary>
+            /// Build Number of the run.
+            /// string.
+            /// </summary>
+            BuildNumber,
 
             /// <summary>
             /// Time out threshold.
@@ -144,6 +155,21 @@ namespace AutomationTestingProgram
             /// Error Container.
             /// </summary>
             ErrorContainer,
+
+            /// <summary>
+            /// PAT for the Azure DvvOps exeuction.
+            /// </summary>
+            AzurePAT,
+
+            /// <summary>
+            /// Secrets from the pipeline execution on DevOps.
+            /// </summary>
+            SecretInformation,
+
+            /// <summary>
+            /// Maximum failures before entire execution fails.
+            /// </summary>
+            MaxFailures,
         }
 
         /// <summary>
@@ -197,22 +223,92 @@ namespace AutomationTestingProgram
         public static Reporter Reporter { get; set; }
 
         /// <summary>
-        /// Sets up all the variables and paths.
+        /// Gets or sets a run parameter.
+        /// </summary>
+        public static Dictionary<string, string> RunParameters { get; set; } = new Dictionary<string, string>();
+
+        /// <summary>
+        /// Gets or sets the test set name.
+        /// </summary>
+        public static string TestSetName { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value whether or not this program should execute.
+        /// </summary>
+        public static bool ShouldExecute { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value whether or not this program should execute.
+        /// </summary>
+        public static bool BlockTestSet { get; set; }
+
+        /// <summary>
+        /// Gets or sets a list indicating the people to notify after failure.
+        /// </summary>
+        public static List<string> NotifyEmails { get; set; }
+
+        /// <summary>
+        /// Gets or sets a list indicating the people to notify after failure.
+        /// </summary>
+        public static string OriginalTestSetDirectoryName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the URL corresponding to the DevOps execution.
+        /// </summary>
+        public static string ExecutionURL { get; set; }
+
+        /// <summary>
+        /// Gets or sets the test plan name corresponding to the execution.
+        /// </summary>
+        public static string TestPlanName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the test suite folder structure for the execution when reporting to DevOps.
+        /// </summary>
+        public static string FolderStructure { get; set; }
+
+        /// <summary>
+        /// Gets or sets the test plan name corresponding to the execution.
+        /// </summary>
+        public static string TestProjectName { get; set; }
+        /// <summary>
+
+        /// Gets or sets the tester email for the corresponding test set the execution.
+        /// </summary>
+        public static string TesterEmail { get; set; }
+
+        /// Gets or sets the tester Name for the corresponding test set the execution.
+        /// </summary>
+        public static string TesterName { get; set; }
+
+        /// Gets or sets the release uri and environment uri for the corresponding test set and its execution. 
+        /// Must be from DevOps, and must come together. Comma separated. 
+        /// </summary>
+        public static string ReleaseEnvUri { get; set; }
+
+        /// <summary>
+        /// Sets up all the variables and paths. 
         /// </summary>
         public static void SetUp()
         {
+            InformationObject.ShouldExecute = true;
+            InformationObject.BlockTestSet = false;
+
+            Logger.Info("Beginning SetUp");
             string csvSaveLocation = GetEnvironmentVariable(EnvVar.CsvSaveFileLocation);
             string logSaveLocation = GetEnvironmentVariable(EnvVar.LogSaveFileLocation);
             string reportSaveLocation = GetEnvironmentVariable(EnvVar.ReportSaveFileLocation);
             string screenshotSaveLocation = GetEnvironmentVariable(EnvVar.ScreenshotSaveLocation);
 
-            string testSetFile = GetEnvironmentVariable(EnvVar.TestSetDataArgs);
-            string csvFileName = testSetFile.Substring(testSetFile.LastIndexOf("\\") + 1);
-            csvFileName = csvFileName.Substring(0, csvFileName.Length - 4);
+            string csvFileName = InformationObject.TestSetName;
+            Logger.Info("CSV file name is: " + csvSaveLocation + "\\" + csvFileName);
 
-            CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{csvFileName}.csv");
+            // add CSV results execution log file
+            CSVLogger = new CSVLogger(csvSaveLocation + "\\" + $"{csvFileName}_{DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")}.csv");
             CSVLogger.AddResults($"Transaction, {DateTime.Now:G}");
-            CSVLogger.AddResults($"Environment URL, {GetEnvironmentVariable(EnvVar.URL)}");
+            CSVLogger.AddResults($"Environment, {GetEnvironmentVariable(EnvVar.Environment)}");
+            CSVLogger.AddResults(","); // create line separator
+            CSVLogger.AddResults("Test Step Name, Description, Expected, Run Successful, Step Number, Speed, Error Trace, Friendly Error Message");
 
             LogSaveFileLocation = logSaveLocation;
             ScreenshotSaveLocation = screenshotSaveLocation;
@@ -226,12 +322,19 @@ namespace AutomationTestingProgram
                 Directory.CreateDirectory(logSaveLocation);
                 Directory.CreateDirectory(reportSaveLocation);
                 Directory.CreateDirectory(screenshotSaveLocation);
+                Directory.CreateDirectory(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), ConfigurationManager.AppSettings["TEMPORARY_FILES_FOLDER"]));
             }
             catch (ArgumentException)
             {
                 throw new Exception("Missing file path parameters. On one or more of these Directories. " +
                     "csv,log,report,screenshot");
             }
+
+            string now = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss_fff");
+
+            RunParameters.Add("UNIQUE_IDENTIFIER", now);
+
+            Console.WriteLine("Added UNIQUE IDENTIFIER with value: " + now);
 
             SetReporter(reportSaveLocation);
         }
@@ -243,11 +346,12 @@ namespace AutomationTestingProgram
         /// <param name="value">What Value to set it.</param>
         public static void SetEnvironmentVariable(EnvVar variable, string value)
         {
+            Logger.Info("set environment variable: " + variable.ToString() + " to: " + value);
             Environment.SetEnvironmentVariable(variable.ToString(), value);
         }
 
         /// <summary>
-        /// Gets the given envirnment variable.
+        /// Gets the given environment variable.
         /// </summary>
         /// <param name="variable">Variable to return.</param>
         /// <returns>The value of the variable.</returns>
@@ -267,10 +371,15 @@ namespace AutomationTestingProgram
             switch (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower())
             {
                 case "alm":
+                    // Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
                     Reporter = new ALMReporter(string.Empty);
                     break;
                 default:
-                    Reporter = new Reporter(Path.Combine(reportSaveLocation, "Report.txt"));
+                    string testSetFile = GetEnvironmentVariable(EnvVar.TestSetDataArgs);
+                    //string excelName = testSetFile.Substring(testSetFile.LastIndexOf("\\") + 1);
+                    //excelName = excelName.Substring(0, excelName.IndexOf("."));
+
+                    Reporter = new Reporter(Path.Combine(reportSaveLocation, $"Report_{InformationObject.TestSetName}_{DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss")}.txt"));
                     break;
             }
         }

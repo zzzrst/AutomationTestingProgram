@@ -44,7 +44,7 @@ namespace AutomationTestingProgram
         /// <summary>
         /// Gets or sets the environment to use.
         /// </summary>
-        [Option('e', "environment", Required = false, HelpText = "Overrides the browser set in the Testing files.")]
+        [Option('e', "environment", Required = true, HelpText = "Overrides the browser set in the Testing files.")]
         public string Environment { get; set; }
 
         /// <summary>
@@ -122,10 +122,18 @@ namespace AutomationTestingProgram
         public string AutomationProgram { get; set; }
 
         /// <summary>
+        /// Gets or sets the Build Number to use.
+        /// <para> </para>
+        /// If not set, will be called "my build number".
+        /// </summary>
+        [Option("buildNumber", Required = false, HelpText = "The build number for the execution.")]
+        public string BuildNumber { get; set; }
+
+        /// <summary>
         /// Gets or sets the type of data to use for the test set.
         /// </summary>
-        [Option("setType", Required = true, HelpText = "The data type to get the test set from. " +
-            "The type avaliable are: XML")]
+        [Option("setType", Required = false, HelpText = "The data type to get the test set from. " +
+            "The type avaliable are: Excel, ALM, XML")]
         public string TestSetDataType { get; set; }
 
         /// <summary>
@@ -167,5 +175,112 @@ namespace AutomationTestingProgram
         /// </summary>
         [Option("stepArgs", Required = false, HelpText = "The argument to use for the test step. Most often the file location. Defaults to the test case args.")]
         public string TestStepDataArgs { get; set; }
+
+        /// <summary>
+        /// Gets or sets the test plan name.
+        /// <para> </para>
+        /// If not set, will be set as the test set name.
+        /// </summary>
+        [Option("planName", Required = false, HelpText = "The name of the test plan to be used for generating test plans in Azure DevOps.")]
+        public string TestPlanName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the test project name.
+        /// <para> </para>
+        /// If not set, will be set to default AutomationAndAccessibility.
+        /// </summary>
+        [Option("projectName", Required = false, HelpText = "The project to publish the results to DevOps to.")]
+        public string ProjectName { get; set; }
+
+        /// <summary>
+        /// Gets of sets the Azure AD PAT credentials.
+        /// <para> </para>
+        /// If not set, will take the value of the App.Config user to query.
+        /// </summary>
+        [Option("azurePAT", Required = false, HelpText = "PAT token for API calls to DevOps")]
+        public string AzurePAT { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Azure AD login credentials.
+        /// <para> </para>
+        /// If not set, will take the value of local KeyVault cred value to query.
+        /// </summary>
+        [Option("kvSecrets", Required = false, HelpText = "KeyVault secret information to publish to DevOps.")]
+        public string SecretInformation { get; set; }
+
+        /// <summary>
+        /// Gets or sets the maximum number of consecutive failures.
+        /// <para> </para>
+        /// If not set, will take the value stored for MaxConsecutiveFailedTestCases in App.Config.
+        /// </summary>
+        [Option("maxFailures", Required = false, HelpText = "Maximum consecutive failures before entire execution fails.")]
+        public string MaxFailures { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of comma-separated emails to notify after execution.
+        /// <para> </para>
+        /// If not set, will take list from App.config.
+        /// </summary>
+        [Option("notifyList", Required = false, HelpText = "List of comma-separated emails to notify after execution finishes.")]
+        public string NotifyList { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of comma-separated run parameters.
+        /// <para> </para>
+        /// If not set, no parameters are created.
+        /// </summary>
+        [Option("runParams", Required = false, HelpText = "List of comma-separated parameters with colons separating key-value pairs")]
+        public string RunParameters { get; set; }
+
+        /// <summary>
+        /// Gets or sets the execution url of the devops exeuction
+        /// <para> </para>
+        /// If not set, no parameters are created.
+        /// </summary>
+        [Option("executionURL", Required = false, HelpText = "The URL to the execution.")]
+        public string ExecutionURL { get; set; }
+
+        /// <summary>
+        /// Gets or sets values to override in the App.Config, separated by colons.
+        /// <para> </para>
+        /// If not set, no overrides are made.
+        /// </summary>
+        [Option("appConfig", Required = false, HelpText = "App.Config overrides to the execution.")]
+        public string AppConfigOverrides { get; set; }
+
+        /// <summary>
+        /// The structure of the Azure Test Plans folder structure.
+        /// <para> </para>
+        /// If not set, no overrides are made.
+        /// </summary>
+        [Option("testPlanStructure", Required = false, HelpText = "Stucture of azure Test Plans, indicating how the file will be stored")]
+        public string TestPlanStructure { get; set; }
+
+        /// <summary>
+        /// Tester Email for further contact and for displaying into DevOps.
+        /// <para> </para>
+        /// If not set, name is set to Default Tester.
+        /// </summary>
+        [Option("testerContact", Required = false, HelpText = "Tester information for the tester's email, separated by a comma")]
+        public string TesterContact { get; set; }
+
+        /// <summary>
+        /// Tester name for further contact and for displaying into DevOps.
+        /// <para> </para>
+        /// If not set, name is set to Default Tester.
+        /// </summary>
+        [Option("testerName", Required = false, HelpText = "Tester information for the tester's name, separated by a comma")]
+        public string TesterName { get; set; }
+
+        /// <summary>
+        /// Release Uri and Environment Uri separated by a comma.
+        /// <para> </para>
+        /// If not set, no linkage.
+        /// </summary>
+        [Option("releaseEnvUri", Required = false, HelpText = "DevOps release uri and envirnoment uri separated by a comma")]
+        public string ReleaseEnvironmentUri
+        {
+            get; set;
+        }
     }
 }
