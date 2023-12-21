@@ -4,10 +4,14 @@
 
 namespace AutomationTestingProgram
 {
+    using Microsoft.TeamFoundation.Pipelines.WebApi;
+    using NPOI.HPSF;
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
+    using System.Configuration;
 
     /// <summary>
     /// Logger class for CSV.
@@ -20,7 +24,9 @@ namespace AutomationTestingProgram
         /// <param name="csvSaveFileLocation">The location to save the csv file.</param>
         public CSVLogger(string csvSaveFileLocation)
         {
-            this.CsvSaveFileLocation = csvSaveFileLocation;
+            string path_ex = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            this.CsvSaveFileLocation = path_ex + "\\" + csvSaveFileLocation;
         }
 
         /// <summary>
@@ -37,7 +43,6 @@ namespace AutomationTestingProgram
         public void AddResults(string result)
         {
             this.Results.Add(result);
-
             // Logger.Info(result);
         }
 
@@ -46,44 +51,26 @@ namespace AutomationTestingProgram
         /// </summary>
         public void WriteOutResults()
         {
+            // here we will want to configure the files that we are not wanting to use
+
             if (!File.Exists(this.CsvSaveFileLocation))
             {
                 File.WriteAllLines(this.CsvSaveFileLocation, this.Results.ToArray());
             }
             else
             {
-                // spinlock until file is ready to be written to.
-                while (!IsFileReady(this.CsvSaveFileLocation))
-                {
-                }
-
-                int fileColumnCount = File.ReadLines(this.CsvSaveFileLocation).First().Split(',').Count();
-                int fileCurrentLength = File.ReadLines(this.CsvSaveFileLocation).Count();
-
-                List<string> fileRuntime = File.ReadAllLines(this.CsvSaveFileLocation).ToList();
-
-                for (int i = 0; i < fileCurrentLength; i++)
-                {
-                    if (i < this.Results.Count())
-                    {
-                        fileRuntime[i] += "," + this.Results[i].Split(',').Last();
-                    }
-                    else
-                    {
-                        fileRuntime[i] += string.Empty.PadRight(this.Results[0].Split(',').Count(), ',');
-                    }
-                }
-
-                if (this.Results.Count() > fileCurrentLength)
-                {
-                    for (int i = fileCurrentLength; i < this.Results.Count(); i++)
-                    {
-                        fileRuntime.Add(this.Results[i].PadLeft(fileColumnCount + this.Results[i].Length, ','));
-                    }
-                }
-
-                File.WriteAllLines(this.CsvSaveFileLocation, fileRuntime.ToArray());
+                File.Delete(this.CsvSaveFileLocation);
+                File.WriteAllLines(this.CsvSaveFileLocation, this.Results.ToArray());
             }
+
+            // attach to DevOps if true
+            if (ConfigurationManager.AppSettings["ReportToDevOps"] == "true")
+            {
+                InformationObject.Reporter.AddTestRunAttachment("CSV Run Report", this.CsvSaveFileLocation, "CSV-run-report.csv");
+            }
+
+            // here we will attach the CSV logger file to the Test Set Data
+            InformationObject.TestSetData.AddAttachment(this.CsvSaveFileLocation);
         }
 
         /// <summary>
