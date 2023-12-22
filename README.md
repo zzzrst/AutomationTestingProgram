@@ -467,7 +467,8 @@ Minor version is updated when methods are added / removed for bug fixes or a hel
 - SQL template that will auto populate and get the latest SQL info. will also delete instead of update 
 - Button for generating all tests from ALM to Excel 
 
-### Version 2.0 (August 31st, 2023) - FOR EXCEL release
+## Version 2.0 (August 31st, 2023) 
+- introduce excel executions functionality
 - Ability to integrate with DevOps API and generate executions with it
 	- Test Step, Case, Suite, Plan, and Runs are accounted for
 - Basic ability to use Playwright features. 
