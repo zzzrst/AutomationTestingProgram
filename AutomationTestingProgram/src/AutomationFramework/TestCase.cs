@@ -93,7 +93,7 @@ namespace AutomationTestingProgram.AutomationFramework
 
                 // later: fix for specifying db
                 // if (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower() == "excel")
-                InformationObject.Reporter.CreateAzureTestCase(this.Name, "This is a test description");
+                InformationObject.Reporter.CreateAzureTestCaseResult(this.Name, "This is a test description");
             }
         }
 

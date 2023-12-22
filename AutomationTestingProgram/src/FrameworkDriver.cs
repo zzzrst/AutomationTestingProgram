@@ -200,7 +200,7 @@ namespace AutomationTestingProgram
         /// </summary>
         static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {
-            Console.WriteLine("This program was interrupted");
+            Logger.Info("Program was interrupted");
             Reporter tmp = new Reporter("");
             tmp.ReportAborted();
             Environment.Exit(0);
@@ -422,8 +422,8 @@ namespace AutomationTestingProgram
                    SetEnvironmentVariable(EnvVar.TestAutomationDriver, o.AutomationProgram ?? "selenium");
 
                    // set the default project name
-                   //SetEnvironmentVariable(EnvVar.TestProjectName, o.ProjectName ?? "AutomationAndAccessibility");
-                   InformationObject.TestProjectName = o.ProjectName ?? "AutomationAndAccessibility";
+                   string defaultProject = System.Configuration.ConfigurationManager.AppSettings["PROJECT_NAME"];
+                   InformationObject.TestProjectName = o.ProjectName ?? defaultProject;
 
                    // create the default set type as excel
                    SetEnvironmentVariable(EnvVar.TestSetDataType, o.TestSetDataType ?? "Excel");
@@ -492,7 +492,7 @@ namespace AutomationTestingProgram
                    // secret information variable.
                    SetEnvironmentVariable(EnvVar.SecretInformation, o.SecretInformation ?? "");
 
-                   Console.WriteLine("Secret Value is: ", o.SecretInformation);
+                   Logger.Info("Secret Value is: " + o.SecretInformation);
 
                    // if build number is empty, then call Sharepoint Getter to get the build number
                    if (o.BuildNumber == null)

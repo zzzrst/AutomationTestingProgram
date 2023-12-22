@@ -4,13 +4,13 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
-    using AutomationTestingProgram.TestingData;
-    using AutomationTestingProgram.TestingData.TestDrivers;
-    using AutomationTestinProgram.Helper;
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Reflection;
+    using AutomationTestingProgram.TestingData;
+    using AutomationTestingProgram.TestingData.TestDrivers;
+    using AutomationTestinProgram.Helper;
     using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
@@ -58,7 +58,7 @@ namespace AutomationTestingProgram.AutomationFramework
                 InformationObject.TestSetData.AddAttachment(scriptPath);
 
                 scriptPath = tempScriptPath;
-                Console.WriteLine("Script path is now: " + scriptPath);
+                Logger.Info("Script path is now: " + scriptPath);
             }
 
             DatabaseStepData dbdata = new DatabaseStepData("");

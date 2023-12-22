@@ -2,14 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-//using Microsoft.Extensions.Configuration;
-using System.Threading;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using System.Configuration;
+    using System.Threading;
+
     /// <summary>
     /// This test step to click a button.
     /// </summary>
@@ -24,12 +21,12 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public override void Execute()
         {
-            base.Execute();
-
-            // sleep an additional 3.5 seconds after clicking
             int sleepAmt = int.Parse(ConfigurationManager.AppSettings["CLICK_BUTTON_WAIT_TIME"]);
-            Logger.Info($"About to sleep an additional {sleepAmt} seconds");
+            Logger.Info($"About to sleep {sleepAmt} seconds before executing");
             Thread.Sleep(sleepAmt);
+
+            // base dot execute will execute the code for ClickObject
+            base.Execute();
         }
     }
 }

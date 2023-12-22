@@ -9,7 +9,7 @@ namespace AutomationTestinProgram.Helper
     using System.IO;
     using System.Reflection;
     using AutomationTestingProgram;
-    
+
     /// <summary>
     /// Class to resolve the path for the file paths provided. Throws an exception FileNotFoundException if file path cannot be found.
     /// </summary>

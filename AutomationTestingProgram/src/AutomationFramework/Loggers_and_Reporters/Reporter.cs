@@ -7,13 +7,13 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Linq;
     using System.Reflection;
     using AutomationTestSetFramework;
     using Microsoft.TeamFoundation.TestManagement.WebApi;
     using static AutomationTestingProgram.InformationObject;
-    using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
     /// The implementation of the reporter class.
@@ -26,8 +26,6 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         private string existingTestCaseID;
 
         private bool reportToDevOps;
-
-        //private 
 
         /// <summary>
         /// The list of test case ids.
@@ -175,7 +173,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         }
 
         // since this is already created, we only need to create a test case reference and link to the existing test case id
-        public virtual void CreateAzureTestCase(string testCaseName, string description)
+        public virtual void CreateAzureTestCaseResult(string testCaseName, string description)
         {
             // if we intend to report to devops
             if (this.reportToDevOps)
@@ -196,7 +194,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
 
                 // create a test case for the suite
                 this.azureTestRun.CreateTestCaseResult();
-                Console.WriteLine($"------------------------------ Created Test Case Result for ID: {this.existingTestCaseID} -------------------");
+                Logger.Info($"------------------------------ Recorded Result for ID: {this.existingTestCaseID} -------------------");
             }
         }
 
@@ -212,7 +210,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
             if (this.reportToDevOps)
             {
                 this.azureTestRun.AddTestCaseAttachment(comment, filePath, fileName);
-                Console.WriteLine("------------------------------ Added Test Case Attachment -------------------");
+                // Console.WriteLine("------------------------------ Added Test Case Attachment -------------------");
             }
         }
 
@@ -228,7 +226,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
             if (this.reportToDevOps)
             {
                 this.azureTestRun.AddTestStepAttachment(comment, filePath, fileName, this.existingTestCaseID);
-                Console.WriteLine("------------------------------ Added Test Case Attachment -------------------");
+                // Console.WriteLine("------------------------------ Added Test Case Attachment -------------------");
             }
         }
 
@@ -262,10 +260,7 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         /// Records azure test step result.
         /// </summary>
         /// <param name="runsuccessful">Whether the test step was successfully executed. <see cref="string"/>.</param>
-        /// <param name="testStepName">The test step name<see cref="string"/>.</param>
-        /// <param name="expected">The expected result of the test step<see cref="string"/>.</param>
         /// <param name="actual">The actual result of the test step. <see cref="string"/>.</param>
-        /// <param name="testStepDescription">The description of the test step. <see cref="string"/>.</param>
         public void RecordAzureTestStepResult(bool runsuccessful, string actual)
         {
             string success = runsuccessful ? "Passed" : "Failed";
@@ -274,7 +269,6 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
             if (this.reportToDevOps)
             {
                 this.azureTestRun.RecordTestStepResult(success, actual);
-                Console.WriteLine("------------------------------ Added Test Step Result to Test Case -------------------");
             }
         }
 
@@ -301,8 +295,6 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
                     }
 
                     this.azureTestRun.RecordTestCaseResult(success, this.existingTestCaseID, testCaseStatus);
-
-                    Console.WriteLine($"------------------------------ Wrote Test Case Result: {this.existingTestCaseID} -------------------");
                 }
             }
         }
@@ -384,7 +376,6 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
                         // iterate through the test step statuses for the test case and populate the test step run status
                         string runStepRes;
                         string description;
-                        string concatRes;
                         for (int stepNum = 0; stepNum < this.TestCaseToTestSteps[testCase].Count(); stepNum++)
                         {
                             // if run successful, then runStepRes is Passed

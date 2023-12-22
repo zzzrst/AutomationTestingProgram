@@ -286,9 +286,10 @@ namespace AutomationTestingProgram.TestingData
                 return true;
             }
 
-            Logger.Info("Row index in ExistNextTestStep: " + ExcelData.RowIndex);
-            Logger.Info("GetCell in ExistNextTestStep: " + this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(ACTIONCOL)?.ToString());
-            Logger.Info("Test Step Queue in ExistNextTestStep: " + this.testStepQueue.Count);
+            // For debugging purposes
+            // Logger.Info("Row index in ExistNextTestStep: " + ExcelData.RowIndex);
+            // Logger.Info("GetCell in ExistNextTestStep: " + this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(ACTIONCOL)?.ToString());
+            // Logger.Info("Test Step Queue in ExistNextTestStep: " + this.testStepQueue.Count);
 
             bool sameTestCase = true;
 
@@ -298,12 +299,12 @@ namespace AutomationTestingProgram.TestingData
                 return false;
             }
 
-            Logger.Info("Old test case name: " + this.TestCaseName);
-            Logger.Info("New Test Case name: " + this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(TESTCASENAME).ToString());
+            // for debug purposes
+            // Logger.Info("Old test case name: " + this.TestCaseName);
+            // Logger.Info("New Test Case name: " + this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(TESTCASENAME).ToString());
 
             if (this.TestCaseName != null && this.TestCaseName != this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(TESTCASENAME).ToString())
             {
-                Logger.Info("Same test case is false");
                 this.TestCaseName = this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(TESTCASENAME).ToString();
                 sameTestCase = false;
             }
@@ -312,7 +313,6 @@ namespace AutomationTestingProgram.TestingData
                 && this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(ACTIONCOL)?.ToString() != string.Empty)
                 || this.testStepQueue.Count > 0;
 
-            Logger.Info("Ret value: " + ret_val);
             return ret_val && sameTestCase;
         }
 
@@ -334,7 +334,8 @@ namespace AutomationTestingProgram.TestingData
 
             ExcelData.TestCaseStartIndex = ExcelData.RowIndex;
 
-            Logger.Info("Test Case Start Index set to: " + ExcelData.TestCaseStartIndex);
+            // for debugging
+            // Logger.Info("Test Case Start Index set to: " + ExcelData.TestCaseStartIndex);
 
             this.TestCaseName = testCaseName;
             return testCase;
@@ -367,10 +368,6 @@ namespace AutomationTestingProgram.TestingData
                 TestStep newTestStep = new LaunchBrowser();
                 newTestStep.Arguments.Add("value", url);
                 this.testStepQueue.Enqueue(newTestStep);
-
-                // TestStep testStep = new OpenBrowser();
-                //testStep.Arguments.Add("value", url);
-                //this.testStepQueue.Enqueue(testStep);
                 return true;
             }
             else

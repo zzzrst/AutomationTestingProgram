@@ -183,7 +183,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             if (result.Count == 0)
             {
                 Logger.Info($"Environment provided '{environment}' is not in DB table, querying App.Config!");
-                //result = new List<List<object>>();
+
                 // return the value if it exists in the app seetings folder.
                 return ConfigurationManager.AppSettings[environment];
             }
@@ -290,9 +290,8 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             // call on parameter to replace content between parameter
             else if (original.Contains("{") && original.Contains("}"))
             {
-                //int instances;
                 string currString;
-                Console.WriteLine("Original is: " + original);
+                Logger.Info("Original is: " + original);
 
                 while (original.Length - original.Replace("{", string.Empty).Length > 0 &&
                        original.Length - original.Replace("}", string.Empty).Length > 0)
@@ -307,19 +306,19 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                     if (InformationObject.RunParameters.ContainsKey(keyPair))
                     {
                         string newValue = InformationObject.RunParameters[keyPair];
+
                         // replace all instances
                         original = original.Replace(currString.Substring(indexBegin, indexEnd - indexBegin + 1), newValue);
-                        Console.WriteLine("Successfully queried for value: " + newValue);
+                        Logger.Info("Successfully queried for value: " + newValue);
                     }
                     else
                     {
                         // could be not successfully queried because of Press Key using same format
-                        Console.WriteLine("Not successfully queried");
+                        Logger.Warn("Not successfully queried");
                         break;
                     }
-                    // set the next substring and continue
-                    //original = currString.Substring(indexEnd, currString.Length - 1);
                 }
+
                 // make a copy of original that has been modified as the final result
                 result = original.Substring(0);
             }
@@ -474,10 +473,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             else if (System.Configuration.ConfigurationManager.AppSettings["ENV_LOCATION"].ToUpper() == "CSV")
             {
                 connectionInfo.Add(CSVEnvironmentGetter.GetHost(environment));
-                Logger.Info("Got port value" + connectionInfo[0]);
                 connectionInfo.Add(CSVEnvironmentGetter.GetPort(environment));
-                Logger.Info("Got port value" + connectionInfo[0]);
-
                 connectionInfo.Add(CSVEnvironmentGetter.GetDBName(environment));
                 connectionInfo.Add(CSVEnvironmentGetter.GetUsername(environment));
                 connectionInfo.Add(CSVEnvironmentGetter.GetPassword(environment));

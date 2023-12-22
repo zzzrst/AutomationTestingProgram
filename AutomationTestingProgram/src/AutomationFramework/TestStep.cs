@@ -96,8 +96,9 @@ namespace AutomationTestingProgram.AutomationFramework
             // increase attempts in failures (moved by Victor)
             this.Attempts++;
 
-            // added by Victor to log attempt number
-            Logger.Info("Attempt number: " + this.Attempts + "/" + this.MaxAttempts);
+            // create new line before each attempt
+            Console.WriteLine("\n");
+            Logger.Info("Began execution of " + this.Name + $"Attempt {this.Attempts}/{this.MaxAttempts}");
         }
 
         /// <inheritdoc/>
@@ -106,20 +107,21 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             // edited by Victor to show attempt number correctly
             // this.TestStepStatus.Name += "Attempt 1/" + this.MaxAttempts;
-            this.TestStepStatus.Name += " attempt " + this.Attempts + "/" + this.MaxAttempts;
-            this.TestStepStatus.Description += this.Description + " FAILED ";
-            this.TestStepStatus.Expected += " execute " + this.Description + " successfully";
-            this.TestStepStatus.Actual += " failure in executing " + this.Description + "!\n" + e.ToString();
-            this.TestStepStatus.ErrorStack += e.StackTrace;
-            this.TestStepStatus.FriendlyErrorMessage += e.Message;
+            //this.Name += $" Attempt {this.Attempts}/{this.MaxAttempts}";
+            this.TestStepStatus.Name = this.Name;
+            this.TestStepStatus.Description = this.Description;
+            // this.TestStepStatus.Expected = this.Description;/
+            // this.TestStepStatus.Actual = "Failure in executing " + this.Description;
+            this.TestStepStatus.ErrorStack = e.StackTrace;
+            this.TestStepStatus.FriendlyErrorMessage = e.Message;
             this.TestStepStatus.RunSuccessful = false;
 
             // this is just for the console log
             // this action is different than the one that corresponds to TestStepStatus.
-            this.Description += " FAILED";
-            this.Name += " attempt " + this.Attempts + "/" + this.MaxAttempts;
+            // this.Description += " FAILED";
+            // this.Name += " attempt " + this.Attempts + "/" + this.MaxAttempts;
 
-            Logger.Error(e.Message);
+            Logger.Error("Error message: " + e.Message);
 
             // added by Victor to print out Friendly error message
             Logger.Info("Error occured, handling exception");
@@ -257,10 +259,11 @@ namespace AutomationTestingProgram.AutomationFramework
             DateTime easternTime = TimeZoneInfo.ConvertTimeFromUtc(timeUTC, easternZone);
 
             // this is for the logger
-            this.TestStepStatus.Name += $" attempt {this.Attempts}/{this.MaxAttempts}";
+            this.TestStepStatus.Name += $" Attempt {this.Attempts}/{this.MaxAttempts}";
+            this.Name += $" Attempt {this.Attempts}/{this.MaxAttempts}";
 
             // this is for the console write
-            this.Name += $" attempt {this.Attempts}/{this.MaxAttempts}";
+            // this.Name += $" attempt {this.Attempts}/{this.MaxAttempts}";
 
             this.TestStepStatus.EndTime = easternTime;
             this.TestStepStatus.RunSuccessful = !this.ShouldExecuteVariable || (this.TestStepStatus.RunSuccessful == this.PassCondition);
@@ -281,6 +284,12 @@ namespace AutomationTestingProgram.AutomationFramework
 
             if (bool.Parse(System.Configuration.ConfigurationManager.AppSettings["ReportToDevOps"]))
             {
+                if (this.TestStepStatus.RunSuccessful != true)
+                {
+                    this.TestStepStatus.Actual += " \n\nError message: " + this.TestStepStatus.FriendlyErrorMessage;
+                    this.TestStepStatus.Actual += " \n\nStack trace: " + this.TestStepStatus.ErrorStack;
+                }
+
                 // record the test step results
                 InformationObject.Reporter.RecordAzureTestStepResult(this.TestStepStatus.RunSuccessful, this.TestStepStatus.Actual);
             }

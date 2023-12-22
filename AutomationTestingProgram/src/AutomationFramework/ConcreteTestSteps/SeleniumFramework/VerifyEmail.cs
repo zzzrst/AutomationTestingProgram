@@ -65,9 +65,13 @@ namespace AutomationTestingProgram.AutomationFramework
             this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful ? "Email Matched" : "Email did not match. Please check desktop for results.";
 
             // attach email attachment log if it fails
-            if(File.Exists(resultFilePath))
+            if (File.Exists(resultFilePath))
             {
                 InformationObject.TestSetData.AddAttachment(resultFilePath);
+            }
+            else
+            {
+                this.TestStepStatus.FriendlyErrorMessage = "Issue with result file path " + resultFilePath;
             }
 
             Logger.Info(this.TestStepStatus.Actual);

@@ -28,11 +28,10 @@ namespace AutomationTestingProgram.AutomationFramework
             // string xPath = this.Arguments["object"];
             string selection = this.Arguments["value"];
 
-            Console.WriteLine("xpath value: " + this.XPath);
-            Console.WriteLine("selection: " + selection);
+            Logger.Info("xpath value: " + this.XPath);
+            Logger.Info("selection: " + selection);
 
-            try
-            {
+            try {
                 // InformationObject.TestAutomationDriver.SelectValueInElement(xPath, selection);
                 InformationObject.TestAutomationDriver.SelectValueInElement(this.XPath, selection);
                 InformationObject.TestAutomationDriver.WaitForLoadingSpinner();

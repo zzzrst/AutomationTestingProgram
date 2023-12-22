@@ -31,31 +31,29 @@ namespace AzureReporter
     using Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi;
     using Microsoft.VisualStudio.Services.WebApi;
     using Newtonsoft.Json;
-    using NPOI.POIFS.Storage;
-    using NPOI.SS.Formula.Eval;
     using static AutomationTestingProgram.InformationObject;
 
+    /// <summary>
+    /// Connects to the Test Plan, reports results to devops, and reports test run results.
+    /// </summary>
     public class TestPlanInstance
     {
+        // initialize uri, pat, and project variables
         readonly string _uri;
         readonly string _personalAccessToken;
         readonly string _project;
 
+        // initialize a test plan private variable
         private Microsoft.TeamFoundation.TestManagement.WebApi.TestPlan testPlan;
 
         // current test suite id
         private string testSuite;
 
-        /// <summary>
-        /// The time that the run was started at.
-        /// </summary>
         private DateTime startedTime;
 
         private DateTime testCaseST;
 
         private DateTime testStepST;
-
-        public List<string> testCaseList;
 
         private List<TestCaseResult> testCaseResults;
 
@@ -64,6 +62,11 @@ namespace AzureReporter
         private List<int> testCaseResultAttachmentIds;
 
         private List<TestAttachmentRequestModel> testRunAttachmentRefs;
+
+        /// <summary>
+        /// The list of test cases. Index 0 is the first test case id.
+        /// </summary>
+        public List<string> testCaseList;
 
         /// <summary>
         /// Mapping for the test case id to the test case's order id.
@@ -150,7 +153,7 @@ namespace AzureReporter
                         this.CreateTestPlan(testPlanName, testPlanDescription);
                     }
 
-                    string suiteId = "";
+                    string suiteId = string.Empty;
                     string rootFolder;
                     string newId;
 
@@ -176,6 +179,7 @@ namespace AzureReporter
                                 // create a test suite only if the test plan cannot find the test suite parent id
                                 suiteId = this.CreateTestSuite(folder, currSuite);
                             }
+
                             currSuite = suiteId; // assign current suite to suiteId just created
                         }
 
@@ -255,14 +259,11 @@ namespace AzureReporter
 
                         if (newVal != string.Empty)
                         {
-                            Console.WriteLine("Test Suite already exists, using that one.");
-
-                            // because test points are not updated when we delete the test case, we should delete the entire test suite
-
+                            Logger.Info("Test Suite already exists, using that one.");
                         }
                         else
                         {
-                            Console.WriteLine("Test Suite does not already exist, creating new one.");
+                            Logger.Info("Test Suite does not already exist, creating new one.");
 
                             // string parentTestSuite = this.CheckForTestSuite(testSuiteParentName);
                             newVal = this.CreateTestSuite(testSuiteName, newId);
@@ -275,13 +276,40 @@ namespace AzureReporter
 
                     this.testSuite = newVal;
 
-                    Console.WriteLine("------------------------------ Created Test Plan -------------------");
+                    Logger.Info("------------------------------ Created Test Plan -------------------");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Logger.Info("Exception caught in initializing Test Plan Instance: " + ex.Message);
                 }
             }
+        }
+
+        /// <summary>
+        /// Returns the current test run.
+        /// </summary>
+        /// <returns>Test Run of the current test run.</returns>
+        public TestRun GetTestRun()
+        {
+            return this.testRun;
+        }
+
+        /// <summary>
+        /// Returns the current test plan id.
+        /// </summary>
+        /// <returns>ID of the current test plan.</returns>
+        public string GetTestPlanId()
+        {
+            return this.testPlan.Id.ToString();
+        }
+
+        /// <summary>
+        /// Returns the current test suite id.
+        /// </summary>
+        /// <returns>ID of the current test suite.</returns>
+        public string GetTestSuiteId()
+        {
+            return this.testSuite;
         }
 
         /// <summary>
@@ -296,6 +324,7 @@ namespace AzureReporter
                 Uri uri = new Uri(this._uri);
                 this.credentials = new VssBasicCredential("", this._personalAccessToken);
                 this.connection = new VssConnection(uri, this.credentials);
+
                 // create test management client
                 TestManagementHttpClient testMngmnt = this.connection.GetClient<TestManagementHttpClient>();
 
@@ -314,11 +343,10 @@ namespace AzureReporter
                 // get a list of test plan ids from the test plan
                 // note that test points are sorted prior to execution
                 // add key value mapping to the test point and result value
-
                 int resultIdVal = 100000;
                 foreach (Microsoft.TeamFoundation.TestManagement.WebApi.TestPoint testPoint in testPoints)
                 {
-                    Console.WriteLine("------------------------------ Successfully Added Test Point -------------------" + testPoint.Id);
+                    Logger.Info("------------------------------ Successfully Added Test Point -------------------" + testPoint.Id);
                     pointIds.Add(testPoint.Id);
 
                     // here we need to map the case with the test point so that it can be sorted
@@ -369,16 +397,17 @@ namespace AzureReporter
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Logger.Info("Exception caught in creating test run: " + e.Message);
             }
 
-            Console.WriteLine("------------------------------Test Run Successfully Created and Sent-------------------");
+            Logger.Info("------------------------------Test Run Successfully Created and Sent-------------------");
         }
 
         /// <summary>
         /// Record the test run result by calling UpdateTestRunAsync.
         /// </summary>
-        public void RecordTestRun(RunUpdateModel runmodel = null)
+        /// <param name="runModel">If runmodel is already created, use that.</param>
+        public void RecordTestRun(RunUpdateModel runModel = null)
         {
             Uri uri = new Uri(this._uri);
             this.credentials = new VssBasicCredential("", this._personalAccessToken);
@@ -387,34 +416,36 @@ namespace AzureReporter
             // create test management client
             TestManagementHttpClient testMngmnt = this.connection.GetClient<TestManagementHttpClient>();
 
-            if (runmodel == null)
+            if (runModel == null)
             {
-                runmodel = new RunUpdateModel(
+                runModel = new RunUpdateModel(
                                 state: "Completed",
                                 completedDate: DateTime.UtcNow.ToString(),
                                 errorMessage: "Placeholder run error message",
                                 comment: "Placeholder run comment message"
                                 );
             }
+
             // Check what is null
             if (testMngmnt == null)
             {
-                Console.WriteLine("Test Management is null");
+                Logger.Info("Test Management is null");
             }
+
             if (this._project == null)
             {
-                Console.WriteLine("Project is null");
+                Logger.Info("Project is null");
             }
+
             if (this.testRun == null)
             {
-                Console.WriteLine("Test Run is null");
+                Logger.Info("Test Run is null");
                 this.CreateTestRun($"Test Run of {InformationObject.TestSetName} {InformationObject.GetEnvironmentVariable(EnvVar.Environment)} at {DateTime.Now}");
-                Console.WriteLine("Test Run id is " + this.testRun?.Id);
+                Logger.Info("Test Run id is " + this.testRun?.Id);
             }
 
-
             // save test case results to run model
-            this.testRun = testMngmnt.UpdateTestRunAsync(runmodel, this._project, this.testRun.Id).Result;
+            this.testRun = testMngmnt.UpdateTestRunAsync(runModel, this._project, this.testRun.Id).Result;
         }
 
         /// <summary>
@@ -429,10 +460,10 @@ namespace AzureReporter
         {
             Uri uri = new Uri(this._uri);
 
-            this.credentials = new VssBasicCredential("", this._personalAccessToken);
+            this.credentials = new VssBasicCredential(string.Empty, this._personalAccessToken);
             this.connection = new VssConnection(uri, this.credentials);
 
-            // we need to encode the string as base 64 
+            // we need to encode the string as base 64
             byte[] bytes = File.ReadAllBytes(filePath);
             string file64 = Convert.ToBase64String(bytes);
 
@@ -445,7 +476,7 @@ namespace AzureReporter
             TestManagementHttpClient testMngmnt = this.connection.GetClient<TestManagementHttpClient>();
             var res = testMngmnt.CreateTestRunAttachmentAsync(testAtt, this._project, this.testRun.Id).Result;
 
-            Console.WriteLine("------------------ Added attachment : " + testAtt.FileName);
+            Logger.Info("------------------ Added attachment : " + testAtt.FileName);
         }
 
         /// <summary>
@@ -464,7 +495,7 @@ namespace AzureReporter
 
             if (!File.Exists(filePath))
             {
-                Console.WriteLine($"Could not read file at path {filePath} because did not exist");
+                Logger.Info($"Could not read file at path {filePath} because did not exist");
                 return;
             }
 
@@ -483,13 +514,11 @@ namespace AzureReporter
                 AttachmentType = "GeneralAttachment",
             };
 
-            //testAtt.
-
             // add test case result attachment and the reference id of it together
             this.testCaseResultAttachmentRefs.Add(testAtt);
             this.testCaseResultAttachmentIds.Add(this.stepIdCounter);
 
-            Console.WriteLine("------------------ Added attachment : " + testAtt.FileName);
+            Logger.Info("------------------ Added attachment : " + testAtt.FileName);
         }
 
         /// <summary>
@@ -528,10 +557,7 @@ namespace AzureReporter
                 AttachmentType = "GeneralAttachment",
             };
 
-            Console.WriteLine("------------------ Added attachment : " + testAtt.FileName);
-
-            Logger.Info("Test Case Id: " + testCaseId);
-            //int testCaseId = this.testCaseList[this.testCaseCounter];
+            Logger.Info("------------------ Added attachment : " + testAtt.FileName);
 
             TestAttachmentReference attachmentRef = testMngmnt.CreateTestIterationResultAttachmentAsync(
                 testAtt,
@@ -541,9 +567,8 @@ namespace AzureReporter
                 iterationId: 1,
                 actionPath: this.stepIdCounter.ToString("x8")).Result;
 
-            Console.WriteLine("URL for create test attachment sub reference: " + attachmentRef.Url);
+            Logger.Info("URL for new test attachment: " + attachmentRef.Url);
         }
-
 
         /// <summary>
         /// Record a test step result.
@@ -552,20 +577,13 @@ namespace AzureReporter
         /// <param name="actual">The actual result of the execution stored in the comment <see cref="string"/>.</param>
         public void RecordTestStepResult(string outcome, string actual)
         {
-            // iteration
-            //var dateTime = DateTime.Now;
-            //var finishedDate = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second, dateTime.Millisecond, dateTime.Kind);
-
             // convert to hex code for the action path
             string hex = this.stepIdCounter.ToString("x8"); // base 16
 
-            Console.WriteLine("Hexadecimal: " + hex);
-            Console.WriteLine("Step ID counter: " + (this.stepIdCounter - 1));
-            Console.WriteLine("Actual Result: " + actual);
-
             DateTime completedTime = DateTime.UtcNow;
             TimeSpan runDiff = completedTime.Subtract(this.testStepST);
-            Logger.Info("Test step stated at: " + this.testStepST.ToString() + " and ended at " + completedTime.ToString() + " with a difference of " + runDiff.TotalMilliseconds + " milliseconds ");
+
+            Logger.Info("Test step started at: " + this.testStepST.ToString() + " and ended at " + completedTime.ToString() + " with a difference of " + runDiff.TotalSeconds+ " seconds.");
 
             Microsoft.TeamFoundation.TestManagement.WebApi.SharedStepModel sharedStepModel =
                 new Microsoft.TeamFoundation.TestManagement.WebApi.SharedStepModel();
@@ -582,8 +600,7 @@ namespace AzureReporter
                     completedDate: completedTime.ToString(),
                     comment: "Comment test",
                     duration: runDiff.TotalMilliseconds.ToString(),
-                    errorMessage: actual
-                    );
+                    errorMessage: actual);
 
             this.stepIdCounter++;
             this.testStepST = DateTime.UtcNow;
@@ -600,7 +617,6 @@ namespace AzureReporter
         {
             // start time of the test case result
             this.testCaseST = DateTime.UtcNow;
-            //this.testCaseST = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second, dateTime.Millisecond, dateTime.Kind);
 
             // reset the test step counter to 1
             this.stepIdCounter = 1;
@@ -613,7 +629,7 @@ namespace AzureReporter
                 StartedDate = this.testCaseST,
                 ActionResults = new List<TestActionResultModel> { },
                 Comment = "From the REST API automated run",
-                ErrorMessage = "Iteration Details Error Message Placeholder"
+                ErrorMessage = "Iteration Details Error Message Placeholder",
             };
         }
 
@@ -634,7 +650,7 @@ namespace AzureReporter
         public void AddTestCasesToSuite(List <string> testCaseIdList)
         {
             Uri uri = new Uri(this._uri);
-            this.credentials = new VssBasicCredential("", this._personalAccessToken);
+            this.credentials = new VssBasicCredential(string.Empty, this._personalAccessToken);
             this.connection = new VssConnection(uri, this.credentials);
             TestManagementHttpClient testMngmnt = this.connection.GetClient<TestManagementHttpClient>();
 
@@ -647,16 +663,12 @@ namespace AzureReporter
             // here we get the test cases in the test suite
             var testSuiteListRef = testMngmnt.GetTestCasesAsync(this._project, this.testPlan.Id, int.Parse(this.testSuite)).Result;
 
-            // List<string> testCaseList = new List<string>();
-
-            Console.WriteLine("Test Suite ID: " + testSuite);
+            Logger.Info("Test Suite ID: " + this.testSuite);
 
             foreach (SuiteTestCase val in testSuiteListRef)
             {
-                Console.WriteLine("Test Case in test suite: " + val.Workitem.Id);
-
                 // remove test cases that remain in the test suite
-                Console.WriteLine("Removing Test Case test suite: " + val.Workitem.Id);
+                Logger.Info("Removing Test Case: " + val.Workitem.Id);
 
                 // System.TimeSpan maxWait = System.TimeSpan.FromSeconds(10);
                 var awaitVal = testMngmnt.RemoveTestCasesFromSuiteUrlAsync(this._project, this.testPlan.Id, int.Parse(this.testSuite), val.Workitem.Id).SyncResult;
@@ -666,8 +678,6 @@ namespace AzureReporter
             }
 
             int UPLOAD_AMT = 1;
-            int resultVal = 100000;
-
             for (int i = 0; i < testCaseIdList.Count; i++)
             {
                 // upload in multiples of UPLOAD_AMT and check that we are not at 0 when we start
@@ -675,7 +685,7 @@ namespace AzureReporter
                 if ((i % UPLOAD_AMT == 0) || (i == testCaseIdList.Count - 1))
                 {
                     commaSeparated += testCaseIdList[i];
-                    Console.WriteLine($"Uploading up to index {i}: " + commaSeparated);
+                    Logger.Info($"Adding Test Case index {i}: " + commaSeparated);
 
                     var await = testMngmnt.AddTestCasesToSuiteAsync(this._project, this.testPlan.Id, int.Parse(this.testSuite), commaSeparated).Result;
 
@@ -700,11 +710,9 @@ namespace AzureReporter
             this.credentials = new VssBasicCredential("", this._personalAccessToken);
             this.connection = new VssConnection(uri, this.credentials);
             TestManagementHttpClient testMngmnt = this.connection.GetClient<TestManagementHttpClient>();
-            //TestHttpClientBase testResultClient = this.connection.GetClient<TestHttpClientBase>();
 
             // iteration
             DateTime completedTime = DateTime.UtcNow;
-            //var finishedDate = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second, dateTime.Millisecond, dateTime.Kind);
 
             TimeSpan runDiff = completedTime.Subtract(this.testCaseST);
             Logger.Info("Test Case stated at: " + this.testCaseST.ToString() + " and ended at " + completedTime.ToString() + " with a difference of " + runDiff.TotalMilliseconds + " milliseconds ");
@@ -715,7 +723,6 @@ namespace AzureReporter
             for (int i = 0; i < this.testCaseResultAttachmentRefs.Count; i++)
             {
                 // convert test case result attatchment model into test result attatchments
-
                 TestAttachmentReference newAttachment = testMngmnt.CreateTestResultAttachmentAsync(
                     this.testCaseResultAttachmentRefs[i],
                     this._project,
@@ -723,7 +730,7 @@ namespace AzureReporter
                     this.TestCaseMapping[int.Parse(testCaseId)]
                     ).Result;
 
-                Console.WriteLine("URL for create test attachment reference: " + newAttachment.Url);
+                Logger.Info("URL for create test attachment reference: " + newAttachment.Url);
             }
 
             this.testCaseResultAttachmentRefs = new List<TestAttachmentRequestModel>();
@@ -744,15 +751,14 @@ namespace AzureReporter
                 State = "Completed",
                 Outcome = $"{outcome}",
                 Id = this.TestCaseMapping[int.Parse(testCaseId)],
-                // Id = 100000 + this.testCaseCounter, // id starts at 100000
                 CompletedDate = completedTime,
                 RunBy = runById,
                 DurationInMs = runDiff.TotalMilliseconds,
-                ErrorMessage = testCaseStatus.FriendlyErrorMessage, //"Placeholder error message",
+                ErrorMessage = testCaseStatus.FriendlyErrorMessage,
                 ComputerName = machineName,
-                StackTrace = testCaseStatus.ErrorStack, //"Placeholder stack trace",
+                StackTrace = testCaseStatus.ErrorStack,
                 Priority = 1,
-                Owner = runById
+                Owner = runById,
             };
 
             // if the test failed, populate the outcome as Failed
@@ -767,7 +773,7 @@ namespace AzureReporter
             this.iteration.DurationInMs = runDiff.TotalMilliseconds * 10000; // calculuation for this is weird
             this.iteration.Attachments = testCaseResultAttachments;
 
-            Console.WriteLine("Test Case Run Duration in seconds: " + runDiff.TotalSeconds.ToString());
+            Logger.Info("Test Case Run Duration in seconds: " + runDiff.TotalSeconds.ToString());
 
             testCaseRes.IterationDetails = new List<TestIterationDetailsModel> { this.iteration };
 
@@ -779,15 +785,15 @@ namespace AzureReporter
             // update the single test case result for the test case
             var await = testMngmnt1.UpdateTestResultsAsync( testCaseArr, this._project, this.testRun.Id).Result;
 
-            Console.WriteLine("------------------------------ Successfully Recorded Test Case Result -------------------");
+            // Logger.Info("------------------------------ Successfully Recorded Test Case Result -------------------");
 
             this.testCaseCounter += 1; // increment the test case counter by 1 up
 
-            Console.WriteLine("Test Case Run Counter: " + this.testCaseCounter);
+            Logger.Info("Test Case Run Counter: " + this.testCaseCounter);
         }
 
         /// <summary>
-        /// Create a test plan using direct HTTP (not available using Client Lib)
+        /// Create a test plan using direct HTTP (not available using Client Lib).
         /// </summary>
         /// <param name="testSuiteName"> Name of the Test Suite being created. <see cref="string"/>.</param>
         /// <param name="parentTestSuiteId"> The parent test suite id to creat the test suite under <see cref="string"/>.</param>
@@ -832,19 +838,18 @@ namespace AzureReporter
                     int loc = data.IndexOf("id");
                     List<string> list_data = data.Split(new char[] {','}).ToList();
 
-                    Console.WriteLine(list_data[0]);
                     list_data = list_data[0].Split(new char[] {':'}).ToList();
 
                     string locData = list_data.Last();
 
                     // Console.WriteLine("Test Case Successfully Created: Test Plan #{0}", testPlan.Id);
-                    Console.WriteLine("Created Test Suite is: " + locData);
+                    Logger.Info("Created Test Suite is: " + locData);
 
                     return locData;
                 }
                 else
                 {
-                    Console.WriteLine("Error posting test suite: ", response.Content);
+                    Logger.Info("Error posting test suite: " + response.Content);
                     return string.Empty;
                 }
             }
@@ -939,11 +944,11 @@ namespace AzureReporter
         {
             if (testPlanName.Trim() == string.Empty)
             {
-                Console.WriteLine("ERROR: Test Plan Name not specified");
+                Logger.Info("Test Plan Name not specified");
                 return string.Empty;
             }
 
-            VssBasicCredential credentials = new VssBasicCredential("", this._personalAccessToken);
+            VssBasicCredential credentials = new VssBasicCredential(string.Empty, this._personalAccessToken);
             var connection = new VssConnection(new Uri(this._uri), credentials);
             WorkItemTrackingHttpClient witClient = connection.GetClient<WorkItemTrackingHttpClient>();
 
@@ -971,7 +976,7 @@ namespace AzureReporter
                     {
                         Name = queryName,
                         Wiql = $"SELECT [System.Id],[System.WorkItemType],[System.Title],[System.AssignedTo],[System.State],[System.Tags] FROM WorkItems WHERE [System.TeamProject] = @project AND [System.WorkItemType] = 'Test Plan' AND [System.Title] = '{testPlanName}'",
-                        IsFolder = false
+                        IsFolder = false,
                     };
                     // create a query if it doesn't already exist
                     newTestCaseQuery = witClient.CreateQueryAsync(newTestCaseQuery, this._project, myQueriesFolder.Name).Result;
@@ -990,7 +995,7 @@ namespace AzureReporter
 
                         if (workItemRefs.Count() > 1)
                         {
-                            Console.WriteLine("Number of Test Plans is greater than 1");
+                            Logger.Info("Number of Test Plans is greater than 1");
                         }
 
                         if (workItemRefs.Any())
@@ -1016,11 +1021,11 @@ namespace AzureReporter
                 }
                 else
                 {
-                    Console.WriteLine("No work items were returned from query.");
+                    Logger.Info("No work items were returned from query.");
                     return string.Empty;
                 }
             }
-            Console.WriteLine("Error in querying for test plan");
+            Logger.Info("Error in querying for test plan");
             return string.Empty;
         }
 
@@ -1056,32 +1061,14 @@ namespace AzureReporter
                     this.testPlan = result;
 
                     // Console.WriteLine("Test Case Successfully Created: Test Plan #{0}", testPlan.Id);
-                    Console.WriteLine("Root Test Suite was also created with: " + result.RootSuite.Name);
+                    Logger.Info("Root Test Suite was also created with: " + result.RootSuite.Name);
                 }
                 else
                 {
-                    Console.WriteLine("Error getting Test Plan: ", response.Content);
+                    Logger.Error("Error getting Test Plan: " + response.Content);
                     this.testPlan = null;
                 }
             }
-        }
-
-        // returns the current test run
-        public TestRun GetTestRun()
-        {
-            return this.testRun;
-        }
-
-        // returns the current test plan id
-        public string GetTestPlanId()
-        {
-            return this.testPlan.Id.ToString();
-        }
-
-        // returns the current test suite id
-        public string GetTestSuiteId()
-        {
-            return this.testSuite;
         }
 
         /// <summary>
@@ -1126,14 +1113,14 @@ namespace AzureReporter
                 {
                     var testPlan = response.Content.ReadAsAsync<Microsoft.TeamFoundation.TestManagement.WebApi.TestPlan>().Result;
 
-                    Console.WriteLine("Test Case Successfully Created: Test Plan #{0}", testPlan.Id);
-                    Console.WriteLine("Test Suite was also generated with: " + testPlan.RootSuite.Name);
+                    Logger.Info("Test Case Successfully Created: Test Plan #{0}" + testPlan.Id);
+                    Logger.Info("Test Suite was also generated with: " + testPlan.RootSuite.Name);
 
                     this.testPlan = testPlan;
                 }
                 else
                 {
-                    Console.WriteLine("Error creating Test Plan: {0}", response.Content);
+                    Logger.Error("Error creating Test Plan: {0}" + response.Content);
                     this.testPlan = null;
                 }
             }

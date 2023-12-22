@@ -60,10 +60,10 @@ namespace AutomationTestingProgram.TestingData
                 }
             }
 
-            string newUsr = this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(TESTCASEINDEX).ToString();
-            testCase = InformationObject.TestCaseData.SetUpTestCase(newUsr);
-            Logger.Info("Created Test Case: " + newUsr);
-            this.CurrTestCase = newUsr;
+            string nextTestCase = this.TestSetSheet.GetRow(ExcelData.RowIndex)?.GetCell(TESTCASEINDEX).ToString();
+            testCase = InformationObject.TestCaseData.SetUpTestCase(nextTestCase);
+            Logger.Info("Next Test Case: " + nextTestCase);
+            this.CurrTestCase = nextTestCase;
 
             return testCase;
         }
@@ -91,9 +91,10 @@ namespace AutomationTestingProgram.TestingData
             another_test_case = this.TestSetSheet.GetRow(tempCount)?.GetCell(TESTCASEINDEX) != null &&
                                 this.TestSetSheet.GetRow(tempCount)?.GetCell(TESTCASEINDEX).ToString().Trim() != string.Empty; ;
 
-            Logger.Info("Another test case is: " + another_test_case);
-            Logger.Info("Row number for temp: " + tempCount);
-            Logger.Info("Row number for ExcelData: " + ExcelData.RowIndex);
+            // debug purposes
+            // Logger.Info("Another test case is: " + another_test_case);
+            // Logger.Info("Row number for temp: " + tempCount);
+            // Logger.Info("Row number for ExcelData: " + ExcelData.RowIndex);
             return another_test_case;
         }
 

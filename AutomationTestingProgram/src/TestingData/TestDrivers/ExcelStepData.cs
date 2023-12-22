@@ -9,7 +9,6 @@ namespace AutomationTestingProgram.TestingData
     using AutomationTestingProgram.AutomationFramework;
     using AutomationTestingProgram.TestingData.TestDrivers;
     using AutomationTestSetFramework;
-    using NPOI.SS.Formula.Atp;
     using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
@@ -58,25 +57,9 @@ namespace AutomationTestingProgram.TestingData
         {
             string environment = GetEnvironmentVariable(EnvVar.Environment);
 
-            /* Note that this might work? Was here before
-            if (testStep is ActionObject)
-            {
-                // query to update each of the test object's attribute value
-                foreach (string attribute in ((ActionObject)testStep).Attributes.Keys.ToList())
-                {
-                    if (((ActionObject)testStep).Attributes.TryGetValue(attribute, out string value))
-                    {
-                        string attribVal = value;
-                        string queried = this.QuerySpecialChars(environment, attribVal) as string;
-                        ((ActionObject)testStep).Attributes.Add(attribute, queried);
-                    }
-                }
-            }*/
             Dictionary<string, string> arguments = new Dictionary<string, string>();
 
             DatabaseStepData dbdata = new DatabaseStepData(environment);
-
-            Console.WriteLine("About to query for DB data");
 
             // only update these variables if the control is not #
             if (testStep.ShouldExecuteVariable == true)
@@ -86,10 +69,9 @@ namespace AutomationTestingProgram.TestingData
                 {
                     arguments.Add(key, dbdata.QuerySpecialChars(environment, testStep.Arguments[key]) as string);
                 }
+
                 testStep.Arguments = arguments;
             }
-
-            // this.SpecialCharFlag = false;
         }
 
     }

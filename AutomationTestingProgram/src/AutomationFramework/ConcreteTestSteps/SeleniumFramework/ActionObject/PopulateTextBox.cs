@@ -21,7 +21,6 @@ namespace AutomationTestingProgram.AutomationFramework
             base.Execute();
 
             string text = this.Arguments["value"];
-            Logger.Warn("This test step only does xpaths and html ids for now.");
 
             try
             {

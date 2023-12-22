@@ -14,10 +14,11 @@ namespace AutomationTestinProgram.Helper
     using NPOI.SS.UserModel;
 
     /// <summary>
-    /// Class to get environment information from a csv file
+    /// Class to get environment information from a csv file.
     /// </summary>
     public class CSVEnvironmentGetter
     {
+        // some values are not used here, which is fine
         private const int ENVIRONMENT_NAME_COL = 0;
         private const int HOST_COL = 1;
         private const int PORT_COL = 2;
@@ -255,13 +256,15 @@ namespace AutomationTestinProgram.Helper
                 {
                     if (values[0].Trim() == environment)
                     {
-                        Logger.Info("Value at index " + values[columnIndex]);
+                        // for debugging purposes
+                        // Logger.Info("Value at index " + values[columnIndex]);
                         return values[columnIndex];
                     }
                 }
                 else
                 {
-                    Logger.Warn("GetColumnValue() not enough values available to index");
+                    // for debug
+                    // Logger.Warn("GetColumnValue() not enough values available to index");
                 }
             }
 

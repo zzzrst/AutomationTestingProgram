@@ -471,6 +471,17 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.PopulateWebElement.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ResetOrg">
+            <summary>
+            This test step to log in.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ResetOrg.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ResetOrg.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.SelectDDL">
             <summary>
             This class executes the action of selecting a value from the specified dropdownlist.
@@ -981,6 +992,28 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.RunJavaScript.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete">
+            <summary>
+            This test step to run a sql script from paramterized values.Only works for PR applications.
+            This one of the more complicated test step as it relys on the test step to be a databaseData type object.
+            note the following format
+            define formCode = 'VARIABLEOVERWRITE1'
+            define formYear = VARIABLEOVERWRITE2
+            define orgCode = 'VARIABLEOVERWRITE3'
+            define dateOfExecution = 'VARIABLEOVERWRITE4'
+            </summary>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert">
+            <summary>
+            This test step to run a sql script from paramterized values.Only works for PR applications.
+            This one of the more complicated test step as it relys on the test step to be a databaseData type object.
+            note the following format
+            define formCode = 'VARIABLEOVERWRITE1'
+            define formYear = VARIABLEOVERWRITE2
+            define orgCode = 'VARIABLEOVERWRITE3'
+            define dateOfExecution = 'VARIABLEOVERWRITE4'.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.RunShellScript">
             <summary>
             This test step to run a shell script.
@@ -1304,10 +1337,7 @@
             Records azure test step result.
             </summary>
             <param name="runsuccessful">Whether the test step was successfully executed. <see cref="T:System.String"/>.</param>
-            <param name="testStepName">The test step name<see cref="T:System.String"/>.</param>
-            <param name="expected">The expected result of the test step<see cref="T:System.String"/>.</param>
             <param name="actual">The actual result of the test step. <see cref="T:System.String"/>.</param>
-            <param name="testStepDescription">The description of the test step. <see cref="T:System.String"/>.</param>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)">
             <summary>
@@ -4080,12 +4110,22 @@
         <member name="M:AzureReporter.TestCaseInstance.CreateTestCaseUsingClientLib(System.String,System.Int32,System.String)">
             <summary>
             Create a bug using the .NET client library
-            Takes in a paramter for the test case name that we will create
+            Takes in a paramter for the test case name that we will create.
             </summary>
         </member>
-        <member name="F:AzureReporter.TestPlanInstance.startedTime">
+        <member name="M:AzureReporter.TestCaseInstance.CreateTestStep(System.String,System.String,System.String)">
             <summary>
-            The time that the run was started at.
+            This function creates a new test step and saves it to this.testStep.
+            </summary>
+        </member>
+        <member name="T:AzureReporter.TestPlanInstance">
+            <summary>
+            Connects to the Test Plan, reports results to devops, and reports test run results.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.testCaseList">
+            <summary>
+            The list of test cases. Index 0 is the first test case id.
             </summary>
         </member>
         <member name="F:AzureReporter.TestPlanInstance.TestCaseMapping">
@@ -4141,6 +4181,24 @@
             <param name="testSuiteName">The test suite name for execution<see cref="T:System.String"/>.</param>
             <param name="testPlanName">The plan name to create on DevOps<see cref="T:System.String"/>.</param>
         </member>
+        <member name="M:AzureReporter.TestPlanInstance.GetTestRun">
+            <summary>
+            Returns the current test run.
+            </summary>
+            <returns>Test Run of the current test run.</returns>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.GetTestPlanId">
+            <summary>
+            Returns the current test plan id.
+            </summary>
+            <returns>ID of the current test plan.</returns>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.GetTestSuiteId">
+            <summary>
+            Returns the current test suite id.
+            </summary>
+            <returns>ID of the current test suite.</returns>
+        </member>
         <member name="M:AzureReporter.TestPlanInstance.CreateTestRun(System.String)">
             <summary>
             Initiatlize Test Set.
@@ -4152,6 +4210,7 @@
             <summary>
             Record the test run result by calling UpdateTestRunAsync.
             </summary>
+            <param name="runModel">If runmodel is already created, use that.</param>
         </member>
         <member name="M:AzureReporter.TestPlanInstance.AddTestRunAttachment(System.String,System.String,System.String)">
             <summary>
@@ -4209,7 +4268,7 @@
         </member>
         <member name="M:AzureReporter.TestPlanInstance.CreateTestSuite(System.String,System.String)">
             <summary>
-            Create a test plan using direct HTTP (not available using Client Lib)
+            Create a test plan using direct HTTP (not available using Client Lib).
             </summary>
             <param name="testSuiteName"> Name of the Test Suite being created. <see cref="T:System.String"/>.</param>
             <param name="parentTestSuiteId"> The parent test suite id to creat the test suite under <see cref="T:System.String"/>.</param>
@@ -4249,7 +4308,7 @@
         </member>
         <member name="T:AutomationTestinProgram.Helper.CSVEnvironmentGetter">
             <summary>
-            Class to get environment information from a csv file
+            Class to get environment information from a csv file.
             </summary>
         </member>
         <member name="F:AutomationTestinProgram.Helper.CSVEnvironmentGetter.KeychainAccountsFilePath">

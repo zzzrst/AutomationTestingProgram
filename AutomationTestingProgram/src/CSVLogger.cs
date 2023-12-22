@@ -4,14 +4,12 @@
 
 namespace AutomationTestingProgram
 {
-    using Microsoft.TeamFoundation.Pipelines.WebApi;
-    using NPOI.HPSF;
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using System.Reflection;
     using System.Configuration;
+    using System.Reflection;
 
     /// <summary>
     /// Logger class for CSV.

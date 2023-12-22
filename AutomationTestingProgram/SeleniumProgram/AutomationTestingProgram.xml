@@ -755,7 +755,7 @@
             If not set, will use the directory path of CSVSaveFileLocation.
             </summary>
         </member>
-        <member name="P:AutomationTestingProgram.FrameworkOptions.ReportSaveLocation">
+      <member name="P:AutomationTestingProgram.FrameworkOptions.ReportSaveLocation">
             <summary>
             Gets or sets the log save location.
             <para> </para>

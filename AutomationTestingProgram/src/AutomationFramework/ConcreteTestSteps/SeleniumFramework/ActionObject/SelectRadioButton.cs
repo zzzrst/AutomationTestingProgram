@@ -33,7 +33,7 @@ namespace AutomationTestingProgram.AutomationFramework
             }
             catch (Exception ex)
             {
-                Logger.Info($"Failur ni selecting web radio button.");
+                Logger.Info($"Failure in selecting web radio button.");
                 this.ShouldExecuteVariable = true;
                 this.TestStepStatus.RunSuccessful = false;
                 this.TestStepStatus.Actual = "Failure in selecting web radio button " + selection;

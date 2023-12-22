@@ -6,15 +6,11 @@
     using System.Net.Http;
     using System.Net.Http.Headers;
     using System.Text;
-    using Microsoft.TeamFoundation.Build.WebApi;
-    using Microsoft.TeamFoundation.Test.WebApi;
+    using AutomationTestingProgram;
     using Microsoft.TeamFoundation.TestManagement.WebApi;
-    using Microsoft.TeamFoundation.TestManagement.WebApi.Legacy;
-    using Microsoft.TeamFoundation.Work.WebApi;
     using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
     using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
     using Microsoft.VisualStudio.Services.Common;
-    using Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi;
     using Microsoft.VisualStudio.Services.WebApi;
     using Microsoft.VisualStudio.Services.WebApi.Patch;
     using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
@@ -49,12 +45,11 @@
             TestBaseHelper helper = new TestBaseHelper();
             this.testSteps = helper.Create();
             this.patchDocument = new JsonPatchDocument();
-
         }
 
         /// <summary>
         /// Create a bug using the .NET client library
-        /// Takes in a paramter for the test case name that we will create
+        /// Takes in a paramter for the test case name that we will create.
         /// </summary>
         public void CreateTestCaseUsingClientLib(string testCaseName, int priority, string description)
         {
@@ -66,51 +61,44 @@
             this.testSteps = helper.Create();
             this.patchDocument = new JsonPatchDocument();
 
-            // upload attachment (future: we can upload the execution file)
-            // FileStream uploadStream = File.Open(@"C:\Users\ZhengVi\Downloads\test-image.png", FileMode.Open, FileAccess.Read);
-            // var attachmentObject = workItemTrackingHttpClient.CreateAttachmentAsync(uploadStream, "Canvas.png", "Simple").Result;
-
             // add fields and thier values to your patch document
             this.patchDocument.Add(
                 new JsonPatchOperation()
                 {
                     Operation = Operation.Add,
                     Path = "/fields/System.Title",
-                    Value = $"{testCaseName}"
-                }
-            );
+                    Value = $"{testCaseName}",
+                });
 
             this.patchDocument.Add(
                 new JsonPatchOperation()
                 {
                     Operation = Operation.Add,
                     Path = "/fields/System.Description",
-                    Value = $"{description}"
-                }
-            );
+                    Value = $"{description}",
+                });
 
             this.patchDocument.Add(
                 new JsonPatchOperation()
                 {
                     Operation = Operation.Add,
                     Path = "/fields/Microsoft.VSTS.Common.Priority",
-                    Value = $"{priority}"
-                }
-            );
+                    Value = $"{priority}",
+                });
 
             this.patchDocument.Add(
                 new JsonPatchOperation()
                 {
                     Operation = Operation.Add,
                     Path = "/fields/Microsoft.VSTS.TCM.AutomationStatus",
-                    Value = "Not Automated" // TODO change to automated
-                }
-            );
-
-            Console.WriteLine("Finished creating test case");
+                    Value = "Not Automated", // this cannot be change to automated
+                });
+            Logger.Info("Finished creating test case");
         }
 
-        // this function creates a new test step and saves it to this.testStep
+        /// <summary>
+        /// This function creates a new test step and saves it to this.testStep.
+        /// </summary>
         public void CreateTestStep(string title, string expected, string description)
         {
             // create a test step

@@ -77,6 +77,9 @@ namespace AutomationTestingProgram
 
             Console.WriteLine("Email sent: " + response.Messages[0].Status);
 
+            // check response
+            //Assert.AreEqual(1, response.Messages.Length);
+
         }
 
         // helper function that will parse through the HTML file for the flag "IF_EMAIL_THEN_DELETE" and delete the lines of the file
