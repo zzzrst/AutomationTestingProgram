@@ -138,35 +138,7 @@ Major version is updated when a large functionality has changed / is introduced.
 Minor version is updated when methods are added / removed for bug fixes or a helper class is added due to refactoring.
 
 
-## Release Notes
-
-
-### Future releases
-
-| Details      | Note on status | Completed     |
-| :---        |    :----:   |          ---: |
-| Export defect list from ALM to DevOps | | |
-| Configure emails to be automatically sent on failure | | | 
-| Charts for execution information at run time and execution html file like PerfXML | | |
-| Attach all files used in execution to the test run | | |
-| Fix actual, expected results output | | |
-| User error message and stack trace | | |
-| Configure files to not use C drive on execution to prevent any problems with execution  | | |
-| Add EarlyON logout failure testing / investigate logout testing | | |
-| Execute and read from keychain file as a file stream | | |
-| Create agent installation file for downloading agents | | |
-| Update SQL scripts to have additional spooling | | |
-| Execute tests in incognico mode | | |
-| Check functionality of OSYC in different environment for speeds due to problems with load |||
-| Suggest top 3 actiononobjects|||
-| Create an artifact for the execution to generate |||
-| EarlyOn and PFAAM project migration and testing |||
-| Integrated tests for confirming ONSIS executions are correct | | |
-| Use open browser with selenium like UFT |||
-| 407 error investigations |||
-| Fix for CompareResult file for Verify Excel |||
-| Failing SQL Scripts for CUNCE|||
-| INability to update test case attachment when executing TAP for ALM |||
+# Release Notes
 
 ## Version 6.0.0 (December 22)
 - configure test runner available for eveyrone
@@ -375,7 +347,7 @@ Minor version is updated when methods are added / removed for bug fixes or a hel
  - fix executing a sql script from a network drive by copying the - file to the executing assembly
 
 
-# Vesrion 3.4 (November 1, 2023)
+## Vesrion 3.4 (November 1, 2023)
 - Upgrade to .NET 6 for lal projects
 - print out framework type and execution format fo pdf
 - Fix attaching CSV file of execution to output
@@ -477,32 +449,23 @@ Minor version is updated when methods are added / removed for bug fixes or a hel
     - configuration for ability to execute with App.Config urls if - the db cannot find value
 
 
+## Version 2.5 (September 15th, 2023) 
 
+- Fix for GoToStep to allow for going backwards and reporting results to DevOps. ability for it to run, but the DevOps reporting is difficult 
+- AODA reports using the latest file format | latest file format added 
+-  Ability to generate test plans on execution with names specified as a parameter. Test Suites would go under the main test plan. Multiple test suites under one test plan would become possible.  
+- Generate and execute multiple tests under one run via powershell functionality
+- - Fix ability to execute on DB, ie. specify ALM to get test case details and still work 
 
-
-### Version 2.5 (To be released for September 15th, 2023) 
-
-| Details      | Note on status | Completed     |
-| :---        |    :----:   |          ---: |
-| Fix for GoToStep to allow for going backwards and reporting results to DevOps      | Fixed ability for it to run, but the DevOps reporting is difficult        | Complete    |
-| AODA reports using the latest file format | latest file format added | Complete |
-| Ability to generate test plans on execution with names specified as a parameter. Test Suites would go under the main test plan. Multiple test suites under one test plan would become possible.  |  | Complete |
-| Generate and execute multiple tests under one run | Fixed with new Powershell functionality | Complete |
-| Fix ability to execute on DB, ie. specify ALM to get test case details and still work | Fixed by adding checks for excel execution | Complete |
-| Query Build definition page for info on build number |  | Planned |
-| Use the build number specified in the project team for the build number name (take latest release and put it in the name), This would require getting the build of the TAP |  | Planned | 
-| Use Oracle instance specified in the repo instead of relying on user's agent to have the Oracle DB installed | Talk to Teck regarding feasibility | Planned |
-| Login via AAD to EarlyON using secure tokens and or service accounts without specifying passwords in plaintext. Keyvault to store secure data for execution and PAT.  | Talk to Sig | Planned |
-| Configure attaching logs on execution inluding CSV files | Added ability to include CSV files |  Complete |
-| Assign file names correctly with detailed description | Added with date and file name onto DevOps | Complete |
-| Playwright functional ability to run and create suites. | Planned basic functionality | Planned |
-| Fix order of test runs displayed on DevOps | Order is displayed as Test Case id number order | Complete |
-| Mandatory validation step that requires a step to ensure tests are executed. Another column added triggering execution || Planned | 
-| Ability to ensure that info in Test Case Action type is correct in the excel. Similar to DB triggers to ensure that the values are being used.  | | Complete |
-| Testing functionality for Edge, Firefox, Safarii/webkit | Tested and fixed for Edge and Firefox execution. Will require future safarii testing.  | Complete | 
-| SQL template that will auto populate and get the latest SQL info. will also delete instead of update | | Planned | 
-| Button for generating all tests from ALM to Excel | | In-progress | 
-| SQL that only clears data that was not previously there | | Planned  |
+- Configure attaching logs on execution inluding CSV files
+- - Assign file names correctly with detailed description -  with date and file name onto DevOps 
+  - Playwright functional ability to run and create suites. 
+- Fix order of test runs displayed on DevOps | Order is displayed as Test Case id number order 
+- Mandatory validation step that requires a step to ensure tests are executed. Another column added triggering execution 
+- Ability to ensure that info in Test Case Action type is correct in the excel. Similar to DB triggers to ensure that the values are being used. 
+- Testing functionality for Edge, Firefox, Safarii/webkit | Tested and fixed for Edge and Firefox execution. Will require future safarii testing.   
+- SQL template that will auto populate and get the latest SQL info. will also delete instead of update 
+- Button for generating all tests from ALM to Excel 
 
 ### Version 2.0 (August 31st, 2023) - FOR EXCEL release
 - Ability to integrate with DevOps API and generate executions with it
