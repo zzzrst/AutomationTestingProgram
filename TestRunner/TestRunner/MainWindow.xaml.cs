@@ -54,7 +54,12 @@ namespace TestRunner
             }
 
             // mandatory fields
-            string azurePAT = "664dm27nsqmbt3dpuvauzkazu2ak5tdkhtknhzkaa6gokryhki5q";
+            string azurePAT = System.Configuration.ConfigurationManager.AppSettings["PAT_TOKEN"] ?? string.Empty;
+
+            if (azurePAT == string.Empty)
+            {
+                log.Error("Missing PAT in App.Config");
+            }
 
             string env = this.EnvironmentValue.Text;
             string browser = this.BrowserPicker.Text;
@@ -274,23 +279,14 @@ namespace TestRunner
                 Process p = new Process();
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
-                    // we use shell to execute (not headless)
                     UseShellExecute = false,
-                    RedirectStandardOutput = true,
+                    RedirectStandardOutput = false,
                     FileName = "cmd.exe",
                     Arguments = $"/C exit | {cmdToRun}",
                 };
                 p.StartInfo = startInfo;
 
                 p.Start();
-
-                string line;
-                while ((line = p.StandardOutput.ReadLine()) != null)
-                {
-                    log.Info(line);
-                }
-
-                p.WaitForExit();
 
                 if (p.ExitCode == 0)
                 {
