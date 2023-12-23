@@ -51,7 +51,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FrameworkOptions
     path: src/FrameworkOptions.cs
     startLine: 13
@@ -94,7 +94,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Examples
     path: src/FrameworkOptions.cs
     startLine: 18
@@ -147,7 +147,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Update
     path: src/FrameworkOptions.cs
     startLine: 34
@@ -203,7 +203,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Browser
     path: src/FrameworkOptions.cs
     startLine: 40
@@ -261,7 +261,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Environment
     path: src/FrameworkOptions.cs
     startLine: 46
@@ -319,7 +319,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: URL
     path: src/FrameworkOptions.cs
     startLine: 52
@@ -377,7 +377,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RespectRepeatFor
     path: src/FrameworkOptions.cs
     startLine: 58
@@ -433,7 +433,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RespectRunAodaFlag
     path: src/FrameworkOptions.cs
     startLine: 64
@@ -489,7 +489,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TimeOutThreshold
     path: src/FrameworkOptions.cs
     startLine: 70
@@ -545,7 +545,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: WarningThreshold
     path: src/FrameworkOptions.cs
     startLine: 76
@@ -601,7 +601,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: DataFile
     path: src/FrameworkOptions.cs
     startLine: 82
@@ -657,7 +657,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CSVSaveFileLocation
     path: src/FrameworkOptions.cs
     startLine: 88
@@ -713,7 +713,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: LogSaveLocation
     path: src/FrameworkOptions.cs
     startLine: 96
@@ -769,7 +769,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ReportSaveLocation
     path: src/FrameworkOptions.cs
     startLine: 104
@@ -825,7 +825,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ScreenShotSaveLocation
     path: src/FrameworkOptions.cs
     startLine: 112
@@ -881,7 +881,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AutomationProgram
     path: src/FrameworkOptions.cs
     startLine: 120
@@ -937,7 +937,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: BuildNumber
     path: src/FrameworkOptions.cs
     startLine: 128
@@ -993,7 +993,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetDataType
     path: src/FrameworkOptions.cs
     startLine: 134
@@ -1049,7 +1049,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseDataType
     path: src/FrameworkOptions.cs
     startLine: 143
@@ -1105,7 +1105,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestStepDataType
     path: src/FrameworkOptions.cs
     startLine: 152
@@ -1161,7 +1161,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetDataArgs
     path: src/FrameworkOptions.cs
     startLine: 159
@@ -1217,7 +1217,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseDataArgs
     path: src/FrameworkOptions.cs
     startLine: 167
@@ -1273,7 +1273,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestStepDataArgs
     path: src/FrameworkOptions.cs
     startLine: 175
@@ -1329,7 +1329,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestPlanName
     path: src/FrameworkOptions.cs
     startLine: 183
@@ -1385,7 +1385,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ProjectName
     path: src/FrameworkOptions.cs
     startLine: 191
@@ -1441,7 +1441,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AzurePAT
     path: src/FrameworkOptions.cs
     startLine: 199
@@ -1497,7 +1497,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SecretInformation
     path: src/FrameworkOptions.cs
     startLine: 207
@@ -1553,7 +1553,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: MaxFailures
     path: src/FrameworkOptions.cs
     startLine: 215
@@ -1609,7 +1609,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: NotifyList
     path: src/FrameworkOptions.cs
     startLine: 223
@@ -1665,7 +1665,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunParameters
     path: src/FrameworkOptions.cs
     startLine: 231
@@ -1721,7 +1721,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExecutionURL
     path: src/FrameworkOptions.cs
     startLine: 239
@@ -1777,7 +1777,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AppConfigOverrides
     path: src/FrameworkOptions.cs
     startLine: 247
@@ -1833,7 +1833,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestPlanStructure
     path: src/FrameworkOptions.cs
     startLine: 255
@@ -1889,7 +1889,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TesterContact
     path: src/FrameworkOptions.cs
     startLine: 263
@@ -1945,7 +1945,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TesterName
     path: src/FrameworkOptions.cs
     startLine: 271
@@ -2001,7 +2001,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkOptions.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ReleaseEnvironmentUri
     path: src/FrameworkOptions.cs
     startLine: 279

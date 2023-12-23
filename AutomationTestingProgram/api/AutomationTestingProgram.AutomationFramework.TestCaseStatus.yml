@@ -26,7 +26,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseStatus
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 12
@@ -74,7 +74,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 15
@@ -112,7 +112,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseNumber
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 18
@@ -150,7 +150,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunSuccessful
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 21
@@ -188,7 +188,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ErrorStack
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 24
@@ -226,7 +226,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FriendlyErrorMessage
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 27
@@ -264,7 +264,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: StartTime
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 30
@@ -302,7 +302,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: EndTime
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 33
@@ -340,7 +340,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Description
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 36
@@ -378,7 +378,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Expected
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 39
@@ -416,7 +416,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestCaseStatus.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Actual
     path: src/AutomationFramework/Statuses/TestCaseStatus.cs
     startLine: 42

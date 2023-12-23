@@ -21,7 +21,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ALMReporter
     path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
     startLine: 18
@@ -49,7 +49,7 @@ items:
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List{System.String})
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String,System.String,System.String)
-  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String,System.String,System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
@@ -84,7 +84,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
     startLine: 24
@@ -120,7 +120,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestCaseStatus
     path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
     startLine: 30
@@ -159,7 +159,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestSetStatus
     path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
     startLine: 39
@@ -196,7 +196,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestStepStatusToTestCase
     path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
     startLine: 44
@@ -235,7 +235,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Report
     path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
     startLine: 57
@@ -478,18 +478,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
   parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
   isExternal: true
-  name: CreateAzureTestCase(String, String)
-  nameWithType: Reporter.CreateAzureTestCase(String, String)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String, System.String)
+  name: CreateAzureTestCaseResult(String, String)
+  nameWithType: Reporter.CreateAzureTestCaseResult(String, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String, System.String)
   spec.csharp:
-  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
-    name: CreateAzureTestCase
-    nameWithType: Reporter.CreateAzureTestCase
-    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+    name: CreateAzureTestCaseResult
+    nameWithType: Reporter.CreateAzureTestCaseResult
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
   - name: (
     nameWithType: (
     fullName: (
@@ -510,10 +510,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
-    name: CreateAzureTestCase
-    nameWithType: Reporter.CreateAzureTestCase
-    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+    name: CreateAzureTestCaseResult
+    nameWithType: Reporter.CreateAzureTestCaseResult
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
   - name: (
     nameWithType: (
     fullName: (

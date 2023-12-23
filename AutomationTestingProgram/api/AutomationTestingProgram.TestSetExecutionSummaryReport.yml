@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetExecutionSummaryReport
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
     startLine: 18
@@ -62,7 +62,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
     startLine: 29
@@ -94,7 +94,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSet
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
     startLine: 36
@@ -131,7 +131,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GenerateHTMLReport
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetExecutionSummaryReport.cs
     startLine: 42

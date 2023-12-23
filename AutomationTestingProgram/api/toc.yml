@@ -123,8 +123,14 @@
     name: PressKey
   - uid: AutomationTestingProgram.AutomationFramework.RefreshBrowser
     name: RefreshBrowser
+  - uid: AutomationTestingProgram.AutomationFramework.ResetOrg
+    name: ResetOrg
   - uid: AutomationTestingProgram.AutomationFramework.RunJavaScript
     name: RunJavaScript
+  - uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+    name: RunPrSQLScriptDelete
+  - uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
+    name: RunPrSQLScriptRevert
   - uid: AutomationTestingProgram.AutomationFramework.RunShellScript
     name: RunShellScript
   - uid: AutomationTestingProgram.AutomationFramework.RunSQLScript

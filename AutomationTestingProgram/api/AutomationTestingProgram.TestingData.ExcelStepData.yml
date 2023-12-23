@@ -20,10 +20,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExcelStepData
     path: src/TestingData/TestDrivers/ExcelStepData.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.TestingData
@@ -78,10 +78,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/ExcelStepData.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.TestingData
@@ -114,10 +114,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestStep
     path: src/TestingData/TestDrivers/ExcelStepData.cs
-    startLine: 34
+    startLine: 33
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.TestingData
@@ -158,10 +158,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetArguments
     path: src/TestingData/TestDrivers/ExcelStepData.cs
-    startLine: 43
+    startLine: 42
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.TestingData
@@ -196,10 +196,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: QueryObjectAndArguments
     path: src/TestingData/TestDrivers/ExcelStepData.cs
-    startLine: 56
+    startLine: 55
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.TestingData

@@ -17,7 +17,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Builders/TestAutomationBuilder.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestAutomationBuilder
     path: src/Builders/TestAutomationBuilder.cs
     startLine: 16
@@ -60,7 +60,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Builders/TestAutomationBuilder.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Build
     path: src/Builders/TestAutomationBuilder.cs
     startLine: 32

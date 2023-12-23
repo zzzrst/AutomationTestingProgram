@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SelectDDL
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
     startLine: 13
@@ -95,7 +95,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
     startLine: 16
@@ -134,7 +134,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HTMLWhiteListTag
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
     startLine: 19
@@ -174,7 +174,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Execute
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/SelectDDL.cs
     startLine: 22

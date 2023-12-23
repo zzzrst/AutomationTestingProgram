@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: XMLStepData
     path: src/TestingData/TestDrivers/XMLStepData.cs
     startLine: 17
@@ -76,7 +76,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/XMLStepData.cs
     startLine: 24
@@ -112,7 +112,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetArguments
     path: src/TestingData/TestDrivers/XMLStepData.cs
     startLine: 30
@@ -150,7 +150,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestStep
     path: src/TestingData/TestDrivers/XMLStepData.cs
     startLine: 35

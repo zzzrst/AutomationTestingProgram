@@ -20,7 +20,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: XMLCaseData
     path: src/TestingData/TestDrivers/XMLCaseData.cs
     startLine: 18
@@ -77,7 +77,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/XMLCaseData.cs
     startLine: 35
@@ -113,7 +113,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestCase
     path: src/TestingData/TestDrivers/XMLCaseData.cs
     startLine: 51
@@ -157,7 +157,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExistNextTestStep
     path: src/TestingData/TestDrivers/XMLCaseData.cs
     startLine: 99
@@ -194,7 +194,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/XMLCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetNextTestStep
     path: src/TestingData/TestDrivers/XMLCaseData.cs
     startLine: 105

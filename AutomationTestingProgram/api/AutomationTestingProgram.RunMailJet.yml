@@ -17,7 +17,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/RunMailJet.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunMailJet
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/RunMailJet.cs
     startLine: 16
@@ -58,7 +58,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/RunMailJet.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateEmail
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/RunMailJet.cs
     startLine: 22

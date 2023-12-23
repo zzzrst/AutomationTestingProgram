@@ -12,7 +12,7 @@ items:
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
-  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
   - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean,System.String)
@@ -35,7 +35,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Reporter
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
     startLine: 20
@@ -84,10 +84,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 41
+    startLine: 39
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -120,10 +120,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SaveFileLocation
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 87
+    startLine: 85
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -157,10 +157,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetStatuses
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 92
+    startLine: 90
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -194,10 +194,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseStatuses
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 97
+    startLine: 95
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -231,10 +231,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseToTestSteps
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 102
+    startLine: 100
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -268,10 +268,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateInitialTestCase
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 109
+    startLine: 107
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -307,10 +307,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetTestCaseList
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 147
+    startLine: 145
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -346,10 +346,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestRunAttachment
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 167
+    startLine: 165
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -373,37 +373,37 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
-  id: CreateAzureTestCase(System.String,System.String)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  id: CreateAzureTestCaseResult(System.String,System.String)
   parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
   langs:
   - csharp
   - vb
-  name: CreateAzureTestCase(String, String)
-  nameWithType: Reporter.CreateAzureTestCase(String, String)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String, System.String)
+  name: CreateAzureTestCaseResult(String, String)
+  nameWithType: Reporter.CreateAzureTestCaseResult(String, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String, System.String)
   type: Method
   source:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
-    id: CreateAzureTestCase
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: CreateAzureTestCaseResult
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 177
+    startLine: 175
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
   syntax:
-    content: public virtual void CreateAzureTestCase(string testCaseName, string description)
+    content: public virtual void CreateAzureTestCaseResult(string testCaseName, string description)
     parameters:
     - id: testCaseName
       type: System.String
     - id: description
       type: System.String
-    content.vb: Public Overridable Sub CreateAzureTestCase(testCaseName As String, description As String)
-  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase*
+    content.vb: Public Overridable Sub CreateAzureTestCaseResult(testCaseName As String, description As String)
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult*
   modifiers.csharp:
   - public
   - virtual
@@ -425,10 +425,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestAttachment
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 208
+    startLine: 206
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -467,10 +467,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestStepScreenshot
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 224
+    startLine: 222
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -509,10 +509,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateAzureTestStep
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 240
+    startLine: 238
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -551,10 +551,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SaveTestSteps
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 250
+    startLine: 248
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -590,10 +590,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RecordAzureTestStepResult
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 268
+    startLine: 263
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -629,10 +629,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestCaseStatus
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 284
+    startLine: 278
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -669,10 +669,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestSetStatus
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 310
+    startLine: 302
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -707,10 +707,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestStepStatusToTestCase
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 318
+    startLine: 310
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -747,10 +747,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Report
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 329
+    startLine: 321
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -782,10 +782,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ReportAborted
     path: src/AutomationFramework/Loggers_and_Reporters/Reporter.cs
-    startLine: 563
+    startLine: 554
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
@@ -1471,11 +1471,11 @@ references:
   name: AddTestRunAttachment
   nameWithType: Reporter.AddTestRunAttachment
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase*
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase
-  name: CreateAzureTestCase
-  nameWithType: Reporter.CreateAzureTestCase
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
+  name: CreateAzureTestCaseResult
+  nameWithType: Reporter.CreateAzureTestCaseResult
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment*
   commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment
   name: AddTestAttachment

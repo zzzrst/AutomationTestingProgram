@@ -24,14 +24,14 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CSVEnvironmentGetter
     path: src/Helper/CSVEnvironmentGetter.cs
     startLine: 18
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
-  summary: "\nClass to get environment information from a csv file\n"
+  summary: "\nClass to get environment information from a csv file.\n"
   example: []
   syntax:
     content: public class CSVEnvironmentGetter
@@ -67,10 +67,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetEnvironmentURL
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
@@ -107,10 +107,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetHost
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
@@ -147,10 +147,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetPort
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 77
+    startLine: 78
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
@@ -187,10 +187,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetIsEncrypted
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 94
+    startLine: 95
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
@@ -227,10 +227,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetUsername
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 111
+    startLine: 112
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
@@ -267,10 +267,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetDBName
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 128
+    startLine: 129
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
@@ -307,10 +307,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetPassword
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 145
+    startLine: 146
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper
@@ -347,10 +347,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/CSVEnvironmentGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: QueryKeychainAccountPassword
     path: src/Helper/CSVEnvironmentGetter.cs
-    startLine: 163
+    startLine: 164
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestinProgram.Helper

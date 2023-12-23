@@ -17,7 +17,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/FilePathResolver.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FilePathResolver
     path: src/Helper/FilePathResolver.cs
     startLine: 15
@@ -60,7 +60,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/FilePathResolver.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Resolve
     path: src/Helper/FilePathResolver.cs
     startLine: 25

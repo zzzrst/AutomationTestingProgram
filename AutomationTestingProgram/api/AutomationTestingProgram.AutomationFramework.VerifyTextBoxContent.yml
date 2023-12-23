@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: VerifyTextBoxContent
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
     startLine: 11
@@ -95,7 +95,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
     startLine: 14
@@ -134,7 +134,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HTMLWhiteListTag
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
     startLine: 17
@@ -174,7 +174,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Execute
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAttribute/VerifyTextBoxContent.cs
     startLine: 20

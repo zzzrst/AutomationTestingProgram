@@ -52,7 +52,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetHTMLInstance
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 17
@@ -95,7 +95,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: EXECFINISHED
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 22
@@ -132,7 +132,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: EXECPASSED
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 27
@@ -169,7 +169,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: buildNumber
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 32
@@ -208,7 +208,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Description
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 37
@@ -245,7 +245,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Baseline
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 42
@@ -282,7 +282,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TargetCycle
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 47
@@ -319,7 +319,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FolderPath
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 52
@@ -356,7 +356,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetExecutionFormat
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 57
@@ -393,7 +393,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Attachments
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 62
@@ -430,7 +430,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetDetails
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 65
@@ -461,7 +461,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 81
@@ -539,7 +539,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ID
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 133
@@ -576,7 +576,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: PlanID
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 138
@@ -613,7 +613,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunID
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 143
@@ -650,7 +650,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 148
@@ -687,7 +687,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: EmailList
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 153
@@ -724,7 +724,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: PlanName
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 158
@@ -761,7 +761,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Project
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 163
@@ -798,7 +798,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: OrgName
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 168
@@ -835,7 +835,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FailedEmailList
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 173
@@ -872,7 +872,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Started
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 178
@@ -909,7 +909,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Finished
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 183
@@ -946,7 +946,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalTestCases
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 188
@@ -983,7 +983,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalBlocked
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 193
@@ -1020,7 +1020,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalFailed
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 198
@@ -1057,7 +1057,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalNA
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 203
@@ -1094,7 +1094,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalNoRun
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 208
@@ -1131,7 +1131,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalNotCompleted
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 213
@@ -1168,7 +1168,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalPassed
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 218
@@ -1205,7 +1205,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalUndelivered
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 223
@@ -1242,7 +1242,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseExecutions
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 228
@@ -1279,7 +1279,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExecutionURL
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 233
@@ -1316,7 +1316,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Steps
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 238
@@ -1353,7 +1353,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestCaseRunResult
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 243
@@ -1400,7 +1400,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetTestStepRunStatus
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 273
@@ -1437,7 +1437,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestCaseRunStatus
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestSetInstance.cs
     startLine: 288

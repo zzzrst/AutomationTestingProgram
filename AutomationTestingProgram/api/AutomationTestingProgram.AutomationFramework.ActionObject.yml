@@ -26,7 +26,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ActionObject
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 17
@@ -53,6 +53,7 @@ items:
   - AutomationTestingProgram.AutomationFramework.PopulateTextBox
   - AutomationTestingProgram.AutomationFramework.PopulateTextBoxDDL
   - AutomationTestingProgram.AutomationFramework.PopulateWebElement
+  - AutomationTestingProgram.AutomationFramework.ResetOrg
   - AutomationTestingProgram.AutomationFramework.SelectDDL
   - AutomationTestingProgram.AutomationFramework.SelectDDLMultiValues
   - AutomationTestingProgram.AutomationFramework.SelectRadioButton
@@ -116,7 +117,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 20
@@ -155,7 +156,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Attributes
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 25
@@ -192,7 +193,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HTMLWhiteListTag
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 30
@@ -231,7 +232,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: XPath
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 35
@@ -268,7 +269,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: JsCommand
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 40
@@ -305,7 +306,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Execute
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 43
@@ -339,7 +340,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: XPathBuilder
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 91
@@ -374,7 +375,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateJSCommandForAttributeValuePairs
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 166
@@ -416,7 +417,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FixAttribute
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 202
@@ -455,7 +456,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: XPathTagHelper
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ActionObject.cs
     startLine: 225

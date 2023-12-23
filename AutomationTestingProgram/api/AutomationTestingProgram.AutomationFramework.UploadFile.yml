@@ -18,7 +18,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/UploadFile.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: UploadFile
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/UploadFile.cs
     startLine: 14
@@ -95,7 +95,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/UploadFile.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/UploadFile.cs
     startLine: 17
@@ -134,7 +134,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/UploadFile.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Execute
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/UploadFile.cs
     startLine: 20

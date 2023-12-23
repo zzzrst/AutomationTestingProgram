@@ -27,7 +27,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseHTML
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 15
@@ -70,7 +70,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 20
@@ -102,7 +102,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSteps
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 27
@@ -139,7 +139,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Attachments
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 32
@@ -176,7 +176,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExecDateTime
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 37
@@ -213,7 +213,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HasScreenShot
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 42
@@ -250,7 +250,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: NumSteps
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 47
@@ -287,7 +287,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunID
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 52
@@ -324,7 +324,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunName
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 57
@@ -361,7 +361,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Status
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 62
@@ -398,7 +398,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseName
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 67
@@ -435,7 +435,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TesterName
     path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
     startLine: 72

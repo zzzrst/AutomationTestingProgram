@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Login
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
     startLine: 24
@@ -96,7 +96,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
     startLine: 27
@@ -135,7 +135,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Execute
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
     startLine: 30
@@ -169,7 +169,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateJSCommandForAttributeValuePairs
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/Login.cs
     startLine: 357

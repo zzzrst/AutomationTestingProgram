@@ -23,7 +23,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TextData
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 15
@@ -72,7 +72,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 21
@@ -108,7 +108,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 27
@@ -147,7 +147,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArgs
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 30
@@ -186,7 +186,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TextFile
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 35
@@ -223,7 +223,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArr
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 40
@@ -260,7 +260,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArrIndex
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 45
@@ -297,7 +297,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/TestingData/TestDrivers/TextData.cs
     startLine: 48

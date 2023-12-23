@@ -26,7 +26,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: NoSetData
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 13
@@ -74,7 +74,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 19
@@ -110,7 +110,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArgs
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 25
@@ -149,7 +149,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 28
@@ -188,7 +188,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExistNextTestCase
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 33
@@ -225,7 +225,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetNextTestCase
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 39
@@ -262,7 +262,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 46
@@ -296,7 +296,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestSet
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 51
@@ -330,7 +330,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddAttachment
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 56
@@ -368,7 +368,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddAODAReport
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 64
@@ -406,7 +406,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/NoSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddErrorScreenshot
     path: src/TestingData/TestDrivers/NoSetData.cs
     startLine: 72

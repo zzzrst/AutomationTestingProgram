@@ -18,7 +18,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAvailability/VerifyLinkAvailability.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: VerifyLinkAvailability
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAvailability/VerifyLinkAvailability.cs
     startLine: 14
@@ -97,7 +97,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAvailability/VerifyLinkAvailability.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAvailability/VerifyLinkAvailability.cs
     startLine: 17
@@ -136,7 +136,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAvailability/VerifyLinkAvailability.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HTMLWhiteListTag
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/VerifyObject/VerifyObjectAvailability/VerifyLinkAvailability.cs
     startLine: 20

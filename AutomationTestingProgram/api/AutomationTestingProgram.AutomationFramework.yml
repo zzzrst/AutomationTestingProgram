@@ -45,7 +45,10 @@ items:
   - AutomationTestingProgram.AutomationFramework.PopulateWebElement
   - AutomationTestingProgram.AutomationFramework.PressKey
   - AutomationTestingProgram.AutomationFramework.RefreshBrowser
+  - AutomationTestingProgram.AutomationFramework.ResetOrg
   - AutomationTestingProgram.AutomationFramework.RunJavaScript
+  - AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+  - AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
   - AutomationTestingProgram.AutomationFramework.RunShellScript
   - AutomationTestingProgram.AutomationFramework.RunSQLScript
   - AutomationTestingProgram.AutomationFramework.RunTestCase
@@ -247,6 +250,11 @@ references:
   name: PopulateWebElement
   nameWithType: PopulateWebElement
   fullName: AutomationTestingProgram.AutomationFramework.PopulateWebElement
+- uid: AutomationTestingProgram.AutomationFramework.ResetOrg
+  commentId: T:AutomationTestingProgram.AutomationFramework.ResetOrg
+  name: ResetOrg
+  nameWithType: ResetOrg
+  fullName: AutomationTestingProgram.AutomationFramework.ResetOrg
 - uid: AutomationTestingProgram.AutomationFramework.SelectDDL
   commentId: T:AutomationTestingProgram.AutomationFramework.SelectDDL
   name: SelectDDL
@@ -453,6 +461,16 @@ references:
   name: RunJavaScript
   nameWithType: RunJavaScript
   fullName: AutomationTestingProgram.AutomationFramework.RunJavaScript
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+  commentId: T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+  name: RunPrSQLScriptDelete
+  nameWithType: RunPrSQLScriptDelete
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
+  commentId: T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
+  name: RunPrSQLScriptRevert
+  nameWithType: RunPrSQLScriptRevert
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
 - uid: AutomationTestingProgram.AutomationFramework.RunShellScript
   commentId: T:AutomationTestingProgram.AutomationFramework.RunShellScript
   name: RunShellScript

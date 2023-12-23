@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/Helper.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Helper
     path: src/Helper/Helper.cs
     startLine: 15
@@ -62,7 +62,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/Helper.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Cleanse
     path: src/Helper/Helper.cs
     startLine: 22
@@ -103,7 +103,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/Helper.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: EncryptString
     path: src/Helper/Helper.cs
     startLine: 38
@@ -147,7 +147,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/Helper.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: DecryptString
     path: src/Helper/Helper.cs
     startLine: 73

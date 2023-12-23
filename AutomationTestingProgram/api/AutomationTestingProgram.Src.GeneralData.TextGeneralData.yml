@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/GeneralData/TextGeneralData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TextGeneralData
     path: src/GeneralData/TextGeneralData.cs
     startLine: 13
@@ -66,7 +66,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/GeneralData/TextGeneralData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/GeneralData/TextGeneralData.cs
     startLine: 16
@@ -105,7 +105,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/GeneralData/TextGeneralData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ParseParameters
     path: src/GeneralData/TextGeneralData.cs
     startLine: 19
@@ -149,7 +149,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/GeneralData/TextGeneralData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Verify
     path: src/GeneralData/TextGeneralData.cs
     startLine: 25

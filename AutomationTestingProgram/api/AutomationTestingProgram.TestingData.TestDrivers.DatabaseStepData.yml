@@ -27,7 +27,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: DatabaseStepData
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 33
@@ -85,7 +85,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 40
@@ -121,7 +121,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetArguments
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 57
@@ -159,7 +159,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestStep
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 66
@@ -203,7 +203,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: QueryObjectAndArguments
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 76
@@ -239,7 +239,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetGlobalVariableValue
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 112
@@ -278,7 +278,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetEnvironmentEmailNotificationFolder
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 156
@@ -317,7 +317,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetEnvironmentURL
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 174
@@ -356,7 +356,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetEnvironmentSharePointMapping
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 199
@@ -398,7 +398,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: QuerySpecialChars
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
     startLine: 234
@@ -440,10 +440,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ProcessQADBSelectQuery
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
-    startLine: 340
+    startLine: 339
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.TestingData.TestDrivers
@@ -479,10 +479,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ProcessEnvironmentSelectQuery
     path: src/TestingData/TestDrivers/DatabaseStepData.cs
-    startLine: 354
+    startLine: 353
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.TestingData.TestDrivers

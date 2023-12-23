@@ -17,7 +17,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/Resource.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Resource
     path: src/Helper/Resource.cs
     startLine: 14
@@ -61,7 +61,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/Resource.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Get
     path: src/Helper/Resource.cs
     startLine: 21

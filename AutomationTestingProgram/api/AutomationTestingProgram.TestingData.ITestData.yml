@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ITestData
     path: src/TestingData/ITestData.cs
     startLine: 9
@@ -52,7 +52,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArgs
     path: src/TestingData/ITestData.cs
     startLine: 16
@@ -86,7 +86,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/TestingData/ITestData.cs
     startLine: 21
@@ -121,7 +121,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/TestingData/ITestData.cs
     startLine: 29

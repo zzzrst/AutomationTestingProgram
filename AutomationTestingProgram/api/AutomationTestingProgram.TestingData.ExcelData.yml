@@ -25,7 +25,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExcelData
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 19
@@ -76,7 +76,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 25
@@ -112,7 +112,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArgs
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 46
@@ -151,7 +151,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 49
@@ -190,7 +190,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RowIndex
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 51
@@ -227,7 +227,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseStartIndex
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 53
@@ -264,7 +264,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExcelFile
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 58
@@ -301,7 +301,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetSheet
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 63
@@ -338,7 +338,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: User
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 70
@@ -375,7 +375,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/ExcelData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/TestingData/TestDrivers/ExcelData.cs
     startLine: 73

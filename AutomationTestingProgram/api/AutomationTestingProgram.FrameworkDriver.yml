@@ -19,7 +19,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkDriver.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FrameworkDriver
     path: src/FrameworkDriver.cs
     startLine: 37
@@ -62,7 +62,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkDriver.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Main
     path: src/FrameworkDriver.cs
     startLine: 46
@@ -106,7 +106,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkDriver.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CheckForUpdates
     path: src/FrameworkDriver.cs
     startLine: 213
@@ -147,7 +147,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/FrameworkDriver.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunAODA
     path: src/FrameworkDriver.cs
     startLine: 234

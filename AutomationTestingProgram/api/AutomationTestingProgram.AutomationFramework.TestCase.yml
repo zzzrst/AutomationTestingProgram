@@ -30,7 +30,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCase
     path: src/AutomationFramework/TestCase.cs
     startLine: 17
@@ -78,7 +78,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ShouldExecuteVariable
     path: src/AutomationFramework/TestCase.cs
     startLine: 22
@@ -115,7 +115,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/TestCase.cs
     startLine: 25
@@ -153,7 +153,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseNumber
     path: src/AutomationFramework/TestCase.cs
     startLine: 28
@@ -191,7 +191,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TotalTestSteps
     path: src/AutomationFramework/TestCase.cs
     startLine: 31
@@ -229,7 +229,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseStatus
     path: src/AutomationFramework/TestCase.cs
     startLine: 38
@@ -267,7 +267,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CurrTestStepNumber
     path: src/AutomationFramework/TestCase.cs
     startLine: 41
@@ -305,7 +305,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: OnExceptionFlowBehavior
     path: src/AutomationFramework/TestCase.cs
     startLine: 44
@@ -343,7 +343,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExistNextTestStep
     path: src/AutomationFramework/TestCase.cs
     startLine: 47
@@ -378,7 +378,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetNextTestStep
     path: src/AutomationFramework/TestCase.cs
     startLine: 53
@@ -413,7 +413,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HandleException
     path: src/AutomationFramework/TestCase.cs
     startLine: 70
@@ -449,7 +449,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/AutomationFramework/TestCase.cs
     startLine: 78
@@ -482,7 +482,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ShouldExecute
     path: src/AutomationFramework/TestCase.cs
     startLine: 100
@@ -517,7 +517,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TearDown
     path: src/AutomationFramework/TestCase.cs
     startLine: 121
@@ -550,7 +550,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestCase.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: UpdateTestCaseStatus
     path: src/AutomationFramework/TestCase.cs
     startLine: 138

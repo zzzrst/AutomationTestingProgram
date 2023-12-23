@@ -1244,19 +1244,19 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase
   nameWithType: Reporter.AddTestStepStatusToTestCase
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
-  name: CreateAzureTestCase(String, String)
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_CreateAzureTestCase_System_String_System_String_
-  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String,System.String)
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase(System.String, System.String)
-  nameWithType: Reporter.CreateAzureTestCase(String, String)
-- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase*
-  name: CreateAzureTestCase
-  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_CreateAzureTestCase_
-  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  name: CreateAzureTestCaseResult(String, String)
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_CreateAzureTestCaseResult_System_String_System_String_
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String, System.String)
+  nameWithType: Reporter.CreateAzureTestCaseResult(String, String)
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult*
+  name: CreateAzureTestCaseResult
+  href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_CreateAzureTestCaseResult_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
   isSpec: "True"
-  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCase
-  nameWithType: Reporter.CreateAzureTestCase
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
+  nameWithType: Reporter.CreateAzureTestCaseResult
 - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
   name: CreateAzureTestStep(String, String, String)
   href: api/AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.html#AutomationTestingProgram_AutomationFramework_Loggers_and_Reporters_Reporter_CreateAzureTestStep_System_String_System_String_System_String_
@@ -1928,6 +1928,38 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.RefreshBrowser.Name
   nameWithType: RefreshBrowser.Name
+- uid: AutomationTestingProgram.AutomationFramework.ResetOrg
+  name: ResetOrg
+  href: api/AutomationTestingProgram.AutomationFramework.ResetOrg.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.ResetOrg
+  fullName: AutomationTestingProgram.AutomationFramework.ResetOrg
+  nameWithType: ResetOrg
+- uid: AutomationTestingProgram.AutomationFramework.ResetOrg.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.ResetOrg.html#AutomationTestingProgram_AutomationFramework_ResetOrg_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.ResetOrg.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.ResetOrg.Execute()
+  nameWithType: ResetOrg.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.ResetOrg.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.ResetOrg.html#AutomationTestingProgram_AutomationFramework_ResetOrg_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ResetOrg.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ResetOrg.Execute
+  nameWithType: ResetOrg.Execute
+- uid: AutomationTestingProgram.AutomationFramework.ResetOrg.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ResetOrg.html#AutomationTestingProgram_AutomationFramework_ResetOrg_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.ResetOrg.Name
+  fullName: AutomationTestingProgram.AutomationFramework.ResetOrg.Name
+  nameWithType: ResetOrg.Name
+- uid: AutomationTestingProgram.AutomationFramework.ResetOrg.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.ResetOrg.html#AutomationTestingProgram_AutomationFramework_ResetOrg_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ResetOrg.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.ResetOrg.Name
+  nameWithType: ResetOrg.Name
 - uid: AutomationTestingProgram.AutomationFramework.RunJavaScript
   name: RunJavaScript
   href: api/AutomationTestingProgram.AutomationFramework.RunJavaScript.html
@@ -1960,6 +1992,70 @@ references:
   isSpec: "True"
   fullName: AutomationTestingProgram.AutomationFramework.RunJavaScript.Name
   nameWithType: RunJavaScript.Name
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+  name: RunPrSQLScriptDelete
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+  nameWithType: RunPrSQLScriptDelete
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptDelete_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Execute()
+  nameWithType: RunPrSQLScriptDelete.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptDelete_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Execute
+  nameWithType: RunPrSQLScriptDelete.Execute
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptDelete_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Name
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Name
+  nameWithType: RunPrSQLScriptDelete.Name
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptDelete_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.Name
+  nameWithType: RunPrSQLScriptDelete.Name
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
+  name: RunPrSQLScriptRevert
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.html
+  commentId: T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
+  nameWithType: RunPrSQLScriptRevert
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Execute
+  name: Execute()
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptRevert_Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Execute()
+  nameWithType: RunPrSQLScriptRevert.Execute()
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Execute*
+  name: Execute
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptRevert_Execute_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Execute
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Execute
+  nameWithType: RunPrSQLScriptRevert.Execute
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Name
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptRevert_Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Name
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Name
+  nameWithType: RunPrSQLScriptRevert.Name
+- uid: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Name*
+  name: Name
+  href: api/AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.html#AutomationTestingProgram_AutomationFramework_RunPrSQLScriptRevert_Name_
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Name
+  isSpec: "True"
+  fullName: AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.Name
+  nameWithType: RunPrSQLScriptRevert.Name
 - uid: AutomationTestingProgram.AutomationFramework.RunShellScript
   name: RunShellScript
   href: api/AutomationTestingProgram.AutomationFramework.RunShellScript.html

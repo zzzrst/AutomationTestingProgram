@@ -32,13 +32,15 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestPlanInstance
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
+  summary: "\nConnects to the Test Plan, reports results to devops, and reports test run results.\n"
+  example: []
   syntax:
     content: public class TestPlanInstance
     content.vb: Public Class TestPlanInstance
@@ -73,13 +75,15 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: testCaseList
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 57
+    startLine: 68
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
+  summary: "\nThe list of test cases. Index 0 is the first test case id.\n"
+  example: []
   syntax:
     content: public List<string> testCaseList
     return:
@@ -104,10 +108,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseMapping
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 70
+    startLine: 73
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -137,10 +141,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 118
+    startLine: 121
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -176,6 +180,111 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: AzureReporter.TestPlanInstance.GetTestRun
+  commentId: M:AzureReporter.TestPlanInstance.GetTestRun
+  id: GetTestRun
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: GetTestRun()
+  nameWithType: TestPlanInstance.GetTestRun()
+  fullName: AzureReporter.TestPlanInstance.GetTestRun()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetTestRun
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 291
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nReturns the current test run.\n"
+  example: []
+  syntax:
+    content: public TestRun GetTestRun()
+    return:
+      type: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+      description: Test Run of the current test run.
+    content.vb: Public Function GetTestRun As TestRun
+  overload: AzureReporter.TestPlanInstance.GetTestRun*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.GetTestPlanId
+  commentId: M:AzureReporter.TestPlanInstance.GetTestPlanId
+  id: GetTestPlanId
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: GetTestPlanId()
+  nameWithType: TestPlanInstance.GetTestPlanId()
+  fullName: AzureReporter.TestPlanInstance.GetTestPlanId()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetTestPlanId
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 300
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nReturns the current test plan id.\n"
+  example: []
+  syntax:
+    content: public string GetTestPlanId()
+    return:
+      type: System.String
+      description: ID of the current test plan.
+    content.vb: Public Function GetTestPlanId As String
+  overload: AzureReporter.TestPlanInstance.GetTestPlanId*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.GetTestSuiteId
+  commentId: M:AzureReporter.TestPlanInstance.GetTestSuiteId
+  id: GetTestSuiteId
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: GetTestSuiteId()
+  nameWithType: TestPlanInstance.GetTestSuiteId()
+  fullName: AzureReporter.TestPlanInstance.GetTestSuiteId()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetTestSuiteId
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 309
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nReturns the current test suite id.\n"
+  example: []
+  syntax:
+    content: public string GetTestSuiteId()
+    return:
+      type: System.String
+      description: ID of the current test suite.
+    content.vb: Public Function GetTestSuiteId As String
+  overload: AzureReporter.TestPlanInstance.GetTestSuiteId*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: AzureReporter.TestPlanInstance.CreateTestRun(System.String)
   commentId: M:AzureReporter.TestPlanInstance.CreateTestRun(System.String)
   id: CreateTestRun(System.String)
@@ -191,10 +300,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateTestRun
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 291
+    startLine: 319
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -227,21 +336,22 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RecordTestRun
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 380
+    startLine: 409
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
   summary: "\nRecord the test run result by calling UpdateTestRunAsync.\n"
   example: []
   syntax:
-    content: public void RecordTestRun(RunUpdateModel runmodel = null)
+    content: public void RecordTestRun(RunUpdateModel runModel = null)
     parameters:
-    - id: runmodel
+    - id: runModel
       type: Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel
-    content.vb: Public Sub RecordTestRun(runmodel As RunUpdateModel = Nothing)
+      description: If runmodel is already created, use that.
+    content.vb: Public Sub RecordTestRun(runModel As RunUpdateModel = Nothing)
   overload: AzureReporter.TestPlanInstance.RecordTestRun*
   modifiers.csharp:
   - public
@@ -262,10 +372,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestRunAttachment
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 427
+    startLine: 458
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -304,10 +414,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestCaseAttachment
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 457
+    startLine: 488
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -346,10 +456,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestStepAttachment
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 501
+    startLine: 530
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -390,10 +500,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RecordTestStepResult
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 552
+    startLine: 577
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -429,10 +539,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateTestCaseResult
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 598
+    startLine: 615
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -461,10 +571,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: PrintBasicRunInfo
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 622
+    startLine: 638
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -493,10 +603,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddTestCasesToSuite
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 633
+    startLine: 649
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -532,10 +642,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RecordTestCaseResult
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 696
+    startLine: 706
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -553,102 +663,6 @@ items:
       type: AutomationTestSetFramework.ITestStatus
     content.vb: Public Sub RecordTestCaseResult(outcome As String, testCaseId As String, testCaseStatus As ITestStatus)
   overload: AzureReporter.TestPlanInstance.RecordTestCaseResult*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: AzureReporter.TestPlanInstance.GetTestRun
-  commentId: M:AzureReporter.TestPlanInstance.GetTestRun
-  id: GetTestRun
-  parent: AzureReporter.TestPlanInstance
-  langs:
-  - csharp
-  - vb
-  name: GetTestRun()
-  nameWithType: TestPlanInstance.GetTestRun()
-  fullName: AzureReporter.TestPlanInstance.GetTestRun()
-  type: Method
-  source:
-    remote:
-      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-      branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
-    id: GetTestRun
-    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 1069
-  assemblies:
-  - AutomationTestingProgram
-  namespace: AzureReporter
-  syntax:
-    content: public TestRun GetTestRun()
-    return:
-      type: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
-    content.vb: Public Function GetTestRun As TestRun
-  overload: AzureReporter.TestPlanInstance.GetTestRun*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: AzureReporter.TestPlanInstance.GetTestPlanId
-  commentId: M:AzureReporter.TestPlanInstance.GetTestPlanId
-  id: GetTestPlanId
-  parent: AzureReporter.TestPlanInstance
-  langs:
-  - csharp
-  - vb
-  name: GetTestPlanId()
-  nameWithType: TestPlanInstance.GetTestPlanId()
-  fullName: AzureReporter.TestPlanInstance.GetTestPlanId()
-  type: Method
-  source:
-    remote:
-      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-      branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
-    id: GetTestPlanId
-    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 1075
-  assemblies:
-  - AutomationTestingProgram
-  namespace: AzureReporter
-  syntax:
-    content: public string GetTestPlanId()
-    return:
-      type: System.String
-    content.vb: Public Function GetTestPlanId As String
-  overload: AzureReporter.TestPlanInstance.GetTestPlanId*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: AzureReporter.TestPlanInstance.GetTestSuiteId
-  commentId: M:AzureReporter.TestPlanInstance.GetTestSuiteId
-  id: GetTestSuiteId
-  parent: AzureReporter.TestPlanInstance
-  langs:
-  - csharp
-  - vb
-  name: GetTestSuiteId()
-  nameWithType: TestPlanInstance.GetTestSuiteId()
-  fullName: AzureReporter.TestPlanInstance.GetTestSuiteId()
-  type: Method
-  source:
-    remote:
-      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-      branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
-    id: GetTestSuiteId
-    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
-    startLine: 1081
-  assemblies:
-  - AutomationTestingProgram
-  namespace: AzureReporter
-  syntax:
-    content: public string GetTestSuiteId()
-    return:
-      type: System.String
-    content.vb: Public Function GetTestSuiteId As String
-  overload: AzureReporter.TestPlanInstance.GetTestSuiteId*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1168,6 +1182,34 @@ references:
   name: TestPlanInstance
   nameWithType: TestPlanInstance.TestPlanInstance
   fullName: AzureReporter.TestPlanInstance.TestPlanInstance
+- uid: AzureReporter.TestPlanInstance.GetTestRun*
+  commentId: Overload:AzureReporter.TestPlanInstance.GetTestRun
+  name: GetTestRun
+  nameWithType: TestPlanInstance.GetTestRun
+  fullName: AzureReporter.TestPlanInstance.GetTestRun
+- uid: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+  commentId: T:Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+  parent: Microsoft.TeamFoundation.TestManagement.WebApi
+  isExternal: true
+  name: TestRun
+  nameWithType: TestRun
+  fullName: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+- uid: Microsoft.TeamFoundation.TestManagement.WebApi
+  commentId: N:Microsoft.TeamFoundation.TestManagement.WebApi
+  isExternal: true
+  name: Microsoft.TeamFoundation.TestManagement.WebApi
+  nameWithType: Microsoft.TeamFoundation.TestManagement.WebApi
+  fullName: Microsoft.TeamFoundation.TestManagement.WebApi
+- uid: AzureReporter.TestPlanInstance.GetTestPlanId*
+  commentId: Overload:AzureReporter.TestPlanInstance.GetTestPlanId
+  name: GetTestPlanId
+  nameWithType: TestPlanInstance.GetTestPlanId
+  fullName: AzureReporter.TestPlanInstance.GetTestPlanId
+- uid: AzureReporter.TestPlanInstance.GetTestSuiteId*
+  commentId: Overload:AzureReporter.TestPlanInstance.GetTestSuiteId
+  name: GetTestSuiteId
+  nameWithType: TestPlanInstance.GetTestSuiteId
+  fullName: AzureReporter.TestPlanInstance.GetTestSuiteId
 - uid: AzureReporter.TestPlanInstance.CreateTestRun*
   commentId: Overload:AzureReporter.TestPlanInstance.CreateTestRun
   name: CreateTestRun
@@ -1185,12 +1227,6 @@ references:
   name: RunUpdateModel
   nameWithType: RunUpdateModel
   fullName: Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel
-- uid: Microsoft.TeamFoundation.TestManagement.WebApi
-  commentId: N:Microsoft.TeamFoundation.TestManagement.WebApi
-  isExternal: true
-  name: Microsoft.TeamFoundation.TestManagement.WebApi
-  nameWithType: Microsoft.TeamFoundation.TestManagement.WebApi
-  fullName: Microsoft.TeamFoundation.TestManagement.WebApi
 - uid: AzureReporter.TestPlanInstance.AddTestRunAttachment*
   commentId: Overload:AzureReporter.TestPlanInstance.AddTestRunAttachment
   name: AddTestRunAttachment
@@ -1244,25 +1280,3 @@ references:
   name: AutomationTestSetFramework
   nameWithType: AutomationTestSetFramework
   fullName: AutomationTestSetFramework
-- uid: AzureReporter.TestPlanInstance.GetTestRun*
-  commentId: Overload:AzureReporter.TestPlanInstance.GetTestRun
-  name: GetTestRun
-  nameWithType: TestPlanInstance.GetTestRun
-  fullName: AzureReporter.TestPlanInstance.GetTestRun
-- uid: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
-  commentId: T:Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
-  parent: Microsoft.TeamFoundation.TestManagement.WebApi
-  isExternal: true
-  name: TestRun
-  nameWithType: TestRun
-  fullName: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
-- uid: AzureReporter.TestPlanInstance.GetTestPlanId*
-  commentId: Overload:AzureReporter.TestPlanInstance.GetTestPlanId
-  name: GetTestPlanId
-  nameWithType: TestPlanInstance.GetTestPlanId
-  fullName: AzureReporter.TestPlanInstance.GetTestPlanId
-- uid: AzureReporter.TestPlanInstance.GetTestSuiteId*
-  commentId: Overload:AzureReporter.TestPlanInstance.GetTestSuiteId
-  name: GetTestSuiteId
-  nameWithType: TestPlanInstance.GetTestSuiteId
-  fullName: AzureReporter.TestPlanInstance.GetTestSuiteId

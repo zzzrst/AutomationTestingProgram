@@ -19,10 +19,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ClickButton
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
-    startLine: 15
+    startLine: 12
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework
@@ -96,10 +96,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
-    startLine: 18
+    startLine: 15
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework
@@ -135,10 +135,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HTMLWhiteListTag
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
-    startLine: 21
+    startLine: 18
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework
@@ -175,10 +175,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Execute
     path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ActionObject/ClickObject/ClickButton.cs
-    startLine: 24
+    startLine: 21
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework

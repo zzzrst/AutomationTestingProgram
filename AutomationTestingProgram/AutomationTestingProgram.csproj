@@ -56,6 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutomationTestSetFramework" Version="1.1.2" />
     <PackageReference Include="Azure.Identity" Version="1.10.1" />
     <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.5.0" />
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
@@ -78,7 +79,7 @@
     <PackageReference Include="Selenium.WebDriver" Version="4.16.2" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="114.0.5735.1600" />
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.33.0" />
-    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="4.10.0" />
+    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="4.14.0" />
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="115.0.1901.200" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
@@ -93,7 +94,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ALMConnector\ALMConnector.csproj" />
-    <ProjectReference Include="..\AutomationTestSetFramework\AutomationFramework\AutomationTestSetFramework.csproj" />
     <ProjectReference Include="..\TestingDriver\TestingDriver\TestingDriver.csproj" />
   </ItemGroup>
 

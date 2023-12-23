@@ -16,9 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoUpdater", "AutoUpdater\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALMConnector", "ALMConnector\ALMConnector.csproj", "{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingDriver", "..\TestingDrivers\TestingDriver\TestingDriver.csproj", "{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeAccessibilityDriver", "AxeAccessibilityDriver\AxeAccessibilityDriver\AxeAccessibilityDriver.csproj", "{71ACB725-79FE-4012-8A06-21AAC317762D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AxeAccessibilityDriver", "..\AxeAccessibilityDriver\AxeAccessibilityDriver\AxeAccessibilityDriver.csproj", "{0D1928B6-8D28-492A-883D-3B94E270A80D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingDriver", "TestingDriver\TestingDriver\TestingDriver.csproj", "{BDB20F38-3B7E-4406-BB17-5673AA73D26B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,22 +60,22 @@ Global
 		{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}.Release|x86.ActiveCfg = Release|x86
 		{9845FCEF-6E15-4B4F-B572-BB708ADF9F55}.Release|x86.Build.0 = Release|x86
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|x86.ActiveCfg = Debug|x86
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Debug|x86.Build.0 = Debug|x86
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|x86.ActiveCfg = Release|x86
-		{D95504B0-5C05-424D-B3A6-AC4BCAE3235F}.Release|x86.Build.0 = Release|x86
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Debug|x86.Build.0 = Debug|Any CPU
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|x86.ActiveCfg = Release|Any CPU
-		{0D1928B6-8D28-492A-883D-3B94E270A80D}.Release|x86.Build.0 = Release|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Debug|x86.Build.0 = Debug|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Release|x86.ActiveCfg = Release|Any CPU
+		{71ACB725-79FE-4012-8A06-21AAC317762D}.Release|x86.Build.0 = Release|Any CPU
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Debug|x86.ActiveCfg = Debug|x86
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Debug|x86.Build.0 = Debug|x86
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Release|x86.ActiveCfg = Release|x86
+		{BDB20F38-3B7E-4406-BB17-5673AA73D26B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -42,7 +42,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: InformationObject
     path: src/InformationObject.cs
     startLine: 23
@@ -86,7 +86,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RespectRepeatFor
     path: src/InformationObject.cs
     startLine: 177
@@ -125,7 +125,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RespectRunAODAFlag
     path: src/InformationObject.cs
     startLine: 182
@@ -164,7 +164,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: LogSaveFileLocation
     path: src/InformationObject.cs
     startLine: 187
@@ -203,7 +203,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ScreenshotSaveLocation
     path: src/InformationObject.cs
     startLine: 192
@@ -242,7 +242,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CSVLogger
     path: src/InformationObject.cs
     startLine: 197
@@ -281,7 +281,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetData
     path: src/InformationObject.cs
     startLine: 202
@@ -320,7 +320,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseData
     path: src/InformationObject.cs
     startLine: 207
@@ -359,7 +359,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestStepData
     path: src/InformationObject.cs
     startLine: 212
@@ -398,7 +398,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestAutomationDriver
     path: src/InformationObject.cs
     startLine: 217
@@ -437,7 +437,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Reporter
     path: src/InformationObject.cs
     startLine: 222
@@ -476,7 +476,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunParameters
     path: src/InformationObject.cs
     startLine: 227
@@ -515,7 +515,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestSetName
     path: src/InformationObject.cs
     startLine: 232
@@ -554,7 +554,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ShouldExecute
     path: src/InformationObject.cs
     startLine: 237
@@ -593,7 +593,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: BlockTestSet
     path: src/InformationObject.cs
     startLine: 242
@@ -632,7 +632,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: NotifyEmails
     path: src/InformationObject.cs
     startLine: 247
@@ -671,7 +671,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: OriginalTestSetDirectoryName
     path: src/InformationObject.cs
     startLine: 252
@@ -710,7 +710,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExecutionURL
     path: src/InformationObject.cs
     startLine: 257
@@ -749,7 +749,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestPlanName
     path: src/InformationObject.cs
     startLine: 262
@@ -788,7 +788,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: FolderStructure
     path: src/InformationObject.cs
     startLine: 267
@@ -827,7 +827,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestProjectName
     path: src/InformationObject.cs
     startLine: 272
@@ -866,7 +866,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TesterEmail
     path: src/InformationObject.cs
     startLine: 277
@@ -903,7 +903,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TesterName
     path: src/InformationObject.cs
     startLine: 281
@@ -940,7 +940,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ReleaseEnvUri
     path: src/InformationObject.cs
     startLine: 286
@@ -977,7 +977,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/InformationObject.cs
     startLine: 291
@@ -1011,7 +1011,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetEnvironmentVariable
     path: src/InformationObject.cs
     startLine: 346
@@ -1052,7 +1052,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/InformationObject.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetEnvironmentVariable
     path: src/InformationObject.cs
     startLine: 357

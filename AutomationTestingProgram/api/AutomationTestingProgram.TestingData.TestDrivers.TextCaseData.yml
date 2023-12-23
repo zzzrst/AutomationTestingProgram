@@ -23,7 +23,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TextCaseData
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 18
@@ -71,7 +71,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 25
@@ -107,7 +107,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArgs
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 31
@@ -146,7 +146,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 34
@@ -185,7 +185,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 41
@@ -219,7 +219,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExistNextTestStep
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 46
@@ -256,7 +256,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetNextTestStep
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 52
@@ -293,7 +293,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestCase
     path: src/TestingData/TestDrivers/TextCaseData.cs
     startLine: 61

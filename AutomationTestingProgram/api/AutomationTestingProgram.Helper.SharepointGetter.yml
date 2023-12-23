@@ -17,7 +17,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/SharepointGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SharepointGetter
     path: src/Helper/SharepointGetter.cs
     startLine: 27
@@ -61,7 +61,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Helper/SharepointGetter.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetBuildNumber
     path: src/Helper/SharepointGetter.cs
     startLine: 34

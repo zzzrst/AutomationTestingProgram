@@ -24,10 +24,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestCaseInstance
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 22
+    startLine: 18
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -65,10 +65,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: testCaseList
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 30
+    startLine: 26
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -96,10 +96,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 34
+    startLine: 30
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -133,10 +133,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateTestCaseReference
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 46
+    startLine: 42
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -165,14 +165,14 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateTestCaseUsingClientLib
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 58
+    startLine: 53
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
-  summary: "\nCreate a bug using the .NET client library\nTakes in a paramter for the test case name that we will create\n"
+  summary: "\nCreate a bug using the .NET client library\nTakes in a paramter for the test case name that we will create.\n"
   example: []
   syntax:
     content: public void CreateTestCaseUsingClientLib(string testCaseName, int priority, string description)
@@ -204,13 +204,15 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: CreateTestStep
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 113
+    startLine: 101
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
+  summary: "\nThis function creates a new test step and saves it to this.testStep.\n"
+  example: []
   syntax:
     content: public void CreateTestStep(string title, string expected, string description)
     parameters:
@@ -241,10 +243,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SaveTestCaseSteps
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 126
+    startLine: 114
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -276,10 +278,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: QueryForTestCaseFaster
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 159
+    startLine: 147
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter
@@ -311,10 +313,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: QueryForTestCase
     path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestCaseInstance.cs
-    startLine: 224
+    startLine: 212
   assemblies:
   - AutomationTestingProgram
   namespace: AzureReporter

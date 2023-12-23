@@ -21,7 +21,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: DatabaseCaseData
     path: src/TestingData/TestDrivers/DatabaseCaseData.cs
     startLine: 21
@@ -79,7 +79,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/DatabaseCaseData.cs
     startLine: 63
@@ -115,7 +115,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExistNextTestStep
     path: src/TestingData/TestDrivers/DatabaseCaseData.cs
     startLine: 102
@@ -152,7 +152,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetNextTestStep
     path: src/TestingData/TestDrivers/DatabaseCaseData.cs
     startLine: 108
@@ -189,7 +189,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestCase
     path: src/TestingData/TestDrivers/DatabaseCaseData.cs
     startLine: 119
@@ -233,7 +233,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseCaseData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestCase
     path: src/TestingData/TestDrivers/DatabaseCaseData.cs
     startLine: 133

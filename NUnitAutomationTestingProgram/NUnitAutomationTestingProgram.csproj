@@ -52,7 +52,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AxeAccessibilityDriver\AxeAccessibilityDriver\AxeAccessibilityDriver.csproj" />
     <ProjectReference Include="..\AutomationTestingProgram\AutomationTestingProgram.csproj" />
   </ItemGroup>
 

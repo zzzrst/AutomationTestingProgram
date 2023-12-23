@@ -22,7 +22,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TextStepData
     path: src/TestingData/TestDrivers/TextStepData.cs
     startLine: 18
@@ -70,7 +70,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: .ctor
     path: src/TestingData/TestDrivers/TextStepData.cs
     startLine: 25
@@ -106,7 +106,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestArgs
     path: src/TestingData/TestDrivers/TextStepData.cs
     startLine: 31
@@ -145,7 +145,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/TestingData/TestDrivers/TextStepData.cs
     startLine: 34
@@ -184,7 +184,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetArguments
     path: src/TestingData/TestDrivers/TextStepData.cs
     startLine: 39
@@ -222,7 +222,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/TestingData/TestDrivers/TextStepData.cs
     startLine: 44
@@ -256,7 +256,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/TestDrivers/TextStepData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestStep
     path: src/TestingData/TestDrivers/TextStepData.cs
     startLine: 49

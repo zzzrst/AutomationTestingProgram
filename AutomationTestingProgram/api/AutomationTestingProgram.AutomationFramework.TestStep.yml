@@ -36,7 +36,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestStep
     path: src/AutomationFramework/TestStep.cs
     startLine: 21
@@ -83,6 +83,8 @@ items:
   - AutomationTestingProgram.AutomationFramework.PressKey
   - AutomationTestingProgram.AutomationFramework.RefreshBrowser
   - AutomationTestingProgram.AutomationFramework.RunJavaScript
+  - AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete
+  - AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert
   - AutomationTestingProgram.AutomationFramework.RunShellScript
   - AutomationTestingProgram.AutomationFramework.RunSQLScript
   - AutomationTestingProgram.AutomationFramework.RunTestCase
@@ -135,7 +137,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Name
     path: src/AutomationFramework/TestStep.cs
     startLine: 24
@@ -175,7 +177,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Arguments
     path: src/AutomationFramework/TestStep.cs
     startLine: 29
@@ -212,7 +214,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ShouldExecuteVariable
     path: src/AutomationFramework/TestStep.cs
     startLine: 34
@@ -249,7 +251,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestStepNumber
     path: src/AutomationFramework/TestStep.cs
     startLine: 37
@@ -287,7 +289,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TestStepStatus
     path: src/AutomationFramework/TestStep.cs
     startLine: 40
@@ -325,7 +327,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: OnExceptionFlowBehavior
     path: src/AutomationFramework/TestStep.cs
     startLine: 43
@@ -363,7 +365,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunAODA
     path: src/AutomationFramework/TestStep.cs
     startLine: 48
@@ -400,7 +402,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: RunAODAPageName
     path: src/AutomationFramework/TestStep.cs
     startLine: 53
@@ -437,7 +439,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ShouldLog
     path: src/AutomationFramework/TestStep.cs
     startLine: 58
@@ -474,7 +476,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: MaxAttempts
     path: src/AutomationFramework/TestStep.cs
     startLine: 63
@@ -511,7 +513,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Description
     path: src/AutomationFramework/TestStep.cs
     startLine: 68
@@ -548,7 +550,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Optional
     path: src/AutomationFramework/TestStep.cs
     startLine: 73
@@ -585,7 +587,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: PassCondition
     path: src/AutomationFramework/TestStep.cs
     startLine: 78
@@ -622,7 +624,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ContinueOnError
     path: src/AutomationFramework/TestStep.cs
     startLine: 83
@@ -659,7 +661,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: LocalTimeout
     path: src/AutomationFramework/TestStep.cs
     startLine: 88
@@ -696,7 +698,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Execute
     path: src/AutomationFramework/TestStep.cs
     startLine: 93
@@ -731,10 +733,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: HandleException
     path: src/AutomationFramework/TestStep.cs
-    startLine: 103
+    startLine: 104
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework
@@ -769,10 +771,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUp
     path: src/AutomationFramework/TestStep.cs
-    startLine: 197
+    startLine: 199
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework
@@ -804,10 +806,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ShouldExecute
     path: src/AutomationFramework/TestStep.cs
-    startLine: 233
+    startLine: 235
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework
@@ -841,10 +843,10 @@ items:
     remote:
       path: AutomationTestingProgram/src/AutomationFramework/TestStep.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: TearDown
     path: src/AutomationFramework/TestStep.cs
-    startLine: 251
+    startLine: 253
   assemblies:
   - AutomationTestingProgram
   namespace: AutomationTestingProgram.AutomationFramework

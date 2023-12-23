@@ -25,7 +25,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Logger
     path: src/Logger.cs
     startLine: 19
@@ -69,7 +69,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Debug
     path: src/Logger.cs
     startLine: 30
@@ -107,7 +107,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Error
     path: src/Logger.cs
     startLine: 39
@@ -145,7 +145,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Fatal
     path: src/Logger.cs
     startLine: 48
@@ -183,7 +183,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Info
     path: src/Logger.cs
     startLine: 57
@@ -221,7 +221,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Warn
     path: src/Logger.cs
     startLine: 66
@@ -259,7 +259,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: LogStdout
     path: src/Logger.cs
     startLine: 74
@@ -293,7 +293,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: LogWithFiveTabs
     path: src/Logger.cs
     startLine: 83
@@ -331,7 +331,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetLog4NetLogger
     path: src/Logger.cs
     startLine: 92
@@ -368,7 +368,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/Logger.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: Tab
     path: src/Logger.cs
     startLine: 109

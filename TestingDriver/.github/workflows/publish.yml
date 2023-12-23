@@ -1,0 +1,54 @@
+name: test and publish
+
+on:
+  push:
+    branches:
+      - master
+  repository_dispatch:
+    types: [push-event]
+
+jobs:
+      
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+      
+  test:
+    needs: build 
+    
+    runs-on: ubuntu-latest
+    
+    steps:  
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - name: Run Unit Tests
+      run: |
+        docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome 
+        dotnet test --verbosity normal --configuration Release
+      
+  publish:
+    needs: [build, test]
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+    - name: Publish nuget
+      run: dotnet nuget push **/*.nupkg -k ${{secrets.NGPackagesToken}} -s https://api.nuget.org/v3/index.json || true

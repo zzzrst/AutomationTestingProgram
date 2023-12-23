@@ -22,7 +22,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ITestSetData
     path: src/TestingData/ITestSetData.cs
     startLine: 11
@@ -61,7 +61,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: GetNextTestCase
     path: src/TestingData/ITestSetData.cs
     startLine: 17
@@ -92,7 +92,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: ExistNextTestCase
     path: src/TestingData/ITestSetData.cs
     startLine: 23
@@ -123,7 +123,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: SetUpTestSet
     path: src/TestingData/ITestSetData.cs
     startLine: 28
@@ -151,7 +151,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddAttachment
     path: src/TestingData/ITestSetData.cs
     startLine: 34
@@ -183,7 +183,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddAODAReport
     path: src/TestingData/ITestSetData.cs
     startLine: 40
@@ -215,7 +215,7 @@ items:
     remote:
       path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
       branch: development
-      repo: git@github.com:zzzrst/AutomationTestingProgram.git
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
     id: AddErrorScreenshot
     path: src/TestingData/ITestSetData.cs
     startLine: 46
