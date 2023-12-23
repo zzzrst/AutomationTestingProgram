@@ -1,0 +1,728 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF
+  commentId: T:AutomationTestingProgram.AutomationFramework.ConvertPDF
+  id: ConvertPDF
+  parent: AutomationTestingProgram.AutomationFramework
+  children:
+  - AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  - AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  langs:
+  - csharp
+  - vb
+  name: ConvertPDF
+  nameWithType: ConvertPDF
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ConvertPDF.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ConvertPDF
+    path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ConvertPDF.cs
+    startLine: 18
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  summary: "\nThis test step to compare pdfs.\n"
+  example: []
+  syntax:
+    content: 'public class ConvertPDF : TestStep, ITestStep, IMethodBoundaryAspect'
+    content.vb: >-
+      Public Class ConvertPDF
+          Inherits TestStep
+          Implements ITestStep, IMethodBoundaryAspect
+  inheritance:
+  - System.Object
+  - AutomationTestingProgram.AutomationFramework.TestStep
+  implements:
+  - AutomationTestSetFramework.ITestStep
+  - AutomationTestSetFramework.IMethodBoundaryAspect
+  inheritedMembers:
+  - AutomationTestingProgram.AutomationFramework.TestStep.Arguments
+  - AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecuteVariable
+  - AutomationTestingProgram.AutomationFramework.TestStep.TestStepNumber
+  - AutomationTestingProgram.AutomationFramework.TestStep.TestStepStatus
+  - AutomationTestingProgram.AutomationFramework.TestStep.OnExceptionFlowBehavior
+  - AutomationTestingProgram.AutomationFramework.TestStep.RunAODA
+  - AutomationTestingProgram.AutomationFramework.TestStep.RunAODAPageName
+  - AutomationTestingProgram.AutomationFramework.TestStep.ShouldLog
+  - AutomationTestingProgram.AutomationFramework.TestStep.MaxAttempts
+  - AutomationTestingProgram.AutomationFramework.TestStep.Description
+  - AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  - AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  - AutomationTestingProgram.AutomationFramework.TestStep.ContinueOnError
+  - AutomationTestingProgram.AutomationFramework.TestStep.LocalTimeout
+  - AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+  - AutomationTestingProgram.AutomationFramework.TestStep.SetUp
+  - AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute
+  - AutomationTestingProgram.AutomationFramework.TestStep.TearDown
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  id: Name
+  parent: AutomationTestingProgram.AutomationFramework.ConvertPDF
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ConvertPDF.Name
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ConvertPDF.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Name
+    path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ConvertPDF.cs
+    startLine: 21
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public override string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides Property Name As String
+  overridden: AutomationTestingProgram.AutomationFramework.TestStep.Name
+  overload: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  id: Execute
+  parent: AutomationTestingProgram.AutomationFramework.ConvertPDF
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: ConvertPDF.Execute()
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ConvertPDF.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Execute
+    path: src/AutomationFramework/ConcreteTestSteps/SeleniumFramework/ConvertPDF.cs
+    startLine: 24
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public override void Execute()
+    content.vb: Public Overrides Sub Execute
+  overridden: AutomationTestingProgram.AutomationFramework.TestStep.Execute
+  overload: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: AutomationTestingProgram.AutomationFramework
+  commentId: N:AutomationTestingProgram.AutomationFramework
+  name: AutomationTestingProgram.AutomationFramework
+  nameWithType: AutomationTestingProgram.AutomationFramework
+  fullName: AutomationTestingProgram.AutomationFramework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AutomationTestingProgram.AutomationFramework.TestStep
+  commentId: T:AutomationTestingProgram.AutomationFramework.TestStep
+  parent: AutomationTestingProgram.AutomationFramework
+  name: TestStep
+  nameWithType: TestStep
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep
+- uid: AutomationTestSetFramework.ITestStep
+  commentId: T:AutomationTestSetFramework.ITestStep
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStep
+  nameWithType: ITestStep
+  fullName: AutomationTestSetFramework.ITestStep
+- uid: AutomationTestSetFramework.IMethodBoundaryAspect
+  commentId: T:AutomationTestSetFramework.IMethodBoundaryAspect
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: IMethodBoundaryAspect
+  nameWithType: IMethodBoundaryAspect
+  fullName: AutomationTestSetFramework.IMethodBoundaryAspect
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Arguments
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.Arguments
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: Arguments
+  nameWithType: TestStep.Arguments
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Arguments
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecuteVariable
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecuteVariable
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: ShouldExecuteVariable
+  nameWithType: TestStep.ShouldExecuteVariable
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecuteVariable
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.TestStepNumber
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.TestStepNumber
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: TestStepNumber
+  nameWithType: TestStep.TestStepNumber
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.TestStepNumber
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.TestStepStatus
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.TestStepStatus
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: TestStepStatus
+  nameWithType: TestStep.TestStepStatus
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.TestStepStatus
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.OnExceptionFlowBehavior
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.OnExceptionFlowBehavior
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: OnExceptionFlowBehavior
+  nameWithType: TestStep.OnExceptionFlowBehavior
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.OnExceptionFlowBehavior
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.RunAODA
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.RunAODA
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: RunAODA
+  nameWithType: TestStep.RunAODA
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.RunAODA
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.RunAODAPageName
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.RunAODAPageName
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: RunAODAPageName
+  nameWithType: TestStep.RunAODAPageName
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.RunAODAPageName
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.ShouldLog
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.ShouldLog
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: ShouldLog
+  nameWithType: TestStep.ShouldLog
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.ShouldLog
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.MaxAttempts
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.MaxAttempts
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: MaxAttempts
+  nameWithType: TestStep.MaxAttempts
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.MaxAttempts
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Description
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.Description
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: Description
+  nameWithType: TestStep.Description
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Description
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.Optional
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: Optional
+  nameWithType: TestStep.Optional
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Optional
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: PassCondition
+  nameWithType: TestStep.PassCondition
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.PassCondition
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.ContinueOnError
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.ContinueOnError
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: ContinueOnError
+  nameWithType: TestStep.ContinueOnError
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.ContinueOnError
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.LocalTimeout
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.LocalTimeout
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: LocalTimeout
+  nameWithType: TestStep.LocalTimeout
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.LocalTimeout
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  isExternal: true
+  name: HandleException(Exception)
+  nameWithType: TestStep.HandleException(Exception)
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+    name: HandleException
+    nameWithType: TestStep.HandleException
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.HandleException
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.HandleException(System.Exception)
+    name: HandleException
+    nameWithType: TestStep.HandleException
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.HandleException
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.SetUp
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestStep.SetUp
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: SetUp()
+  nameWithType: TestStep.SetUp()
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.SetUp()
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.SetUp
+    name: SetUp
+    nameWithType: TestStep.SetUp
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.SetUp
+    name: SetUp
+    nameWithType: TestStep.SetUp
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: ShouldExecute()
+  nameWithType: TestStep.ShouldExecute()
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute()
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute
+    name: ShouldExecute
+    nameWithType: TestStep.ShouldExecute
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute
+    name: ShouldExecute
+    nameWithType: TestStep.ShouldExecute
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.ShouldExecute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.TearDown
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestStep.TearDown
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: TearDown()
+  nameWithType: TestStep.TearDown()
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.TearDown()
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.TearDown
+    name: TearDown
+    nameWithType: TestStep.TearDown
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.TearDown
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.TearDown
+    name: TearDown
+    nameWithType: TestStep.TearDown
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.TearDown
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStep.Name
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: Name
+  nameWithType: TestStep.Name
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Name
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+  name: Name
+  nameWithType: ConvertPDF.Name
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.AutomationFramework.TestStep.Execute
+  commentId: M:AutomationTestingProgram.AutomationFramework.TestStep.Execute
+  parent: AutomationTestingProgram.AutomationFramework.TestStep
+  name: Execute()
+  nameWithType: TestStep.Execute()
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep.Execute()
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.Execute
+    name: Execute
+    nameWithType: TestStep.Execute
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.Execute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep.Execute
+    name: Execute
+    nameWithType: TestStep.Execute
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep.Execute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute
+  name: Execute
+  nameWithType: ConvertPDF.Execute
+  fullName: AutomationTestingProgram.AutomationFramework.ConvertPDF.Execute

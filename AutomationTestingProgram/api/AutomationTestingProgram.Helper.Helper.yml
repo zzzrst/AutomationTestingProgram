@@ -1,0 +1,498 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Helper.Helper
+  commentId: T:AutomationTestingProgram.Helper.Helper
+  id: Helper
+  parent: AutomationTestingProgram.Helper
+  children:
+  - AutomationTestingProgram.Helper.Helper.Cleanse(System.String)
+  - AutomationTestingProgram.Helper.Helper.DecryptString(System.String,System.String)
+  - AutomationTestingProgram.Helper.Helper.EncryptString(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Helper
+  nameWithType: Helper
+  fullName: AutomationTestingProgram.Helper.Helper
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/Helper.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Helper
+    path: src/Helper/Helper.cs
+    startLine: 15
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Helper
+  summary: "\nDefines the <xref href=\"AutomationTestingProgram.Helper\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public class Helper
+    content.vb: Public Class Helper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.Helper.Helper.Cleanse(System.String)
+  commentId: M:AutomationTestingProgram.Helper.Helper.Cleanse(System.String)
+  id: Cleanse(System.String)
+  parent: AutomationTestingProgram.Helper.Helper
+  langs:
+  - csharp
+  - vb
+  name: Cleanse(String)
+  nameWithType: Helper.Cleanse(String)
+  fullName: AutomationTestingProgram.Helper.Helper.Cleanse(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/Helper.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Cleanse
+    path: src/Helper/Helper.cs
+    startLine: 22
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Helper
+  summary: "\nThe Cleanse.\n"
+  example: []
+  syntax:
+    content: public static string Cleanse(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Cleanse(text As String) As String
+  overload: AutomationTestingProgram.Helper.Helper.Cleanse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Helper.Helper.EncryptString(System.String,System.String)
+  commentId: M:AutomationTestingProgram.Helper.Helper.EncryptString(System.String,System.String)
+  id: EncryptString(System.String,System.String)
+  parent: AutomationTestingProgram.Helper.Helper
+  langs:
+  - csharp
+  - vb
+  name: EncryptString(String, String)
+  nameWithType: Helper.EncryptString(String, String)
+  fullName: AutomationTestingProgram.Helper.Helper.EncryptString(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/Helper.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: EncryptString
+    path: src/Helper/Helper.cs
+    startLine: 38
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Helper
+  summary: "\nEncrypt a string given a password.\n"
+  example: []
+  syntax:
+    content: public static string EncryptString(string text, string password)
+    parameters:
+    - id: text
+      type: System.String
+      description: String to be encrypted.
+    - id: password
+      type: System.String
+      description: Password to encrypt the string with.
+    return:
+      type: System.String
+      description: Base64 encoded string.
+    content.vb: Public Shared Function EncryptString(text As String, password As String) As String
+  overload: AutomationTestingProgram.Helper.Helper.EncryptString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Helper.Helper.DecryptString(System.String,System.String)
+  commentId: M:AutomationTestingProgram.Helper.Helper.DecryptString(System.String,System.String)
+  id: DecryptString(System.String,System.String)
+  parent: AutomationTestingProgram.Helper.Helper
+  langs:
+  - csharp
+  - vb
+  name: DecryptString(String, String)
+  nameWithType: Helper.DecryptString(String, String)
+  fullName: AutomationTestingProgram.Helper.Helper.DecryptString(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Helper/Helper.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: DecryptString
+    path: src/Helper/Helper.cs
+    startLine: 73
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Helper
+  summary: "\nDecrypts a string given the password.\n"
+  example: []
+  syntax:
+    content: public static string DecryptString(string text, string password)
+    parameters:
+    - id: text
+      type: System.String
+      description: The encyrpted string to be decrypted.
+    - id: password
+      type: System.String
+      description: Password to decrypt string.
+    return:
+      type: System.String
+      description: Decrypted string.
+    content.vb: Public Shared Function DecryptString(text As String, password As String) As String
+  overload: AutomationTestingProgram.Helper.Helper.DecryptString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AutomationTestingProgram.Helper
+  commentId: N:AutomationTestingProgram.Helper
+  name: AutomationTestingProgram.Helper
+  nameWithType: AutomationTestingProgram.Helper
+  fullName: AutomationTestingProgram.Helper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.Helper.Helper.Cleanse*
+  commentId: Overload:AutomationTestingProgram.Helper.Helper.Cleanse
+  name: Cleanse
+  nameWithType: Helper.Cleanse
+  fullName: AutomationTestingProgram.Helper.Helper.Cleanse
+- uid: AutomationTestingProgram.Helper.Helper.EncryptString*
+  commentId: Overload:AutomationTestingProgram.Helper.Helper.EncryptString
+  name: EncryptString
+  nameWithType: Helper.EncryptString
+  fullName: AutomationTestingProgram.Helper.Helper.EncryptString
+- uid: AutomationTestingProgram.Helper.Helper.DecryptString*
+  commentId: Overload:AutomationTestingProgram.Helper.Helper.DecryptString
+  name: DecryptString
+  nameWithType: Helper.DecryptString
+  fullName: AutomationTestingProgram.Helper.Helper.DecryptString

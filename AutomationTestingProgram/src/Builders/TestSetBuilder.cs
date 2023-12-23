@@ -70,7 +70,10 @@ namespace AutomationTestingProgram.Builders
         {
             string testStepDataType = GetEnvironmentVariable(EnvVar.TestStepDataType);
             string testStepDataArgs = GetEnvironmentVariable(EnvVar.TestStepDataArgs);
+            Logger.Info($"Instantiate Test Step Data: {testStepDataType} {testStepDataArgs}");
             InformationObject.TestStepData = (ITestStepData)this.GetTestData(2, testStepDataType, testStepDataArgs);
+            Logger.Info($"InformationaObject.TestStepData is: {InformationObject.TestStepData.Name} {InformationObject.TestStepData.GetType()}");
+
         }
 
         /// <summary>
@@ -81,7 +84,10 @@ namespace AutomationTestingProgram.Builders
         {
             string testCaseDataType = GetEnvironmentVariable(EnvVar.TestCaseDataType);
             string testCaseDataArgs = GetEnvironmentVariable(EnvVar.TestCaseDataArgs);
+            Logger.Info($"Instantiate Test Case Data: {testCaseDataType} {testCaseDataArgs}");
+            // InformationObject.TestCaseData = (ITestCaseData)this.GetTestData(1, testCaseDataType, testCaseDataArgs);
             InformationObject.TestCaseData = (ITestCaseData)this.GetTestData(1, testCaseDataType, testCaseDataArgs);
+            Logger.Info($"InformationaObject.TestStepData is: {InformationObject.TestCaseData.Name} {InformationObject.TestCaseData.GetType()}");
         }
 
         /// <summary>
@@ -92,6 +98,7 @@ namespace AutomationTestingProgram.Builders
         {
             string testSetDataType = GetEnvironmentVariable(EnvVar.TestSetDataType);
             string testSetDataArgs = GetEnvironmentVariable(EnvVar.TestSetDataArgs);
+            Logger.Info($"Instantiate Test Set Data: {testSetDataType} {testSetDataArgs}");
             InformationObject.TestSetData = (ITestSetData)this.GetTestData(0, testSetDataType, testSetDataArgs);
             InformationObject.TestSetData.SetUpTestSet();
         }
@@ -105,6 +112,8 @@ namespace AutomationTestingProgram.Builders
         /// <returns> The test data.</returns>
         private ITestData GetTestData(int testDataType, string dataTypeName, string dataTypeLocation)
         {
+            Logger.Info("Getting test data");
+
             ITestData testData = null;
 
             switch (testDataType)
@@ -125,9 +134,11 @@ namespace AutomationTestingProgram.Builders
                     throw new Exception("Not a valid testDataType");
             }
 
+            Logger.Info($"Test data is: {testData}");
+
             if (testData == null)
             {
-                Console.WriteLine($"Sorry we do not currently support reading tests from: {dataTypeName}");
+                Logger.Error($"Sorry we do not currently support reading tests from: {dataTypeName}");
                 throw new Exception($"Cannot Find test data type {dataTypeName}");
             }
 

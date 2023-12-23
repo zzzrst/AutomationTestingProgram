@@ -1,0 +1,479 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.CSVLogger
+  commentId: T:AutomationTestingProgram.CSVLogger
+  id: CSVLogger
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.CSVLogger.#ctor(System.String)
+  - AutomationTestingProgram.CSVLogger.AddResults(System.String)
+  - AutomationTestingProgram.CSVLogger.WriteOutResults
+  langs:
+  - csharp
+  - vb
+  name: CSVLogger
+  nameWithType: CSVLogger
+  fullName: AutomationTestingProgram.CSVLogger
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/CSVLogger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: CSVLogger
+    path: src/CSVLogger.cs
+    startLine: 16
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLogger class for CSV.\n"
+  example: []
+  syntax:
+    content: public class CSVLogger
+    content.vb: Public Class CSVLogger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.CSVLogger.#ctor(System.String)
+  commentId: M:AutomationTestingProgram.CSVLogger.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AutomationTestingProgram.CSVLogger
+  langs:
+  - csharp
+  - vb
+  name: CSVLogger(String)
+  nameWithType: CSVLogger.CSVLogger(String)
+  fullName: AutomationTestingProgram.CSVLogger.CSVLogger(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/CSVLogger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/CSVLogger.cs
+    startLine: 22
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nInitializes a new instance of the <xref href=\"AutomationTestingProgram.CSVLogger\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public CSVLogger(string csvSaveFileLocation)
+    parameters:
+    - id: csvSaveFileLocation
+      type: System.String
+      description: The location to save the csv file.
+    content.vb: Public Sub New(csvSaveFileLocation As String)
+  overload: AutomationTestingProgram.CSVLogger.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.CSVLogger.AddResults(System.String)
+  commentId: M:AutomationTestingProgram.CSVLogger.AddResults(System.String)
+  id: AddResults(System.String)
+  parent: AutomationTestingProgram.CSVLogger
+  langs:
+  - csharp
+  - vb
+  name: AddResults(String)
+  nameWithType: CSVLogger.AddResults(String)
+  fullName: AutomationTestingProgram.CSVLogger.AddResults(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/CSVLogger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddResults
+    path: src/CSVLogger.cs
+    startLine: 40
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nSaves the results to be written to the CSV.\n"
+  example: []
+  syntax:
+    content: public void AddResults(string result)
+    parameters:
+    - id: result
+      type: System.String
+      description: 'The result to be written to the csv. '
+    content.vb: Public Sub AddResults(result As String)
+  overload: AutomationTestingProgram.CSVLogger.AddResults*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.CSVLogger.WriteOutResults
+  commentId: M:AutomationTestingProgram.CSVLogger.WriteOutResults
+  id: WriteOutResults
+  parent: AutomationTestingProgram.CSVLogger
+  langs:
+  - csharp
+  - vb
+  name: WriteOutResults()
+  nameWithType: CSVLogger.WriteOutResults()
+  fullName: AutomationTestingProgram.CSVLogger.WriteOutResults()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/CSVLogger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: WriteOutResults
+    path: src/CSVLogger.cs
+    startLine: 49
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nWrites to the CSV file for the accumulated results saved.\n"
+  example: []
+  syntax:
+    content: public void WriteOutResults()
+    content.vb: Public Sub WriteOutResults
+  overload: AutomationTestingProgram.CSVLogger.WriteOutResults*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.CSVLogger
+  commentId: T:AutomationTestingProgram.CSVLogger
+  parent: AutomationTestingProgram
+  name: CSVLogger
+  nameWithType: CSVLogger
+  fullName: AutomationTestingProgram.CSVLogger
+- uid: AutomationTestingProgram.CSVLogger.#ctor*
+  commentId: Overload:AutomationTestingProgram.CSVLogger.#ctor
+  name: CSVLogger
+  nameWithType: CSVLogger.CSVLogger
+  fullName: AutomationTestingProgram.CSVLogger.CSVLogger
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.CSVLogger.AddResults*
+  commentId: Overload:AutomationTestingProgram.CSVLogger.AddResults
+  name: AddResults
+  nameWithType: CSVLogger.AddResults
+  fullName: AutomationTestingProgram.CSVLogger.AddResults
+- uid: AutomationTestingProgram.CSVLogger.WriteOutResults*
+  commentId: Overload:AutomationTestingProgram.CSVLogger.WriteOutResults
+  name: WriteOutResults
+  nameWithType: CSVLogger.WriteOutResults
+  fullName: AutomationTestingProgram.CSVLogger.WriteOutResults

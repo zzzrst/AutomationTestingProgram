@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: AzureReporter
+  commentId: N:AzureReporter
+  id: AzureReporter
+  children:
+  - AzureReporter.TestCaseInstance
+  - AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: AzureReporter
+  nameWithType: AzureReporter
+  fullName: AzureReporter
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AzureReporter.TestCaseInstance
+  commentId: T:AzureReporter.TestCaseInstance
+  name: TestCaseInstance
+  nameWithType: TestCaseInstance
+  fullName: AzureReporter.TestCaseInstance
+- uid: AzureReporter.TestPlanInstance
+  commentId: T:AzureReporter.TestPlanInstance
+  name: TestPlanInstance
+  nameWithType: TestPlanInstance
+  fullName: AzureReporter.TestPlanInstance

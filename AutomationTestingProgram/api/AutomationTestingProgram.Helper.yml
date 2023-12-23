@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Helper
+  commentId: N:AutomationTestingProgram.Helper
+  id: AutomationTestingProgram.Helper
+  children:
+  - AutomationTestingProgram.Helper.Helper
+  - AutomationTestingProgram.Helper.Resource
+  - AutomationTestingProgram.Helper.SharepointGetter
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.Helper
+  nameWithType: AutomationTestingProgram.Helper
+  fullName: AutomationTestingProgram.Helper
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.Helper.Helper
+  commentId: T:AutomationTestingProgram.Helper.Helper
+  name: Helper
+  nameWithType: Helper
+  fullName: AutomationTestingProgram.Helper.Helper
+- uid: AutomationTestingProgram.Helper.Resource
+  commentId: T:AutomationTestingProgram.Helper.Resource
+  name: Resource
+  nameWithType: Resource
+  fullName: AutomationTestingProgram.Helper.Resource
+- uid: AutomationTestingProgram.Helper.SharepointGetter
+  commentId: T:AutomationTestingProgram.Helper.SharepointGetter
+  name: SharepointGetter
+  nameWithType: SharepointGetter
+  fullName: AutomationTestingProgram.Helper.SharepointGetter

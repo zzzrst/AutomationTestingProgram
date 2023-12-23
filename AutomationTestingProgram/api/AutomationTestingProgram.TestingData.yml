@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  id: AutomationTestingProgram.TestingData
+  children:
+  - AutomationTestingProgram.TestingData.ExcelCaseData
+  - AutomationTestingProgram.TestingData.ExcelData
+  - AutomationTestingProgram.TestingData.ExcelSetData
+  - AutomationTestingProgram.TestingData.ExcelStepData
+  - AutomationTestingProgram.TestingData.ITestCaseData
+  - AutomationTestingProgram.TestingData.ITestData
+  - AutomationTestingProgram.TestingData.ITestSetData
+  - AutomationTestingProgram.TestingData.ITestStepData
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.TestingData.ITestCaseData
+  commentId: T:AutomationTestingProgram.TestingData.ITestCaseData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestCaseData
+  nameWithType: ITestCaseData
+  fullName: AutomationTestingProgram.TestingData.ITestCaseData
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+- uid: AutomationTestingProgram.TestingData.ITestSetData
+  commentId: T:AutomationTestingProgram.TestingData.ITestSetData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestSetData
+  nameWithType: ITestSetData
+  fullName: AutomationTestingProgram.TestingData.ITestSetData
+- uid: AutomationTestingProgram.TestingData.ITestStepData
+  commentId: T:AutomationTestingProgram.TestingData.ITestStepData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestStepData
+  nameWithType: ITestStepData
+  fullName: AutomationTestingProgram.TestingData.ITestStepData
+- uid: AutomationTestingProgram.TestingData.ExcelCaseData
+  commentId: T:AutomationTestingProgram.TestingData.ExcelCaseData
+  name: ExcelCaseData
+  nameWithType: ExcelCaseData
+  fullName: AutomationTestingProgram.TestingData.ExcelCaseData
+- uid: AutomationTestingProgram.TestingData.ExcelData
+  commentId: T:AutomationTestingProgram.TestingData.ExcelData
+  parent: AutomationTestingProgram.TestingData
+  name: ExcelData
+  nameWithType: ExcelData
+  fullName: AutomationTestingProgram.TestingData.ExcelData
+- uid: AutomationTestingProgram.TestingData.ExcelSetData
+  commentId: T:AutomationTestingProgram.TestingData.ExcelSetData
+  name: ExcelSetData
+  nameWithType: ExcelSetData
+  fullName: AutomationTestingProgram.TestingData.ExcelSetData
+- uid: AutomationTestingProgram.TestingData.ExcelStepData
+  commentId: T:AutomationTestingProgram.TestingData.ExcelStepData
+  name: ExcelStepData
+  nameWithType: ExcelStepData
+  fullName: AutomationTestingProgram.TestingData.ExcelStepData
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData

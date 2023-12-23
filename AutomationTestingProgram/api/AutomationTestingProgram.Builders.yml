@@ -1,0 +1,47 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Builders
+  commentId: N:AutomationTestingProgram.Builders
+  id: AutomationTestingProgram.Builders
+  children:
+  - AutomationTestingProgram.Builders.TestAutomationBuilder
+  - AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  - AutomationTestingProgram.Builders.TestSetBuilder
+  - AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.Builders
+  nameWithType: AutomationTestingProgram.Builders
+  fullName: AutomationTestingProgram.Builders
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.Builders.TestAutomationBuilder
+  commentId: T:AutomationTestingProgram.Builders.TestAutomationBuilder
+  name: TestAutomationBuilder
+  nameWithType: TestAutomationBuilder
+  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder
+- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  commentId: T:AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  parent: AutomationTestingProgram.Builders
+  name: TestAutomationBuilder.TestingDriverType
+  nameWithType: TestAutomationBuilder.TestingDriverType
+  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+- uid: AutomationTestingProgram.Builders.TestSetBuilder
+  commentId: T:AutomationTestingProgram.Builders.TestSetBuilder
+  name: TestSetBuilder
+  nameWithType: TestSetBuilder
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder
+- uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  commentId: T:AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  parent: AutomationTestingProgram.Builders
+  name: TestSetBuilder.TestingDataType
+  nameWithType: TestSetBuilder.TestingDataType
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+- uid: AutomationTestingProgram.Builders
+  commentId: N:AutomationTestingProgram.Builders
+  name: AutomationTestingProgram.Builders
+  nameWithType: AutomationTestingProgram.Builders
+  fullName: AutomationTestingProgram.Builders

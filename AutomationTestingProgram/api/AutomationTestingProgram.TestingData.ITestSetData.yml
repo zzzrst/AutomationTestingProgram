@@ -1,0 +1,349 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData.ITestSetData
+  commentId: T:AutomationTestingProgram.TestingData.ITestSetData
+  id: ITestSetData
+  parent: AutomationTestingProgram.TestingData
+  children:
+  - AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  - AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  - AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  - AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  - AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  - AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  langs:
+  - csharp
+  - vb
+  name: ITestSetData
+  nameWithType: ITestSetData
+  fullName: AutomationTestingProgram.TestingData.ITestSetData
+  type: Interface
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ITestSetData
+    path: src/TestingData/ITestSetData.cs
+    startLine: 11
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nThe interface to get the test set data.\n"
+  example: []
+  syntax:
+    content: 'public interface ITestSetData : ITestData'
+    content.vb: >-
+      Public Interface ITestSetData
+          Inherits ITestData
+  inheritedMembers:
+  - AutomationTestingProgram.TestingData.ITestData.TestArgs
+  - AutomationTestingProgram.TestingData.ITestData.Name
+  - AutomationTestingProgram.TestingData.ITestData.SetUp
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  id: GetNextTestCase
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  langs:
+  - csharp
+  - vb
+  name: GetNextTestCase()
+  nameWithType: ITestSetData.GetNextTestCase()
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetNextTestCase
+    path: src/TestingData/ITestSetData.cs
+    startLine: 17
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nGets The next test case.\n"
+  example: []
+  syntax:
+    content: ITestCase GetNextTestCase()
+    return:
+      type: AutomationTestSetFramework.ITestCase
+      description: The next test case to run.
+    content.vb: Function GetNextTestCase As ITestCase
+  overload: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase*
+- uid: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  id: ExistNextTestCase
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  langs:
+  - csharp
+  - vb
+  name: ExistNextTestCase()
+  nameWithType: ITestSetData.ExistNextTestCase()
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ExistNextTestCase
+    path: src/TestingData/ITestSetData.cs
+    startLine: 23
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nSees if there exist another test case.\n"
+  example: []
+  syntax:
+    content: bool ExistNextTestCase()
+    return:
+      type: System.Boolean
+      description: Returns true if there is another test case.
+    content.vb: Function ExistNextTestCase As Boolean
+  overload: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase*
+- uid: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  id: SetUpTestSet
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  langs:
+  - csharp
+  - vb
+  name: SetUpTestSet()
+  nameWithType: ITestSetData.SetUpTestSet()
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: SetUpTestSet
+    path: src/TestingData/ITestSetData.cs
+    startLine: 28
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nSets up the test set and returns a new test step before it runs.\n"
+  example: []
+  syntax:
+    content: void SetUpTestSet()
+    content.vb: Sub SetUpTestSet
+  overload: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet*
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  id: AddAttachment(System.String)
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  langs:
+  - csharp
+  - vb
+  name: AddAttachment(String)
+  nameWithType: ITestSetData.AddAttachment(String)
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddAttachment
+    path: src/TestingData/ITestSetData.cs
+    startLine: 34
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nAdds an attachment to the result.\n"
+  example: []
+  syntax:
+    content: void AddAttachment(string attachment)
+    parameters:
+    - id: attachment
+      type: System.String
+      description: the attachment to attach.
+    content.vb: Sub AddAttachment(attachment As String)
+  overload: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment*
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  id: AddAODAReport(System.String)
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  langs:
+  - csharp
+  - vb
+  name: AddAODAReport(String)
+  nameWithType: ITestSetData.AddAODAReport(String)
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddAODAReport
+    path: src/TestingData/ITestSetData.cs
+    startLine: 40
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nAdds AODA report.\n"
+  example: []
+  syntax:
+    content: void AddAODAReport(string attachment)
+    parameters:
+    - id: attachment
+      type: System.String
+      description: the attachment to attach.
+    content.vb: Sub AddAODAReport(attachment As String)
+  overload: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport*
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  id: AddErrorScreenshot(System.String)
+  parent: AutomationTestingProgram.TestingData.ITestSetData
+  langs:
+  - csharp
+  - vb
+  name: AddErrorScreenshot(String)
+  nameWithType: ITestSetData.AddErrorScreenshot(String)
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestSetData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddErrorScreenshot
+    path: src/TestingData/ITestSetData.cs
+    startLine: 46
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nAdds error screenshot.\n"
+  example: []
+  syntax:
+    content: void AddErrorScreenshot(string attachment)
+    parameters:
+    - id: attachment
+      type: System.String
+      description: the attachment to attach.
+    content.vb: Sub AddErrorScreenshot(attachment As String)
+  overload: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot*
+references:
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: TestArgs
+  nameWithType: ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+- uid: AutomationTestingProgram.TestingData.ITestData.Name
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.Name
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: Name
+  nameWithType: ITestData.Name
+  fullName: AutomationTestingProgram.TestingData.ITestData.Name
+- uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.ITestData.SetUp
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: SetUp()
+  nameWithType: ITestData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.ITestData.SetUp()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+- uid: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+  name: GetNextTestCase
+  nameWithType: ITestSetData.GetNextTestCase
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.GetNextTestCase
+- uid: AutomationTestSetFramework.ITestCase
+  commentId: T:AutomationTestSetFramework.ITestCase
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestCase
+  nameWithType: ITestCase
+  fullName: AutomationTestSetFramework.ITestCase
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+  name: ExistNextTestCase
+  nameWithType: ITestSetData.ExistNextTestCase
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.ExistNextTestCase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+  name: SetUpTestSet
+  nameWithType: ITestSetData.SetUpTestSet
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.SetUpTestSet
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestSetData.AddAttachment
+  name: AddAttachment
+  nameWithType: ITestSetData.AddAttachment
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAttachment
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport
+  name: AddAODAReport
+  nameWithType: ITestSetData.AddAODAReport
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport
+- uid: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot
+  name: AddErrorScreenshot
+  nameWithType: ITestSetData.AddErrorScreenshot
+  fullName: AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot

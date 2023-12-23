@@ -1,0 +1,14 @@
+<tr>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">
+		<a href="https://dev.azure.com/{ORG_NAME}/{PROJECT_NAME}/_TestManagement/Runs/?runId={TEST_RUN_ID}&_a=resultSummary&resultId={TEST_CASE_ID}">{TEST_CASE_NAME}</a>
+	</td>
+	<!-- IF_EMAIL_THEN_DELETE -->
+	<td class="resultsCol" style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{TEST_STEP_RESULT}</td>
+	<!-- IF_EMAIL_THEN_DELETE -->
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">Blocked</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{TESTER_NAME}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{EXEC_DATE}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{EXEC_TIME}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{HAS_SCREENSHOT}</td>
+	<td style="font-size:11px;padding-right:5px;padding-left:5px;height:20px;border-bottom:1px solid #eee">{NUMSTEPS}</td>
+</tr>

@@ -1,0 +1,993 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  commentId: T:AutomationTestingProgram.AutomationFramework.TestStepStatus
+  id: TestStepStatus
+  parent: AutomationTestingProgram.AutomationFramework
+  children:
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.Description
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime
+  - AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber
+  langs:
+  - csharp
+  - vb
+  name: TestStepStatus
+  nameWithType: TestStepStatus
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestStepStatus
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 12
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  summary: "\nImplementation of ITestStepStatus class.\n"
+  example: []
+  syntax:
+    content: 'public class TestStepStatus : ITestStepStatus, ITestStatus'
+    content.vb: >-
+      Public Class TestStepStatus
+          Implements ITestStepStatus, ITestStatus
+  inheritance:
+  - System.Object
+  implements:
+  - AutomationTestSetFramework.ITestStepStatus
+  - AutomationTestSetFramework.ITestStatus
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  id: Name
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TestStepStatus.Name
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Name
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 15
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.Name
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber
+  id: TestStepNumber
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: TestStepNumber
+  nameWithType: TestStepStatus.TestStepNumber
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestStepNumber
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 18
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public int TestStepNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TestStepNumber As Integer
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber*
+  implements:
+  - AutomationTestSetFramework.ITestStepStatus.TestStepNumber
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
+  id: RunSuccessful
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: RunSuccessful
+  nameWithType: TestStepStatus.RunSuccessful
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: RunSuccessful
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 21
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public bool RunSuccessful { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RunSuccessful As Boolean
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.RunSuccessful
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack
+  id: ErrorStack
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: ErrorStack
+  nameWithType: TestStepStatus.ErrorStack
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ErrorStack
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 24
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public string ErrorStack { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ErrorStack As String
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.ErrorStack
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage
+  id: FriendlyErrorMessage
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: FriendlyErrorMessage
+  nameWithType: TestStepStatus.FriendlyErrorMessage
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: FriendlyErrorMessage
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 27
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public string FriendlyErrorMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FriendlyErrorMessage As String
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.FriendlyErrorMessage
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime
+  id: StartTime
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: StartTime
+  nameWithType: TestStepStatus.StartTime
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: StartTime
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 30
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public DateTime StartTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property StartTime As Date
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.StartTime
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime
+  id: EndTime
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: EndTime
+  nameWithType: TestStepStatus.EndTime
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: EndTime
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 33
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public DateTime EndTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property EndTime As Date
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.EndTime
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Description
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Description
+  id: Description
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TestStepStatus.Description
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Description
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Description
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 36
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.Description*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.Description
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected
+  id: Expected
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: Expected
+  nameWithType: TestStepStatus.Expected
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Expected
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 39
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public string Expected { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Expected As String
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.Expected
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual
+  id: Actual
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: Actual
+  nameWithType: TestStepStatus.Actual
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Actual
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 42
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  example: []
+  syntax:
+    content: public string Actual { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Actual As String
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual*
+  implements:
+  - AutomationTestSetFramework.ITestStatus.Actual
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  id: Optional
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: Optional
+  nameWithType: TestStepStatus.Optional
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Optional
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 47
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  summary: "\nGets or sets a value indicating whether the test step is nessesary to pass.\n"
+  example: []
+  syntax:
+    content: public bool Optional { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Optional As Boolean
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError
+  commentId: P:AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError
+  id: ContinueOnError
+  parent: AutomationTestingProgram.AutomationFramework.TestStepStatus
+  langs:
+  - csharp
+  - vb
+  name: ContinueOnError
+  nameWithType: TestStepStatus.ContinueOnError
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Statuses/TestStepStatus.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ContinueOnError
+    path: src/AutomationFramework/Statuses/TestStepStatus.cs
+    startLine: 52
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework
+  summary: "\nGets or sets a value indicating whether the test step is nessesary to pass.\n"
+  example: []
+  syntax:
+    content: public bool ContinueOnError { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ContinueOnError As Boolean
+  overload: AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram.AutomationFramework
+  commentId: N:AutomationTestingProgram.AutomationFramework
+  name: AutomationTestingProgram.AutomationFramework
+  nameWithType: AutomationTestingProgram.AutomationFramework
+  fullName: AutomationTestingProgram.AutomationFramework
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AutomationTestSetFramework.ITestStepStatus
+  commentId: T:AutomationTestSetFramework.ITestStepStatus
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStepStatus
+  nameWithType: ITestStepStatus
+  fullName: AutomationTestSetFramework.ITestStepStatus
+- uid: AutomationTestSetFramework.ITestStatus
+  commentId: T:AutomationTestSetFramework.ITestStatus
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStatus
+  nameWithType: ITestStatus
+  fullName: AutomationTestSetFramework.ITestStatus
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+  name: Name
+  nameWithType: TestStepStatus.Name
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Name
+- uid: AutomationTestSetFramework.ITestStatus.Name
+  commentId: P:AutomationTestSetFramework.ITestStatus.Name
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: Name
+  nameWithType: ITestStatus.Name
+  fullName: AutomationTestSetFramework.ITestStatus.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber
+  name: TestStepNumber
+  nameWithType: TestStepStatus.TestStepNumber
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.TestStepNumber
+- uid: AutomationTestSetFramework.ITestStepStatus.TestStepNumber
+  commentId: P:AutomationTestSetFramework.ITestStepStatus.TestStepNumber
+  parent: AutomationTestSetFramework.ITestStepStatus
+  isExternal: true
+  name: TestStepNumber
+  nameWithType: ITestStepStatus.TestStepNumber
+  fullName: AutomationTestSetFramework.ITestStepStatus.TestStepNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
+  name: RunSuccessful
+  nameWithType: TestStepStatus.RunSuccessful
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.RunSuccessful
+- uid: AutomationTestSetFramework.ITestStatus.RunSuccessful
+  commentId: P:AutomationTestSetFramework.ITestStatus.RunSuccessful
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: RunSuccessful
+  nameWithType: ITestStatus.RunSuccessful
+  fullName: AutomationTestSetFramework.ITestStatus.RunSuccessful
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack
+  name: ErrorStack
+  nameWithType: TestStepStatus.ErrorStack
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.ErrorStack
+- uid: AutomationTestSetFramework.ITestStatus.ErrorStack
+  commentId: P:AutomationTestSetFramework.ITestStatus.ErrorStack
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: ErrorStack
+  nameWithType: ITestStatus.ErrorStack
+  fullName: AutomationTestSetFramework.ITestStatus.ErrorStack
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage
+  name: FriendlyErrorMessage
+  nameWithType: TestStepStatus.FriendlyErrorMessage
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.FriendlyErrorMessage
+- uid: AutomationTestSetFramework.ITestStatus.FriendlyErrorMessage
+  commentId: P:AutomationTestSetFramework.ITestStatus.FriendlyErrorMessage
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: FriendlyErrorMessage
+  nameWithType: ITestStatus.FriendlyErrorMessage
+  fullName: AutomationTestSetFramework.ITestStatus.FriendlyErrorMessage
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime
+  name: StartTime
+  nameWithType: TestStepStatus.StartTime
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.StartTime
+- uid: AutomationTestSetFramework.ITestStatus.StartTime
+  commentId: P:AutomationTestSetFramework.ITestStatus.StartTime
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: StartTime
+  nameWithType: ITestStatus.StartTime
+  fullName: AutomationTestSetFramework.ITestStatus.StartTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime
+  name: EndTime
+  nameWithType: TestStepStatus.EndTime
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.EndTime
+- uid: AutomationTestSetFramework.ITestStatus.EndTime
+  commentId: P:AutomationTestSetFramework.ITestStatus.EndTime
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: EndTime
+  nameWithType: ITestStatus.EndTime
+  fullName: AutomationTestSetFramework.ITestStatus.EndTime
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Description*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.Description
+  name: Description
+  nameWithType: TestStepStatus.Description
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Description
+- uid: AutomationTestSetFramework.ITestStatus.Description
+  commentId: P:AutomationTestSetFramework.ITestStatus.Description
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: Description
+  nameWithType: ITestStatus.Description
+  fullName: AutomationTestSetFramework.ITestStatus.Description
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected
+  name: Expected
+  nameWithType: TestStepStatus.Expected
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Expected
+- uid: AutomationTestSetFramework.ITestStatus.Expected
+  commentId: P:AutomationTestSetFramework.ITestStatus.Expected
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: Expected
+  nameWithType: ITestStatus.Expected
+  fullName: AutomationTestSetFramework.ITestStatus.Expected
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual
+  name: Actual
+  nameWithType: TestStepStatus.Actual
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Actual
+- uid: AutomationTestSetFramework.ITestStatus.Actual
+  commentId: P:AutomationTestSetFramework.ITestStatus.Actual
+  parent: AutomationTestSetFramework.ITestStatus
+  isExternal: true
+  name: Actual
+  nameWithType: ITestStatus.Actual
+  fullName: AutomationTestSetFramework.ITestStatus.Actual
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+  name: Optional
+  nameWithType: TestStepStatus.Optional
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.Optional
+- uid: AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError
+  name: ContinueOnError
+  nameWithType: TestStepStatus.ContinueOnError
+  fullName: AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError

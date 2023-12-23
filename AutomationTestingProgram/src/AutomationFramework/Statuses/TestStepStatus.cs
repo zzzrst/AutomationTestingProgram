@@ -46,5 +46,10 @@ namespace AutomationTestingProgram.AutomationFramework
         /// Gets or sets a value indicating whether the test step is nessesary to pass.
         /// </summary>
         public bool Optional { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the test step is nessesary to pass.
+        /// </summary>
+        public bool ContinueOnError { get; set; } = false;
     }
 }

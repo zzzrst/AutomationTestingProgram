@@ -74,7 +74,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 }
                 catch (IndexOutOfRangeException)
                 {
-                    Logger.Error("Seperate Collection and Release by a comma (,)");
+                    Logger.Error("Separate Collection and Release by a comma (,)");
                 }
             }
         }
@@ -114,6 +114,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.NextTestStepFail = index + 1;
             return this.TestSteps[index];
         }
+
 
         /// <inheritdoc/>
         public ITestCase SetUpTestCase(string testCaseName, bool performAction = true)
@@ -214,19 +215,24 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             int localAttempts = int.Parse(string.IsNullOrEmpty(stLocAttempts) ? "0" : stLocAttempts);
             if (localAttempts == 0)
             {
-                localAttempts = 1; // alm.AlmGlobalAttempts;
+                // we should be taking whatever the global attempts stored in ALM are (changed by Victor)
+                // localAttempts = 1; // alm.AlmGlobalAttempts;
+                localAttempts = int.Parse(GetEnvironmentVariable(EnvVar.Attempts)); // alm.GlobalAttempts
             }
 
-            int localTimeout = int.Parse(string.IsNullOrEmpty(stLocTimeout) ? "0" : stLocTimeout);
-            if (localTimeout == 0)
-            {
-                localTimeout = int.Parse(GetEnvironmentVariable(EnvVar.TimeOutThreshold)); // alm.AlmGlobalTimeOut;
-            }
+            // local timeout currently is not implemented
+            //int localTimeout = int.Parse(string.IsNullOrEmpty(stLocTimeout) ? "0" : stLocTimeout);
+            // InformationObject.SetEnvironmentVariable("TimeOutThreshold")
+            //if (localTimeout == 0)
+            //{
+            //    localTimeout = int.Parse(GetEnvironmentVariable(EnvVar.TimeOutThreshold)); // alm.AlmGlobalTimeOut;
+            //}
 
+            // Victor: I believe this was incorrectly configured at the start. We should be convertnig 
             int testStepTypeId = int.Parse(string.IsNullOrEmpty(testStepType) ? "0" : testStepType);
             if (testStepTypeId == 0)
             {
-                testStepTypeId = 1;
+                testStepTypeId = 2;
             }
 
             testStep = ReflectiveGetter.GetEnumerableOfType<TestStep>()
@@ -242,6 +248,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             testStep.Arguments.Add("value", Helper.Cleanse(value));
             testStep.Arguments.Add("comment", Helper.Cleanse(comment));
             testStep.MaxAttempts = localAttempts;
+
             testStep.ShouldExecuteVariable = control != this.SKIP;
 
             if (testStepType != string.Empty)
@@ -262,7 +269,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                         this.NextTestStepFail = nextsteps[1];
                         break;
                     case INVERTEDIMPORTANT:
-                        testStep.PassCondition = false;
+                        testStep.PassCondition = false; // default true
                         break;
                     case INVERTEDMANDATORY:
                         testStep.PassCondition = false;
@@ -284,12 +291,18 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
             this.TestDB = this.ConnectToDatabase(this.TestDB);
             string query = $"SELECT T.TESTCASE, T.TESTSTEPDESCRIPTION, T.STEPNUM, T.ACTIONONOBJECT, T.OBJECT, T.VALUE, T.COMMENTS, T.RELEASE, T.LOCAL_ATTEMPTS, T.LOCAL_TIMEOUT, T.CONTROL, T.COLLECTION, T.TEST_STEP_TYPE_ID, T.GOTOSTEP FROM {this.TestDBName} T WHERE T.TESTCASE = '{testcase}' AND T.COLLECTION = '{this.Collection}' AND T.RELEASE = '{this.Release}' ORDER BY T.STEPNUM";
 
+            // this query gets the latest release info
+            // string query = $"SELECT t.TESTCASE, t.TESTSTEPDESCRIPTION, t.STEPNUM, t.ACTIONONOBJECT, t.OBJECT, t.VALUE, t.COMMENTS, t.RELEASE, t.LOCAL_ATTEMPTS, t.LOCAL_TIMEOUT, t.CONTROL, t.COLLECTION, t.TEST_STEP_TYPE_ID, t.GOTOSTEP FROM {this.TestDBName} t JOIN (SELECT testcase, MAX(release) AS latest_release FROM {this.TestDBName} WHERE collection LIKE '{this.Collection}' AND testcase LIKE '{testcase}'  AND release LIKE '%' GROUP BY testcase) latest ON t.testcase = latest.testcase AND t.release = latest.latest_release ORDER BY t.testcase, t.stepnum, t.release DESC";
+
+            // for debug query purposes
             Logger.Info("Querying the following: [" + query + "]");
+
             var result = this.TestDB.ExecuteQuery(query);
             this.TestDB.Disconnect();
             Logger.Info("Closed connection to database.\n");
             if (result == null || result.Count == 0)
             {
+                Logger.Error("Test Case Not Found in Database");
                 throw new DatabaseTestCaseNotFound("Database Test Case Not Found");
             }
 

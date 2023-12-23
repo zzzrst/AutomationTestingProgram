@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace AutomationTestingProgram.AutomationFramework
    ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -113,9 +113,6 @@
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.CloseBrowser.html">CloseBrowser</a></h4>
       <section><p>This class executes the action of closing the browser.</p>
 </section>
-      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.CloseBrowserOld.html">CloseBrowserOld</a></h4>
-      <section><p>This class executes the action of closing the browser.</p>
-</section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.CloseTab.html">CloseTab</a></h4>
       <section><p>This class executes the action of closing the current tab.</p>
 </section>
@@ -137,6 +134,9 @@
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.DismissAlert.html">DismissAlert</a></h4>
       <section><p>This test step to dissmiss alerts.</p>
 </section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.EnterAADCredentials.html">EnterAADCredentials</a></h4>
+      <section><p>This test step to log in.</p>
+</section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.FakeFailingTestStep.html">FakeFailingTestStep</a></h4>
       <section><p>This test step will always fail.</p>
 </section>
@@ -146,11 +146,20 @@
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.GetEmail.html">GetEmail</a></h4>
       <section><p>This test step to get an email. Must be using a database test step.</p>
 </section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.GetWebElementText.html">GetWebElementText</a></h4>
+      <section><p>This test step allows us to save a value into a parameter and recall it in the future.</p>
+</section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.GotoPage.html">GotoPage</a></h4>
       <section><p>This test step to navigate to a url.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.LaunchBrowser.html">LaunchBrowser</a></h4>
       <section><p>This class executes the action of opening the browser to the specified site.</p>
+</section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.LaunchTab.html">LaunchTab</a></h4>
+      <section><p>This class executes the action of opening the browser to the specified site.</p>
+</section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.LoadFile.html">LoadFile</a></h4>
+      <section><p>This test step is the same as testStepXml.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.Login.html">Login</a></h4>
       <section><p>This test step to log in.</p>
@@ -191,8 +200,29 @@
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.RefreshBrowser.html">RefreshBrowser</a></h4>
       <section><p>This test step to refresh browser.</p>
 </section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.ResetOrg.html">ResetOrg</a></h4>
+      <section><p>This test step to log in.</p>
+</section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.RunJavaScript.html">RunJavaScript</a></h4>
       <section><p>This test step to run a java script.</p>
+</section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete.html">RunPrSQLScriptDelete</a></h4>
+      <section><p>This test step to run a sql script from paramterized values.Only works for PR applications.
+This one of the more complicated test step as it relys on the test step to be a databaseData type object.
+note the following format
+define formCode = 'VARIABLEOVERWRITE1'
+define formYear = VARIABLEOVERWRITE2
+define orgCode = 'VARIABLEOVERWRITE3'
+define dateOfExecution = 'VARIABLEOVERWRITE4'</p>
+</section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert.html">RunPrSQLScriptRevert</a></h4>
+      <section><p>This test step to run a sql script from paramterized values.Only works for PR applications.
+This one of the more complicated test step as it relys on the test step to be a databaseData type object.
+note the following format
+define formCode = 'VARIABLEOVERWRITE1'
+define formYear = VARIABLEOVERWRITE2
+define orgCode = 'VARIABLEOVERWRITE3'
+define dateOfExecution = 'VARIABLEOVERWRITE4'.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.RunShellScript.html">RunShellScript</a></h4>
       <section><p>This test step to run a shell script.</p>
@@ -210,6 +240,9 @@ Testcase must be within the test case data.</p>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SaveFile.html">SaveFile</a></h4>
       <section><p>This test step to get the downloaded file and moves them to the given directory.</p>
 </section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SaveParameter.html">SaveParameter</a></h4>
+      <section><p>This test step skips to a specific line in the excel. ONLY WORKS FOR EXCEL</p>
+</section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SelectDDL.html">SelectDDL</a></h4>
       <section><p>This class executes the action of selecting a value from the specified dropdownlist.</p>
 </section>
@@ -219,8 +252,14 @@ Testcase must be within the test case data.</p>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SelectLookup.html">SelectLookup</a></h4>
       <section><p>This test step is to select a lookup.</p>
 </section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SelectRadioButton.html">SelectRadioButton</a></h4>
+      <section><p>This class executes the action of selecting a value from the specified dropdownlist.</p>
+</section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SignIn.html">SignIn</a></h4>
       <section><p>This class executes the action of signing in.</p>
+</section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SkipToStep.html">SkipToStep</a></h4>
+      <section><p>This test step skips to a specific line in the excel. ONLY WORKS FOR EXCEL</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SQLToCSV.html">SQLToCSV</a></h4>
       <section><p>This test step is the same as testStepXml.</p>
@@ -233,6 +272,9 @@ Testcase must be within the test case data.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.SwitchToTab.html">SwitchToTab</a></h4>
       <section><p>This class executes the action of switching to tab x.</p>
+</section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.TakeScreenshot.html">TakeScreenshot</a></h4>
+      <section><p>This test step to compare pdfs.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.TestCase.html">TestCase</a></h4>
       <section><p>Implementation of the testCase class.</p>
@@ -251,6 +293,9 @@ Testcase must be within the test case data.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.TestStepStatus.html">TestStepStatus</a></h4>
       <section><p>Implementation of ITestStepStatus class.</p>
+</section>
+      <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.UploadDataFile.html">UploadDataFile</a></h4>
+      <section><p>This test step to log in.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.UploadFile.html">UploadFile</a></h4>
       <section><p>This test step is the same as testStepXml.</p>
@@ -292,7 +337,12 @@ Testcase must be within the test case data.</p>
       <section><p>This test step to verify the content of an image.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.html">VerifyLinkAvailability</a></h4>
-      <section><p>This test step to verify the availability of an image.</p>
+      <section><p>This test step to verify the availability of a link.
+Note that verifying a link requries a FLAG.
+If the FLAG is EXIST, this means that the text is visible.
+If the FLAG is DOES NOT EXIST, this means that the text is not visible.
+If the FLAG is ENABLED, this means that the text is CLICKABLE and VISIBLE
+If the FLAG is DISABLED, this means that the text is NOT CLICKABLE or NOT VISIBLE.</p>
 </section>
       <h4><a class="xref" href="AutomationTestingProgram.AutomationFramework.VerifyObjectAvailability.html">VerifyObjectAvailability</a></h4>
       <section><p>This test step an abstract class to verify an object's avalibility.</p>
@@ -340,7 +390,8 @@ Testcase must be within the test case data.</p>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

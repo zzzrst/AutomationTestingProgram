@@ -26,6 +26,9 @@ namespace AutomationTestingProgram.AutomationFramework
 
             ITestCase testCase = InformationObject.TestCaseData.SetUpTestCase(testCaseName);
 
+            Logger.Info("Trying to execute RunTestCase, which is currently not configured in Excel");
+            Logger.Warn("Run Test Case is not configured for Excel executions");
+
             Logger.Info("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
             AutomationTestSetDriver.RunTestCase(testCase);
             Logger.Info("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");

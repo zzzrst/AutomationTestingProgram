@@ -7,6 +7,7 @@ namespace AutomationTestingProgram.GeneralData
     using System;
     using System.Collections.Generic;
     using System.Configuration;
+    using System.Linq;
     using System.Text;
     using ALMConnector;
     using AutomationTestingProgram.Helper;
@@ -43,15 +44,23 @@ namespace AutomationTestingProgram.GeneralData
             string collection = testset.GetField("Application Collection");
             string release = testset.GetField("Test Case Version");
 
+            // note this was added by Victor and doesn't appear to work. Currently only able to read from command line.
+            if (TestSetInstance.buildNumber == "my build number")
+            {
+                TestSetInstance.buildNumber = testset.GetField("Build Number");
+                parameters.Add(EnvVar.BuildNumber, testset.GetField("Build Number"));
+            }
+
             parameters.Add(EnvVar.TestCaseDataArgs, $"{collection},{release}");
 
-            try
+            // note that this currently defaults to the App.Config file, but ideally the default is DB then the Config File.
+            if (ConfigurationManager.AppSettings.AllKeys.Contains(enviornment))
             {
                 parameters.Add(EnvVar.URL, ConfigurationManager.AppSettings[enviornment].ToString());
             }
-            catch (Exception)
+            else
             {
-                Logger.Error($"Missing Enviroment URL for {enviornment} in Config File");
+                Logger.Info($"Missing Enviroment URL for {enviornment} in Config File");
             }
 
             alm.DisconnectFromServer();

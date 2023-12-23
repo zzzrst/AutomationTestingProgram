@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  commentId: T:AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  id: TestSetBuilder.TestingDataType
+  parent: AutomationTestingProgram.Builders
+  children:
+  - AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Alm
+  - AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Sql
+  - AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Text
+  - AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.XML
+  langs:
+  - csharp
+  - vb
+  name: TestSetBuilder.TestingDataType
+  nameWithType: TestSetBuilder.TestingDataType
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  type: Enum
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Builders/TestSetBuilder.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestingDataType
+    path: src/Builders/TestSetBuilder.cs
+    startLine: 24
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Builders
+  summary: "\nThe usable places to get data.\n"
+  example: []
+  syntax:
+    content: public enum TestingDataType
+    content.vb: Public Enum TestingDataType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Alm
+  commentId: F:AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Alm
+  id: Alm
+  parent: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  langs:
+  - csharp
+  - vb
+  name: Alm
+  nameWithType: TestSetBuilder.TestingDataType.Alm
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Alm
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Builders/TestSetBuilder.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Alm
+    path: src/Builders/TestSetBuilder.cs
+    startLine: 29
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Builders
+  summary: "\nApplication life cycle managment.\n"
+  example: []
+  syntax:
+    content: Alm = 0
+    return:
+      type: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Sql
+  commentId: F:AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Sql
+  id: Sql
+  parent: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  langs:
+  - csharp
+  - vb
+  name: Sql
+  nameWithType: TestSetBuilder.TestingDataType.Sql
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Sql
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Builders/TestSetBuilder.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Sql
+    path: src/Builders/TestSetBuilder.cs
+    startLine: 34
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Builders
+  summary: "\nFrom a SQL database.\n"
+  example: []
+  syntax:
+    content: Sql = 1
+    return:
+      type: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.XML
+  commentId: F:AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.XML
+  id: XML
+  parent: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  langs:
+  - csharp
+  - vb
+  name: XML
+  nameWithType: TestSetBuilder.TestingDataType.XML
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.XML
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Builders/TestSetBuilder.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: XML
+    path: src/Builders/TestSetBuilder.cs
+    startLine: 39
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Builders
+  summary: "\nFrom an XML File.\n"
+  example: []
+  syntax:
+    content: XML = 2
+    return:
+      type: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Text
+  commentId: F:AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Text
+  id: Text
+  parent: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: TestSetBuilder.TestingDataType.Text
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType.Text
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Builders/TestSetBuilder.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Text
+    path: src/Builders/TestSetBuilder.cs
+    startLine: 44
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Builders
+  summary: "\nFrom a txt file.\n"
+  example: []
+  syntax:
+    content: Text = 3
+    return:
+      type: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AutomationTestingProgram.Builders
+  commentId: N:AutomationTestingProgram.Builders
+  name: AutomationTestingProgram.Builders
+  nameWithType: AutomationTestingProgram.Builders
+  fullName: AutomationTestingProgram.Builders
+- uid: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  commentId: T:AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType
+  parent: AutomationTestingProgram.Builders
+  name: TestSetBuilder.TestingDataType
+  nameWithType: TestSetBuilder.TestingDataType
+  fullName: AutomationTestingProgram.Builders.TestSetBuilder.TestingDataType

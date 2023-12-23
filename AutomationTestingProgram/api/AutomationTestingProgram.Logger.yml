@@ -1,0 +1,766 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Logger
+  commentId: T:AutomationTestingProgram.Logger
+  id: Logger
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.Logger.Debug(System.Object)
+  - AutomationTestingProgram.Logger.Error(System.Object)
+  - AutomationTestingProgram.Logger.Fatal(System.Object)
+  - AutomationTestingProgram.Logger.GetLog4NetLogger
+  - AutomationTestingProgram.Logger.Info(System.Object)
+  - AutomationTestingProgram.Logger.LogStdout
+  - AutomationTestingProgram.Logger.LogWithFiveTabs(System.String)
+  - AutomationTestingProgram.Logger.Tab(System.Int32)
+  - AutomationTestingProgram.Logger.Warn(System.Object)
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: Logger
+  fullName: AutomationTestingProgram.Logger
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Logger
+    path: src/Logger.cs
+    startLine: 19
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLogger class to be used. \\n\nReference 1: https://stackify.com/log4net-guide-dotnet-logging/ \\n\nReference 2: https://www.dotnetdepth.in/2018/06/how-to-use-log4net-in-net-core-20.html.\n"
+  example: []
+  syntax:
+    content: public static class Logger
+    content.vb: Public Module Logger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AutomationTestingProgram.Logger.Debug(System.Object)
+  commentId: M:AutomationTestingProgram.Logger.Debug(System.Object)
+  id: Debug(System.Object)
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: Debug(Object)
+  nameWithType: Logger.Debug(Object)
+  fullName: AutomationTestingProgram.Logger.Debug(System.Object)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Debug
+    path: src/Logger.cs
+    startLine: 30
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nAllows the user to log a debug message.\n"
+  example: []
+  syntax:
+    content: public static void Debug(object message)
+    parameters:
+    - id: message
+      type: System.Object
+      description: The debug message to be logged.
+    content.vb: Public Shared Sub Debug(message As Object)
+  overload: AutomationTestingProgram.Logger.Debug*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.Error(System.Object)
+  commentId: M:AutomationTestingProgram.Logger.Error(System.Object)
+  id: Error(System.Object)
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: Error(Object)
+  nameWithType: Logger.Error(Object)
+  fullName: AutomationTestingProgram.Logger.Error(System.Object)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Error
+    path: src/Logger.cs
+    startLine: 39
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nAllows the user to log an error message.\n"
+  example: []
+  syntax:
+    content: public static void Error(object message)
+    parameters:
+    - id: message
+      type: System.Object
+      description: The error message to be logged.
+    content.vb: Public Shared Sub Error(message As Object)
+  overload: AutomationTestingProgram.Logger.Error*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.Fatal(System.Object)
+  commentId: M:AutomationTestingProgram.Logger.Fatal(System.Object)
+  id: Fatal(System.Object)
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: Fatal(Object)
+  nameWithType: Logger.Fatal(Object)
+  fullName: AutomationTestingProgram.Logger.Fatal(System.Object)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Fatal
+    path: src/Logger.cs
+    startLine: 48
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nAllows the user to log a fatal message.\n"
+  example: []
+  syntax:
+    content: public static void Fatal(object message)
+    parameters:
+    - id: message
+      type: System.Object
+      description: The fatal message to be logged.
+    content.vb: Public Shared Sub Fatal(message As Object)
+  overload: AutomationTestingProgram.Logger.Fatal*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.Info(System.Object)
+  commentId: M:AutomationTestingProgram.Logger.Info(System.Object)
+  id: Info(System.Object)
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: Info(Object)
+  nameWithType: Logger.Info(Object)
+  fullName: AutomationTestingProgram.Logger.Info(System.Object)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Info
+    path: src/Logger.cs
+    startLine: 57
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nAllows the user to log an info message.\n"
+  example: []
+  syntax:
+    content: public static void Info(object message)
+    parameters:
+    - id: message
+      type: System.Object
+      description: The info message to be logged.
+    content.vb: Public Shared Sub Info(message As Object)
+  overload: AutomationTestingProgram.Logger.Info*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.Warn(System.Object)
+  commentId: M:AutomationTestingProgram.Logger.Warn(System.Object)
+  id: Warn(System.Object)
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: Warn(Object)
+  nameWithType: Logger.Warn(Object)
+  fullName: AutomationTestingProgram.Logger.Warn(System.Object)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Warn
+    path: src/Logger.cs
+    startLine: 66
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nAllows the user to log a warning message.\n"
+  example: []
+  syntax:
+    content: public static void Warn(object message)
+    parameters:
+    - id: message
+      type: System.Object
+      description: The warning message to be logged.
+    content.vb: Public Shared Sub Warn(message As Object)
+  overload: AutomationTestingProgram.Logger.Warn*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.LogStdout
+  commentId: M:AutomationTestingProgram.Logger.LogStdout
+  id: LogStdout
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogStdout()
+  nameWithType: Logger.LogStdout()
+  fullName: AutomationTestingProgram.Logger.LogStdout()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: LogStdout
+    path: src/Logger.cs
+    startLine: 74
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLogs a line with 4 tabs and Stdout:.\n"
+  example: []
+  syntax:
+    content: public static void LogStdout()
+    content.vb: Public Shared Sub LogStdout
+  overload: AutomationTestingProgram.Logger.LogStdout*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.LogWithFiveTabs(System.String)
+  commentId: M:AutomationTestingProgram.Logger.LogWithFiveTabs(System.String)
+  id: LogWithFiveTabs(System.String)
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogWithFiveTabs(String)
+  nameWithType: Logger.LogWithFiveTabs(String)
+  fullName: AutomationTestingProgram.Logger.LogWithFiveTabs(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: LogWithFiveTabs
+    path: src/Logger.cs
+    startLine: 83
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nLogs the provided &apos;log&apos; with 5 tabs in front.\n"
+  example: []
+  syntax:
+    content: public static void LogWithFiveTabs(string log)
+    parameters:
+    - id: log
+      type: System.String
+      description: The log<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Sub LogWithFiveTabs(log As String)
+  overload: AutomationTestingProgram.Logger.LogWithFiveTabs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.GetLog4NetLogger
+  commentId: M:AutomationTestingProgram.Logger.GetLog4NetLogger
+  id: GetLog4NetLogger
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: GetLog4NetLogger()
+  nameWithType: Logger.GetLog4NetLogger()
+  fullName: AutomationTestingProgram.Logger.GetLog4NetLogger()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetLog4NetLogger
+    path: src/Logger.cs
+    startLine: 92
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGet Log4Net Logger.\n"
+  example: []
+  syntax:
+    content: public static ILogger GetLog4NetLogger()
+    return:
+      type: Microsoft.Extensions.Logging.ILogger
+      description: An ILogger.
+    content.vb: Public Shared Function GetLog4NetLogger As ILogger
+  overload: AutomationTestingProgram.Logger.GetLog4NetLogger*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AutomationTestingProgram.Logger.Tab(System.Int32)
+  commentId: M:AutomationTestingProgram.Logger.Tab(System.Int32)
+  id: Tab(System.Int32)
+  parent: AutomationTestingProgram.Logger
+  langs:
+  - csharp
+  - vb
+  name: Tab(Int32)
+  nameWithType: Logger.Tab(Int32)
+  fullName: AutomationTestingProgram.Logger.Tab(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Logger.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Tab
+    path: src/Logger.cs
+    startLine: 109
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nReturns a sequence of whitespaces of fixed length to represent tabs in the print log.\n"
+  example: []
+  syntax:
+    content: public static string Tab(int indents = 1)
+    parameters:
+    - id: indents
+      type: System.Int32
+      description: Number of tabs.
+    return:
+      type: System.String
+      description: Sequence of tabs represented as whitespaces.
+    content.vb: Public Shared Function Tab(indents As Integer = 1) As String
+  overload: AutomationTestingProgram.Logger.Tab*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.Logger.Debug*
+  commentId: Overload:AutomationTestingProgram.Logger.Debug
+  name: Debug
+  nameWithType: Logger.Debug
+  fullName: AutomationTestingProgram.Logger.Debug
+- uid: AutomationTestingProgram.Logger.Error*
+  commentId: Overload:AutomationTestingProgram.Logger.Error
+  name: Error
+  nameWithType: Logger.Error
+  fullName: AutomationTestingProgram.Logger.Error
+- uid: AutomationTestingProgram.Logger.Fatal*
+  commentId: Overload:AutomationTestingProgram.Logger.Fatal
+  name: Fatal
+  nameWithType: Logger.Fatal
+  fullName: AutomationTestingProgram.Logger.Fatal
+- uid: AutomationTestingProgram.Logger.Info*
+  commentId: Overload:AutomationTestingProgram.Logger.Info
+  name: Info
+  nameWithType: Logger.Info
+  fullName: AutomationTestingProgram.Logger.Info
+- uid: AutomationTestingProgram.Logger.Warn*
+  commentId: Overload:AutomationTestingProgram.Logger.Warn
+  name: Warn
+  nameWithType: Logger.Warn
+  fullName: AutomationTestingProgram.Logger.Warn
+- uid: AutomationTestingProgram.Logger.LogStdout*
+  commentId: Overload:AutomationTestingProgram.Logger.LogStdout
+  name: LogStdout
+  nameWithType: Logger.LogStdout
+  fullName: AutomationTestingProgram.Logger.LogStdout
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.Logger.LogWithFiveTabs*
+  commentId: Overload:AutomationTestingProgram.Logger.LogWithFiveTabs
+  name: LogWithFiveTabs
+  nameWithType: Logger.LogWithFiveTabs
+  fullName: AutomationTestingProgram.Logger.LogWithFiveTabs
+- uid: AutomationTestingProgram.Logger.GetLog4NetLogger*
+  commentId: Overload:AutomationTestingProgram.Logger.GetLog4NetLogger
+  name: GetLog4NetLogger
+  nameWithType: Logger.GetLog4NetLogger
+  fullName: AutomationTestingProgram.Logger.GetLog4NetLogger
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+- uid: AutomationTestingProgram.Logger.Tab*
+  commentId: Overload:AutomationTestingProgram.Logger.Tab
+  name: Tab
+  nameWithType: Logger.Tab
+  fullName: AutomationTestingProgram.Logger.Tab
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

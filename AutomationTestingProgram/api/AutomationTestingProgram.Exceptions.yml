@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Exceptions
+  commentId: N:AutomationTestingProgram.Exceptions
+  id: AutomationTestingProgram.Exceptions
+  children:
+  - AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+  - AutomationTestingProgram.Exceptions.FileNotFound
+  - AutomationTestingProgram.Exceptions.TestActionNotFound
+  - AutomationTestingProgram.Exceptions.TestCaseCreationFailed
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.Exceptions
+  nameWithType: AutomationTestingProgram.Exceptions
+  fullName: AutomationTestingProgram.Exceptions
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+  commentId: T:AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+  name: DatabaseTestCaseNotFound
+  nameWithType: DatabaseTestCaseNotFound
+  fullName: AutomationTestingProgram.Exceptions.DatabaseTestCaseNotFound
+- uid: AutomationTestingProgram.Exceptions.FileNotFound
+  commentId: T:AutomationTestingProgram.Exceptions.FileNotFound
+  name: FileNotFound
+  nameWithType: FileNotFound
+  fullName: AutomationTestingProgram.Exceptions.FileNotFound
+- uid: AutomationTestingProgram.Exceptions.TestActionNotFound
+  commentId: T:AutomationTestingProgram.Exceptions.TestActionNotFound
+  name: TestActionNotFound
+  nameWithType: TestActionNotFound
+  fullName: AutomationTestingProgram.Exceptions.TestActionNotFound
+- uid: AutomationTestingProgram.Exceptions.TestCaseCreationFailed
+  commentId: T:AutomationTestingProgram.Exceptions.TestCaseCreationFailed
+  name: TestCaseCreationFailed
+  nameWithType: TestCaseCreationFailed
+  fullName: AutomationTestingProgram.Exceptions.TestCaseCreationFailed

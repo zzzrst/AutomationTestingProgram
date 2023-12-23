@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  commentId: T:AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  id: TestAutomationBuilder.TestingDriverType
+  parent: AutomationTestingProgram.Builders
+  children:
+  - AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.Selenium
+  langs:
+  - csharp
+  - vb
+  name: TestAutomationBuilder.TestingDriverType
+  nameWithType: TestAutomationBuilder.TestingDriverType
+  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  type: Enum
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Builders/TestAutomationBuilder.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestingDriverType
+    path: src/Builders/TestAutomationBuilder.cs
+    startLine: 21
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Builders
+  summary: "\nThe usable testing applications.\n"
+  example: []
+  syntax:
+    content: public enum TestingDriverType
+    content.vb: Public Enum TestingDriverType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.Selenium
+  commentId: F:AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.Selenium
+  id: Selenium
+  parent: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  langs:
+  - csharp
+  - vb
+  name: Selenium
+  nameWithType: TestAutomationBuilder.TestingDriverType.Selenium
+  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType.Selenium
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/Builders/TestAutomationBuilder.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Selenium
+    path: src/Builders/TestAutomationBuilder.cs
+    startLine: 26
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.Builders
+  summary: "\nSelenium program.\n"
+  example: []
+  syntax:
+    content: Selenium = 0
+    return:
+      type: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AutomationTestingProgram.Builders
+  commentId: N:AutomationTestingProgram.Builders
+  name: AutomationTestingProgram.Builders
+  nameWithType: AutomationTestingProgram.Builders
+  fullName: AutomationTestingProgram.Builders
+- uid: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  commentId: T:AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType
+  parent: AutomationTestingProgram.Builders
+  name: TestAutomationBuilder.TestingDriverType
+  nameWithType: TestAutomationBuilder.TestingDriverType
+  fullName: AutomationTestingProgram.Builders.TestAutomationBuilder.TestingDriverType

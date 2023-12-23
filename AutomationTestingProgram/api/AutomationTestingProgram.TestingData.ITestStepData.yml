@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData.ITestStepData
+  commentId: T:AutomationTestingProgram.TestingData.ITestStepData
+  id: ITestStepData
+  parent: AutomationTestingProgram.TestingData
+  children:
+  - AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  - AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: ITestStepData
+  nameWithType: ITestStepData
+  fullName: AutomationTestingProgram.TestingData.ITestStepData
+  type: Interface
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ITestStepData
+    path: src/TestingData/ITestStepData.cs
+    startLine: 13
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nThe interface to get the test step data.\n"
+  example: []
+  syntax:
+    content: 'public interface ITestStepData : ITestData'
+    content.vb: >-
+      Public Interface ITestStepData
+          Inherits ITestData
+  inheritedMembers:
+  - AutomationTestingProgram.TestingData.ITestData.TestArgs
+  - AutomationTestingProgram.TestingData.ITestData.Name
+  - AutomationTestingProgram.TestingData.ITestData.SetUp
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+  commentId: M:AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+  id: SetUpTestStep(System.String,System.Boolean)
+  parent: AutomationTestingProgram.TestingData.ITestStepData
+  langs:
+  - csharp
+  - vb
+  name: SetUpTestStep(String, Boolean)
+  nameWithType: ITestStepData.SetUpTestStep(String, Boolean)
+  fullName: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: SetUpTestStep
+    path: src/TestingData/ITestStepData.cs
+    startLine: 21
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nRuns when getting the test step from the test case.\n"
+  example: []
+  syntax:
+    content: ITestStep SetUpTestStep(string testStepName, bool performAction = true)
+    parameters:
+    - id: testStepName
+      type: System.String
+      description: The name of the test Step.
+    - id: performAction
+      type: System.Boolean
+      description: Determins if the test step should run.
+    return:
+      type: AutomationTestSetFramework.ITestStep
+      description: The Test Step to run.
+    content.vb: Function SetUpTestStep(testStepName As String, performAction As Boolean = True) As ITestStep
+  overload: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep*
+- uid: AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  commentId: M:AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  id: SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  parent: AutomationTestingProgram.TestingData.ITestStepData
+  langs:
+  - csharp
+  - vb
+  name: SetArguments(TestStep)
+  nameWithType: ITestStepData.SetArguments(TestStep)
+  fullName: AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/ITestStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: SetArguments
+    path: src/TestingData/ITestStepData.cs
+    startLine: 27
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData
+  summary: "\nSets any arguments at runtime.\n"
+  example: []
+  syntax:
+    content: void SetArguments(TestStep testStep)
+    parameters:
+    - id: testStep
+      type: AutomationTestingProgram.AutomationFramework.TestStep
+      description: Test steps to get the arguments for.
+    content.vb: Sub SetArguments(testStep As TestStep)
+  overload: AutomationTestingProgram.TestingData.ITestStepData.SetArguments*
+references:
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.TestingData.ITestData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.TestArgs
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: TestArgs
+  nameWithType: ITestData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.ITestData.TestArgs
+- uid: AutomationTestingProgram.TestingData.ITestData.Name
+  commentId: P:AutomationTestingProgram.TestingData.ITestData.Name
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: Name
+  nameWithType: ITestData.Name
+  fullName: AutomationTestingProgram.TestingData.ITestData.Name
+- uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.ITestData.SetUp
+  parent: AutomationTestingProgram.TestingData.ITestData
+  name: SetUp()
+  nameWithType: ITestData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.ITestData.SetUp()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestData.SetUp
+    name: SetUp
+    nameWithType: ITestData.SetUp
+    fullName: AutomationTestingProgram.TestingData.ITestData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+- uid: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep
+  name: SetUpTestStep
+  nameWithType: ITestStepData.SetUpTestStep
+  fullName: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestSetFramework.ITestStep
+  commentId: T:AutomationTestSetFramework.ITestStep
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStep
+  nameWithType: ITestStep
+  fullName: AutomationTestSetFramework.ITestStep
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.TestingData.ITestStepData.SetArguments*
+  commentId: Overload:AutomationTestingProgram.TestingData.ITestStepData.SetArguments
+  name: SetArguments
+  nameWithType: ITestStepData.SetArguments
+  fullName: AutomationTestingProgram.TestingData.ITestStepData.SetArguments
+- uid: AutomationTestingProgram.AutomationFramework.TestStep
+  commentId: T:AutomationTestingProgram.AutomationFramework.TestStep
+  parent: AutomationTestingProgram.AutomationFramework
+  name: TestStep
+  nameWithType: TestStep
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep
+- uid: AutomationTestingProgram.AutomationFramework
+  commentId: N:AutomationTestingProgram.AutomationFramework
+  name: AutomationTestingProgram.AutomationFramework
+  nameWithType: AutomationTestingProgram.AutomationFramework
+  fullName: AutomationTestingProgram.AutomationFramework

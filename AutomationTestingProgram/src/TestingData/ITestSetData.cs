@@ -33,5 +33,17 @@ namespace AutomationTestingProgram.TestingData
         /// </summary>
         /// <param name="attachment">the attachment to attach.</param>
         public void AddAttachment(string attachment);
+
+        /// <summary>
+        /// Adds AODA report.
+        /// </summary>
+        /// <param name="attachment">the attachment to attach.</param>
+        public void AddAODAReport(string attachment);
+
+        /// <summary>
+        /// Adds error screenshot.
+        /// </summary>
+        /// <param name="attachment">the attachment to attach.</param>
+        public void AddErrorScreenshot(string attachment);
     }
 }

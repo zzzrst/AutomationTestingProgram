@@ -22,11 +22,14 @@ namespace AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
         public void Log(ITestStep testStep)
         {
             ITestStepStatus testStepStatus = testStep.TestStepStatus;
+
+            string runSuccess = testStepStatus.RunSuccessful.ToString();
+
             List<string> str = new List<string>();
-            str.Add(this.Tab(2) + "Name:" + testStep.Name);
-            str.Add(this.Tab(2) + "Description:" + ((TestStep)testStep).Description);
-            str.Add(this.Tab(2) + "Actual:" + testStepStatus.Actual);
-            str.Add(this.Tab(2) + "RunSuccessful:" + testStepStatus.RunSuccessful.ToString());
+            str.Add(this.Tab(2) + "Name: " + testStep.Name);
+            str.Add(this.Tab(2) + "Description: " + ((TestStep)testStep).Description);
+            str.Add(this.Tab(2) + "Actual: " + testStepStatus.Actual);
+            str.Add(this.Tab(2) + "RunSuccessful: " + runSuccess);
             str.Add(this.Tab(2) + "----------------------------");
 
             foreach (string line in str)

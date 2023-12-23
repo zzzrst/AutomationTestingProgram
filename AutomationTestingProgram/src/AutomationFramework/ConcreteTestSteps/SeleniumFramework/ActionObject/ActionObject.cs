@@ -7,7 +7,9 @@ namespace AutomationTestingProgram.AutomationFramework
     using System;
     using System.Collections.Generic;
     using System.Configuration;
+    using System.IO;
     using System.Linq;
+    using System.Threading; // added by Victor
     using OpenQA.Selenium;
 
     /// <summary>
@@ -73,6 +75,14 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 this.JsCommand = this.CreateJSCommandForAttributeValuePairs(this.Attributes);
             }
+
+            // add a wait here for each iteration -- addded by Victor
+
+            int waitAmt = int.Parse(ConfigurationManager.AppSettings["WAITAMT"]);
+
+            // int seconds = int.Parse(this.Arguments["value"]);
+            // this actually don't do much to anything because its the base
+            Thread.Sleep(waitAmt); // sleep for 500 milliseconds, can be changed for testing purposes
         }
 
         /// <summary>
@@ -97,12 +107,15 @@ namespace AutomationTestingProgram.AutomationFramework
             }
 
             // initialize xPath
-            string xPath;
+            string xPath = string.Empty;
 
             // if user provides html tags, then we ignore the htmltagwhilteList and htmltagblackList
             if (this.Attributes.ContainsKey("tag"))
             {
-                xPath = $"//{this.Attributes.TryGetValue("tag", out string value)}[";
+                // Victor: not sure what this is for
+
+                // xPath = $"//{this.Attributes.TryGetValue("tag", out string value)}[";
+                xPath = $"//*[";
             }
             else if (this.Attributes.ContainsKey("html tag"))
             {
@@ -123,12 +136,12 @@ namespace AutomationTestingProgram.AutomationFramework
             foreach (string key in this.Attributes.Keys)
             {
                 string attribute = this.FixAttribute(key);
-                string attribVal = this.Attributes[attribute];
+                string attribVal = this.Attributes[key];
 
                 // ignore attributes in xPathIgnoreList
                 if (!xPathIgnoreList.Contains(attribute) && attribute != "tag" && attribute != "html tag")
                 {
-                    xPath += $"@{attribute.ToLower()} = \"{attribVal}\"" + AND;
+                    xPath += $"@{attribute.ToLower()} = '{attribVal}'" + AND;
                     hasAttribute = true;
                 }
             }

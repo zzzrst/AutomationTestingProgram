@@ -4,6 +4,7 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using AutomationTestinProgram.Helper;
     using System.Diagnostics;
     using System.Linq;
 
@@ -21,13 +22,16 @@ namespace AutomationTestingProgram.AutomationFramework
             base.Execute();
             string cmdRun = this.Arguments["value"];
 
+            // resolve file path
+            cmdRun = FilePathResolver.Resolve(cmdRun);
+
             Process p = new Process();
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 FileName = "cmd.exe",
-                Arguments = $"/C exit | {cmdRun}",
+                Arguments = $"/C exit | \"{cmdRun}\"",
             };
             p.StartInfo = startInfo;
             p.Start();

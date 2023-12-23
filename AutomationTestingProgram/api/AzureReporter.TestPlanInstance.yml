@@ -1,0 +1,1282 @@
+### YamlMime:ManagedReference
+items:
+- uid: AzureReporter.TestPlanInstance
+  commentId: T:AzureReporter.TestPlanInstance
+  id: TestPlanInstance
+  parent: AzureReporter
+  children:
+  - AzureReporter.TestPlanInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  - AzureReporter.TestPlanInstance.AddTestCaseAttachment(System.String,System.String,System.String)
+  - AzureReporter.TestPlanInstance.AddTestCasesToSuite(System.Collections.Generic.List{System.String})
+  - AzureReporter.TestPlanInstance.AddTestRunAttachment(System.String,System.String,System.String)
+  - AzureReporter.TestPlanInstance.AddTestStepAttachment(System.String,System.String,System.String,System.String)
+  - AzureReporter.TestPlanInstance.CreateTestCaseResult
+  - AzureReporter.TestPlanInstance.CreateTestRun(System.String)
+  - AzureReporter.TestPlanInstance.GetTestPlanId
+  - AzureReporter.TestPlanInstance.GetTestRun
+  - AzureReporter.TestPlanInstance.GetTestSuiteId
+  - AzureReporter.TestPlanInstance.PrintBasicRunInfo
+  - AzureReporter.TestPlanInstance.RecordTestCaseResult(System.String,System.String,AutomationTestSetFramework.ITestStatus)
+  - AzureReporter.TestPlanInstance.RecordTestRun(Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel)
+  - AzureReporter.TestPlanInstance.RecordTestStepResult(System.String,System.String)
+  - AzureReporter.TestPlanInstance.testCaseList
+  - AzureReporter.TestPlanInstance.TestCaseMapping
+  langs:
+  - csharp
+  - vb
+  name: TestPlanInstance
+  nameWithType: TestPlanInstance
+  fullName: AzureReporter.TestPlanInstance
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestPlanInstance
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 38
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nConnects to the Test Plan, reports results to devops, and reports test run results.\n"
+  example: []
+  syntax:
+    content: public class TestPlanInstance
+    content.vb: Public Class TestPlanInstance
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AzureReporter.TestPlanInstance.testCaseList
+  commentId: F:AzureReporter.TestPlanInstance.testCaseList
+  id: testCaseList
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: testCaseList
+  nameWithType: TestPlanInstance.testCaseList
+  fullName: AzureReporter.TestPlanInstance.testCaseList
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: testCaseList
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 68
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nThe list of test cases. Index 0 is the first test case id.\n"
+  example: []
+  syntax:
+    content: public List<string> testCaseList
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public testCaseList As List(Of String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.TestCaseMapping
+  commentId: F:AzureReporter.TestPlanInstance.TestCaseMapping
+  id: TestCaseMapping
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: TestCaseMapping
+  nameWithType: TestPlanInstance.TestCaseMapping
+  fullName: AzureReporter.TestPlanInstance.TestCaseMapping
+  type: Field
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestCaseMapping
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 73
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nMapping for the test case id to the test case&apos;s order id.\n"
+  example: []
+  syntax:
+    content: public Dictionary<int, int> TestCaseMapping
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.Int32}
+    content.vb: Public TestCaseMapping As Dictionary(Of Integer, Integer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:AzureReporter.TestPlanInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)'
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: TestPlanInstance(String, String, String, String, String, String, String)
+  nameWithType: TestPlanInstance.TestPlanInstance(String, String, String, String, String, String, String)
+  fullName: AzureReporter.TestPlanInstance.TestPlanInstance(System.String, System.String, System.String, System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 121
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nInitializes a new instance of the <xref href=\"AzureReporter.TestPlanInstance\" data-throw-if-not-resolved=\"false\"></xref> class.\nGenerates a Test Plan on Azure DevOps.\n"
+  example: []
+  syntax:
+    content: public TestPlanInstance(string testPlanName, string testSuiteName, string testSuiteParentName, string testPlanDescription, string url, string pat, string project)
+    parameters:
+    - id: testPlanName
+      type: System.String
+      description: The plan name to create on DevOps<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: testSuiteName
+      type: System.String
+      description: The test suite name for execution<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: testSuiteParentName
+      type: System.String
+      description: The test suite parent suite name on DevOps<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: testPlanDescription
+      type: System.String
+      description: the test plan description that will be visible on DevOps. <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: url
+      type: System.String
+      description: URL to the Azure DevOps project<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: pat
+      type: System.String
+      description: Personal access token to the Azure DevOps project. PAT must have access to the project. <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: project
+      type: System.String
+      description: The Azure DevOps project we are using. <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(testPlanName As String, testSuiteName As String, testSuiteParentName As String, testPlanDescription As String, url As String, pat As String, project As String)
+  overload: AzureReporter.TestPlanInstance.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.GetTestRun
+  commentId: M:AzureReporter.TestPlanInstance.GetTestRun
+  id: GetTestRun
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: GetTestRun()
+  nameWithType: TestPlanInstance.GetTestRun()
+  fullName: AzureReporter.TestPlanInstance.GetTestRun()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetTestRun
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 291
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nReturns the current test run.\n"
+  example: []
+  syntax:
+    content: public TestRun GetTestRun()
+    return:
+      type: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+      description: Test Run of the current test run.
+    content.vb: Public Function GetTestRun As TestRun
+  overload: AzureReporter.TestPlanInstance.GetTestRun*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.GetTestPlanId
+  commentId: M:AzureReporter.TestPlanInstance.GetTestPlanId
+  id: GetTestPlanId
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: GetTestPlanId()
+  nameWithType: TestPlanInstance.GetTestPlanId()
+  fullName: AzureReporter.TestPlanInstance.GetTestPlanId()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetTestPlanId
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 300
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nReturns the current test plan id.\n"
+  example: []
+  syntax:
+    content: public string GetTestPlanId()
+    return:
+      type: System.String
+      description: ID of the current test plan.
+    content.vb: Public Function GetTestPlanId As String
+  overload: AzureReporter.TestPlanInstance.GetTestPlanId*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.GetTestSuiteId
+  commentId: M:AzureReporter.TestPlanInstance.GetTestSuiteId
+  id: GetTestSuiteId
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: GetTestSuiteId()
+  nameWithType: TestPlanInstance.GetTestSuiteId()
+  fullName: AzureReporter.TestPlanInstance.GetTestSuiteId()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetTestSuiteId
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 309
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nReturns the current test suite id.\n"
+  example: []
+  syntax:
+    content: public string GetTestSuiteId()
+    return:
+      type: System.String
+      description: ID of the current test suite.
+    content.vb: Public Function GetTestSuiteId As String
+  overload: AzureReporter.TestPlanInstance.GetTestSuiteId*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.CreateTestRun(System.String)
+  commentId: M:AzureReporter.TestPlanInstance.CreateTestRun(System.String)
+  id: CreateTestRun(System.String)
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: CreateTestRun(String)
+  nameWithType: TestPlanInstance.CreateTestRun(String)
+  fullName: AzureReporter.TestPlanInstance.CreateTestRun(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: CreateTestRun
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 319
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nInitiatlize Test Set.\nTakes in a string for the Test Set Name.\n"
+  example: []
+  syntax:
+    content: public void CreateTestRun(string testPlanName)
+    parameters:
+    - id: testPlanName
+      type: System.String
+      description: The azure test plan name. <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub CreateTestRun(testPlanName As String)
+  overload: AzureReporter.TestPlanInstance.CreateTestRun*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.RecordTestRun(Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel)
+  commentId: M:AzureReporter.TestPlanInstance.RecordTestRun(Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel)
+  id: RecordTestRun(Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel)
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: RecordTestRun(RunUpdateModel)
+  nameWithType: TestPlanInstance.RecordTestRun(RunUpdateModel)
+  fullName: AzureReporter.TestPlanInstance.RecordTestRun(Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: RecordTestRun
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 409
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nRecord the test run result by calling UpdateTestRunAsync.\n"
+  example: []
+  syntax:
+    content: public void RecordTestRun(RunUpdateModel runModel = null)
+    parameters:
+    - id: runModel
+      type: Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel
+      description: If runmodel is already created, use that.
+    content.vb: Public Sub RecordTestRun(runModel As RunUpdateModel = Nothing)
+  overload: AzureReporter.TestPlanInstance.RecordTestRun*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.AddTestRunAttachment(System.String,System.String,System.String)
+  commentId: M:AzureReporter.TestPlanInstance.AddTestRunAttachment(System.String,System.String,System.String)
+  id: AddTestRunAttachment(System.String,System.String,System.String)
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: AddTestRunAttachment(String, String, String)
+  nameWithType: TestPlanInstance.AddTestRunAttachment(String, String, String)
+  fullName: AzureReporter.TestPlanInstance.AddTestRunAttachment(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddTestRunAttachment
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 458
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nAdd test run attachment to the test run.\n"
+  example: []
+  syntax:
+    content: public void AddTestRunAttachment(string comment, string filePath, string fileName)
+    parameters:
+    - id: comment
+      type: System.String
+      description: The comment <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: filePath
+      type: System.String
+      description: The filePath<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: fileName
+      type: System.String
+      description: The file name of the attachment to add, will be used as the name of the file on DevOps<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub AddTestRunAttachment(comment As String, filePath As String, fileName As String)
+  overload: AzureReporter.TestPlanInstance.AddTestRunAttachment*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.AddTestCaseAttachment(System.String,System.String,System.String)
+  commentId: M:AzureReporter.TestPlanInstance.AddTestCaseAttachment(System.String,System.String,System.String)
+  id: AddTestCaseAttachment(System.String,System.String,System.String)
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: AddTestCaseAttachment(String, String, String)
+  nameWithType: TestPlanInstance.AddTestCaseAttachment(String, String, String)
+  fullName: AzureReporter.TestPlanInstance.AddTestCaseAttachment(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddTestCaseAttachment
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 488
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nThe AddTestCaseAttachment.\n"
+  example: []
+  syntax:
+    content: public void AddTestCaseAttachment(string comment, string filePath, string fileName)
+    parameters:
+    - id: comment
+      type: System.String
+      description: The comment <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: filePath
+      type: System.String
+      description: The filePath<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: fileName
+      type: System.String
+      description: The file name<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub AddTestCaseAttachment(comment As String, filePath As String, fileName As String)
+  overload: AzureReporter.TestPlanInstance.AddTestCaseAttachment*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.AddTestStepAttachment(System.String,System.String,System.String,System.String)
+  commentId: M:AzureReporter.TestPlanInstance.AddTestStepAttachment(System.String,System.String,System.String,System.String)
+  id: AddTestStepAttachment(System.String,System.String,System.String,System.String)
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: AddTestStepAttachment(String, String, String, String)
+  nameWithType: TestPlanInstance.AddTestStepAttachment(String, String, String, String)
+  fullName: AzureReporter.TestPlanInstance.AddTestStepAttachment(System.String, System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddTestStepAttachment
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 530
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nThe AddTestCaseAttachment.\n"
+  example: []
+  syntax:
+    content: public void AddTestStepAttachment(string comment, string filePath, string fileName, string testCaseId)
+    parameters:
+    - id: comment
+      type: System.String
+      description: The comment <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: filePath
+      type: System.String
+      description: The filePath<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: fileName
+      type: System.String
+      description: The file name<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: testCaseId
+      type: System.String
+    content.vb: Public Sub AddTestStepAttachment(comment As String, filePath As String, fileName As String, testCaseId As String)
+  overload: AzureReporter.TestPlanInstance.AddTestStepAttachment*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.RecordTestStepResult(System.String,System.String)
+  commentId: M:AzureReporter.TestPlanInstance.RecordTestStepResult(System.String,System.String)
+  id: RecordTestStepResult(System.String,System.String)
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: RecordTestStepResult(String, String)
+  nameWithType: TestPlanInstance.RecordTestStepResult(String, String)
+  fullName: AzureReporter.TestPlanInstance.RecordTestStepResult(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: RecordTestStepResult
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 577
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nRecord a test step result.\n"
+  example: []
+  syntax:
+    content: public void RecordTestStepResult(string outcome, string actual)
+    parameters:
+    - id: outcome
+      type: System.String
+      description: The result of the step execution <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: actual
+      type: System.String
+      description: The actual result of the execution stored in the comment <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub RecordTestStepResult(outcome As String, actual As String)
+  overload: AzureReporter.TestPlanInstance.RecordTestStepResult*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.CreateTestCaseResult
+  commentId: M:AzureReporter.TestPlanInstance.CreateTestCaseResult
+  id: CreateTestCaseResult
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: CreateTestCaseResult()
+  nameWithType: TestPlanInstance.CreateTestCaseResult()
+  fullName: AzureReporter.TestPlanInstance.CreateTestCaseResult()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: CreateTestCaseResult
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 615
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nCreate a Test Case Result by setting this.iteration.\n"
+  example: []
+  syntax:
+    content: public void CreateTestCaseResult()
+    content.vb: Public Sub CreateTestCaseResult
+  overload: AzureReporter.TestPlanInstance.CreateTestCaseResult*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.PrintBasicRunInfo
+  commentId: M:AzureReporter.TestPlanInstance.PrintBasicRunInfo
+  id: PrintBasicRunInfo
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: PrintBasicRunInfo()
+  nameWithType: TestPlanInstance.PrintBasicRunInfo()
+  fullName: AzureReporter.TestPlanInstance.PrintBasicRunInfo()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: PrintBasicRunInfo
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 638
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nPrints result of the test run\n"
+  example: []
+  syntax:
+    content: public void PrintBasicRunInfo()
+    content.vb: Public Sub PrintBasicRunInfo
+  overload: AzureReporter.TestPlanInstance.PrintBasicRunInfo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AzureReporter.TestPlanInstance.AddTestCasesToSuite(System.Collections.Generic.List{System.String})
+  commentId: M:AzureReporter.TestPlanInstance.AddTestCasesToSuite(System.Collections.Generic.List{System.String})
+  id: AddTestCasesToSuite(System.Collections.Generic.List{System.String})
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: AddTestCasesToSuite(List<String>)
+  nameWithType: TestPlanInstance.AddTestCasesToSuite(List<String>)
+  fullName: AzureReporter.TestPlanInstance.AddTestCasesToSuite(System.Collections.Generic.List<System.String>)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddTestCasesToSuite
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 649
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nAdd test cases to test suite of current test suites.\n"
+  example: []
+  syntax:
+    content: public void AddTestCasesToSuite(List<string> testCaseIdList)
+    parameters:
+    - id: testCaseIdList
+      type: System.Collections.Generic.List{System.String}
+      description: The Azure DevOps test case ids that we are adding. <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub AddTestCasesToSuite(testCaseIdList As List(Of String))
+  overload: AzureReporter.TestPlanInstance.AddTestCasesToSuite*
+  nameWithType.vb: TestPlanInstance.AddTestCasesToSuite(List(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AzureReporter.TestPlanInstance.AddTestCasesToSuite(System.Collections.Generic.List(Of System.String))
+  name.vb: AddTestCasesToSuite(List(Of String))
+- uid: AzureReporter.TestPlanInstance.RecordTestCaseResult(System.String,System.String,AutomationTestSetFramework.ITestStatus)
+  commentId: M:AzureReporter.TestPlanInstance.RecordTestCaseResult(System.String,System.String,AutomationTestSetFramework.ITestStatus)
+  id: RecordTestCaseResult(System.String,System.String,AutomationTestSetFramework.ITestStatus)
+  parent: AzureReporter.TestPlanInstance
+  langs:
+  - csharp
+  - vb
+  name: RecordTestCaseResult(String, String, ITestStatus)
+  nameWithType: TestPlanInstance.RecordTestCaseResult(String, String, ITestStatus)
+  fullName: AzureReporter.TestPlanInstance.RecordTestCaseResult(System.String, System.String, AutomationTestSetFramework.ITestStatus)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: RecordTestCaseResult
+    path: src/AutomationFramework/Loggers_and_Reporters/AzureReporter/TestPlanInstance.cs
+    startLine: 706
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AzureReporter
+  summary: "\nRecord a test this method records a test case result\n"
+  example: []
+  syntax:
+    content: public void RecordTestCaseResult(string outcome, string testCaseId, ITestStatus testCaseStatus)
+    parameters:
+    - id: outcome
+      type: System.String
+      description: The test case outcome. <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    - id: testCaseId
+      type: System.String
+    - id: testCaseStatus
+      type: AutomationTestSetFramework.ITestStatus
+    content.vb: Public Sub RecordTestCaseResult(outcome As String, testCaseId As String, testCaseStatus As ITestStatus)
+  overload: AzureReporter.TestPlanInstance.RecordTestCaseResult*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AzureReporter
+  commentId: N:AzureReporter
+  name: AzureReporter
+  nameWithType: AzureReporter
+  fullName: AzureReporter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Int32, Int32>
+  nameWithType: Dictionary<Int32, Int32>
+  fullName: System.Collections.Generic.Dictionary<System.Int32, System.Int32>
+  nameWithType.vb: Dictionary(Of Int32, Int32)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Int32, System.Int32)
+  name.vb: Dictionary(Of Int32, Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AzureReporter.TestPlanInstance
+  commentId: T:AzureReporter.TestPlanInstance
+  name: TestPlanInstance
+  nameWithType: TestPlanInstance
+  fullName: AzureReporter.TestPlanInstance
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AzureReporter.TestPlanInstance.#ctor*
+  commentId: Overload:AzureReporter.TestPlanInstance.#ctor
+  name: TestPlanInstance
+  nameWithType: TestPlanInstance.TestPlanInstance
+  fullName: AzureReporter.TestPlanInstance.TestPlanInstance
+- uid: AzureReporter.TestPlanInstance.GetTestRun*
+  commentId: Overload:AzureReporter.TestPlanInstance.GetTestRun
+  name: GetTestRun
+  nameWithType: TestPlanInstance.GetTestRun
+  fullName: AzureReporter.TestPlanInstance.GetTestRun
+- uid: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+  commentId: T:Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+  parent: Microsoft.TeamFoundation.TestManagement.WebApi
+  isExternal: true
+  name: TestRun
+  nameWithType: TestRun
+  fullName: Microsoft.TeamFoundation.TestManagement.WebApi.TestRun
+- uid: Microsoft.TeamFoundation.TestManagement.WebApi
+  commentId: N:Microsoft.TeamFoundation.TestManagement.WebApi
+  isExternal: true
+  name: Microsoft.TeamFoundation.TestManagement.WebApi
+  nameWithType: Microsoft.TeamFoundation.TestManagement.WebApi
+  fullName: Microsoft.TeamFoundation.TestManagement.WebApi
+- uid: AzureReporter.TestPlanInstance.GetTestPlanId*
+  commentId: Overload:AzureReporter.TestPlanInstance.GetTestPlanId
+  name: GetTestPlanId
+  nameWithType: TestPlanInstance.GetTestPlanId
+  fullName: AzureReporter.TestPlanInstance.GetTestPlanId
+- uid: AzureReporter.TestPlanInstance.GetTestSuiteId*
+  commentId: Overload:AzureReporter.TestPlanInstance.GetTestSuiteId
+  name: GetTestSuiteId
+  nameWithType: TestPlanInstance.GetTestSuiteId
+  fullName: AzureReporter.TestPlanInstance.GetTestSuiteId
+- uid: AzureReporter.TestPlanInstance.CreateTestRun*
+  commentId: Overload:AzureReporter.TestPlanInstance.CreateTestRun
+  name: CreateTestRun
+  nameWithType: TestPlanInstance.CreateTestRun
+  fullName: AzureReporter.TestPlanInstance.CreateTestRun
+- uid: AzureReporter.TestPlanInstance.RecordTestRun*
+  commentId: Overload:AzureReporter.TestPlanInstance.RecordTestRun
+  name: RecordTestRun
+  nameWithType: TestPlanInstance.RecordTestRun
+  fullName: AzureReporter.TestPlanInstance.RecordTestRun
+- uid: Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel
+  commentId: T:Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel
+  parent: Microsoft.TeamFoundation.TestManagement.WebApi
+  isExternal: true
+  name: RunUpdateModel
+  nameWithType: RunUpdateModel
+  fullName: Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel
+- uid: AzureReporter.TestPlanInstance.AddTestRunAttachment*
+  commentId: Overload:AzureReporter.TestPlanInstance.AddTestRunAttachment
+  name: AddTestRunAttachment
+  nameWithType: TestPlanInstance.AddTestRunAttachment
+  fullName: AzureReporter.TestPlanInstance.AddTestRunAttachment
+- uid: AzureReporter.TestPlanInstance.AddTestCaseAttachment*
+  commentId: Overload:AzureReporter.TestPlanInstance.AddTestCaseAttachment
+  name: AddTestCaseAttachment
+  nameWithType: TestPlanInstance.AddTestCaseAttachment
+  fullName: AzureReporter.TestPlanInstance.AddTestCaseAttachment
+- uid: AzureReporter.TestPlanInstance.AddTestStepAttachment*
+  commentId: Overload:AzureReporter.TestPlanInstance.AddTestStepAttachment
+  name: AddTestStepAttachment
+  nameWithType: TestPlanInstance.AddTestStepAttachment
+  fullName: AzureReporter.TestPlanInstance.AddTestStepAttachment
+- uid: AzureReporter.TestPlanInstance.RecordTestStepResult*
+  commentId: Overload:AzureReporter.TestPlanInstance.RecordTestStepResult
+  name: RecordTestStepResult
+  nameWithType: TestPlanInstance.RecordTestStepResult
+  fullName: AzureReporter.TestPlanInstance.RecordTestStepResult
+- uid: AzureReporter.TestPlanInstance.CreateTestCaseResult*
+  commentId: Overload:AzureReporter.TestPlanInstance.CreateTestCaseResult
+  name: CreateTestCaseResult
+  nameWithType: TestPlanInstance.CreateTestCaseResult
+  fullName: AzureReporter.TestPlanInstance.CreateTestCaseResult
+- uid: AzureReporter.TestPlanInstance.PrintBasicRunInfo*
+  commentId: Overload:AzureReporter.TestPlanInstance.PrintBasicRunInfo
+  name: PrintBasicRunInfo
+  nameWithType: TestPlanInstance.PrintBasicRunInfo
+  fullName: AzureReporter.TestPlanInstance.PrintBasicRunInfo
+- uid: AzureReporter.TestPlanInstance.AddTestCasesToSuite*
+  commentId: Overload:AzureReporter.TestPlanInstance.AddTestCasesToSuite
+  name: AddTestCasesToSuite
+  nameWithType: TestPlanInstance.AddTestCasesToSuite
+  fullName: AzureReporter.TestPlanInstance.AddTestCasesToSuite
+- uid: AzureReporter.TestPlanInstance.RecordTestCaseResult*
+  commentId: Overload:AzureReporter.TestPlanInstance.RecordTestCaseResult
+  name: RecordTestCaseResult
+  nameWithType: TestPlanInstance.RecordTestCaseResult
+  fullName: AzureReporter.TestPlanInstance.RecordTestCaseResult
+- uid: AutomationTestSetFramework.ITestStatus
+  commentId: T:AutomationTestSetFramework.ITestStatus
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStatus
+  nameWithType: ITestStatus
+  fullName: AutomationTestSetFramework.ITestStatus
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework

@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.GeneralData
+  commentId: N:AutomationTestingProgram.GeneralData
+  id: AutomationTestingProgram.GeneralData
+  children:
+  - AutomationTestingProgram.GeneralData.ALMGeneralData
+  - AutomationTestingProgram.GeneralData.ExcelGeneralData
+  - AutomationTestingProgram.GeneralData.ITestGeneralData
+  - AutomationTestingProgram.GeneralData.NoGeneralData
+  - AutomationTestingProgram.GeneralData.XMLGeneralData
+  langs:
+  - csharp
+  - vb
+  name: AutomationTestingProgram.GeneralData
+  nameWithType: AutomationTestingProgram.GeneralData
+  fullName: AutomationTestingProgram.GeneralData
+  type: Namespace
+  assemblies:
+  - AutomationTestingProgram
+references:
+- uid: AutomationTestingProgram.GeneralData.ALMGeneralData
+  commentId: T:AutomationTestingProgram.GeneralData.ALMGeneralData
+  name: ALMGeneralData
+  nameWithType: ALMGeneralData
+  fullName: AutomationTestingProgram.GeneralData.ALMGeneralData
+- uid: AutomationTestingProgram.GeneralData.ExcelGeneralData
+  commentId: T:AutomationTestingProgram.GeneralData.ExcelGeneralData
+  name: ExcelGeneralData
+  nameWithType: ExcelGeneralData
+  fullName: AutomationTestingProgram.GeneralData.ExcelGeneralData
+- uid: AutomationTestingProgram.GeneralData.ITestGeneralData
+  commentId: T:AutomationTestingProgram.GeneralData.ITestGeneralData
+  parent: AutomationTestingProgram.GeneralData
+  name: ITestGeneralData
+  nameWithType: ITestGeneralData
+  fullName: AutomationTestingProgram.GeneralData.ITestGeneralData
+- uid: AutomationTestingProgram.GeneralData.NoGeneralData
+  commentId: T:AutomationTestingProgram.GeneralData.NoGeneralData
+  name: NoGeneralData
+  nameWithType: NoGeneralData
+  fullName: AutomationTestingProgram.GeneralData.NoGeneralData
+- uid: AutomationTestingProgram.GeneralData.XMLGeneralData
+  commentId: T:AutomationTestingProgram.GeneralData.XMLGeneralData
+  name: XMLGeneralData
+  nameWithType: XMLGeneralData
+  fullName: AutomationTestingProgram.GeneralData.XMLGeneralData
+- uid: AutomationTestingProgram.GeneralData
+  commentId: N:AutomationTestingProgram.GeneralData
+  name: AutomationTestingProgram.GeneralData
+  nameWithType: AutomationTestingProgram.GeneralData
+  fullName: AutomationTestingProgram.GeneralData

@@ -6,9 +6,12 @@ namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Xml;
     using AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters;
     using AutomationTestSetFramework;
+    //using TDAPIOLELib;
+    using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
     /// Implementation of the ITestSet Class.
@@ -16,12 +19,17 @@ namespace AutomationTestingProgram.AutomationFramework
     public class TestSet : ITestSet
     {
         /// <summary>
+        /// Gets or sets a value indicating we are going to block the test cases in the test set.
+        /// </summary>
+        public bool BlockTestSet { get; set; } = true;
+
+        /// <summary>
         /// Gets or sets a value indicating whether you should execute this step or skip it.
         /// </summary>
         public bool ShouldExecuteVariable { get; set; } = true;
 
         /// <inheritdoc/>
-        public string Name { get; set; } = "Test Set";
+        public string Name { get; set; } = "Test Set Execution";
 
         /// <inheritdoc/>
         public int TotalTestCases
@@ -39,6 +47,9 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public IMethodBoundaryAspect.FlowBehavior OnExceptionFlowBehavior { get; set; }
 
+        // number of consecutive test case failures before failing a test set
+        private int NumConsecutiveTestFailures { get; set; } = 0;
+
         /// <inheritdoc/>
         public bool ExistNextTestCase()
         {
@@ -54,6 +65,7 @@ namespace AutomationTestingProgram.AutomationFramework
 
             if (testCase == null)
             {
+                Logger.Error("Error with GetNextTestCase");
                 throw new Exception("Missing Test case");
             }
 
@@ -77,10 +89,15 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             if (this.TestSetStatus == null)
             {
+                var timeUTC = DateTime.UtcNow;
+                TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+                DateTime easternTime = TimeZoneInfo.ConvertTimeFromUtc(timeUTC, easternZone);
                 this.TestSetStatus = new TestSetStatus()
                 {
+                    Description = "Set Up Test Set",
+                    Expected = "Expected to pass",
                     Name = this.Name,
-                    StartTime = DateTime.UtcNow,
+                    StartTime = easternTime,
                 };
             }
         }
@@ -88,15 +105,28 @@ namespace AutomationTestingProgram.AutomationFramework
         /// <inheritdoc/>
         public bool ShouldExecute()
         {
-            return this.ShouldExecuteVariable;
+            return this.ShouldExecuteVariable && InformationObject.ShouldExecute;
         }
 
         /// <inheritdoc/>
         public void TearDown()
         {
-            this.TestSetStatus.EndTime = DateTime.UtcNow;
+            var timeUTC = DateTime.UtcNow;
+            TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            DateTime easternTime = TimeZoneInfo.ConvertTimeFromUtc(timeUTC, easternZone);
+            this.TestSetStatus.EndTime = easternTime;
+            this.TestSetStatus.Name = this.Name;
+            this.TestSetStatus.Description = "Test Set Execution";
+            this.TestSetStatus.Expected = "Expected to pass";
+            this.TestSetStatus.Actual = $"Passed is: {this.TestSetStatus.RunSuccessful}";
 
-            InformationObject.Reporter.AddTestSetStatus(this.TestSetStatus);
+            if (GetEnvironmentVariable(EnvVar.TestSetDataType).ToLower() == "excel")
+            {
+                // record the test set status
+                InformationObject.Reporter.AddTestSetStatus(this.TestSetStatus);
+            }
+
+            InformationObject.CSVLogger.AddResults($"Test Set Run Successful, {this.TestSetStatus.RunSuccessful}");
 
             ITestSetLogger log = new TestSetLogger();
             log.Log(this);
@@ -108,9 +138,37 @@ namespace AutomationTestingProgram.AutomationFramework
             if (testCaseStatus.RunSuccessful == false)
             {
                 this.TestSetStatus.RunSuccessful = false;
+
+                // increase the test case failures by one
+                this.NumConsecutiveTestFailures += 1;
+                Logger.Info("Failed consecutively counter: " + this.NumConsecutiveTestFailures);
+            }
+            else
+            {
+                this.NumConsecutiveTestFailures = 0;
             }
 
+            // add test case result to both csv and devops or alm
+            InformationObject.CSVLogger.AddResults($"Test Case Run Successful, {testCaseStatus.Name}, {testCaseStatus.RunSuccessful}");
             InformationObject.Reporter.AddTestCaseStatus(testCaseStatus);
+
+            // int maxConsecutiveFailures = int.Parse(ConfigurationManager.AppSettings["MaxConsecutiveFailedTestCases"]);
+
+            // Here we are setting the number of consecutive failures of the test case before failing the test case
+            int maxConsecutiveFailures = int.Parse(InformationObject.GetEnvironmentVariable(EnvVar.MaxFailures));
+
+            // if we reach max failures, print out reached MAX failures, and end.
+            if (this.NumConsecutiveTestFailures >= maxConsecutiveFailures)
+            {
+                CSVLogger.AddResults($"Max Consecutive failures, {maxConsecutiveFailures} reached");
+                Logger.Info("MAX failures reached, ending execution");
+
+                // here we should report the rest of the test cases as blocked
+                Logger.Info("Populating all remaining test cases as blocked");
+
+                // we block the rest of the executions
+                InformationObject.BlockTestSet = true;
+            }
         }
     }
 }

@@ -1,0 +1,982 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestCaseHTML
+  commentId: T:AutomationTestingProgram.TestCaseHTML
+  id: TestCaseHTML
+  parent: AutomationTestingProgram
+  children:
+  - AutomationTestingProgram.TestCaseHTML.#ctor
+  - AutomationTestingProgram.TestCaseHTML.Attachments
+  - AutomationTestingProgram.TestCaseHTML.ExecDateTime
+  - AutomationTestingProgram.TestCaseHTML.HasScreenShot
+  - AutomationTestingProgram.TestCaseHTML.NumSteps
+  - AutomationTestingProgram.TestCaseHTML.RunID
+  - AutomationTestingProgram.TestCaseHTML.RunName
+  - AutomationTestingProgram.TestCaseHTML.Status
+  - AutomationTestingProgram.TestCaseHTML.TestCaseName
+  - AutomationTestingProgram.TestCaseHTML.TesterName
+  - AutomationTestingProgram.TestCaseHTML.TestSteps
+  langs:
+  - csharp
+  - vb
+  name: TestCaseHTML
+  nameWithType: TestCaseHTML
+  fullName: AutomationTestingProgram.TestCaseHTML
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestCaseHTML
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 15
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nClass to store information related to a test case execution.\n"
+  example: []
+  syntax:
+    content: public class TestCaseHTML
+    content.vb: Public Class TestCaseHTML
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.TestCaseHTML.#ctor
+  commentId: M:AutomationTestingProgram.TestCaseHTML.#ctor
+  id: '#ctor'
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: TestCaseHTML()
+  nameWithType: TestCaseHTML.TestCaseHTML()
+  fullName: AutomationTestingProgram.TestCaseHTML.TestCaseHTML()
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 20
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nInitializes a new instance of the <xref href=\"AutomationTestingProgram.TestCaseHTML\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TestCaseHTML()
+    content.vb: Public Sub New
+  overload: AutomationTestingProgram.TestCaseHTML.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.TestSteps
+  commentId: P:AutomationTestingProgram.TestCaseHTML.TestSteps
+  id: TestSteps
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: TestSteps
+  nameWithType: TestCaseHTML.TestSteps
+  fullName: AutomationTestingProgram.TestCaseHTML.TestSteps
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestSteps
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 27
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a list of test steps in the test case and their results.\n"
+  example: []
+  syntax:
+    content: public List<List<string>> TestSteps { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.String}}
+    content.vb: Public Property TestSteps As List(Of List(Of String))
+  overload: AutomationTestingProgram.TestCaseHTML.TestSteps*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.Attachments
+  commentId: P:AutomationTestingProgram.TestCaseHTML.Attachments
+  id: Attachments
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: Attachments
+  nameWithType: TestCaseHTML.Attachments
+  fullName: AutomationTestingProgram.TestCaseHTML.Attachments
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Attachments
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 32
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Attachments for this test case execution.\n"
+  example: []
+  syntax:
+    content: public object[] Attachments { get; set; }
+    parameters: []
+    return:
+      type: System.Object[]
+    content.vb: Public Property Attachments As Object()
+  overload: AutomationTestingProgram.TestCaseHTML.Attachments*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.ExecDateTime
+  commentId: P:AutomationTestingProgram.TestCaseHTML.ExecDateTime
+  id: ExecDateTime
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: ExecDateTime
+  nameWithType: TestCaseHTML.ExecDateTime
+  fullName: AutomationTestingProgram.TestCaseHTML.ExecDateTime
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ExecDateTime
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 37
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the Execution Date and Time for this test case execution.\n"
+  example: []
+  syntax:
+    content: public DateTime ExecDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property ExecDateTime As Date
+  overload: AutomationTestingProgram.TestCaseHTML.ExecDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.HasScreenShot
+  commentId: P:AutomationTestingProgram.TestCaseHTML.HasScreenShot
+  id: HasScreenShot
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: HasScreenShot
+  nameWithType: TestCaseHTML.HasScreenShot
+  fullName: AutomationTestingProgram.TestCaseHTML.HasScreenShot
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: HasScreenShot
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 42
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets a value indicating whether there are screenshots included in this test case execution.\n"
+  example: []
+  syntax:
+    content: public bool HasScreenShot { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasScreenShot As Boolean
+  overload: AutomationTestingProgram.TestCaseHTML.HasScreenShot*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.NumSteps
+  commentId: P:AutomationTestingProgram.TestCaseHTML.NumSteps
+  id: NumSteps
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: NumSteps
+  nameWithType: TestCaseHTML.NumSteps
+  fullName: AutomationTestingProgram.TestCaseHTML.NumSteps
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: NumSteps
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 47
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the number of test steps in the test case.\n"
+  example: []
+  syntax:
+    content: public int NumSteps { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NumSteps As Integer
+  overload: AutomationTestingProgram.TestCaseHTML.NumSteps*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.RunID
+  commentId: P:AutomationTestingProgram.TestCaseHTML.RunID
+  id: RunID
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: RunID
+  nameWithType: TestCaseHTML.RunID
+  fullName: AutomationTestingProgram.TestCaseHTML.RunID
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: RunID
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 52
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the unique test case run ID.\n"
+  example: []
+  syntax:
+    content: public string RunID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RunID As String
+  overload: AutomationTestingProgram.TestCaseHTML.RunID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.RunName
+  commentId: P:AutomationTestingProgram.TestCaseHTML.RunName
+  id: RunName
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: RunName
+  nameWithType: TestCaseHTML.RunName
+  fullName: AutomationTestingProgram.TestCaseHTML.RunName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: RunName
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 57
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the unique test case run name for this test case execution.\n"
+  example: []
+  syntax:
+    content: public string RunName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RunName As String
+  overload: AutomationTestingProgram.TestCaseHTML.RunName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.Status
+  commentId: P:AutomationTestingProgram.TestCaseHTML.Status
+  id: Status
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: TestCaseHTML.Status
+  fullName: AutomationTestingProgram.TestCaseHTML.Status
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Status
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 62
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the status of this test case execution.\n"
+  example: []
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: AutomationTestingProgram.TestCaseHTML.Status*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.TestCaseName
+  commentId: P:AutomationTestingProgram.TestCaseHTML.TestCaseName
+  id: TestCaseName
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: TestCaseName
+  nameWithType: TestCaseHTML.TestCaseName
+  fullName: AutomationTestingProgram.TestCaseHTML.TestCaseName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TestCaseName
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 67
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the name of this test case. Default is the empty string.\n"
+  example: []
+  syntax:
+    content: public string TestCaseName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TestCaseName As String
+  overload: AutomationTestingProgram.TestCaseHTML.TestCaseName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestCaseHTML.TesterName
+  commentId: P:AutomationTestingProgram.TestCaseHTML.TesterName
+  id: TesterName
+  parent: AutomationTestingProgram.TestCaseHTML
+  langs:
+  - csharp
+  - vb
+  name: TesterName
+  nameWithType: TestCaseHTML.TesterName
+  fullName: AutomationTestingProgram.TestCaseHTML.TesterName
+  type: Property
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: TesterName
+    path: src/AutomationFramework/Loggers_and_Reporters/HTMLReporter/TestCaseExecution.cs
+    startLine: 72
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram
+  summary: "\nGets or sets the name of the tester running this test case.\n"
+  example: []
+  syntax:
+    content: public string TesterName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TesterName As String
+  overload: AutomationTestingProgram.TestCaseHTML.TesterName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram
+  commentId: N:AutomationTestingProgram
+  name: AutomationTestingProgram
+  nameWithType: AutomationTestingProgram
+  fullName: AutomationTestingProgram
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.TestCaseHTML
+  commentId: T:AutomationTestingProgram.TestCaseHTML
+  name: TestCaseHTML
+  nameWithType: TestCaseHTML
+  fullName: AutomationTestingProgram.TestCaseHTML
+- uid: AutomationTestingProgram.TestCaseHTML.#ctor*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.#ctor
+  name: TestCaseHTML
+  nameWithType: TestCaseHTML.TestCaseHTML
+  fullName: AutomationTestingProgram.TestCaseHTML.TestCaseHTML
+- uid: AutomationTestingProgram.TestCaseHTML.TestSteps*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.TestSteps
+  name: TestSteps
+  nameWithType: TestCaseHTML.TestSteps
+  fullName: AutomationTestingProgram.TestCaseHTML.TestSteps
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{System.String}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<List<String>>
+  nameWithType: List<List<String>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<System.String>>
+  nameWithType.vb: List(Of List(Of String))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.String))
+  name.vb: List(Of List(Of String))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: AutomationTestingProgram.TestCaseHTML.Attachments*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.Attachments
+  name: Attachments
+  nameWithType: TestCaseHTML.Attachments
+  fullName: AutomationTestingProgram.TestCaseHTML.Attachments
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AutomationTestingProgram.TestCaseHTML.ExecDateTime*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.ExecDateTime
+  name: ExecDateTime
+  nameWithType: TestCaseHTML.ExecDateTime
+  fullName: AutomationTestingProgram.TestCaseHTML.ExecDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: AutomationTestingProgram.TestCaseHTML.HasScreenShot*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.HasScreenShot
+  name: HasScreenShot
+  nameWithType: TestCaseHTML.HasScreenShot
+  fullName: AutomationTestingProgram.TestCaseHTML.HasScreenShot
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestingProgram.TestCaseHTML.NumSteps*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.NumSteps
+  name: NumSteps
+  nameWithType: TestCaseHTML.NumSteps
+  fullName: AutomationTestingProgram.TestCaseHTML.NumSteps
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AutomationTestingProgram.TestCaseHTML.RunID*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.RunID
+  name: RunID
+  nameWithType: TestCaseHTML.RunID
+  fullName: AutomationTestingProgram.TestCaseHTML.RunID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.TestCaseHTML.RunName*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.RunName
+  name: RunName
+  nameWithType: TestCaseHTML.RunName
+  fullName: AutomationTestingProgram.TestCaseHTML.RunName
+- uid: AutomationTestingProgram.TestCaseHTML.Status*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.Status
+  name: Status
+  nameWithType: TestCaseHTML.Status
+  fullName: AutomationTestingProgram.TestCaseHTML.Status
+- uid: AutomationTestingProgram.TestCaseHTML.TestCaseName*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.TestCaseName
+  name: TestCaseName
+  nameWithType: TestCaseHTML.TestCaseName
+  fullName: AutomationTestingProgram.TestCaseHTML.TestCaseName
+- uid: AutomationTestingProgram.TestCaseHTML.TesterName*
+  commentId: Overload:AutomationTestingProgram.TestCaseHTML.TesterName
+  name: TesterName
+  nameWithType: TestCaseHTML.TesterName
+  fullName: AutomationTestingProgram.TestCaseHTML.TesterName

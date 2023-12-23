@@ -13,6 +13,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
     using AutomationTestingProgram.Helper;
     using AutomationTestingProgram.TestingData;
     using AutomationTestSetFramework;
+    using Newtonsoft.Json;
     using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
@@ -62,6 +63,18 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         }
 
         /// <inheritdoc/>
+        public void AddAODAReport(string attachment)
+        {
+            this.TestSet.AddTestCaseAttachment("Final AODA Report", attachment);
+        }
+
+        /// <inheritdoc/>
+        public void AddErrorScreenshot(string attachment)
+        {
+            this.TestSet.AddTestCaseAttachment("Error Screenshot", attachment);
+        }
+
+        /// <inheritdoc/>
         public bool ExistNextTestCase()
         {
             this.ConnectToALM();
@@ -72,7 +85,10 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
         public ITestCase GetNextTestCase()
         {
             this.ConnectToALM();
+
             ITestCase testCase;
+
+            // need to make these available
             string testCaseID = this.TestSet.GetCurrentTestCaseName();
             string release = this.TestSet.GetField("Test Case Version");
             string collection = this.TestSet.GetField("Application Collection");
@@ -104,7 +120,7 @@ namespace AutomationTestingProgram.TestingData.TestDrivers
                 }
 
                 Logger.Error(e.InnerException);
-                throw e;
+                throw e; // commented out e because rethrowing does not require it
             }
 
             return testCase;

@@ -1,11 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Platforms>AnyCPU;x86</Platforms>
     <Version>1.1.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\freetype6.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\jpeg62.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libcairo-2.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libexpat-1.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libfontconfig-1.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libgcc_s_dw2-1.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpixman-1-0.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpng16-16.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpoppler-79.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpoppler-cpp-0.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libstdc++-6.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libtiff3.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\pdfdetach.exe" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\pdfimages.exe" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\README" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\README-XPDF" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\zlib1.dll" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="ALMProjectEntityFieldMapping.xml" />
@@ -49,10 +69,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!--<PackageReference Include="AxeAccessibilityDriver" Version="2.1.7732.10828" />-->
+    <PackageReference Include="ComparePDF" Version="2.0.7703.11150" />
+    <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7732.11738" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
-    <PackageReference Include="System.Management" Version="5.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="TextInteractor" Version="1.2.7725.10792" />
   </ItemGroup>
+
+  <!--<ItemGroup>
+    <ProjectReference Include="..\AxeAccessibilityDriver\AxeAccessibilityDriver\AxeAccessibilityDriver.csproj" />
+  </ItemGroup>-->
 
   <ItemGroup>
     <Reference Include="TDAPIOLELib">

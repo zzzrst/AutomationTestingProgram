@@ -1,0 +1,1276 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  id: DatabaseStepData
+  parent: AutomationTestingProgram.TestingData.TestDrivers
+  children:
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.#ctor(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping(System.String,System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery(System.String,System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery(System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars(System.String,System.String)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep(System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: DatabaseStepData
+  nameWithType: DatabaseStepData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: DatabaseStepData
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 33
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nThe test step for the database data.\n"
+  example: []
+  syntax:
+    content: 'public class DatabaseStepData : DatabaseData, ITestStepData, ITestData'
+    content.vb: >-
+      Public Class DatabaseStepData
+          Inherits DatabaseData
+          Implements ITestStepData, ITestData
+  inheritance:
+  - System.Object
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  implements:
+  - AutomationTestingProgram.TestingData.ITestStepData
+  - AutomationTestingProgram.TestingData.ITestData
+  inheritedMembers:
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestArgs
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Name
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDB
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.EnvDB
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Environment
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp
+  - AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.#ctor(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: DatabaseStepData(String)
+  nameWithType: DatabaseStepData.DatabaseStepData(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.DatabaseStepData(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 40
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nInitializes a new instance of the <xref href=\"AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData\" data-throw-if-not-resolved=\"false\"></xref> class.\nA mandatory constructor that won&apos;t do anything.\n"
+  example: []
+  syntax:
+    content: public DatabaseStepData(string args)
+    parameters:
+    - id: args
+      type: System.String
+      description: args.
+    content.vb: Public Sub New(args As String)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  id: SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: SetArguments(TestStep)
+  nameWithType: DatabaseStepData.SetArguments(TestStep)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: SetArguments
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 57
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nSets any arguments at runtime.\n"
+  example: []
+  syntax:
+    content: public void SetArguments(TestStep testStep)
+    parameters:
+    - id: testStep
+      type: AutomationTestingProgram.AutomationFramework.TestStep
+      description: Test steps to get the arguments for.
+    content.vb: Public Sub SetArguments(testStep As TestStep)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep(System.String,System.Boolean)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep(System.String,System.Boolean)
+  id: SetUpTestStep(System.String,System.Boolean)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: SetUpTestStep(String, Boolean)
+  nameWithType: DatabaseStepData.SetUpTestStep(String, Boolean)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: SetUpTestStep
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 66
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nRuns when getting the test step from the test case.\n"
+  example: []
+  syntax:
+    content: public ITestStep SetUpTestStep(string testStepName, bool performAction = true)
+    parameters:
+    - id: testStepName
+      type: System.String
+      description: The name of the test Step.
+    - id: performAction
+      type: System.Boolean
+      description: Determins if the test step should run.
+    return:
+      type: AutomationTestSetFramework.ITestStep
+      description: The Test Step to run.
+    content.vb: Public Function SetUpTestStep(testStepName As String, performAction As Boolean = True) As ITestStep
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep*
+  implements:
+  - AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  id: QueryObjectAndArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: QueryObjectAndArguments(TestStep)
+  nameWithType: DatabaseStepData.QueryObjectAndArguments(TestStep)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: QueryObjectAndArguments
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 76
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nIf object identifier or arguments begin with special characters in [&apos;!&apos;, &apos;@&apos;, &apos;##&apos;, &apos;$$&apos;], then\nthey are replaced by their respective value in the database.\n"
+  example: []
+  syntax:
+    content: public void QueryObjectAndArguments(TestStep testStep)
+    parameters:
+    - id: testStep
+      type: AutomationTestingProgram.AutomationFramework.TestStep
+      description: The Test step to query arguments.
+    content.vb: Public Sub QueryObjectAndArguments(testStep As TestStep)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue(System.String)
+  id: GetGlobalVariableValue(System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalVariableValue(String)
+  nameWithType: DatabaseStepData.GetGlobalVariableValue(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetGlobalVariableValue
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 112
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nThe GetEnvironmentEmailNotificationFolder.\n"
+  example: []
+  syntax:
+    content: public string GetGlobalVariableValue(string globalVariableName)
+    parameters:
+    - id: globalVariableName
+      type: System.String
+      description: Name of the global variable.
+    return:
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function GetGlobalVariableValue(globalVariableName As String) As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder(System.String)
+  id: GetEnvironmentEmailNotificationFolder(System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: GetEnvironmentEmailNotificationFolder(String)
+  nameWithType: DatabaseStepData.GetEnvironmentEmailNotificationFolder(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetEnvironmentEmailNotificationFolder
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 156
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nThe GetEnvironmentEmailNotificationFolder.\n"
+  example: []
+  syntax:
+    content: public string GetEnvironmentEmailNotificationFolder(string environment)
+    parameters:
+    - id: environment
+      type: System.String
+      description: The environment<xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.String
+      description: The <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function GetEnvironmentEmailNotificationFolder(environment As String) As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL(System.String)
+  id: GetEnvironmentURL(System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: GetEnvironmentURL(String)
+  nameWithType: DatabaseStepData.GetEnvironmentURL(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetEnvironmentURL
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 174
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nReturns the URL to access the environment.\n"
+  example: []
+  syntax:
+    content: public string GetEnvironmentURL(string environment)
+    parameters:
+    - id: environment
+      type: System.String
+      description: The enviornment we want to connect to.
+    return:
+      type: System.String
+      description: The URL to access the environment.
+    content.vb: Public Function GetEnvironmentURL(environment As String) As String
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping(System.String,System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping(System.String,System.String)
+  id: GetEnvironmentSharePointMapping(System.String,System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: GetEnvironmentSharePointMapping(String, String)
+  nameWithType: DatabaseStepData.GetEnvironmentSharePointMapping(String, String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: GetEnvironmentSharePointMapping
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 199
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nGets the environment sharepoint mapping from the database.\n"
+  example: []
+  syntax:
+    content: public List<string> GetEnvironmentSharePointMapping(string environment, string mappingName)
+    parameters:
+    - id: environment
+      type: System.String
+      description: The environment it is associated with.
+    - id: mappingName
+      type: System.String
+      description: Name of the sharepoint mapping.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: 4 required info used by Sharepoint to get information.
+    content.vb: Public Function GetEnvironmentSharePointMapping(environment As String, mappingName As String) As List(Of String)
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars(System.String,System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars(System.String,System.String)
+  id: QuerySpecialChars(System.String,System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: QuerySpecialChars(String, String)
+  nameWithType: DatabaseStepData.QuerySpecialChars(String, String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: QuerySpecialChars
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 234
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nIf the original string begins with special characters in [&apos;!&apos;, &apos;@&apos;, &apos;##&apos;, &apos;$$&apos;], then\nit is replaced by the respective value in the database.\n"
+  example: []
+  syntax:
+    content: public object QuerySpecialChars(string environment, string original)
+    parameters:
+    - id: environment
+      type: System.String
+      description: Environment database to query from (if applicable).
+    - id: original
+      type: System.String
+      description: Original string.
+    return:
+      type: System.Object
+      description: The respective value in the database, or the original string itself.
+    content.vb: Public Function QuerySpecialChars(environment As String, original As String) As Object
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery(System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery(System.String)
+  id: ProcessQADBSelectQuery(System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: ProcessQADBSelectQuery(String)
+  nameWithType: DatabaseStepData.ProcessQADBSelectQuery(String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery(System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ProcessQADBSelectQuery
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 339
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nExecutes the given query in the test database.\n"
+  example: []
+  syntax:
+    content: public List<List<object>> ProcessQADBSelectQuery(string query)
+    parameters:
+    - id: query
+      type: System.String
+      description: Query to execute.
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Object}}
+      description: The data queried from the database.
+    content.vb: Public Function ProcessQADBSelectQuery(query As String) As List(Of List(Of Object))
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery(System.String,System.String)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery(System.String,System.String)
+  id: ProcessEnvironmentSelectQuery(System.String,System.String)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  langs:
+  - csharp
+  - vb
+  name: ProcessEnvironmentSelectQuery(String, String)
+  nameWithType: DatabaseStepData.ProcessEnvironmentSelectQuery(String, String)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/TestingData/TestDrivers/DatabaseStepData.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ProcessEnvironmentSelectQuery
+    path: src/TestingData/TestDrivers/DatabaseStepData.cs
+    startLine: 353
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.TestingData.TestDrivers
+  summary: "\nExecutes the given query in an environment database.\n"
+  example: []
+  syntax:
+    content: public List<List<object>> ProcessEnvironmentSelectQuery(string environment, string query)
+    parameters:
+    - id: environment
+      type: System.String
+      description: Name of environment to execute in.
+    - id: query
+      type: System.String
+      description: Query to execute.
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Object}}
+      description: The data queried from the database.
+    content.vb: Public Function ProcessEnvironmentSelectQuery(environment As String, query As String) As List(Of List(Of Object))
+  overload: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AutomationTestingProgram.TestingData.TestDrivers
+  commentId: N:AutomationTestingProgram.TestingData.TestDrivers
+  name: AutomationTestingProgram.TestingData.TestDrivers
+  nameWithType: AutomationTestingProgram.TestingData.TestDrivers
+  fullName: AutomationTestingProgram.TestingData.TestDrivers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  parent: AutomationTestingProgram.TestingData.TestDrivers
+  name: DatabaseData
+  nameWithType: DatabaseData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+- uid: AutomationTestingProgram.TestingData.ITestStepData
+  commentId: T:AutomationTestingProgram.TestingData.ITestStepData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestStepData
+  nameWithType: ITestStepData
+  fullName: AutomationTestingProgram.TestingData.ITestStepData
+- uid: AutomationTestingProgram.TestingData.ITestData
+  commentId: T:AutomationTestingProgram.TestingData.ITestData
+  parent: AutomationTestingProgram.TestingData
+  name: ITestData
+  nameWithType: ITestData
+  fullName: AutomationTestingProgram.TestingData.ITestData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestArgs
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestArgs
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  name: TestArgs
+  nameWithType: DatabaseData.TestArgs
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestArgs
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Name
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Name
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  name: Name
+  nameWithType: DatabaseData.Name
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Name
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  name: TestDBName
+  nameWithType: DatabaseData.TestDBName
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDBName
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDB
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDB
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  name: TestDB
+  nameWithType: DatabaseData.TestDB
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.TestDB
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.EnvDB
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.EnvDB
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  name: EnvDB
+  nameWithType: DatabaseData.EnvDB
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.EnvDB
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Environment
+  commentId: P:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Environment
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  name: Environment
+  nameWithType: DatabaseData.Environment
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.Environment
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  name: SetUp()
+  nameWithType: DatabaseData.SetUp()
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp()
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp
+    name: SetUp
+    nameWithType: DatabaseData.SetUp
+    fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp
+    name: SetUp
+    nameWithType: DatabaseData.SetUp
+    fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.SetUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+  commentId: M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+  parent: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData
+  isExternal: true
+  name: ConnectToDatabase(OracleDatabase)
+  nameWithType: DatabaseData.ConnectToDatabase(OracleDatabase)
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+    name: ConnectToDatabase
+    nameWithType: DatabaseData.ConnectToDatabase
+    fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DatabaseConnector.OracleDatabase
+    name: OracleDatabase
+    nameWithType: OracleDatabase
+    fullName: DatabaseConnector.OracleDatabase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase(DatabaseConnector.OracleDatabase)
+    name: ConnectToDatabase
+    nameWithType: DatabaseData.ConnectToDatabase
+    fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseData.ConnectToDatabase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DatabaseConnector.OracleDatabase
+    name: OracleDatabase
+    nameWithType: OracleDatabase
+    fullName: DatabaseConnector.OracleDatabase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestingProgram.TestingData
+  commentId: N:AutomationTestingProgram.TestingData
+  name: AutomationTestingProgram.TestingData
+  nameWithType: AutomationTestingProgram.TestingData
+  fullName: AutomationTestingProgram.TestingData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  commentId: T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+  name: DatabaseStepData
+  nameWithType: DatabaseStepData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.#ctor*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.#ctor
+  name: DatabaseStepData
+  nameWithType: DatabaseStepData.DatabaseStepData
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.DatabaseStepData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments
+  name: SetArguments
+  nameWithType: DatabaseStepData.SetArguments
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetArguments
+- uid: AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  commentId: M:AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  parent: AutomationTestingProgram.TestingData.ITestStepData
+  name: SetArguments(TestStep)
+  nameWithType: ITestStepData.SetArguments(TestStep)
+  fullName: AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+    name: SetArguments
+    nameWithType: ITestStepData.SetArguments
+    fullName: AutomationTestingProgram.TestingData.ITestStepData.SetArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep
+    name: TestStep
+    nameWithType: TestStep
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestStepData.SetArguments(AutomationTestingProgram.AutomationFramework.TestStep)
+    name: SetArguments
+    nameWithType: ITestStepData.SetArguments
+    fullName: AutomationTestingProgram.TestingData.ITestStepData.SetArguments
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestingProgram.AutomationFramework.TestStep
+    name: TestStep
+    nameWithType: TestStep
+    fullName: AutomationTestingProgram.AutomationFramework.TestStep
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.TestStep
+  commentId: T:AutomationTestingProgram.AutomationFramework.TestStep
+  parent: AutomationTestingProgram.AutomationFramework
+  name: TestStep
+  nameWithType: TestStep
+  fullName: AutomationTestingProgram.AutomationFramework.TestStep
+- uid: AutomationTestingProgram.AutomationFramework
+  commentId: N:AutomationTestingProgram.AutomationFramework
+  name: AutomationTestingProgram.AutomationFramework
+  nameWithType: AutomationTestingProgram.AutomationFramework
+  fullName: AutomationTestingProgram.AutomationFramework
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep
+  name: SetUpTestStep
+  nameWithType: DatabaseStepData.SetUpTestStep
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.SetUpTestStep
+- uid: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+  commentId: M:AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+  parent: AutomationTestingProgram.TestingData.ITestStepData
+  isExternal: true
+  name: SetUpTestStep(String, Boolean)
+  nameWithType: ITestStepData.SetUpTestStep(String, Boolean)
+  fullName: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String, System.Boolean)
+  spec.csharp:
+  - uid: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+    name: SetUpTestStep
+    nameWithType: ITestStepData.SetUpTestStep
+    fullName: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep(System.String,System.Boolean)
+    name: SetUpTestStep
+    nameWithType: ITestStepData.SetUpTestStep
+    fullName: AutomationTestingProgram.TestingData.ITestStepData.SetUpTestStep
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AutomationTestSetFramework.ITestStep
+  commentId: T:AutomationTestSetFramework.ITestStep
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStep
+  nameWithType: ITestStep
+  fullName: AutomationTestSetFramework.ITestStep
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments
+  name: QueryObjectAndArguments
+  nameWithType: DatabaseStepData.QueryObjectAndArguments
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryObjectAndArguments
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue
+  name: GetGlobalVariableValue
+  nameWithType: DatabaseStepData.GetGlobalVariableValue
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetGlobalVariableValue
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder
+  name: GetEnvironmentEmailNotificationFolder
+  nameWithType: DatabaseStepData.GetEnvironmentEmailNotificationFolder
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentEmailNotificationFolder
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL
+  name: GetEnvironmentURL
+  nameWithType: DatabaseStepData.GetEnvironmentURL
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping
+  name: GetEnvironmentSharePointMapping
+  nameWithType: DatabaseStepData.GetEnvironmentSharePointMapping
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars
+  name: QuerySpecialChars
+  nameWithType: DatabaseStepData.QuerySpecialChars
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery
+  name: ProcessQADBSelectQuery
+  nameWithType: DatabaseStepData.ProcessQADBSelectQuery
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessQADBSelectQuery
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{System.Object}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{System.Object}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<List<Object>>
+  nameWithType: List<List<Object>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<System.Object>>
+  nameWithType.vb: List(Of List(Of Object))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Object))
+  name.vb: List(Of List(Of Object))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery*
+  commentId: Overload:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery
+  name: ProcessEnvironmentSelectQuery
+  nameWithType: DatabaseStepData.ProcessEnvironmentSelectQuery
+  fullName: AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentSelectQuery

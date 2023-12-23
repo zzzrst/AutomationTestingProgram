@@ -4,8 +4,13 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using System;
+    using System.Diagnostics.CodeAnalysis;
+    using System.IO;
+    using System.Reflection;
     using AutomationTestingProgram.TestingData;
     using AutomationTestingProgram.TestingData.TestDrivers;
+    using AutomationTestinProgram.Helper;
     using static AutomationTestingProgram.InformationObject;
 
     /// <summary>
@@ -18,25 +23,50 @@ namespace AutomationTestingProgram.AutomationFramework
         public override string Name { get; set; } = "RunSQLScript";
 
         /// <inheritdoc/>
+        [RequiresAssemblyFiles()]
         public override void Execute()
         {
             base.Execute();
 
-            string scriptPath = this.Arguments["object"];
-            string environment = GetEnvironmentVariable(EnvVar.Environment);
-            Logger.Info($"Running script at '{scriptPath}'.");
+            // for runsql, max attempts should be always set as 1
+            this.MaxAttempts = 1;
 
-            if ((TestStepData as DatabaseStepData) != null)
+            string scriptPath = this.Arguments["object"];
+
+            scriptPath = FilePathResolver.Resolve(scriptPath);
+
+            string environment = GetEnvironmentVariable(EnvVar.Environment);
+            Logger.Info($"Running script at '{scriptPath}'. Note that this runs SQL Plus");
+
+            // there are known errors with running a sql script from any network drive. SQLPlus cannot work with network drives
+            // therefore, we are going to use a temp folder in the executing directory to run the script
+            if (scriptPath.Contains("csc.ad.gov.on.ca") || scriptPath.Contains("K:")) 
             {
-                this.TestStepStatus.RunSuccessful = ((DatabaseStepData)TestStepData).ExecuteEnvironmentNonQuery(environment, scriptPath);
-                this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful
-                    ? "Script has been successfully run."
-                    : "Exited with non-zero code. Something may have went wrong.";
+                Logger.Info("Running a script from a network drive, copying to C drive");
+
+                string tempScriptPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\scripts\\temp_sql_script.sql";
+
+                // check if a file at this path already exists, if it does, then delete
+                if (File.Exists(tempScriptPath))
+                {
+                    File.Delete(tempScriptPath);
+                }
+
+                File.Copy(scriptPath, tempScriptPath);
+
+                // attatch original file path
+                InformationObject.TestSetData.AddAttachment(scriptPath);
+
+                scriptPath = tempScriptPath;
+                Logger.Info("Script path is now: " + scriptPath);
             }
-            else
-            {
-                this.TestStepStatus.Actual = "The test step data must be a database";
-            }
+
+            DatabaseStepData dbdata = new DatabaseStepData("");
+            this.TestStepStatus.RunSuccessful = dbdata.ExecuteEnvironmentNonQuery(environment, scriptPath, true);
+            this.TestStepStatus.Actual = this.TestStepStatus.RunSuccessful
+                ? "Script has been successfully run."
+                : "Exited with non-zero code. Something may have went wrong.";
+
         }
     }
 }

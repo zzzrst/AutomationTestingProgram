@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using log4net.Appender;
+
 namespace AutomationTestingProgram.AutomationFramework
 {
     /// <summary>
@@ -16,6 +18,8 @@ namespace AutomationTestingProgram.AutomationFramework
         public override void Execute()
         {
             base.Execute();
+
+            Logger.Info("Maximizing browser from MaximizeBrowser");
             InformationObject.TestAutomationDriver.Maximize();
         }
     }

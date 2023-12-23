@@ -4,6 +4,8 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using System;
+
     /// <summary>
     /// This test step to verify the content of an image.
     /// </summary>
@@ -22,7 +24,29 @@ namespace AutomationTestingProgram.AutomationFramework
 
             string expected = this.Arguments["value"];
 
-            this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyAttribute("outerHTML", expected, this.XPath, this.JsCommand);
+            try
+            {
+
+                this.TestStepStatus.RunSuccessful = InformationObject.TestAutomationDriver.VerifyAttribute("outerHTML", expected, this.XPath, this.JsCommand);
+
+                if (this.TestStepStatus.RunSuccessful)
+                {
+                    this.TestStepStatus.Actual = "Successfully verified image content to be " + expected;
+                }
+                else
+                {
+                    this.TestStepStatus.Actual = "Failure in Verifying Image Content";
+
+                    throw new Exception(this.TestStepStatus.Actual);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Info($"Could not verify image content.");
+                this.ShouldExecuteVariable = true;
+                this.TestStepStatus.RunSuccessful = false;
+                this.HandleException(ex);
+            }
         }
     }
 }

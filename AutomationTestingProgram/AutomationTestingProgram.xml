@@ -315,12 +315,21 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.CheckBox.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.CheckBox.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.ClickButton">
             <summary>
             This test step to click a button.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.ClickButton.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickButton.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ClickButton.Execute">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.ClickImage">
@@ -331,12 +340,18 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.ClickImage.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickImage.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.ClickLink">
             <summary>
             This test step to Click a link.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.ClickLink.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickLink.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.ClickObject">
@@ -358,6 +373,42 @@
         <member name="P:AutomationTestingProgram.AutomationFramework.ClickWebElement.Name">
             <inheritdoc/>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickWebElement.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ClickTableLink">
+            <summary>
+            .
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ClickTableLink.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ClickTableLink.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.EnterAADCredentials">
+            <summary>
+            This test step to log in.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.EnterAADCredentials.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.EnterAADCredentials.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.GetWebElementText">
+            <summary>
+            This test step allows us to save a value into a parameter and recall it in the future.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.GetWebElementText.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.GetWebElementText.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.Login">
             <summary>
             This test step to log in.
@@ -368,6 +419,13 @@
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.Login.Execute">
             <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Login.CreateJSCommandForAttributeValuePairs(System.String,System.String)">
+            <summary>
+            The createJSCommandForAttributeValuePairs.
+            </summary>
+            <param name="attriVals">The attriVals<see cref="!:"/>.</param>
+            <returns>The <see cref="T:System.String"/>.</returns>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.PopulateHTMLEditor">
             <summary>
@@ -413,12 +471,27 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.PopulateWebElement.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.ResetOrg">
+            <summary>
+            This test step to log in.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.ResetOrg.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.ResetOrg.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.SelectDDL">
             <summary>
             This class executes the action of selecting a value from the specified dropdownlist.
             </summary>
+            I think this was configured incorrectly, changed from Test Step to ActionObject
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.SelectDDL.Name">
+            <inheritdoc/>e
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.SelectDDL.HTMLWhiteListTag">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.SelectDDL.Execute">
@@ -446,6 +519,20 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.SelectLookup.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.SelectRadioButton">
+            <summary>
+            This class executes the action of selecting a value from the specified dropdownlist.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.SelectRadioButton.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.SelectRadioButton.HTMLWhiteListTag">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.SelectRadioButton.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.SwitchToIFrame">
             <summary>
             This test step to switch into an iframe.
@@ -455,6 +542,17 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.SwitchToIFrame.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.UploadDataFile">
+            <summary>
+            This test step to log in.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.UploadDataFile.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.UploadDataFile.Execute">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.UploadFile">
@@ -536,9 +634,6 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.Execute">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.VerifyTextBoxContent.HandleException(System.Exception)">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyWebElementContent">
@@ -636,7 +731,12 @@
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability">
             <summary>
-            This test step to verify the availability of an image.
+            This test step to verify the availability of a link.
+            Note that verifying a link requries a FLAG. 
+            If the FLAG is EXIST, this means that the text is visible.
+            If the FLAG is DOES NOT EXIST, this means that the text is not visible.
+            If the FLAG is ENABLED, this means that the text is CLICKABLE and VISIBLE
+            If the FLAG is DISABLED, this means that the text is NOT CLICKABLE or NOT VISIBLE.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.VerifyLinkAvailability.Name">
@@ -727,28 +827,6 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.BrokenLinks.Execute">
             <inheritdoc/>
         </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.ClickTableLink">
-            <summary>
-            .
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.ClickTableLink.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.ClickTableLink.Execute">
-            <inheritdoc/>
-        </member>
-        <member name="T:AutomationTestingProgram.AutomationFramework.CloseBrowserOld">
-            <summary>
-            This class executes the action of closing the browser.
-            </summary>
-        </member>
-        <member name="P:AutomationTestingProgram.AutomationFramework.CloseBrowserOld.Name">
-            <inheritdoc/>
-        </member>
-        <member name="M:AutomationTestingProgram.AutomationFramework.CloseBrowserOld.Execute">
-            <inheritdoc/>
-        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.Comment">
             <summary>
             This test step is a comment.
@@ -837,6 +915,28 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.LaunchBrowser.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.LaunchTab">
+            <summary>
+            This class executes the action of opening the browser to the specified site.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.LaunchTab.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.LaunchTab.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.LoadFile">
+            <summary>
+            This test step is the same as testStepXml.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.LoadFile.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.LoadFile.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.MapEmailFolder">
             <summary>
             This test step to log in.
@@ -892,6 +992,28 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.RunJavaScript.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptDelete">
+            <summary>
+            This test step to run a sql script from paramterized values.Only works for PR applications.
+            This one of the more complicated test step as it relys on the test step to be a databaseData type object.
+            note the following format
+            define formCode = 'VARIABLEOVERWRITE1'
+            define formYear = VARIABLEOVERWRITE2
+            define orgCode = 'VARIABLEOVERWRITE3'
+            define dateOfExecution = 'VARIABLEOVERWRITE4'
+            </summary>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.RunPrSQLScriptRevert">
+            <summary>
+            This test step to run a sql script from paramterized values.Only works for PR applications.
+            This one of the more complicated test step as it relys on the test step to be a databaseData type object.
+            note the following format
+            define formCode = 'VARIABLEOVERWRITE1'
+            define formYear = VARIABLEOVERWRITE2
+            define orgCode = 'VARIABLEOVERWRITE3'
+            define dateOfExecution = 'VARIABLEOVERWRITE4'.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.RunShellScript">
             <summary>
             This test step to run a shell script.
@@ -940,6 +1062,28 @@
         <member name="M:AutomationTestingProgram.AutomationFramework.SaveFile.Execute">
             <inheritdoc/>
         </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.SaveParameter">
+            <summary>
+            This test step skips to a specific line in the excel. ONLY WORKS FOR EXCEL
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.SaveParameter.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.SaveParameter.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.SkipToStep">
+            <summary>
+            This test step skips to a specific line in the excel. ONLY WORKS FOR EXCEL
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.SkipToStep.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.SkipToStep.Execute">
+            <inheritdoc/>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.SQLToCSV">
             <summary>
             This test step is the same as testStepXml.
@@ -952,6 +1096,17 @@
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.SQLToCSV.HandleException(System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.AutomationFramework.TakeScreenshot">
+            <summary>
+            This test step to compare pdfs.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TakeScreenshot.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.TakeScreenshot.Execute">
             <inheritdoc/>
         </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.VerifyAlertText">
@@ -1094,6 +1249,11 @@
             The implementation of the reporter class.
             </summary>
         </member>
+        <member name="F:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.testCaseIdList">
+            <summary>
+            The list of test case ids.
+            </summary>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.#ctor(System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter"/> class.
@@ -1120,8 +1280,70 @@
             Gets or sets the dictonary with key as Test Cases status and value as a list of Test step statuses.
             </summary>
         </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)">
+            <summary>
+            Creates an initial test case list and returns the newly created test case id
+            </summary>
+            <param name="testCase">Created intiial test case and return the result. <see cref="T:System.String"/>.</param>
+            <returns>string value indicating indicating the test case id created</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the test case list and used for creating test steps to be added to the test case.
+            </summary>
+            <param name="testCases">Test cases list. <see cref="T:System.Collections.Generic.List`1"/>.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String,System.String,System.String)">
+            <summary>
+            Add test run attachments.
+            </summary>
+            <param name="comment">Comment for the test run attachment. <see cref="T:System.String"/>.</param>
+            <param name="filePath">Filepath of the attachment. <see cref="T:System.String"/>.</param>
+            <param name="fileName">FileName of the attachment. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String,System.String,System.String)">
+            <summary>
+            Add a test attachment to a test case.
+            </summary>
+            <param name="fileName">The file name of the attachment to add, will be used as the name of the file on DevOps<see cref="T:System.String"/>.</param>
+            <param name="filePath">The file path of the attachment to add, will be used as the name of the file on DevOps<see cref="T:System.String"/>.</param>
+            <param name="comment">The comment for the test attachment <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)">
+            <summary>
+            Add a test attachment to a test case.
+            </summary>
+            <param name="fileName">The file name of the attachment to add, will be used as the name of the file on DevOps<see cref="T:System.String"/>.</param>
+            <param name="filePath">The file path of the attachment to add, will be used as the name of the file on DevOps<see cref="T:System.String"/>.</param>
+            <param name="comment">The comment for the test attachment <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)">
+            <summary>
+            Create a azure test step.
+            </summary>
+            <param name="testStepName">The name of the test step to be displayed on DevOps<see cref="T:System.String"/>.</param>
+            <param name="expected">the expected result of the test step<see cref="T:System.String"/>.</param>
+            <param name="testStepDescription">The description of the test step. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps(System.String)">
+            <summary>
+            Saves the test steps to the testCaseId.
+            </summary>
+            <param name="testCaseId">the test case id that we will save to. <see cref="T:System.String"/>.</param>
+            <returns>String value indicating the test case id that we saved the test case to.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean,System.String)">
+            <summary>
+            Records azure test step result.
+            </summary>
+            <param name="runsuccessful">Whether the test step was successfully executed. <see cref="T:System.String"/>.</param>
+            <param name="actual">The actual result of the test step. <see cref="T:System.String"/>.</param>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)">
-            <inheritdoc/>
+            <summary>
+            Add test case status to the execution.
+            </summary>
+            <param name="testCaseStatus">Added test case status information to the test case. <see cref="T:System.String"/>.</param>
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)">
             <inheritdoc/>
@@ -1278,6 +1500,11 @@
             Gets or sets a value indicating whether the test step is nessesary to pass.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStepStatus.ContinueOnError">
+            <summary>
+            Gets or sets a value indicating whether the test step is nessesary to pass.
+            </summary>
+        </member>
         <member name="T:AutomationTestingProgram.AutomationFramework.TestCase">
             <summary>
             Implementation of the testCase class.
@@ -1330,6 +1557,11 @@
         <member name="T:AutomationTestingProgram.AutomationFramework.TestSet">
             <summary>
             Implementation of the ITestSet Class.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestSet.BlockTestSet">
+            <summary>
+            Gets or sets a value indicating we are going to block the test cases in the test set.
             </summary>
         </member>
         <member name="P:AutomationTestingProgram.AutomationFramework.TestSet.ShouldExecuteVariable">
@@ -1435,6 +1667,16 @@
             Gets or sets a value indicating whether the test step should pass when it passes.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.ContinueOnError">
+            <summary>
+            Gets or sets a value indicating whether to continue test case when a failure occurs.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.AutomationFramework.TestStep.LocalTimeout">
+            <summary>
+            Gets or sets the timeout indicate the timeout during the execution.
+            </summary>
+        </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.TestStep.Execute">
             <inheritdoc/>
         </member>
@@ -1449,6 +1691,426 @@
         </member>
         <member name="M:AutomationTestingProgram.AutomationFramework.TestStep.TearDown">
             <inheritdoc/>
+        </member>
+        <member name="T:AutomationTestingProgram.CannotAddTestCaseAttachment">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.CannotAddTestCaseAttachment" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.CannotAddTestCaseAttachment.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotAddTestCaseAttachment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotAddTestCaseAttachment"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotAddTestCaseAttachment.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotAddTestCaseAttachment"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.CannotAddTestStep">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.CannotAddTestStep" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.CannotAddTestStep.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotAddTestStep.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotAddTestStep"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotAddTestStep.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotAddTestStep"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.CannotFindTestSet">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.CannotFindTestSet" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.CannotFindTestSet.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotFindTestSet.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotFindTestSet"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotFindTestSet.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotFindTestSet"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.CannotPostTestRun">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.CannotPostTestRun" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.CannotPostTestRun.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotPostTestRun.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotPostTestRun"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotPostTestRun.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotPostTestRun"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.CannotStartTestRun">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.CannotStartTestRun" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.CannotStartTestRun.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotStartTestRun.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotStartTestRun"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.CannotStartTestRun.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.CannotStartTestRun"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.ExecutionFlowDeterminer">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.ExecutionFlowDeterminer" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.ExecutionFlowDeterminer.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.ExecutionFlowDeterminer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.ExecutionFlowDeterminer"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.ExecutionFlowDeterminer.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.ExecutionFlowDeterminer"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestingProgram.NoTestRunStarted">
+            <summary>
+            Defines the <see cref="T:AutomationTestingProgram.NoTestRunStarted" />.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.NoTestRunStarted.ErrorMsg">
+            <summary>
+            Defines the ErrorMsg.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.NoTestRunStarted.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.NoTestRunStarted"/> class.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.NoTestRunStarted.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.NoTestRunStarted"/> class.
+            </summary>
+            <param name="message">The message<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.RunMailJet.RunAsync(System.String,System.Collections.Generic.List{System.String})">
+             <summary>
+            
+             </summary>
+             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:AutomationTestingProgram.TestCaseHTML">
+            <summary>
+            Class to store information related to a test case execution.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestCaseHTML.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestCaseHTML"/> class.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.TestSteps">
+            <summary>
+            Gets or sets a list of test steps in the test case and their results.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.Attachments">
+            <summary>
+            Gets or sets the Attachments for this test case execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.ExecDateTime">
+            <summary>
+            Gets or sets the Execution Date and Time for this test case execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.HasScreenShot">
+            <summary>
+            Gets or sets a value indicating whether there are screenshots included in this test case execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.NumSteps">
+            <summary>
+            Gets or sets the number of test steps in the test case.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.RunID">
+            <summary>
+            Gets or sets the unique test case run ID.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.RunName">
+            <summary>
+            Gets or sets the unique test case run name for this test case execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.Status">
+            <summary>
+            Gets or sets the status of this test case execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.TestCaseName">
+            <summary>
+            Gets or sets the name of this test case. Default is the empty string.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestCaseHTML.TesterName">
+            <summary>
+            Gets or sets the name of the tester running this test case.
+            </summary>
+        </member>
+        <member name="T:AutomationTestingProgram.TestSetExecutionSummaryReport">
+            <summary>
+            TestSetExecutionSummaryReport : Used to store information and generate the HTML Report.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestSetExecutionSummaryReport.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestSetExecutionSummaryReport"/> class.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetExecutionSummaryReport.TestSet">
+            <summary>
+            Gets or sets the connector used to get the test set.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestSetExecutionSummaryReport.GenerateHTMLReport(System.Collections.Generic.List{AutomationTestingProgram.TestCaseHTML},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Generates the appropriate HTML Report.
+            </summary>
+            <returns>HTML report.</returns>
+        </member>
+        <member name="T:AutomationTestingProgram.TestSetHTMLInstance">
+            <summary>
+            A class to represent a test case instance on ALM.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestSetHTMLInstance.EXECFINISHED">
+            <summary>
+            Defines the EXEC_FINISHED.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestSetHTMLInstance.EXECPASSED">
+            <summary>
+            Defines the EXEC_PASSED.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.buildNumber">
+            <summary>
+            The build number associated.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Description">
+            <summary>
+            The description for this test set.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Baseline">
+            <summary>
+            The description for this test set.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TargetCycle">
+            <summary>
+            The description for this test set.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.FolderPath">
+            <summary>
+            The location of the folder path. 
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TestSetExecutionFormat">
+            <summary>
+            The location of the folder path. 
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Attachments">
+            <summary>
+            Gets or sets the attachments. It has to be List of objects since if string, the backend will not take it... (it has to be object instead of string array).
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.TestSetHTMLInstance.currTestCase">
+            <summary>
+            Defines the CurrTestCase.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestSetHTMLInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="!:TestSetInstance"/> class.
+            </summary>
+            <param name="username">The username of the alm</param>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.ID">
+            <summary>
+            Gets or sets the TestSet ID.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.PlanID">
+            <summary>
+            Gets or sets the Test Set's Plan ID.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.RunID">
+            <summary>
+            Gets or sets the TestSet Run ID.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Name">
+            <summary>
+            Gets or sets the Name.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.EmailList">
+            <summary>
+            Gets or sets the EmailList.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.PlanName">
+            <summary>
+            Gets or sets the Project Name.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Project">
+            <summary>
+            Gets or sets the Project Name.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.OrgName">
+            <summary>
+            Gets or sets the Project Name.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.FailedEmailList">
+            <summary>
+            Gets or sets the FailedEmailList.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Started">
+            <summary>
+            Gets or sets the start date time for this test set.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Finished">
+            <summary>
+            Gets or sets the finished date time for this test set.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalTestCases">
+            <summary>
+            Gets or sets the total test cases the test set contains.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalBlocked">
+            <summary>
+            Gets the total number of blocked test cases.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalFailed">
+            <summary>
+            Gets the total number of failed test cases.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalNA">
+            <summary>
+            Gets the total number of not available test cases.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalNoRun">
+            <summary>
+            Gets the total number of unrun test cases.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalNotCompleted">
+            <summary>
+            Gets the total number of Not Completed test cases.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalPassed">
+            <summary>
+            Gets the total number of Passed test cases.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TotalUndelivered">
+            <summary>
+            Gets the total number of undelivered test cases.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.TestCaseExecutions">
+            <summary>
+            Gets or sets the TestCaseExecutions for this test set.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.ExecutionURL">
+            <summary>
+            Gets or sets the URL corresponding to the DevOps execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestSetHTMLInstance.Steps">
+            <summary>
+            Gets or sets the list of test step and the result.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestSetHTMLInstance.SetUpTestCaseRunResult(System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.Int32)">
+            <summary>
+            The SetTestCaseRunStatus.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestSetHTMLInstance.SetTestStepRunStatus(System.String,System.String)">
+            <summary>
+            The test steps run statuses in the current test case.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.TestSetHTMLInstance.AddTestCaseRunStatus(System.String)">
+            <summary>
+            The test case run statuses.
+            </summary>
         </member>
         <member name="T:AutomationTestingProgram.Builders.TestAutomationBuilder">
             <summary>
@@ -1663,6 +2325,11 @@
             <param name="args">Arguments to be passed in.</param>
             <returns> 0 if no errors were met. </returns>
         </member>
+        <member name="M:AutomationTestingProgram.FrameworkDriver.Console_CancelKeyPress(System.Object,System.ConsoleCancelEventArgs)">
+            <summary>
+            Catches interrupts for the console interrupt.
+            </summary>
+        </member>
         <member name="M:AutomationTestingProgram.FrameworkDriver.CheckForUpdates(System.String)">
             <summary>
             Checks to see if there is any update avalible.
@@ -1763,6 +2430,13 @@
             If not set, will use Selenium.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.BuildNumber">
+            <summary>
+            Gets or sets the Build Number to use.
+            <para> </para>
+            If not set, will be called "my build number".
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.FrameworkOptions.TestSetDataType">
             <summary>
             Gets or sets the type of data to use for the test set.
@@ -1799,6 +2473,97 @@
             Gets or sets the arguments for the test step test data. Most often the location of the file.
             <para> </para>
             If not set, will use the test case args.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.TestPlanName">
+            <summary>
+            Gets or sets the test plan name.
+            <para> </para>
+            If not set, will be set as the test set name.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.ProjectName">
+            <summary>
+            Gets or sets the test project name.
+            <para> </para>
+            If not set, will be set to default AutomationAndAccessibility.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.AzurePAT">
+            <summary>
+            Gets of sets the Azure AD PAT credentials.
+            <para> </para>
+            If not set, will take the value of the App.Config user to query.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.SecretInformation">
+            <summary>
+            Gets or sets the Azure AD login credentials.
+            <para> </para>
+            If not set, will take the value of local KeyVault cred value to query.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.MaxFailures">
+            <summary>
+            Gets or sets the maximum number of consecutive failures.
+            <para> </para>
+            If not set, will take the value stored for MaxConsecutiveFailedTestCases in App.Config.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.NotifyList">
+            <summary>
+            Gets or sets the list of comma-separated emails to notify after execution.
+            <para> </para>
+            If not set, will take list from App.config.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.RunParameters">
+            <summary>
+            Gets or sets the list of comma-separated run parameters.
+            <para> </para>
+            If not set, no parameters are created.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.ExecutionURL">
+            <summary>
+            Gets or sets the execution url of the devops exeuction
+            <para> </para>
+            If not set, no parameters are created.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.AppConfigOverrides">
+            <summary>
+            Gets or sets values to override in the App.Config, separated by colons.
+            <para> </para>
+            If not set, no overrides are made.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.TestPlanStructure">
+            <summary>
+            The structure of the Azure Test Plans folder structure.
+            <para> </para>
+            If not set, no overrides are made.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.TesterContact">
+            <summary>
+            Tester Email for further contact and for displaying into DevOps.
+            <para> </para>
+            If not set, name is set to Default Tester.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.TesterName">
+            <summary>
+            Tester name for further contact and for displaying into DevOps.
+            <para> </para>
+            If not set, name is set to Default Tester.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.FrameworkOptions.ReleaseEnvironmentUri">
+            <summary>
+            Release Uri and Environment Uri separated by a comma.
+            <para> </para>
+            If not set, no linkage.
             </summary>
         </member>
         <member name="T:AutomationTestingProgram.GeneralData.ALMGeneralData">
@@ -1959,6 +2724,30 @@
             <param name="resourceName">Name of the resource.</param>
             <returns>The string value for the resource name.</returns>
         </member>
+        <member name="T:AutomationTestingProgram.Helper.SharepointGetter">
+            <summary>
+            Class to interact with SharePoint.
+            </summary>
+        </member>
+        <member name="M:AutomationTestingProgram.Helper.SharepointGetter.GetBuildNumber(System.String)">
+            <summary>
+            Gets the build number from the sharepoint list.
+            </summary>
+            <param name="environment">Name of the environment.</param>
+            <returns>String for the build number.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.Helper.SharepointGetter.GetSharePointListItem(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Helper function to get all the items in the targeted SharePoint List that whose anchor column has the same anchor column value.
+            </summary>
+            <param name="targetRootSPSite">The root site of the SharePoint list.</param>
+            <param name="targetSPList">The title of the SharePoint list.</param>
+            <param name="targetAnchorColumnFieldRef">The field reference of the anchor column of the SharePoint List.</param>
+            <param name="targetAnchorColumnValue">The value of the anchor column that items have to be equal to.</param>
+            <param name="username"> The username used to connect to SharePoint.</param>
+            <param name="password"> The password used to connect to SharePoint.</param>
+            <returns>All items that match the provided value in the anchor column.</returns>
+        </member>
         <member name="T:AutomationTestingProgram.InformationObject">
             <summary>
             An information class that contains information needed by other objects/methods.
@@ -2003,6 +2792,12 @@
             <summary>
             Wether or not the program should respect AODA flags.
             bool.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.InformationObject.EnvVar.BuildNumber">
+            <summary>
+            Build Number of the run.
+            string.
             </summary>
         </member>
         <member name="F:AutomationTestingProgram.InformationObject.EnvVar.TimeOutThreshold">
@@ -2092,6 +2887,21 @@
             Error Container.
             </summary>
         </member>
+        <member name="F:AutomationTestingProgram.InformationObject.EnvVar.AzurePAT">
+            <summary>
+            PAT for the Azure DvvOps exeuction.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.InformationObject.EnvVar.SecretInformation">
+            <summary>
+            Secrets from the pipeline execution on DevOps.
+            </summary>
+        </member>
+        <member name="F:AutomationTestingProgram.InformationObject.EnvVar.MaxFailures">
+            <summary>
+            Maximum failures before entire execution fails.
+            </summary>
+        </member>
         <member name="P:AutomationTestingProgram.InformationObject.RespectRepeatFor">
             <summary>
             Gets or sets a value indicating whether to respect the repeat for value.
@@ -2142,9 +2952,62 @@
             Gets or sets the reporter object.
             </summary>
         </member>
+        <member name="P:AutomationTestingProgram.InformationObject.RunParameters">
+            <summary>
+            Gets or sets a run parameter.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.TestSetName">
+            <summary>
+            Gets or sets the test set name.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.ShouldExecute">
+            <summary>
+            Gets or sets a value whether or not this program should execute.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.BlockTestSet">
+            <summary>
+            Gets or sets a value whether or not this program should execute.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.NotifyEmails">
+            <summary>
+            Gets or sets a list indicating the people to notify after failure.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.OriginalTestSetDirectoryName">
+            <summary>
+            Gets or sets a list indicating the people to notify after failure.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.ExecutionURL">
+            <summary>
+            Gets or sets the URL corresponding to the DevOps execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.TestPlanName">
+            <summary>
+            Gets or sets the test plan name corresponding to the execution.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.FolderStructure">
+            <summary>
+            Gets or sets the test suite folder structure for the execution when reporting to DevOps.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.InformationObject.TestProjectName">
+            <summary>
+            Gets or sets the test plan name corresponding to the execution.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:AutomationTestingProgram.InformationObject.TesterEmail" -->
+        <!-- Badly formed XML comment ignored for member "P:AutomationTestingProgram.InformationObject.TesterName" -->
+        <!-- Badly formed XML comment ignored for member "P:AutomationTestingProgram.InformationObject.ReleaseEnvUri" -->
         <member name="M:AutomationTestingProgram.InformationObject.SetUp">
             <summary>
-            Sets up all the variables and paths.
+            Sets up all the variables and paths. 
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.InformationObject.SetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar,System.String)">
@@ -2156,7 +3019,7 @@
         </member>
         <member name="M:AutomationTestingProgram.InformationObject.GetEnvironmentVariable(AutomationTestingProgram.InformationObject.EnvVar)">
             <summary>
-            Gets the given envirnment variable.
+            Gets the given environment variable.
             </summary>
             <param name="variable">Variable to return.</param>
             <returns>The value of the variable.</returns>
@@ -2333,6 +3196,18 @@
             </summary>
             <param name="attachment">the attachment to attach.</param>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.ITestSetData.AddAODAReport(System.String)">
+            <summary>
+            Adds AODA report.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.ITestSetData.AddErrorScreenshot(System.String)">
+            <summary>
+            Adds error screenshot.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
         <member name="T:AutomationTestingProgram.TestingData.ITestStepData">
             <summary>
             The interface to get the test step data.
@@ -2385,6 +3260,12 @@
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAttachment(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddAODAReport(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.AddErrorScreenshot(System.String)">
             <inheritdoc/>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.ALMSetData.ExistNextTestCase">
@@ -2554,11 +3435,6 @@
             The test step for the database data.
             </summary>
         </member>
-        <member name="F:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.KeychainAccountsFilePath">
-            <summary>
-            The path to the keychain account.
-            </summary>
-        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.#ctor(System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData"/> class.
@@ -2604,6 +3480,21 @@
             <param name="environment">The environment<see cref="T:System.String"/>.</param>
             <returns>The <see cref="T:System.String"/>.</returns>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL(System.String)">
+            <summary>
+            Returns the URL to access the environment.
+            </summary>
+            <param name="environment">The enviornment we want to connect to.</param>
+            <returns>The URL to access the environment.</returns>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentSharePointMapping(System.String,System.String)">
+            <summary>
+            Gets the environment sharepoint mapping from the database.
+            </summary>
+            <param name="environment">The environment it is associated with.</param>
+            <param name="mappingName">Name of the sharepoint mapping.</param>
+            <returns>4 required info used by Sharepoint to get information.</returns>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QuerySpecialChars(System.String,System.String)">
             <summary>
             If the original string begins with special characters in ['!', '@', '##', '$$'], then
@@ -2628,7 +3519,7 @@
             <param name="query">Query to execute.</param>
             <returns>The data queried from the database.</returns>
         </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ExecuteEnvironmentNonQuery(System.String,System.String)">
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ExecuteEnvironmentNonQuery(System.String,System.String,System.Boolean)">
             <summary>
             Executes a query in an environment database that does not return any data.
             </summary>
@@ -2663,20 +3554,6 @@
             </summary>
             <param name="environment">Name of environment to connect to.</param>
             <returns>The connection string to connect to the environment database.</returns>
-        </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.QueryKeychainAccountPassword(System.String)">
-            <summary>
-            Queries password of a given username from the Keychain accounts spreadsheet.
-            </summary>
-            <param name="username">Username to find password of.</param>
-            <returns>Password of the Keychain account.</returns>
-        </member>
-        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.GetEnvironmentURL(System.String)">
-            <summary>
-            Returns the URL to access the environment.
-            </summary>
-            <param name="environment">The enviornment we want to connect to.</param>
-            <returns>The URL to access the environment.</returns>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.DatabaseStepData.ProcessEnvironmentQuery(System.String,System.String)">
             <summary>
@@ -2722,6 +3599,18 @@
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAttachment(System.String)">
             <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddAODAReport(System.String)">
+            <summary>
+            Adds AODA Report log.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.NoSetData.AddErrorScreenshot(System.String)">
+            <summary>
+            Adds error screenshot log.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.TextCaseData">
             <summary>
@@ -2812,6 +3701,18 @@
         </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextSetData.SetUpTestSet">
             <inheritdoc/>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextSetData.AddAODAReport(System.String)">
+            <summary>
+            Adds AODA Report log.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.TextSetData.AddErrorScreenshot(System.String)">
+            <summary>
+            Adds error screenshot log.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
         </member>
         <member name="T:AutomationTestingProgram.TestingData.TestDrivers.TextStepData">
             <summary>
@@ -2964,6 +3865,18 @@
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAttachment(System.String)">
             <inheritdoc/>
         </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddAODAReport(System.String)">
+            <summary>
+            Adds AODA Report log.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.AddErrorScreenshot(System.String)">
+            <summary>
+            Adds error screenshot log.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
         <member name="M:AutomationTestingProgram.TestingData.TestDrivers.XMLSetData.SetUpTestSet">
             <inheritdoc/>
         </member>
@@ -3023,6 +3936,16 @@
         <member name="T:AutomationTestingProgram.TestingData.ExcelCaseData">
             <summary>
             The interface to get the test case data.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.ExcelCaseData.SKIP">
+            <summary>
+            Gets the SKIP.
+            </summary>
+        </member>
+        <member name="P:AutomationTestingProgram.TestingData.ExcelCaseData.MaxLoops">
+            <summary>
+            Gets and sets the maximum loops for the test steps before failing
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.ExcelCaseData.#ctor(System.String)">
@@ -3115,7 +4038,7 @@
             <summary>
             Gets The next test case.
             </summary>
-            <returns>The next test case to run.</returns>
+            <returns>The next test case to run. If the current test case is the same, then we should be ignoring the need to run.</returns>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.ExcelSetData.ExistNextTestCase">
             <summary>
@@ -3125,12 +4048,25 @@
         </member>
         <member name="M:AutomationTestingProgram.TestingData.ExcelSetData.SetUpTestSet">
             <summary>
-            Sets up the test set and returns a new test step before it runs.
+            Sets up the test set by calculating the number of test cases in it.
+            Notice that a test set can have numerous test cases with the same name, so we have to account for that.
             </summary>
         </member>
         <member name="M:AutomationTestingProgram.TestingData.ExcelSetData.AddAttachment(System.String)">
             <summary>
             Adds an attachment to the result.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.ExcelSetData.AddAODAReport(System.String)">
+            <summary>
+            Adds AODA Report log.
+            </summary>
+            <param name="attachment">the attachment to attach.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.ExcelSetData.AddErrorScreenshot(System.String)">
+            <summary>
+            Adds error screenshot log.
             </summary>
             <param name="attachment">the attachment to attach.</param>
         </member>
@@ -3158,6 +4094,294 @@
             Sets any arguments at runtime.
             </summary>
             <param name="testStep">Test steps to get the arguments for.</param>
+        </member>
+        <member name="M:AutomationTestingProgram.TestingData.ExcelStepData.QueryObjectAndArguments(AutomationTestingProgram.AutomationFramework.TestStep)">
+            <summary>
+            If object identifier or arguments begin with special characters in ['!', '@', '##', '$$'], then
+            they are replaced by their respective value in the database.
+            </summary>
+            <param name="testStep">The Test step to query arguments.</param>.
+        </member>
+        <member name="M:AzureReporter.TestCaseInstance.CreateTestCaseReference">
+            <summary>
+            Create a new test step for test cases that are already created and that we don't need to create using a client library.
+            </summary>
+        </member>
+        <member name="M:AzureReporter.TestCaseInstance.CreateTestCaseUsingClientLib(System.String,System.Int32,System.String)">
+            <summary>
+            Create a bug using the .NET client library
+            Takes in a paramter for the test case name that we will create.
+            </summary>
+        </member>
+        <member name="M:AzureReporter.TestCaseInstance.CreateTestStep(System.String,System.String,System.String)">
+            <summary>
+            This function creates a new test step and saves it to this.testStep.
+            </summary>
+        </member>
+        <member name="T:AzureReporter.TestPlanInstance">
+            <summary>
+            Connects to the Test Plan, reports results to devops, and reports test run results.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.testCaseList">
+            <summary>
+            The list of test cases. Index 0 is the first test case id.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.TestCaseMapping">
+            <summary>
+            Mapping for the test case id to the test case's order id.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.OrderedTestResult">
+            <summary>
+            Mapping for the test case id to the test case's order id.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.testCaseCounter">
+            <summary>
+            The current step id of the test case.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.stepIdCounter">
+            <summary>
+            The current step id of the test case.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.testRun">
+            <summary>
+            The current test run.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.iteration">
+            <summary>
+            The current iteration of the test case.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.connection">
+            <summary>
+            The connection to the azure devops client.
+            </summary>
+        </member>
+        <member name="F:AzureReporter.TestPlanInstance.credentials">
+            <summary>
+            The credentials for the connection to the azure devops client.
+            </summary>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AzureReporter.TestPlanInstance"/> class.
+            Generates a Test Plan on Azure DevOps.
+            </summary>
+            <param name="pat">Personal access token to the Azure DevOps project. PAT must have access to the project. <see cref="T:System.String"/>.</param>
+            <param name="url">URL to the Azure DevOps project<see cref="T:System.String"/>.</param>
+            <param name="testPlanDescription">the test plan description that will be visible on DevOps. <see cref="T:System.String"/>.</param>
+            <param name="project">The Azure DevOps project we are using. <see cref="T:System.String"/>.</param>
+            <param name="testSuiteParentName">The test suite parent suite name on DevOps<see cref="T:System.String"/>.</param>
+            <param name="testSuiteName">The test suite name for execution<see cref="T:System.String"/>.</param>
+            <param name="testPlanName">The plan name to create on DevOps<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.GetTestRun">
+            <summary>
+            Returns the current test run.
+            </summary>
+            <returns>Test Run of the current test run.</returns>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.GetTestPlanId">
+            <summary>
+            Returns the current test plan id.
+            </summary>
+            <returns>ID of the current test plan.</returns>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.GetTestSuiteId">
+            <summary>
+            Returns the current test suite id.
+            </summary>
+            <returns>ID of the current test suite.</returns>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.CreateTestRun(System.String)">
+            <summary>
+            Initiatlize Test Set.
+            Takes in a string for the Test Set Name.
+            </summary>
+            <param name="testPlanName">The azure test plan name. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.RecordTestRun(Microsoft.TeamFoundation.TestManagement.WebApi.RunUpdateModel)">
+            <summary>
+            Record the test run result by calling UpdateTestRunAsync.
+            </summary>
+            <param name="runModel">If runmodel is already created, use that.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.AddTestRunAttachment(System.String,System.String,System.String)">
+            <summary>
+            Add test run attachment to the test run.
+            </summary>
+            <param name="comment">The comment <see cref="T:System.String"/>.</param>
+            <param name="filePath">The filePath<see cref="T:System.String"/>.</param>
+            <param name="fileName">The file name of the attachment to add, will be used as the name of the file on DevOps<see cref="T:System.String"/>.</param>
+            https://stackoverflow.com/questions/64160502/upload-test-result-documents-to-azure-test-plans-or-the-test-hub-in-tfs-2018
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.AddTestCaseAttachment(System.String,System.String,System.String)">
+            <summary>
+            The AddTestCaseAttachment.
+            </summary>
+            <param name="comment">The comment <see cref="T:System.String"/>.</param>
+            <param name="filePath">The filePath<see cref="T:System.String"/>.</param>
+            <param name="fileName">The file name<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.AddTestStepAttachment(System.String,System.String,System.String,System.String)">
+            <summary>
+            The AddTestCaseAttachment.
+            </summary>
+            <param name="comment">The comment <see cref="T:System.String"/>.</param>
+            <param name="filePath">The filePath<see cref="T:System.String"/>.</param>
+            <param name="fileName">The file name<see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.RecordTestStepResult(System.String,System.String)">
+            <summary>
+            Record a test step result.
+            </summary>
+            <param name="outcome">The result of the step execution <see cref="T:System.String"/>.</param>
+            <param name="actual">The actual result of the execution stored in the comment <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.CreateTestCaseResult">
+            <summary>
+            Create a Test Case Result by setting this.iteration.
+            </summary>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.PrintBasicRunInfo">
+            <summary>
+            Prints result of the test run
+            </summary>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.AddTestCasesToSuite(System.Collections.Generic.List{System.String})">
+            <summary>
+            Add test cases to test suite of current test suites.
+            </summary>
+            <param name="testCaseIdList">The Azure DevOps test case ids that we are adding. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.RecordTestCaseResult(System.String,System.String,AutomationTestSetFramework.ITestStatus)">
+            <summary>
+            Record a test this method records a test case result
+            </summary>
+            <param name="outcome">The test case outcome. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.CreateTestSuite(System.String,System.String)">
+            <summary>
+            Create a test plan using direct HTTP (not available using Client Lib).
+            </summary>
+            <param name="testSuiteName"> Name of the Test Suite being created. <see cref="T:System.String"/>.</param>
+            <param name="parentTestSuiteId"> The parent test suite id to creat the test suite under <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.CheckTestSuiteChildren(System.String,System.String)">
+            <summary>
+            Check if a test suite is found under a test plan, if so, return the test suite id.
+            </summary>
+            <param name="testSuiteName">The test suite name. <see cref="T:System.String"/>.</param>
+            <param name="testSuiteId">The test parent suite id. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.CheckForTestSuite(System.String,System.Int32)">
+            <summary>
+            Check if a test suite is created and if so, return the test set id. This means that the test suite must have an unique name within the test plan.
+            </summary>
+            <param name="testSuiteName">The test suite name. <see cref="T:System.String"/>.</param>
+            <param name="suiteId">The test suite id. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.CheckForTestPlan(System.String)">
+            <summary>
+            Check if a test plan exists using direct HTTP (not available using Client Lib)
+            </summary>
+            <param name="testPlanName">The test plan name. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.GetTestPlanByID(System.String)">
+            <summary>
+            Create a test plan using direct HTTP (not available using Client Lib)
+            </summary>
+            <param name="testPlanId">The test plan id. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="M:AzureReporter.TestPlanInstance.CreateTestPlan(System.String,System.String)">
+            <summary>
+            Create a test plan using direct HTTP (not available using Client Lib)
+            </summary>
+            <param name="name">The test plan name. <see cref="T:System.String"/>.</param>
+            <param name="description">The test plan description. <see cref="T:System.String"/>.</param>
+        </member>
+        <member name="T:AutomationTestinProgram.Helper.CSVEnvironmentGetter">
+            <summary>
+            Class to get environment information from a csv file.
+            </summary>
+        </member>
+        <member name="F:AutomationTestinProgram.Helper.CSVEnvironmentGetter.KeychainAccountsFilePath">
+            <summary>
+            The path to the keychain account.
+            </summary>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetEnvironmentURL(System.String)">
+            <summary>
+            Tries to grab the Environment URL from the environment url csv file
+            </summary>
+            <returns>The provided URL for the environment given.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetHost(System.String)">
+            <summary>
+            Tries to grab the host from the environment csv file.
+            </summary>
+            <returns>The provided password for the environment given.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPort(System.String)">
+            <summary>
+            Tries to grab the port from the environment url csv file.
+            </summary>
+            <returns>The provided password for the environment given.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetIsEncrypted(System.String)">
+            <summary>
+            Tries to determine if encrypted from the environment list csv file.
+            </summary>
+            <returns>The provided password for the environment given.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetUsername(System.String)">
+            <summary>
+            Tries to grab the username from the environment url csv file.
+            </summary>
+            <returns>The provided password for the environment given.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetDBName(System.String)">
+            <summary>
+            Tries to grab the db name from the environment url csv file.
+            </summary>
+            <returns>The provided password for the environment given.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetPassword(System.String)">
+            <summary>
+            Tries to grab the passowrd from the environment url csv file.
+            </summary>
+            <returns>The provided password for the environment given.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.QueryKeychainAccountPassword(System.String)">
+            <summary>
+            Queries password of a given username from the Keychain accounts spreadsheet.
+            </summary>
+            <param name="username">Username to find password of.</param>
+            <returns>Password of the Keychain account.</returns>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.CSVEnvironmentGetter.GetColumnValue(System.String,System.Int32)">
+            <summary>
+            Returns the column value for the given environment name and column
+            </summary>
+            <returns>The provided column for the environment.</returns>
+        </member>
+        <member name="T:AutomationTestinProgram.Helper.FilePathResolver">
+            <summary>
+            Class to resolve the path for the file paths provided. Throws an exception FileNotFoundException if file path cannot be found.
+            </summary>
+        </member>
+        <member name="M:AutomationTestinProgram.Helper.FilePathResolver.Resolve(System.String)">
+            <summary>
+            Tries to resolve the file paths based on what is provided.
+            </summary>
+            <param name="filePath">Relative / Absolute file path.</param>
+            <returns>Absolute File Path and also changed network drives to include full network path.</returns>
         </member>
     </members>
 </doc>

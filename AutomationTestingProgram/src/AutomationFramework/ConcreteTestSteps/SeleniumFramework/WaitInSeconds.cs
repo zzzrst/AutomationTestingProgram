@@ -20,6 +20,9 @@ namespace AutomationTestingProgram.AutomationFramework
             base.Execute();
             int seconds = int.Parse(this.Arguments["value"]);
             Thread.Sleep(seconds * 1000);
+
+
+            this.TestStepStatus.Actual = "Waited for " + seconds + " seconds";
         }
     }
 }

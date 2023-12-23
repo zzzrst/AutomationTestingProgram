@@ -5,6 +5,8 @@
 namespace AutomationTestingProgram.AutomationFramework
 {
     using System;
+    using System.IO;
+    using System.Reflection;
     using AutomationTestingProgram.TestingData.TestDrivers;
     using TextInteractor;
     using static AutomationTestingProgram.InformationObject;
@@ -48,7 +50,17 @@ namespace AutomationTestingProgram.AutomationFramework
 
             // value can be either file.
             string fileName = this.Arguments["value"];
-            string resultFileName = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + DateTime.Now.ToString("Run_dd-MM-yyyy_HH-mm-ss") + ".log";
+            
+            // set the new log folder
+            string logFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Log\\";
+
+            string resultFileName = logFolder + DateTime.Now.ToString("Run_dd-MM-yyyy_HH-mm-ss") + ".log";
+
+            // create a file to record differences
+            File.WriteAllText(resultFileName, "Begin result file comparison");
+
+            Logger.Info("Result file path is: " + resultFileName);
+
             TextInteractor expectedTxtFile = new TextInteractor(fileName, Logger.GetLog4NetLogger());
             this.TestStepStatus.RunSuccessful = expectedTxtFile.Compare(txtfile, resultFileName, ignoreWhitespace: true, caseInsensitive: true);
             expectedTxtFile.Close();
@@ -56,6 +68,8 @@ namespace AutomationTestingProgram.AutomationFramework
             // CR: Attach files that were compared. Attach resulting file if there were differences.
             InformationObject.TestSetData.AddAttachment(fileName);
             InformationObject.TestSetData.AddAttachment(this.Arguments["object"]);
+            InformationObject.TestSetData.AddAttachment(resultFileName);
+
             if (!this.TestStepStatus.RunSuccessful)
             {
                 InformationObject.TestSetData.AddAttachment(resultFileName);
@@ -72,10 +86,11 @@ namespace AutomationTestingProgram.AutomationFramework
             {
                 int lineNumber = int.Parse(value.Substring(0, value.IndexOf(Seperator)));
                 string expectedString = value.Substring(value.IndexOf(Seperator) + 3);
-                if (InformationObject.TestCaseData is DatabaseStepData database)
-                {
-                    expectedString = database.QuerySpecialChars(GetEnvironmentVariable(EnvVar.Environment), expectedString).ToString();
-                }
+                //if (InformationObject.TestCaseData is DatabaseStepData database)
+                //{
+                DatabaseStepData dbdata = new DatabaseStepData("");
+                expectedString = dbdata.QuerySpecialChars(GetEnvironmentVariable(EnvVar.Environment), expectedString).ToString();
+                //}
 
                 this.TestStepStatus.RunSuccessful = txtfile.LineExactMatch(expectedString, lineNumber);
                 this.TestStepStatus.Actual = (this.TestStepStatus.RunSuccessful ? "Successfully found" : "Could not find") + $" {expectedString} on line {lineNumber}";

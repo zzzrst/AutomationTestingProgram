@@ -4,6 +4,8 @@
 
 namespace AutomationTestingProgram.AutomationFramework
 {
+    using System;
+
     /// <summary>
     /// This class executes the action of populating the element identified by the xpath.
     /// </summary>
@@ -17,7 +19,22 @@ namespace AutomationTestingProgram.AutomationFramework
         {
             base.Execute();
             string text = this.Arguments["value"];
-            InformationObject.TestAutomationDriver.PopulateElement(this.XPath, text, this.JsCommand);
+
+            try
+            {
+                InformationObject.TestAutomationDriver.PopulateElement(this.XPath, text, this.JsCommand);
+                this.TestStepStatus.Actual = "Successfully Populated TextBoxDDL";
+                this.TestStepStatus.RunSuccessful = true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Info("Populate TextBoxDDL failed");
+                this.ShouldExecuteVariable = true;
+                this.TestStepStatus.RunSuccessful = false;
+                this.TestStepStatus.Actual = "Failure in Populating Web Element";
+                this.HandleException(ex);
+            }
+
             InformationObject.TestAutomationDriver.WaitForLoadingSpinner();
         }
     }

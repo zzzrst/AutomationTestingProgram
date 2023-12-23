@@ -116,7 +116,7 @@ namespace ALMConnector
                 fres = Math.Round((res / (1024 * 1024)), 2);
             }
 
-            htmlTemplate = htmlTemplate.Replace("{TOTAL_RAM}", $"{fres}");
+            htmlTemplate = htmlTemplate.Replace("{TOTAL_RAM}", $"{fres} GB");
 
             return htmlTemplate;
         }

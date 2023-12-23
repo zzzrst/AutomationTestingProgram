@@ -1,0 +1,1380 @@
+### YamlMime:ManagedReference
+items:
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  id: ALMReporter
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  children:
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor(System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  langs:
+  - csharp
+  - vb
+  name: ALMReporter
+  nameWithType: ALMReporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  type: Class
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: ALMReporter
+    path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+    startLine: 18
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  summary: "\nThe implementation of the reporter class.\n"
+  example: []
+  syntax:
+    content: 'public class ALMReporter : Reporter, IReporter'
+    content.vb: >-
+      Public Class ALMReporter
+          Inherits Reporter
+          Implements IReporter
+  inheritance:
+  - System.Object
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  implements:
+  - AutomationTestSetFramework.IReporter
+  inheritedMembers:
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveFileLocation
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestSetStatuses
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseStatuses
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseToTestSteps
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List{System.String})
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String,System.String,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String,System.String,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps(System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean,System.String)
+  - AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor(System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  langs:
+  - csharp
+  - vb
+  name: ALMReporter(String)
+  nameWithType: ALMReporter.ALMReporter(String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.ALMReporter(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: .ctor
+    path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+    startLine: 24
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  summary: "\nInitializes a new instance of the <xref href=\"AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public ALMReporter(string saveLocation)
+    parameters:
+    - id: saveLocation
+      type: System.String
+      description: The location to save the file to.
+    content.vb: Public Sub New(saveLocation As String)
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  id: AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  langs:
+  - csharp
+  - vb
+  name: AddTestCaseStatus(ITestCaseStatus)
+  nameWithType: ALMReporter.AddTestCaseStatus(ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddTestCaseStatus
+    path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+    startLine: 30
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  summary: "\nAdd test case status to the execution.\n"
+  example: []
+  syntax:
+    content: public override void AddTestCaseStatus(ITestCaseStatus testCaseStatus)
+    parameters:
+    - id: testCaseStatus
+      type: AutomationTestSetFramework.ITestCaseStatus
+      description: Added test case status information to the test case. <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Sub AddTestCaseStatus(testCaseStatus As ITestCaseStatus)
+  overridden: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  id: AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  langs:
+  - csharp
+  - vb
+  name: AddTestSetStatus(ITestSetStatus)
+  nameWithType: ALMReporter.AddTestSetStatus(ITestSetStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddTestSetStatus
+    path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+    startLine: 39
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  example: []
+  syntax:
+    content: public override void AddTestSetStatus(ITestSetStatus testSetStatus)
+    parameters:
+    - id: testSetStatus
+      type: AutomationTestSetFramework.ITestSetStatus
+    content.vb: Public Overrides Sub AddTestSetStatus(testSetStatus As ITestSetStatus)
+  overridden: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  id: AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  langs:
+  - csharp
+  - vb
+  name: AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
+  nameWithType: ALMReporter.AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus, AutomationTestSetFramework.ITestCaseStatus)
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: AddTestStepStatusToTestCase
+    path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+    startLine: 44
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  example: []
+  syntax:
+    content: public override void AddTestStepStatusToTestCase(ITestStepStatus testStepStatus, ITestCaseStatus testCaseStatus)
+    parameters:
+    - id: testStepStatus
+      type: AutomationTestSetFramework.ITestStepStatus
+    - id: testCaseStatus
+      type: AutomationTestSetFramework.ITestCaseStatus
+    content.vb: Public Overrides Sub AddTestStepStatusToTestCase(testStepStatus As ITestStepStatus, testCaseStatus As ITestCaseStatus)
+  overridden: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  id: Report
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  langs:
+  - csharp
+  - vb
+  name: Report()
+  nameWithType: ALMReporter.Report()
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report()
+  type: Method
+  source:
+    remote:
+      path: AutomationTestingProgram/src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+      branch: development
+      repo: https://github.com/zzzrst/AutomationTestingProgram.git
+    id: Report
+    path: src/AutomationFramework/Loggers_and_Reporters/ALMReporter.cs
+    startLine: 57
+  assemblies:
+  - AutomationTestingProgram
+  namespace: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  example: []
+  syntax:
+    content: public override void Report()
+    content.vb: Public Overrides Sub Report
+  overridden: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report
+  overload: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  commentId: N:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  nameWithType: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters
+  name: Reporter
+  nameWithType: Reporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+- uid: AutomationTestSetFramework.IReporter
+  commentId: T:AutomationTestSetFramework.IReporter
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: IReporter
+  nameWithType: IReporter
+  fullName: AutomationTestSetFramework.IReporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveFileLocation
+  commentId: P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveFileLocation
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  name: SaveFileLocation
+  nameWithType: Reporter.SaveFileLocation
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveFileLocation
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestSetStatuses
+  commentId: P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestSetStatuses
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  name: TestSetStatuses
+  nameWithType: Reporter.TestSetStatuses
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestSetStatuses
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseStatuses
+  commentId: P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseStatuses
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  name: TestCaseStatuses
+  nameWithType: Reporter.TestCaseStatuses
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseStatuses
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseToTestSteps
+  commentId: P:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseToTestSteps
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  name: TestCaseToTestSteps
+  nameWithType: Reporter.TestCaseToTestSteps
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.TestCaseToTestSteps
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: CreateInitialTestCase(String)
+  nameWithType: Reporter.CreateInitialTestCase(String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
+    name: CreateInitialTestCase
+    nameWithType: Reporter.CreateInitialTestCase
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase(System.String)
+    name: CreateInitialTestCase
+    nameWithType: Reporter.CreateInitialTestCase
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateInitialTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List{System.String})
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List{System.String})
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: SetTestCaseList(List<String>)
+  nameWithType: Reporter.SetTestCaseList(List<String>)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List<System.String>)
+  nameWithType.vb: Reporter.SetTestCaseList(List(Of String))
+  fullName.vb: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List(Of System.String))
+  name.vb: SetTestCaseList(List(Of String))
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List{System.String})
+    name: SetTestCaseList
+    nameWithType: Reporter.SetTestCaseList
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList(System.Collections.Generic.List{System.String})
+    name: SetTestCaseList
+    nameWithType: Reporter.SetTestCaseList
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SetTestCaseList
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String,System.String,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String,System.String,System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: AddTestRunAttachment(String, String, String)
+  nameWithType: Reporter.AddTestRunAttachment(String, String, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String,System.String,System.String)
+    name: AddTestRunAttachment
+    nameWithType: Reporter.AddTestRunAttachment
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment(System.String,System.String,System.String)
+    name: AddTestRunAttachment
+    nameWithType: Reporter.AddTestRunAttachment
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestRunAttachment
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: CreateAzureTestCaseResult(String, String)
+  nameWithType: Reporter.CreateAzureTestCaseResult(String, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String, System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+    name: CreateAzureTestCaseResult
+    nameWithType: Reporter.CreateAzureTestCaseResult
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult(System.String,System.String)
+    name: CreateAzureTestCaseResult
+    nameWithType: Reporter.CreateAzureTestCaseResult
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestCaseResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String,System.String,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String,System.String,System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: AddTestAttachment(String, String, String)
+  nameWithType: Reporter.AddTestAttachment(String, String, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String,System.String,System.String)
+    name: AddTestAttachment
+    nameWithType: Reporter.AddTestAttachment
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment(System.String,System.String,System.String)
+    name: AddTestAttachment
+    nameWithType: Reporter.AddTestAttachment
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestAttachment
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: AddTestStepScreenshot(String, String, String)
+  nameWithType: Reporter.AddTestStepScreenshot(String, String, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)
+    name: AddTestStepScreenshot
+    nameWithType: Reporter.AddTestStepScreenshot
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot(System.String,System.String,System.String)
+    name: AddTestStepScreenshot
+    nameWithType: Reporter.AddTestStepScreenshot
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepScreenshot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: CreateAzureTestStep(String, String, String)
+  nameWithType: Reporter.CreateAzureTestStep(String, String, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
+    name: CreateAzureTestStep
+    nameWithType: Reporter.CreateAzureTestStep
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep(System.String,System.String,System.String)
+    name: CreateAzureTestStep
+    nameWithType: Reporter.CreateAzureTestStep
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.CreateAzureTestStep
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps(System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps(System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: SaveTestSteps(String)
+  nameWithType: Reporter.SaveTestSteps(String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps(System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps(System.String)
+    name: SaveTestSteps
+    nameWithType: Reporter.SaveTestSteps
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps(System.String)
+    name: SaveTestSteps
+    nameWithType: Reporter.SaveTestSteps
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.SaveTestSteps
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean,System.String)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean,System.String)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: RecordAzureTestStepResult(Boolean, String)
+  nameWithType: Reporter.RecordAzureTestStepResult(Boolean, String)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean, System.String)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean,System.String)
+    name: RecordAzureTestStepResult
+    nameWithType: Reporter.RecordAzureTestStepResult
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult(System.Boolean,System.String)
+    name: RecordAzureTestStepResult
+    nameWithType: Reporter.RecordAzureTestStepResult
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.RecordAzureTestStepResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  name: ReportAborted()
+  nameWithType: Reporter.ReportAborted()
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted()
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted
+    name: ReportAborted
+    nameWithType: Reporter.ReportAborted
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted
+    name: ReportAborted
+    nameWithType: Reporter.ReportAborted
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.ReportAborted
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AutomationTestSetFramework
+  commentId: N:AutomationTestSetFramework
+  isExternal: true
+  name: AutomationTestSetFramework
+  nameWithType: AutomationTestSetFramework
+  fullName: AutomationTestSetFramework
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  commentId: T:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+  name: ALMReporter
+  nameWithType: ALMReporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.#ctor
+  name: ALMReporter
+  nameWithType: ALMReporter.ALMReporter
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.ALMReporter
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: AddTestCaseStatus(ITestCaseStatus)
+  nameWithType: Reporter.AddTestCaseStatus(ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+    name: AddTestCaseStatus
+    nameWithType: Reporter.AddTestCaseStatus
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestCaseStatus
+    name: ITestCaseStatus
+    nameWithType: ITestCaseStatus
+    fullName: AutomationTestSetFramework.ITestCaseStatus
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus(AutomationTestSetFramework.ITestCaseStatus)
+    name: AddTestCaseStatus
+    nameWithType: Reporter.AddTestCaseStatus
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestCaseStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestCaseStatus
+    name: ITestCaseStatus
+    nameWithType: ITestCaseStatus
+    fullName: AutomationTestSetFramework.ITestCaseStatus
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus
+  name: AddTestCaseStatus
+  nameWithType: ALMReporter.AddTestCaseStatus
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestCaseStatus
+- uid: AutomationTestSetFramework.ITestCaseStatus
+  commentId: T:AutomationTestSetFramework.ITestCaseStatus
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestCaseStatus
+  nameWithType: ITestCaseStatus
+  fullName: AutomationTestSetFramework.ITestCaseStatus
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: AddTestSetStatus(ITestSetStatus)
+  nameWithType: Reporter.AddTestSetStatus(ITestSetStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+    name: AddTestSetStatus
+    nameWithType: Reporter.AddTestSetStatus
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestSetStatus
+    name: ITestSetStatus
+    nameWithType: ITestSetStatus
+    fullName: AutomationTestSetFramework.ITestSetStatus
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus(AutomationTestSetFramework.ITestSetStatus)
+    name: AddTestSetStatus
+    nameWithType: Reporter.AddTestSetStatus
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestSetStatus
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestSetStatus
+    name: ITestSetStatus
+    nameWithType: ITestSetStatus
+    fullName: AutomationTestSetFramework.ITestSetStatus
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus
+  name: AddTestSetStatus
+  nameWithType: ALMReporter.AddTestSetStatus
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestSetStatus
+- uid: AutomationTestSetFramework.ITestSetStatus
+  commentId: T:AutomationTestSetFramework.ITestSetStatus
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestSetStatus
+  nameWithType: ITestSetStatus
+  fullName: AutomationTestSetFramework.ITestSetStatus
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  isExternal: true
+  name: AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
+  nameWithType: Reporter.AddTestStepStatusToTestCase(ITestStepStatus, ITestCaseStatus)
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus, AutomationTestSetFramework.ITestCaseStatus)
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+    name: AddTestStepStatusToTestCase
+    nameWithType: Reporter.AddTestStepStatusToTestCase
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestStepStatus
+    name: ITestStepStatus
+    nameWithType: ITestStepStatus
+    fullName: AutomationTestSetFramework.ITestStepStatus
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AutomationTestSetFramework.ITestCaseStatus
+    name: ITestCaseStatus
+    nameWithType: ITestCaseStatus
+    fullName: AutomationTestSetFramework.ITestCaseStatus
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase(AutomationTestSetFramework.ITestStepStatus,AutomationTestSetFramework.ITestCaseStatus)
+    name: AddTestStepStatusToTestCase
+    nameWithType: Reporter.AddTestStepStatusToTestCase
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.AddTestStepStatusToTestCase
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AutomationTestSetFramework.ITestStepStatus
+    name: ITestStepStatus
+    nameWithType: ITestStepStatus
+    fullName: AutomationTestSetFramework.ITestStepStatus
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AutomationTestSetFramework.ITestCaseStatus
+    name: ITestCaseStatus
+    nameWithType: ITestCaseStatus
+    fullName: AutomationTestSetFramework.ITestCaseStatus
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase
+  name: AddTestStepStatusToTestCase
+  nameWithType: ALMReporter.AddTestStepStatusToTestCase
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.AddTestStepStatusToTestCase
+- uid: AutomationTestSetFramework.ITestStepStatus
+  commentId: T:AutomationTestSetFramework.ITestStepStatus
+  parent: AutomationTestSetFramework
+  isExternal: true
+  name: ITestStepStatus
+  nameWithType: ITestStepStatus
+  fullName: AutomationTestSetFramework.ITestStepStatus
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report
+  commentId: M:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report
+  parent: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter
+  name: Report()
+  nameWithType: Reporter.Report()
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report()
+  spec.csharp:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report
+    name: Report
+    nameWithType: Reporter.Report
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report
+    name: Report
+    nameWithType: Reporter.Report
+    fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.Reporter.Report
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report*
+  commentId: Overload:AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report
+  name: Report
+  nameWithType: ALMReporter.Report
+  fullName: AutomationTestingProgram.AutomationFramework.Loggers_and_Reporters.ALMReporter.Report

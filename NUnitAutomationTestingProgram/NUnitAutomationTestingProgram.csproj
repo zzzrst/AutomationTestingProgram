@@ -1,32 +1,54 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-
-    <IsPackable>false</IsPackable>
-
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-
+    <TargetFramework>net6.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Platforms>AnyCPU;x86</Platforms>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\AutomationTestingProgram\src\TestingData\TestDrivers\ExcelCaseData.cs" Link="ExcelCaseData.cs" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\freetype6.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\jpeg62.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libcairo-2.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libexpat-1.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libfontconfig-1.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libgcc_s_dw2-1.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpixman-1-0.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpng16-16.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpoppler-79.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libpoppler-cpp-0.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libstdc++-6.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\libtiff3.dll" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\pdfdetach.exe" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\pdfimages.exe" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\README" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\README-XPDF" />
+    <Content Remove="C:\Users\ZhengVi\.nuget\packages\comparepdf\2.0.7703.11150\contentFiles\any\netstandard2.0\poppler\zlib1.dll" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\AutomationTestingProgram\App.config" Link="App.config" />
+    <None Remove="ALMProjectEntityFieldMapping.xml" />
+    <None Remove="TDAPIOLELib.dll" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Blocked.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Failed.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NA.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NoRun.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_NotCompleted.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Passed.html" />
+    <None Remove="TestExecution\ReportTemplates\TestCaseExecutionTemplate_Undelivered.html" />
+    <None Remove="TestExecution\ReportTemplates\TestSetExecutionSummaryTemplate.html" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="nunit" Version="3.13.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="90.0.4430.2400" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <!--<PackageReference Include="AxeAccessibilityDriver" Version="2.1.7732.10828" />-->
+    <PackageReference Include="ComparePDF" Version="2.0.7703.11150" />
+    <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7732.11738" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="TextInteractor" Version="1.2.7725.10792" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,138 +56,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\axeaccessibilitydriver\2.0.7381.26109\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="C:\Users\DuongCh\.nuget\packages\axeaccessibilitydriver\2.1.7390.31685\contentFiles\any\netstandard2.0\WATR_Template.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Reference Include="TDAPIOLELib">
+      <HintPath>TDAPIOLELib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="log4net.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test Click Xpath.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test Missing Test Action.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test Multiple Test Step.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test Multiple URL.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test Multiple Users.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test Navigate.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test no Test.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test No URL.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\Test One User.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Excel\TestNoURL.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Files\Log.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Files\Report.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\Google.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\SampleXML.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestSimple.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestBareMinimum.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSameCaseRanTwice.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSetDuplicateId.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSetElse.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSetElseIf.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSetMissingTestCase.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSetNestedIf.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSetSimpleIf.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCaseFlow\TestSetUnknownNodeName.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseDuplicateId.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseElse.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseElseIf.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseMissingTestStep.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseNestedIf.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseRepeatMultiple.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseSameTestStep.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseSimpleIf.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestCase\TestCaseUnknownNodeName.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestStep\TestAllConcreteSteps.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestStep\TestAODA.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestStep\TestFailTestStep.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestStep\TestLog.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestStep\TestNoLog.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestStep\TestOpenClose.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SampleTests\XML\TestTestStep\TestWait.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

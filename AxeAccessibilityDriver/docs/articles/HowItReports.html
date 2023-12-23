@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How It Reports </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How It Reports ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-it-reports">How It Reports</h1>
+
+<h2 id="axedriver">AxeDriver</h2>
+<p>There are 3 main ways that the AxeDriver uses to report. It will create a zip file containing the following</p>
+<h3 id="json-folder">Json Folder</h3>
+<p>There will be 3 folders underneath the Json folder.</p>
+<ul>
+<li>Incomplete</li>
+<li>Pass</li>
+<li>Violations
+The Json files are formatted as follow:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;Rule ID&quot;: &quot;name&quot;,
+  &quot;Result Type&quot;: &quot;Pass/Incomplete/Violations&quot;,
+  &quot;Description&quot;: &quot;Description&quot;,
+  &quot;Rule Tag&quot;: [
+    &quot;tag1&quot;,
+    &quot;tag2&quot;,
+    &quot;tag3&quot;
+  ],
+  &quot;Impact&quot;: null,
+  &quot;Help&quot;: &quot;help&quot;,
+  &quot;Help URL&quot;: &quot;url&quot;,
+  &quot;Nodes&quot;: [
+    {
+      &quot;Page URL&quot;: &quot;page tested url&quot;,
+      &quot;Provided Page Title&quot;: &quot;title&quot;,
+      &quot;Browser Page Title&quot;: &quot;title&quot;,
+      &quot;HTML&quot;: &quot;Html code&quot;,
+      &quot;Target&quot;: [
+        &quot;target&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<h3 id="csv-file">Csv File</h3>
+<p>2 Csv Files will be created in the format:</p>
+<p>RulePageSummary.csv</p>
+<table>
+<thead>
+<tr>
+<th>Page URL</th>
+<th>Provided Page Title</th>
+<th>Browser Page Title</th>
+<th>Result Type</th>
+<th>Description</th>
+<th>Rule Tag</th>
+<th>Impact</th>
+<th>Help</th>
+<th>Help URL</th>
+<th>Occurance on page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>title</td>
+<td>title</td>
+<td>result</td>
+<td>description</td>
+<td>tags</td>
+<td>impact</td>
+<td>help</td>
+<td>help URL</td>
+<td>#</td>
+</tr>
+</tbody>
+</table>
+<p>TalliedResult.csv</p>
+<table>
+<thead>
+<tr>
+<th>Page URL</th>
+<th>Provided Page Title</th>
+<th>Browser Page Title</th>
+<th>Passes</th>
+<th>Violations</th>
+<th>Incompete</th>
+<th>Inapplicable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>Title</td>
+<td>Title</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+</tr>
+</tbody>
+</table>
+<h3 id="excel-file">Excel File</h3>
+<p>1 Excel File Named WATRReport will be generated. It has 4 Pages.</p>
+<p>The first page is instructions for the WATR Report. It will not be changed.</p>
+<p>The Executive Summary Page will have the Progress to 100% Comlpliance filled out as well as the Evaluation Date. Project Name, Evaluator, Testing Approach, Methods and Tools, Remediation Plan, and Related Documents Listing must be filled out by hand.</p>
+<p>The WCAG 2.0 Compliance Checklist will Have the Date and most of the criterias filled in. Under the column &quot;Metts Criteria&quot;, It may be filled as &quot;Pass&quot;, &quot;Fail&quot;, &quot;Criteria not applicable&quot;, or &quot;Requires Manual Testing&quot;. Thoses results in the same row as &quot;Requires Manual Testing&quot; Will need a QA to manualy check the page for those criteria. Don't Forget to fill the Project Name and URL at the top.</p>
+<p>The Mapping from Axe to WATR Report is as follows</p>
+<table>
+<thead>
+<tr>
+<th>AXE</th>
+<th>WATR REPORT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pass</td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Violation</td>
+<td>Fail</td>
+</tr>
+<tr>
+<td>Incomplete</td>
+<td>Incomplete</td>
+</tr>
+<tr>
+<td>Inapplicable</td>
+<td>Criteria Not applicable</td>
+</tr>
+<tr>
+<td><em>Default</em></td>
+<td>Requires Manual Testing</td>
+</tr>
+</tbody>
+</table>
+<p>The Issue Tracking Log is formatted and filled out as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Defect No.</th>
+<th>Date of Test</th>
+<th>Url</th>
+<th>Success Criterion</th>
+<th>Defect Description</th>
+<th>Impact</th>
+<th>Status</th>
+<th>Anticipated Resolution Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#</td>
+<td>date</td>
+<td>url</td>
+<td>criterion</td>
+<td>description</td>
+<td>impact</td>
+<td>Current</td>
+<td>To be Determined</td>
+</tr>
+</tbody>
+</table>
+<p>The mapping from Axe to the Impact is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>AXE</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Serious</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Moderate</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Best Practices</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/zzzrst/AutomationTestingProgram/blob/development/AxeAccessibilityDriver/AxeAccessibilityDriver/articles/HowItReports.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
