@@ -70,7 +70,7 @@
 <h1 id="welcome">Welcome!</h1>
 
 <p>This page contains articles about the implemntation for the Automation Test Program as well as how to add your own modules to it.<br>
-Please refer to the <a href="">UML Diagram</a> for a better visualization of the source code.</p>
+<!-- Please refer to the <a href="">UML Diagram</a> for a better visualization of the source code.</p> -->
 <h2 id="testing-data">Testing Data</h2>
 <p>This is how you get what test set/case/step to run.</p>
 <h2 id="automation-framework">Automation Framework</h2>
@@ -141,6 +141,76 @@ Please refer to the <a href="">UML Diagram</a> for a better visualization of the
 <li>--stepArgs
 <ul>
 <li>Defaults to caseArgs</li>
+</ul>
+</li>
+<li>--kvSecrets
+<ul>
+<li>Defaults to no key vault secret to be read</li>
+</ul>
+</li>
+<li>--maxFailures
+  <ul>
+  <li>Defaults to 3</li>
+  </ul>
+</li>
+<li>--maxFailures
+  <ul>
+  <li>Defaults to 3</li>
+</ul>
+</li>
+<li>--notifyList
+  <ul>
+  <li>Defaults to nobody notified</li>
+</ul>
+</li>
+<li>--RunParameters
+  <ul>
+  <li>Defaults to no parameters</li>
+</ul>
+</li>
+<li>--planName
+  <ul>
+  <li>Defaults to devops name with test set, environment, build number</li>
+</ul>
+</li>
+<li>--projectName
+  <ul>
+  <li>Defaults to AutomationAndAccessibility</li>
+</ul>
+</li>
+<li>--azurePAT
+  <ul>
+  <li>Defaults to PAT defined in App.Config</li>
+</ul>
+</li>
+<li>--excecutionURL
+  <ul>
+  <li>Defaults to none</li>
+</ul>
+</li>
+<li>--appConfig
+  <ul>
+  <li>Defaults to none</li>
+</ul>
+</li>
+<li>--testPlanStructure
+  <ul>
+  <li>Defaults to none</li>
+</ul>
+</li>
+<li>--testerContact
+  <ul>
+  <li>Defaults to none</li>
+</ul>
+</li>
+<li>--testerName
+  <ul>
+  <li>Defaults to none</li>
+</ul>
+</li>
+<li>--releaseEnvUri
+  <ul>
+  <li>Defaults to none</li>
 </ul>
 </li>
 </ul>
@@ -244,6 +314,24 @@ parameter and pass in the <code>caseArgs</code>.
 </li>
 <li>END</li>
 </ul>
+<h2 id="devops-config">DevOps Configuration</h2>
+<p>As of December 2023, the Automation Testing Program is now configured to integrate directly with Azure DevOps' Test Plan, Test Case, Test Suite, and Test Run.</p>
+<figure>
+  <img src= "..\img\Test Run Summary.png" alt="Test run summary">
+  <figcaption>Azure DevOps Test Run Summary</figcaption>
+</figure>
+<p></p>
+<p>The program allows a user to launch from Excel format and then produce results directly to Azure .</p>
+<figure>
+  <img src= "..\img\Test Steps Stored in Keyword Driven Format.png" alt="Test run summary">
+  <figcaption>Test Progress Report</figcaption>
+</figure>
+<p></p>
+<p>The program allows a user to launch from Excel format and then produce results directly to Azure .</p>
+<figure>
+  <img src= "..\img\Test_Progress_Report.png" alt="Test run summary">
+  <figcaption>Test Progress Report</figcaption>
+</figure>
 </article>
           </div>
           

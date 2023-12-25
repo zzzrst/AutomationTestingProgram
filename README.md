@@ -1,10 +1,13 @@
 # Automation Testing Program
 This is a ``.Net 6`` console application. This repository contains the source code for the Automation Testing Program. This application allows users to create and run tests with different data formats for web applications. Please read the [Documentation](https://zzzrst.github.io/AutomationTestingProgram/.) on how to use and modify the program to your needs.
 
+The framework runs on a Key Word Driven model. 
+
+![Automation Testing Program](docs/img/Test_Progress_Report.png)
+
 ## How to Run
 
 Below are the command line arguments that can be passed in.
-
 
 Mandatory
 
@@ -559,3 +562,5 @@ Minor version is updated when methods are added / removed for bug fixes or a hel
 - Change keychain file path to correct file path
 - Sync initial files 
 - Project start date: Jun 27, 2023
+
+![Automation Testing Program](docs/img/Test_Step_with_screenshots_of_failures.png)
