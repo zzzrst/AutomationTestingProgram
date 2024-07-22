@@ -3,8 +3,6 @@ This is a ``.Net 6`` console application. This repository contains the source co
 
 The framework runs on a Key Word Driven model. 
 
-![Automation Testing Program](docs/img/Test_Progress_Report.png)
-
 ## How to Run
 
 Below are the command line arguments that can be passed in.
