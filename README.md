@@ -560,5 +560,3 @@ Minor version is updated when methods are added / removed for bug fixes or a hel
 - Change keychain file path to correct file path
 - Sync initial files 
 - Project start date: Jun 27, 2023
-
-![Automation Testing Program](docs/img/Test_Step_with_screenshots_of_failures.png)
