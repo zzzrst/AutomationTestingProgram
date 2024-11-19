@@ -49,7 +49,7 @@ Output results into json, csv and WATR report</Description>
     <PackageReference Include="log4net" Version="2.0.15" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
     <PackageReference Include="NPOI" Version="2.6.2" />
-    <PackageReference Include="Selenium.Axe" Version="4.0.14" />
+    <PackageReference Include="Selenium.Axe" Version="4.0.20" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
