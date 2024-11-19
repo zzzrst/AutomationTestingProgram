@@ -46,7 +46,7 @@
     <PackageReference Include="DatabaseConnectorAbstraction" Version="1.1.7732.11738" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="NUnit" Version="3.10.1" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.0" />
     <PackageReference Include="System.Management" Version="8.0.0" />
     <PackageReference Include="TextInteractor" Version="1.2.7725.10792" />
   </ItemGroup>
