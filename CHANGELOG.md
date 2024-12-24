@@ -1,6 +1,135 @@
 
 # Release Notes
 
+## Version 8.0
+Date released: July 30, 2024
+
+Code: 8.0
+
+Summary
+This relesae improved development processes, standardized pipelines CI/CD, fixed EntraID capabilities, browser availabilities updated. It also enabled remote chrome to selenium grid, report portal, and fixed many small defects.
+
+- Obtain password from keyvault
+- add enter aad credential changes from Dev branch
+- Removed unecessary code
+- Renamed functions
+- Lowercase username
+- sync changes from development for new csv env getters
+- updated axe accessibility dependency for playwright
+- Update testing framework browser and fix login
+- Fix issue with the environment list csv not having the right port
+- added true/false and a few logging for debugging. Want to see if the code works when deployed to an agent
+- Gets secret using azure cli, removing the need for defaultazurecredential()
+- Added helper function to keep it clean. Login.cs uses EnterAAD for AAD authentication
+- Azure CLI to authenticate into devops.
+- Lowercase'd browser and created a dict to search for the browser
+- Email verification
+- Resolving most of the framework's warnings and added remaining browsers for spell checking
+- Functionality to determine when elements are found we will highlight
+- Compare Email hotfix
+- Launch settings add to gitignore
+- Choose Collection Fix
+- Maximize browsers at the start of every execution, remove Extensions folder
+- Sets chrome as the default browser when --browser is empty
+- Error Handling When user kills the browser or browser no longer exists
+- Choose Collection Fix
+- Reverted chrome driver version
+- Compressed convertpdf, modifytxtfile, verifytxtfile
+- Validate/Compare Excel Files
+- Added debug properties template
+- Fixed VerifyPDFReport bug
+- Update nuget deps and deleted api/articles folders no longer used
+- Avoid generating assembly info and causing issues with switching between bran...
+- Fixed auto updater so that drivers are updated according to the binaries
+- HTML Reporter modify Screenshot Column to print duration instead
+- ClickObject.cs Fix
+- Added --browserVersion to TAP so that a specific version of a binary is used instead of current_binary_{browser}. Drivers moved to inside their respective binaries
+- Login hotfixes
+- AutoUpdater: Fixed binary overwriting issue
+- Include and produce versioning into app.config
+- Added webdriver.close before quit and it appears that issues earlier with the...
+- Create VerifyURLValue action on object to be used for verifying single URLs are accurate
+- Update azure-pipelines.yml for Azure Pipelines
+- New optional run time parameter to specify the devops build id and link with results of build
+- Checkbox should not be considered click type
+- Changed format to have day before month
+- Removed auto replace of password if value column starts with ##
+- Fix formatting of AutoUpdater
+- AxeDriver Project Update
+- Azure Pipelines Continuous Integration + Deployment
+- Updated azure-pipelines.yml added a few more pcs to default list
+- Updated azure-pipelines.yml added releases to development as well
+- Fixed AxeDriver default values
+- Rm axe tester project
+- Update azure-pipelines.yml for Azure Pipelines updated bulid for configuration Releases
+- Update azure-pipelines.yml for Azure Pipelines fixed output path
+- Rm unit test for DEBUG config
+- Better error stack handling + formatting of machine info
+- change screenshotting methods to only do getscreenshot instead of TakeScreenshot
+- Better code flow
+- Revert to original selenium driver
+- Wait 3 seconds + check ready state before executing take screenshot
+- Js locator test flakey
+- Fix spacing in html report
+- Headless mode to true and enable headless for firefox and edge
+- Take Screenshot single screen, not entire page
+- Screenshot run recommend screenshotting by selenium 4.0
+- revert headless mode to false
+- removed test login since passwords change
+- Update azure-pipelines.yml for Azure Pipelines
+- update axe driver to use deque library
+- allow agents to use local directory instead of c temp. Also new ActiononObject ArchiveScript
+- commit missing files
+- Update to only get keychain account file once at start and only if it is updated thereafter. Also use config instead of hardcoded path
+- add verification to populate actiononobjects, textboxDDL in particular may not work
+- update selenium chrome settings
+- Fixed VerifyExcelFile and ModifyTxtFile file path
+- Fixed VerifyTxtFile to automatically use new file path
+- Added Login button for new opsbps login
+- add selenium ide converter
+- update converter to have more actions and parse login
+- Added click Sign in button path for new OPSBPS login site
+- Update converter to support more CLA with more verbose logging and support for morea ctions
+- Convert wait/pause from ms to s
+- add new functionality to compare text files by their contents irrespective of order, and lines
+- Fixed VerifyExcelFile and ModifyTxtFile file path
+- Fixed VerifyTxtFile to automatically use new file path
+- Added Login button for new opsbps login
+- Added click Sign in button path for new OPSBPS login site
+- update version and documentation
+- revert app config to report to devops
+- Enable conditional usage for selenium ide converter
+- Move checkbox to its own class and allow click object to verify xpath present in its value column
+- Update dictionary of actions and fix a bug related to skip to login being false but still activating on open action present
+- Add logging to run js
+- Added new actiononobjects (CheckAllBoxes)
+- Added summary and inheritdoc
+- Added new actiononobject (FillAllTextBoxes)
+- Updated actiononobject and added it to the testing artifact (FillAllTextBoxes)
+- Updated it to mimic some user actions so the page actually registers the text. Also made it so that it only targets textboxes that aren't readonly.
+- Updated FillAllTextBoxes actiononobject so that it doesn't target readonly textboxes and also textboxes that already have text in it.
+- Added new actiononobject (ChooseAllDDL)
+- Add verify substring to populate element actions
+- added backspace to sendkeys
+- Add functionality to populate textboxes one letter at a time via press key (for stimulating user input)
+- updated to have filters
+- update to create downloaded files folder
+- update find element and remote chrome address and options
+- sharepoint login changes
+- implementing a lot of the functions
+- Implement most of the functions
+- implement remaining interface and add default constructor
+- add unit test solution for playwright
+- update methods and implementation into framework but login still doesn't work
+- almost all working, just need to fix timeouts and every login starting a new browser context for some reason
+- fix login starting new instance
+- all unit tests working and added some methods exclusively for unit test purposes
+- Updated playwright driver to better check all types of text when verifying text, as well as resolving innertext. Switched to using assertions to avoid flakiness. Also updated unit tests
+- Implement reading from sharepoint to get URL and build number
+- Implement playwright into development branch
+- Added some functionality to automatic password reset
+
+
 ## Version 6.0.0 (December 22)
 - configure test runner available for eveyrone
 - Working version with correct alignment
@@ -76,7 +205,7 @@
 - added create release ps1 with ability to create releases and parameters
 - correctly create releases
 - sync changes to ps1 scripts
-- Merged PR 10996: Pull changes for TEMP folder to Development
+- Pull changes for TEMP folder to Development
 - increase version
 
 ## Version 5.5 (December 11)
@@ -346,7 +475,7 @@
 	- Currently able to execute onto azagent of over 15 agents on approx 5 machines 
 - Ability to use vstest to run tests
 - Deployment onto C:\TAP for all agents configured to be able to run.
-- fix for configurations for EDCS applications
+- fix for configurations for applications
 - Ability to associate a test suite with more than one test case
 - Configured so that last test run is able to be executed
 - ALM migrator button on ALM
@@ -381,7 +510,7 @@
 - Created batch execution of TAP
 - Handle exceptions when querying for DB results in nothing returned
 - Added HTML whitelist information and configuration correctly
-- Query DB data for test environment and PR environment information
+- Query DB data for test environment and environment information
 - Ability to continue after failing to go to the next available test case
 - ALM Migrator to get a list of all used values in the DB.
 - Option 1 mandatory test case working
